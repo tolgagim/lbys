@@ -1,0 +1,149 @@
+
+ 
+
+ 
+
+  <form (submit)="onSubmit($event)" class="create-account-form"> 
+
+    
+
+  <div *ngIf="codeSentFirst" style="padding-top: 200px; margin-left: 80px; margin-right: 80px;">
+
+    <div class="policy-info-title">
+      MOBİL ONAY
+    </div>
+
+
+    <div class="policy-info">
+      Sizi doğrulamamız için lütfen kullandığınız bir telefon numarası giriniz. Size doğrulama kodu göndereceğiz
+    </div>
+
+    <dx-text-box stylingMode="filled" [(value)]="phoneNumber" mask="(000)000-0000" [inputAttr]="{class: 'inputStyle'}"
+      [elementAttr]="{class: 'inputStyle'}" />
+
+    <dx-button class="send" text="Doğrula" stylingMode="contained" type="default" width="100%" (click)="sendCode()">
+    </dx-button>
+
+
+  </div>
+
+
+  <div *ngIf="codeSent" style="padding-top: 200px; margin-left: 80px; margin-right: 80px;">
+    <div class="policy-info-title">
+        ONAY KODU
+    </div>
+    <dx-text-box stylingMode="filled" [(value)]="verificationCode" [inputAttr]="{class: 'inputStyle'}"
+      [elementAttr]="{class: 'inputStyle'}" />
+      <br/>
+    <dx-button class="send" text="Onayla" stylingMode="contained" type="default" width="100%" (click)="verifyCode()">
+    </dx-button>
+
+    <div class="timer">{{ timerDisplay }}</div>
+  </div>
+
+
+  
+
+  <dx-form *ngIf="saveCustomer" [formData]="newCustomer" [showColonAfterLabel]="true" [showRequiredMark]="false"    
+[disabled]="loading">
+
+
+  <dxi-item dataField="Name" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Firma Adı', stylingMode: 'filled', value: newCustomer.Name }">
+    <dxi-validation-rule type="required" message="Firma Adı Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="Description" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Açıklama', stylingMode: 'filled', value: newCustomer.Description }">
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="Address" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Firma Adresi', stylingMode: 'filled', value: newCustomer.Address }">
+    <dxi-validation-rule type="required" message="Firma Adresi Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item itemType="group" [colCount]="2">
+  <dxi-item dataField="TaxNumber" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Vergi numarası', stylingMode: 'filled', value: newCustomer.TaxNumber }">
+    <dxi-validation-rule type="required" message="Vergi Numarası Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="TaxOffice" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Vergi Dairesi', stylingMode: 'filled', value: newCustomer.TaxOffice }">
+    <dxi-validation-rule type="required" message="Vergi Dairesi Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  
+
+  <dxi-item dataField="PhoneNumber" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Firma Telefon No', stylingMode: 'filled', value: newCustomer.PhoneNumber }">
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="MobileNumber" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Firma Gsm No', stylingMode: 'filled', 
+   value: newCustomer.MobileNumber, disabled: true }">
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="UserFirstName" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Adınız', stylingMode: 'filled', value: newCustomer.UserFirstName }">
+    <dxi-validation-rule type="required" message="Ad Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="UserLastName" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Soyadınız', stylingMode: 'filled', value: newCustomer.UserLastName }">
+    <dxi-validation-rule type="required" message="Soyad Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="UserName" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Kullanıcı Adı', stylingMode: 'filled', value: newCustomer.UserName }">
+    <dxi-validation-rule type="required" message="Kullanıcı Adı Zorunludur"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="UserEmail" editorType="dxTextBox" [editorOptions]="{ placeholder: 'Email', stylingMode: 'filled', mode: 'email', value: newCustomer.UserEmail }">
+    <dxi-validation-rule type="required" message="e-posta gereklidir"></dxi-validation-rule>
+    <dxi-validation-rule type="email" message="e-posta geçersiz"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="UserPassword" editorType="dxTextBox" [editorOptions]="{ stylingMode: 'filled', placeholder: 'Şifre', mode: 'password', value: newCustomer.UserPassword }">
+    <dxi-validation-rule type="required" message="Şifre gerekli"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+
+  <dxi-item dataField="UserConfirmPassword" editorType="dxTextBox" [editorOptions]="{ stylingMode: 'filled', placeholder: 'Şifrenizi Onaylayınız', mode: 'password', value: newCustomer.UserConfirmPassword }">
+    <dxi-validation-rule type="required" message="Şifre gerekli"></dxi-validation-rule>
+    <dxi-validation-rule type="custom" message="Şifreler uyuşmuyor" [validationCallback]="confirmPassword"></dxi-validation-rule>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-item>
+</dxi-item>
+<dxi-item>
+  <div class="policy-info">
+    Bir hesap oluşturarak şunları kabul etmiş olursunuz
+    <a [routerLink]="redirectLink">Kullanım Şartları</a> ve
+    <a [routerLink]="redirectLink">Gizlilik Politikası</a>
+  </div>
+</dxi-item>
+
+<dxi-item itemType="button">
+  <dxo-button-options width="100%" type="default" [useSubmitBehavior]="true" [template]="'createAccountTemplate'">
+  </dxo-button-options>
+</dxi-item>
+
+<ng-container *dxTemplate="let item of 'createAccountTemplate'">
+  <span class="dx-button-text">
+    <ng-container *ngIf="loading; else notLoading">
+      <dx-load-indicator width="24px" height="24px" [visible]="true"></dx-load-indicator>
+    </ng-container>
+
+    <ng-template #notLoading>Yeni bir hesap oluştur.</ng-template>
+  </span>
+</ng-container>
+</dx-form>
+
+
+
+  <div class="login-linkLogin">
+    Hesabınız var mı? <a [routerLink]="redirectLink">Giriş Yap</a>
+  </div>
+
+</form>  

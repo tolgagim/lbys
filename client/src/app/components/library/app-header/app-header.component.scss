@@ -1,0 +1,64 @@
+@use "../../../../variables.scss" as *;
+
+:host {
+  flex: 0 0 auto;
+  z-index: 5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  padding: var(--header-toolbar-vertical-padding) 0;
+  background-color: var(--base-bg);
+ 
+  .header-toolbar {
+    padding-right: var(--content-padding);
+
+    ::ng-deep .global-search-box {
+      padding-right: 11px;
+    }
+
+    .messages {
+      position: relative;
+
+      .dx-badge {
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: -10%;
+        top: -10%;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        justify-content: center;
+      }
+    }
+
+    ::ng-deep .dx-toolbar-item.menu-button {
+      width: var(--side-panel-min-width);
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+ 
+
+::ng-deep .dx-dropdowneditor-input-wrapper .custom-item > img {
+  padding-left: 0px; 
+}
+
+::ng-deep .custom-item .flag {
+  display: inline-block;
+  padding-left: 5px;
+  text-indent: 0;
+  line-height: 25px;
+  font-size: 13px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.flag span {
+  position: relative; 
+  top: -3px;   
+}

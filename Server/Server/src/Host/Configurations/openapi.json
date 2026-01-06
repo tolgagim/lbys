@@ -1,0 +1,14 @@
+{
+  "SwaggerSettings": {
+    "Enable": true,
+    "Title": "LogNet Architecture",
+    "Version": "1.0.0",
+    "Description": "LogNet Architecture WebApi",
+    "ContactName": "Log Net",
+    "ContactEmail": "info@lognet.com.tr",
+    "ContactUrl": "https://linkedin.com/in/lognet",
+    "License": true,
+    "LicenseName": "MIT License",
+    "LicenseUrl": ""
+  }
+}

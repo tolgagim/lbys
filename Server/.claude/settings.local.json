@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm:*)",
+      "Bash(dotnet build:*)",
+      "Bash(Select-String -Pattern \"error|warning|succeeded|failed\")",
+      "Bash(Select-Object -First 50)",
+      "Bash(dotnet clean:*)",
+      "Bash(Select-String -Pattern \"error\" -Context 0,2)",
+      "Bash(dotnet restore:*)",
+      "Bash(Select-String -Pattern \"error|warning NU|Build succeeded|Build FAILED\")",
+      "Bash(Select-Object -First 30)",
+      "Bash(dotnet run)",
+      "Bash(dotnet ef migrations add:*)",
+      "Bash(timeout 15 dotnet run:*)",
+      "Bash(timeout 20 dotnet run:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

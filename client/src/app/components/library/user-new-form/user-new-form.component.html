@@ -1,0 +1,110 @@
+<dx-form class="plain-styled-form" [screenByWidth]="getSizeQualifier">
+    
+    <dxi-item itemType="group">
+      <dxo-col-count-by-screen
+        [xs]="1"
+        [sm]="2"
+        [md]="2"
+        [lg]="2"
+      ></dxo-col-count-by-screen>
+       
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Users.FirstName' | translate }}"
+            [(value)]="newUser.firstName"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Users.LastName' | translate }}"
+            [(value)]="newUser.lastName"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+    
+      <!-- <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{ 'Users.Email' | translate }}"
+            [(value)]="newUser.email"
+            [isEditing]="true"
+            (valueChange)="onEmailChange($event)"
+          ></form-textbox>
+          <div *ngIf="emailEntered && !isValidEmail" class="error-message">
+            {{ 'Users.EmailValidation' | translate }}   
+          </div>
+        </div>
+      </dxi-item> -->
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{ 'Users.Email' | translate }}"
+            [(value)]="newUser.email"
+            [isEditing]="true"  
+            [validators]="confirmEmailValidators"
+          ></form-textbox>
+          
+        </div>
+      </dxi-item>
+      
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Users.UserName' | translate }}"
+            [(value)]="newUser.userName"
+            [isEditing]="true"
+            [validators]="minLengthValidator"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+      <dxi-item>
+        <dxo-label text="{{'Users.Password' | translate }}"></dxo-label>
+        
+          <password-text-box 
+            [(value)]="newUser.password" 
+            stylingMode="filled"
+            (valueChanged)="onNewPasswordChanged()" 
+            placeholder="Password" 
+            (valueChanged)="onNewPasswordChanged()"
+          >
+          </password-text-box>
+       
+      </dxi-item>
+      <dxi-item>
+        <dxo-label text="{{'Users.ConfirmPassword' | translate }}"></dxo-label>
+         
+          <password-text-box
+           #confirmField 
+            [(value)]="newUser.confirmPassword" 
+            stylingMode="filled"
+            [validators]="confirmPasswordValidators"
+            (valueChanged)="onFieldChanged()" 
+          >
+          </password-text-box>
+        
+      </dxi-item>
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Users.PhoneNumber' | translate }}"
+            [(value)]="newUser.phoneNumber"
+            [isEditing]="true"
+            mask="(000)000-0000"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+     
+    </dxi-item>
+  
+   
+  </dx-form>
+  

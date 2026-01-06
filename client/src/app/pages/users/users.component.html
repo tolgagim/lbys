@@ -1,0 +1,130 @@
+<div class="view-wrapper list-page crm-contact-list">
+  <dx-data-grid class="list-page" 
+    noDataText="" 
+    height="100%" 
+    [dataSource]="dataSource"
+    [allowColumnReordering]="true"
+    [showBorders]="true" 
+    (onExporting)="onExporting($event)"
+    (onOptionChanged)="onOptionChanged($event)"
+    (onContentReady)="onContentReady($event)"
+    [paging]="{enabled: true, pageSize: 10}"
+    [pager]="{showPageSizeSelector: true, 
+    allowedPageSizes: [5,10,20], 
+    showInfo: true, visible:true}"
+    [columnMinWidth]="50" 
+    [columnAutoWidth]="true">
+
+    <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+    <dxo-load-panel [showPane]="false"></dxo-load-panel>
+    <dxo-selection selectAllMode="allPages" showCheckBoxesMode="always" mode="multiple"></dxo-selection>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+    <dxo-search-panel [visible]="true" placeholder="{{'Users.Search' | translate }}"></dxo-search-panel>
+    <dxo-export *hasRole="resource.Users+'.'+action.Export" [enabled]="true" [allowExportSelectedData]="true" [formats]="['xlsx', 'pdf']"></dxo-export>
+
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">{{'Users.Header' | translate }}</div>
+      </dxi-item>
+      <dxi-item location="after" locateInMenu="auto" *hasRole="resource.Users+'.'+action.Create">
+        <dx-button text="{{'Users.AddBtn' | translate }}" icon="plus" type="default" stylingMode="contained"
+          (onClick)="addUser()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after" locateInMenu="auto" showText="inMenu" widget="dxButton" [options]="{
+            text: 'Refresh',
+            icon: 'refresh',
+            onClick: refresh,
+            stylingMode: 'text'
+          }"></dxi-item>
+      <dxi-item location="after" locateInMenu="auto">
+        <div class="separator"></div>
+      </dxi-item>
+      <dxi-item name="exportButton"></dxi-item>
+      <dxi-item location="after" locateInMenu="auto">
+        <div class="separator"></div>
+      </dxi-item>
+      <dxi-item location="after" locateInMenu="auto" widget="dxButton" showText="inMenu" [options]="{
+            text: 'Column Chooser',
+            icon: 'columnchooser',
+            onClick: chooseColumnDataGrid,
+            stylingMode: 'text'
+          }"></dxi-item>
+      <dxi-item name="searchPanel" locateInMenu="auto"></dxi-item>
+    </dxo-toolbar>
+
+
+
+
+
+    <dxi-column alignment="center" cellTemplate="preferencesButtonTemplate" width="50" visibleIndex="0" *hasRole="resource.Users+'.'+action.Update">
+      <div *dxTemplate="let rowData of 'preferencesButtonTemplate'" class="preferences-button-template">
+        <dx-button icon="preferences" (onClick)="editRole(rowData.data.id)"></dx-button>
+      </div>
+    </dxi-column>
+
+
+    <dxi-column alignment="center" cellTemplate="editButtonTemplate" width="50" visibleIndex="1"
+      *hasRole="resource.Users+'.'+action.Update">
+      <div *dxTemplate="let rowData of 'editButtonTemplate'" class="edit-button-template">
+        <dx-button icon="edit" (onClick)="editRow(rowData.data.id)"></dx-button>
+      </div>
+    </dxi-column>
+
+    <dxi-column dataField="firstName" visibleIndex="2" caption="{{'Users.FirstName' | translate }}" [visible]="true"
+      sortOrder="asc" [hidingPriority]="1" cellTemplate="firstName"></dxi-column>
+    <dxi-column dataField="userName" visibleIndex="3" caption="{{'Users.UserName' | translate }}" [hidingPriority]="2"
+      [visible]="true"></dxi-column>
+    <dxi-column dataField="lastName" visibleIndex="4" caption="{{'Users.LastName' | translate }}" [visible]="true"
+      [hidingPriority]="3"></dxi-column>
+    <dxi-column dataField="email" visibleIndex="5" caption="{{'Users.Email' | translate }}" [visible]="true"
+      [hidingPriority]="2"></dxi-column>
+    <dxi-column dataField="phoneNumber" visibleIndex="6" caption="{{'Users.PhoneNumber' | translate }}" [visible]="true"
+      [hidingPriority]="4"></dxi-column>
+
+      <dxi-column dataField="customerName" visibleIndex="7" caption="{{'Users.CustomerName' | translate }}" [visible]="true"
+      [hidingPriority]="5"></dxi-column>
+      <dxi-column dataField="entCode" visibleIndex="8" caption="{{'Users.EntCode' | translate }}" [visible]="true"
+      [hidingPriority]="6"></dxi-column>
+
+      
+
+    <dxi-column alignment="center" cellTemplate="removeButtonTemplate" width="70" visibleIndex="8" [hidingPriority]="5" *hasRole="resource.Users+'.'+action.Delete">
+      <div *dxTemplate="let rowData of 'removeButtonTemplate'" class="remove-button-template">
+        <dx-button icon="remove" (onClick)="deleteRow(rowData.data.id)"></dx-button>
+      </div>
+    </dxi-column>
+
+    <div *dxTemplate="let cellInfo of 'firstName'" class="firstName-template">
+      <div>
+        <div>{{ cellInfo.data.firstName }}</div>
+        <div class="position">{{ cellInfo.data.position }}</div>
+      </div>
+    </div>
+  </dx-data-grid>
+
+
+
+  <form-popup [(visible)]="isRolePopupOpened" (save)="onClickEditRoleUser()"
+    titleText="{{'Users.UserRoles' | translate }}" [width]="800" [height]="600">
+    <ng-container *ngIf="isRolePopupOpened">
+      <user-role-form [userId]="selectUserId"></user-role-form>
+    </ng-container>
+  </form-popup>
+
+
+  <form-popup [(visible)]="isAddPopupOpened" (save)="onClickSaveNewUser()" titleText="{{'Users.Add' | translate }}">
+    <ng-container *ngIf="isAddPopupOpened">
+      <user-new-form [newUserData]="createUserRequest"></user-new-form>
+    </ng-container>
+  </form-popup>
+
+  <form-popup [(visible)]="isUpdateUserPopupOpened" (save)="onClickUpdateUser()"
+    titleText="{{'Users.Update' | translate }}" [width]="1024" [height]="768">
+    <ng-container *ngIf="isUpdateUserPopupOpened">
+      <user-list-profile [userDetails]="userDetailsDto"></user-list-profile>
+    </ng-container>
+  </form-popup>
+
+</div>

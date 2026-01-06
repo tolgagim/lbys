@@ -1,0 +1,10 @@
+{
+  "MailSettings": {
+    "DisplayName": "LogNet",
+    "From": "info@lognet.com.tr",
+    "Host": "mail.lognet.com.tr",
+    "Password": "@Ft4363Sirma@",
+    "Port": 587,
+    "UserName": "info@lognet.com.tr"
+  }
+}

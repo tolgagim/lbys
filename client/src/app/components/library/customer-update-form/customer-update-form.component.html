@@ -1,0 +1,88 @@
+<dx-form class="plain-styled-form" [screenByWidth]="getSizeQualifier">
+    <dxi-item itemType="group">
+        <dxo-col-count-by-screen
+            [xs]="1"
+            [sm]="2"
+            [md]="2"
+            [lg]="2"
+        ></dxo-col-count-by-screen>
+
+        <!-- Tek sütunda gösterilmesi istenen dxi-item -->
+        <dxi-item [colSpan]="2">
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.CompanyName' | translate}}"
+                    [(value)]="updateCustomer.name"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item [colSpan]="2">
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.Description' | translate}}"
+                    [(value)]="updateCustomer.description"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item>
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.Address' | translate}}"
+                    [(value)]="updateCustomer.address"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item>
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.TaxNr' | translate}}"
+                    [(value)]="updateCustomer.taxNumber"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item>
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.TaxOffice' | translate}}"
+                    [(value)]="updateCustomer.taxOffice"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item>
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.PhoneNumber' | translate}}"
+                    [(value)]="updateCustomer.phoneNumber"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item>
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Customers.MobileNumber' | translate}}"
+                    [(value)]="updateCustomer.mobileNumber"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+    </dxi-item>
+</dx-form>

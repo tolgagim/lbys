@@ -1,0 +1,141 @@
+ 
+
+<div class="view-wrapper">
+  <dx-toolbar class="theme-dependent" [class.scrolled]="isContentScrolled">
+    <dxi-item location="before">
+      <div class="header-text"> {{'Users.UserProfile' | translate }}</div>
+    </dxi-item>
+    <!-- <dxi-item location="after" locateInMenu="never">
+      <dx-button
+        text="Cancel"
+        stylingMode="outlined"
+        type="normal"
+        [disabled]="!isDataChanged"
+        (onClick)="cancel()"
+      >
+      </dx-button>
+    </dxi-item> -->
+    <dxi-item location="after" locateInMenu="never">
+      <dx-button
+        [disabled]="!isDataChanged"
+        text="{{'Users.Save' | translate }}"
+        icon="save"
+        type="default"
+        stylingMode="contained"
+        (onClick)="save()"
+      >
+      </dx-button>
+    </dxi-item>
+  </dx-toolbar>
+
+  <dx-load-panel
+    container=".view-wrapper-scroll"
+    [visible]="isLoading"
+    [showPane]="false"
+    [position]="{ of: 'user-profile' }"
+  >
+  </dx-load-panel>
+  <dx-scroll-view class="view-wrapper-scroll" (onScroll)="scroll($event)">
+    <div *ngIf="!isLoading" class="cards-container">
+      <profile-card
+        class="profile-card basic-info-card"
+        title= "{{'Users.BasicInfo' | translate }}"
+        [colCount]="4"
+        [cardData]="userDetails"
+        [items]="basicInfoItems"
+        (dataChanged)="dataChanged()"
+      >
+        <div class="basic-info-top-item" top-item>
+     
+
+          <form-photo
+            *ngIf="userDetails?.imageUrl"
+            [link]="userDetails.imageUrl"
+            [editable]="true"
+            [size]="80"
+            (imageUrlChange)="handleImageUrlChange($event)"
+          ></form-photo>
+
+          <div>
+            <div class="title-text">{{ userDetails?.firstName }}</div>
+            <!-- <div class="subtitle-text with-clipboard-copy">
+              <span>ID: {{ userDetails?.id }}</span>
+              <dx-button
+                icon="copy"
+                class="copy-clipboard-button"
+                stylingMode="text"
+                [activeStateEnabled]="false"
+                [focusStateEnabled]="false"
+                [hoverStateEnabled]="false"
+                (onClick)="copyToClipboard(userDetails?.id, $event)"
+              ></dx-button>
+            </div> -->
+            <dx-button
+              text= "{{'Users.ChangePassword' | translate }}" 
+              class="change-password-button"
+              stylingMode="contained" 
+              [icon]="(screen.xSmallScreenChanged | async) ? null : 'lock'"
+              (onClick)="changePassword()"
+            ></dx-button>
+          </div>
+        </div>
+        :
+      </profile-card>
+
+      <!--  <profile-card
+        class="profile-card contacts-card"
+        title="Contacts"
+        [cardData]="userDetails"
+        [items]="contactItems"
+        (dataChanged)="dataChanged()"
+      >
+        <div top-item>
+          <div class="image-wrapper">
+            <i class="dx-icon dx-icon-mention"></i>
+          </div>
+          <div>
+        <div class="title-text">{{ userDetails.phoneNumber | phone }}</div>
+            <div class="title-text">{{ userDetails.phoneNumber }}</div>
+            <div class="subtitle-text with-clipboard-copy">
+              {{ userDetails.email }}
+              <dx-button
+                icon="copy"
+                class="copy-clipboard-button"
+                stylingMode="text"
+                [activeStateEnabled]="false"
+                [focusStateEnabled]="false"
+                [hoverStateEnabled]="false"
+                (onClick)="copyToClipboard(userDetails.email, $event)"
+              ></dx-button>
+            </div>
+          </div>
+        </div>
+      </profile-card> -->
+
+      
+      <!-- <profile-card
+        class="profile-card address-card"
+        title="Address"
+        [cardData]="userDetails"
+        [items]="addressItems"
+        (dataChanged)="dataChanged()"
+      >
+        <div top-item>
+          <div class="image-wrapper">
+            <i class="dx-icon dx-icon-map"></i>
+          </div>
+          <div>
+            <div class="title-text">
+              {{ userDetails.email }}, {{ userDetails.email }},
+              {{ userDetails.email }}, {{ userDetails.email }}
+            </div>
+          </div>
+        </div>
+      </profile-card>  -->
+    </div>
+  </dx-scroll-view>
+</div>
+
+<change-profile-password-form
+  [(visible)]="isChangePasswordPopupOpened"
+></change-profile-password-form>

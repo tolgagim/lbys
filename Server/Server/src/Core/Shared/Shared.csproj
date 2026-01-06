@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <RootNamespace>Server.Shared</RootNamespace>
+        <AssemblyName>Server.Shared</AssemblyName>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Update="Roslynator.Analyzers" Version="4.12.9">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="NewFolder\" />
+    </ItemGroup>
+</Project>

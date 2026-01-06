@@ -1,0 +1,22 @@
+<div
+  [ngStyle]="{
+    'width.px': size,
+    'height.px': size,
+    'max-height.px': size,
+    'background-image': 'url(' + imageUrl + ')'
+  }"
+  class="photo"
+  [class.editable]="editable"
+  (click)="toggleUploader()"
+>
+  <i *ngIf="editable" class="edit-icon dx-icon-photooutline"></i>
+</div>
+<dx-file-uploader
+  *ngIf="editable && showUploader"
+  [dialogTrigger]="hostRef"
+  accept="image/*"
+  (onValueChanged)="onFileSelected($event)"  
+  (onHidden)="onUploaderClosed()"
+></dx-file-uploader>
+
+

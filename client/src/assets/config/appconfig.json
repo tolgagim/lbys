@@ -1,0 +1,12 @@
+{
+    "appTitle": "EndPoint",
+    "apiEndpoint": {
+        "endpoint1": "https://localhost:5001",
+        "endpoint2": "https://b2b.lognet.com.tr"
+    },
+    "appSettings": {
+        "config1": "value1",
+        "config2": "value2"
+    }
+}
+ 

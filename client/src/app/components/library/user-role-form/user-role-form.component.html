@@ -1,0 +1,56 @@
+<div class="view-wrapper list-page">
+    <dx-data-grid
+      class="grid theme-dependent"
+      noDataText=""
+      height="100%"  
+      [dataSource]="dataSource"
+      [focusedRowEnabled]="true"
+      [showBorders]="true" 
+      [paging]="{enabled: true, pageSize: 10}" 
+      [pager]="{showPageSizeSelector: true, allowedPageSizes: [5,10,20], showInfo: true, visible:true}"  
+      [columnAutoWidth]="true"
+      (onContentReady)="onContentReady($event)">
+      <dxo-load-panel [showPane]="false"></dxo-load-panel>
+      <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>  
+      <dxo-sorting mode="multiple"></dxo-sorting>
+      <dxo-header-filter [visible]="true"></dxo-header-filter>
+      <dxo-column-chooser [enabled]="false"></dxo-column-chooser>
+      <dxo-search-panel [visible]="true" placeholder="{{'Roles.Search' | translate }}"></dxo-search-panel>
+      <dxo-export [enabled]="false"></dxo-export>
+  
+      <dxo-toolbar>
+        <dxi-item location="before">
+          <div class="grid-header">{{'Roles.Header' | translate }}</div>
+        </dxi-item> 
+        <dxi-item
+          location="after"
+          locateInMenu="auto"
+          showText="inMenu"
+          widget="dxButton"
+          [options]="{
+            text: 'Refresh',
+            icon: 'refresh',
+            onClick: refresh,
+            stylingMode: 'text'
+          }"></dxi-item>
+        
+        
+        <dxi-item name="searchPanel" locateInMenu="auto"></dxi-item>
+      </dxo-toolbar>
+    
+      <dxi-column dataField="roleName" visibleIndex="1" caption="{{'Roles.Name' | translate }}" [visible]="true" sortOrder="asc" [hidingPriority]="3"></dxi-column>
+      <dxi-column dataField="description" visibleIndex="2" caption="{{'Roles.Description' | translate }}" [visible]="true" [hidingPriority]="1" ></dxi-column>
+  
+      <dxi-column dataField="enabled" caption="{{'Roles.Status' | translate }}"  [allowSorting]="false" cellTemplate="isActiveTemplate" alignment="center" visibleIndex="2" width="120"></dxi-column> 
+      <div *dxTemplate="let data of 'isActiveTemplate'; let rowIndex = index">  
+        <dx-check-box
+        [value]="data.value"
+        (onValueChanged)="onEnabledChange(data, $event)" >
+      </dx-check-box>
+      </div> 
+
+     
+    </dx-data-grid>
+  
+    
+  </div>

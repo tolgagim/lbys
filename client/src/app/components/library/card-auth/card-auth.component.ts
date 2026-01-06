@@ -1,0 +1,18 @@
+import { CommonModule } from '@angular/common';
+import { Component, NgModule, Input } from '@angular/core';
+
+@Component({
+    selector: 'app-card-auth',
+    templateUrl: './card-auth.component.html',
+    styleUrls: ['./card-auth.component.scss'],
+    standalone: true,
+})
+export class CardAuthComponent {
+  @Input()
+  title!: string;
+
+  @Input()
+  description!: string;
+}
+
+

@@ -1,0 +1,94 @@
+<div class="view-wrapper list-page crm-contact-list"> 
+  <dx-data-grid class="list-page" 
+    noDataText="" 
+    height="100%" 
+    [dataSource]="dataSource"
+    [allowColumnReordering]="true" 
+    [showBorders]="true" 
+    (onExporting)="onExporting($event)"
+    (onOptionChanged)="onOptionChanged($event)"
+    [remoteOperations]="true"
+    [headerFilter]="{visible: true}"
+    [paging]="{enabled: true, pageSize: 8}"
+    [columnMinWidth]="50" 
+    [columnAutoWidth]="true">   
+ 
+      <dxo-pager [visible]="true"  [allowedPageSizes]="[8, 12, 20]"
+      [displayMode]="displayMode" [showInfo]="showInfo" [showNavigationButtons]="showNavButtons" [visible]="true"
+      [showPageSizeSelector]="true">
+    </dxo-pager>
+ 
+   
+       <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+       <dxo-load-panel [showPane]="false"></dxo-load-panel>
+       <dxo-selection selectAllMode="allPages" showCheckBoxesMode="always" mode="multiple"></dxo-selection>
+       <dxo-sorting mode="multiple"></dxo-sorting>
+       <dxo-header-filter [visible]="true"></dxo-header-filter>
+       <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+       <dxo-search-panel [visible]="true"  placeholder="{{ 'Brands.Search' | translate }}" width="200"  (textChange)="updateSearchKeyword($event)"> </dxo-search-panel>
+        
+  
+       <dxo-toolbar>
+         <dxi-item location="before">
+           <div class="grid-header">{{'Brands.Header' | translate }}</div>
+         </dxi-item>
+         <dxi-item location="after" locateInMenu="auto" *hasRole="resource.Brands+'.'+action.Create">
+           <dx-button text="{{'Brands.AddBtn' | translate }}" icon="plus" type="default" stylingMode="contained"
+             (onClick)="addBrand()"></dx-button>
+         </dxi-item>
+         <dxi-item location="after" locateInMenu="auto" showText="inMenu" widget="dxButton" [options]="{
+               text: 'Refresh',
+               icon: 'refresh',
+               onClick: refresh,
+               stylingMode: 'text'
+             }"></dxi-item>
+         <dxi-item location="after" locateInMenu="auto">
+           <div class="separator"></div>
+         </dxi-item>
+         <dxi-item name="exportButton"></dxi-item>
+         <dxi-item location="after" locateInMenu="auto">
+           <div class="separator"></div>
+         </dxi-item>
+         <dxi-item location="after" locateInMenu="auto" widget="dxButton" showText="inMenu" [options]="{
+               text: 'Column Chooser',
+               icon: 'columnchooser',
+               onClick: chooseColumnDataGrid,
+               stylingMode: 'text'
+             }"></dxi-item>
+         <dxi-item name="searchPanel" locateInMenu="auto"></dxi-item>
+       </dxo-toolbar>
+   
+   
+       <dxi-column alignment="center" cellTemplate="editButtonTemplate" width="50" visibleIndex="1"
+       *hasRole="resource.Brands+'.'+action.Update">
+       <div *dxTemplate="let rowData of 'editButtonTemplate'" class="edit-button-template">
+         <dx-button icon="edit" (onClick)="editRow(rowData.data.id)"></dx-button>
+       </div>
+     </dxi-column>
+ 
+  
+       <dxi-column dataField="name" visibleIndex="2" caption="{{ 'Brands.Name' | translate }}" [hidingPriority]="2"  [visible]="true"></dxi-column> 
+       <dxi-column dataField="description" visibleIndex="3" caption="{{ 'Brands.Description' | translate }}" [hidingPriority]="3"  [visible]="true"></dxi-column>  
+    
+       <dxi-column alignment="center" cellTemplate="removeButtonTemplate" width="70" visibleIndex="8" [hidingPriority]="5" *hasRole="resource.Users+'.'+action.Delete">
+        <div *dxTemplate="let rowData of 'removeButtonTemplate'" class="remove-button-template">
+          <dx-button icon="remove" (onClick)="deleteRow(rowData.data.id)"></dx-button>
+        </div>
+      </dxi-column>
+       
+     </dx-data-grid>
+   
+   
+     <form-popup [(visible)]="isAddPopupOpened" (save)="onClickSaveNewBrand()" titleText="{{'Brands.AddBtn' | translate }}">
+       <ng-container *ngIf="isAddPopupOpened">
+         <brand-new-form [newBrandData]="createBrandRequest"></brand-new-form>
+       </ng-container>
+     </form-popup>
+ 
+     <form-popup [(visible)]="isUpdateUserPopupOpened" (save)="onClickUpdateBrand()"  titleText="{{'Brands.Update' | translate }}" >
+     <ng-container *ngIf="isUpdateUserPopupOpened">
+       <brand-update-form [updateBrandData]="brandDetailsDto" [brandId]="selectBrandId"></brand-update-form>
+     </ng-container>
+   </form-popup>
+   
+   </div>

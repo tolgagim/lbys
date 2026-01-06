@@ -1,0 +1,97 @@
+@use "../../../../variables.scss" as *;
+
+.create-account-form {
+  .policy-info {
+    color: var(--base-text-color-alpha);
+    font-size: 14px;
+    font-style: normal;
+    margin-bottom: 10px;
+    a {
+      color: var(--base-text-color-alpha);
+    }
+  }
+
+  .policy-info-title{
+    font-size: 40px;
+     font-weight: bold;
+     text-align: center;
+     padding: 6px 0 32px 0; 
+  }
+
+  .login-link {
+    color: var(--accent-color);
+    font-size: 12px;
+    text-align: center;
+    padding: 60px 0 32px 0; 
+  }
+  .login-linkLogin {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--accent-color);
+    font-size: 12px;
+    text-align: center;
+    padding: 60px 0 32px 0;
+  }
+  
+}
+
+
+
+::ng-deep .inputStyle {
+  font-size: 30px !important; 
+  text-align: center;
+}
+
+ 
+
+::ng-deep .send .dx-button-content .dx-icon {
+  font-size: 18px;
+  width: 100%;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 25px; /* Büyük font boyutu */
+  color: rgb(148, 220, 241); /* Parlak yeşil, dijital saatlerdeki gibi */
+  text-align: center;
+  background-color: #333; /* Koyu arka plan */
+  border: 3px solid #444; /* Kenarlık */
+  border-radius: 5px; /* Yuvarlak köşeler */
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(84, 74, 224, 0.5); /* Yeşil gölge efekti */
+  font-family: 'Courier New', Courier, monospace; /* Monospace yazı tipi */
+  display: inline-block; 
+}
+
+:host {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 50px; 
+  ::ng-deep .form-text {
+    color: var(--base-text-color-alpha);
+   
+  }
+}
+
+.create-account-form {
+  background-color: white;
+  border-width: 1px;
+  border-style: inherit;
+  padding: 30px;
+}
+
+ 
+.auth-card {
+ 
+  display: flex;
+  flex-grow: 1;
+
+  ::ng-deep .dx-button-text {
+    text-transform: none;
+  }
+
+ 
+}

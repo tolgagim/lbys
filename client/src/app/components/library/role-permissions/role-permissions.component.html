@@ -1,0 +1,36 @@
+<dx-tab-panel
+  id="roleClaimsTabPanel"
+  [loop]="true"
+  [animationEnabled]="true"
+  [swipeEnabled]="true"
+  [showNavButtons]="true">
+  <dxi-item  *ngFor="let key of groupKeys" [id]="key" [title]="key + ' (' + groupSelectedCounts[key] + '/' + groupedRoleClaims[key].length + ')'">
+    <div *ngIf="groupHasClaims[key]; else noData">
+      <dx-data-grid
+        [dataSource]="groupedRoleClaims[key]"
+        [showBorders]="true"
+        [filterRow]="{ visible: true }"
+        [editing]="{ mode: 'cell', allowUpdating: true }">
+        <dxo-sorting mode="multiple"></dxo-sorting>
+        <dxo-search-panel [visible]="true" width="240" placeholder="Arama..."></dxo-search-panel>
+        <dxi-column dataField="claims[0].name" caption="İzin Adı"></dxi-column>
+        <dxi-column dataField="claims[0].description" caption="Açıklama"></dxi-column>  
+     
+        <dxi-column dataField="enabled" caption="Durum" [allowSorting]="true" cellTemplate="isActiveTemplate" alignment="center"></dxi-column> 
+        <div *dxTemplate="let data of 'isActiveTemplate'; let rowIndex = index">  
+          <dx-check-box
+          [value]="data.value"
+          (onValueChanged)="onEnabledChange(data, $event)" >
+        </dx-check-box>
+        </div> 
+      </dx-data-grid> 
+    </div>
+    <ng-template #noData>
+      <p>Veri bulunamadı</p>
+    </ng-template>
+  </dxi-item>
+</dx-tab-panel>
+
+
+
+

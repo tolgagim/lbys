@@ -1,0 +1,7 @@
+{
+  "LoggerSettings": {
+    "AppName": "Server",
+    "WriteToFile": false,
+    "StructuredConsoleLogging": true
+  }
+}

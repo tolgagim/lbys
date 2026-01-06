@@ -1,0 +1,69 @@
+<div class="view-wrapper list-page crm-contact-list">
+  <dx-data-grid class="grid theme-dependent" noDataText="" height="100%" [dataSource]="dataSource"
+    [allowColumnReordering]="true" [focusedRowEnabled]="true" [showBorders]="true" [(focusedRowKey)]="id"
+    (onRowClick)="rowClick($event)" (onExporting)="onExporting($event)" (onOptionChanged)="onOptionChanged($event)"
+    [paging]="{enabled: true, pageSize: 10}"
+    [pager]="{showPageSizeSelector: true, allowedPageSizes: [5,10,20], showInfo: true, visible:true}"
+    [columnMinWidth]="50" (onContentReady)="onContentReady($event)">
+    <dxo-load-panel [showPane]="false"></dxo-load-panel>
+    <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+    <dxo-selection selectAllMode="allPages" showCheckBoxesMode="always" mode="multiple"></dxo-selection>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+    <dxo-search-panel [visible]="true" placeholder="{{'Roles.Search' | translate }}"></dxo-search-panel>
+    <dxo-export [enabled]="true" [allowExportSelectedData]="true"
+      [formats]="['xlsx', 'pdf']"></dxo-export>
+
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">{{'Roles.Header' | translate }}</div>
+      </dxi-item>
+      <dxi-item location="after" locateInMenu="auto" *hasRole="resource.Roles+'.'+action.Create">
+        <dx-button text="{{'Roles.Add' | translate }}" icon="plus" type="default" stylingMode="contained"
+          (onClick)="addContact()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after" locateInMenu="auto" showText="inMenu" widget="dxButton" [options]="{
+          text: 'Refresh',
+          icon: 'refresh',
+          onClick: refresh,
+          stylingMode: 'text'
+        }"></dxi-item>
+      <dxi-item location="after" locateInMenu="auto">
+        <div class="separator"></div>
+      </dxi-item>
+      <dxi-item name="exportButton"></dxi-item>
+      <dxi-item location="after" locateInMenu="auto">
+        <div class="separator"></div>
+      </dxi-item>
+      <dxi-item location="after" locateInMenu="auto" widget="dxButton" showText="inMenu" [options]="{
+          text: 'Column Chooser',
+          icon: 'columnchooser',
+          onClick: chooseColumnDataGrid,
+          stylingMode: 'text'
+        }"></dxi-item>
+      <dxi-item name="searchPanel" locateInMenu="auto"></dxi-item>
+    </dxo-toolbar>
+
+    <dxi-column dataField="id" visibleIndex="1" caption="id" [hidingPriority]="2" [minWidth]="150"
+      [visible]="true"></dxi-column>
+    <dxi-column dataField="name" visibleIndex="2" caption="{{'Roles.Name' | translate }}" [visible]="true"
+      sortOrder="asc" [hidingPriority]="3" [minWidth]="150" cellTemplate="name"></dxi-column>
+    <dxi-column dataField="description" visibleIndex="3" caption="{{'Roles.Description' | translate }}" [visible]="true"
+      [hidingPriority]="1" [minWidth]="100"></dxi-column>
+
+    <div *dxTemplate="let cellInfo of 'name'" class="name-template">
+      <div>
+        <div>{{ cellInfo.data.name }}</div>
+        <div class="position">{{ cellInfo.data.position }}</div>
+      </div>
+    </div>
+  </dx-data-grid>
+
+  <role-panel [id]="id" [(isOpened)]="isPanelOpened" (isOpenedChange)="onOpenedChange($event)"
+    (pinnedChange)="onPinnedChange()" (dataChange)="onDataChange()"></role-panel>
+
+  <form-popup [(visible)]="isAddRolePopupOpened" (save)="onClickSaveNewRole()" titleText="{{'Roles.Add' | translate }}">
+    <role-new-form></role-new-form>
+  </form-popup>
+</div>

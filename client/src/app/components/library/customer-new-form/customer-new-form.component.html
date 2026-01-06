@@ -1,0 +1,169 @@
+<dx-form class="plain-styled-form" [screenByWidth]="getSizeQualifier">
+    
+    <dxi-item itemType="group">
+      <dxo-col-count-by-screen
+        [xs]="1"
+        [sm]="2"
+        [md]="2"
+        [lg]="2"
+      ></dxo-col-count-by-screen>
+       
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.CompanyName' | translate }}"
+            [(value)]="newCustomer.Name"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.Description' | translate }}"
+            [(value)]="newCustomer.Description"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.Address' | translate }}"
+            [(value)]="newCustomer.Address"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.TaxNr' | translate }}"
+            [(value)]="newCustomer.TaxNumber"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+      
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.TaxOffice' | translate }}"
+            [(value)]="newCustomer.TaxOffice"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.PhoneNumber' | translate }}"
+            [(value)]="newCustomer.PhoneNumber"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.MobileNumber' | translate }}"
+            [(value)]="newCustomer.MobileNumber"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.UserFirstName' | translate }}"
+            [(value)]="newCustomer.UserFirstName"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.UserLastName' | translate }}"
+            [(value)]="newCustomer.UserLastName"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{'Customers.UserName' | translate }}"
+            [(value)]="newCustomer.UserName"
+            [isEditing]="true"
+          >
+          </form-textbox>
+        </div>
+      </dxi-item>
+    
+      <dxi-item>
+        <div *dxTemplate>
+          <form-textbox
+            label="{{ 'Customers.Email' | translate }}"
+            [(value)]="newCustomer.UserEmail"
+            [isEditing]="true"  
+            [validators]="confirmEmailValidators"
+          ></form-textbox> 
+        </div>
+      </dxi-item>
+    
+
+  
+    
+       
+      <dxi-item>
+        <dxo-label text="{{'Users.Password' | translate }}"></dxo-label>
+        
+          <password-text-box 
+            [(value)]="newCustomer.UserPassword" 
+            stylingMode="filled"
+            (valueChanged)="onNewPasswordChanged()" 
+            placeholder="Password" 
+            (valueChanged)="onNewPasswordChanged()"
+          >
+          </password-text-box>
+       
+      </dxi-item>
+      <dxi-item>
+        <dxo-label text="{{'Users.ConfirmPassword' | translate }}"></dxo-label>
+         
+          <password-text-box
+           #confirmField 
+            [(value)]="newCustomer.UserConfirmPassword" 
+            stylingMode="filled"
+            [validators]="confirmPasswordValidators"
+            (valueChanged)="onFieldChanged()" 
+          >
+          </password-text-box>
+        
+      </dxi-item>
+    
+     
+    </dxi-item>
+  
+   
+  </dx-form>
+  

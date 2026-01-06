@@ -1,0 +1,36 @@
+<dx-form class="plain-styled-form" [screenByWidth]="getSizeQualifier">
+    <dxi-item itemType="group">
+        <dxo-col-count-by-screen
+            [xs]="1"
+            [sm]="2"
+            [md]="2"
+            [lg]="2"
+        ></dxo-col-count-by-screen>
+
+        <!-- Tek sütunda gösterilmesi istenen dxi-item -->
+        <dxi-item [colSpan]="2">
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Brands.Name' | translate}}"
+                    [(value)]="updateBrand.name"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+
+        <dxi-item [colSpan]="2">
+            <div *dxTemplate>
+                <form-textbox
+                    label="{{'Brands.Description' | translate}}"
+                    [(value)]="updateBrand.description"
+                    [isEditing]="true"
+                >
+                </form-textbox>
+            </div>
+        </dxi-item>
+ 
+ 
+        
+    </dxi-item>
+</dx-form>

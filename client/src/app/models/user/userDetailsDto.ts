@@ -1,0 +1,19 @@
+export interface UserDetailsDto {
+  id: string;  
+  userName?: string;
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  isActive: boolean;
+  emailConfirmed: boolean;
+  phoneNumber?: string;
+  imageUrl?: string;
+  birthDate?:Date;
+  customerName?:string;
+  customerId?:string;
+  entCode?:string;
+}
+
+            
+
+
