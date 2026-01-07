@@ -1,0 +1,478 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_KAN_TALEP</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; sağlık tesisinde bulunan kan &#252;r&#252;n&#252;n&#252;n talep bilgisini kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>77DEEB556C16842BC100B000015B3C35</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_KAN_TALEP KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_196962" class="Aktif">
+                                                <td>1</td>
+                                                <td>KAN_TALEP_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Talep edilen kan &#252;r&#252;n&#252; bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196963" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196964" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196965" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196966" class="Aktif">
+                                                <td>5</td>
+                                                <td>KAN_TALEP_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde kan &#252;r&#252;n&#252;n&#252;n talep edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196967" class="Aktif">
+                                                <td>6</td>
+                                                <td>KAN_TALEP_ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kan talep edilen kişi i&#231;in yapılan a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196968" class="Aktif">
+                                                <td>7</td>
+                                                <td>KAN_TALEP_NEDENI</td>
+                                                <td>Dizi</td>
+                                                <td>Talep edilen kan &#252;r&#252;n&#252; i&#231;in belirtilen talep nedeni bilgisidir. &#214;rneğin ameliyat, HGB y&#252;kseltme vb.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25108">KAN_TALEP_NEDENI </a></td>
+                                            </tr>
+                                            <tr id="col_196969" class="Aktif">
+                                                <td>8</td>
+                                                <td>KAN_ISTEYEN_BIRIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kan &#252;r&#252;n&#252;n&#252; talep eden birim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11797">VEM_BIRIM</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196970" class="Aktif">
+                                                <td>9</td>
+                                                <td>ISTEYEN_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde ila&#231;, malzeme, &#252;r&#252;n vb. istemini yapan hekim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196971" class="Aktif">
+                                                <td>10</td>
+                                                <td>ISTENEN_KAN_GRUBU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tedavi olan hasta i&#231;in istenen kan grubuna bilgisine ait Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen kod bilgisidir. &#214;rneğin ARh+, BRh- vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24980">KAN_GRUBU </a></td>
+                                            </tr>
+                                            <tr id="col_196972" class="Aktif">
+                                                <td>11</td>
+                                                <td>PLANLANAN_TRANSFUZYON_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Kan &#252;r&#252;n&#252; i&#231;in planlanan transf&#252;zyon zamanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196973" class="Aktif">
+                                                <td>12</td>
+                                                <td>PLANLANAN_TRANSFUZYON_SURESI</td>
+                                                <td>Tamsayi</td>
+                                                <td>Planlanan kan &#252;r&#252;n&#252; transf&#252;zyon s&#252;resinin dakika cinsinden bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196974" class="Aktif">
+                                                <td>13</td>
+                                                <td>KAN_TALEP_ACILIYET_SEVIYESI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde talep edilen kan &#252;r&#252;n&#252;n&#252;n aciliyetinin seviyesine ilişkin bilgiyi ifade eder. &#214;rneğin normal, acil, &#231;ok acil vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25110">KAN_TALEP_ACILIYET_SEVIYESI </a></td>
+                                            </tr>
+                                            <tr id="col_196975" class="Aktif">
+                                                <td>14</td>
+                                                <td>CROSS_MATCH_YAPILMA_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Kan &#252;r&#252;n&#252;ne cross-match işleminin uygulanıp uygulanmayacağına ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196976" class="Aktif">
+                                                <td>15</td>
+                                                <td>KAN_ACIL_ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kan &#252;r&#252;n&#252;n&#252;n acil olarak istenmesine ilişkin aciliyet sebebi bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196977" class="Aktif">
+                                                <td>16</td>
+                                                <td>KAN_ANTIKOR_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Kişinin kanında herhangi bir kan gurubuna karşı antikor varlığına ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196978" class="Aktif">
+                                                <td>17</td>
+                                                <td>TRANSPLANTASYON_GECIRME_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık hizmetini almak i&#231;in sağlık tesisine başvuran kişinin tıbbi &#246;yk&#252;s&#252;nde transplantasyon ge&#231;irme durumuna ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196979" class="Aktif">
+                                                <td>18</td>
+                                                <td>TRANSFUZYON_GECIRME_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık hizmetini almak i&#231;in sağlık tesisine başvuran kişinin tıbbi &#246;yk&#252;s&#252;nde transf&#252;zyon ge&#231;irme durumuna ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196980" class="Aktif">
+                                                <td>19</td>
+                                                <td>TRANSFUZYON_REAKSIYON_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık hizmetini almak i&#231;in sağlık tesisine başvuran kişinin tıbbi &#246;yk&#252;s&#252;nde transf&#252;zyon sonrası reaksiyon durumuna ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196981" class="Aktif">
+                                                <td>20</td>
+                                                <td>GEBELIK_GECIRME_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Hasta &#246;yk&#252;s&#252;nde gebelik olup olmadığına ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196982" class="Aktif">
+                                                <td>21</td>
+                                                <td>FETOMATERNAL_UYUSMAZLIK_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Fetusun (anne karnındaki doğmamış bebek) anne ile olan kan uyuşmazlığı olup olmadığını ifade eden durum bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196983" class="Aktif">
+                                                <td>22</td>
+                                                <td>KAN_TALEP_OZEL_DURUM</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kan talep edilen hasta i&#231;in &#246;zel durum bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196984" class="Aktif">
+                                                <td>23</td>
+                                                <td>HEMATOKRIT_ORANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hematokrit (HCT) / Hemoglobin (HGB) oranı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196985" class="Aktif">
+                                                <td>24</td>
+                                                <td>TROMBOSIT_SAYISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişiden alınan kan &#246;rneğinde sayımı yapılan trombosit sayısı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196986" class="Aktif">
+                                                <td>25</td>
+                                                <td>KAN_ENDIKASYON_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişiye kan transf&#252;zyonu yapılacağı zaman kanın hangi ama&#231;la kişiye verileceğini ifade eder. &#214;rneğin kanamaya bağlı kan takviyesi, bağışıklık sistemi g&#252;&#231;lendirme, dolaşım sisteminde oksijen miktarını artırma vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25111">KAN_ENDIKASYON_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196987" class="Aktif">
+                                                <td>26</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196988" class="Aktif">
+                                                <td>27</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196989" class="Aktif">
+                                                <td>28</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196990" class="Aktif">
+                                                <td>29</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><a href="/Gorunum/Detay/11850">VEM_KAN_TALEP_DETAY;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11850">KAN_TALEP_KODU </a></td>
+                                                    </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

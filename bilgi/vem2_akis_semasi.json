@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "title": "VEM 2.0 - Saglik Bakanligi Veri Entegrasyon Modeli",
+    "version": "2.0",
+    "total_tables": 141,
+    "total_columns": 3892,
+    "source": "https://vem.saglik.gov.tr",
+    "generated_date": "2026-01-06"
+  },
+  "master_tables": [
+    {"table": "REFERANS_KODLAR", "columns": 490, "fk_in": 483, "fk_out": 0, "description": "Tum lookup/referans verileri"},
+    {"table": "KULLANICI", "columns": 298, "fk_in": 284, "fk_out": 4, "description": "Sistem kullanicilari"},
+    {"table": "PERSONEL", "columns": 146, "fk_in": 88, "fk_out": 24, "description": "Personel kayitlari"},
+    {"table": "HASTA_BASVURU", "columns": 123, "fk_in": 70, "fk_out": 32, "description": "Hasta basvuru kayitlari"},
+    {"table": "HASTA", "columns": 103, "fk_in": 69, "fk_out": 16, "description": "Hasta ana kayitlari"},
+    {"table": "BIRIM", "columns": 35, "fk_in": 19, "fk_out": 5, "description": "Hastane birimleri"},
+    {"table": "CIHAZ", "columns": 26, "fk_in": 12, "fk_out": 4, "description": "Tibbi cihazlar"},
+    {"table": "KURUM", "columns": 27, "fk_in": 12, "fk_out": 4, "description": "Kurum bilgileri"},
+    {"table": "STOK_KART", "columns": 28, "fk_in": 11, "fk_out": 4, "description": "Malzeme kartlari"},
+    {"table": "DEPO", "columns": 22, "fk_in": 9, "fk_out": 4, "description": "Depo tanimlari"},
+    {"table": "HASTA_HIZMET", "columns": 46, "fk_in": 8, "fk_out": 15, "description": "Hasta hizmet kayitlari"},
+    {"table": "AMELIYAT", "columns": 29, "fk_in": 5, "fk_out": 12, "description": "Ameliyat kayitlari"},
+    {"table": "TETKIK", "columns": 17, "fk_in": 4, "fk_out": 3, "description": "Tetkik tanimlari"},
+    {"table": "FIRMA", "columns": 19, "fk_in": 4, "fk_out": 2, "description": "Tedarikci firmalari"},
+    {"table": "HIZMET", "columns": 15, "fk_in": 3, "fk_out": 5, "description": "Hizmet tanimlari"}
+  ],
+  "categories": {
+    "HASTA_YONETIMI": {
+      "description": "Hasta kayit ve takip islemleri",
+      "tables": ["HASTA", "HASTA_BASVURU", "HASTA_HIZMET", "HASTA_MALZEME", "HASTA_SEVK", "HASTA_ARSIV", "HASTA_ARSIV_DETAY", "HASTA_BORC", "HASTA_DIS", "HASTA_EPIKRIZ", "HASTA_FOTOGRAF", "HASTA_GIZLILIK", "HASTA_ILETISIM", "HASTA_ADLI_RAPOR", "HASTA_NOTLARI", "HASTA_OLUM", "HASTA_SEANS", "HASTA_TIBBI_BILGI", "HASTA_UYARI", "HASTA_VENTILATOR", "HASTA_VITAL_FIZIKI_BULGU", "HASTA_YATAK", "BASVURU_TANI", "BASVURU_YEMEK", "ANLIK_YATAN_HASTA"]
+    },
+    "AMELIYAT_CERRAHI": {
+      "description": "Ameliyat ve cerrahi islemler",
+      "tables": ["AMELIYAT", "AMELIYAT_EKIP", "AMELIYAT_ISLEM", "AMELIYAT_MALZEME"]
+    },
+    "LABORATUVAR_TETKIK": {
+      "description": "Laboratuvar testleri ve tetkikler",
+      "tables": ["TETKIK", "TETKIK_NUMUNE", "TETKIK_PARAMETRE", "TETKIK_SONUC", "TETKIK_CIHAZ_ESLESME", "TETKIK_REFERANS_ARALIK", "BAKTERI_SONUC", "ANTIBIYOTIK_SONUC", "PATOLOJI"]
+    },
+    "KAN_MERKEZI": {
+      "description": "Kan bankasi ve transfuzyon",
+      "tables": ["KAN_BAGISCI", "KAN_STOK", "KAN_TALEP", "KAN_TALEP_DETAY", "KAN_URUN", "KAN_CIKIS", "KAN_URUN_IMHA"]
+    },
+    "ECZANE_ILAC": {
+      "description": "Ilac ve recete yonetimi",
+      "tables": ["RECETE", "RECETE_ILAC", "RECETE_ILAC_ACIKLAMA", "ILAC_UYUM"]
+    },
+    "STOK_MALZEME": {
+      "description": "Stok ve malzeme yonetimi",
+      "tables": ["STOK_KART", "STOK_HAREKET", "STOK_FIS", "STOK_ISTEK", "STOK_ISTEK_HAREKET", "STOK_ISTEK_UYGULAMA", "STOK_DURUM", "STOK_EHU_TAKIP", "DEPO"]
+    },
+    "RADYOLOJI_GORUNTULEME": {
+      "description": "Radyoloji ve goruntuleme",
+      "tables": ["RADYOLOJI", "RADYOLOJI_SONUC"]
+    },
+    "RANDEVU_PLANLAMA": {
+      "description": "Randevu ve kaynak planlama",
+      "tables": ["RANDEVU", "RANDEVU_ENGEL"]
+    },
+    "FATURALAMA_FINANS": {
+      "description": "Faturalama ve finansal islemler",
+      "tables": ["FATURA", "FATURA_DETAY", "ICMAL", "ICMAL_DETAY", "VEZNE", "VEZNE_DETAY", "EK_ODEME", "EK_ODEME_DETAY", "EK_ODEME_DONEM", "MEDULA_TAKIP", "MEDULA_ISLEM"]
+    },
+    "PERSONEL_KULLANICI": {
+      "description": "Personel ve kullanici yonetimi",
+      "tables": ["PERSONEL", "KULLANICI", "KULLANICI_GRUP", "GRUP_UYELIK", "PERSONEL_IZIN", "PERSONEL_IZIN_DURUMU", "PERSONEL_BAKMAKLA_YUKUMLU", "PERSONEL_BANKA", "PERSONEL_BORDRO", "PERSONEL_BORDRO_SONDURUM", "PERSONEL_EGITIM", "PERSONEL_GOREVLENDIRME", "PERSONEL_ODUL_CEZA", "PERSONEL_OGRENIM", "PERSONEL_YANDAL", "NOBETCI_PERSONEL_BILGISI"]
+    },
+    "KURUM_BIRIM": {
+      "description": "Kurum ve birim yonetimi",
+      "tables": ["KURUM", "BIRIM", "BINA", "ODA", "YATAK", "CIHAZ", "FIRMA"]
+    },
+    "TANIM_REFERANS": {
+      "description": "Referans ve tanim tablolari",
+      "tables": ["REFERANS_KODLAR", "HIZMET"]
+    },
+    "DIS_HEKIMLIGI": {
+      "description": "Dis hekimligi modulu",
+      "tables": ["DIS_TAAHHUT", "DIS_TAAHHUT_DETAY", "DISPROTEZ", "DISPROTEZ_DETAY", "ORTODONTI_ICON_SKOR"]
+    },
+    "DOGUM_KADIN": {
+      "description": "Dogum ve kadin sagligi",
+      "tables": ["DOGUM", "DOGUM_DETAY", "GEBE_IZLEM", "LOHUSA_IZLEM", "KADIN_IZLEM"]
+    },
+    "COCUK_SAGLIGI": {
+      "description": "Cocuk sagligi modulu",
+      "tables": ["BEBEK_COCUK_IZLEM", "COCUK_DIYABET", "HEMOGLOBINOPATI"]
+    },
+    "KRONIK_HASTALIK": {
+      "description": "Kronik hastalik takibi",
+      "tables": ["DIYABET", "OBEZITE_IZLEM", "EVDE_SAGLIK_IZLEM"]
+    },
+    "STERILIZASYON": {
+      "description": "Sterilizasyon islemleri",
+      "tables": ["STERILIZASYON_SET", "STERILIZASYON_SET_DETAY", "STERILIZASYON_PAKET", "STERILIZASYON_PAKET_DETAY", "STERILIZASYON_GIRIS", "STERILIZASYON_CIKIS", "STERILIZASYON_YIKAMA", "STERILIZASYON_STOK_DURUM"]
+    },
+    "KURUL_RAPOR": {
+      "description": "Kurul ve raporlama",
+      "tables": ["KURUL", "KURUL_RAPOR", "KURUL_ASKERI", "KURUL_ENGELLI", "KURUL_ETKEN_MADDE", "KURUL_HEKIM", "KURUL_TESHIS", "RISK_SKORLAMA", "RISK_SKORLAMA_DETAY"]
+    },
+    "TIBBI_KAYIT": {
+      "description": "Tibbi kayitlar ve orderlar",
+      "tables": ["TIBBI_ORDER", "TIBBI_ORDER_DETAY", "KLINIK_SEYIR", "KONSULTASYON", "HEMSIRE_BAKIM", "DOKTOR_MESAJI"]
+    },
+    "OZEL_IZLEM": {
+      "description": "Ozel izlem modulleri",
+      "tables": ["ASI_BILGISI", "GETAT", "INTIHAR_IZLEM", "KUDUZ_IZLEM", "MADDE_BAGIMLILIGI", "BILDIRIMI_ZORUNLU", "OLUM_BILGISI", "OPTIK_RECETE"]
+    },
+    "SISTEM": {
+      "description": "Sistem tablolari",
+      "tables": ["SYS_PAKET", "SILINEN_KAYITLAR"]
+    }
+  },
+  "flow_diagrams": {
+    "hasta_kabul": {
+      "name": "Hasta Kabul Akisi",
+      "description": "Hastanin sisteme kaydi ve basvuru olusturma sureci",
+      "steps": [
+        {"step": 1, "table": "HASTA", "action": "Hasta TC/kimlik bilgileri ile kayit olustur", "fields": ["HASTA_KODU", "TC_KIMLIK_NO", "AD", "SOYAD", "DOGUM_TARIHI", "CINSIYET"]},
+        {"step": 2, "table": "HASTA_ILETISIM", "action": "Iletisim bilgilerini kaydet", "fields": ["TELEFON", "ADRES", "EMAIL"]},
+        {"step": 3, "table": "HASTA_BASVURU", "action": "Basvuru kaydi olustur", "fields": ["BASVURU_KODU", "HASTA_KODU", "BASVURU_TARIHI", "BASVURU_TURU", "BIRIM_KODU"]},
+        {"step": 4, "table": "BIRIM", "action": "Ilgili birimi ata", "fields": ["BIRIM_KODU", "BIRIM_ADI"]},
+        {"step": 5, "table": "PERSONEL", "action": "Sorumlu doktoru ata", "fields": ["PERSONEL_KODU", "AD", "SOYAD", "UZMANLIK"]}
+      ],
+      "relations": [
+        {"from": "HASTA_BASVURU", "to": "HASTA", "via": "HASTA_KODU"},
+        {"from": "HASTA_BASVURU", "to": "BIRIM", "via": "BIRIM_KODU"},
+        {"from": "HASTA_ILETISIM", "to": "HASTA", "via": "HASTA_KODU"}
+      ]
+    },
+    "poliklinik_muayene": {
+      "name": "Poliklinik Muayene Akisi",
+      "description": "Ayaktan hasta muayene sureci",
+      "steps": [
+        {"step": 1, "table": "HASTA_BASVURU", "action": "Basvuruyu ac/goruntule"},
+        {"step": 2, "table": "HASTA_VITAL_FIZIKI_BULGU", "action": "Vital bulgulari kaydet", "fields": ["TANSIYON", "NABIZ", "ATES", "KILO", "BOY"]},
+        {"step": 3, "table": "BASVURU_TANI", "action": "ICD-10 tani kodlarini gir", "fields": ["TANI_KODU", "TANI_TURU"]},
+        {"step": 4, "table": "TETKIK_SONUC", "action": "Tetkik iste (lab, radyoloji)", "fields": ["TETKIK_KODU", "ISTEK_TARIHI"]},
+        {"step": 5, "table": "RECETE", "action": "E-Recete olustur"},
+        {"step": 6, "table": "RECETE_ILAC", "action": "Ilaclari ekle", "fields": ["ILAC_KODU", "DOZ", "KULLANIM_SEKLI"]},
+        {"step": 7, "table": "HASTA_HIZMET", "action": "Yapilan hizmetleri kaydet"},
+        {"step": 8, "table": "FATURA", "action": "Fatura olustur"}
+      ],
+      "relations": [
+        {"from": "BASVURU_TANI", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "RECETE", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "RECETE_ILAC", "to": "RECETE", "via": "RECETE_KODU"},
+        {"from": "HASTA_HIZMET", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"}
+      ]
+    },
+    "yatan_hasta": {
+      "name": "Yatan Hasta Akisi",
+      "description": "Yatarak tedavi sureci",
+      "steps": [
+        {"step": 1, "table": "HASTA_BASVURU", "action": "Yatis basvurusu olustur", "fields": ["BASVURU_TURU=YATIS"]},
+        {"step": 2, "table": "YATAK", "action": "Uygun yatak bul ve ata"},
+        {"step": 3, "table": "HASTA_YATAK", "action": "Hasta-yatak eslesmesi kaydet"},
+        {"step": 4, "table": "ANLIK_YATAN_HASTA", "action": "Anlik yatan hasta listesine ekle"},
+        {"step": 5, "table": "TIBBI_ORDER", "action": "Tibbi orderlari gir"},
+        {"step": 6, "table": "TIBBI_ORDER_DETAY", "action": "Order detaylarini kaydet"},
+        {"step": 7, "table": "HEMSIRE_BAKIM", "action": "Hemsire bakim notlari"},
+        {"step": 8, "table": "KLINIK_SEYIR", "action": "Gunluk klinik notlar"},
+        {"step": 9, "table": "HASTA_MALZEME", "action": "Kullanilan malzemeleri kaydet"},
+        {"step": 10, "table": "HASTA_EPIKRIZ", "action": "Taburculukta epikriz yaz"},
+        {"step": 11, "table": "FATURA", "action": "Taburcu faturasi olustur"}
+      ],
+      "relations": [
+        {"from": "HASTA_YATAK", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "HASTA_YATAK", "to": "YATAK", "via": "YATAK_KODU"},
+        {"from": "TIBBI_ORDER", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "TIBBI_ORDER_DETAY", "to": "TIBBI_ORDER", "via": "TIBBI_ORDER_KODU"}
+      ]
+    },
+    "ameliyat": {
+      "name": "Ameliyat Akisi",
+      "description": "Cerrahi islem sureci",
+      "steps": [
+        {"step": 1, "table": "AMELIYAT", "action": "Ameliyat kaydi olustur", "fields": ["AMELIYAT_KODU", "AMELIYAT_ADI", "AMELIYAT_TURU", "AMELIYAT_TIPI"]},
+        {"step": 2, "table": "AMELIYAT_EKIP", "action": "Ameliyat ekibini belirle", "fields": ["CERRAH", "ANESTEZIST", "HEMSIRE"]},
+        {"step": 3, "table": "AMELIYAT_MALZEME", "action": "Gerekli malzemeleri hazirla"},
+        {"step": 4, "table": "AMELIYAT", "action": "Anestezi baslat", "fields": ["ANESTEZI_TURU", "ANESTEZI_BASLAMA_ZAMANI"]},
+        {"step": 5, "table": "AMELIYAT", "action": "Ameliyat baslat", "fields": ["AMELIYAT_BASLAMA_ZAMANI", "AMELIYAT_DURUMU"]},
+        {"step": 6, "table": "AMELIYAT_ISLEM", "action": "Yapilan islemleri kaydet"},
+        {"step": 7, "table": "AMELIYAT", "action": "Ameliyat bitir", "fields": ["AMELIYAT_BITIS_ZAMANI", "ANESTEZI_BITIS_ZAMANI"]},
+        {"step": 8, "table": "HASTA_HIZMET", "action": "Hizmetleri faturaya aktar"}
+      ],
+      "relations": [
+        {"from": "AMELIYAT", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "AMELIYAT", "to": "HASTA", "via": "HASTA_KODU"},
+        {"from": "AMELIYAT_EKIP", "to": "AMELIYAT", "via": "AMELIYAT_KODU"},
+        {"from": "AMELIYAT_EKIP", "to": "PERSONEL", "via": "PERSONEL_KODU"},
+        {"from": "AMELIYAT_ISLEM", "to": "AMELIYAT", "via": "AMELIYAT_KODU"},
+        {"from": "AMELIYAT_ISLEM", "to": "HASTA_HIZMET", "via": "HASTA_HIZMET_KODU"}
+      ]
+    },
+    "laboratuvar": {
+      "name": "Laboratuvar Akisi",
+      "description": "Laboratuvar test sureci",
+      "steps": [
+        {"step": 1, "table": "TETKIK", "action": "Tetkik tanimlari (lookup)"},
+        {"step": 2, "table": "TETKIK_PARAMETRE", "action": "Tetkik parametreleri tanimla"},
+        {"step": 3, "table": "TETKIK_SONUC", "action": "Tetkik istegi olustur", "fields": ["ISTEK_TARIHI", "TETKIK_KODU"]},
+        {"step": 4, "table": "TETKIK_NUMUNE", "action": "Numune al ve barkodla", "fields": ["NUMUNE_KODU", "NUMUNE_TURU", "ALINAN_TARIH"]},
+        {"step": 5, "table": "TETKIK_CIHAZ_ESLESME", "action": "Cihaza gonder"},
+        {"step": 6, "table": "TETKIK_SONUC", "action": "Sonuclari kaydet", "fields": ["SONUC_DEGERI", "SONUC_TARIHI"]},
+        {"step": 7, "table": "BAKTERI_SONUC", "action": "Kultur sonucu (varsa)"},
+        {"step": 8, "table": "ANTIBIYOTIK_SONUC", "action": "Antibiyogram (varsa)"}
+      ],
+      "relations": [
+        {"from": "TETKIK_SONUC", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "TETKIK_SONUC", "to": "TETKIK", "via": "TETKIK_KODU"},
+        {"from": "TETKIK_NUMUNE", "to": "TETKIK_SONUC", "via": "TETKIK_SONUC_KODU"},
+        {"from": "BAKTERI_SONUC", "to": "TETKIK_SONUC", "via": "TETKIK_SONUC_KODU"}
+      ]
+    },
+    "radyoloji": {
+      "name": "Radyoloji Akisi",
+      "description": "Goruntuleme islemleri sureci",
+      "steps": [
+        {"step": 1, "table": "RADYOLOJI", "action": "Radyoloji istegi olustur", "fields": ["ISTEK_TARIHI", "MODALITE", "ISTEK_ACIKLAMA"]},
+        {"step": 2, "table": "RADYOLOJI", "action": "Randevu planla", "fields": ["RANDEVU_TARIHI"]},
+        {"step": 3, "table": "RADYOLOJI", "action": "Cekim yap", "fields": ["CEKIM_TARIHI", "CIHAZ_KODU"]},
+        {"step": 4, "table": "RADYOLOJI_SONUC", "action": "Rapor yaz", "fields": ["RAPOR_METNI", "RAPOR_TARIHI"]},
+        {"step": 5, "table": "HASTA_HIZMET", "action": "Hizmeti kaydet"}
+      ],
+      "relations": [
+        {"from": "RADYOLOJI", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "RADYOLOJI", "to": "CIHAZ", "via": "CIHAZ_KODU"},
+        {"from": "RADYOLOJI_SONUC", "to": "RADYOLOJI", "via": "RADYOLOJI_KODU"}
+      ]
+    },
+    "stok_yonetimi": {
+      "name": "Stok Yonetim Akisi",
+      "description": "Malzeme ve stok yonetimi",
+      "steps": [
+        {"step": 1, "table": "STOK_KART", "action": "Malzeme karti tanimla", "fields": ["STOK_KART_KODU", "MALZEME_ADI", "BIRIM", "BARKOD"]},
+        {"step": 2, "table": "DEPO", "action": "Depo tanimla", "fields": ["DEPO_KODU", "DEPO_ADI", "DEPO_TURU"]},
+        {"step": 3, "table": "STOK_FIS", "action": "Giris fisi olustur", "fields": ["FIS_TURU=GIRIS", "TEDARIKCI", "FATURA_NO"]},
+        {"step": 4, "table": "STOK_HAREKET", "action": "Stok hareketi kaydet", "fields": ["HAREKET_TURU", "MIKTAR", "BIRIM_FIYAT"]},
+        {"step": 5, "table": "STOK_DURUM", "action": "Guncel stok durumu"},
+        {"step": 6, "table": "STOK_ISTEK", "action": "Birim stok istegi", "fields": ["TALEP_EDEN_BIRIM", "ISTEK_TARIHI"]},
+        {"step": 7, "table": "STOK_ISTEK_HAREKET", "action": "Istek karsilama"},
+        {"step": 8, "table": "STOK_FIS", "action": "Cikis fisi olustur", "fields": ["FIS_TURU=CIKIS"]}
+      ],
+      "relations": [
+        {"from": "STOK_HAREKET", "to": "STOK_KART", "via": "STOK_KART_KODU"},
+        {"from": "STOK_HAREKET", "to": "DEPO", "via": "DEPO_KODU"},
+        {"from": "STOK_HAREKET", "to": "STOK_FIS", "via": "STOK_FIS_KODU"},
+        {"from": "STOK_ISTEK_HAREKET", "to": "STOK_ISTEK", "via": "STOK_ISTEK_KODU"}
+      ]
+    },
+    "kan_bankasi": {
+      "name": "Kan Bankasi Akisi",
+      "description": "Kan bagisi ve transfuzyon sureci",
+      "steps": [
+        {"step": 1, "table": "KAN_BAGISCI", "action": "Bagisci kaydi", "fields": ["TC_KIMLIK", "AD", "SOYAD", "KAN_GRUBU"]},
+        {"step": 2, "table": "KAN_URUN", "action": "Kan urunu tanimlari"},
+        {"step": 3, "table": "KAN_STOK", "action": "Bagis al ve stoga ekle", "fields": ["TORBA_NO", "URUN_TURU", "SON_KULLANIM"]},
+        {"step": 4, "table": "KAN_TALEP", "action": "Kan talebi olustur", "fields": ["HASTA_KODU", "TALEP_TARIHI", "ACILIYET"]},
+        {"step": 5, "table": "KAN_TALEP_DETAY", "action": "Talep detaylari", "fields": ["URUN_TURU", "MIKTAR"]},
+        {"step": 6, "table": "KAN_CIKIS", "action": "Kan cikisi yap"},
+        {"step": 7, "table": "KAN_URUN_IMHA", "action": "Son kullanim gecen urunleri imha et"}
+      ],
+      "relations": [
+        {"from": "KAN_STOK", "to": "KAN_BAGISCI", "via": "KAN_BAGISCI_KODU"},
+        {"from": "KAN_STOK", "to": "KAN_URUN", "via": "KAN_URUN_KODU"},
+        {"from": "KAN_TALEP", "to": "HASTA", "via": "HASTA_KODU"},
+        {"from": "KAN_TALEP_DETAY", "to": "KAN_TALEP", "via": "KAN_TALEP_KODU"}
+      ]
+    },
+    "faturalama": {
+      "name": "Faturalama Akisi",
+      "description": "SGK/Ozel faturalama sureci",
+      "steps": [
+        {"step": 1, "table": "HASTA_HIZMET", "action": "Verilen hizmetleri topla"},
+        {"step": 2, "table": "MEDULA_TAKIP", "action": "MEDULA takip no al (SGK)", "fields": ["TAKIP_NO", "PROVIZYON_TIPI"]},
+        {"step": 3, "table": "MEDULA_ISLEM", "action": "MEDULA islemleri kaydet"},
+        {"step": 4, "table": "FATURA", "action": "Fatura olustur", "fields": ["FATURA_NO", "FATURA_TARIHI", "FATURA_TURU"]},
+        {"step": 5, "table": "FATURA_DETAY", "action": "Fatura kalemlerini ekle"},
+        {"step": 6, "table": "ICMAL", "action": "Aylik icmal olustur"},
+        {"step": 7, "table": "ICMAL_DETAY", "action": "Icmal detaylari"},
+        {"step": 8, "table": "VEZNE", "action": "Tahsilat yap", "fields": ["ODEME_TURU", "TUTAR"]},
+        {"step": 9, "table": "VEZNE_DETAY", "action": "Tahsilat detaylari"}
+      ],
+      "relations": [
+        {"from": "FATURA", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "FATURA_DETAY", "to": "FATURA", "via": "FATURA_KODU"},
+        {"from": "MEDULA_TAKIP", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"},
+        {"from": "ICMAL_DETAY", "to": "ICMAL", "via": "ICMAL_KODU"},
+        {"from": "VEZNE", "to": "HASTA_BASVURU", "via": "HASTA_BASVURU_KODU"}
+      ]
+    },
+    "randevu": {
+      "name": "Randevu Akisi",
+      "description": "Randevu alma ve yonetimi",
+      "steps": [
+        {"step": 1, "table": "RANDEVU_ENGEL", "action": "Randevu engellerini kontrol et"},
+        {"step": 2, "table": "RANDEVU", "action": "Randevu olustur", "fields": ["RANDEVU_TARIHI", "RANDEVU_SAATI", "BIRIM_KODU", "PERSONEL_KODU"]},
+        {"step": 3, "table": "RANDEVU", "action": "SMS/Email bildirimi gonder"},
+        {"step": 4, "table": "RANDEVU", "action": "Randevu durumunu guncelle", "fields": ["RANDEVU_DURUMU"]},
+        {"step": 5, "table": "HASTA_BASVURU", "action": "Randevu geldiginde basvuru olustur"}
+      ],
+      "relations": [
+        {"from": "RANDEVU", "to": "HASTA", "via": "HASTA_KODU"},
+        {"from": "RANDEVU", "to": "BIRIM", "via": "BIRIM_KODU"},
+        {"from": "RANDEVU", "to": "PERSONEL", "via": "PERSONEL_KODU"}
+      ]
+    },
+    "personel_yonetimi": {
+      "name": "Personel Yonetim Akisi",
+      "description": "Personel ve kullanici islemleri",
+      "steps": [
+        {"step": 1, "table": "PERSONEL", "action": "Personel kaydi olustur", "fields": ["PERSONEL_KODU", "TC_KIMLIK", "AD", "SOYAD", "UNVAN"]},
+        {"step": 2, "table": "PERSONEL_OGRENIM", "action": "Egitim bilgilerini gir"},
+        {"step": 3, "table": "PERSONEL_YANDAL", "action": "Uzmanlik/Yandal bilgileri"},
+        {"step": 4, "table": "KULLANICI", "action": "Sistem kullanicisi olustur", "fields": ["KULLANICI_ADI", "SIFRE", "EMAIL"]},
+        {"step": 5, "table": "KULLANICI_GRUP", "action": "Yetki gruplari tanimla"},
+        {"step": 6, "table": "GRUP_UYELIK", "action": "Kullaniciyi gruplara ata"},
+        {"step": 7, "table": "PERSONEL_IZIN", "action": "Izin kayitlari"},
+        {"step": 8, "table": "PERSONEL_BORDRO", "action": "Maas bordrosu"}
+      ],
+      "relations": [
+        {"from": "KULLANICI", "to": "PERSONEL", "via": "PERSONEL_KODU"},
+        {"from": "GRUP_UYELIK", "to": "KULLANICI", "via": "KULLANICI_KODU"},
+        {"from": "GRUP_UYELIK", "to": "KULLANICI_GRUP", "via": "GRUP_KODU"},
+        {"from": "PERSONEL_IZIN", "to": "PERSONEL", "via": "PERSONEL_KODU"}
+      ]
+    }
+  },
+  "table_hierarchy": {
+    "level_1_core": {
+      "description": "Temel/Master tablolar - En cok referans alan",
+      "tables": ["REFERANS_KODLAR", "KULLANICI", "KURUM"]
+    },
+    "level_2_master": {
+      "description": "Ana entity tablolari",
+      "tables": ["HASTA", "PERSONEL", "BIRIM", "CIHAZ", "DEPO", "STOK_KART", "FIRMA", "HIZMET", "TETKIK"]
+    },
+    "level_3_transaction": {
+      "description": "Islem tablolari - Basvuru bazli",
+      "tables": ["HASTA_BASVURU", "AMELIYAT", "RECETE", "FATURA", "RANDEVU", "KAN_TALEP", "STOK_FIS", "RADYOLOJI"]
+    },
+    "level_4_detail": {
+      "description": "Detay tablolari",
+      "tables": ["AMELIYAT_EKIP", "AMELIYAT_ISLEM", "RECETE_ILAC", "FATURA_DETAY", "TETKIK_SONUC", "STOK_HAREKET", "HASTA_HIZMET"]
+    },
+    "level_5_log": {
+      "description": "Log ve izleme tablolari",
+      "tables": ["HASTA_VITAL_FIZIKI_BULGU", "KLINIK_SEYIR", "HEMSIRE_BAKIM", "SILINEN_KAYITLAR"]
+    }
+  },
+  "common_fk_patterns": {
+    "audit_fields": {
+      "description": "Her tabloda bulunan audit alanlari",
+      "fields": [
+        {"name": "EKLEYEN_KULLANICI_KODU", "references": "KULLANICI"},
+        {"name": "GUNCELLEYEN_KULLANICI_KODU", "references": "KULLANICI"},
+        {"name": "KAYIT_ZAMANI", "type": "DateTime"},
+        {"name": "GUNCELLEME_ZAMANI", "type": "DateTime"}
+      ]
+    },
+    "patient_context": {
+      "description": "Hasta baglantili tablolarda",
+      "fields": [
+        {"name": "HASTA_KODU", "references": "HASTA"},
+        {"name": "HASTA_BASVURU_KODU", "references": "HASTA_BASVURU"}
+      ]
+    },
+    "reference_codes": {
+      "description": "Referans kod alanlari (REFERANS_KODLAR tablosuna FK)",
+      "examples": ["CINSIYET", "MEDENI_HAL", "KAN_GRUBU", "AMELIYAT_TURU", "ANESTEZI_TURU", "BASVURU_TURU"]
+    }
+  }
+}

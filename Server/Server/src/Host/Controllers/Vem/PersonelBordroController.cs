@@ -1,0 +1,413 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Server.Application.Vem.PersonelBordro;
+using Server.Domain.Lbys;
+using Server.Infrastructure.Auth.Permissions;
+using Server.Infrastructure.Persistence.Context;
+using Server.Shared.Authorization;
+
+namespace Server.Host.Controllers.Vem;
+
+[Route("api/vem/[controller]")]
+public class PersonelBordroController : BaseApiController
+{
+    private readonly ApplicationDbContext _db;
+
+    public PersonelBordroController(ApplicationDbContext db) => _db = db;
+
+    [HttpGet]
+    [MustHavePermission(FSHAction.View, FSHResource.PersonelBordro)]
+    public async Task<List<PersonelBordroDto>> GetAll(CancellationToken ct)
+    {
+        return await _db.Set<PERSONEL_BORDRO>()
+            .AsNoTracking()
+            .Select(e => new PersonelBordroDto
+            {
+                PERSONEL_BORDRO_KODU = e.PERSONEL_BORDRO_KODU,
+                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
+                YIL = e.YIL,
+                AY = e.AY,
+                PERSONEL_KODU = e.PERSONEL_KODU,
+                BORDRO_TURU = e.BORDRO_TURU,
+                BORDRO_NUMARASI = e.BORDRO_NUMARASI,
+                MAAS_DERECESI = e.MAAS_DERECESI,
+                MAAS_KADEMESI = e.MAAS_KADEMESI,
+                MAAS_GOSTERGESI = e.MAAS_GOSTERGESI,
+                MAAS_EK_GOSTERGESI = e.MAAS_EK_GOSTERGESI,
+                EMEKLI_DERECESI = e.EMEKLI_DERECESI,
+                EMEKLI_KADEMESI = e.EMEKLI_KADEMESI,
+                EMEKLI_GOSTERGESI = e.EMEKLI_GOSTERGESI,
+                EMEKLI_EK_GOSTERGESI = e.EMEKLI_EK_GOSTERGESI,
+                TABAN_AYLIK_TUTARI = e.TABAN_AYLIK_TUTARI,
+                AYLIK_TUTARI = e.AYLIK_TUTARI,
+                KIDEM_TUTARI = e.KIDEM_TUTARI,
+                EK_GOSTERGE_TUTARI = e.EK_GOSTERGE_TUTARI,
+                YAN_ODEME_TUTARI = e.YAN_ODEME_TUTARI,
+                OZEL_HIZMET_TUTARI = e.OZEL_HIZMET_TUTARI,
+                AILE_YARDIMI_TUTARI = e.AILE_YARDIMI_TUTARI,
+                COCUK_YARDIMI_TUTARI = e.COCUK_YARDIMI_TUTARI,
+                COCUK_SAYISI_6_YAS_ALTI = e.COCUK_SAYISI_6_YAS_ALTI,
+                COCUK_SAYISI_6_YAS_USTU = e.COCUK_SAYISI_6_YAS_USTU,
+                AGI_ESAS_COCUK_SAYISI = e.AGI_ESAS_COCUK_SAYISI,
+                ES_CALISMA_DURUMU = e.ES_CALISMA_DURUMU,
+                BES_FIRMA_KODU = e.BES_FIRMA_KODU,
+                BES_ORANI = e.BES_ORANI,
+                BES_KESINTI_TUTARI = e.BES_KESINTI_TUTARI,
+                YABANCI_DIL_TAZMINATI_TUTARI = e.YABANCI_DIL_TAZMINATI_TUTARI,
+                YABANCI_DIL_BILGISI = e.YABANCI_DIL_BILGISI,
+                YABANCI_DIL_PUANI = e.YABANCI_DIL_PUANI,
+                SENDIKA_ODENEGI_TUTARI = e.SENDIKA_ODENEGI_TUTARI,
+                SENDIKA_BILGISI = e.SENDIKA_BILGISI,
+                SENDIKA_SIRA_NUMARASI = e.SENDIKA_SIRA_NUMARASI,
+                SENDIKA_KESINTI_ORANI = e.SENDIKA_KESINTI_ORANI,
+                SENDIKA_AIDATI_TUTARI = e.SENDIKA_AIDATI_TUTARI,
+                DEVLET_EMEKLI_KESENEGI = e.DEVLET_EMEKLI_KESENEGI,
+                SAHIS_EMEKLI_KESENEGI = e.SAHIS_EMEKLI_KESENEGI,
+                EMEKLI_KESENEGI_MATRAHI_TUTARI = e.EMEKLI_KESENEGI_MATRAHI_TUTARI,
+                OZEL_SIGORTA_TUTARI = e.OZEL_SIGORTA_TUTARI,
+                VERGI_INDIRIMI_TUTARI = e.VERGI_INDIRIMI_TUTARI,
+                DAMGA_VERGISI_TUTARI = e.DAMGA_VERGISI_TUTARI,
+                GELIR_VERGISI_TUTARI = e.GELIR_VERGISI_TUTARI,
+                GELIR_VERGISI_MATRAHI_TUTARI = e.GELIR_VERGISI_MATRAHI_TUTARI,
+                KUMULATIF_GELIR_VERGISI_TUTARI = e.KUMULATIF_GELIR_VERGISI_TUTARI,
+                ICRA_TUTARI = e.ICRA_TUTARI,
+                NAFAKA_TUTARI = e.NAFAKA_TUTARI,
+                YUZDE_YUZ_TUTARI = e.YUZDE_YUZ_TUTARI,
+                DOGU_TAZMINATI_TUTARI = e.DOGU_TAZMINATI_TUTARI,
+                SGK_SAHIS_TUTARI = e.SGK_SAHIS_TUTARI,
+                SGK_ISVEREN_TUTARI = e.SGK_ISVEREN_TUTARI,
+                SGK_MATRAHI_TUTARI = e.SGK_MATRAHI_TUTARI,
+                KEFALET_TUTARI = e.KEFALET_TUTARI,
+                SOZLESME_UCRETI_TUTARI = e.SOZLESME_UCRETI_TUTARI,
+                LOJMAN_KESINTISI_TUTARI = e.LOJMAN_KESINTISI_TUTARI,
+                ASGARI_GECIM_INDIRIMI_TUTARI = e.ASGARI_GECIM_INDIRIMI_TUTARI,
+                ISSIZLIK_SAHIS_TUTARI = e.ISSIZLIK_SAHIS_TUTARI,
+                ISSIZLIK_ISVEREN_TUTARI = e.ISSIZLIK_ISVEREN_TUTARI,
+                ISSIZLIK_PRIMI_MATRAHI_TUTARI = e.ISSIZLIK_PRIMI_MATRAHI_TUTARI,
+                MALULLUK_DEVLET_TUTARI = e.MALULLUK_DEVLET_TUTARI,
+                MALULLUK_SAHIS_TUTARI = e.MALULLUK_SAHIS_TUTARI,
+                GIYECEK_YARDIMI_TUTARI = e.GIYECEK_YARDIMI_TUTARI,
+                FARK_TAZMINATI_TUTARI = e.FARK_TAZMINATI_TUTARI,
+                HIZMET_ZAMMI_TUTARI = e.HIZMET_ZAMMI_TUTARI,
+                VASITA_YARDIMI_TUTARI = e.VASITA_YARDIMI_TUTARI,
+                KIRA_YARDIMI_TUTARI = e.KIRA_YARDIMI_TUTARI,
+                YEMEK_YARDIMI_TUTARI = e.YEMEK_YARDIMI_TUTARI,
+                FAZLA_MESAI_TUTARI = e.FAZLA_MESAI_TUTARI,
+                NOBET_BIRIM_UCRET_TUTARI = e.NOBET_BIRIM_UCRET_TUTARI,
+                NOBET_BIRIM_UCRET_20_TUTARI = e.NOBET_BIRIM_UCRET_20_TUTARI,
+                NOBET_BIRIM_UCRET_50_TUTARI = e.NOBET_BIRIM_UCRET_50_TUTARI,
+                NOBET_SAATI = e.NOBET_SAATI,
+                NOBET_20_SAATI = e.NOBET_20_SAATI,
+                NOBET_50_SAATI = e.NOBET_50_SAATI,
+                YEVMIYE_TUTARI = e.YEVMIYE_TUTARI,
+                CALISMA_SAATI = e.CALISMA_SAATI,
+                TAHAKKUK_TOPLAMI = e.TAHAKKUK_TOPLAMI,
+                NET_TUTAR = e.NET_TUTAR,
+                KESINTI_TOPLAMI = e.KESINTI_TOPLAMI,
+            })
+            .Take(1000)
+            .ToListAsync(ct);
+    }
+
+    [HttpGet("{id}")]
+    [MustHavePermission(FSHAction.View, FSHResource.PersonelBordro)]
+    public async Task<ActionResult<PersonelBordroDto>> GetById(string id, CancellationToken ct)
+    {
+        var entity = await _db.Set<PERSONEL_BORDRO>()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(e => e.PERSONEL_BORDRO_KODU == id, ct);
+
+        if (entity == null)
+            return NotFound();
+
+        return new PersonelBordroDto
+        {
+            PERSONEL_BORDRO_KODU = entity.PERSONEL_BORDRO_KODU,
+            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
+            YIL = entity.YIL,
+            AY = entity.AY,
+            PERSONEL_KODU = entity.PERSONEL_KODU,
+            BORDRO_TURU = entity.BORDRO_TURU,
+            BORDRO_NUMARASI = entity.BORDRO_NUMARASI,
+            MAAS_DERECESI = entity.MAAS_DERECESI,
+            MAAS_KADEMESI = entity.MAAS_KADEMESI,
+            MAAS_GOSTERGESI = entity.MAAS_GOSTERGESI,
+            MAAS_EK_GOSTERGESI = entity.MAAS_EK_GOSTERGESI,
+            EMEKLI_DERECESI = entity.EMEKLI_DERECESI,
+            EMEKLI_KADEMESI = entity.EMEKLI_KADEMESI,
+            EMEKLI_GOSTERGESI = entity.EMEKLI_GOSTERGESI,
+            EMEKLI_EK_GOSTERGESI = entity.EMEKLI_EK_GOSTERGESI,
+            TABAN_AYLIK_TUTARI = entity.TABAN_AYLIK_TUTARI,
+            AYLIK_TUTARI = entity.AYLIK_TUTARI,
+            KIDEM_TUTARI = entity.KIDEM_TUTARI,
+            EK_GOSTERGE_TUTARI = entity.EK_GOSTERGE_TUTARI,
+            YAN_ODEME_TUTARI = entity.YAN_ODEME_TUTARI,
+            OZEL_HIZMET_TUTARI = entity.OZEL_HIZMET_TUTARI,
+            AILE_YARDIMI_TUTARI = entity.AILE_YARDIMI_TUTARI,
+            COCUK_YARDIMI_TUTARI = entity.COCUK_YARDIMI_TUTARI,
+            COCUK_SAYISI_6_YAS_ALTI = entity.COCUK_SAYISI_6_YAS_ALTI,
+            COCUK_SAYISI_6_YAS_USTU = entity.COCUK_SAYISI_6_YAS_USTU,
+            AGI_ESAS_COCUK_SAYISI = entity.AGI_ESAS_COCUK_SAYISI,
+            ES_CALISMA_DURUMU = entity.ES_CALISMA_DURUMU,
+            BES_FIRMA_KODU = entity.BES_FIRMA_KODU,
+            BES_ORANI = entity.BES_ORANI,
+            BES_KESINTI_TUTARI = entity.BES_KESINTI_TUTARI,
+            YABANCI_DIL_TAZMINATI_TUTARI = entity.YABANCI_DIL_TAZMINATI_TUTARI,
+            YABANCI_DIL_BILGISI = entity.YABANCI_DIL_BILGISI,
+            YABANCI_DIL_PUANI = entity.YABANCI_DIL_PUANI,
+            SENDIKA_ODENEGI_TUTARI = entity.SENDIKA_ODENEGI_TUTARI,
+            SENDIKA_BILGISI = entity.SENDIKA_BILGISI,
+            SENDIKA_SIRA_NUMARASI = entity.SENDIKA_SIRA_NUMARASI,
+            SENDIKA_KESINTI_ORANI = entity.SENDIKA_KESINTI_ORANI,
+            SENDIKA_AIDATI_TUTARI = entity.SENDIKA_AIDATI_TUTARI,
+            DEVLET_EMEKLI_KESENEGI = entity.DEVLET_EMEKLI_KESENEGI,
+            SAHIS_EMEKLI_KESENEGI = entity.SAHIS_EMEKLI_KESENEGI,
+            EMEKLI_KESENEGI_MATRAHI_TUTARI = entity.EMEKLI_KESENEGI_MATRAHI_TUTARI,
+            OZEL_SIGORTA_TUTARI = entity.OZEL_SIGORTA_TUTARI,
+            VERGI_INDIRIMI_TUTARI = entity.VERGI_INDIRIMI_TUTARI,
+            DAMGA_VERGISI_TUTARI = entity.DAMGA_VERGISI_TUTARI,
+            GELIR_VERGISI_TUTARI = entity.GELIR_VERGISI_TUTARI,
+            GELIR_VERGISI_MATRAHI_TUTARI = entity.GELIR_VERGISI_MATRAHI_TUTARI,
+            KUMULATIF_GELIR_VERGISI_TUTARI = entity.KUMULATIF_GELIR_VERGISI_TUTARI,
+            ICRA_TUTARI = entity.ICRA_TUTARI,
+            NAFAKA_TUTARI = entity.NAFAKA_TUTARI,
+            YUZDE_YUZ_TUTARI = entity.YUZDE_YUZ_TUTARI,
+            DOGU_TAZMINATI_TUTARI = entity.DOGU_TAZMINATI_TUTARI,
+            SGK_SAHIS_TUTARI = entity.SGK_SAHIS_TUTARI,
+            SGK_ISVEREN_TUTARI = entity.SGK_ISVEREN_TUTARI,
+            SGK_MATRAHI_TUTARI = entity.SGK_MATRAHI_TUTARI,
+            KEFALET_TUTARI = entity.KEFALET_TUTARI,
+            SOZLESME_UCRETI_TUTARI = entity.SOZLESME_UCRETI_TUTARI,
+            LOJMAN_KESINTISI_TUTARI = entity.LOJMAN_KESINTISI_TUTARI,
+            ASGARI_GECIM_INDIRIMI_TUTARI = entity.ASGARI_GECIM_INDIRIMI_TUTARI,
+            ISSIZLIK_SAHIS_TUTARI = entity.ISSIZLIK_SAHIS_TUTARI,
+            ISSIZLIK_ISVEREN_TUTARI = entity.ISSIZLIK_ISVEREN_TUTARI,
+            ISSIZLIK_PRIMI_MATRAHI_TUTARI = entity.ISSIZLIK_PRIMI_MATRAHI_TUTARI,
+            MALULLUK_DEVLET_TUTARI = entity.MALULLUK_DEVLET_TUTARI,
+            MALULLUK_SAHIS_TUTARI = entity.MALULLUK_SAHIS_TUTARI,
+            GIYECEK_YARDIMI_TUTARI = entity.GIYECEK_YARDIMI_TUTARI,
+            FARK_TAZMINATI_TUTARI = entity.FARK_TAZMINATI_TUTARI,
+            HIZMET_ZAMMI_TUTARI = entity.HIZMET_ZAMMI_TUTARI,
+            VASITA_YARDIMI_TUTARI = entity.VASITA_YARDIMI_TUTARI,
+            KIRA_YARDIMI_TUTARI = entity.KIRA_YARDIMI_TUTARI,
+            YEMEK_YARDIMI_TUTARI = entity.YEMEK_YARDIMI_TUTARI,
+            FAZLA_MESAI_TUTARI = entity.FAZLA_MESAI_TUTARI,
+            NOBET_BIRIM_UCRET_TUTARI = entity.NOBET_BIRIM_UCRET_TUTARI,
+            NOBET_BIRIM_UCRET_20_TUTARI = entity.NOBET_BIRIM_UCRET_20_TUTARI,
+            NOBET_BIRIM_UCRET_50_TUTARI = entity.NOBET_BIRIM_UCRET_50_TUTARI,
+            NOBET_SAATI = entity.NOBET_SAATI,
+            NOBET_20_SAATI = entity.NOBET_20_SAATI,
+            NOBET_50_SAATI = entity.NOBET_50_SAATI,
+            YEVMIYE_TUTARI = entity.YEVMIYE_TUTARI,
+            CALISMA_SAATI = entity.CALISMA_SAATI,
+            TAHAKKUK_TOPLAMI = entity.TAHAKKUK_TOPLAMI,
+            NET_TUTAR = entity.NET_TUTAR,
+            KESINTI_TOPLAMI = entity.KESINTI_TOPLAMI,
+        };
+    }
+
+    [HttpPost]
+    [MustHavePermission(FSHAction.Create, FSHResource.PersonelBordro)]
+    public async Task<ActionResult<string>> Create(PersonelBordroDto dto, CancellationToken ct)
+    {
+        var entity = new PERSONEL_BORDRO
+        {
+            PERSONEL_BORDRO_KODU = dto.PERSONEL_BORDRO_KODU,
+            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
+            YIL = dto.YIL,
+            AY = dto.AY,
+            PERSONEL_KODU = dto.PERSONEL_KODU,
+            BORDRO_TURU = dto.BORDRO_TURU,
+            BORDRO_NUMARASI = dto.BORDRO_NUMARASI,
+            MAAS_DERECESI = dto.MAAS_DERECESI,
+            MAAS_KADEMESI = dto.MAAS_KADEMESI,
+            MAAS_GOSTERGESI = dto.MAAS_GOSTERGESI,
+            MAAS_EK_GOSTERGESI = dto.MAAS_EK_GOSTERGESI,
+            EMEKLI_DERECESI = dto.EMEKLI_DERECESI,
+            EMEKLI_KADEMESI = dto.EMEKLI_KADEMESI,
+            EMEKLI_GOSTERGESI = dto.EMEKLI_GOSTERGESI,
+            EMEKLI_EK_GOSTERGESI = dto.EMEKLI_EK_GOSTERGESI,
+            TABAN_AYLIK_TUTARI = dto.TABAN_AYLIK_TUTARI,
+            AYLIK_TUTARI = dto.AYLIK_TUTARI,
+            KIDEM_TUTARI = dto.KIDEM_TUTARI,
+            EK_GOSTERGE_TUTARI = dto.EK_GOSTERGE_TUTARI,
+            YAN_ODEME_TUTARI = dto.YAN_ODEME_TUTARI,
+            OZEL_HIZMET_TUTARI = dto.OZEL_HIZMET_TUTARI,
+            AILE_YARDIMI_TUTARI = dto.AILE_YARDIMI_TUTARI,
+            COCUK_YARDIMI_TUTARI = dto.COCUK_YARDIMI_TUTARI,
+            COCUK_SAYISI_6_YAS_ALTI = dto.COCUK_SAYISI_6_YAS_ALTI,
+            COCUK_SAYISI_6_YAS_USTU = dto.COCUK_SAYISI_6_YAS_USTU,
+            AGI_ESAS_COCUK_SAYISI = dto.AGI_ESAS_COCUK_SAYISI,
+            ES_CALISMA_DURUMU = dto.ES_CALISMA_DURUMU,
+            BES_FIRMA_KODU = dto.BES_FIRMA_KODU,
+            BES_ORANI = dto.BES_ORANI,
+            BES_KESINTI_TUTARI = dto.BES_KESINTI_TUTARI,
+            YABANCI_DIL_TAZMINATI_TUTARI = dto.YABANCI_DIL_TAZMINATI_TUTARI,
+            YABANCI_DIL_BILGISI = dto.YABANCI_DIL_BILGISI,
+            YABANCI_DIL_PUANI = dto.YABANCI_DIL_PUANI,
+            SENDIKA_ODENEGI_TUTARI = dto.SENDIKA_ODENEGI_TUTARI,
+            SENDIKA_BILGISI = dto.SENDIKA_BILGISI,
+            SENDIKA_SIRA_NUMARASI = dto.SENDIKA_SIRA_NUMARASI,
+            SENDIKA_KESINTI_ORANI = dto.SENDIKA_KESINTI_ORANI,
+            SENDIKA_AIDATI_TUTARI = dto.SENDIKA_AIDATI_TUTARI,
+            DEVLET_EMEKLI_KESENEGI = dto.DEVLET_EMEKLI_KESENEGI,
+            SAHIS_EMEKLI_KESENEGI = dto.SAHIS_EMEKLI_KESENEGI,
+            EMEKLI_KESENEGI_MATRAHI_TUTARI = dto.EMEKLI_KESENEGI_MATRAHI_TUTARI,
+            OZEL_SIGORTA_TUTARI = dto.OZEL_SIGORTA_TUTARI,
+            VERGI_INDIRIMI_TUTARI = dto.VERGI_INDIRIMI_TUTARI,
+            DAMGA_VERGISI_TUTARI = dto.DAMGA_VERGISI_TUTARI,
+            GELIR_VERGISI_TUTARI = dto.GELIR_VERGISI_TUTARI,
+            GELIR_VERGISI_MATRAHI_TUTARI = dto.GELIR_VERGISI_MATRAHI_TUTARI,
+            KUMULATIF_GELIR_VERGISI_TUTARI = dto.KUMULATIF_GELIR_VERGISI_TUTARI,
+            ICRA_TUTARI = dto.ICRA_TUTARI,
+            NAFAKA_TUTARI = dto.NAFAKA_TUTARI,
+            YUZDE_YUZ_TUTARI = dto.YUZDE_YUZ_TUTARI,
+            DOGU_TAZMINATI_TUTARI = dto.DOGU_TAZMINATI_TUTARI,
+            SGK_SAHIS_TUTARI = dto.SGK_SAHIS_TUTARI,
+            SGK_ISVEREN_TUTARI = dto.SGK_ISVEREN_TUTARI,
+            SGK_MATRAHI_TUTARI = dto.SGK_MATRAHI_TUTARI,
+            KEFALET_TUTARI = dto.KEFALET_TUTARI,
+            SOZLESME_UCRETI_TUTARI = dto.SOZLESME_UCRETI_TUTARI,
+            LOJMAN_KESINTISI_TUTARI = dto.LOJMAN_KESINTISI_TUTARI,
+            ASGARI_GECIM_INDIRIMI_TUTARI = dto.ASGARI_GECIM_INDIRIMI_TUTARI,
+            ISSIZLIK_SAHIS_TUTARI = dto.ISSIZLIK_SAHIS_TUTARI,
+            ISSIZLIK_ISVEREN_TUTARI = dto.ISSIZLIK_ISVEREN_TUTARI,
+            ISSIZLIK_PRIMI_MATRAHI_TUTARI = dto.ISSIZLIK_PRIMI_MATRAHI_TUTARI,
+            MALULLUK_DEVLET_TUTARI = dto.MALULLUK_DEVLET_TUTARI,
+            MALULLUK_SAHIS_TUTARI = dto.MALULLUK_SAHIS_TUTARI,
+            GIYECEK_YARDIMI_TUTARI = dto.GIYECEK_YARDIMI_TUTARI,
+            FARK_TAZMINATI_TUTARI = dto.FARK_TAZMINATI_TUTARI,
+            HIZMET_ZAMMI_TUTARI = dto.HIZMET_ZAMMI_TUTARI,
+            VASITA_YARDIMI_TUTARI = dto.VASITA_YARDIMI_TUTARI,
+            KIRA_YARDIMI_TUTARI = dto.KIRA_YARDIMI_TUTARI,
+            YEMEK_YARDIMI_TUTARI = dto.YEMEK_YARDIMI_TUTARI,
+            FAZLA_MESAI_TUTARI = dto.FAZLA_MESAI_TUTARI,
+            NOBET_BIRIM_UCRET_TUTARI = dto.NOBET_BIRIM_UCRET_TUTARI,
+            NOBET_BIRIM_UCRET_20_TUTARI = dto.NOBET_BIRIM_UCRET_20_TUTARI,
+            NOBET_BIRIM_UCRET_50_TUTARI = dto.NOBET_BIRIM_UCRET_50_TUTARI,
+            NOBET_SAATI = dto.NOBET_SAATI,
+            NOBET_20_SAATI = dto.NOBET_20_SAATI,
+            NOBET_50_SAATI = dto.NOBET_50_SAATI,
+            YEVMIYE_TUTARI = dto.YEVMIYE_TUTARI,
+            CALISMA_SAATI = dto.CALISMA_SAATI,
+            TAHAKKUK_TOPLAMI = dto.TAHAKKUK_TOPLAMI,
+            NET_TUTAR = dto.NET_TUTAR,
+            KESINTI_TOPLAMI = dto.KESINTI_TOPLAMI,
+        };
+
+        _db.Set<PERSONEL_BORDRO>().Add(entity);
+        await _db.SaveChangesAsync(ct);
+
+        return entity.PERSONEL_BORDRO_KODU;
+    }
+
+    [HttpPut("{id}")]
+    [MustHavePermission(FSHAction.Update, FSHResource.PersonelBordro)]
+    public async Task<IActionResult> Update(string id, PersonelBordroDto dto, CancellationToken ct)
+    {
+        var entity = await _db.Set<PERSONEL_BORDRO>()
+            .FirstOrDefaultAsync(e => e.PERSONEL_BORDRO_KODU == id, ct);
+
+        if (entity == null)
+            return NotFound();
+        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
+        entity.YIL = dto.YIL;
+        entity.AY = dto.AY;
+        entity.PERSONEL_KODU = dto.PERSONEL_KODU;
+        entity.BORDRO_TURU = dto.BORDRO_TURU;
+        entity.BORDRO_NUMARASI = dto.BORDRO_NUMARASI;
+        entity.MAAS_DERECESI = dto.MAAS_DERECESI;
+        entity.MAAS_KADEMESI = dto.MAAS_KADEMESI;
+        entity.MAAS_GOSTERGESI = dto.MAAS_GOSTERGESI;
+        entity.MAAS_EK_GOSTERGESI = dto.MAAS_EK_GOSTERGESI;
+        entity.EMEKLI_DERECESI = dto.EMEKLI_DERECESI;
+        entity.EMEKLI_KADEMESI = dto.EMEKLI_KADEMESI;
+        entity.EMEKLI_GOSTERGESI = dto.EMEKLI_GOSTERGESI;
+        entity.EMEKLI_EK_GOSTERGESI = dto.EMEKLI_EK_GOSTERGESI;
+        entity.TABAN_AYLIK_TUTARI = dto.TABAN_AYLIK_TUTARI;
+        entity.AYLIK_TUTARI = dto.AYLIK_TUTARI;
+        entity.KIDEM_TUTARI = dto.KIDEM_TUTARI;
+        entity.EK_GOSTERGE_TUTARI = dto.EK_GOSTERGE_TUTARI;
+        entity.YAN_ODEME_TUTARI = dto.YAN_ODEME_TUTARI;
+        entity.OZEL_HIZMET_TUTARI = dto.OZEL_HIZMET_TUTARI;
+        entity.AILE_YARDIMI_TUTARI = dto.AILE_YARDIMI_TUTARI;
+        entity.COCUK_YARDIMI_TUTARI = dto.COCUK_YARDIMI_TUTARI;
+        entity.COCUK_SAYISI_6_YAS_ALTI = dto.COCUK_SAYISI_6_YAS_ALTI;
+        entity.COCUK_SAYISI_6_YAS_USTU = dto.COCUK_SAYISI_6_YAS_USTU;
+        entity.AGI_ESAS_COCUK_SAYISI = dto.AGI_ESAS_COCUK_SAYISI;
+        entity.ES_CALISMA_DURUMU = dto.ES_CALISMA_DURUMU;
+        entity.BES_FIRMA_KODU = dto.BES_FIRMA_KODU;
+        entity.BES_ORANI = dto.BES_ORANI;
+        entity.BES_KESINTI_TUTARI = dto.BES_KESINTI_TUTARI;
+        entity.YABANCI_DIL_TAZMINATI_TUTARI = dto.YABANCI_DIL_TAZMINATI_TUTARI;
+        entity.YABANCI_DIL_BILGISI = dto.YABANCI_DIL_BILGISI;
+        entity.YABANCI_DIL_PUANI = dto.YABANCI_DIL_PUANI;
+        entity.SENDIKA_ODENEGI_TUTARI = dto.SENDIKA_ODENEGI_TUTARI;
+        entity.SENDIKA_BILGISI = dto.SENDIKA_BILGISI;
+        entity.SENDIKA_SIRA_NUMARASI = dto.SENDIKA_SIRA_NUMARASI;
+        entity.SENDIKA_KESINTI_ORANI = dto.SENDIKA_KESINTI_ORANI;
+        entity.SENDIKA_AIDATI_TUTARI = dto.SENDIKA_AIDATI_TUTARI;
+        entity.DEVLET_EMEKLI_KESENEGI = dto.DEVLET_EMEKLI_KESENEGI;
+        entity.SAHIS_EMEKLI_KESENEGI = dto.SAHIS_EMEKLI_KESENEGI;
+        entity.EMEKLI_KESENEGI_MATRAHI_TUTARI = dto.EMEKLI_KESENEGI_MATRAHI_TUTARI;
+        entity.OZEL_SIGORTA_TUTARI = dto.OZEL_SIGORTA_TUTARI;
+        entity.VERGI_INDIRIMI_TUTARI = dto.VERGI_INDIRIMI_TUTARI;
+        entity.DAMGA_VERGISI_TUTARI = dto.DAMGA_VERGISI_TUTARI;
+        entity.GELIR_VERGISI_TUTARI = dto.GELIR_VERGISI_TUTARI;
+        entity.GELIR_VERGISI_MATRAHI_TUTARI = dto.GELIR_VERGISI_MATRAHI_TUTARI;
+        entity.KUMULATIF_GELIR_VERGISI_TUTARI = dto.KUMULATIF_GELIR_VERGISI_TUTARI;
+        entity.ICRA_TUTARI = dto.ICRA_TUTARI;
+        entity.NAFAKA_TUTARI = dto.NAFAKA_TUTARI;
+        entity.YUZDE_YUZ_TUTARI = dto.YUZDE_YUZ_TUTARI;
+        entity.DOGU_TAZMINATI_TUTARI = dto.DOGU_TAZMINATI_TUTARI;
+        entity.SGK_SAHIS_TUTARI = dto.SGK_SAHIS_TUTARI;
+        entity.SGK_ISVEREN_TUTARI = dto.SGK_ISVEREN_TUTARI;
+        entity.SGK_MATRAHI_TUTARI = dto.SGK_MATRAHI_TUTARI;
+        entity.KEFALET_TUTARI = dto.KEFALET_TUTARI;
+        entity.SOZLESME_UCRETI_TUTARI = dto.SOZLESME_UCRETI_TUTARI;
+        entity.LOJMAN_KESINTISI_TUTARI = dto.LOJMAN_KESINTISI_TUTARI;
+        entity.ASGARI_GECIM_INDIRIMI_TUTARI = dto.ASGARI_GECIM_INDIRIMI_TUTARI;
+        entity.ISSIZLIK_SAHIS_TUTARI = dto.ISSIZLIK_SAHIS_TUTARI;
+        entity.ISSIZLIK_ISVEREN_TUTARI = dto.ISSIZLIK_ISVEREN_TUTARI;
+        entity.ISSIZLIK_PRIMI_MATRAHI_TUTARI = dto.ISSIZLIK_PRIMI_MATRAHI_TUTARI;
+        entity.MALULLUK_DEVLET_TUTARI = dto.MALULLUK_DEVLET_TUTARI;
+        entity.MALULLUK_SAHIS_TUTARI = dto.MALULLUK_SAHIS_TUTARI;
+        entity.GIYECEK_YARDIMI_TUTARI = dto.GIYECEK_YARDIMI_TUTARI;
+        entity.FARK_TAZMINATI_TUTARI = dto.FARK_TAZMINATI_TUTARI;
+        entity.HIZMET_ZAMMI_TUTARI = dto.HIZMET_ZAMMI_TUTARI;
+        entity.VASITA_YARDIMI_TUTARI = dto.VASITA_YARDIMI_TUTARI;
+        entity.KIRA_YARDIMI_TUTARI = dto.KIRA_YARDIMI_TUTARI;
+        entity.YEMEK_YARDIMI_TUTARI = dto.YEMEK_YARDIMI_TUTARI;
+        entity.FAZLA_MESAI_TUTARI = dto.FAZLA_MESAI_TUTARI;
+        entity.NOBET_BIRIM_UCRET_TUTARI = dto.NOBET_BIRIM_UCRET_TUTARI;
+        entity.NOBET_BIRIM_UCRET_20_TUTARI = dto.NOBET_BIRIM_UCRET_20_TUTARI;
+        entity.NOBET_BIRIM_UCRET_50_TUTARI = dto.NOBET_BIRIM_UCRET_50_TUTARI;
+        entity.NOBET_SAATI = dto.NOBET_SAATI;
+        entity.NOBET_20_SAATI = dto.NOBET_20_SAATI;
+        entity.NOBET_50_SAATI = dto.NOBET_50_SAATI;
+        entity.YEVMIYE_TUTARI = dto.YEVMIYE_TUTARI;
+        entity.CALISMA_SAATI = dto.CALISMA_SAATI;
+        entity.TAHAKKUK_TOPLAMI = dto.TAHAKKUK_TOPLAMI;
+        entity.NET_TUTAR = dto.NET_TUTAR;
+        entity.KESINTI_TOPLAMI = dto.KESINTI_TOPLAMI;
+
+        await _db.SaveChangesAsync(ct);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    [MustHavePermission(FSHAction.Delete, FSHResource.PersonelBordro)]
+    public async Task<IActionResult> Delete(string id, CancellationToken ct)
+    {
+        var entity = await _db.Set<PERSONEL_BORDRO>()
+            .FirstOrDefaultAsync(e => e.PERSONEL_BORDRO_KODU == id, ct);
+
+        if (entity == null)
+            return NotFound();
+
+        _db.Set<PERSONEL_BORDRO>().Remove(entity);
+        await _db.SaveChangesAsync(ct);
+
+        return NoContent();
+    }
+}

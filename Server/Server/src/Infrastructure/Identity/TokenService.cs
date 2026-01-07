@@ -2,9 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Server.Application.Common.Exceptions;
-using Server.Application.Common.Persistence;
 using Server.Application.Identity.Tokens;
-using Server.Domain.Catalog;
 using Server.Infrastructure.Auth;
 using Server.Infrastructure.Auth.Jwt;
 using Server.Shared.Authorization;
@@ -14,23 +12,21 @@ using System.Security.Cryptography;
 using System.Text;
 
 namespace Server.Infrastructure.Identity;
+
 internal class TokenService : ITokenService
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly SecuritySettings _securitySettings;
     private readonly JwtSettings _jwtSettings;
-    private readonly IRepository<Customer> _customerRepository;
 
     public TokenService(
         UserManager<ApplicationUser> userManager,
         IOptions<JwtSettings> jwtSettings,
-        IOptions<SecuritySettings> securitySettings,
-        IRepository<Customer> customerRepository)
+        IOptions<SecuritySettings> securitySettings)
     {
         _userManager = userManager;
         _jwtSettings = jwtSettings.Value;
         _securitySettings = securitySettings.Value;
-        _customerRepository = customerRepository;
     }
 
     public async Task<TokenResponse> GetTokenAsync(TokenRequest request, string ipAddress, CancellationToken cancellationToken)
@@ -39,18 +35,6 @@ internal class TokenService : ITokenService
         if (user is null || !await _userManager.CheckPasswordAsync(user, request.Password))
         {
             throw new UnauthorizedException("AuthenticationFailed");
-        }
-
-        if (user.CustomerId != null)
-        {
-            var customer = await _customerRepository.GetByIdAsync(user.CustomerId);
-            if (customer != null)
-            {
-                if (!customer.Status)
-                {
-                    throw new UnauthorizedException("CustomerStatusFalse");
-                }
-            }
         }
 
         if (!user.IsActive)

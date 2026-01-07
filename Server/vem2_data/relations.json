@@ -1,0 +1,7301 @@
+{
+  "master_tables": [
+    {
+      "table": "REFERANS_KODLAR",
+      "columns": 490,
+      "fk_out": 0,
+      "fk_in": 483
+    },
+    {
+      "table": "KULLANICI",
+      "columns": 298,
+      "fk_out": 4,
+      "fk_in": 284
+    },
+    {
+      "table": "PERSONEL",
+      "columns": 146,
+      "fk_out": 24,
+      "fk_in": 88
+    },
+    {
+      "table": "HASTA_BASVURU",
+      "columns": 123,
+      "fk_out": 32,
+      "fk_in": 70
+    },
+    {
+      "table": "HASTA",
+      "columns": 103,
+      "fk_out": 16,
+      "fk_in": 69
+    },
+    {
+      "table": "BIRIM",
+      "columns": 35,
+      "fk_out": 5,
+      "fk_in": 19
+    },
+    {
+      "table": "CIHAZ",
+      "columns": 26,
+      "fk_out": 4,
+      "fk_in": 12
+    },
+    {
+      "table": "KURUM",
+      "columns": 27,
+      "fk_out": 4,
+      "fk_in": 12
+    },
+    {
+      "table": "STOK_KART",
+      "columns": 28,
+      "fk_out": 4,
+      "fk_in": 11
+    },
+    {
+      "table": "DEPO",
+      "columns": 22,
+      "fk_out": 4,
+      "fk_in": 9
+    },
+    {
+      "table": "HASTA_HIZMET",
+      "columns": 46,
+      "fk_out": 15,
+      "fk_in": 8
+    },
+    {
+      "table": "AMELIYAT",
+      "columns": 29,
+      "fk_out": 12,
+      "fk_in": 5
+    },
+    {
+      "table": "KURUL_RAPOR",
+      "columns": 31,
+      "fk_out": 6,
+      "fk_in": 5
+    },
+    {
+      "table": "FIRMA",
+      "columns": 19,
+      "fk_out": 2,
+      "fk_in": 4
+    },
+    {
+      "table": "TETKIK",
+      "columns": 17,
+      "fk_out": 3,
+      "fk_in": 4
+    },
+    {
+      "table": "HIZMET",
+      "columns": 15,
+      "fk_out": 5,
+      "fk_in": 3
+    },
+    {
+      "table": "KAN_STOK",
+      "columns": 30,
+      "fk_out": 9,
+      "fk_in": 3
+    },
+    {
+      "table": "STOK_HAREKET",
+      "columns": 38,
+      "fk_out": 10,
+      "fk_in": 3
+    },
+    {
+      "table": "STOK_ISTEK_HAREKET",
+      "columns": 21,
+      "fk_out": 8,
+      "fk_in": 3
+    },
+    {
+      "table": "TETKIK_PARAMETRE",
+      "columns": 17,
+      "fk_out": 4,
+      "fk_in": 3
+    },
+    {
+      "table": "AMELIYAT_ISLEM",
+      "columns": 21,
+      "fk_out": 10,
+      "fk_in": 2
+    },
+    {
+      "table": "BINA",
+      "columns": 11,
+      "fk_out": 3,
+      "fk_in": 2
+    },
+    {
+      "table": "DIS_TAAHHUT",
+      "columns": 23,
+      "fk_out": 7,
+      "fk_in": 2
+    },
+    {
+      "table": "DISPROTEZ",
+      "columns": 29,
+      "fk_out": 15,
+      "fk_in": 2
+    },
+    {
+      "table": "DOGUM",
+      "columns": 21,
+      "fk_out": 10,
+      "fk_in": 2
+    },
+    {
+      "table": "FATURA",
+      "columns": 20,
+      "fk_out": 7,
+      "fk_in": 2
+    },
+    {
+      "table": "KAN_URUN",
+      "columns": 20,
+      "fk_out": 3,
+      "fk_in": 2
+    },
+    {
+      "table": "MEDULA_TAKIP",
+      "columns": 30,
+      "fk_out": 9,
+      "fk_in": 2
+    },
+    {
+      "table": "ODA",
+      "columns": 10,
+      "fk_out": 3,
+      "fk_in": 2
+    },
+    {
+      "table": "RECETE",
+      "columns": 20,
+      "fk_out": 7,
+      "fk_in": 2
+    },
+    {
+      "table": "STERILIZASYON_PAKET",
+      "columns": 14,
+      "fk_out": 4,
+      "fk_in": 2
+    },
+    {
+      "table": "STERILIZASYON_SET",
+      "columns": 26,
+      "fk_out": 10,
+      "fk_in": 2
+    },
+    {
+      "table": "STOK_FIS",
+      "columns": 37,
+      "fk_out": 11,
+      "fk_in": 2
+    },
+    {
+      "table": "STOK_ISTEK",
+      "columns": 16,
+      "fk_out": 8,
+      "fk_in": 2
+    },
+    {
+      "table": "TETKIK_NUMUNE",
+      "columns": 24,
+      "fk_out": 10,
+      "fk_in": 2
+    },
+    {
+      "table": "YATAK",
+      "columns": 13,
+      "fk_out": 6,
+      "fk_in": 2
+    },
+    {
+      "table": "BAKTERI_SONUC",
+      "columns": 12,
+      "fk_out": 4,
+      "fk_in": 1
+    },
+    {
+      "table": "EK_ODEME",
+      "columns": 25,
+      "fk_out": 4,
+      "fk_in": 1
+    },
+    {
+      "table": "EK_ODEME_DONEM",
+      "columns": 16,
+      "fk_out": 2,
+      "fk_in": 1
+    },
+    {
+      "table": "HASTA_ARSIV",
+      "columns": 14,
+      "fk_out": 4,
+      "fk_in": 1
+    },
+    {
+      "table": "HASTA_MALZEME",
+      "columns": 32,
+      "fk_out": 12,
+      "fk_in": 1
+    },
+    {
+      "table": "HASTA_SEVK",
+      "columns": 25,
+      "fk_out": 13,
+      "fk_in": 1
+    },
+    {
+      "table": "ICMAL",
+      "columns": 13,
+      "fk_out": 3,
+      "fk_in": 1
+    },
+    {
+      "table": "KAN_BAGISCI",
+      "columns": 33,
+      "fk_out": 12,
+      "fk_in": 1
+    },
+    {
+      "table": "KAN_TALEP",
+      "columns": 30,
+      "fk_out": 10,
+      "fk_in": 1
+    },
+    {
+      "table": "KAN_TALEP_DETAY",
+      "columns": 20,
+      "fk_out": 7,
+      "fk_in": 1
+    },
+    {
+      "table": "KULLANICI_GRUP",
+      "columns": 9,
+      "fk_out": 2,
+      "fk_in": 1
+    },
+    {
+      "table": "KURUL",
+      "columns": 11,
+      "fk_out": 5,
+      "fk_in": 1
+    },
+    {
+      "table": "RADYOLOJI",
+      "columns": 22,
+      "fk_out": 10,
+      "fk_in": 1
+    },
+    {
+      "table": "RANDEVU",
+      "columns": 29,
+      "fk_out": 13,
+      "fk_in": 1
+    },
+    {
+      "table": "RECETE_ILAC",
+      "columns": 18,
+      "fk_out": 6,
+      "fk_in": 1
+    },
+    {
+      "table": "RISK_SKORLAMA",
+      "columns": 17,
+      "fk_out": 6,
+      "fk_in": 1
+    },
+    {
+      "table": "TETKIK_SONUC",
+      "columns": 38,
+      "fk_out": 13,
+      "fk_in": 1
+    },
+    {
+      "table": "TIBBI_ORDER",
+      "columns": 13,
+      "fk_out": 6,
+      "fk_in": 1
+    },
+    {
+      "table": "TIBBI_ORDER_DETAY",
+      "columns": 16,
+      "fk_out": 6,
+      "fk_in": 1
+    },
+    {
+      "table": "VEZNE",
+      "columns": 24,
+      "fk_out": 7,
+      "fk_in": 1
+    },
+    {
+      "table": "AMELIYAT_EKIP",
+      "columns": 11,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "ANLIK_YATAN_HASTA",
+      "columns": 10,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "ANTIBIYOTIK_SONUC",
+      "columns": 12,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "ASI_BILGISI",
+      "columns": 27,
+      "fk_out": 14,
+      "fk_in": 0
+    },
+    {
+      "table": "BASVURU_TANI",
+      "columns": 15,
+      "fk_out": 9,
+      "fk_in": 0
+    },
+    {
+      "table": "BASVURU_YEMEK",
+      "columns": 12,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "BEBEK_COCUK_IZLEM",
+      "columns": 37,
+      "fk_out": 22,
+      "fk_in": 0
+    },
+    {
+      "table": "BILDIRIMI_ZORUNLU",
+      "columns": 53,
+      "fk_out": 40,
+      "fk_in": 0
+    },
+    {
+      "table": "COCUK_DIYABET",
+      "columns": 29,
+      "fk_out": 17,
+      "fk_in": 0
+    },
+    {
+      "table": "DIS_TAAHHUT_DETAY",
+      "columns": 10,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "DISPROTEZ_DETAY",
+      "columns": 21,
+      "fk_out": 8,
+      "fk_in": 0
+    },
+    {
+      "table": "DIYABET",
+      "columns": 12,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "DOGUM_DETAY",
+      "columns": 34,
+      "fk_out": 17,
+      "fk_in": 0
+    },
+    {
+      "table": "DOKTOR_MESAJI",
+      "columns": 10,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "EK_ODEME_DETAY",
+      "columns": 25,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "EVDE_SAGLIK_IZLEM",
+      "columns": 31,
+      "fk_out": 26,
+      "fk_in": 0
+    },
+    {
+      "table": "GEBE_IZLEM",
+      "columns": 27,
+      "fk_out": 17,
+      "fk_in": 0
+    },
+    {
+      "table": "GETAT",
+      "columns": 15,
+      "fk_out": 10,
+      "fk_in": 0
+    },
+    {
+      "table": "GRUP_UYELIK",
+      "columns": 8,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_ADLI_RAPOR",
+      "columns": 68,
+      "fk_out": 14,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_ARSIV_DETAY",
+      "columns": 16,
+      "fk_out": 9,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_BORC",
+      "columns": 7,
+      "fk_out": 2,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_DIS",
+      "columns": 18,
+      "fk_out": 11,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_EPIKRIZ",
+      "columns": 12,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_FOTOGRAF",
+      "columns": 12,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_GIZLILIK",
+      "columns": 15,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_ILETISIM",
+      "columns": 25,
+      "fk_out": 11,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_NOTLARI",
+      "columns": 11,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_OLUM",
+      "columns": 24,
+      "fk_out": 13,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_SEANS",
+      "columns": 35,
+      "fk_out": 27,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_TIBBI_BILGI",
+      "columns": 11,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_UYARI",
+      "columns": 13,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_VENTILATOR",
+      "columns": 12,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_VITAL_FIZIKI_BULGU",
+      "columns": 23,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "HASTA_YATAK",
+      "columns": 11,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "HEMOGLOBINOPATI",
+      "columns": 14,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "HEMSIRE_BAKIM",
+      "columns": 17,
+      "fk_out": 10,
+      "fk_in": 0
+    },
+    {
+      "table": "ILAC_UYUM",
+      "columns": 17,
+      "fk_out": 10,
+      "fk_in": 0
+    },
+    {
+      "table": "INTIHAR_IZLEM",
+      "columns": 13,
+      "fk_out": 8,
+      "fk_in": 0
+    },
+    {
+      "table": "KADIN_IZLEM",
+      "columns": 20,
+      "fk_out": 10,
+      "fk_in": 0
+    },
+    {
+      "table": "KAN_CIKIS",
+      "columns": 20,
+      "fk_out": 12,
+      "fk_in": 0
+    },
+    {
+      "table": "KAN_URUN_IMHA",
+      "columns": 12,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "KLINIK_SEYIR",
+      "columns": 14,
+      "fk_out": 8,
+      "fk_in": 0
+    },
+    {
+      "table": "KONSULTASYON",
+      "columns": 15,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "KUDUZ_IZLEM",
+      "columns": 13,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "KURUL_ASKERI",
+      "columns": 17,
+      "fk_out": 12,
+      "fk_in": 0
+    },
+    {
+      "table": "KURUL_ENGELLI",
+      "columns": 14,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "KURUL_ETKEN_MADDE",
+      "columns": 13,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "KURUL_HEKIM",
+      "columns": 16,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "KURUL_TESHIS",
+      "columns": 11,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "LOHUSA_IZLEM",
+      "columns": 23,
+      "fk_out": 14,
+      "fk_in": 0
+    },
+    {
+      "table": "MADDE_BAGIMLILIGI",
+      "columns": 31,
+      "fk_out": 23,
+      "fk_in": 0
+    },
+    {
+      "table": "NOBETCI_PERSONEL_BILGISI",
+      "columns": 14,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "OBEZITE_IZLEM",
+      "columns": 16,
+      "fk_out": 10,
+      "fk_in": 0
+    },
+    {
+      "table": "OPTIK_RECETE",
+      "columns": 46,
+      "fk_out": 13,
+      "fk_in": 0
+    },
+    {
+      "table": "ORTODONTI_ICON_SKOR",
+      "columns": 39,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "PATOLOJI",
+      "columns": 37,
+      "fk_out": 17,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "columns": 14,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_BANKA",
+      "columns": 14,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_BORDRO",
+      "columns": 85,
+      "fk_out": 8,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_BORDRO_SONDURUM",
+      "columns": 17,
+      "fk_out": 1,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_EGITIM",
+      "columns": 16,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_GOREVLENDIRME",
+      "columns": 13,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_IZIN",
+      "columns": 21,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_IZIN_DURUMU",
+      "columns": 6,
+      "fk_out": 1,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_ODUL_CEZA",
+      "columns": 16,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_OGRENIM",
+      "columns": 13,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "PERSONEL_YANDAL",
+      "columns": 10,
+      "fk_out": 3,
+      "fk_in": 0
+    },
+    {
+      "table": "RADYOLOJI_SONUC",
+      "columns": 17,
+      "fk_out": 9,
+      "fk_in": 0
+    },
+    {
+      "table": "RECETE_ILAC_ACIKLAMA",
+      "columns": 10,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "RISK_SKORLAMA_DETAY",
+      "columns": 11,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "SILINEN_KAYITLAR",
+      "columns": 6,
+      "fk_out": 1,
+      "fk_in": 0
+    },
+    {
+      "table": "STERILIZASYON_CIKIS",
+      "columns": 15,
+      "fk_out": 9,
+      "fk_in": 0
+    },
+    {
+      "table": "STERILIZASYON_GIRIS",
+      "columns": 13,
+      "fk_out": 7,
+      "fk_in": 0
+    },
+    {
+      "table": "STERILIZASYON_PAKET_DETAY",
+      "columns": 11,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "STERILIZASYON_SET_DETAY",
+      "columns": 9,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "STERILIZASYON_STOK_DURUM",
+      "columns": 7,
+      "fk_out": 2,
+      "fk_in": 0
+    },
+    {
+      "table": "STERILIZASYON_YIKAMA",
+      "columns": 13,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "STOK_DURUM",
+      "columns": 11,
+      "fk_out": 3,
+      "fk_in": 0
+    },
+    {
+      "table": "STOK_EHU_TAKIP",
+      "columns": 19,
+      "fk_out": 8,
+      "fk_in": 0
+    },
+    {
+      "table": "STOK_ISTEK_UYGULAMA",
+      "columns": 15,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "SYS_PAKET",
+      "columns": 13,
+      "fk_out": 4,
+      "fk_in": 0
+    },
+    {
+      "table": "TETKIK_CIHAZ_ESLESME",
+      "columns": 12,
+      "fk_out": 5,
+      "fk_in": 0
+    },
+    {
+      "table": "TETKIK_REFERANS_ARALIK",
+      "columns": 17,
+      "fk_out": 6,
+      "fk_in": 0
+    },
+    {
+      "table": "VEZNE_DETAY",
+      "columns": 11,
+      "fk_out": 5,
+      "fk_in": 0
+    }
+  ],
+  "relations": [
+    {
+      "from": "AMELIYAT",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "AMELIYAT_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "MASA_CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "AMELIYAT_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "ANESTEZI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "AMELIYAT_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "PROFILAKSI_PERIYODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "PROFILAKSI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "AMELIYAT",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "AMELIYAT_EKIP",
+      "column": "AMELIYAT_KODU",
+      "to": "AMELIYAT"
+    },
+    {
+      "from": "AMELIYAT_EKIP",
+      "column": "AMELIYAT_ISLEM_KODU",
+      "to": "AMELIYAT_ISLEM"
+    },
+    {
+      "from": "AMELIYAT_EKIP",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "AMELIYAT_EKIP",
+      "column": "AMELIYAT_PERSONEL_GOREV",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_EKIP",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "AMELIYAT_EKIP",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "AMELIYAT_KODU",
+      "to": "AMELIYAT"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "KESI_ORANI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "KESI_SEANS_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "TARAF_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "ASA_SKORU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "EUROSCORE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "YARA_SINIFI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "AMELIYAT_ISLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ANLIK_YATAN_HASTA",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "ANLIK_YATAN_HASTA",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "ANLIK_YATAN_HASTA",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "ANLIK_YATAN_HASTA",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "ANLIK_YATAN_HASTA",
+      "column": "YATAK_KODU",
+      "to": "YATAK"
+    },
+    {
+      "from": "ANLIK_YATAN_HASTA",
+      "column": "ODA_KODU",
+      "to": "ODA"
+    },
+    {
+      "from": "ANTIBIYOTIK_SONUC",
+      "column": "BAKTERI_SONUC_KODU",
+      "to": "BAKTERI_SONUC"
+    },
+    {
+      "from": "ANTIBIYOTIK_SONUC",
+      "column": "ANTIBIYOTIK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ANTIBIYOTIK_SONUC",
+      "column": "TETKIK_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ANTIBIYOTIK_SONUC",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ANTIBIYOTIK_SONUC",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASININ_DOZU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASININ_UYGULAMA_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASI_UYGULAMA_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASI_ISLEM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASI_OZEL_DURUM_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASIE_NEDENLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASI_YAPILMAMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ASI_YAPILMAMA_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "ALTTA_YATAN_HASTALIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ASI_BILGISI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BAKTERI_SONUC",
+      "column": "TETKIK_SONUC_KODU",
+      "to": "TETKIK_SONUC"
+    },
+    {
+      "from": "BAKTERI_SONUC",
+      "column": "BAKTERI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BAKTERI_SONUC",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BAKTERI_SONUC",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "TANI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "TANI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "KURUL_RAPOR_KODU",
+      "to": "KURUL_RAPOR"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "HASTA_SEVK_KODU",
+      "to": "HASTA_SEVK"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BASVURU_TANI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BASVURU_YEMEK",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "BASVURU_YEMEK",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "BASVURU_YEMEK",
+      "column": "YEMEK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BASVURU_YEMEK",
+      "column": "YEMEK_ZAMANI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BASVURU_YEMEK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BASVURU_YEMEK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "KACINCI_IZLEM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "AGIZDAN_SIVI_TEDAVISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "DEMIR_LOJISTIGI_VE_DESTEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "DVITAMINI_LOJISTIGI_VE_DESTEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "GKD_TARAMA_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "TOPUK_KANI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "IZLEMIN_YAPILDIGI_YER",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "IZLEMI_YAPAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "BEBEKTE_RISK_FAKTORLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "TARAMA_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "BEBEGIN_BESLENME_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "GELISIM_TABLOSU_BILGILERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "NTP_TAKIP_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "BC_BEYIN_GELISIM_RISKLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "EBEVEYN_DESTEK_AKTIVITELERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "BC_PSIKOLOJIK_RISK_EGITIM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "BC_RISK_YAPILAN_MUDAHALE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "BC_RISKLI_OLGU_TAKIBI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BEBEK_COCUK_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "BILDIRIM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "TANI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "AILESINDE_INTIHAR_GIRISIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "AILESINDE_PSIKIYATRIK_VAKA",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "INTIHAR_KRIZ_VAKA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "PSIKIYATRIK_TEDAVI_GECMISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "INTIHAR_GIRISIM_KRIZ_NEDENLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "INTIHAR_GIRISIMI_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "INTIHAR_GIRISIMI_GECMISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "INTIHAR_KRIZ_VAKA_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "PSIKIYATRIK_TANI_GECMISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "HAYVANIN_MEVCUT_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "HAYVANIN_SAHIPLIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "IMMUNGLOBULIN_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "KATEGORIZASYON",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "TEMAS_DEGERLENDIRME_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "KUDUZ_SEBEP_OLAN_HAYVAN",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "YAPTIRACAGINI_BEYAN_ETTIGI_TSM",
+      "to": "KURUM"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "RISKLI_TEMAS_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "IL_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "ILCE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "DGT_UYGULAMASINI_YAPAN_KISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "DGT_UYGULAMA_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "HASTANIN_TEDAVIYE_UYUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "KULTUR_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "TUBERKULIN_DERI_TESTI_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "VEREM_HASTASI_TEDAVI_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "VEREM_OLGU_TANIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "YAYMA_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "VEREM_HASTALIGI_TUTULUM_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "VEREM_HASTASI_KLINIK_ORNEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "VEREM_ILAC_ADI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "VEREM_TEDAVI_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "BULASICI_HASTALIK_VAKA_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "SIDDET_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "SIDDET_DEGERLENDIRME_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BILDIRIMI_ZORUNLU",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BINA",
+      "column": "SKRS_KURUM_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BINA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BINA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BIRIM",
+      "column": "KLINIK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BIRIM",
+      "column": "BIRIM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "BIRIM",
+      "column": "BINA_KODU",
+      "to": "BINA"
+    },
+    {
+      "from": "BIRIM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "BIRIM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "CIHAZ",
+      "column": "CIHAZ_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "CIHAZ",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "CIHAZ",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "CIHAZ",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYABET_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "BEYIN_ODEMI_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "KETOASIDOZ_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYABET_SIKAYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "AKSILLER_KILLANMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "PUBIK_KILLANMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "MEME_EVRE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "ESLIKEDEN_HASTALIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYABET_ILAC_TEDAVI_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYET_TIBBI_BESLENME_TEDAVISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYABETLI_HASTA_AILE_OYKUSU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYABET_EGITIMI_VERILME_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "TIROID_MUAYENESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "DIYABET_KOMPLIKASYONLARI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "COCUK_DIYABET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DEPO",
+      "column": "DEPO_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DEPO",
+      "column": "BINA_KODU",
+      "to": "BINA"
+    },
+    {
+      "from": "DEPO",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DEPO",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "IL_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "ILCE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DIS_TAAHHUT",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DIS_TAAHHUT_DETAY",
+      "column": "DIS_TAAHHUT_KODU",
+      "to": "DIS_TAAHHUT"
+    },
+    {
+      "from": "DIS_TAAHHUT_DETAY",
+      "column": "DIS_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DIS_TAAHHUT_DETAY",
+      "column": "CENE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DIS_TAAHHUT_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DIS_TAAHHUT_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "TEKNISYEN_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "DISPROTEZ_IS_TURU_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "DISPROTEZ_IS_TURU_ALT_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "DISPROTEZ_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "RPT_SEBEBI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "RPT_EDEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "DISPROTEZ_KASIK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "DISPROTEZ_RENGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "DIS_BOYUT_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DISPROTEZ",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "DISPROTEZ_KODU",
+      "to": "DISPROTEZ"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "DISPROTEZ_IS_TURU_ASAMA_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "FIRMA_KODU",
+      "to": "FIRMA"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "RANDEVU_KODU",
+      "to": "RANDEVU"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "ASAMA_RPT_SEBEBI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "ASAMA_RPT_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DISPROTEZ_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DIYABET",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "DIYABET",
+      "column": "DIYABET_EGITIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DIYABET",
+      "column": "DIYABET_KOMPLIKASYONLARI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DIYABET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DIYABET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DOGUM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "DOGUM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "DOGUM",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "DOGUM",
+      "column": "AMELIYAT_KODU",
+      "to": "AMELIYAT"
+    },
+    {
+      "from": "DOGUM",
+      "column": "KOMPLIKASYON_TANISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "DOGUM",
+      "column": "EBE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "DOGUM",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "DOGUM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DOGUM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "DOGUM_KODU",
+      "to": "DOGUM"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "CINSIYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "DOGUM_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "KOMPLIKASYON_TANISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "PROGNOZ_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "SURMATURE_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "K_VITAMINI_UYGULANMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "BEBEGIN_HEPATIT_ASI_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "YENIDOGAN_ISITME_TARAMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "TOPUK_KANI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "BEBEGIN_YASAM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "SEZARYEN_ENDIKASYONLAR",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "ROBSON_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DOGUM_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DOKTOR_MESAJI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "DOKTOR_MESAJI",
+      "column": "HASTA_MESAJLARI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "DOKTOR_MESAJI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "DOKTOR_MESAJI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EK_ODEME_DETAY",
+      "column": "EK_ODEME_KODU",
+      "to": "EK_ODEME"
+    },
+    {
+      "from": "EK_ODEME_DETAY",
+      "column": "KLINIK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EK_ODEME_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EK_ODEME_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EK_ODEME",
+      "column": "EK_ODEME_DONEM_KODU",
+      "to": "EK_ODEME_DONEM"
+    },
+    {
+      "from": "EK_ODEME",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "EK_ODEME",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EK_ODEME",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EK_ODEME_DONEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EK_ODEME_DONEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "AGRI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "AYDINLATMA",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "BAKIM_VE_DESTEK_IHTIYACI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "BASI_DEGERLENDIRMESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "BASVURU_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "BESLENME",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "ESH_ESAS_HASTALIK_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "EV_HIJYENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "GUVENLIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "ISINMA",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "KISISEL_BAKIM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "KISISEL_HIJYEN",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "KONUT_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "KULLANILAN_HELA_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "YATAGA_BAGIMLILIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "KULLANDIGI_YARDIMCI_ARACLAR",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "PSIKOLOJIK_DURUM_DEGERLENDIRME",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "ESH_SONLANDIRILMASI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "ESH_HASTA_NAKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "ESH_ALINACAK_IL",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "BIR_SONRAKI_HIZMET_IHTIYACI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "VERILEN_EGITIMLER",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "EVDE_SAGLIK_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "FATURA",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "FATURA",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "FATURA",
+      "column": "ICMAL_KODU",
+      "to": "ICMAL"
+    },
+    {
+      "from": "FATURA",
+      "column": "FATURA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "FATURA",
+      "column": "FATURA_KESILEN_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "FATURA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "FATURA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "FIRMA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "FIRMA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "KACINCI_GEBE_IZLEM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "ONCEKI_DOGUM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "GEBE_IZLEM_ISLEM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "GESTASYONEL_DIYABET_TARAMASI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "IDRARDA_PROTEIN",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "DEMIR_LOJISTIGI_VE_DESTEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "DVITAMINI_LOJISTIGI_VE_DESTEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "KONJENITAL_ANOMALI_VARLIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "GEBELIKTE_RISK_FAKTORLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "BC_BEYIN_GELISIM_RISKLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "PSIKOLOJIK_GELISIM_RISK_EGITIM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "RISK_FAKTORLERINE_MUDAHALE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "RISK_ALTINDAKI_OLGU_TAKIBI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GEBE_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GETAT",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "GETAT",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "GETAT",
+      "column": "GETAT_UYGULAMA_BIRIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GETAT",
+      "column": "KOMPLIKASYON_TANISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GETAT",
+      "column": "GETAT_TEDAVI_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GETAT",
+      "column": "GETAT_UYGULAMA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GETAT",
+      "column": "GETAT_UYGULANDIGI_DURUMLAR",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GETAT",
+      "column": "GETAT_UYGULAMA_BOLGESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "GETAT",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GETAT",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GRUP_UYELIK",
+      "column": "KULLANICI_GRUP_KODU",
+      "to": "KULLANICI_GRUP"
+    },
+    {
+      "from": "GRUP_UYELIK",
+      "column": "KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GRUP_UYELIK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "GRUP_UYELIK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA",
+      "column": "UYRUK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "HASTA_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "CINSIYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "ANNE_HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA",
+      "column": "BABA_HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA",
+      "column": "MEDENI_HALI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "MESLEK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "OGRENIM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "KAN_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "MUAYENE_ONCELIK_SIRASI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "ENGELLILIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "OLUM_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA",
+      "column": "SON_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "HASTA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "ADLI_RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "ELBISE_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "PUPILLA_DEGERLENDIRMESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "ISIK_REFLEKSI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "TENDON_REFLEKSI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "ADLI_MUAYENE_RIZA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "RIZA_VERENIN_YAKINLIK_DERECESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "IPTAL_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "ONAYLAYAN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ADLI_RAPOR",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ARSIV",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_ARSIV",
+      "column": "ARSIV_DEFTER_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ARSIV",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ARSIV",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "HASTA_ARSIV_KODU",
+      "to": "HASTA_ARSIV"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "DOSYA_ALAN_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "DOSYA_ALAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "DOSYA_VEREN_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "DOSYA_VEREN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ARSIV_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "BAGLI_OLDUGU_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "MUAYENE_ONCELIK_SIRASI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "HIZMET_SUNUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "KAYIT_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "TAMAMLAYICI_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "OLAY_AFET_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "HAYATI_TEHLIKE_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "KABUL_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "SOSYAL_GUVENCE_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "ASISTAN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "VAKA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "SEVK_TANISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "ADLI_VAKA_GELIS_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "ARAC_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "TRIAJ_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "YATIS_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "BASVURU_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "MUAYENE_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "TEDAVI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "CIKIS_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "CIKIS_VEREN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "GELDIGI_ULKE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "YABANCI_HASTA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "GENCLIK_SAGLIGI_ISLEMLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "DIYABET_EGITIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "DIYABET_KOMPLIKASYONLARI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_BASVURU",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_BORC",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_BORC",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "DIS_ISLEM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "DIS_TAAHHUT_KODU",
+      "to": "DIS_TAAHHUT"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "MEVCUT_DIS_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "DIS_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "CENE_BOLGESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "DISPROTEZ_KODU",
+      "to": "DISPROTEZ"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_DIS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_EPIKRIZ",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_EPIKRIZ",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_EPIKRIZ",
+      "column": "EPIKRIZ_BASLIK_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_EPIKRIZ",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_EPIKRIZ",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_EPIKRIZ",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_FOTOGRAF",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_FOTOGRAF",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_FOTOGRAF",
+      "column": "FOTOGRAF_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_FOTOGRAF",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_FOTOGRAF",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_GIZLILIK",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_GIZLILIK",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_GIZLILIK",
+      "column": "GIZLILIK_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_GIZLILIK",
+      "column": "GIZLILIK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_GIZLILIK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_GIZLILIK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "HIZMET_KODU",
+      "to": "HIZMET"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "DOGUM_KODU",
+      "to": "DOGUM"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "AMELIYAT_ISLEM_KODU",
+      "to": "AMELIYAT_ISLEM"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "HASTA_HIZMET_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "HIZMET_FATURA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "TIBBI_ISLEM_PUAN_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "TARAF_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "MEDULA_TAKIP_KODU",
+      "to": "MEDULA_TAKIP"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "ONAYLAYAN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "ISTEYEN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "FATURA_KODU",
+      "to": "FATURA"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_HIZMET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "ADRES_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "ADRES_KODU_SEVIYESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "IL_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "ILCE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "BUCAK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "KOY_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "MAHALLE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_ILETISIM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "STOK_HAREKET_KODU",
+      "to": "STOK_HAREKET"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "MALZEME_FATURA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "FATURA_KODU",
+      "to": "FATURA"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "MEDULA_TAKIP_KODU",
+      "to": "MEDULA_TAKIP"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "AMELIYAT_KODU",
+      "to": "AMELIYAT"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "ISTEYEN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_MALZEME",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_NOTLARI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_NOTLARI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_NOTLARI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_NOTLARI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "OLUM_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "ANNE_OLUM_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "OTOPSI_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "OLUM_BELGESI_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "OLUM_NEDENI_TANI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "OLUM_NEDENI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "OLUM_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "EX_KARARINI_VEREN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "TESLIM_EDEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_OLUM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "SEANS_ISLEM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "ANTIHIPERTANSIF_ILAC_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "ONCEKI_RRT_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "HEMODIYALIZE_GECME_NEDENLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "DAMAR_ERISIM_YOLU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "DIYALIZE_GIRME_SIKLIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "DIYALIZOR_ALANI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "DIYALIZOR_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "KAN_AKIM_HIZI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "AGIRLIK_OLCUM_ZAMANI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "KULLANILAN_DIYALIZ_TEDAVISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "PERITONEAL_GECIRGENLIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "PERITON_KACINCI_KATETER",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "PERITON_KATETER_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "PERITON_KATETER_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "PERITON_TUNEL_YONU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "SINEKALSET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "TEDAVININ_SEYRI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "AKTIF_VITAMIN_D_KULLANIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "ANEMI_TEDAVISI_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "FOSFOR_BAGLAYICI_AJAN",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "PERITON_KOMPLIKASYON",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_SEANS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_EDILEN_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_TANISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_VASITASI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_TEDAVI_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_EDEN_1_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_EDEN_2_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "SEVK_EDEN_3_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_SEVK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_TIBBI_BILGI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_TIBBI_BILGI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_TIBBI_BILGI",
+      "column": "TIBBI_BILGI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_TIBBI_BILGI",
+      "column": "TIBBI_BILGI_ALT_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_TIBBI_BILGI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_TIBBI_BILGI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_UYARI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_UYARI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_UYARI",
+      "column": "UYARI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_UYARI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_UYARI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_VENTILATOR",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_VENTILATOR",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_VENTILATOR",
+      "column": "VENTILATOR_CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "HASTA_VENTILATOR",
+      "column": "YOGUN_BAKIM_SEVIYE_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HASTA_VENTILATOR",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_VENTILATOR",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_VITAL_FIZIKI_BULGU",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_VITAL_FIZIKI_BULGU",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_VITAL_FIZIKI_BULGU",
+      "column": "HEMSIRE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HASTA_VITAL_FIZIKI_BULGU",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_VITAL_FIZIKI_BULGU",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_YATAK",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HASTA_YATAK",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HASTA_YATAK",
+      "column": "YATAK_KODU",
+      "to": "YATAK"
+    },
+    {
+      "from": "HASTA_YATAK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HASTA_YATAK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "HEMOGLOBINOPATI_TARAMA_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "HEMOGLOBINOPATI_TESTI_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "HEMOGLOBINOPATI_SONUC_HASTALIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "HEMOGLOBINOPATI_TASIYICILIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HEMOGLOBINOPATI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HEMSIRELIK_TANI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "BAKIM_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HEMSIRE_BAKIM_HEDEF_SONUC",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HEMSIRELIK_GIRISIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HEMSIRE_DEGERLENDIRME_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "HEMSIRE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HEMSIRE_BAKIM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HIZMET",
+      "column": "HIZMET_ISLEM_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HIZMET",
+      "column": "HIZMET_ISLEM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HIZMET",
+      "column": "TIBBI_ISLEM_PUAN_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "HIZMET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "HIZMET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ICMAL",
+      "column": "KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "ICMAL",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ICMAL",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "ILAC_UYUMSUZLUK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "BIRINCI_ILAC_BARKODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "BIRINCI_ETKEN_MADDE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "IKINCI_ILAC_BARKODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "IKINCI_ETKEN_MADDE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "BESIN_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "CINSIYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "RENK_SEVIYE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ILAC_UYUM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "INTIHAR_KRIZ_VAKA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "INTIHAR_GIRISIM_KRIZ_NEDENLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "INTIHAR_GIRISIMI_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "INTIHAR_KRIZ_VAKA_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "INTIHAR_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "KONJENITAL_ANOMALI_VARLIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "ONCEKI_DOGUM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "KULLANILAN_AP_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "BIR_ONCE_KULLANILAN_AP_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "AP_YONTEMI_LOJISTIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "KADIN_SAGLIGI_ISLEMLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KADIN_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "BAGISCI_HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "BAGISCI_HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "KAN_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "REZERV_HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "BAGISLANAN_KAN_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "REAKSIYON_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "BAGISCI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "KAN_BAGIS_DEGERLENDIRME_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "DEGERLENDIREN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "KAN_BAGISCISI_RET_NEDENLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_BAGISCI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "KAN_TALEP_DETAY_KODU",
+      "to": "KAN_TALEP_DETAY"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "KAN_STOK_KODU",
+      "to": "KAN_STOK"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "KAN_CIKIS_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "REZERVE_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "CROSS_MATCH_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "CROSS_MATCH_CALISMA_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "CROSS_MATCH_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_CIKIS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "KAN_STOK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "KAN_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "KAN_URUN_KODU",
+      "to": "KAN_URUN"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "KAN_BAGISCI_KODU",
+      "to": "KAN_BAGISCI"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "BAGLI_KAN_STOK_KODU",
+      "to": "KAN_STOK"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_STOK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "KAN_TALEP_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "KAN_ISTEYEN_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "ISTEYEN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "ISTENEN_KAN_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "KAN_TALEP_ACILIYET_SEVIYESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "KAN_ENDIKASYON_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_TALEP",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "KAN_TALEP_KODU",
+      "to": "KAN_TALEP"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "KAN_URUN_KODU",
+      "to": "KAN_URUN"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "ISTENEN_KAN_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "RET_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "KAN_TALEP_RET_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_TALEP_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_URUN",
+      "column": "HIZMET_KODU",
+      "to": "HIZMET"
+    },
+    {
+      "from": "KAN_URUN",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_URUN",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "KAN_STOK_KODU",
+      "to": "KAN_STOK"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "KAN_IMHA_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "KAN_IMHA_ONAYLAYAN_HEKIM",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "KAN_IMHA_ONAYLAYAN_TEKNISYEN",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "KAN_IMHA_EDEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KAN_URUN_IMHA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "SEYIR_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "SEPTIK_SOK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "SEPSIS_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KLINIK_SEYIR",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "KONSULTASYON_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "KONSULTASYON_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KONSULTASYON",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "PROFILAKSI_TAMAMLANMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "UYGULANAN_KUDUZ_PROFILAKSISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "BEYAN_TSM_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KUDUZ_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KULLANICI",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KULLANICI",
+      "column": "PAROLA_SIFRELEME_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KULLANICI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KULLANICI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KULLANICI_GRUP",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KULLANICI_GRUP",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL",
+      "column": "RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL",
+      "column": "MEDULA_RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL",
+      "column": "MEDULA_ALT_RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "MEDULA_RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "MEDULA_ALT_RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "ALKOL_MADDE_BAGIMLILIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "BEDEN_RUH_ILERI_TETKIK_BULGUSU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "GECMIS_HASTALIGA_DAIR_KAYIT",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "GORME_ISITME_KAYBI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "PSIKIYATRIK_RAHATSIZLIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "UZUVKAYBI_ORTOPEDI_RAHATSIZLIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "ASAL_HASTALIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "ASAL_HASTALIK_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_ASKERI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_ENGELLI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KURUL_ENGELLI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KURUL_ENGELLI",
+      "column": "KURUL_RAPOR_KODU",
+      "to": "KURUL_RAPOR"
+    },
+    {
+      "from": "KURUL_ENGELLI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_ENGELLI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_ETKEN_MADDE",
+      "column": "KURUL_RAPOR_KODU",
+      "to": "KURUL_RAPOR"
+    },
+    {
+      "from": "KURUL_ETKEN_MADDE",
+      "column": "DOZ_BIRIM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ETKEN_MADDE",
+      "column": "ILAC_PERIYOT_BIRIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_ETKEN_MADDE",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_ETKEN_MADDE",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "KURUL_RAPOR_KODU",
+      "to": "KURUL_RAPOR"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "SISTEM_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_HEKIM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_RAPOR",
+      "column": "KURUL_KODU",
+      "to": "KURUL"
+    },
+    {
+      "from": "KURUL_RAPOR",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "KURUL_RAPOR",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "KURUL_RAPOR",
+      "column": "KARAR_ICERIK_FORMATI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_RAPOR",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_RAPOR",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_TESHIS",
+      "column": "KURUL_RAPOR_KODU",
+      "to": "KURUL_RAPOR"
+    },
+    {
+      "from": "KURUL_TESHIS",
+      "column": "TANI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUL_TESHIS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUL_TESHIS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUM",
+      "column": "HASTA_KURUM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUM",
+      "column": "SKRS_KURUM_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "KURUM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "KURUM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "KACINCI_LOHUSA_IZLEM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "IZLEMIN_YAPILDIGI_YER",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "DEMIR_LOJISTIGI_VE_DESTEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "DVITAMINI_LOJISTIGI_VE_DESTEGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "POSTPARTUM_DEPRESYON",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "UTERUS_INVOLUSYON",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "KONJENITAL_ANOMALI_VARLIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "KOMPLIKASYON_TANISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "SEYIR_TEHLIKE_ISARETI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "KADIN_SAGLIGI_ISLEMLERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "LOHUSA_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "BILGI_ALINAN_KAYNAK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "DANISMA_TEDAVI_HIZMET_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "IKAME_TEDAVI_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "CEZAEVI_OYKUSU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "SOSYAL_YARDIM_ALMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "YASADIGI_BOLGE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "YASAM_BICIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "COCUKLARIYLA_YASAMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "ENJEKSIYON_ILE_MADDE_KULLANIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "ENJEKTOR_PAYLASIM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "HIV_TEST_YAPILMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "HCV_TEST_YAPILMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "HBV_TEST_YAPILMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "GORUSME_SONUCU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "GONDEREN_BIRIM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "YASAM_ORTAMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "BULASICI_HASTALIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "BASLANAN_TEDAVI_TIPI_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "BIRINCIL_KULLANILAN_ESAS_MADDE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "KULLANILAN_DIGER_MADDE",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "MADDE_BAGIMLILIGI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "PROVIZYON_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "TEDAVI_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "TAKIP_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "TEDAVI_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "TEDAVI_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "MEDULA_TAKIP",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "NOBETCI_PERSONEL_BILGISI",
+      "column": "SKRS_KURUM_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "NOBETCI_PERSONEL_BILGISI",
+      "column": "KLINIK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "NOBETCI_PERSONEL_BILGISI",
+      "column": "GOREV_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "NOBETCI_PERSONEL_BILGISI",
+      "column": "PERSONEL_GOREV_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "NOBETCI_PERSONEL_BILGISI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "NOBETCI_PERSONEL_BILGISI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "DIYET_TIBBI_BESLENME_TEDAVISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "MORBIT_OBEZ_LENFATIK_ODEM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "OBEZITE_ILAC_TEDAVISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "PSIKOLOJIK_TEDAVI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "BIRLIKTE_GORULEN_EK_HASTALIK",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "EGZERSIZ",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "OBEZITE_IZLEM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ODA",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "ODA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ODA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "GOZLUK_RECETE_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "GOZLUK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "SAG_CAM_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "SAG_CAM_RENGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "SOL_CAM_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "SOL_CAM_RENGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "TELESKOPIK_GOZLUK_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "TELESKOPIK_GOZLUK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "OPTIK_RECETE",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "OIS_DEGERLENDIREN_1_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "OIS_DEGERLENDIREN_2_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "OIS_DEGERLENDIREN_3_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "ORTODONTI_ICON_SKOR",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "PATOLOJI_RAPOR_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "DOKUNUN_TEMEL_OZELLIGI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "NUMUNE_ALINMA_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "PATOLOJI_PREPARATI_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "TETKIK_NUMUNE_KODU",
+      "to": "TETKIK_NUMUNE"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "NUMUNE_ALINMA_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "PATOLOJIK_TANI_MORFOLOJI_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "PATOLOJIK_TANI_YERLESIM_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "SONUC_ICERIK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "RAPOR_YAZAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "ONAYLAYAN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "ASISTAN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "PATOLOJI_DIGER_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PATOLOJI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "CINSIYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "OGRENIM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "KAN_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ULKE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ADRES_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ADRES_KODU_SEVIYESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "IL_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ILCE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ASKERLIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "KLINIK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "CALISMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "UNVAN_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "PERSONEL_GOREV_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "IS_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "MEMURIYET_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ISTEN_AYRILMA_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "KADRO_UNVAN_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "IMZA_UNVAN_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "AKADEMIK_UNVAN",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "CALISTIGI_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "KADROLU_GOREV_YERI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "ENGELLILIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "column": "PERSONEL_YAKINLIK_DERECESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "column": "OGRENIM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "column": "ENGELLILIK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BAKMAKLA_YUKUMLU",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BANKA",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_BANKA",
+      "column": "BANKA",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BANKA",
+      "column": "BORDRO_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BANKA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BANKA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "BORDRO_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "ES_CALISMA_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "BES_FIRMA_KODU",
+      "to": "FIRMA"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "YABANCI_DIL_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "SENDIKA_BILGISI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BORDRO",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_BORDRO_SONDURUM",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_EGITIM",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_EGITIM",
+      "column": "PERSONEL_EGITIM_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_EGITIM",
+      "column": "SERTIFIKA_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_EGITIM",
+      "column": "ONAYLAYAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_EGITIM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_EGITIM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "GOREV_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "GOREVLENDIRME_IL_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "GOREVLENDIRME_ILCE_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "GOREVLENDIRILDIGI_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_GOREVLENDIRME",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_IZIN",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_IZIN",
+      "column": "PERSONEL_IZIN_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_IZIN",
+      "column": "SBYS_ENGELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_IZIN",
+      "column": "ONAYLAYAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_IZIN",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_IZIN",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_IZIN_DURUMU",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_ODUL_CEZA",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_ODUL_CEZA",
+      "column": "ODUL_CEZA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_ODUL_CEZA",
+      "column": "ODUL_CEZA_VEREN_KURUM_KODU",
+      "to": "KURUM"
+    },
+    {
+      "from": "PERSONEL_ODUL_CEZA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_ODUL_CEZA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_OGRENIM",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_OGRENIM",
+      "column": "OGRENIM_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "PERSONEL_OGRENIM",
+      "column": "ONAYLAYAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_OGRENIM",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_OGRENIM",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_YANDAL",
+      "column": "PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "PERSONEL_YANDAL",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "PERSONEL_YANDAL",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "KABUL_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "TETKIK_CEKEN_TEKNISYEN_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "TETKIK_ISTENME_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RADYOLOJI",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "RADYOLOJI_KODU",
+      "to": "RADYOLOJI"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "RADYOLOJI_RAPOR_FORMATI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "RAPOR_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "RAPOR_YAZAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "ONAYLAYAN_PERSONEL_KODU_1",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "ONAYLAYAN_PERSONEL_KODU_2",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "ONAYLAYAN_PERSONEL_KODU_3",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RADYOLOJI_SONUC",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "RANDEVU_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "RANDEVU_ALT_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "RANDEVU_GELME_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "CINSIYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "IPTAL_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RANDEVU",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RECETE",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "RECETE",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "RECETE",
+      "column": "RECETE_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RECETE",
+      "column": "RECETE_ALT_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RECETE",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "RECETE",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RECETE",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RECETE_ILAC",
+      "column": "RECETE_KODU",
+      "to": "RECETE"
+    },
+    {
+      "from": "RECETE_ILAC",
+      "column": "DOZ_BIRIM",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RECETE_ILAC",
+      "column": "ILAC_KULLANIM_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RECETE_ILAC",
+      "column": "ILAC_KULLANIM_PERIYODU_BIRIMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RECETE_ILAC",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RECETE_ILAC",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RECETE_ILAC_ACIKLAMA",
+      "column": "RECETE_ILAC_KODU",
+      "to": "RECETE_ILAC"
+    },
+    {
+      "from": "RECETE_ILAC_ACIKLAMA",
+      "column": "RECETE_KODU",
+      "to": "RECETE"
+    },
+    {
+      "from": "RECETE_ILAC_ACIKLAMA",
+      "column": "ILAC_ACIKLAMA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RECETE_ILAC_ACIKLAMA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RECETE_ILAC_ACIKLAMA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RISK_SKORLAMA",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "RISK_SKORLAMA",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "RISK_SKORLAMA",
+      "column": "RISK_SKORLAMA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RISK_SKORLAMA",
+      "column": "TIBBI_ORDER_DETAY_KODU",
+      "to": "TIBBI_ORDER_DETAY"
+    },
+    {
+      "from": "RISK_SKORLAMA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RISK_SKORLAMA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RISK_SKORLAMA_DETAY",
+      "column": "RISK_SKORLAMA_KODU",
+      "to": "RISK_SKORLAMA"
+    },
+    {
+      "from": "RISK_SKORLAMA_DETAY",
+      "column": "RISK_SKORLAMA_ALT_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "RISK_SKORLAMA_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "RISK_SKORLAMA_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "SILINEN_KAYITLAR",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "STERILIZASYON_SET_KODU",
+      "to": "STERILIZASYON_SET"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "CIKIS_YAPILAN_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "TESLIM_EDEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "TESLIM_ALAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_CIKIS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "TESLIM_EDEN_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "TESLIM_EDEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "TESLIM_ALAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_GIRIS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_PAKET",
+      "column": "STERILIZASYON_YONTEMI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STERILIZASYON_PAKET",
+      "column": "STERILIZASYON_PAKET_GRUBU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STERILIZASYON_PAKET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_PAKET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_PAKET_DETAY",
+      "column": "STERILIZASYON_PAKET_KODU",
+      "to": "STERILIZASYON_PAKET"
+    },
+    {
+      "from": "STERILIZASYON_PAKET_DETAY",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STERILIZASYON_PAKET_DETAY",
+      "column": "OLCU_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STERILIZASYON_PAKET_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_PAKET_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "STERILIZASYON_PAKET_KODU",
+      "to": "STERILIZASYON_PAKET"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "BARKOD_BASAN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "SET_IADE_EDEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "SET_IADE_ALAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "PAKETLEYEN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "STERILIZASYON_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_SET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_SET_DETAY",
+      "column": "STERILIZASYON_SET_KODU",
+      "to": "STERILIZASYON_SET"
+    },
+    {
+      "from": "STERILIZASYON_SET_DETAY",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STERILIZASYON_SET_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_SET_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_STOK_DURUM",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STERILIZASYON_STOK_DURUM",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STERILIZASYON_YIKAMA",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STERILIZASYON_YIKAMA",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STERILIZASYON_YIKAMA",
+      "column": "STERILIZASYON_YIKAMA_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STERILIZASYON_YIKAMA",
+      "column": "YIKAMA_YAPAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STERILIZASYON_YIKAMA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STERILIZASYON_YIKAMA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_DURUM",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STOK_DURUM",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STOK_DURUM",
+      "column": "OLCU_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "STOK_ISTEK_KODU",
+      "to": "STOK_ISTEK"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "STOK_ISTEK_HAREKET_KODU",
+      "to": "STOK_ISTEK_HAREKET"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "ONAYLAYAN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "EHU_RET_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "EHU_RET_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_EHU_TAKIP",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "BAGLI_STOK_FIS_KODU",
+      "to": "STOK_FIS"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "HAREKET_SEKLI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "ISLEMI_YAPAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "FIRMA_KODU",
+      "to": "FIRMA"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "IHALE_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "BUTCE_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_FIS",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "BAGLI_STOK_HAREKET_KODU",
+      "to": "STOK_HAREKET"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "ILK_GIRIS_STOK_HAREKET_KODU",
+      "to": "STOK_HAREKET"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "STOK_ISTEK_HAREKET_KODU",
+      "to": "STOK_ISTEK_HAREKET"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "STOK_FIS_KODU",
+      "to": "STOK_FIS"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "OLCU_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "ISLEMI_YAPAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_HAREKET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "ISTEK_DEPO_KODU",
+      "to": "DEPO"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "STOK_ISTEK_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "AMELIYAT_KODU",
+      "to": "AMELIYAT"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "STOK_ISTEK_KODU",
+      "to": "STOK_ISTEK"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "ISTENEN_STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "ISTENEN_ILAC_JENERIK_KODU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "VERILEN_STOK_KART_KODU",
+      "to": "STOK_KART"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "STOK_ISTEK_RET_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "STOK_ISTEK_RET_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK_HAREKET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK_UYGULAMA",
+      "column": "STOK_ISTEK_HAREKET_KODU",
+      "to": "STOK_ISTEK_HAREKET"
+    },
+    {
+      "from": "STOK_ISTEK_UYGULAMA",
+      "column": "UYGULAYAN_HEMSIRE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_ISTEK_UYGULAMA",
+      "column": "ISTEK_IPTAL_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_ISTEK_UYGULAMA",
+      "column": "IPTAL_EDEN_HEMSIRE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "STOK_ISTEK_UYGULAMA",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_ISTEK_UYGULAMA",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_KART",
+      "column": "MALZEME_TIPI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_KART",
+      "column": "RECETE_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "STOK_KART",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "STOK_KART",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "SYS_PAKET",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "SYS_PAKET",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "SYS_PAKET",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "SYS_PAKET",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK",
+      "column": "HIZMET_KODU",
+      "to": "HIZMET"
+    },
+    {
+      "from": "TETKIK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_CIHAZ_ESLESME",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "TETKIK_CIHAZ_ESLESME",
+      "column": "TETKIK_KODU",
+      "to": "TETKIK"
+    },
+    {
+      "from": "TETKIK_CIHAZ_ESLESME",
+      "column": "TETKIK_PARAMETRE_KODU",
+      "to": "TETKIK_PARAMETRE"
+    },
+    {
+      "from": "TETKIK_CIHAZ_ESLESME",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_CIHAZ_ESLESME",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "NUMUNE_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "NUMUNE_ALAN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "KABUL_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "NUMUNE_RET_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "RET_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_NUMUNE",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_PARAMETRE",
+      "column": "TETKIK_KODU",
+      "to": "TETKIK"
+    },
+    {
+      "from": "TETKIK_PARAMETRE",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "TETKIK_PARAMETRE",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_PARAMETRE",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_REFERANS_ARALIK",
+      "column": "TETKIK_PARAMETRE_KODU",
+      "to": "TETKIK_PARAMETRE"
+    },
+    {
+      "from": "TETKIK_REFERANS_ARALIK",
+      "column": "TETKIK_KODU",
+      "to": "TETKIK"
+    },
+    {
+      "from": "TETKIK_REFERANS_ARALIK",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "TETKIK_REFERANS_ARALIK",
+      "column": "TETKIK_CINSIYET",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TETKIK_REFERANS_ARALIK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_REFERANS_ARALIK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "TETKIK_NUMUNE_KODU",
+      "to": "TETKIK_NUMUNE"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "TETKIK_PARAMETRE_KODU",
+      "to": "TETKIK_PARAMETRE"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "TETKIK_KODU",
+      "to": "TETKIK"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "NUMUNE_RET_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "RET_EDEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "ONAYLAYAN_TEKNISYEN_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "ONAYLAYAN_HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "TETKIK_SONUCU_DURUMU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "RAPOR_YAZAN_PERSONEL_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TETKIK_SONUC",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TIBBI_ORDER",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "TIBBI_ORDER",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "TIBBI_ORDER",
+      "column": "TIBBI_ORDER_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TIBBI_ORDER",
+      "column": "HEKIM_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "TIBBI_ORDER",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TIBBI_ORDER",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TIBBI_ORDER_DETAY",
+      "column": "TIBBI_ORDER_KODU",
+      "to": "TIBBI_ORDER"
+    },
+    {
+      "from": "TIBBI_ORDER_DETAY",
+      "column": "UYGULAYAN_HEMSIRE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "TIBBI_ORDER_DETAY",
+      "column": "TIBBI_ORDER_IPTAL_NEDENI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "TIBBI_ORDER_DETAY",
+      "column": "IPTAL_EDEN_HEMSIRE_KODU",
+      "to": "PERSONEL"
+    },
+    {
+      "from": "TIBBI_ORDER_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "TIBBI_ORDER_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "VEZNE",
+      "column": "HASTA_KODU",
+      "to": "HASTA"
+    },
+    {
+      "from": "VEZNE",
+      "column": "HASTA_BASVURU_KODU",
+      "to": "HASTA_BASVURU"
+    },
+    {
+      "from": "VEZNE",
+      "column": "VEZNE_BIRIM_KODU",
+      "to": "BIRIM"
+    },
+    {
+      "from": "VEZNE",
+      "column": "TAHSIL_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "VEZNE",
+      "column": "FIRMA_KODU",
+      "to": "FIRMA"
+    },
+    {
+      "from": "VEZNE",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "VEZNE",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "VEZNE_DETAY",
+      "column": "VEZNE_KODU",
+      "to": "VEZNE"
+    },
+    {
+      "from": "VEZNE_DETAY",
+      "column": "HASTA_HIZMET_KODU",
+      "to": "HASTA_HIZMET"
+    },
+    {
+      "from": "VEZNE_DETAY",
+      "column": "HASTA_MALZEME_KODU",
+      "to": "HASTA_MALZEME"
+    },
+    {
+      "from": "VEZNE_DETAY",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "VEZNE_DETAY",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "YATAK",
+      "column": "ODA_KODU",
+      "to": "ODA"
+    },
+    {
+      "from": "YATAK",
+      "column": "YATAK_TURU",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "YATAK",
+      "column": "YOGUN_BAKIM_YATAK_SEVIYESI",
+      "to": "REFERANS_KODLAR"
+    },
+    {
+      "from": "YATAK",
+      "column": "VENTILATOR_CIHAZ_KODU",
+      "to": "CIHAZ"
+    },
+    {
+      "from": "YATAK",
+      "column": "EKLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    },
+    {
+      "from": "YATAK",
+      "column": "GUNCELLEYEN_KULLANICI_KODU",
+      "to": "KULLANICI"
+    }
+  ],
+  "reverse_relations": {
+    "HASTA": [
+      "DOGUM_DETAY",
+      "BASVURU_TANI",
+      "HASTA_ARSIV_DETAY",
+      "HASTA_SEANS",
+      "HASTA",
+      "RADYOLOJI",
+      "OPTIK_RECETE",
+      "HASTA_ILETISIM",
+      "PATOLOJI",
+      "HASTA_OLUM",
+      "HASTA_EPIKRIZ",
+      "HASTA_HIZMET",
+      "VEZNE",
+      "HASTA_DIS",
+      "DISPROTEZ",
+      "HASTA_VENTILATOR",
+      "KLINIK_SEYIR",
+      "KAN_TALEP",
+      "KURUL_HEKIM",
+      "LOHUSA_IZLEM",
+      "TIBBI_ORDER",
+      "HASTA_MALZEME",
+      "ASI_BILGISI",
+      "OBEZITE_IZLEM",
+      "INTIHAR_IZLEM",
+      "KUDUZ_IZLEM",
+      "HASTA_BASVURU",
+      "GETAT",
+      "BILDIRIMI_ZORUNLU",
+      "HASTA_SEVK",
+      "KAN_BAGISCI",
+      "EVDE_SAGLIK_IZLEM",
+      "HASTA_NOTLARI",
+      "HEMSIRE_BAKIM",
+      "HASTA_VITAL_FIZIKI_BULGU",
+      "STOK_FIS",
+      "BASVURU_YEMEK",
+      "KURUL_ENGELLI",
+      "AMELIYAT",
+      "BEBEK_COCUK_IZLEM",
+      "GEBE_IZLEM",
+      "HASTA_ADLI_RAPOR",
+      "KAN_CIKIS",
+      "RANDEVU",
+      "RISK_SKORLAMA",
+      "STERILIZASYON_CIKIS",
+      "KADIN_IZLEM",
+      "HASTA_GIZLILIK",
+      "DIS_TAAHHUT",
+      "HASTA_FOTOGRAF",
+      "HASTA_YATAK",
+      "KONSULTASYON",
+      "KURUL_RAPOR",
+      "STOK_ISTEK",
+      "ANLIK_YATAN_HASTA",
+      "DOGUM",
+      "ORTODONTI_ICON_SKOR",
+      "MEDULA_TAKIP",
+      "RECETE",
+      "TETKIK_NUMUNE",
+      "HASTA_TIBBI_BILGI",
+      "HASTA_UYARI",
+      "SYS_PAKET",
+      "FATURA",
+      "HASTA_ARSIV",
+      "HASTA_BORC"
+    ],
+    "HASTA_BASVURU": [
+      "DOGUM_DETAY",
+      "BASVURU_TANI",
+      "DIYABET",
+      "HASTA_ARSIV_DETAY",
+      "HASTA_SEANS",
+      "COCUK_DIYABET",
+      "MADDE_BAGIMLILIGI",
+      "RADYOLOJI",
+      "OPTIK_RECETE",
+      "HASTA_ILETISIM",
+      "PATOLOJI",
+      "HASTA_OLUM",
+      "HASTA_EPIKRIZ",
+      "HASTA_HIZMET",
+      "HEMOGLOBINOPATI",
+      "VEZNE",
+      "HASTA_DIS",
+      "DISPROTEZ",
+      "HASTA_VENTILATOR",
+      "KLINIK_SEYIR",
+      "KAN_TALEP",
+      "KURUL_HEKIM",
+      "LOHUSA_IZLEM",
+      "TIBBI_ORDER",
+      "HASTA_MALZEME",
+      "ASI_BILGISI",
+      "OBEZITE_IZLEM",
+      "INTIHAR_IZLEM",
+      "KUDUZ_IZLEM",
+      "HASTA_BASVURU",
+      "GETAT",
+      "BILDIRIMI_ZORUNLU",
+      "HASTA_SEVK",
+      "KAN_BAGISCI",
+      "EVDE_SAGLIK_IZLEM",
+      "HASTA_NOTLARI",
+      "HEMSIRE_BAKIM",
+      "HASTA_VITAL_FIZIKI_BULGU",
+      "STOK_FIS",
+      "BASVURU_YEMEK",
+      "KURUL_ENGELLI",
+      "AMELIYAT",
+      "BEBEK_COCUK_IZLEM",
+      "GEBE_IZLEM",
+      "HASTA_ADLI_RAPOR",
+      "KAN_CIKIS",
+      "RANDEVU",
+      "RISK_SKORLAMA",
+      "STERILIZASYON_CIKIS",
+      "KADIN_IZLEM",
+      "HASTA_GIZLILIK",
+      "DIS_TAAHHUT",
+      "HASTA_FOTOGRAF",
+      "HASTA_YATAK",
+      "KONSULTASYON",
+      "KURUL_RAPOR",
+      "STOK_ISTEK",
+      "ANLIK_YATAN_HASTA",
+      "DOGUM",
+      "ORTODONTI_ICON_SKOR",
+      "MEDULA_TAKIP",
+      "RECETE",
+      "TETKIK_NUMUNE",
+      "HASTA_TIBBI_BILGI",
+      "HASTA_UYARI",
+      "DOKTOR_MESAJI",
+      "SYS_PAKET",
+      "FATURA",
+      "HASTA_BORC"
+    ],
+    "REFERANS_KODLAR": [
+      "BINA",
+      "HASTA_OLUM",
+      "HEMOGLOBINOPATI",
+      "VEZNE",
+      "PERSONEL_IZIN",
+      "KURUM",
+      "HASTA_VENTILATOR",
+      "KURUL_HEKIM",
+      "NOBETCI_PERSONEL_BILGISI",
+      "TIBBI_ORDER",
+      "OBEZITE_IZLEM",
+      "KUDUZ_IZLEM",
+      "PERSONEL_BANKA",
+      "RADYOLOJI_SONUC",
+      "STOK_FIS",
+      "PERSONEL_BAKMAKLA_YUKUMLU",
+      "TETKIK_SONUC",
+      "KAN_CIKIS",
+      "BEBEK_COCUK_IZLEM",
+      "RISK_SKORLAMA",
+      "TETKIK_REFERANS_ARALIK",
+      "STERILIZASYON_YIKAMA",
+      "PERSONEL_OGRENIM",
+      "RECETE",
+      "PERSONEL_ODUL_CEZA",
+      "TETKIK_NUMUNE",
+      "HASTA_TIBBI_BILGI",
+      "BAKTERI_SONUC",
+      "AMELIYAT_ISLEM",
+      "DIYABET",
+      "HASTA_SEANS",
+      "RADYOLOJI",
+      "PATOLOJI",
+      "PERSONEL_EGITIM",
+      "HASTA_DIS",
+      "HASTA_MALZEME",
+      "YATAK",
+      "STOK_ISTEK_UYGULAMA",
+      "HASTA_BASVURU",
+      "GETAT",
+      "RECETE_ILAC",
+      "KURUL_ETKEN_MADDE",
+      "RECETE_ILAC_ACIKLAMA",
+      "HASTA_ADLI_RAPOR",
+      "KADIN_IZLEM",
+      "HASTA_GIZLILIK",
+      "KURUL_RAPOR",
+      "ILAC_UYUM",
+      "KAN_TALEP_DETAY",
+      "EK_ODEME_DETAY",
+      "FATURA",
+      "GEBE_IZLEM",
+      "HASTA_ARSIV",
+      "TIBBI_ORDER_DETAY",
+      "DISPROTEZ_DETAY",
+      "BASVURU_TANI",
+      "RISK_SKORLAMA_DETAY",
+      "COCUK_DIYABET",
+      "HASTA",
+      "OPTIK_RECETE",
+      "HASTA_ILETISIM",
+      "KURUL_TESHIS",
+      "DIS_TAAHHUT_DETAY",
+      "DEPO",
+      "HASTA_HIZMET",
+      "BIRIM",
+      "KAN_TALEP",
+      "AMELIYAT_EKIP",
+      "ASI_BILGISI",
+      "INTIHAR_IZLEM",
+      "EVDE_SAGLIK_IZLEM",
+      "BASVURU_YEMEK",
+      "STOK_HAREKET",
+      "AMELIYAT",
+      "RANDEVU",
+      "STOK_ISTEK",
+      "DOGUM",
+      "MEDULA_TAKIP",
+      "KURUL",
+      "DOKTOR_MESAJI",
+      "DOGUM_DETAY",
+      "KAN_STOK",
+      "ANTIBIYOTIK_SONUC",
+      "STERILIZASYON_PAKET_DETAY",
+      "STOK_ISTEK_HAREKET",
+      "HASTA_EPIKRIZ",
+      "STERILIZASYON_PAKET",
+      "DISPROTEZ",
+      "KLINIK_SEYIR",
+      "LOHUSA_IZLEM",
+      "KULLANICI",
+      "HIZMET",
+      "PERSONEL",
+      "HASTA_SEVK",
+      "BILDIRIMI_ZORUNLU",
+      "KAN_BAGISCI",
+      "CIHAZ",
+      "HEMSIRE_BAKIM",
+      "PERSONEL_GOREVLENDIRME",
+      "KURUL_ASKERI",
+      "KONSULTASYON",
+      "DIS_TAAHHUT",
+      "HASTA_FOTOGRAF",
+      "PERSONEL_BORDRO",
+      "STOK_DURUM",
+      "KAN_URUN_IMHA",
+      "STOK_EHU_TAKIP",
+      "HASTA_UYARI",
+      "MADDE_BAGIMLILIGI",
+      "STOK_KART"
+    ],
+    "CIHAZ": [
+      "HASTA_VENTILATOR",
+      "STOK_HAREKET",
+      "AMELIYAT",
+      "RANDEVU",
+      "HASTA_SEANS",
+      "TETKIK_CIHAZ_ESLESME",
+      "TETKIK_SONUC",
+      "YATAK",
+      "RADYOLOJI",
+      "TETKIK_REFERANS_ARALIK",
+      "STERILIZASYON_SET",
+      "TETKIK_PARAMETRE"
+    ],
+    "BIRIM": [
+      "VEZNE",
+      "CIHAZ",
+      "STERILIZASYON_GIRIS",
+      "DISPROTEZ",
+      "AMELIYAT",
+      "KAN_TALEP",
+      "HASTA_ARSIV_DETAY",
+      "PERSONEL",
+      "RANDEVU",
+      "TETKIK_NUMUNE",
+      "KAN_STOK",
+      "RADYOLOJI",
+      "ODA",
+      "HASTA_BASVURU",
+      "STERILIZASYON_CIKIS",
+      "ANLIK_YATAN_HASTA",
+      "DOGUM"
+    ],
+    "KULLANICI": [
+      "ICMAL",
+      "STERILIZASYON_GIRIS",
+      "BINA",
+      "HASTA_OLUM",
+      "HEMOGLOBINOPATI",
+      "VEZNE",
+      "PERSONEL_IZIN",
+      "KURUM",
+      "HASTA_VENTILATOR",
+      "KURUL_HEKIM",
+      "NOBETCI_PERSONEL_BILGISI",
+      "TIBBI_ORDER",
+      "OBEZITE_IZLEM",
+      "KUDUZ_IZLEM",
+      "PERSONEL_BANKA",
+      "RADYOLOJI_SONUC",
+      "STOK_FIS",
+      "HASTA_VITAL_FIZIKI_BULGU",
+      "PERSONEL_BAKMAKLA_YUKUMLU",
+      "TETKIK_SONUC",
+      "KAN_CIKIS",
+      "BEBEK_COCUK_IZLEM",
+      "RISK_SKORLAMA",
+      "TETKIK_REFERANS_ARALIK",
+      "STERILIZASYON_YIKAMA",
+      "PERSONEL_OGRENIM",
+      "RECETE",
+      "PERSONEL_ODUL_CEZA",
+      "TETKIK_NUMUNE",
+      "HASTA_TIBBI_BILGI",
+      "BAKTERI_SONUC",
+      "STERILIZASYON_SET",
+      "STERILIZASYON_CIKIS",
+      "AMELIYAT_ISLEM",
+      "PERSONEL_YANDAL",
+      "DIYABET",
+      "HASTA_SEANS",
+      "RADYOLOJI",
+      "PATOLOJI",
+      "PERSONEL_EGITIM",
+      "HASTA_DIS",
+      "HASTA_MALZEME",
+      "STERILIZASYON_SET_DETAY",
+      "YATAK",
+      "STOK_ISTEK_UYGULAMA",
+      "HASTA_BASVURU",
+      "GETAT",
+      "RECETE_ILAC",
+      "KURUL_ETKEN_MADDE",
+      "RECETE_ILAC_ACIKLAMA",
+      "HASTA_ADLI_RAPOR",
+      "KADIN_IZLEM",
+      "HASTA_GIZLILIK",
+      "KURUL_RAPOR",
+      "ORTODONTI_ICON_SKOR",
+      "KULLANICI_GRUP",
+      "ILAC_UYUM",
+      "KAN_TALEP_DETAY",
+      "EK_ODEME_DETAY",
+      "SYS_PAKET",
+      "EK_ODEME_DONEM",
+      "FATURA",
+      "GEBE_IZLEM",
+      "HASTA_ARSIV",
+      "TIBBI_ORDER_DETAY",
+      "DISPROTEZ_DETAY",
+      "BASVURU_TANI",
+      "RISK_SKORLAMA_DETAY",
+      "COCUK_DIYABET",
+      "HASTA",
+      "TETKIK",
+      "OPTIK_RECETE",
+      "HASTA_ILETISIM",
+      "KURUL_TESHIS",
+      "DIS_TAAHHUT_DETAY",
+      "TETKIK_PARAMETRE",
+      "DEPO",
+      "HASTA_HIZMET",
+      "BIRIM",
+      "KAN_TALEP",
+      "AMELIYAT_EKIP",
+      "ASI_BILGISI",
+      "INTIHAR_IZLEM",
+      "EK_ODEME",
+      "EVDE_SAGLIK_IZLEM",
+      "HASTA_NOTLARI",
+      "BASVURU_YEMEK",
+      "VEZNE_DETAY",
+      "KURUL_ENGELLI",
+      "AMELIYAT",
+      "RANDEVU",
+      "STOK_HAREKET",
+      "STOK_ISTEK",
+      "DOGUM",
+      "SILINEN_KAYITLAR",
+      "MEDULA_TAKIP",
+      "FIRMA",
+      "KURUL",
+      "DOKTOR_MESAJI",
+      "ODA",
+      "HASTA_YATAK",
+      "DOGUM_DETAY",
+      "HASTA_ARSIV_DETAY",
+      "KAN_STOK",
+      "ANTIBIYOTIK_SONUC",
+      "STERILIZASYON_PAKET_DETAY",
+      "STOK_ISTEK_HAREKET",
+      "HASTA_EPIKRIZ",
+      "STERILIZASYON_PAKET",
+      "DISPROTEZ",
+      "KLINIK_SEYIR",
+      "LOHUSA_IZLEM",
+      "TETKIK_CIHAZ_ESLESME",
+      "KULLANICI",
+      "HIZMET",
+      "PERSONEL",
+      "HASTA_SEVK",
+      "BILDIRIMI_ZORUNLU",
+      "KAN_BAGISCI",
+      "CIHAZ",
+      "HEMSIRE_BAKIM",
+      "PERSONEL_GOREVLENDIRME",
+      "KURUL_ASKERI",
+      "KAN_URUN",
+      "KONSULTASYON",
+      "DIS_TAAHHUT",
+      "HASTA_FOTOGRAF",
+      "PERSONEL_BORDRO",
+      "KAN_URUN_IMHA",
+      "STOK_EHU_TAKIP",
+      "GRUP_UYELIK",
+      "HASTA_UYARI",
+      "MADDE_BAGIMLILIGI",
+      "STOK_KART"
+    ],
+    "AMELIYAT": [
+      "AMELIYAT_EKIP",
+      "HASTA_MALZEME",
+      "STOK_ISTEK",
+      "AMELIYAT_ISLEM",
+      "DOGUM"
+    ],
+    "AMELIYAT_ISLEM": [
+      "AMELIYAT_EKIP",
+      "HASTA_HIZMET"
+    ],
+    "PERSONEL": [
+      "PERSONEL_YANDAL",
+      "BASVURU_TANI",
+      "STERILIZASYON_GIRIS",
+      "HASTA_ARSIV_DETAY",
+      "RADYOLOJI",
+      "OPTIK_RECETE",
+      "PATOLOJI",
+      "PERSONEL_EGITIM",
+      "HASTA_OLUM",
+      "HASTA_HIZMET",
+      "HASTA_EPIKRIZ",
+      "PERSONEL_IZIN",
+      "DISPROTEZ",
+      "KLINIK_SEYIR",
+      "KAN_TALEP",
+      "KURUL_HEKIM",
+      "KULLANICI",
+      "AMELIYAT_EKIP",
+      "HASTA_MALZEME",
+      "TIBBI_ORDER",
+      "PERSONEL_BANKA",
+      "HASTA_SEVK",
+      "HASTA_BASVURU",
+      "RADYOLOJI_SONUC",
+      "EK_ODEME",
+      "KAN_BAGISCI",
+      "STOK_ISTEK_UYGULAMA",
+      "STOK_FIS",
+      "HEMSIRE_BAKIM",
+      "HASTA_VITAL_FIZIKI_BULGU",
+      "PERSONEL_BAKMAKLA_YUKUMLU",
+      "PERSONEL_GOREVLENDIRME",
+      "PERSONEL_BORDRO_SONDURUM",
+      "HASTA_ADLI_RAPOR",
+      "BEBEK_COCUK_IZLEM",
+      "KAN_CIKIS",
+      "RANDEVU",
+      "STOK_HAREKET",
+      "TETKIK_SONUC",
+      "STOK_ISTEK",
+      "DIS_TAAHHUT",
+      "PERSONEL_BORDRO",
+      "ANLIK_YATAN_HASTA",
+      "DOGUM",
+      "ORTODONTI_ICON_SKOR",
+      "STERILIZASYON_YIKAMA",
+      "PERSONEL_OGRENIM",
+      "RECETE",
+      "KAN_URUN_IMHA",
+      "PERSONEL_ODUL_CEZA",
+      "STOK_EHU_TAKIP",
+      "TIBBI_ORDER_DETAY",
+      "STERILIZASYON_SET",
+      "STERILIZASYON_CIKIS",
+      "PERSONEL_IZIN_DURUMU"
+    ],
+    "HASTA_HIZMET": [
+      "HASTA_DIS",
+      "VEZNE_DETAY",
+      "TETKIK_SONUC",
+      "RANDEVU",
+      "KONSULTASYON",
+      "RADYOLOJI",
+      "AMELIYAT_ISLEM",
+      "DOGUM"
+    ],
+    "YATAK": [
+      "HASTA_YATAK",
+      "ANLIK_YATAN_HASTA"
+    ],
+    "ODA": [
+      "ANLIK_YATAN_HASTA",
+      "YATAK"
+    ],
+    "BAKTERI_SONUC": [
+      "ANTIBIYOTIK_SONUC"
+    ],
+    "TETKIK_SONUC": [
+      "BAKTERI_SONUC"
+    ],
+    "KURUL_RAPOR": [
+      "BASVURU_TANI",
+      "KURUL_ETKEN_MADDE",
+      "KURUL_ENGELLI",
+      "KURUL_HEKIM",
+      "KURUL_TESHIS"
+    ],
+    "HASTA_SEVK": [
+      "BASVURU_TANI"
+    ],
+    "KURUM": [
+      "ICMAL",
+      "PERSONEL_GOREVLENDIRME",
+      "PERSONEL_ODUL_CEZA",
+      "KAN_CIKIS",
+      "BILDIRIMI_ZORUNLU",
+      "HASTA",
+      "KAN_STOK",
+      "KUDUZ_IZLEM",
+      "FATURA",
+      "HASTA_SEVK",
+      "HASTA_BASVURU"
+    ],
+    "BINA": [
+      "BIRIM",
+      "DEPO"
+    ],
+    "DIS_TAAHHUT": [
+      "DIS_TAAHHUT_DETAY",
+      "HASTA_DIS"
+    ],
+    "DISPROTEZ": [
+      "HASTA_DIS",
+      "DISPROTEZ_DETAY"
+    ],
+    "FIRMA": [
+      "VEZNE",
+      "STOK_FIS",
+      "PERSONEL_BORDRO",
+      "DISPROTEZ_DETAY"
+    ],
+    "RANDEVU": [
+      "DISPROTEZ_DETAY"
+    ],
+    "DOGUM": [
+      "DOGUM_DETAY",
+      "HASTA_HIZMET"
+    ],
+    "EK_ODEME": [
+      "EK_ODEME_DETAY"
+    ],
+    "EK_ODEME_DONEM": [
+      "EK_ODEME"
+    ],
+    "ICMAL": [
+      "FATURA"
+    ],
+    "KULLANICI_GRUP": [
+      "GRUP_UYELIK"
+    ],
+    "HASTA_ARSIV": [
+      "HASTA_ARSIV_DETAY"
+    ],
+    "HIZMET": [
+      "TETKIK",
+      "KAN_URUN",
+      "HASTA_HIZMET"
+    ],
+    "MEDULA_TAKIP": [
+      "HASTA_MALZEME",
+      "HASTA_HIZMET"
+    ],
+    "FATURA": [
+      "HASTA_MALZEME",
+      "HASTA_HIZMET"
+    ],
+    "STOK_KART": [
+      "STERILIZASYON_STOK_DURUM",
+      "STERILIZASYON_GIRIS",
+      "STOK_EHU_TAKIP",
+      "STOK_HAREKET",
+      "HASTA_MALZEME",
+      "STERILIZASYON_SET_DETAY",
+      "STOK_DURUM",
+      "STERILIZASYON_PAKET_DETAY",
+      "STOK_ISTEK_HAREKET",
+      "STERILIZASYON_YIKAMA"
+    ],
+    "STOK_HAREKET": [
+      "STOK_HAREKET",
+      "HASTA_MALZEME"
+    ],
+    "DEPO": [
+      "STOK_FIS",
+      "STERILIZASYON_STOK_DURUM",
+      "STERILIZASYON_GIRIS",
+      "HASTA_MALZEME",
+      "STOK_ISTEK",
+      "STERILIZASYON_SET",
+      "STOK_DURUM",
+      "STERILIZASYON_CIKIS",
+      "STERILIZASYON_YIKAMA"
+    ],
+    "KAN_TALEP_DETAY": [
+      "KAN_CIKIS"
+    ],
+    "KAN_STOK": [
+      "KAN_URUN_IMHA",
+      "KAN_CIKIS",
+      "KAN_STOK"
+    ],
+    "KAN_URUN": [
+      "KAN_TALEP_DETAY",
+      "KAN_STOK"
+    ],
+    "KAN_BAGISCI": [
+      "KAN_STOK"
+    ],
+    "KAN_TALEP": [
+      "KAN_TALEP_DETAY"
+    ],
+    "KURUL": [
+      "KURUL_RAPOR"
+    ],
+    "TETKIK_NUMUNE": [
+      "PATOLOJI",
+      "TETKIK_SONUC"
+    ],
+    "RADYOLOJI": [
+      "RADYOLOJI_SONUC"
+    ],
+    "RECETE": [
+      "RECETE_ILAC_ACIKLAMA",
+      "RECETE_ILAC"
+    ],
+    "RECETE_ILAC": [
+      "RECETE_ILAC_ACIKLAMA"
+    ],
+    "TIBBI_ORDER_DETAY": [
+      "RISK_SKORLAMA"
+    ],
+    "RISK_SKORLAMA": [
+      "RISK_SKORLAMA_DETAY"
+    ],
+    "STERILIZASYON_SET": [
+      "STERILIZASYON_CIKIS",
+      "STERILIZASYON_SET_DETAY"
+    ],
+    "STERILIZASYON_PAKET": [
+      "STERILIZASYON_SET",
+      "STERILIZASYON_PAKET_DETAY"
+    ],
+    "STOK_ISTEK": [
+      "STOK_EHU_TAKIP",
+      "STOK_ISTEK_HAREKET"
+    ],
+    "STOK_ISTEK_HAREKET": [
+      "STOK_ISTEK_UYGULAMA",
+      "STOK_EHU_TAKIP",
+      "STOK_HAREKET"
+    ],
+    "STOK_FIS": [
+      "STOK_FIS",
+      "STOK_HAREKET"
+    ],
+    "TETKIK": [
+      "TETKIK_SONUC",
+      "TETKIK_CIHAZ_ESLESME",
+      "TETKIK_PARAMETRE",
+      "TETKIK_REFERANS_ARALIK"
+    ],
+    "TETKIK_PARAMETRE": [
+      "TETKIK_CIHAZ_ESLESME",
+      "TETKIK_SONUC",
+      "TETKIK_REFERANS_ARALIK"
+    ],
+    "TIBBI_ORDER": [
+      "TIBBI_ORDER_DETAY"
+    ],
+    "VEZNE": [
+      "VEZNE_DETAY"
+    ],
+    "HASTA_MALZEME": [
+      "VEZNE_DETAY"
+    ]
+  }
+}

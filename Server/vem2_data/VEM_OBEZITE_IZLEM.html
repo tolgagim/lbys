@@ -1,0 +1,334 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_OBEZITE_IZLEM</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; hastanin obezite takip bilgilerini kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>89A3E0D867FDB114F8E24F792D14AC6F</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_OBEZITE_IZLEM KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_197322" class="Aktif">
+                                                <td>1</td>
+                                                <td>OBEZITE_IZLEM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde muayene olan hastaların obezite izlem bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197323" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197324" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197325" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197326" class="Aktif">
+                                                <td>5</td>
+                                                <td>DIYET_TIBBI_BESLENME_TEDAVISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastalara diyetisyen tarafından verilen diyet programının varlığını ve hastanın uyum durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25181">DIYET_TIBBI_BESLENME_TEDAVISI </a></td>
+                                            </tr>
+                                            <tr id="col_197327" class="Aktif">
+                                                <td>6</td>
+                                                <td>ILK_TANI_TARIHI</td>
+                                                <td>Tarih</td>
+                                                <td>Hastaya izlem ve tedavi uygulanacak olan hastalık (diyabetis mellitus, kanser, HIV ve diğer cinsel yolla bulasan hastalıklar vb.) i&#231;in tanının ilk defa konulduğu tarihi ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197328" class="Aktif">
+                                                <td>7</td>
+                                                <td>MORBIT_OBEZ_LENFATIK_ODEM</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Morbid obez tanısı olan (BKI 40 kg/m2 ve &#252;st&#252;) hastalarda lenfatik &#246;dem olup olmadığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25182">MORBIT_OBEZ_HASTA_LENFATIK_ODEM_VARLIGI </a></td>
+                                            </tr>
+                                            <tr id="col_197329" class="Aktif">
+                                                <td>8</td>
+                                                <td>OBEZITE_ILAC_TEDAVISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Diyet (tıbbi beslenme) ve egzersizi i&#231;eren davranış tedavisine yanıt alınamayan hastalar i&#231;in diyet (tıbbi beslenme) ve egzersiz tedavileri ile birlikte ger&#231;ekleştirilen bir tedavi şeklidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25183">OBEZITE_ILAC_TEDAVISI </a></td>
+                                            </tr>
+                                            <tr id="col_197330" class="Aktif">
+                                                <td>9</td>
+                                                <td>PSIKOLOJIK_TEDAVI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Obezite ve diyabet ile ilişkili tutum ve davranışlara y&#246;nelik farkındalığın bilişsel-davranış&#231;ı m&#252;dahaleler aracılığıyla arttırılmasını ve değişim y&#246;n&#252;nde harekete ge&#231;irilmesini; tedaviye katılımı engelleyen duygusal g&#252;&#231;l&#252;klerle başa &#231;ıkma becerilerinin kazandırılmasını; obez ve diyabetli kişiler ve aileleri i&#231;in yaşam g&#252;&#231;l&#252;kleriyle baş etmeye y&#246;nelik etkileşim ve destek gruplarının oluşturulması ve y&#246;netilmesini; &#246;fke kontrol&#252;, stresle başa &#231;ıkma gibi bireysel ihtiya&#231;ları karşılayacak bireysel ya da grup tedavi paketlerinin uygulanmasını i&#231;eren bir tedavi şeklidir. &#214;rneğin var, yok vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25184">PSIKOLOJIK_TEDAVI </a></td>
+                                            </tr>
+                                            <tr id="col_197331" class="Aktif">
+                                                <td>10</td>
+                                                <td>BIRLIKTE_GORULEN_EK_HASTALIK</td>
+                                                <td>Dizi</td>
+                                                <td>Hastaya konulan tanıya eşlik eden hastalıklardır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24826">TANI_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_197332" class="Aktif">
+                                                <td>11</td>
+                                                <td>EGZERSIZ</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın g&#252;nl&#252;k fiziksel aktivite d&#252;zeyini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25186">EGZERSIZ </a></td>
+                                            </tr>
+                                            <tr id="col_197333" class="Aktif">
+                                                <td>12</td>
+                                                <td>ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde verilen hizmete, yapılan işleme, kullanılan malzemelere vb. ilişkin a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197334" class="Aktif">
+                                                <td>13</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197335" class="Aktif">
+                                                <td>14</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197336" class="Aktif">
+                                                <td>15</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197337" class="Aktif">
+                                                <td>16</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>4/16/2020 4:27:39 PM</td>
+                        <td>G&#246;r&#252;n&#252;m d&#252;zenlendi:VEM_OBEZITE_IZLEM</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

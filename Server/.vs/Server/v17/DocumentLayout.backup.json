@@ -1,28 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Proje\\GitHub\\lognet\\Server\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{349FB2DC-47FF-4978-B058-8F37A1500418}|Server\\src\\Infrastructure\\Infrastructure.csproj|c:\\proje\\github\\lognet\\server\\server\\src\\infrastructure\\mailing\\smtpmailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{349FB2DC-47FF-4978-B058-8F37A1500418}|Server\\src\\Infrastructure\\Infrastructure.csproj|solutionrelative:server\\src\\infrastructure\\mailing\\smtpmailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{349FB2DC-47FF-4978-B058-8F37A1500418}|Server\\src\\Infrastructure\\Infrastructure.csproj|c:\\proje\\github\\lognet\\server\\server\\src\\infrastructure\\identity\\userservice.createupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{349FB2DC-47FF-4978-B058-8F37A1500418}|Server\\src\\Infrastructure\\Infrastructure.csproj|solutionrelative:server\\src\\infrastructure\\identity\\userservice.createupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D1B5A19-6BA8-4162-874E-DAF17C182A06}|Server\\src\\Host\\Host.csproj|c:\\proje\\github\\lognet\\server\\server\\src\\host\\configurations\\mail.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0D1B5A19-6BA8-4162-874E-DAF17C182A06}|Server\\src\\Host\\Host.csproj|solutionrelative:server\\src\\host\\configurations\\mail.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01C56C3A-A537-439E-B242-44ABF9A89C3B}|Server\\src\\Core\\Application\\Application.csproj|c:\\proje\\github\\lognet\\server\\server\\src\\core\\application\\catalog\\customers\\createcustomerwithuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01C56C3A-A537-439E-B242-44ABF9A89C3B}|Server\\src\\Core\\Application\\Application.csproj|solutionrelative:server\\src\\core\\application\\catalog\\customers\\createcustomerwithuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F426E553-45C6-4A91-A8F3-E560BD6694C0}|Server\\src\\Core\\Shared\\Shared.csproj|c:\\proje\\github\\lognet\\server\\server\\src\\core\\shared\\authorization\\fshpermissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F426E553-45C6-4A91-A8F3-E560BD6694C0}|Server\\src\\Core\\Shared\\Shared.csproj|solutionrelative:server\\src\\core\\shared\\authorization\\fshpermissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Proje\\GitHub\\lbys\\Server\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,76 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SmtpMailService.cs",
-              "DocumentMoniker": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Infrastructure\\Mailing\\SmtpMailService.cs",
-              "RelativeDocumentMoniker": "Server\\src\\Infrastructure\\Mailing\\SmtpMailService.cs",
-              "ToolTip": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Infrastructure\\Mailing\\SmtpMailService.cs",
-              "RelativeToolTip": "Server\\src\\Infrastructure\\Mailing\\SmtpMailService.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAADwvxcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T06:44:47.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "mail.json",
-              "DocumentMoniker": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Host\\Configurations\\mail.json",
-              "RelativeDocumentMoniker": "Server\\src\\Host\\Configurations\\mail.json",
-              "ToolTip": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Host\\Configurations\\mail.json",
-              "RelativeToolTip": "Server\\src\\Host\\Configurations\\mail.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-24T06:28:24.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.CreateUpdate.cs",
-              "DocumentMoniker": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Infrastructure\\Identity\\UserService.CreateUpdate.cs",
-              "RelativeDocumentMoniker": "Server\\src\\Infrastructure\\Identity\\UserService.CreateUpdate.cs",
-              "ToolTip": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Infrastructure\\Identity\\UserService.CreateUpdate.cs",
-              "RelativeToolTip": "Server\\src\\Infrastructure\\Identity\\UserService.CreateUpdate.cs",
-              "ViewState": "AQIAAJMAAAAAAAAAAIAxwLMAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T06:26:54.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FSHPermissions.cs",
-              "DocumentMoniker": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Core\\Shared\\Authorization\\FSHPermissions.cs",
-              "RelativeDocumentMoniker": "Server\\src\\Core\\Shared\\Authorization\\FSHPermissions.cs",
-              "ToolTip": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Core\\Shared\\Authorization\\FSHPermissions.cs",
-              "RelativeToolTip": "Server\\src\\Core\\Shared\\Authorization\\FSHPermissions.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAIwDwAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T05:11:31.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateCustomerWithUserRequest.cs",
-              "DocumentMoniker": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Core\\Application\\Catalog\\Customers\\CreateCustomerWithUserRequest.cs",
-              "RelativeDocumentMoniker": "Server\\src\\Core\\Application\\Catalog\\Customers\\CreateCustomerWithUserRequest.cs",
-              "ToolTip": "C:\\Proje\\GitHub\\lognet\\Server\\Server\\src\\Core\\Application\\Catalog\\Customers\\CreateCustomerWithUserRequest.cs",
-              "RelativeToolTip": "Server\\src\\Core\\Application\\Catalog\\Customers\\CreateCustomerWithUserRequest.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAcwFsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T16:00:16.826Z"
             }
           ]
         }

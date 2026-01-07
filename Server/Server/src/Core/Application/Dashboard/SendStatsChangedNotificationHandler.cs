@@ -1,15 +1,15 @@
 using Server.Domain.Common.Events;
 using Server.Domain.Identity;
+using Server.Domain.Lbys;
 using Server.Shared.Events;
 
 namespace Server.Application.Dashboard;
+
 public class SendStatsChangedNotificationHandler :
-    IEventNotificationHandler<EntityCreatedEvent<Customer>>,
-    IEventNotificationHandler<EntityDeletedEvent<Customer>>,
-    IEventNotificationHandler<EntityCreatedEvent<Brand>>,
-    IEventNotificationHandler<EntityDeletedEvent<Brand>>,
-    IEventNotificationHandler<EntityCreatedEvent<Product>>,
-    IEventNotificationHandler<EntityDeletedEvent<Product>>,
+    IEventNotificationHandler<EntityCreatedEvent<HASTA>>,
+    IEventNotificationHandler<EntityDeletedEvent<HASTA>>,
+    IEventNotificationHandler<EntityCreatedEvent<HASTA_BASVURU>>,
+    IEventNotificationHandler<EntityDeletedEvent<HASTA_BASVURU>>,
     IEventNotificationHandler<ApplicationRoleCreatedEvent>,
     IEventNotificationHandler<ApplicationRoleDeletedEvent>,
     IEventNotificationHandler<ApplicationUserCreatedEvent>
@@ -20,17 +20,13 @@ public class SendStatsChangedNotificationHandler :
     public SendStatsChangedNotificationHandler(ILogger<SendStatsChangedNotificationHandler> logger, INotificationSender notifications) =>
         (_logger, _notifications) = (logger, notifications);
 
-    public Task Handle(EventNotification<EntityCreatedEvent<Customer>> notification, CancellationToken cancellationToken) =>
+    public Task Handle(EventNotification<EntityCreatedEvent<HASTA>> notification, CancellationToken cancellationToken) =>
         SendStatsChangedNotification(notification.Event, cancellationToken);
-    public Task Handle(EventNotification<EntityDeletedEvent<Customer>> notification, CancellationToken cancellationToken) =>
+    public Task Handle(EventNotification<EntityDeletedEvent<HASTA>> notification, CancellationToken cancellationToken) =>
         SendStatsChangedNotification(notification.Event, cancellationToken);
-    public Task Handle(EventNotification<EntityCreatedEvent<Brand>> notification, CancellationToken cancellationToken) =>
+    public Task Handle(EventNotification<EntityCreatedEvent<HASTA_BASVURU>> notification, CancellationToken cancellationToken) =>
         SendStatsChangedNotification(notification.Event, cancellationToken);
-    public Task Handle(EventNotification<EntityDeletedEvent<Brand>> notification, CancellationToken cancellationToken) =>
-        SendStatsChangedNotification(notification.Event, cancellationToken);
-    public Task Handle(EventNotification<EntityCreatedEvent<Product>> notification, CancellationToken cancellationToken) =>
-        SendStatsChangedNotification(notification.Event, cancellationToken);
-    public Task Handle(EventNotification<EntityDeletedEvent<Product>> notification, CancellationToken cancellationToken) =>
+    public Task Handle(EventNotification<EntityDeletedEvent<HASTA_BASVURU>> notification, CancellationToken cancellationToken) =>
         SendStatsChangedNotification(notification.Event, cancellationToken);
     public Task Handle(EventNotification<ApplicationRoleCreatedEvent> notification, CancellationToken cancellationToken) =>
         SendStatsChangedNotification(notification.Event, cancellationToken);

@@ -1,4 +1,3 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
@@ -11,9 +10,9 @@ using Server.Infrastructure.Constants;
 using Server.Shared.Authorization;
 using System.Globalization;
 using System.Security.Claims;
-using System.Threading;
 
 namespace Server.Infrastructure.Identity;
+
 internal partial class UserService
 {
     /// <summary>
@@ -106,27 +105,18 @@ internal partial class UserService
 
     public async Task<string> CreateAsync(CreateUserRequest request, string origin)
     {
-        // burada frontend de user kaydında user ait id gönderiliyor başka user kaydeden admin user
-        // bu yüzden id den customer id alıyorum
-        // bunu customer oluşuran andpoint ekleme yapınca direk customer id gönderiyor
-        var userCheck = await _userManager.Users
-        .AsNoTracking()
-          .Where(u => u.Id == request.CustomerId.ToString())
-          .FirstOrDefaultAsync();
-        if (userCheck != null)
-        {
-            request.CustomerId = userCheck.CustomerId;
-        }
-
-        string newCode=string.Empty;
+        string newCode = string.Empty;
         string year = DateTime.Now.Year.ToString(CultureInfo.InvariantCulture);
         var lastUser = await _userManager.Users
-        .AsNoTracking().OrderByDescending(u => u.EntCode).Take(1)
-          .FirstOrDefaultAsync();
-        if (lastUser != null && lastUser.EntCode.Length == 15 && lastUser.EntCode.StartsWith($"U{year}"))
+            .AsNoTracking()
+            .OrderByDescending(u => u.EntCode)
+            .Take(1)
+            .FirstOrDefaultAsync();
+
+        if (lastUser != null && lastUser.EntCode?.Length == 15 && lastUser.EntCode.StartsWith($"U{year}"))
         {
-            long lastNumber = long.Parse(lastUser.EntCode.Substring(5)); // C ve yıl kısmını çıkar
-            newCode = $"U{year}{(lastNumber + 1).ToString().PadLeft(10, '0')}"; // C, yıl ve numarayı birleştir
+            long lastNumber = long.Parse(lastUser.EntCode.Substring(5));
+            newCode = $"U{year}{(lastNumber + 1).ToString().PadLeft(10, '0')}";
         }
 
         var user = new ApplicationUser
@@ -138,34 +128,30 @@ internal partial class UserService
             PhoneNumber = request.PhoneNumber,
             IsActive = true,
             EmailConfirmed = true,
-            CustomerId = request.CustomerId,
             Admin = request.Admin,
-            EntCode = newCode
+            EntCode = newCode,
+            PersonelKodu = request.PersonelKodu
         };
 
         var result = await _userManager.CreateAsync(user, request.Password);
         if (!result.Succeeded)
         {
-            throw new InternalServerException("Users." + result.Errors.LastOrDefault().Code, result.GetErrors(_t));
+            throw new InternalServerException("Users." + result.Errors.LastOrDefault()?.Code, result.GetErrors(_t));
         }
 
         if (request.Admin)
         {
-            await _userManager.AddToRoleAsync(user, FSHRoles.CustomerAdmin);
+            await _userManager.AddToRoleAsync(user, FSHRoles.Admin);
         }
-
-        if (request.CustomerId == null)
+        else
         {
             await _userManager.AddToRoleAsync(user, FSHRoles.Basic);
         }
-
-
 
         var messages = new List<string> { string.Format(_t["User {0} Registered."], user.UserName) };
 
         if (_securitySettings.RequireConfirmedAccount && !string.IsNullOrEmpty(user.Email))
         {
-            // send verification email
             string emailVerificationUri = await GetEmailVerificationUriAsync(user, origin);
             RegisterUserEmailModel eMailModel = new RegisterUserEmailModel()
             {
@@ -185,6 +171,7 @@ internal partial class UserService
 
         return string.Join(Environment.NewLine, messages);
     }
+
     public async Task UpdateAsync(UpdateUserRequest request, string userId)
     {
         var user = await _userManager.FindByIdAsync(userId);
@@ -210,18 +197,15 @@ internal partial class UserService
 
         if (request.PhoneNumber != currentPhoneNumber)
         {
-            // Aynı telefon numarasına sahip başka bir kullanıcı olup olmadığını kontrol et
             var userWithSamePhoneNumber = await _userManager.Users
                 .FirstOrDefaultAsync(u => u.PhoneNumber == request.PhoneNumber && u.Id != userId);
 
-            // Eğer aynı telefon numarasına sahip başka bir kullanıcı varsa hata döndür
             if (userWithSamePhoneNumber != null)
             {
                 var failedResult = IdentityResult.Failed(new IdentityError { Description = MessageConstants.PhoneAlreadyUse });
                 throw new InternalServerException(_t[MessageConstants.UserErrorDescription], failedResult.GetErrors(_t));
             }
 
-            // Telefon numarasını güncelle
             await _userManager.SetPhoneNumberAsync(user, request.PhoneNumber);
         }
 
@@ -255,5 +239,4 @@ internal partial class UserService
         await _signInManager.RefreshSignInAsync(user);
         await _events.PublishAsync(new ApplicationUserUpdatedEvent(user.Id));
     }
-
 }

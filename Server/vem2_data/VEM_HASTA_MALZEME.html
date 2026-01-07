@@ -1,0 +1,502 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_HASTA_MALZEME</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; saglik tesisinde hasta i&#231;in kullanilan ila&#231;/sarf malzeme bilgilerini kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>37872D5AB13BB2405EECB7FAF7ABF8A0</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_HASTA_MALZEME KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_196583" class="Aktif">
+                                                <td>1</td>
+                                                <td>HASTA_MALZEME_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta i&#231;in kullanılan ila&#231;, malzeme, &#252;r&#252;n vb. bilgiler i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196584" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196585" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196586" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196587" class="Aktif">
+                                                <td>5</td>
+                                                <td>STOK_KART_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan ila&#231;, malzeme ve &#252;r&#252;nlerin bilgilerine erişim sağlamak i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11911">VEM_STOK_KART</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196588" class="Aktif">
+                                                <td>6</td>
+                                                <td>STOK_HAREKET_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kullanılan malzemelerin ayrıntılı hareket bilgilerini takip etmek i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11907">VEM_STOK_HAREKET</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196589" class="Aktif">
+                                                <td>7</td>
+                                                <td>MALZEME_FATURA_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hastaya uygulanan malzemeler i&#231;in fatura kesilip kesilmediğine ilişkin bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25022">HIZMET_FATURA_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_196590" class="Aktif">
+                                                <td>8</td>
+                                                <td>ISLEM_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde yapılan işlemlerin, uygulanmaya başladığı zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196591" class="Aktif">
+                                                <td>9</td>
+                                                <td>ISLEM_GERCEKLESME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastaya uygulanan işlemin ger&#231;ekleşme zamanı bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196592" class="Aktif">
+                                                <td>10</td>
+                                                <td>ATS_SORGU_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kişiye aşı uygulanmadan &#246;nce Sağlık Bilgi Y&#246;netim Sistemi tarafından aşının kullanılabilirlik durumu i&#231;in Aşı Takip Sistemi (ATS) &#39;nden alınan numara bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196593" class="Aktif">
+                                                <td>11</td>
+                                                <td>ALLOGREFT_DONOR_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Vericinin uygun bir bi&#231;imde tanımlanmış ve bağışlanan materyalin izlenebilirliğinin sağlanması i&#231;in verici bilgileri ve bağışlanmış doku ve h&#252;crelere ait benzeri olmayan T&#252;rkiye İla&#231; ve Tıbbi Cihaz Kurumu tarafından verilen tanımlayıcı kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196594" class="Aktif">
+                                                <td>12</td>
+                                                <td>MALZEME_ADETI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Kişiye sağlık tesisinde kullanılan ila&#231;/sarf malzeme miktar bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196595" class="Aktif">
+                                                <td>13</td>
+                                                <td>FATURA_ADET</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde fatura edilen işlemler i&#231;in adet bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196596" class="Aktif">
+                                                <td>14</td>
+                                                <td>FATURA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kesilen fatura kayıtlarına erişim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11812">VEM_FATURA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196597" class="Aktif">
+                                                <td>15</td>
+                                                <td>FATURA_TUTARI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisi tarafından kesilen faturanın toplam tutar bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196598" class="Aktif">
+                                                <td>16</td>
+                                                <td>HASTA_TUTARI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde hastaya uygulanan hizmetler i&#231;in hasta dosyasına kayıt edilen hizmet hasta tarafından &#246;denmesi gereken tutar bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196599" class="Aktif">
+                                                <td>17</td>
+                                                <td>KURUM_TUTARI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Hasta dosyasına işlenen işlemin hastanın sosyal g&#252;vencesinin bulunduğu kuruma yansıyan tutar bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196600" class="Aktif">
+                                                <td>18</td>
+                                                <td>MEDULA_TUTARI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde tedavi g&#246;ren hastaya yapılan işlem i&#231;in MEDULA sisteminin &#246;deme yapacağı tutar bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196601" class="Aktif">
+                                                <td>19</td>
+                                                <td>MEDULA_ISLEM_SIRA_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tedavi g&#246;ren hastaların işlemlerine ait MEDULA tarafından Sağlık Bilgi Y&#246;netim Sistemine iletilen numara bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196602" class="Aktif">
+                                                <td>20</td>
+                                                <td>MEDULA_HIZMET_REF_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tedavi g&#246;ren hastaların işlemlerine ait Sağlık Bilgi Y&#246;netim Sistemi tarafından MEDULA &#39;ya iletilen iletilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196603" class="Aktif">
+                                                <td>21</td>
+                                                <td>SYS_REFERANS_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Y&#246;netim Sistemi (SYS) Referans Numarası, sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen ve merkezi veri sistemine veri g&#246;nderilirken kullanılan tekil kod bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196604" class="Aktif">
+                                                <td>22</td>
+                                                <td>MEDULA_TAKIP_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tedavi g&#246;ren hasta i&#231;in, &#231;eşitli kriterlere g&#246;re MEDULA tarafından Sağlık Bilgi Y&#246;netim Sistemine iletilmiş kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11868">VEM_MEDULA_TAKIP</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196605" class="Aktif">
+                                                <td>23</td>
+                                                <td>MEDULA_OZEL_DURUM</td>
+                                                <td>Dizi</td>
+                                                <td>Sağlık tesisinde tedavi g&#246;ren hastaların işlemlerine ait MEDULA tarafından tanımlanmış &#246;zel durum bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196606" class="Aktif">
+                                                <td>24</td>
+                                                <td>AMELIYAT_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde yapılan ameliyatın bilgilerine erişim sağlamak i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11785">VEM_AMELIYAT</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196607" class="Aktif">
+                                                <td>25</td>
+                                                <td>ISTEYEN_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde ila&#231;, malzeme, &#252;r&#252;n vb. istemini yapan hekim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196608" class="Aktif">
+                                                <td>26</td>
+                                                <td>DEPO_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan stok depoları i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11800">VEM_DEPO</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196609" class="Aktif">
+                                                <td>27</td>
+                                                <td>IPTAL_DURUMU</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık tesisinde yapılan bir işlemin iptal edilip edilmediği bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196610" class="Aktif">
+                                                <td>28</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196611" class="Aktif">
+                                                <td>29</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196612" class="Aktif">
+                                                <td>30</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196613" class="Aktif">
+                                                <td>31</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><a href="/Gorunum/Detay/11922">VEM_VEZNE_DETAY;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11922">HASTA_MALZEME_KODU </a></td>
+                                                    </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>4/16/2020 12:55:30 PM</td>
+                        <td>G&#246;r&#252;n&#252;m d&#252;zenlendi:VEM_HASTA_MALZEME</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

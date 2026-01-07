@@ -21,7 +21,7 @@
     },
     "Storage": {
       "StorageProvider": "mssql",
-      "ConnectionString": "Data Source=127.0.0.1,1979;User Id=sa; Password=ftCi%8sEDC;Initial Catalog=TESTDATA;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=True",
+      "ConnectionString": "Data Source=192.168.1.20;User Id=sa;Password=12;Initial Catalog=TESTDATA;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=True",
       // "StorageProvider": "postgresql",
       //"ConnectionString": "Host=localhost;Port=5432;Database=LognetServer;Username=postgres;Password=12;Include Error Detail=true",
       "Options": {

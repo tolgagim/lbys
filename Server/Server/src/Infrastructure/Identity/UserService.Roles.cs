@@ -16,10 +16,9 @@ internal partial class UserService
         var user = await _userManager.FindByIdAsync(userId);
         if (user is null) throw new NotFoundException("User Not Found.");
 
-        var customerId = user.CustomerId;
-
-        var roles = await _roleManager.Roles.Where(p => p.CustomerId == customerId).AsNoTracking().ToListAsync(cancellationToken);
+        var roles = await _roleManager.Roles.AsNoTracking().ToListAsync(cancellationToken);
         if (roles is null) throw new NotFoundException("Roles Not Found.");
+
         foreach (var role in roles)
         {
             userRoles.Add(new UserRoleDto

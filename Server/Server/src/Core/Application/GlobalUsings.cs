@@ -11,7 +11,7 @@ global using Server.Application.Common.Models;
 global using Server.Application.Common.Persistence;
 global using Server.Application.Common.Specification;
 global using Server.Application.Common.Validation;
-global using Server.Domain.Catalog;
+global using Server.Domain.Lbys;
 global using Server.Domain.Common;
 global using Server.Domain.Common.Contracts;
 global using Server.Shared.Notifications;

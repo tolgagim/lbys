@@ -40,29 +40,9 @@ internal class RoleService : IRoleService
         _events = events;
     }
 
-    //public async Task<List<RoleDto>> GetListAsync(CancellationToken cancellationToken) =>
-    //    (await _roleManager.Roles.ToListAsync(cancellationToken))
-    //        .Adapt<List<RoleDto>>();
     public async Task<List<RoleDto>> GetListAsync(string? id, CancellationToken cancellationToken)
     {
-        var user = await _userManager.Users
-          .AsNoTracking()
-          .FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
-
-
-        IQueryable<ApplicationRole> rolesQuery = _roleManager.Roles;
-
-        // id null degilse filtre uygula
-        if (user.CustomerId.HasValue)
-        {
-            rolesQuery = rolesQuery.Where(p => p.CustomerId == user.CustomerId);
-        }
-        else
-        {
-            rolesQuery = rolesQuery.Where(p => p.CustomerId == null);
-        }
-
-        var rolesList = await rolesQuery.ToListAsync(cancellationToken);
+        var rolesList = await _roleManager.Roles.ToListAsync(cancellationToken);
         return rolesList.Adapt<List<RoleDto>>();
     }
 
@@ -94,14 +74,10 @@ internal class RoleService : IRoleService
 
     public async Task<string> CreateOrUpdateAsync(CreateOrUpdateRoleRequest request)
     {
-        var user = await _userManager.Users
-        .AsNoTracking()
-          .FirstOrDefaultAsync(u => u.Id == request.CustomerId.ToString());
-
         if (string.IsNullOrEmpty(request.Id))
         {
             // Create a new role.
-            var role = new ApplicationRole(request.Name, user.CustomerId, request.Description);
+            var role = new ApplicationRole(request.Name, request.Description);
             var result = await _roleManager.CreateAsync(role);
 
             if (!result.Succeeded)

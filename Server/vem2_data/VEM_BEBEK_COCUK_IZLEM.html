@@ -1,0 +1,553 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_BEBEK_COCUK_IZLEM</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; bebek ve &#231;ocuga ait izlem bilgilerini kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>0094B7C25610C82630DCAE8150EB6AF0</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_BEBEK_COCUK_IZLEM KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_195792" class="Aktif">
+                                                <td>1</td>
+                                                <td>BEBEK_COCUK_IZLEM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde muayene olan bebek ve/veya &#231;ocukların izlem bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195793" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı tablo adı bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195794" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195795" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195796" class="Aktif">
+                                                <td>5</td>
+                                                <td>KACINCI_IZLEM</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bebek ve &#231;ocuklar i&#231;in Sağlık Bakanlığı tarafından tanımlanan izlem protokol&#252; kapsamında ger&#231;ekleştirilen izlemin bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24832">KACINCI_IZLEM </a></td>
+                                            </tr>
+                                            <tr id="col_195797" class="Aktif">
+                                                <td>6</td>
+                                                <td>AGIZDAN_SIVI_TEDAVISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>İshal tanısı alan 0-59 ay bebek ve &#231;ocuklarda Ağızdan Sıvı Tedavisi (AST) bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24833">AGIZDAN_SIVI_TEDAVISI </a></td>
+                                            </tr>
+                                            <tr id="col_195798" class="Aktif">
+                                                <td>7</td>
+                                                <td>BAS_CEVRESI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Bebek veya &#231;ocuğun baş &#231;evresinin (santimetre cinsinden) &#246;l&#231;&#252;s&#252;d&#252;r.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195799" class="Aktif">
+                                                <td>8</td>
+                                                <td>DEMIR_LOJISTIGI_VE_DESTEGI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Gebelikte dışarıdan demir desteği; demirin uygulanmayacağı durumlar hari&#231;, ayrım yapılmaksızın t&#252;m gebelere 16. haftadan başlayarak 6 ay ve doğum sonu 3 ay olmak &#252;zere toplam 9 ay s&#252;re ile g&#252;nl&#252;k 40 - 60 mg elementer demir verilerek demir desteği yapılmaktadır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24834">DEMIR_LOJISTIGI_VE_DESTEGI </a></td>
+                                            </tr>
+                                            <tr id="col_195800" class="Aktif">
+                                                <td>9</td>
+                                                <td>DOGUM_AGIRLIGI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Bebeğin doğum ağırlığını gram olarak ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195801" class="Aktif">
+                                                <td>10</td>
+                                                <td>DVITAMINI_LOJISTIGI_VE_DESTEGI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Gebeler i&#231;in; gebeliğin 12. haftasından başlanarak doğumdan sonra 6. ayın sonuna kadar yapılan D Vitamini proflaksisidir. Bebekler i&#231;in; ilk 1 yaşta verilen D vitamini proflaksisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24835">D_VITAMINI_LOJISTIGI_VE_DESTEGI </a></td>
+                                            </tr>
+                                            <tr id="col_195802" class="Aktif">
+                                                <td>11</td>
+                                                <td>GKD_TARAMA_SONUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Gelişimsel Kal&#231;a Displazisi (GKD) tarama sonucu bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24836">GKD_TARAMA_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195803" class="Aktif">
+                                                <td>12</td>
+                                                <td>HEMATOKRIT_DEGERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bebek veya &#231;ocuğun hematokrit değeri bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195804" class="Aktif">
+                                                <td>13</td>
+                                                <td>HEMOGLOBIN_DEGERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin hemoglobin değeri bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195805" class="Aktif">
+                                                <td>14</td>
+                                                <td>TOPUK_KANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Doğumdan sonraki g&#252;nlerde bebeğin topuğundan alınan kanın alınma durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24837">TOPUK_KANI </a></td>
+                                            </tr>
+                                            <tr id="col_195806" class="Aktif">
+                                                <td>15</td>
+                                                <td>TOPUK_KANI_ALINMA_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Yeni doğan bebeğin topuk kanının alındığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195807" class="Aktif">
+                                                <td>16</td>
+                                                <td>IZLEMIN_YAPILDIGI_YER</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>İzlemin yapıldığı kurum bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24838">KURUMLAR </a></td>
+                                            </tr>
+                                            <tr id="col_195808" class="Aktif">
+                                                <td>17</td>
+                                                <td>IZLEMI_YAPAN_PERSONEL_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hastaya yapılan izlemleri (bebek &#231;ocuk izlem, gebe izlem vb.) yapan personele Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195809" class="Aktif">
+                                                <td>18</td>
+                                                <td>BILGI_ALINAN_KISI_AD_SOYADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bilgi alınan kişinin ad ve soyadı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195810" class="Aktif">
+                                                <td>19</td>
+                                                <td>BILGI_ALINAN_KISI_TELEFON</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bilgi alınan kişinin telefon bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195811" class="Aktif">
+                                                <td>20</td>
+                                                <td>BEBEKTE_RISK_FAKTORLERI</td>
+                                                <td>Dizi</td>
+                                                <td>Bebekte yapılan muayene ve risk fakt&#246;rlerinin belirlenmesi sonucu gelişimsel kal&#231;a displazisi, hemoglobinopati, işitme kaybı, metabolik ve endokrin hastalıkların varlığını sorgular.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24839">BEBEKTE_RISK_FAKTORLERI </a></td>
+                                            </tr>
+                                            <tr id="col_195812" class="Aktif">
+                                                <td>21</td>
+                                                <td>TARAMA_SONUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bebekte yapılan ve bebek sağlığı işlemleri veri elemanında yer alan tarama testleri sonu&#231;larını i&#231;erir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24840">TARAMA_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195813" class="Aktif">
+                                                <td>22</td>
+                                                <td>ANNE_SUTUNDEN_KESILDIGI_AY</td>
+                                                <td>Tamsayi</td>
+                                                <td>Bebeğin anne s&#252;t&#252;nden tamamen kesildiği (ay cinsinden) yaşını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195814" class="Aktif">
+                                                <td>23</td>
+                                                <td>BEBEGIN_BESLENME_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bebeğin anne s&#252;t&#252; ile beslenmesi durumuna ilişkin bilgidir. &#214;rneğin sadece anne s&#252;t&#252; alıyor, anne s&#252;t&#252; almıyor, hi&#231; anne s&#252;t&#252; almamış vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24841">BEBEGIN_BESLENME_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_195815" class="Aktif">
+                                                <td>24</td>
+                                                <td>EK_GIDAYA_BASLADIGI_AY</td>
+                                                <td>Tamsayi</td>
+                                                <td>Bebeğin anne s&#252;t&#252; dışında gıda almaya başladığı (ay cinsinden) yaşını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195816" class="Aktif">
+                                                <td>25</td>
+                                                <td>SADECE_ANNE_SUTU_ALDIGI_SURE</td>
+                                                <td>Tamsayi</td>
+                                                <td>Bebeğin veya &#231;ocuğun anne s&#252;t&#252; aldığı s&#252;renin ay cinsinden bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195817" class="Aktif">
+                                                <td>26</td>
+                                                <td>GELISIM_TABLOSU_BILGILERI</td>
+                                                <td>Dizi</td>
+                                                <td>Bebeğin/&#231;ocuğun gelişim bilgilerinin sorgulanmasıdır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24842">GELISIM_TABLOSU_BILGILERININ_SORGULANMASI </a></td>
+                                            </tr>
+                                            <tr id="col_195818" class="Aktif">
+                                                <td>27</td>
+                                                <td>NTP_TAKIP_BILGISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td></td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24843">NTP_TAKIP_BILGISI </a></td>
+                                            </tr>
+                                            <tr id="col_195819" class="Aktif">
+                                                <td>28</td>
+                                                <td>BC_BEYIN_GELISIM_RISKLERI</td>
+                                                <td>Dizi</td>
+                                                <td>0-6 yaş d&#246;neminde, bebeğin/&#231;ocuğun beyin gelişimini olumsuz y&#246;nde etkileyebilecek risk fakt&#246;rlerini ifade eder. &#214;rneğin aile i&#231;i şiddet, ailede down sendromu, babanın depresyon ş&#252;phesi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24844">BEBEGIN_COCUGUN_BEYIN_GELISIMINI_ETKILEYEBILECEK_RISKLER </a></td>
+                                            </tr>
+                                            <tr id="col_195820" class="Aktif">
+                                                <td>29</td>
+                                                <td>EBEVEYN_DESTEK_AKTIVITELERI</td>
+                                                <td>Dizi</td>
+                                                <td>Anne/babanın, bebeğin veya &#231;ocuğun psikolojik gelişimini destekleyebilmek amacı ile ger&#231;ekleştirdiği aktiviteleri ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24845">EBEVEYN_DESTEK_AKTIVITELERI </a></td>
+                                            </tr>
+                                            <tr id="col_195821" class="Aktif">
+                                                <td>30</td>
+                                                <td>BC_PSIKOLOJIK_RISK_EGITIM</td>
+                                                <td>Dizi</td>
+                                                <td>Anne karnındaki d&#246;nem dahil olmak &#252;zere, &#231;ocuğun 0-6 yaş d&#246;neminde beyin gelişimini olumsuz y&#246;nde etkileyebilecek risk fakt&#246;rlerinin tespit edildiği durumlarda, risk fakt&#246;r&#252; ile ilgili aileye verilen eğitimleri ifade eder. &#214;rneğin aile planlaması eğitimi, eğitim verilmedi, anne baba &#231;ocuk iletişimi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24846">BEBEGIN_COCUGUN_PSIKOLOJIK_GELISIMINDEKI_RISKLERE_YONELIK_EGITIMLER </a></td>
+                                            </tr>
+                                            <tr id="col_195822" class="Aktif">
+                                                <td>31</td>
+                                                <td>BC_RISK_YAPILAN_MUDAHALE</td>
+                                                <td>Dizi</td>
+                                                <td>0-6 yaş d&#246;neminde, Bebeğin/&#199;ocuğun beyin gelişimini olumsuz y&#246;nde etkileyebilecek fakt&#246;rlere yapılan m&#252;dahaleleri belirler. &#214;rneğin sık izleme alındı, m&#252;dahaleye gerek g&#246;r&#252;lmedi, risk fakt&#246;r&#252; bulunmadı vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24847">BEBEGIN_COCUGUN_RISK_FAKTORLERINE_YAPILAN_MUDAHALE </a></td>
+                                            </tr>
+                                            <tr id="col_195823" class="Aktif">
+                                                <td>32</td>
+                                                <td>BC_RISKLI_OLGU_TAKIBI</td>
+                                                <td>Dizi</td>
+                                                <td>&#199;ocuğun psikolojik gelişiminin risk altında olduğu durumda, sık izleme alınan olguya yapılan işlemleri ifade eder. &#214;rneğin annenin muayenesi yapıldı, babanın muayenesi yapıldı, gerekli danışmanlıklar verildi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24848">BC_RISKLI_OLGU_TAKIBI </a></td>
+                                            </tr>
+                                            <tr id="col_195824" class="Aktif">
+                                                <td>33</td>
+                                                <td>ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde verilen hizmete, yapılan işleme, kullanılan malzemelere vb. ilişkin a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195825" class="Aktif">
+                                                <td>34</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195826" class="Aktif">
+                                                <td>35</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195827" class="Aktif">
+                                                <td>36</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195828" class="Aktif">
+                                                <td>37</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>4/16/2020 4:15:18 PM</td>
+                        <td>G&#246;r&#252;n&#252;m d&#252;zenlendi:VEM_BEBEK_COCUK_IZLEM</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

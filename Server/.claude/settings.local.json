@@ -13,7 +13,20 @@
       "Bash(dotnet run)",
       "Bash(dotnet ef migrations add:*)",
       "Bash(timeout 15 dotnet run:*)",
-      "Bash(timeout 20 dotnet run:*)"
+      "Bash(timeout 20 dotnet run:*)",
+      "Bash(ls:*)",
+      "Bash(timeout 45 dotnet run:*)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout 60 dotnet run:*)",
+      "Bash(timeout 90 dotnet run:*)",
+      "Bash(timeout 120 dotnet run:*)",
+      "Bash(Select-String -Pattern \"error|fail|FK_|constraint|RECETE_ILAC|TETKIK_NUMUNE|Seeding|Seeded\")",
+      "Bash(Select-Object -First 40)",
+      "Bash(findstr:*)",
+      "Bash(Select-Object -Last 5)",
+      "Bash(Select-String -Pattern \"error|Build succeeded|Build FAILED\")"
     ],
     "deny": [],
     "ask": []

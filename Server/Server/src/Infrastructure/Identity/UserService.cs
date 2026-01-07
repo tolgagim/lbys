@@ -105,32 +105,13 @@ internal partial class UserService : IUserService
 
     public async Task<List<UserDetailsDto>> GetListAsync(string id, CancellationToken cancellationToken)
     {
-        var user = await _userManager.Users
-           .AsNoTracking()
-           .FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
+        var users = await _userManager.Users
+            .AsNoTracking()
+            .ToListAsync(cancellationToken);
 
-        if (user == null)
-        {
-            return new List<UserDetailsDto>(); // Eğer kullanıcı bulunamazsa boş liste dön
-        }
-
-        IQueryable<ApplicationUser> query = _userManager.Users;
-
-        // user.CustomerId nullable Guid ise ve değeri varsa, filtreleme yap
-        if (user.CustomerId.HasValue)
-        {
-            query = query.Where(x => x.CustomerId == user.CustomerId);
-        }
-
-        // Customer bilgisini dahil et ve verileri çek
-        var users = await query.Include(u => u.Customer) // Customer bilgisini dahil et
-                               .AsNoTracking()
-                               .ToListAsync(cancellationToken);
-
-        // Sonuçları UserDetailsDto listesine dönüştür
         return users.Select(u => new UserDetailsDto
         {
-            Id = Guid.Parse(u.Id), // Eğer u.Id zaten Guid türünde ise direkt atama yapabilirsiniz
+            Id = Guid.Parse(u.Id),
             UserName = u.UserName,
             FirstName = u.FirstName,
             LastName = u.LastName,
@@ -140,19 +121,12 @@ internal partial class UserService : IUserService
             PhoneNumber = u.PhoneNumber,
             ImageUrl = u.ImageUrl,
             BirthDate = u.BirthDate,
-            CustomerName = u.Customer?.Name,  // Yalnızca müşteri adını döndür
             EntCode = u.EntCode
         }).ToList();
     }
 
     public async Task<int> GetCountAsync(string? id, CancellationToken cancellationToken)
     {
-        var user = await _userManager.Users.Where(p => p.Id == id).FirstOrDefaultAsync(cancellationToken);
-        if (user.CustomerId != null)
-        {
-            return await _userManager.Users.Where(p => p.CustomerId == user.CustomerId).AsNoTracking().CountAsync(cancellationToken);
-        }
-
         return await _userManager.Users.AsNoTracking().CountAsync(cancellationToken);
     }
 

@@ -1,0 +1,522 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_HASTA_SEANS</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; seans takibi yapılan işlemlere ait bilgileri kapsar. (FTR, DİYALİZ, ESWL, ESWT vb.) </td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>1CBB4DABB6ED1B700AFAF3225CB95185</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_HASTA_SEANS KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_196649" class="Aktif">
+                                                <td>1</td>
+                                                <td>HASTA_SEANS_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tedavi kapsamında hastalara verilen seans bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196650" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196651" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196652" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196653" class="Aktif">
+                                                <td>5</td>
+                                                <td>SEANS_ISLEM_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın sağlık tesisinde tedavisinin gereği olarak aldığı seansın hangi tedavi kapsamında olduğunu ifade eder. &#214;rneğin FTR, diyaliz, ESWL, ESWT vb.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25037">SEANS_ISLEM_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196654" class="Aktif">
+                                                <td>6</td>
+                                                <td>CIHAZ_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan cihaz i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11798">VEM_CIHAZ</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196655" class="Aktif">
+                                                <td>7</td>
+                                                <td>PLANLANAN_SEANS_TARIHI</td>
+                                                <td>Tarih</td>
+                                                <td>Sağlık tesisinde hastaya uygulanan tedavi kapsamında yapılması planlanan seans tarihi bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196656" class="Aktif">
+                                                <td>8</td>
+                                                <td>SEANS_BASLAMA_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastanın sağlık tesisinde tedavisinin gereği olarak aldığı seansa başladığı zaman bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196657" class="Aktif">
+                                                <td>9</td>
+                                                <td>SEANS_BITIS_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastanın sağlık tesisinde tedavisinin gereği olarak aldığı seansın bittiği zaman bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196658" class="Aktif">
+                                                <td>10</td>
+                                                <td>ANTIHIPERTANSIF_ILAC_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin kullandığı antihipertansif ila&#231; kullanım durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25038">ANTIHIPERTANSIF_ILAC_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_196659" class="Aktif">
+                                                <td>11</td>
+                                                <td>ONCEKI_RRT_YONTEMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin &#214;nceki Renal Replasman y&#246;ntemi bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25039">ONCEKI_RRT_YONTEMI </a></td>
+                                            </tr>
+                                            <tr id="col_196660" class="Aktif">
+                                                <td>12</td>
+                                                <td>HEMODIYALIZE_GECME_NEDENLERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin hemodiyalize ge&#231;me nedenini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25040">HEMODIYALIZE_GECME_NEDENLERI </a></td>
+                                            </tr>
+                                            <tr id="col_196661" class="Aktif">
+                                                <td>13</td>
+                                                <td>DAMAR_ERISIM_YOLU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın tedavisi i&#231;in ne t&#252;r damar erişim yolu kullanıldığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25041">DAMAR_ERISIM_YOLU </a></td>
+                                            </tr>
+                                            <tr id="col_196662" class="Aktif">
+                                                <td>14</td>
+                                                <td>DIYALIZE_GIRME_SIKLIGI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın haftada ka&#231; defa diyaliz tedavisi aldığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25042">DIYALIZE_GIRME_SIKLIGI </a></td>
+                                            </tr>
+                                            <tr id="col_196663" class="Aktif">
+                                                <td>15</td>
+                                                <td>DIYALIZOR_ALANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Diyaliz hastasının beden kitle endeksine g&#246;re kullanılacak olan metrekare cinsinden diyaliz&#246;r alanıdır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25043">DIYALIZOR_ALANI </a></td>
+                                            </tr>
+                                            <tr id="col_196664" class="Aktif">
+                                                <td>16</td>
+                                                <td>DIYALIZOR_TIPI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın diyalizi i&#231;in kullanılan diyaliz&#246;r tipi bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25044">DIYALIZOR_TIPI </a></td>
+                                            </tr>
+                                            <tr id="col_196665" class="Aktif">
+                                                <td>17</td>
+                                                <td>KAN_AKIM_HIZI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hemodiyaliz tedavisi i&#231;in kullanılan cihazda ayarlanan kan akım hızıdır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25045">KAN_AKIM_HIZI </a></td>
+                                            </tr>
+                                            <tr id="col_196666" class="Aktif">
+                                                <td>18</td>
+                                                <td>AGIRLIK_OLCUM_ZAMANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin ağırlığının &#246;l&#231;&#252;m zamanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25046">AGIRLIK_OLCUM_ZAMANI </a></td>
+                                            </tr>
+                                            <tr id="col_196667" class="Aktif">
+                                                <td>19</td>
+                                                <td>KULLANILAN_DIYALIZ_TEDAVISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastaya uygulanan tedavi y&#246;ntemini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25047">KULLANILAN_DIYALIZ_TEDAVISI </a></td>
+                                            </tr>
+                                            <tr id="col_196668" class="Aktif">
+                                                <td>20</td>
+                                                <td>PERITONEAL_GECIRGENLIK_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın peritoneal ge&#231;irgenlik durumunu ifade eder. &#214;rneğin d&#252;ş&#252;k, orta, y&#252;ksek vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25048">PERITONEAL_GECIRGENLIK_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_196669" class="Aktif">
+                                                <td>21</td>
+                                                <td>PERITON_KACINCI_KATETER</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Periton diyalizi g&#246;ren hastanın ka&#231;ıncı kateteri olduğunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25049">PERITON_KACINCI_KATETER </a></td>
+                                            </tr>
+                                            <tr id="col_196670" class="Aktif">
+                                                <td>22</td>
+                                                <td>PERITON_KATETER_TIPI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Periton diyalizinde kullanılan kateter tipini ifade eder. &#214;rneğin curlet tenckhoff, kuğu boynu vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25050">PERITON_KATETER_TIPI </a></td>
+                                            </tr>
+                                            <tr id="col_196671" class="Aktif">
+                                                <td>23</td>
+                                                <td>PERITON_KATETER_YONTEMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Periton diyalizi tedavisi g&#246;ren hastaya uygulanan kateter yerleştirme y&#246;ntemini ifade eder. &#214;rneğin laporoskopik, cerrahi, peruktan vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25051">PERITON_KATETER_YONTEMI </a></td>
+                                            </tr>
+                                            <tr id="col_196672" class="Aktif">
+                                                <td>24</td>
+                                                <td>PERITON_TUNEL_YONU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Periton diyalizi tedavisi uygulanan hastanın kateter i&#231;in a&#231;ılan t&#252;nel y&#246;n&#252;n&#252; ifade eder. &#214;rneğin aşağı, yukarı, yan vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25052">PERITON_TUNEL_YONU </a></td>
+                                            </tr>
+                                            <tr id="col_196673" class="Aktif">
+                                                <td>25</td>
+                                                <td>SINEKALSET</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın sekonder hiperparatiroidizm tedavisine ihtiyacı olup olmadığını, ihtiyacı var ise sinakalset ile tedavi edildiğini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25053">SINEKALSET </a></td>
+                                            </tr>
+                                            <tr id="col_196674" class="Aktif">
+                                                <td>26</td>
+                                                <td>TEDAVININ_SEYRI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hastaya uygulanan tedavinin seyir bilgisidir. &#214;rneğin diyaliz tedavisi devam ediyor, hemodiyalize ge&#231;ti vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25054">TEDAVININ_SEYRI </a></td>
+                                            </tr>
+                                            <tr id="col_196675" class="Aktif">
+                                                <td>27</td>
+                                                <td>AKTIF_VITAMIN_D_KULLANIMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın aktif Vitamin D kullanım ihtiyacını ve uygulama yolunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25055">AKTIF_VITAMIN_D_KULLANIMI </a></td>
+                                            </tr>
+                                            <tr id="col_196676" class="Aktif">
+                                                <td>28</td>
+                                                <td>ANEMI_TEDAVISI_YONTEMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın anemi tedavisine ihtiyacı olup olmadığını, ihtiyacı varsa hangi y&#246;ntemle tedavi edildiğini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25056">ANEMI_TEDAVISI_YONTEMI </a></td>
+                                            </tr>
+                                            <tr id="col_196677" class="Aktif">
+                                                <td>29</td>
+                                                <td>FOSFOR_BAGLAYICI_AJAN</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın fosfor bağlayıcı ajan ile tedavi ihtiyacı olup olmadığını, ihtiyacı var ise hangi y&#246;ntemle tedavi edildiğini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25057">FOSFOR_BAGLAYICI_AJAN </a></td>
+                                            </tr>
+                                            <tr id="col_196678" class="Aktif">
+                                                <td>30</td>
+                                                <td>PERITON_KOMPLIKASYON</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Periton diyalizi tedavisi verilen hastada g&#246;r&#252;len komplikasyonları ifade eder. &#214;rneğin peritonit, t&#252;nel enfeksiyonu vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25058">PERITON_KOMPLIKASYON </a></td>
+                                            </tr>
+                                            <tr id="col_196679" class="Aktif">
+                                                <td>31</td>
+                                                <td>ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde verilen hizmete, yapılan işleme, kullanılan malzemelere vb. ilişkin a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196680" class="Aktif">
+                                                <td>32</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196681" class="Aktif">
+                                                <td>33</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196682" class="Aktif">
+                                                <td>34</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196683" class="Aktif">
+                                                <td>35</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Security.Claims;
 
 namespace Server.Infrastructure.Persistence.Initialization;
+
 internal class ApplicationDbSeeder
 {
     private readonly RoleManager<ApplicationRole> _roleManager;
@@ -39,9 +40,8 @@ internal class ApplicationDbSeeder
             if (await _roleManager.Roles.SingleOrDefaultAsync(r => r.Name == roleName)
                 is not ApplicationRole role)
             {
-                // Create the role
                 _logger.LogInformation("Seeding {role} Role.", roleName);
-                role = new ApplicationRole(roleName, null, $"{roleName} Role");
+                role = new ApplicationRole(roleName, $"{roleName} Role");
                 await _roleManager.CreateAsync(role);
             }
 
@@ -55,9 +55,13 @@ internal class ApplicationDbSeeder
                 await AssignPermissionsToRoleAsync(FSHPermissions.Admin, role);
                 await AssignPermissionsToRoleAsync(FSHPermissions.Root, role);
             }
-            else if (roleName == FSHRoles.CustomerAdmin)
+            else if (roleName == FSHRoles.Doctor)
             {
-                await AssignPermissionsToRoleAsync(FSHPermissions.CustomerAdmin, role);
+                await AssignPermissionsToRoleAsync(FSHPermissions.Admin, role);
+            }
+            else if (roleName == FSHRoles.Nurse)
+            {
+                await AssignPermissionsToRoleAsync(FSHPermissions.Basic, role);
             }
         }
     }

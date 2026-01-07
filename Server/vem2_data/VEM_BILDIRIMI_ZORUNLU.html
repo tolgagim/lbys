@@ -1,0 +1,707 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_BILDIRIMI_ZORUNLU</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; bildirimi zorunlu (bulaşıcı hastalık, intihar, madde bağımlılığı vb.) bilgileri kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>A11D7B5EE599AC4749F6126F8AF12020</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_BILDIRIMI_ZORUNLU KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_195829" class="Aktif">
+                                                <td>1</td>
+                                                <td>BILDIRIMI_ZORUNLU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bildirimi zorunlu hastalık i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195830" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195831" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195832" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195833" class="Aktif">
+                                                <td>5</td>
+                                                <td>BILDIRIM_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bildirimi zorunlu hastalıklar veya durumlar kapsamında yapılan bildirimin t&#252;r&#252;n&#252; ifade eder. &#214;rneğin bulaşıcı hastalık, intihar, madde bağımlılığı vb.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24849">BILDIRIM_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_195834" class="Aktif">
+                                                <td>6</td>
+                                                <td>BILDIRIM_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Bildirimi zorunlu hastalığın veya durumların ilgili yerlere bildirildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195835" class="Aktif">
+                                                <td>7</td>
+                                                <td>TANI_KODU</td>
+                                                <td>Dizi</td>
+                                                <td>Sağlık tesisinde hastaya konulan tanı i&#231;in ICD-10 kodlarından se&#231;ilen tanı kodu bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24826">TANI_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_195836" class="Aktif">
+                                                <td>8</td>
+                                                <td>AILESINDE_INTIHAR_GIRISIMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>İntihar girişiminde bulunan veya kriz ge&#231;iren kişinin aile &#252;yelerinin herhangi birinde daha &#246;nce intihar girişimi olup olmadığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24851">AILESINDE_INTIHAR_GIRISIMI </a></td>
+                                            </tr>
+                                            <tr id="col_195837" class="Aktif">
+                                                <td>9</td>
+                                                <td>AILESINDE_PSIKIYATRIK_VAKA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>İntihar girişiminde bulunan veya kriz ge&#231;iren kişinin aile &#252;yelerinin herhangi birinde daha &#246;nce psikiyatrik bir rahatsızlık olup olmadığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24852">AILESINDE_PSIKIYATRIK_VAKA </a></td>
+                                            </tr>
+                                            <tr id="col_195838" class="Aktif">
+                                                <td>10</td>
+                                                <td>INTIHAR_KRIZ_VAKA_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Vakanın intihar vakası ya da kriz vakası olma durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24853">INTIHAR_KRIZ_VAKA_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_195839" class="Aktif">
+                                                <td>11</td>
+                                                <td>OLAY_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Olayın ger&#231;ekleştiği zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195840" class="Aktif">
+                                                <td>12</td>
+                                                <td>PSIKIYATRIK_TEDAVI_GECMISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın acil servise başvuru tarihinden &#246;nceki son 6 aylık d&#246;nemde psikiyatrik bir takip veya tedavi durumu olup olmadığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24854">PSIKIYATRIK_TEDAVI_GECMISI </a></td>
+                                            </tr>
+                                            <tr id="col_195841" class="Aktif">
+                                                <td>13</td>
+                                                <td>INTIHAR_GIRISIM_KRIZ_NEDENLERI</td>
+                                                <td>Dizi</td>
+                                                <td>Kişinin intihar girişimi ya da kriz nedenlerini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24855">INTIHAR_GIRISIMI_YADA_KRIZ_NEDENLERI </a></td>
+                                            </tr>
+                                            <tr id="col_195842" class="Aktif">
+                                                <td>14</td>
+                                                <td>INTIHAR_GIRISIMI_YONTEMI</td>
+                                                <td>Dizi</td>
+                                                <td>Kişinin intihar girişimini ger&#231;ekleştirirken kullandığı y&#246;ntem/y&#246;ntemleri ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24856">INTIHAR_GIRISIMI_YONTEMI </a></td>
+                                            </tr>
+                                            <tr id="col_195843" class="Aktif">
+                                                <td>15</td>
+                                                <td>INTIHAR_GIRISIMI_GECMISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin ge&#231;mişinde intihar girişimi olup olmadığı bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24857">INTIHAR_GIRISIMI_GECMISI </a></td>
+                                            </tr>
+                                            <tr id="col_195844" class="Aktif">
+                                                <td>16</td>
+                                                <td>INTIHAR_KRIZ_VAKA_SONUCU</td>
+                                                <td>Dizi</td>
+                                                <td>İntihar girişiminde bulunan ya da kriz ge&#231;iren kişiye yapılan m&#252;dahalenin nasıl sonu&#231;landığını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24858">INTIHAR_KRIZ_VAKA_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195845" class="Aktif">
+                                                <td>17</td>
+                                                <td>PSIKIYATRIK_TANI_GECMISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine adli muayene i&#231;in getirilmiş kişinin psikiyatrik tanı ge&#231;mişi bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24859">PSIKIYATRIK_TANI_GECMISI </a></td>
+                                            </tr>
+                                            <tr id="col_195846" class="Aktif">
+                                                <td>18</td>
+                                                <td>HAYVANIN_MEVCUT_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kuduz ş&#252;pheli temasa neden olan hayvanın mevcut durumunun ne olduğunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24860">HAYVANIN_MEVCUT_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_195847" class="Aktif">
+                                                <td>19</td>
+                                                <td>HAYVANIN_SAHIPLIK_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kuduz ş&#252;pheli temasa neden olan hayvanın sahiplik durumu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24861">HAYVANIN_SAHIPLIK_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_195848" class="Aktif">
+                                                <td>20</td>
+                                                <td>IMMUNGLOBULIN_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Uygulanan imm&#252;nglobilinin t&#252;r bilgisidir. &#214;rneğin at kaynaklı, insan kaynaklı vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24862">IMMUNGLOBULIN_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_195849" class="Aktif">
+                                                <td>21</td>
+                                                <td>IMMUNGLOBULIN_MIKTARI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Uygulanan imm&#252;nglobilinin IU cinsinden miktar bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195850" class="Aktif">
+                                                <td>22</td>
+                                                <td>KATEGORIZASYON</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kuduz riskli temas sonrası, temas şekline ve temas eden hayvanın durumuna g&#246;re profilaksi y&#246;ntemini belirleyen sınıflandırmayı ifade eder. &#214;rneğin kategori 1, kategori 2 vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24863">KATEGORIZASYON </a></td>
+                                            </tr>
+                                            <tr id="col_195851" class="Aktif">
+                                                <td>23</td>
+                                                <td>TEMAS_DEGERLENDIRME_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bildirimi zorunlu hastalıklarda hasta i&#231;in temas olgusunun değerlendirilmesi ile uygulanacak profilaksiye karar verme ve ilk uygulamaları yaparak takibini sağlama durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24864">TEMAS_DEGERLENDIRME_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_195852" class="Aktif">
+                                                <td>24</td>
+                                                <td>KUDUZ_SEBEP_OLAN_HAYVAN</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kuduz ş&#252;pheli temasa sebep olan hayvan t&#252;r&#252;n&#252; ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24865">KUDUZ_SEBEP_OLAN_HAYVAN </a></td>
+                                            </tr>
+                                            <tr id="col_195853" class="Aktif">
+                                                <td>25</td>
+                                                <td>YAPTIRACAGINI_BEYAN_ETTIGI_TSM</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin kendi sağlığı ile ilgili bir işlem yaptıracağına ilişkin beyan ettiği Toplum Sağlığı Merkezi bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11865">VEM_KURUM</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195854" class="Aktif">
+                                                <td>26</td>
+                                                <td>RISKLI_TEMAS_TIPI</td>
+                                                <td>Dizi</td>
+                                                <td>Riskli temas tipi bilgisini ifade eder. &#214;rneğin hayvana dokunma veya besleme, sağlam derinin yalanması vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24866">RISKLI_TEMAS_TIPI </a></td>
+                                            </tr>
+                                            <tr id="col_195855" class="Aktif">
+                                                <td>27</td>
+                                                <td>EV_TELEFONU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin ev telefonu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195856" class="Aktif">
+                                                <td>28</td>
+                                                <td>CEP_TELEFONU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin cep telefonu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195857" class="Aktif">
+                                                <td>29</td>
+                                                <td>EV_ADRESI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin ev adresi bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195858" class="Aktif">
+                                                <td>30</td>
+                                                <td>IL_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>İl kodu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24867">IL_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_195859" class="Aktif">
+                                                <td>31</td>
+                                                <td>ILCE_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>İl&#231;e kodu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24868">ILCE_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_195860" class="Aktif">
+                                                <td>32</td>
+                                                <td>BCG_SKAR_SAYISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem hastalığından korunmada kullanılan BCG (Bacille Calmette-Gu&#233;rin) aşısına ait skar sayısını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195861" class="Aktif">
+                                                <td>33</td>
+                                                <td>DGT_UYGULAMASINI_YAPAN_KISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Doğrudan G&#246;zetimli Tedavi (DGT) uygulamasını yapan, hastanın tedavisi s&#252;resince ila&#231;larının her dozunu d&#252;zenli olarak aldığını denetleyen ve bunu kaydeden g&#246;revli ya da sorumlu kişiyi ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24869">DGT_UYGULAMASINI_YAPAN_KISI </a></td>
+                                            </tr>
+                                            <tr id="col_195862" class="Aktif">
+                                                <td>34</td>
+                                                <td>DGT_UYGULAMA_YERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişiye Doğrudan G&#246;zetimli Tedavi (DGT) uygulamasının yapıldığı yeri ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24870">DGT_UYGULAMA_YERI </a></td>
+                                            </tr>
+                                            <tr id="col_195863" class="Aktif">
+                                                <td>35</td>
+                                                <td>HASTANIN_TEDAVIYE_UYUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın kendisine uygulanan tedaviye uyum g&#246;sterme durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24871">HASTANIN_TEDAVIYE_UYUMU </a></td>
+                                            </tr>
+                                            <tr id="col_195864" class="Aktif">
+                                                <td>36</td>
+                                                <td>KULTUR_SONUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastadan alınan numunenin k&#252;lt&#252;r sonucunu ifade eder. &#214;rneğin pozitif, negatif, kontaminasyon vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24872">KULTUR_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195865" class="Aktif">
+                                                <td>37</td>
+                                                <td>TUBERKULIN_DERI_TESTI_SONUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem ş&#252;pheli bireylerde tarama amacıyla kullanılan deri testinin sonucunu tanımlar.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24873">TUBERKULIN_DERI_TESTI_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195866" class="Aktif">
+                                                <td>38</td>
+                                                <td>VEREM_HASTASI_TEDAVI_YONTEMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem hastasının tedavisinde se&#231;ilen y&#246;ntem bilgisidir. &#214;rneğin doğrudan g&#246;zetimli tedavi, kısmi doğrudan g&#246;zetimli tedavi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24874">VEREM_HASTASI_TEDAVI_YONTEMI </a></td>
+                                            </tr>
+                                            <tr id="col_195867" class="Aktif">
+                                                <td>39</td>
+                                                <td>VEREM_OLGU_TANIMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem tanısı konulan hastada tedavi rejiminin belirlenmesinde ve hastaya yapılacakların planlanmasında kullanılan tanımlardır. &#214;rneğin yeni, n&#252;ks, tedavi başarısız, kronik vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24875">VEREM_OLGU_TANIMI </a></td>
+                                            </tr>
+                                            <tr id="col_195868" class="Aktif">
+                                                <td>40</td>
+                                                <td>YAYMA_SONUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişiden alınan kan, idrar, gaita vb. numuneleri i&#231;in laboratuvarda yapılan yayma testinin sonucuna ilişkin elde edilen bilgidir. &#214;rneğin pozitif, negatif, yapılmadı vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24876">YAYMA_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195869" class="Aktif">
+                                                <td>41</td>
+                                                <td>VEREM_HASTALIGI_TUTULUM_YERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem Hastalığının v&#252;cutta yerleştiği organ/sistemi ifade eder. &#214;rneğin akciğer, plevra, vertebra vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24877">VEREM_HASTALIGI_TUTULUM_YERI </a></td>
+                                            </tr>
+                                            <tr id="col_195870" class="Aktif">
+                                                <td>42</td>
+                                                <td>VEREM_HASTASI_KLINIK_ORNEGI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem hastalığının teşhisinde yapılan yayma ve k&#252;lt&#252;r i&#231;in kullanılan hastaya ait numuneleri ifade eder. &#214;rneğin balgam, plevra sıvısı, idrar vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24878">VEREM_HASTASI_KLINIK_ORNEGI </a></td>
+                                            </tr>
+                                            <tr id="col_195871" class="Aktif">
+                                                <td>43</td>
+                                                <td>VEREM_ILAC_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem hastalığı i&#231;in duyarlılık testi yapılan ila&#231; t&#252;rleridir. &#214;rneğin amikasin, ofloksasin vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24879">VEREM_ILAC_ADI </a></td>
+                                            </tr>
+                                            <tr id="col_195872" class="Aktif">
+                                                <td>44</td>
+                                                <td>VEREM_TEDAVI_SONUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Verem hastasının tedavi sonucunu ifade eder. &#214;rneğin k&#252;r, tedavi tamamlama, &#246;l&#252;m vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24880">VEREM_TEDAVI_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195873" class="Aktif">
+                                                <td>45</td>
+                                                <td>BULASICI_HASTALIK_VAKA_TIPI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bildirimi zorunlu bulaşıcı hastalıkların bildirimi yapılırken teşhis edilen hastalığın durumuna ilişkin bilgiyi ifade eder. &#214;rneğin ş&#252;pheli vaka, olası vaka, kesin vaka vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24881">BULASICI_HASTALIK_VAKA_TIPI </a></td>
+                                            </tr>
+                                            <tr id="col_195874" class="Aktif">
+                                                <td>46</td>
+                                                <td>BELIRTILERIN_BASLADIGI_TARIH</td>
+                                                <td>Tarih</td>
+                                                <td>Klinik belirtilerin başladığı tarih bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195875" class="Aktif">
+                                                <td>47</td>
+                                                <td>SIDDET_TURU</td>
+                                                <td>Dizi</td>
+                                                <td>G&#252;&#231; ve baskı uygulayarak insanın bedensel ve ruhsal a&#231;ıdan zarar g&#246;rmesine neden olan bireysel ya da toplu hareketler şiddet olarak tanımlanmaktadır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24882">SIDDET_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_195876" class="Aktif">
+                                                <td>48</td>
+                                                <td>SIDDET_DEGERLENDIRME_SONUCU</td>
+                                                <td>Dizi</td>
+                                                <td>Şiddet g&#246;rm&#252;ş hastaya sağlık tesisinde yapılan muayene sonucunu ifade eden bilgidir. &#214;rneğin bilgilendirme, ileri tanı i&#231;in sevk, adli rapor tutulması vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24883">SIDDET_DEGERLENDIRME_SONUCU </a></td>
+                                            </tr>
+                                            <tr id="col_195877" class="Aktif">
+                                                <td>49</td>
+                                                <td>ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde verilen hizmete, yapılan işleme, kullanılan malzemelere vb. ilişkin a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195878" class="Aktif">
+                                                <td>50</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195879" class="Aktif">
+                                                <td>51</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195880" class="Aktif">
+                                                <td>52</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195881" class="Aktif">
+                                                <td>53</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

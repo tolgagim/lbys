@@ -2,13 +2,12 @@ namespace Server.Application.Dashboard;
 
 public class StatsDto
 {
-    public int ProductCount { get; set; }
-    public int BrandCount { get; set; }
+    public int HastaCount { get; set; }
+    public int BasvuruCount { get; set; }
+    public int PersonelCount { get; set; }
     public int UserCount { get; set; }
     public int RoleCount { get; set; }
-    public int CustomerCount { get; set; }
     public List<ChartSeries> DataEnterBarChart { get; set; } = new();
-    public Dictionary<string, double>? ProductByBrandTypePieChart { get; set; }
 }
 
 public class ChartSeries

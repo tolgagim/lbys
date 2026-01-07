@@ -1,0 +1,430 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_BIRIM</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; sağlık tesisinde bulunan birimlerin bilgisini kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>790BC1765A69AED3F4C5F3168A84AE74</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_BIRIM KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_195891" class="Aktif">
+                                                <td>1</td>
+                                                <td>BIRIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan b&#246;l&#252;mler i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195892" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195893" class="Aktif">
+                                                <td>3</td>
+                                                <td>KLINIK_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan kliniklerin Sağlık Bilgi Y&#246;netim Sistemi tarafından gruplandırılması i&#231;in tanımlanmış kod bilgisini ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24885">KLINIKLER </a></td>
+                                            </tr>
+                                            <tr id="col_195894" class="Aktif">
+                                                <td>4</td>
+                                                <td>BIRIM_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan b&#246;l&#252;mlerin Sağlık Bilgi Y&#246;netim Sistemi tarafından yapılan gruplandırma bilgisidir. &#214;rneğin poliklinik, servis, laboratuvar, vezne, radyoloji vb.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24886">BIRIM_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_195895" class="Aktif">
+                                                <td>5</td>
+                                                <td>BINA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinin her binası i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11796">VEM_BINA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195896" class="Aktif">
+                                                <td>6</td>
+                                                <td>BIRIM_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan b&#246;l&#252;mlerin isim bilgisidir. &#214;rneğin poliklinik1, poliklinik 2 vb.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195897" class="Aktif">
+                                                <td>7</td>
+                                                <td>YATAK_SAYISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde veya sağlık tesisindeki birimlerde bulunan yatak sayısı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195898" class="Aktif">
+                                                <td>8</td>
+                                                <td>MHRS_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tanımlanmış muayene eden birimler i&#231;in MHRS tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195899" class="Aktif">
+                                                <td>9</td>
+                                                <td>MHRS_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tanımlı olan poliklinik biriminin MHRS sistemine tanımlanmış ad bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195900" class="Aktif">
+                                                <td>10</td>
+                                                <td>MKYS_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Malzeme Kaynak Y&#246;netim Sistemi (MKYS) tarafından depo ve birimler i&#231;in &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195901" class="Aktif">
+                                                <td>11</td>
+                                                <td>MEDULA_BRANS_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan klinik ve hekimler i&#231;in MEDULA tarafından tanımlanmış branş kodu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195902" class="Aktif">
+                                                <td>12</td>
+                                                <td>AKTIFLIK_BILGISI</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi veri tabanında bulunan bir kayıtın aktif olup olmadığına ilişkin bilgiyi ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195903" class="Aktif">
+                                                <td>13</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195904" class="Aktif">
+                                                <td>14</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195905" class="Aktif">
+                                                <td>15</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_195906" class="Aktif">
+                                                <td>16</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><a href="/Gorunum/Detay/11785">VEM_AMELIYAT;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11785">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><a href="/Gorunum/Detay/11788">VEM_ANLIK_YATAN_HASTA;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11788">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><a href="/Gorunum/Detay/11798">VEM_CIHAZ;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11798">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><a href="/Gorunum/Detay/11803">VEM_DISPROTEZ;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11803">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><a href="/Gorunum/Detay/11803">VEM_DISPROTEZ;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11803">DISPROTEZ_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><a href="/Gorunum/Detay/11806">VEM_DOGUM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11806">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><a href="/Gorunum/Detay/11820">VEM_HASTA_ARSIV_DETAY;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11820">DOSYA_ALAN_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td><a href="/Gorunum/Detay/11820">VEM_HASTA_ARSIV_DETAY;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11820">DOSYA_VEREN_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td><a href="/Gorunum/Detay/11821">VEM_HASTA_BASVURU;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11821">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td><a href="/Gorunum/Detay/11848">VEM_KAN_STOK;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11848">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td><a href="/Gorunum/Detay/11849">VEM_KAN_TALEP;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11849">KAN_ISTEYEN_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td><a href="/Gorunum/Detay/11871">VEM_ODA;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11871">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td><a href="/Gorunum/Detay/11875">VEM_PERSONEL;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11875">CALISTIGI_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td><a href="/Gorunum/Detay/11887">VEM_RADYOLOJI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11887">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td><a href="/Gorunum/Detay/11889">VEM_RANDEVU;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11889">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td><a href="/Gorunum/Detay/11896">VEM_STERILIZASYON_CIKIS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11896">CIKIS_YAPILAN_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td><a href="/Gorunum/Detay/11897">VEM_STERILIZASYON_GIRIS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11897">TESLIM_EDEN_BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td><a href="/Gorunum/Detay/11915">VEM_TETKIK_NUMUNE;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11915">BIRIM_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>19</td>
+                                                        <td><a href="/Gorunum/Detay/11921">VEM_VEZNE;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11921">VEZNE_BIRIM_KODU </a></td>
+                                                    </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,554 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_PATOLOJI</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; t&#252;m tıbbi patoloji tetkik işlemlerine ait tetkik bilgilerini ve sonu&#231; raporlarını kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>22D00197FA0C985C9E35264D6224F4AC</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_PATOLOJI KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_197431" class="Aktif">
+                                                <td>1</td>
+                                                <td>PATOLOJI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji tetkikleri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197432" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197433" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197434" class="Aktif">
+                                                <td>4</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197435" class="Aktif">
+                                                <td>5</td>
+                                                <td>PATOLOJI_RAPOR_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji biriminde hastaya yazılan rapor i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından tanımlanan t&#252;r bilgisidir. &#214;rneğin histoloji, otopsi materyali, sitoloji vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25195">PATOLOJI_RAPOR_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_197436" class="Aktif">
+                                                <td>6</td>
+                                                <td>DOKUNUN_TEMEL_OZELLIGI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji i&#231;in hastadan alınan numunenin alındığı dokunun temel &#246;zellik bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25196">NUMUNENIN_ALINDIGI_DOKUNUN_TEMEL_OZELLIGI </a></td>
+                                            </tr>
+                                            <tr id="col_197437" class="Aktif">
+                                                <td>7</td>
+                                                <td>NUMUNE_ALINMA_SEKLI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kişiden alınan numunenin nasıl alındığına ilişkin bilgiyi ifade eder. &#214;rneğin biyopsi, frozen, ince iğne biyopsisi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25197">NUMUNE_ALINMA_SEKLI </a></td>
+                                            </tr>
+                                            <tr id="col_197438" class="Aktif">
+                                                <td>8</td>
+                                                <td>PATOLOJI_PREPARATI_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji tetkiki i&#231;in alınan preparatın durum bilgidir. &#214;rneğin materyal yeterli, materyal yetersiz vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25198">PATOLOJI_PREPARATI_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_197439" class="Aktif">
+                                                <td>9</td>
+                                                <td>PATOLOJI_DEFTER_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisindeki patoloji biriminde hasta bilgilerinin olduğu defter numarası bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197440" class="Aktif">
+                                                <td>10</td>
+                                                <td>TETKIK_NUMUNE_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde yapılan tetkiklerde kullanılan numuneler i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11915">VEM_TETKIK_NUMUNE</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197441" class="Aktif">
+                                                <td>11</td>
+                                                <td>PATOLOJI_MATERYALI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde incelenmek i&#231;in hastadan alınan numunenin materyal bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197442" class="Aktif">
+                                                <td>12</td>
+                                                <td>ORGAN</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Par&#231;anın alındığı organ bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197443" class="Aktif">
+                                                <td>13</td>
+                                                <td>NUMUNE_ALINMA_YERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde kişiden alınan numunenin nasıl alındığına ilişkin bilgiyi ifade eder. &#214;rneğin biyopsi, frozen, ince iğne biyopsisi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25199">NUMUNE_ALINMA_YERI </a></td>
+                                            </tr>
+                                            <tr id="col_197444" class="Aktif">
+                                                <td>14</td>
+                                                <td>PATOLOJIK_BULGU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran kişiden alınan materyalin patolojik incelemesi sonucu elde edilen bulgulara ilişkin bilgidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197445" class="Aktif">
+                                                <td>15</td>
+                                                <td>PATOLOJIK_TANI_MORFOLOJI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>ICD-O Morfoloji kodu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25200">PATOLOJIK_TANI_MORFOLOJI_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_197446" class="Aktif">
+                                                <td>16</td>
+                                                <td>PATOLOJIK_TANI_YERLESIM_YERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastadan alınan patolojik dokunun v&#252;cutta bulunduğu yer i&#231;in ICD-O yerleşim yeri kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25201">PATOLOJIK_TANI_YERLESIM_YERI </a></td>
+                                            </tr>
+                                            <tr id="col_197447" class="Aktif">
+                                                <td>17</td>
+                                                <td>MAKROSKOPI_SONUCU</td>
+                                                <td>Rapor</td>
+                                                <td>Makroskopi sonu&#231; bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197448" class="Aktif">
+                                                <td>18</td>
+                                                <td>MIKROSKOPI_SONUCU</td>
+                                                <td>Rapor</td>
+                                                <td>Mikroskopi işlemi sonu&#231; bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197449" class="Aktif">
+                                                <td>19</td>
+                                                <td>SONUC_ICERIK_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Raporun i&#231;eriğinin t&#252;r&#252;ne ilişkin DOC, RTF, HTML vb. bilgiyi ifade eder.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25202">SONUC_ICERIK_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_197450" class="Aktif">
+                                                <td>20</td>
+                                                <td>RAPOR_YAZAN_PERSONEL_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Raporu bilgisayar ortamına aktaran personel i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197451" class="Aktif">
+                                                <td>21</td>
+                                                <td>PARCA_KABUL_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastadan alınan numunenin tetkikinin yapılması i&#231;in laboratuvara kabul edildiği zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197452" class="Aktif">
+                                                <td>22</td>
+                                                <td>RAPOR_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Rapor zamanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197453" class="Aktif">
+                                                <td>23</td>
+                                                <td>PATOLOJI_ACIKLAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji tetkiki i&#231;in a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197454" class="Aktif">
+                                                <td>24</td>
+                                                <td>HISTOPATOLOJIK_TANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji uzmanı tarafından yazılan tanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197455" class="Aktif">
+                                                <td>25</td>
+                                                <td>SITOPATOLOJIK_TANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji uzmanı tarafından yazılan tanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197456" class="Aktif">
+                                                <td>26</td>
+                                                <td>HISTOKIMYASAL_BOYAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji numunesine uygulanan histokimyasal boyama y&#246;ntemi i&#231;in uzman tarafından verilen bilgidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197457" class="Aktif">
+                                                <td>27</td>
+                                                <td>IMMUNHISTOKIMYA_BOYAMA</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji numunesinin imm&#252;nhistokimya boyama işlemine g&#246;re elde edilen bilgidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197458" class="Aktif">
+                                                <td>28</td>
+                                                <td>FROZEN_TANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişiden ameliyat sırasında alınan doku &#246;rneğine kısa s&#252;re i&#231;erisinde tanı koymak amacı ile yapılan frozen (dondurarak) inceleme sonucu patolog tarafından konulan frozen tanı bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197459" class="Aktif">
+                                                <td>29</td>
+                                                <td>NUMUNE_BOYAMA_YONTEMI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Numunenin hangi y&#246;ntemle boyandığı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197460" class="Aktif">
+                                                <td>30</td>
+                                                <td>ONAYLAYAN_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde işlemi ger&#231;ekleştiren veya işlemin sonucunu onaylayan hekim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilmiş tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197461" class="Aktif">
+                                                <td>31</td>
+                                                <td>ASISTAN_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde sağlık hizmetini alan kişiyi muayene eden asistan hekimin Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilmiş tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197462" class="Aktif">
+                                                <td>32</td>
+                                                <td>PATOLOJI_DIGER_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Patoloji tetkik sonucunu değerlendiren diğer hekim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197463" class="Aktif">
+                                                <td>33</td>
+                                                <td>YORUM</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde uzman hekimin yazdığı yorum bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197464" class="Aktif">
+                                                <td>34</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197465" class="Aktif">
+                                                <td>35</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197466" class="Aktif">
+                                                <td>36</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_197467" class="Aktif">
+                                                <td>37</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

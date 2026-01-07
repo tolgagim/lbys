@@ -1,0 +1,1081 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_HASTA_BASVURU</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; sağlık tesisine başvuran hastanın başvuru bilgilerini kapsar.</td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>C440D7B55560C7EEAA0FDEE2B5124EA1</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_HASTA_BASVURU KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_196401" class="Aktif">
+                                                <td>1</td>
+                                                <td>HASTA_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196402" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196403" class="Aktif">
+                                                <td>3</td>
+                                                <td>HASTA_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde hasta bilgileri i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11817">VEM_HASTA</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196404" class="Aktif">
+                                                <td>4</td>
+                                                <td>BAGLI_OLDUGU_BASVURU_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin sağlık tesisine ilk başvurusuna bağlı olan tedavi s&#252;re&#231;lerinin takip edilebilmesi i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11821">VEM_HASTA_BASVURU</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196405" class="Aktif">
+                                                <td>5</td>
+                                                <td>DEFTER_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisindeki birimlerde hasta bilgilerinin olduğu defter numarası bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196406" class="Aktif">
+                                                <td>6</td>
+                                                <td>GUNLUK_SIRA_NUMARASI</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık tesisine muayene olmak i&#231;in gelen kişilere Sağlık Bilgi Y&#246;netim Sistemi tarafından verilen g&#252;nl&#252;k sıra numarası bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196407" class="Aktif">
+                                                <td>7</td>
+                                                <td>MUAYENE_ONCELIK_SIRASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine muayene olmak i&#231;in gelen kişinin, Sağlık Bakanlığı tarafından belirlenen &#246;ncelik durumları kapsamında bulunan &#246;ncelik sırası bilgisidir. &#214;rneğin 65 yaş &#252;st&#252;, gazi, şehit yakını, vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24981">MUAYENE_ONCELIK_SIRASI </a></td>
+                                            </tr>
+                                            <tr id="col_196409" class="Aktif">
+                                                <td>8</td>
+                                                <td>HIZMET_SUNUCU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastaya uygulanacak tedavi kapsamında sağlık tesisi dışından hizmet alınan kurum kodu bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24838">KURUMLAR </a></td>
+                                            </tr>
+                                            <tr id="col_196410" class="Aktif">
+                                                <td>9</td>
+                                                <td>KAYIT_YERI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine tedavi i&#231;in başvuruda bulunan hastanın ilk başvurusunu ger&#231;ekleştirdiği kurum kodu bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24838">KURUMLAR </a></td>
+                                            </tr>
+                                            <tr id="col_196411" class="Aktif">
+                                                <td>10</td>
+                                                <td>KURUM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin yararlandığı sağlık g&#252;vencesinin kurumuna ait bilgiler i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11865">VEM_KURUM</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196412" class="Aktif">
+                                                <td>11</td>
+                                                <td>TAMAMLAYICI_KURUM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran kişinin tedavi tutarının hastadan alınacak kısmı i&#231;in hasta adına &#246;demeyi yapacak kuruma Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11865">VEM_KURUM</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196413" class="Aktif">
+                                                <td>12</td>
+                                                <td>ONLINE_PROTOKOL_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran kişi i&#231;in, Sağlık Bakanlığı tarafından geliştirilen online protokol sistemi &#252;zerinden alınmış protokol numarası bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196414" class="Aktif">
+                                                <td>13</td>
+                                                <td>BASVURU_PROTOKOL_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hastanın başvurusu i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen protokol numarası bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196415" class="Aktif">
+                                                <td>14</td>
+                                                <td>GEBLIZ_BILDIRIM_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Gebeler i&#231;in, Gebe, Bebek, Lohusa İzleme Sistemi (GEBLİZ) sistemine iletilen bildirim numarası bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196416" class="Aktif">
+                                                <td>15</td>
+                                                <td>OLAY_AFET_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Acil Sağlık Hizmetleri Genel M&#252;d&#252;rl&#252;ğ&#252; tarafından takip edilen acil kapsamına alınan olaylarda, Acil Sağlık Hizmetleri Genel M&#252;d&#252;rl&#252;ğ&#252; tarafından olay veya afet i&#231;in &#252;retilen ve Sağlık Bilgi Y&#246;netim Sistemine iletilen kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24994">OLAY_AFET_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_196417" class="Aktif">
+                                                <td>16</td>
+                                                <td>HAYATI_TEHLIKE_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın hayati tehlikesinin olup olmadığına ilişkin bilgiyi ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24995">HAYATI_TEHLIKE_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_196418" class="Aktif">
+                                                <td>17</td>
+                                                <td>HASTA_KABUL_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>T&#252;m sağlık kurum ve kuruluşları ve aile hekimliği tarafından hastaya hizmet vermeye başlamak i&#231;in ilk kabul&#252;n&#252;n yapıldığı zamandır.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196419" class="Aktif">
+                                                <td>18</td>
+                                                <td>KABUL_SEKLI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin sağlık kurumuna geliş şeklini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24996">KABUL_SEKLI </a></td>
+                                            </tr>
+                                            <tr id="col_196420" class="Aktif">
+                                                <td>19</td>
+                                                <td>SOSYAL_GUVENCE_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Bir kişinin Sosyal G&#252;vence Durumu, kişinin sağlık hizmetlerinin karşılanması amacıyla kayıtlı olduğu kurumu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24997">SOSYAL_GUVENCE_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_196421" class="Aktif">
+                                                <td>20</td>
+                                                <td>HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde g&#246;revli hekim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196422" class="Aktif">
+                                                <td>21</td>
+                                                <td>ASISTAN_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde sağlık hizmetini alan kişiyi muayene eden asistan hekimin Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilmiş tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196423" class="Aktif">
+                                                <td>22</td>
+                                                <td>HEKIM_BASVURU_NOTU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran hasta i&#231;in hekimin girdiği a&#231;ıklama bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196424" class="Aktif">
+                                                <td>23</td>
+                                                <td>VAKA_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık hizmeti almak &#252;zere sağlık tesisine başvuruda bulunan kişinin, hangi nedenle (iş kazası vb.) veya hangi durumda (normal, acil vb.) m&#252;racaat ettiğini ifade eder. &#214;rneğin normal, iş kazası, acil vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24998">VAKA_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196425" class="Aktif">
+                                                <td>24</td>
+                                                <td>SEVK_TANISI</td>
+                                                <td>Dizi</td>
+                                                <td>Hastanın sevk gerek&#231;esi olan hastalık tanı (ları) dır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24850">TANI_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_196426" class="Aktif">
+                                                <td>25</td>
+                                                <td>SEVK_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastanın ilk başvurduğu sağlık tesisinin (sevk edildiği sağlık tesisi) hastayı sevk ettiği zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196427" class="Aktif">
+                                                <td>26</td>
+                                                <td>ADLI_VAKA_GELIS_SEKLI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Adli vakanın sağlık kurumuna gelişi ile ilgili bilgiyi ifade eder. &#214;rneğin savcılık talebi, kolluk kuvvetlerinin doğrudan talebi (savcı talebi olmadan), kendi talebi vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24999">ADLI_VAKA_GELIS_SEKLI </a></td>
+                                            </tr>
+                                            <tr id="col_196428" class="Aktif">
+                                                <td>27</td>
+                                                <td>ARAC_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın hastaneye getirildiği ara&#231; t&#252;r&#252;n&#252;n bilgisidir. </td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25000">ARAC_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196429" class="Aktif">
+                                                <td>28</td>
+                                                <td>AMBULANS_TAKIP_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın sağlık tesisine ambulans ile gelmesi durumunda ambulansta sağlık ekibi tarafından oluşturulmuş formun numara bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196430" class="Aktif">
+                                                <td>29</td>
+                                                <td>AMBULANS_PLAKA_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastanın ambulans ile gelmesi durumunda ambulansın plaka numarasıdır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196431" class="Aktif">
+                                                <td>30</td>
+                                                <td>TRIAJ_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinin acile servisine başvuran hastalar i&#231;in hastalık durumuna g&#246;re yeşil alan, sarı alan, kırmızı alan, belirtilmemiş vb. Belirlenen Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen triaj kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25001">TRIAJ_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_196432" class="Aktif">
+                                                <td>31</td>
+                                                <td>SYS_TAKIP_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran kişinin başvurusuna ait Merkezi Veri Sistemi tarafından verilmiş tekil kod bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196433" class="Aktif">
+                                                <td>32</td>
+                                                <td>SYS_REFERANS_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Y&#246;netim Sistemi (SYS) Referans Numarası, sağlık tesisine başvuran hastalar i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen ve merkezi veri sistemine veri g&#246;nderilirken kullanılan tekil kod bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196434" class="Aktif">
+                                                <td>33</td>
+                                                <td>YATIS_BILGISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde tedavi g&#246;ren hastanın yatışı ile ilgili bilgiyi ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25002">YATIS_BILGISI </a></td>
+                                            </tr>
+                                            <tr id="col_196435" class="Aktif">
+                                                <td>34</td>
+                                                <td>YATIS_PROTOKOL_NUMARASI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hasta yatış işlemi yapılırken Sağlık Bilgi Y&#246;netim Sistemi tarafından online protokol sistemi &#252;zerinden alınmış veya offline protokol algoritması ile &#252;retilmiş protokol numarası bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196436" class="Aktif">
+                                                <td>35</td>
+                                                <td>BASVURU_DURUMU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine başvuran kişi i&#231;in anlık durum bilgisidir. &#214;rneğin, muayene oldu, bekliyor, muayene iptal oldu vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25003">BASVURU_DURUMU </a></td>
+                                            </tr>
+                                            <tr id="col_196437" class="Aktif">
+                                                <td>36</td>
+                                                <td>BIRIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan b&#246;l&#252;mler i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11797">VEM_BIRIM</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196438" class="Aktif">
+                                                <td>37</td>
+                                                <td>MUAYENE_BASLAMA_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastanın muayene başlama zamanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196439" class="Aktif">
+                                                <td>38</td>
+                                                <td>MUAYENE_BITIS_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Hastanın muayene bitiş zamanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196440" class="Aktif">
+                                                <td>39</td>
+                                                <td>MUAYENE_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisine muayene olmak i&#231;in gelen kişiye Sağlık Bilgi Y&#246;netim Sistemi tarafından tanımlanmış muayene t&#252;r&#252; bilgisidir. &#214;rneğin normal, kontrol, acil vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25004">MUAYENE_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196441" class="Aktif">
+                                                <td>40</td>
+                                                <td>TEDAVI_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Hastaya uygulanan tedavinin ayaktan, g&#252;n&#252;birlik, yatan vb. olduğunu belirten Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tedavi t&#252;r&#252; bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25005">TEDAVI_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196442" class="Aktif">
+                                                <td>41</td>
+                                                <td>CIKIS_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisi tarafından kişiye verilen sağlık hizmetinin sonlanma zamanıdır. &#199;ıkış zamanı, vakanın sonu&#231;landığı zamanı değil, vakaya verilen bir hizmetin (muayene vb.) nihayete erdiği zamanı ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196443" class="Aktif">
+                                                <td>42</td>
+                                                <td>CIKIS_SEKLI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin sağlık kurumundan &#231;ıkış şeklini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25006">CIKIS_SEKLI </a></td>
+                                            </tr>
+                                            <tr id="col_196444" class="Aktif">
+                                                <td>43</td>
+                                                <td>CIKIS_VEREN_HEKIM_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin sağlık kurumundan &#231;ıkış kararını veren hekim i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11875">VEM_PERSONEL</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196445" class="Aktif">
+                                                <td>44</td>
+                                                <td>SAGLIK_TURIZMI_ULKE_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık turizmi amacı ile &#252;lkemize gelen yabancı hastaların vatandaşı olduğu &#252;lke bilgisini ifade eder. &#214;rneğin Kongo, Andorra, Rusya vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196446" class="Aktif">
+                                                <td>45</td>
+                                                <td>GELDIGI_ULKE_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Kişinin geldiği &#252;lkenin &#252;lke kodu bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24974">ULKE_KODU </a></td>
+                                            </tr>
+                                            <tr id="col_196447" class="Aktif">
+                                                <td>46</td>
+                                                <td>YABANCI_HASTA_TURU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık hizmetini alan kişinin hangi ama&#231; ile &#252;lkemizde bulunduğunu a&#231;ıklayan bilgidir. &#214;rneğin sağlık turizmi, eğitim vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25008">YABANCI_HASTA_TURU </a></td>
+                                            </tr>
+                                            <tr id="col_196448" class="Aktif">
+                                                <td>47</td>
+                                                <td>GENCLIK_SAGLIGI_ISLEMLERI</td>
+                                                <td>Dizi</td>
+                                                <td>10-24 yaş grubundaki adolesanların gelişimsel izlemlerinin yapılmasını tanımlar.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/25009">GENCLIK_SAGLIGI_ISLEMLERI </a></td>
+                                            </tr>
+                                            <tr id="col_196449" class="Aktif">
+                                                <td>48</td>
+                                                <td>DIYABET_EGITIMI</td>
+                                                <td>Tamsayi</td>
+                                                <td>Diabetes Mellitus (Şeker Hastalığı) tanısı alan hastanın ve /veya ailesinin hastalığa y&#246;nelik eğitim alma durumunu ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24899">DIYABET_EGITIMI </a></td>
+                                            </tr>
+                                            <tr id="col_196450" class="Aktif">
+                                                <td>49</td>
+                                                <td>DIYABET_KOMPLIKASYONLARI</td>
+                                                <td>Dizi</td>
+                                                <td>Diabetes Mellitus hastalığının mikro ve makrovask&#252;ler komplikasyonlarını ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24901">DIYABET_KOMPLIKASYONLARI </a></td>
+                                            </tr>
+                                            <tr id="col_196451" class="Aktif">
+                                                <td>50</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196452" class="Aktif">
+                                                <td>51</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196453" class="Aktif">
+                                                <td>52</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196454" class="Aktif">
+                                                <td>53</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><a href="/Gorunum/Detay/11821">VEM_HASTA_BASVURU;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11821">BAGLI_OLDUGU_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><a href="/Gorunum/Detay/11785">VEM_AMELIYAT;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11785">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><a href="/Gorunum/Detay/11788">VEM_ANLIK_YATAN_HASTA;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11788">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><a href="/Gorunum/Detay/11790">VEM_ASI_BILGISI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11790">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><a href="/Gorunum/Detay/11792">VEM_BASVURU_TANI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11792">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><a href="/Gorunum/Detay/11793">VEM_BASVURU_YEMEK;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11793">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><a href="/Gorunum/Detay/11794">VEM_BEBEK_COCUK_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11794">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td><a href="/Gorunum/Detay/11795">VEM_BILDIRIMI_ZORUNLU;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11795">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td><a href="/Gorunum/Detay/11799">VEM_COCUK_DIYABET;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11799">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td><a href="/Gorunum/Detay/11801">VEM_DIS_TAAHHUT;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11801">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td><a href="/Gorunum/Detay/11803">VEM_DISPROTEZ;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11803">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td><a href="/Gorunum/Detay/11805">VEM_DIYABET;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11805">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td><a href="/Gorunum/Detay/11806">VEM_DOGUM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11806">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td><a href="/Gorunum/Detay/11807">VEM_DOGUM_DETAY;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11807">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td><a href="/Gorunum/Detay/11808">VEM_DOKTOR_MESAJI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11808">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td><a href="/Gorunum/Detay/11811">VEM_EVDE_SAGLIK_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11811">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td><a href="/Gorunum/Detay/11812">VEM_FATURA;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11812">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td><a href="/Gorunum/Detay/11814">VEM_GEBE_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11814">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>19</td>
+                                                        <td><a href="/Gorunum/Detay/11815">VEM_GETAT;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11815">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20</td>
+                                                        <td><a href="/Gorunum/Detay/11818">VEM_HASTA_ADLI_RAPOR;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11818">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>21</td>
+                                                        <td><a href="/Gorunum/Detay/11820">VEM_HASTA_ARSIV_DETAY;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11820">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22</td>
+                                                        <td><a href="/Gorunum/Detay/11822">VEM_HASTA_BORC;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11822">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23</td>
+                                                        <td><a href="/Gorunum/Detay/11823">VEM_HASTA_DIS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11823">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>24</td>
+                                                        <td><a href="/Gorunum/Detay/11824">VEM_HASTA_EPIKRIZ;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11824">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25</td>
+                                                        <td><a href="/Gorunum/Detay/11825">VEM_HASTA_FOTOGRAF;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11825">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>26</td>
+                                                        <td><a href="/Gorunum/Detay/11826">VEM_HASTA_GIZLILIK;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11826">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>27</td>
+                                                        <td><a href="/Gorunum/Detay/11827">VEM_HASTA_HIZMET;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11827">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>28</td>
+                                                        <td><a href="/Gorunum/Detay/11828">VEM_HASTA_ILETISIM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11828">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>29</td>
+                                                        <td><a href="/Gorunum/Detay/11829">VEM_HASTA_MALZEME;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11829">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>30</td>
+                                                        <td><a href="/Gorunum/Detay/11830">VEM_HASTA_NOTLARI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11830">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>31</td>
+                                                        <td><a href="/Gorunum/Detay/11831">VEM_HASTA_OLUM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11831">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>32</td>
+                                                        <td><a href="/Gorunum/Detay/11832">VEM_HASTA_SEANS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11832">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>33</td>
+                                                        <td><a href="/Gorunum/Detay/11833">VEM_HASTA_SEVK;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11833">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>34</td>
+                                                        <td><a href="/Gorunum/Detay/11834">VEM_HASTA_TIBBI_BILGI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11834">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>35</td>
+                                                        <td><a href="/Gorunum/Detay/11835">VEM_HASTA_UYARI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11835">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>36</td>
+                                                        <td><a href="/Gorunum/Detay/11836">VEM_HASTA_VENTILATOR;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11836">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>37</td>
+                                                        <td><a href="/Gorunum/Detay/11837">VEM_HASTA_VITAL_FIZIKI_BULGU;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11837">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>38</td>
+                                                        <td><a href="/Gorunum/Detay/11838">VEM_HASTA_YATAK;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11838">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>39</td>
+                                                        <td><a href="/Gorunum/Detay/11839">VEM_HEMOGLOBINOPATI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11839">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>40</td>
+                                                        <td><a href="/Gorunum/Detay/11840">VEM_HEMSIRE_BAKIM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11840">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>41</td>
+                                                        <td><a href="/Gorunum/Detay/11844">VEM_INTIHAR_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11844">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>42</td>
+                                                        <td><a href="/Gorunum/Detay/11845">VEM_KADIN_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11845">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>43</td>
+                                                        <td><a href="/Gorunum/Detay/11846">VEM_KAN_BAGISCI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11846">BAGISCI_HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>44</td>
+                                                        <td><a href="/Gorunum/Detay/11847">VEM_KAN_CIKIS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11847">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>45</td>
+                                                        <td><a href="/Gorunum/Detay/11849">VEM_KAN_TALEP;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11849">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>46</td>
+                                                        <td><a href="/Gorunum/Detay/11853">VEM_KLINIK_SEYIR;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11853">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>47</td>
+                                                        <td><a href="/Gorunum/Detay/11854">VEM_KONSULTASYON;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11854">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>48</td>
+                                                        <td><a href="/Gorunum/Detay/11854">VEM_KONSULTASYON;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11854">KONSULTASYON_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>49</td>
+                                                        <td><a href="/Gorunum/Detay/11855">VEM_KUDUZ_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11855">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>50</td>
+                                                        <td><a href="/Gorunum/Detay/11860">VEM_KURUL_ENGELLI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11860">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>51</td>
+                                                        <td><a href="/Gorunum/Detay/11862">VEM_KURUL_HEKIM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11862">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>52</td>
+                                                        <td><a href="/Gorunum/Detay/11863">VEM_KURUL_RAPOR;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11863">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>53</td>
+                                                        <td><a href="/Gorunum/Detay/11866">VEM_LOHUSA_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11866">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>54</td>
+                                                        <td><a href="/Gorunum/Detay/11867">VEM_MADDE_BAGIMLILIGI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11867">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>55</td>
+                                                        <td><a href="/Gorunum/Detay/11868">VEM_MEDULA_TAKIP;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11868">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>56</td>
+                                                        <td><a href="/Gorunum/Detay/11870">VEM_OBEZITE_IZLEM;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11870">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>57</td>
+                                                        <td><a href="/Gorunum/Detay/11872">VEM_OPTIK_RECETE;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11872">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>58</td>
+                                                        <td><a href="/Gorunum/Detay/11873">VEM_ORTODONTI_ICON_SKOR;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11873">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>59</td>
+                                                        <td><a href="/Gorunum/Detay/11874">VEM_PATOLOJI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11874">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>60</td>
+                                                        <td><a href="/Gorunum/Detay/11887">VEM_RADYOLOJI;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11887">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>61</td>
+                                                        <td><a href="/Gorunum/Detay/11889">VEM_RANDEVU;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11889">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>62</td>
+                                                        <td><a href="/Gorunum/Detay/11890">VEM_RECETE;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11890">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>63</td>
+                                                        <td><a href="/Gorunum/Detay/11893">VEM_RISK_SKORLAMA;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11893">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>64</td>
+                                                        <td><a href="/Gorunum/Detay/11896">VEM_STERILIZASYON_CIKIS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11896">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>65</td>
+                                                        <td><a href="/Gorunum/Detay/11906">VEM_STOK_FIS;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11906">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>66</td>
+                                                        <td><a href="/Gorunum/Detay/11908">VEM_STOK_ISTEK;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11908">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>67</td>
+                                                        <td><a href="/Gorunum/Detay/11912">VEM_SYS_PAKET;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11912">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>68</td>
+                                                        <td><a href="/Gorunum/Detay/11915">VEM_TETKIK_NUMUNE;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11915">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>69</td>
+                                                        <td><a href="/Gorunum/Detay/11919">VEM_TIBBI_ORDER;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11919">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>70</td>
+                                                        <td><a href="/Gorunum/Detay/11921">VEM_VEZNE;</a></td>
+                                                        <td><a href="/Gorunum/Detay/11921">HASTA_BASVURU_KODU </a></td>
+                                                    </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>4/29/2020 3:08:59 PM</td>
+                        <td>Kolon VEM_HASTA_BASVURU.GLASGOW_SKALASI Silindi</td>
+                    </tr>
+                    <tr>
+                        <td>4/9/2020 1:54:43 PM</td>
+                        <td>Tabloya Iliski Eklendi =&gt;VEM_HASTA_BASVURU.[SEVK_TANISI]</td>
+                    </tr>
+                    <tr>
+                        <td>4/9/2020 1:52:57 PM</td>
+                        <td>Tabloya Iliski Eklendi =&gt;VEM_HASTA_BASVURU.[KAYIT_YERI]</td>
+                    </tr>
+                    <tr>
+                        <td>4/9/2020 1:50:06 PM</td>
+                        <td>Tabloya Iliski Eklendi =&gt;VEM_HASTA_BASVURU.[KAYIT_YERI]</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

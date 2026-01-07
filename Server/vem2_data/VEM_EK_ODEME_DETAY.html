@@ -1,0 +1,435 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">VEM_EK_ODEME_DETAY</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table toggle-square">
+                    <tbody>
+                        <tr>
+                            <th>Kapsam</th>
+                            <td>:</td>
+                            <td>Bu veri modeli g&#246;r&#252;nt&#252;s&#252; ek &#246;deme detay bilgilerini kapsar. Hesaplanan bordrodaki hesaplama bilgileri ve detay bilgileridir. </td>
+                        </tr>
+                        <tr>
+                            <th>Güncelleme</th>
+                            <td>:</td>
+                            <td>4/8/2020</td>
+                        </tr>
+                        <tr>
+                            <th>Hash</th>
+                            <td>:</td>
+                            <td>0445F91AF456FC99E2577EE13AB68CF1</td>
+                        </tr>
+                        <tr>
+                            <th>Sürüm</th>
+                            <td>:</td>
+                            <td>VEM.2.0 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light ">
+    <div class="portlet-title tabbable-line">
+        <div class="caption caption-md">
+            <i class="icon-globe theme-font hide"></i>
+            <span class="caption-subject font-blue-madison bold uppercase">VEM_EK_ODEME_DETAY KOLONLARI</span>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">Kolonlar</a>
+            </li>
+            <li class="">
+                <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">İlişkiler</a>
+            </li>
+        </ul>
+    </div>
+    <div class="portlet-body">
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_1_1">
+                <div id="kolon" class="tab-pane active">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="resp_table1" class="table toggle-square" >
+                                        <tr>
+                                            <th style="width:30px;">No</th>
+                                            <th style="width:150px;">Veri Elemanı Adı</th>
+                                            <th style="width:110px;">Tipi</th>
+                                            <th>Açıklama</th>
+                                            <th style="width:80px;">Zorunlu</th>
+                                            <th style="width:100px;">İlişki</th>
+                                            <th style="width:100px;">Veri Seti</th>
+                                        </tr>
+
+                                            <tr id="col_196116" class="Aktif">
+                                                <td>1</td>
+                                                <td>EK_ODEME_DETAY_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>SBYS tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196117" class="Aktif">
+                                                <td>2</td>
+                                                <td>REFERANS_TABLO_ADI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>G&#246;r&#252;nt&#252;n&#252;n tekil kod bilgisinin alındığı SBYS veri tabanındaki tablo adının bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196118" class="Aktif">
+                                                <td>3</td>
+                                                <td>EK_ODEME_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde g&#246;revli personele &#246;denecek ek &#246;demeye ait kayıtlara ulaşılabilmesi i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11925">VEM_EK_ODEME</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196119" class="Aktif">
+                                                <td>4</td>
+                                                <td>GOREV_NUMARASI</td>
+                                                <td>Tamsayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin aynı ay i&#231;inde birden fazla kadroda g&#246;rev yapması durumunda her g&#246;revi i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından verilen numara bilgisidir. &#214;rneğin ilk kadro g&#246;revi i&#231;in 1, ikinci g&#246;revi i&#231;in 2, diğer g&#246;revi varsa 3 vb.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196120" class="Aktif">
+                                                <td>5</td>
+                                                <td>KADRO_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin kadrosuna ilişkin kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196121" class="Aktif">
+                                                <td>6</td>
+                                                <td>KADRO_KATSAYISI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde g&#246;revli personel i&#231;in maaş hesaplamasında kullanılacak kadrosuna ait katsayı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196122" class="Aktif">
+                                                <td>7</td>
+                                                <td>GIRISIMSEL_ISLEM_PUANI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli hekimler tarafından, hastaya uygulanan tıbbi işlem i&#231;in, T.C Sağlık Bakanlığı tarafından yayımlanan Girişimsel İşlemler Listesinde işlemin karşılığı olan puan bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196123" class="Aktif">
+                                                <td>8</td>
+                                                <td>OZELLIKLI_ISLEM_PUANI</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin uyguladığı tıbbi işlemler i&#231;in aldığı &#246;zellikli işlem puanı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196124" class="Aktif">
+                                                <td>9</td>
+                                                <td>TAVAN_KATSAYISI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin kadrosu i&#231;in tavan katsayısı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196125" class="Aktif">
+                                                <td>10</td>
+                                                <td>CALISILAN_GUN_TOPLAMI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin ilgili kadroda &#231;alışmış olduğu toplam g&#252;n sayısı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196126" class="Aktif">
+                                                <td>11</td>
+                                                <td>CALISILAN_SAAT_TOPLAMI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin ilgili kadroda &#231;alışmış olduğu toplam saat bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196127" class="Aktif">
+                                                <td>12</td>
+                                                <td>AKTIF_CALISILAN_GUN_KATSAYISI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Belirli bir d&#246;nem i&#231;indeki toplam g&#252;n sayısından &#231;alışılmayan g&#252;nlerin &#231;ıkarılması sonucu bulunan &#231;alışılan g&#252;n sayısının, o d&#246;nem i&#231;indeki toplam g&#252;n sayısına b&#246;l&#252;nmesi sonucu bulunan katsayı bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196128" class="Aktif">
+                                                <td>13</td>
+                                                <td>HASTANE_PUAN_ORTALAMASI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personele aylık &#246;denen ek &#246;deme i&#231;in hesaplanan hastane puan ortalaması bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196129" class="Aktif">
+                                                <td>14</td>
+                                                <td>KLINIK_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık tesisinde bulunan kliniklerin Sağlık Bilgi Y&#246;netim Sistemi tarafından gruplandırılması i&#231;in tanımlanmış kod bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11924">VEM_REFERANS_KODLAR</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/24885">KLINIKLER </a></td>
+                                            </tr>
+                                            <tr id="col_196130" class="Aktif">
+                                                <td>15</td>
+                                                <td>KLINIK_PUAN_ORTALAMASI</td>
+                                                <td>GercekSayi</td>
+                                                <td>İlgili klinik i&#231;in ek &#246;deme hesaplamasında kullanılmış puan ortalaması bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196131" class="Aktif">
+                                                <td>16</td>
+                                                <td>BRUT_PERFORMANS_PUANI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin kadro unvan katsayısına g&#246;re hesaplanan puan bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196132" class="Aktif">
+                                                <td>17</td>
+                                                <td>EK_PERFORMANS_PUANI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin asil g&#246;revi dışında başka bir g&#246;rev yapması durumunda aldığı ek puan bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196133" class="Aktif">
+                                                <td>18</td>
+                                                <td>NET_PERFORMANS_PUANI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisindeki personelin t&#252;m ek performans puanların ve br&#252;t performans puanının toplamdır.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196134" class="Aktif">
+                                                <td>19</td>
+                                                <td>EGITICI_DESTEKLEME_PUANI</td>
+                                                <td>GercekSayi</td>
+                                                <td>&#220;&#231;&#252;nc&#252; basamak sağlık tesislerinde, başhekimlik tarafından belirlenen usul &#231;er&#231;evesinde, o d&#246;nem i&#231;inde d&#226;hili klinikler i&#231;in en az 20 saat vizit ve 20 saat poliklinik, cerrahi klinikler i&#231;in 10 saat vizit, 15 saat poliklinik ve 15 saat ameliyat, laboratuvar klinikleri i&#231;in 40 saat pratik eğitim &#231;alışması ve her bir klinik i&#231;in 8 saat teorik asistan eğitim &#231;alışması yapıldığının belgelendirilmesi halinde verilen ek puan bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196135" class="Aktif">
+                                                <td>20</td>
+                                                <td>BILIMSEL_CALISMA_PUANI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin bilimsel &#231;alışma puan bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196136" class="Aktif">
+                                                <td>21</td>
+                                                <td>SERBEST_MESLEK_KATSAYISI</td>
+                                                <td>GercekSayi</td>
+                                                <td>Sağlık tesisinde g&#246;revli personelin varsa serbest meslek katsayısı bilgisini ifade eder.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196137" class="Aktif">
+                                                <td>22</td>
+                                                <td>KAYIT_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık tesisinde &#252;retilen verinin Sağlık Bilgi Y&#246;netim Sistemi&#39;ne ilk defa kayıt edildiği zaman bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196138" class="Aktif">
+                                                <td>23</td>
+                                                <td>EKLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıt edilen bilgilere ilişkin kayıt işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Evet</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196139" class="Aktif">
+                                                <td>24</td>
+                                                <td>GUNCELLEME_ZAMANI</td>
+                                                <td>TarihSaat</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işleminin yapıldığı zaman bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                        <span>-</span>
+                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                            <tr id="col_196140" class="Aktif">
+                                                <td>25</td>
+                                                <td>GUNCELLEYEN_KULLANICI_KODU</td>
+                                                <td>AlfaNumerik</td>
+                                                <td>Sağlık Bilgi Y&#246;netim Sistemi &#252;zerinde kayıtlı bilgilere ilişkin g&#252;ncelleme işlemini ger&#231;ekleştiren kullanıcı i&#231;in Sağlık Bilgi Y&#246;netim Sistemi tarafından &#252;retilen tekil kod bilgisidir.</td>
+                                                <td>Hayır</td>
+                                                <td>
+                                                            <a href="/Gorunum/DetayGorunum/11856">VEM_KULLANICI</a>                                                </td>
+                                                <td><a href="/VeriSeti/Detay/"> </a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_1_2">
+                <div id="iliski" class="tab-pane">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table toggle-square">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Görünüm Adı</th>
+                                            <th>Kolon Adı</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light calendar ">
+    <div class="portlet-title ">
+        <div class="caption">
+            <i class="icon-calendar font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">Görünümün Hareket Geçmişi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:210px;">Hareket Tarihi</th>
+                    <th>Hareket Açıklaması</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="iliskiolustur">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="hidden" id="referansKolon" />
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">İlişki Oluştur</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Görünüm Seçin</label>
+                    <select class="form-control select2" id="GorunumBox">
+                        <option value="0">Lütfen Görüntü Seçin</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Kolon Seçin</label>
+                    <select class="form-control select2" id="KolonBox">
+                        <option value="0">Veri seti seçilmedi</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="iliskiEkle" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>

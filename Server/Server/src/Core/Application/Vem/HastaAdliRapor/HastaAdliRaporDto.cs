@@ -1,0 +1,70 @@
+﻿namespace Server.Application.Vem.HastaAdliRapor;
+
+public class HastaAdliRaporDto
+{
+    public string? HASTA_ADLI_RAPOR_KODU { get; set; }
+    public string? REFERANS_TABLO_ADI { get; set; }
+    public string? HASTA_BASVURU_KODU { get; set; }
+    public string? HASTA_KODU { get; set; }
+    public string? ADLI_RAPOR_TURU { get; set; }
+    public DateTime? RAPOR_ZAMANI { get; set; }
+    public string? ADLI_MUAYENEYE_GONDEREN_KURUM { get; set; }
+    public string? RESMI_YAZI_NUMARASI { get; set; }
+    public DateTime RESMI_YAZI_TARIHI { get; set; }
+    public string? ADLI_MUAYENE_EDILME_NEDENI { get; set; }
+    public string? GUVENLIK_SICIL_NUMARASI { get; set; }
+    public string? GUVENLIK_ADI_SOYADI { get; set; }
+    public DateTime OLAY_ZAMANI { get; set; }
+    public string? ADLI_OLAY_OYKUSU { get; set; }
+    public string? SIKAYET { get; set; }
+    public string? OZGECMISI { get; set; }
+    public string? SOYGECMISI { get; set; }
+    public DateTime MUAYENE_ZAMANI { get; set; }
+    public string? HEKIM_KODU { get; set; }
+    public string? TIBBI_MUDAHALE { get; set; }
+    public string? UYGUN_SART_SAGLANMA_DURUMU { get; set; }
+    public string? UYGUN_SART_ACIKLAMA { get; set; }
+    public string? ELBISE_DURUMU { get; set; }
+    public string? KONSULTASYON_BILGISI { get; set; }
+    public string? LEZYON_BULGULARI { get; set; }
+    public string? SISTEM_BULGULARI { get; set; }
+    public string? BILINC_DURUMU { get; set; }
+    public string? PUPILLA_DEGERLENDIRMESI { get; set; }
+    public string? ISIK_REFLEKSI { get; set; }
+    public string? NABIZ { get; set; }
+    public string? TENDON_REFLEKSI { get; set; }
+    public string? PSIKIYATRIK_MUAYENE { get; set; }
+    public string? PSIKIYATRIK_SONUC { get; set; }
+    public string? HIZMET_ACIKLAMA { get; set; }
+    public string? SEVK_DURUMU { get; set; }
+    public string? SEVK_ACIKLAMA { get; set; }
+    public string? TESLIM_ALAN_ADI_SOYADI { get; set; }
+    public string? TESLIM_ALAN_TC_KIMLIK_NUMARASI { get; set; }
+    public string? VUCUT_DIYAGRAMI { get; set; }
+    public string? ACIKLAMA { get; set; }
+    public string? ADLI_MUAYENE_RIZA_DURUMU { get; set; }
+    public string? RIZA_VEREN_KISI { get; set; }
+    public string? RIZA_VERENIN_YAKINLIK_DERECESI { get; set; }
+    public DateTime SON_CINSEL_ILISKI_TARIHI { get; set; }
+    public string? HAMILELIK_DURUMU { get; set; }
+    public string? HAMILELIK_OYKUSU_ACIKLAMA { get; set; }
+    public string? VENERYAL_HASTALIK_OYKUSU { get; set; }
+    public string? EMOSYONEL_HASTALIK_OYKUSU { get; set; }
+    public string? SOLUNUM { get; set; }
+    public string? ADLI_MUAYENE_NOTU { get; set; }
+    public string? ALINAN_MATERYAL { get; set; }
+    public string? MUAYENEDEKI_KISI_BILGISI { get; set; }
+    public string? MUAYENEDEKI_KISI_ACIKLAMA { get; set; }
+    public string? ALKOL_KULLANIMI { get; set; }
+    public string? SIDDET_TEHDIT_BILGISI { get; set; }
+    public string? SILAH_ALET_BILGISI { get; set; }
+    public string? HAYATI_TEHLIKE_DURUMU { get; set; }
+    public string? SISTOLIK_KAN_BASINCI_DEGERI { get; set; }
+    public string? DIASTOLIK_KAN_BASINCI_DEGERI { get; set; }
+    public DateTime IPTAL_ZAMANI { get; set; }
+    public string? IPTAL_EDEN_KULLANICI_KODU { get; set; }
+    public string? ADLI_RAPOR_IPTAL_GEREKCESI { get; set; }
+    public string? ONAYLAYAN_KULLANICI_KODU { get; set; }
+    public DateTime ADLI_RAPOR_ONAYLANMA_ZAMANI { get; set; }
+}
+
