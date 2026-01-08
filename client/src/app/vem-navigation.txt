@@ -1,0 +1,667 @@
+// VEM Navigation Items - Add these to app-navigation.ts navigation array
+
+  // =====================================================
+  // VEM - Veri Entegrasyon Merkezi
+  // =====================================================
+  {
+    text: 'VEM.AmeliyatveIslemler',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Ameliyat',
+        path: '/vem/ameliyat',
+      },
+      {
+        text: 'Ameliyat Ekip',
+        path: '/vem/ameliyat-ekip',
+      },
+      {
+        text: 'Ameliyat Islem',
+        path: '/vem/ameliyat-islem',
+      },
+      {
+        text: 'Hemsire Bakim',
+        path: '/vem/hemsire-bakim',
+      },
+      {
+        text: 'Klinik Seyir',
+        path: '/vem/klinik-seyir',
+      },
+      {
+        text: 'Konsultasyon',
+        path: '/vem/konsultasyon',
+      },
+      {
+        text: 'Tibbi Order',
+        path: '/vem/tibbi-order',
+      },
+      {
+        text: 'Tibbi Order Detay',
+        path: '/vem/tibbi-order-detay',
+      },
+    ],
+  },
+  {
+    text: 'VEM.HastaIslemleri',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Anlik Yatan Hasta',
+        path: '/vem/anlik-yatan-hasta',
+      },
+      {
+        text: 'Hasta',
+        path: '/vem/hasta',
+      },
+      {
+        text: 'Hasta Adli Rapor',
+        path: '/vem/hasta-adli-rapor',
+      },
+      {
+        text: 'Hasta Arsiv',
+        path: '/vem/hasta-arsiv',
+      },
+      {
+        text: 'Hasta Arsiv Detay',
+        path: '/vem/hasta-arsiv-detay',
+      },
+      {
+        text: 'Hasta Basvuru',
+        path: '/vem/hasta-basvuru',
+      },
+      {
+        text: 'Hasta Borc',
+        path: '/vem/hasta-borc',
+      },
+      {
+        text: 'Hasta Dis',
+        path: '/vem/hasta-dis',
+      },
+      {
+        text: 'Hasta Epikriz',
+        path: '/vem/hasta-epikriz',
+      },
+      {
+        text: 'Hasta Fotograf',
+        path: '/vem/hasta-fotograf',
+      },
+      {
+        text: 'Hasta Gizlilik',
+        path: '/vem/hasta-gizlilik',
+      },
+      {
+        text: 'Hasta Hizmet',
+        path: '/vem/hasta-hizmet',
+      },
+      {
+        text: 'Hasta Iletisim',
+        path: '/vem/hasta-iletisim',
+      },
+      {
+        text: 'Hasta Malzeme',
+        path: '/vem/hasta-malzeme',
+      },
+      {
+        text: 'Hasta Notlari',
+        path: '/vem/hasta-notlari',
+      },
+      {
+        text: 'Hasta Olum',
+        path: '/vem/hasta-olum',
+      },
+      {
+        text: 'Hasta Seans',
+        path: '/vem/hasta-seans',
+      },
+      {
+        text: 'Hasta Sevk',
+        path: '/vem/hasta-sevk',
+      },
+      {
+        text: 'Hasta Tibbi Bilgi',
+        path: '/vem/hasta-tibbi-bilgi',
+      },
+      {
+        text: 'Hasta Uyari',
+        path: '/vem/hasta-uyari',
+      },
+      {
+        text: 'Hasta Ventilator',
+        path: '/vem/hasta-ventilator',
+      },
+      {
+        text: 'Hasta Vital Fiziki Bulgu',
+        path: '/vem/hasta-vital-fiziki-bulgu',
+      },
+      {
+        text: 'Hasta Yatak',
+        path: '/vem/hasta-yatak',
+      },
+    ],
+  },
+  {
+    text: 'VEM.LaboratuvarveTetkik',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Antibiyotik Sonuc',
+        path: '/vem/antibiyotik-sonuc',
+      },
+      {
+        text: 'Bakteri Sonuc',
+        path: '/vem/bakteri-sonuc',
+      },
+      {
+        text: 'Patoloji',
+        path: '/vem/patoloji',
+      },
+      {
+        text: 'Radyoloji',
+        path: '/vem/radyoloji',
+      },
+      {
+        text: 'Radyoloji Sonuc',
+        path: '/vem/radyoloji-sonuc',
+      },
+      {
+        text: 'Tetkik',
+        path: '/vem/tetkik',
+      },
+      {
+        text: 'Tetkik Cihaz Eslesme',
+        path: '/vem/tetkik-cihaz-eslesme',
+      },
+      {
+        text: 'Tetkik Numune',
+        path: '/vem/tetkik-numune',
+      },
+      {
+        text: 'Tetkik Parametre',
+        path: '/vem/tetkik-parametre',
+      },
+      {
+        text: 'Tetkik Referans Aralik',
+        path: '/vem/tetkik-referans-aralik',
+      },
+      {
+        text: 'Tetkik Sonuc',
+        path: '/vem/tetkik-sonuc',
+      },
+    ],
+  },
+  {
+    text: 'VEM.DogumveBebek',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Asi Bilgisi',
+        path: '/vem/asi-bilgisi',
+      },
+      {
+        text: 'Dogum',
+        path: '/vem/dogum',
+      },
+      {
+        text: 'Dogum Detay',
+        path: '/vem/dogum-detay',
+      },
+    ],
+  },
+  {
+    text: 'VEM.KurumveTanimlar',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Basvuru Tani',
+        path: '/vem/basvuru-tani',
+      },
+      {
+        text: 'Basvuru Yemek',
+        path: '/vem/basvuru-yemek',
+      },
+      {
+        text: 'Bina',
+        path: '/vem/bina',
+      },
+      {
+        text: 'Birim',
+        path: '/vem/birim',
+      },
+      {
+        text: 'Cihaz',
+        path: '/vem/cihaz',
+      },
+      {
+        text: 'Firma',
+        path: '/vem/firma',
+      },
+      {
+        text: 'Grup Uyelik',
+        path: '/vem/grup-uyelik',
+      },
+      {
+        text: 'Hizmet',
+        path: '/vem/hizmet',
+      },
+      {
+        text: 'Kullanici',
+        path: '/vem/kullanici',
+      },
+      {
+        text: 'Kullanici Grup',
+        path: '/vem/kullanici-grup',
+      },
+      {
+        text: 'Kurum',
+        path: '/vem/kurum',
+      },
+      {
+        text: 'Oda',
+        path: '/vem/oda',
+      },
+      {
+        text: 'Randevu',
+        path: '/vem/randevu',
+      },
+      {
+        text: 'Referans Kodlar',
+        path: '/vem/referans-kodlar',
+      },
+      {
+        text: 'Silinen Kayitlar',
+        path: '/vem/silinen-kayitlar',
+      },
+      {
+        text: 'Sys Paket',
+        path: '/vem/sys-paket',
+      },
+      {
+        text: 'Yatak',
+        path: '/vem/yatak',
+      },
+    ],
+  },
+  {
+    text: 'VEM.IzlemveTakip',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Bebek Cocuk Izlem',
+        path: '/vem/bebek-cocuk-izlem',
+      },
+      {
+        text: 'Cocuk Diyabet',
+        path: '/vem/cocuk-diyabet',
+      },
+      {
+        text: 'Diyabet',
+        path: '/vem/diyabet',
+      },
+      {
+        text: 'Evde Saglik Izlem',
+        path: '/vem/evde-saglik-izlem',
+      },
+      {
+        text: 'Gebe Izlem',
+        path: '/vem/gebe-izlem',
+      },
+      {
+        text: 'Getat',
+        path: '/vem/getat',
+      },
+      {
+        text: 'Hemoglobinopati',
+        path: '/vem/hemoglobinopati',
+      },
+      {
+        text: 'Intihar Izlem',
+        path: '/vem/intihar-izlem',
+      },
+      {
+        text: 'Kadin Izlem',
+        path: '/vem/kadin-izlem',
+      },
+      {
+        text: 'Kuduz Izlem',
+        path: '/vem/kuduz-izlem',
+      },
+      {
+        text: 'Lohusa Izlem',
+        path: '/vem/lohusa-izlem',
+      },
+      {
+        text: 'Madde Bagimliligi',
+        path: '/vem/madde-bagimliligi',
+      },
+      {
+        text: 'Obezite Izlem',
+        path: '/vem/obezite-izlem',
+      },
+      {
+        text: 'Risk Skorlama',
+        path: '/vem/risk-skorlama',
+      },
+      {
+        text: 'Risk Skorlama Detay',
+        path: '/vem/risk-skorlama-detay',
+      },
+    ],
+  },
+  {
+    text: 'VEM.KurulveRaporlar',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Bildirimi Zorunlu',
+        path: '/vem/bildirimi-zorunlu',
+      },
+      {
+        text: 'Kurul',
+        path: '/vem/kurul',
+      },
+      {
+        text: 'Kurul Askeri',
+        path: '/vem/kurul-askeri',
+      },
+      {
+        text: 'Kurul Engelli',
+        path: '/vem/kurul-engelli',
+      },
+      {
+        text: 'Kurul Etken Madde',
+        path: '/vem/kurul-etken-madde',
+      },
+      {
+        text: 'Kurul Hekim',
+        path: '/vem/kurul-hekim',
+      },
+      {
+        text: 'Kurul Rapor',
+        path: '/vem/kurul-rapor',
+      },
+      {
+        text: 'Kurul Teshis',
+        path: '/vem/kurul-teshis',
+      },
+    ],
+  },
+  {
+    text: 'VEM.StokYonetimi',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Depo',
+        path: '/vem/depo',
+      },
+      {
+        text: 'Stok Durum',
+        path: '/vem/stok-durum',
+      },
+      {
+        text: 'Stok Ehu Takip',
+        path: '/vem/stok-ehu-takip',
+      },
+      {
+        text: 'Stok Fis',
+        path: '/vem/stok-fis',
+      },
+      {
+        text: 'Stok Hareket',
+        path: '/vem/stok-hareket',
+      },
+      {
+        text: 'Stok Istek',
+        path: '/vem/stok-istek',
+      },
+      {
+        text: 'Stok Istek Hareket',
+        path: '/vem/stok-istek-hareket',
+      },
+      {
+        text: 'Stok Istek Uygulama',
+        path: '/vem/stok-istek-uygulama',
+      },
+      {
+        text: 'Stok Kart',
+        path: '/vem/stok-kart',
+      },
+    ],
+  },
+  {
+    text: 'VEM.DisIslemleri',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Dis Taahhut',
+        path: '/vem/dis-taahhut',
+      },
+      {
+        text: 'Dis Taahhut Detay',
+        path: '/vem/dis-taahhut-detay',
+      },
+      {
+        text: 'Disprotez',
+        path: '/vem/disprotez',
+      },
+      {
+        text: 'Disprotez Detay',
+        path: '/vem/disprotez-detay',
+      },
+      {
+        text: 'Ortodonti Icon Skor',
+        path: '/vem/ortodonti-icon-skor',
+      },
+    ],
+  },
+  {
+    text: 'VEM.Personel',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Doktor Mesaji',
+        path: '/vem/doktor-mesaji',
+      },
+      {
+        text: 'Nobetci Personel Bilgisi',
+        path: '/vem/nobetci-personel-bilgisi',
+      },
+      {
+        text: 'Personel',
+        path: '/vem/personel',
+      },
+      {
+        text: 'Personel Bakmakla Yukumlu',
+        path: '/vem/personel-bakmakla-yukumlu',
+      },
+      {
+        text: 'Personel Banka',
+        path: '/vem/personel-banka',
+      },
+      {
+        text: 'Personel Bordro',
+        path: '/vem/personel-bordro',
+      },
+      {
+        text: 'Personel Bordro Sondurum',
+        path: '/vem/personel-bordro-sondurum',
+      },
+      {
+        text: 'Personel Egitim',
+        path: '/vem/personel-egitim',
+      },
+      {
+        text: 'Personel Gorevlendirme',
+        path: '/vem/personel-gorevlendirme',
+      },
+      {
+        text: 'Personel Izin',
+        path: '/vem/personel-izin',
+      },
+      {
+        text: 'Personel Izin Durumu',
+        path: '/vem/personel-izin-durumu',
+      },
+      {
+        text: 'Personel Odul Ceza',
+        path: '/vem/personel-odul-ceza',
+      },
+      {
+        text: 'Personel Ogrenim',
+        path: '/vem/personel-ogrenim',
+      },
+      {
+        text: 'Personel Yandal',
+        path: '/vem/personel-yandal',
+      },
+    ],
+  },
+  {
+    text: 'VEM.FaturaveOdeme',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Ek Odeme',
+        path: '/vem/ek-odeme',
+      },
+      {
+        text: 'Ek Odeme Detay',
+        path: '/vem/ek-odeme-detay',
+      },
+      {
+        text: 'Ek Odeme Donem',
+        path: '/vem/ek-odeme-donem',
+      },
+      {
+        text: 'Fatura',
+        path: '/vem/fatura',
+      },
+      {
+        text: 'Icmal',
+        path: '/vem/icmal',
+      },
+      {
+        text: 'Medula Takip',
+        path: '/vem/medula-takip',
+      },
+      {
+        text: 'Vezne',
+        path: '/vem/vezne',
+      },
+      {
+        text: 'Vezne Detay',
+        path: '/vem/vezne-detay',
+      },
+    ],
+  },
+  {
+    text: 'VEM.ReceteveIlac',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Ilac Uyum',
+        path: '/vem/ilac-uyum',
+      },
+      {
+        text: 'Optik Recete',
+        path: '/vem/optik-recete',
+      },
+      {
+        text: 'Recete',
+        path: '/vem/recete',
+      },
+      {
+        text: 'Recete Ilac',
+        path: '/vem/recete-ilac',
+      },
+      {
+        text: 'Recete Ilac Aciklama',
+        path: '/vem/recete-ilac-aciklama',
+      },
+    ],
+  },
+  {
+    text: 'VEM.KanMerkezi',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Kan Bagisci',
+        path: '/vem/kan-bagisci',
+      },
+      {
+        text: 'Kan Cikis',
+        path: '/vem/kan-cikis',
+      },
+      {
+        text: 'Kan Stok',
+        path: '/vem/kan-stok',
+      },
+      {
+        text: 'Kan Talep',
+        path: '/vem/kan-talep',
+      },
+      {
+        text: 'Kan Talep Detay',
+        path: '/vem/kan-talep-detay',
+      },
+      {
+        text: 'Kan Urun',
+        path: '/vem/kan-urun',
+      },
+      {
+        text: 'Kan Urun Imha',
+        path: '/vem/kan-urun-imha',
+      },
+    ],
+  },
+  {
+    text: 'VEM.Sterilizasyon',
+    icon: 'folder',
+    path: '',
+    items: [
+      {
+        text: 'Sterilizasyon Cikis',
+        path: '/vem/sterilizasyon-cikis',
+      },
+      {
+        text: 'Sterilizasyon Giris',
+        path: '/vem/sterilizasyon-giris',
+      },
+      {
+        text: 'Sterilizasyon Paket',
+        path: '/vem/sterilizasyon-paket',
+      },
+      {
+        text: 'Sterilizasyon Paket Detay',
+        path: '/vem/sterilizasyon-paket-detay',
+      },
+      {
+        text: 'Sterilizasyon Set',
+        path: '/vem/sterilizasyon-set',
+      },
+      {
+        text: 'Sterilizasyon Set Detay',
+        path: '/vem/sterilizasyon-set-detay',
+      },
+      {
+        text: 'Sterilizasyon Stok Durum',
+        path: '/vem/sterilizasyon-stok-durum',
+      },
+      {
+        text: 'Sterilizasyon Yikama',
+        path: '/vem/sterilizasyon-yikama',
+      },
+    ],
+  },

@@ -1,0 +1,192 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">SterilizasyonSet</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-sterilizasyon-set-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="sterilizasyonSetKodu" caption="Sterilizasyon Set Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="depoKodu" caption="Depo Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="sterilizasyonPaketKodu" caption="Sterilizasyon Paket Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="barkod" caption="Barkod" [width]="150"></dxi-column>
+    <dxi-column dataField="barkodBasanKullaniciKodu" caption="Barkod Basan Kullanici Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="barkodZamani" caption="Barkod Zamani" dataType="date" format="dd.MM.yyyy" [width]="100"></dxi-column>
+    <dxi-column dataField="cihazKodu" caption="Cihaz Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="sterilizasyonCevrimNumarasi" caption="Sterilizasyon Cevrim Numarasi" [width]="150"></dxi-column>
+    <dxi-column dataField="setIadeDurumu" caption="Set Iade Durumu" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sterilizasyon Set Kodu *</label>
+        <dx-text-box [(value)]="formData.sterilizasyonSetKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Depo Kodu *</label>
+        <dx-text-box [(value)]="formData.depoKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sterilizasyon Paket Kodu *</label>
+        <dx-text-box [(value)]="formData.sterilizasyonPaketKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Barkod *</label>
+        <dx-text-box [(value)]="formData.barkod" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Barkod Basan Kullanici Kodu *</label>
+        <dx-text-box [(value)]="formData.barkodBasanKullaniciKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Barkod Zamani *</label>
+        <dx-date-box [(value)]="formData.barkodZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Cihaz Kodu *</label>
+        <dx-text-box [(value)]="formData.cihazKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sterilizasyon Cevrim Numarasi *</label>
+        <dx-text-box [(value)]="formData.sterilizasyonCevrimNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Set Iade Durumu *</label>
+        <dx-text-box [(value)]="formData.setIadeDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Set Iade Zamani *</label>
+        <dx-date-box [(value)]="formData.setIadeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Set Iade Eden Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.setIadeEdenPersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Set Iade Alan Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.setIadeAlanPersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Paket Raf Omru Bitis Tarihi *</label>
+        <dx-date-box [(value)]="formData.paketRafOmruBitisTarihi" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Paketleyen Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.paketleyenPersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Islem Zamani </label>
+        <dx-date-box [(value)]="formData.islemZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sterilizasyon Baslama Zamani </label>
+        <dx-date-box [(value)]="formData.sterilizasyonBaslamaZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sterilizasyon Bitis Zamani *</label>
+        <dx-date-box [(value)]="formData.sterilizasyonBitisZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sterilizasyon Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.sterilizasyonPersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Aciklama *</label>
+        <dx-text-box [(value)]="formData.aciklama" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

@@ -43,7 +43,10 @@ export class LoginFormComponent implements OnInit {
 
   loading = false;
 
-  formData: any = {};
+  formData: any = {
+    email: 'admin@root.com',
+    password: '123Pa$$word!'
+  };
 
   passwordEditorOptions = {
     placeholder: 'Password',

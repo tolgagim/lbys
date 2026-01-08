@@ -1,0 +1,158 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">KurulAskeri</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-kurul-askeri-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="kurulAskeriKodu" caption="Kurul Askeri Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="kurulAdi" caption="Kurul Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="medulaRaporTuru" caption="Medula Rapor Turu" [width]="150"></dxi-column>
+    <dxi-column dataField="medulaAltRaporTuru" caption="Medula Alt Rapor Turu" [width]="150"></dxi-column>
+    <dxi-column dataField="alkolMaddeBagimliligi" caption="Alkol Madde Bagimliligi" [width]="150"></dxi-column>
+    <dxi-column dataField="bedenRuhIleriTetkikBulgusu" caption="Beden Ruh Ileri Tetkik Bulgusu" [width]="150"></dxi-column>
+    <dxi-column dataField="gecmisHastaligaDairKayit" caption="Gecmis Hastaliga Dair Kayit" [width]="150"></dxi-column>
+    <dxi-column dataField="gormeIsitmeKaybi" caption="Gorme Isitme Kaybi" [width]="150"></dxi-column>
+    <dxi-column dataField="psikiyatrikRahatsizlik" caption="Psikiyatrik Rahatsizlik" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kurul Askeri Kodu *</label>
+        <dx-text-box [(value)]="formData.kurulAskeriKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kurul Adi *</label>
+        <dx-text-box [(value)]="formData.kurulAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Medula Rapor Turu *</label>
+        <dx-text-box [(value)]="formData.medulaRaporTuru" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Medula Alt Rapor Turu *</label>
+        <dx-text-box [(value)]="formData.medulaAltRaporTuru" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Alkol Madde Bagimliligi *</label>
+        <dx-text-box [(value)]="formData.alkolMaddeBagimliligi" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Beden Ruh Ileri Tetkik Bulgusu *</label>
+        <dx-text-box [(value)]="formData.bedenRuhIleriTetkikBulgusu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Gecmis Hastaliga Dair Kayit *</label>
+        <dx-text-box [(value)]="formData.gecmisHastaligaDairKayit" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Gorme Isitme Kaybi *</label>
+        <dx-text-box [(value)]="formData.gormeIsitmeKaybi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Psikiyatrik Rahatsizlik *</label>
+        <dx-text-box [(value)]="formData.psikiyatrikRahatsizlik" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Uzuvkaybi Ortopedi Rahatsizlik *</label>
+        <dx-text-box [(value)]="formData.uzuvkaybiOrtopediRahatsizlik" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Asal Hastalik *</label>
+        <dx-text-box [(value)]="formData.asalHastalik" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Asal Hastalik Tipi *</label>
+        <dx-text-box [(value)]="formData.asalHastalikTipi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

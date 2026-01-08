@@ -10,7 +10,10 @@
       "Bash(timeout 60 dotnet run:*)",
       "Bash(curl:*)",
       "Bash(powershell:*)",
-      "Bash(start http://localhost:5000/swagger)"
+      "Bash(start http://localhost:5000/swagger)",
+      "Bash(cat:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm start)"
     ]
   }
 }

@@ -1,0 +1,162 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">KanUrun</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-kan-urun-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="kanUrunKodu" caption="Kan Urun Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="kanUrunAdi" caption="Kan Urun Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="hizmetKodu" caption="Hizmet Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="kanMiatSuresi" caption="Kan Miat Suresi" [width]="150"></dxi-column>
+    <dxi-column dataField="kanMiatPeriyodu" caption="Kan Miat Periyodu" [width]="150"></dxi-column>
+    <dxi-column dataField="kizilayBilesenTuru" caption="Kizilay Bilesen Turu" [width]="150"></dxi-column>
+    <dxi-column dataField="kanFiltrelemeUygunluk" caption="Kan Filtreleme Uygunluk" [width]="150"></dxi-column>
+    <dxi-column dataField="kanYikamaUygunlukDurumu" caption="Kan Yikama Uygunluk Durumu" [width]="150"></dxi-column>
+    <dxi-column dataField="kanIsinlamaUygunlukDurumu" caption="Kan Isinlama Uygunluk Durumu" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Urun Kodu *</label>
+        <dx-text-box [(value)]="formData.kanUrunKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Urun Adi *</label>
+        <dx-text-box [(value)]="formData.kanUrunAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hizmet Kodu *</label>
+        <dx-text-box [(value)]="formData.hizmetKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Miat Suresi *</label>
+        <dx-text-box [(value)]="formData.kanMiatSuresi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Miat Periyodu *</label>
+        <dx-text-box [(value)]="formData.kanMiatPeriyodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kizilay Bilesen Turu *</label>
+        <dx-text-box [(value)]="formData.kizilayBilesenTuru" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Filtreleme Uygunluk *</label>
+        <dx-text-box [(value)]="formData.kanFiltrelemeUygunluk" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Yikama Uygunluk Durumu *</label>
+        <dx-text-box [(value)]="formData.kanYikamaUygunlukDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Isinlama Uygunluk Durumu *</label>
+        <dx-text-box [(value)]="formData.kanIsinlamaUygunlukDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Havuzlama Uygunluk *</label>
+        <dx-text-box [(value)]="formData.kanHavuzlamaUygunluk" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Ayirma Uygunluk *</label>
+        <dx-text-box [(value)]="formData.kanAyirmaUygunluk" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kan Bolme Uygunluk *</label>
+        <dx-text-box [(value)]="formData.kanBolmeUygunluk" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Buffycoat Uzaklastirmaya Uygun *</label>
+        <dx-text-box [(value)]="formData.buffycoatUzaklastirmayaUygun" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

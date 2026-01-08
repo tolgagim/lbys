@@ -1,0 +1,707 @@
+// VEM Routes - Add these to app-routing.module.ts routes array (inside SideNavOuterToolbarComponent children)
+
+      {
+        path: 'vem/ameliyat',
+        component: AmeliyatComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ameliyat-ekip',
+        component: AmeliyatEkipComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ameliyat-islem',
+        component: AmeliyatIslemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/anlik-yatan-hasta',
+        component: AnlikYatanHastaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/antibiyotik-sonuc',
+        component: AntibiyotikSonucComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/asi-bilgisi',
+        component: AsiBilgisiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/bakteri-sonuc',
+        component: BakteriSonucComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/basvuru-tani',
+        component: BasvuruTaniComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/basvuru-yemek',
+        component: BasvuruYemekComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/bebek-cocuk-izlem',
+        component: BebekCocukIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/bildirimi-zorunlu',
+        component: BildirimiZorunluComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/bina',
+        component: BinaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/birim',
+        component: BirimComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/cihaz',
+        component: CihazComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/cocuk-diyabet',
+        component: CocukDiyabetComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/depo',
+        component: DepoComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/dis-taahhut',
+        component: DisTaahhutComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/dis-taahhut-detay',
+        component: DisTaahhutDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/disprotez',
+        component: DisprotezComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/disprotez-detay',
+        component: DisprotezDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/diyabet',
+        component: DiyabetComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/dogum',
+        component: DogumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/dogum-detay',
+        component: DogumDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/doktor-mesaji',
+        component: DoktorMesajiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ek-odeme',
+        component: EkOdemeComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ek-odeme-detay',
+        component: EkOdemeDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ek-odeme-donem',
+        component: EkOdemeDonemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/evde-saglik-izlem',
+        component: EvdeSaglikIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/fatura',
+        component: FaturaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/firma',
+        component: FirmaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/gebe-izlem',
+        component: GebeIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/getat',
+        component: GetatComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/grup-uyelik',
+        component: GrupUyelikComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta',
+        component: HastaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-adli-rapor',
+        component: HastaAdliRaporComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-arsiv',
+        component: HastaArsivComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-arsiv-detay',
+        component: HastaArsivDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-basvuru',
+        component: HastaBasvuruComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-borc',
+        component: HastaBorcComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-dis',
+        component: HastaDisComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-epikriz',
+        component: HastaEpikrizComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-fotograf',
+        component: HastaFotografComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-gizlilik',
+        component: HastaGizlilikComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-hizmet',
+        component: HastaHizmetComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-iletisim',
+        component: HastaIletisimComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-malzeme',
+        component: HastaMalzemeComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-notlari',
+        component: HastaNotlariComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-olum',
+        component: HastaOlumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-seans',
+        component: HastaSeansComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-sevk',
+        component: HastaSevkComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-tibbi-bilgi',
+        component: HastaTibbiBilgiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-uyari',
+        component: HastaUyariComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-ventilator',
+        component: HastaVentilatorComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-vital-fiziki-bulgu',
+        component: HastaVitalFizikiBulguComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hasta-yatak',
+        component: HastaYatakComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hemoglobinopati',
+        component: HemoglobinopatiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hemsire-bakim',
+        component: HemsireBakimComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/hizmet',
+        component: HizmetComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/icmal',
+        component: IcmalComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ilac-uyum',
+        component: IlacUyumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/intihar-izlem',
+        component: IntiharIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kadin-izlem',
+        component: KadinIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-bagisci',
+        component: KanBagisciComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-cikis',
+        component: KanCikisComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-stok',
+        component: KanStokComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-talep',
+        component: KanTalepComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-talep-detay',
+        component: KanTalepDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-urun',
+        component: KanUrunComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kan-urun-imha',
+        component: KanUrunImhaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/klinik-seyir',
+        component: KlinikSeyirComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/konsultasyon',
+        component: KonsultasyonComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kuduz-izlem',
+        component: KuduzIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kullanici',
+        component: KullaniciComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kullanici-grup',
+        component: KullaniciGrupComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul',
+        component: KurulComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul-askeri',
+        component: KurulAskeriComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul-engelli',
+        component: KurulEngelliComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul-etken-madde',
+        component: KurulEtkenMaddeComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul-hekim',
+        component: KurulHekimComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul-rapor',
+        component: KurulRaporComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurul-teshis',
+        component: KurulTeshisComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/kurum',
+        component: KurumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/lohusa-izlem',
+        component: LohusaIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/madde-bagimliligi',
+        component: MaddeBagimliligiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/medula-takip',
+        component: MedulaTakipComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/nobetci-personel-bilgisi',
+        component: NobetciPersonelBilgisiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/obezite-izlem',
+        component: ObeziteIzlemComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/oda',
+        component: OdaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/optik-recete',
+        component: OptikReceteComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/ortodonti-icon-skor',
+        component: OrtodontiIconSkorComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/patoloji',
+        component: PatolojiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel',
+        component: PersonelComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-bakmakla-yukumlu',
+        component: PersonelBakmaklaYukumluComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-banka',
+        component: PersonelBankaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-bordro',
+        component: PersonelBordroComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-bordro-sondurum',
+        component: PersonelBordroSondurumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-egitim',
+        component: PersonelEgitimComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-gorevlendirme',
+        component: PersonelGorevlendirmeComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-izin',
+        component: PersonelIzinComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-izin-durumu',
+        component: PersonelIzinDurumuComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-odul-ceza',
+        component: PersonelOdulCezaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-ogrenim',
+        component: PersonelOgrenimComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/personel-yandal',
+        component: PersonelYandalComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/radyoloji',
+        component: RadyolojiComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/radyoloji-sonuc',
+        component: RadyolojiSonucComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/randevu',
+        component: RandevuComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/recete',
+        component: ReceteComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/recete-ilac',
+        component: ReceteIlacComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/recete-ilac-aciklama',
+        component: ReceteIlacAciklamaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/referans-kodlar',
+        component: ReferansKodlarComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/risk-skorlama',
+        component: RiskSkorlamaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/risk-skorlama-detay',
+        component: RiskSkorlamaDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/silinen-kayitlar',
+        component: SilinenKayitlarComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-cikis',
+        component: SterilizasyonCikisComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-giris',
+        component: SterilizasyonGirisComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-paket',
+        component: SterilizasyonPaketComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-paket-detay',
+        component: SterilizasyonPaketDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-set',
+        component: SterilizasyonSetComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-set-detay',
+        component: SterilizasyonSetDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-stok-durum',
+        component: SterilizasyonStokDurumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sterilizasyon-yikama',
+        component: SterilizasyonYikamaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-durum',
+        component: StokDurumComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-ehu-takip',
+        component: StokEhuTakipComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-fis',
+        component: StokFisComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-hareket',
+        component: StokHareketComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-istek',
+        component: StokIstekComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-istek-hareket',
+        component: StokIstekHareketComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-istek-uygulama',
+        component: StokIstekUygulamaComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/stok-kart',
+        component: StokKartComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/sys-paket',
+        component: SysPaketComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tetkik',
+        component: TetkikComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tetkik-cihaz-eslesme',
+        component: TetkikCihazEslesmeComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tetkik-numune',
+        component: TetkikNumuneComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tetkik-parametre',
+        component: TetkikParametreComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tetkik-referans-aralik',
+        component: TetkikReferansAralikComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tetkik-sonuc',
+        component: TetkikSonucComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tibbi-order',
+        component: TibbiOrderComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/tibbi-order-detay',
+        component: TibbiOrderDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/vezne',
+        component: VezneComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/vezne-detay',
+        component: VezneDetayComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'vem/yatak',
+        component: YatakComponent,
+        canActivate: [AuthGuardService],
+      },

@@ -1,0 +1,192 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">HastaSevk</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-hasta-sevk-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="hastaSevkKodu" caption="Hasta Sevk Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaKodu" caption="Hasta Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaBasvuruKodu" caption="Hasta Basvuru Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="sevkTakipNumarasi" caption="Sevk Takip Numarasi" [width]="150"></dxi-column>
+    <dxi-column dataField="sevkNedeni" caption="Sevk Nedeni" [width]="150"></dxi-column>
+    <dxi-column dataField="sevkEdilenBransKodu" caption="Sevk Edilen Brans Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="sevkEdilenKurumKodu" caption="Sevk Edilen Kurum Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="sevkZamani" caption="Sevk Zamani" dataType="date" format="dd.MM.yyyy" [width]="100"></dxi-column>
+    <dxi-column dataField="sevkTanisi" caption="Sevk Tanisi" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Sevk Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaSevkKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Basvuru Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaBasvuruKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Takip Numarasi *</label>
+        <dx-text-box [(value)]="formData.sevkTakipNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Nedeni *</label>
+        <dx-text-box [(value)]="formData.sevkNedeni" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Edilen Brans Kodu *</label>
+        <dx-text-box [(value)]="formData.sevkEdilenBransKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Edilen Kurum Kodu *</label>
+        <dx-text-box [(value)]="formData.sevkEdilenKurumKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Zamani </label>
+        <dx-date-box [(value)]="formData.sevkZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Tanisi *</label>
+        <dx-text-box [(value)]="formData.sevkTanisi" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Sekli *</label>
+        <dx-text-box [(value)]="formData.sevkSekli" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Vasitasi Kodu *</label>
+        <dx-text-box [(value)]="formData.sevkVasitasiKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Tedavi Tipi *</label>
+        <dx-text-box [(value)]="formData.sevkTedaviTipi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Aciklama *</label>
+        <dx-text-box [(value)]="formData.sevkAciklama" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Eden 1 Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.sevkEden1PersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Eden 2 Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.sevkEden2PersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sevk Eden 3 Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.sevkEden3PersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Refakatci Durumu *</label>
+        <dx-text-box [(value)]="formData.refakatciDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Medula E Sevk Numarasi *</label>
+        <dx-text-box [(value)]="formData.medulaESevkNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ambulans Protokol Numarasi *</label>
+        <dx-text-box [(value)]="formData.ambulansProtokolNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

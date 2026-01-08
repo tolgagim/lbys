@@ -1,0 +1,498 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">PersonelBordro</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-personel-bordro-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="personelBordroKodu" caption="Personel Bordro Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="yil" caption="Yil" [width]="150"></dxi-column>
+    <dxi-column dataField="ay" caption="Ay" [width]="150"></dxi-column>
+    <dxi-column dataField="personelKodu" caption="Personel Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="bordroTuru" caption="Bordro Turu" [width]="150"></dxi-column>
+    <dxi-column dataField="bordroNumarasi" caption="Bordro Numarasi" [width]="150"></dxi-column>
+    <dxi-column dataField="maasDerecesi" caption="Maas Derecesi" [width]="150"></dxi-column>
+    <dxi-column dataField="maasKademesi" caption="Maas Kademesi" [width]="150"></dxi-column>
+    <dxi-column dataField="maasGostergesi" caption="Maas Gostergesi" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Personel Bordro Kodu *</label>
+        <dx-text-box [(value)]="formData.personelBordroKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Yil *</label>
+        <dx-text-box [(value)]="formData.yil" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ay *</label>
+        <dx-text-box [(value)]="formData.ay" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.personelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bordro Turu *</label>
+        <dx-text-box [(value)]="formData.bordroTuru" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Bordro Numarasi *</label>
+        <dx-text-box [(value)]="formData.bordroNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Maas Derecesi *</label>
+        <dx-text-box [(value)]="formData.maasDerecesi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Maas Kademesi *</label>
+        <dx-text-box [(value)]="formData.maasKademesi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Maas Gostergesi *</label>
+        <dx-text-box [(value)]="formData.maasGostergesi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Maas Ek Gostergesi *</label>
+        <dx-text-box [(value)]="formData.maasEkGostergesi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Emekli Derecesi *</label>
+        <dx-text-box [(value)]="formData.emekliDerecesi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Emekli Kademesi *</label>
+        <dx-text-box [(value)]="formData.emekliKademesi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Emekli Gostergesi *</label>
+        <dx-text-box [(value)]="formData.emekliGostergesi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Emekli Ek Gostergesi *</label>
+        <dx-text-box [(value)]="formData.emekliEkGostergesi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Taban Aylik Tutari *</label>
+        <dx-text-box [(value)]="formData.tabanAylikTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Aylik Tutari *</label>
+        <dx-text-box [(value)]="formData.aylikTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kidem Tutari *</label>
+        <dx-text-box [(value)]="formData.kidemTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ek Gosterge Tutari *</label>
+        <dx-text-box [(value)]="formData.ekGostergeTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Yan Odeme Tutari *</label>
+        <dx-text-box [(value)]="formData.yanOdemeTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ozel Hizmet Tutari *</label>
+        <dx-text-box [(value)]="formData.ozelHizmetTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Aile Yardimi Tutari *</label>
+        <dx-text-box [(value)]="formData.aileYardimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Cocuk Yardimi Tutari *</label>
+        <dx-text-box [(value)]="formData.cocukYardimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Cocuk Sayisi 6 Yas Alti *</label>
+        <dx-text-box [(value)]="formData.cocukSayisi6YasAlti" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Cocuk Sayisi 6 Yas Ustu *</label>
+        <dx-text-box [(value)]="formData.cocukSayisi6YasUstu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Agi Esas Cocuk Sayisi *</label>
+        <dx-text-box [(value)]="formData.agiEsasCocukSayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Es Calisma Durumu *</label>
+        <dx-text-box [(value)]="formData.esCalismaDurumu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bes Firma Kodu *</label>
+        <dx-text-box [(value)]="formData.besFirmaKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Bes Orani *</label>
+        <dx-text-box [(value)]="formData.besOrani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bes Kesinti Tutari *</label>
+        <dx-text-box [(value)]="formData.besKesintiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Yabanci Dil Tazminati Tutari *</label>
+        <dx-text-box [(value)]="formData.yabanciDilTazminatiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Yabanci Dil Bilgisi *</label>
+        <dx-text-box [(value)]="formData.yabanciDilBilgisi" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Yabanci Dil Puani *</label>
+        <dx-text-box [(value)]="formData.yabanciDilPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sendika Odenegi Tutari *</label>
+        <dx-text-box [(value)]="formData.sendikaOdenegiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sendika Bilgisi *</label>
+        <dx-text-box [(value)]="formData.sendikaBilgisi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sendika Sira Numarasi *</label>
+        <dx-text-box [(value)]="formData.sendikaSiraNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sendika Kesinti Orani *</label>
+        <dx-text-box [(value)]="formData.sendikaKesintiOrani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sendika Aidati Tutari *</label>
+        <dx-text-box [(value)]="formData.sendikaAidatiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Devlet Emekli Kesenegi *</label>
+        <dx-text-box [(value)]="formData.devletEmekliKesenegi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sahis Emekli Kesenegi *</label>
+        <dx-text-box [(value)]="formData.sahisEmekliKesenegi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Emekli Kesenegi Matrahi Tutari *</label>
+        <dx-text-box [(value)]="formData.emekliKesenegiMatrahiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ozel Sigorta Tutari *</label>
+        <dx-text-box [(value)]="formData.ozelSigortaTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Vergi Indirimi Tutari *</label>
+        <dx-text-box [(value)]="formData.vergiIndirimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Damga Vergisi Tutari *</label>
+        <dx-text-box [(value)]="formData.damgaVergisiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Gelir Vergisi Tutari *</label>
+        <dx-text-box [(value)]="formData.gelirVergisiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Gelir Vergisi Matrahi Tutari *</label>
+        <dx-text-box [(value)]="formData.gelirVergisiMatrahiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kumulatif Gelir Vergisi Tutari *</label>
+        <dx-text-box [(value)]="formData.kumulatifGelirVergisiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Icra Tutari *</label>
+        <dx-text-box [(value)]="formData.icraTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Nafaka Tutari *</label>
+        <dx-text-box [(value)]="formData.nafakaTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Yuzde Yuz Tutari *</label>
+        <dx-text-box [(value)]="formData.yuzdeYuzTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Dogu Tazminati Tutari *</label>
+        <dx-text-box [(value)]="formData.doguTazminatiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sgk Sahis Tutari *</label>
+        <dx-text-box [(value)]="formData.sgkSahisTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sgk Isveren Tutari *</label>
+        <dx-text-box [(value)]="formData.sgkIsverenTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sgk Matrahi Tutari *</label>
+        <dx-text-box [(value)]="formData.sgkMatrahiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kefalet Tutari *</label>
+        <dx-text-box [(value)]="formData.kefaletTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sozlesme Ucreti Tutari *</label>
+        <dx-text-box [(value)]="formData.sozlesmeUcretiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Lojman Kesintisi Tutari *</label>
+        <dx-text-box [(value)]="formData.lojmanKesintisiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Asgari Gecim Indirimi Tutari *</label>
+        <dx-text-box [(value)]="formData.asgariGecimIndirimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Issizlik Sahis Tutari *</label>
+        <dx-text-box [(value)]="formData.issizlikSahisTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Issizlik Isveren Tutari *</label>
+        <dx-text-box [(value)]="formData.issizlikIsverenTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Issizlik Primi Matrahi Tutari *</label>
+        <dx-text-box [(value)]="formData.issizlikPrimiMatrahiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Malulluk Devlet Tutari *</label>
+        <dx-text-box [(value)]="formData.malullukDevletTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Malulluk Sahis Tutari *</label>
+        <dx-text-box [(value)]="formData.malullukSahisTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Giyecek Yardimi Tutari *</label>
+        <dx-text-box [(value)]="formData.giyecekYardimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Fark Tazminati Tutari *</label>
+        <dx-text-box [(value)]="formData.farkTazminatiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hizmet Zammi Tutari *</label>
+        <dx-text-box [(value)]="formData.hizmetZammiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Vasita Yardimi Tutari *</label>
+        <dx-text-box [(value)]="formData.vasitaYardimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kira Yardimi Tutari *</label>
+        <dx-text-box [(value)]="formData.kiraYardimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Yemek Yardimi Tutari *</label>
+        <dx-text-box [(value)]="formData.yemekYardimiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Fazla Mesai Tutari *</label>
+        <dx-text-box [(value)]="formData.fazlaMesaiTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Nobet Birim Ucret Tutari *</label>
+        <dx-text-box [(value)]="formData.nobetBirimUcretTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Nobet Birim Ucret 20 Tutari *</label>
+        <dx-text-box [(value)]="formData.nobetBirimUcret20Tutari" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Nobet Birim Ucret 50 Tutari *</label>
+        <dx-text-box [(value)]="formData.nobetBirimUcret50Tutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Nobet Saati *</label>
+        <dx-text-box [(value)]="formData.nobetSaati" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Nobet 20 Saati *</label>
+        <dx-text-box [(value)]="formData.nobet20Saati" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Nobet 50 Saati *</label>
+        <dx-text-box [(value)]="formData.nobet50Saati" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Yevmiye Tutari *</label>
+        <dx-text-box [(value)]="formData.yevmiyeTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Calisma Saati *</label>
+        <dx-text-box [(value)]="formData.calismaSaati" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tahakkuk Toplami *</label>
+        <dx-text-box [(value)]="formData.tahakkukToplami" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Net Tutar *</label>
+        <dx-text-box [(value)]="formData.netTutar" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kesinti Toplami *</label>
+        <dx-text-box [(value)]="formData.kesintiToplami" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

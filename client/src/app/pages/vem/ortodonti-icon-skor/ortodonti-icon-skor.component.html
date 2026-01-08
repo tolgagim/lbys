@@ -1,0 +1,268 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">OrtodontiIconSkor</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-ortodonti-icon-skor-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="ortodontiIconSkorKodu" caption="Ortodonti Icon Skor Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaKodu" caption="Hasta Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaBasvuruKodu" caption="Hasta Basvuru Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="oisDegerlendirmeZamani" caption="Ois Degerlendirme Zamani" dataType="date" format="dd.MM.yyyy" [width]="100"></dxi-column>
+    <dxi-column dataField="oisEstetikBozuklukBilgisi" caption="Ois Estetik Bozukluk Bilgisi" [width]="150"></dxi-column>
+    <dxi-column dataField="oisEstetikPuanKatsayisi" caption="Ois Estetik Puan Katsayisi" [width]="150"></dxi-column>
+    <dxi-column dataField="oisEstetikPuani" caption="Ois Estetik Puani" [width]="150"></dxi-column>
+    <dxi-column dataField="ustDisArkaCaprasiklik" caption="Ust Dis Arka Caprasiklik" [width]="150"></dxi-column>
+    <dxi-column dataField="ustArkaCaprasiklikKatsayisi" caption="Ust Arka Caprasiklik Katsayisi" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ortodonti Icon Skor Kodu *</label>
+        <dx-text-box [(value)]="formData.ortodontiIconSkorKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Basvuru Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaBasvuruKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Degerlendirme Zamani </label>
+        <dx-date-box [(value)]="formData.oisDegerlendirmeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Estetik Bozukluk Bilgisi *</label>
+        <dx-text-box [(value)]="formData.oisEstetikBozuklukBilgisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Estetik Puan Katsayisi *</label>
+        <dx-text-box [(value)]="formData.oisEstetikPuanKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Estetik Puani *</label>
+        <dx-text-box [(value)]="formData.oisEstetikPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ust Dis Arka Caprasiklik *</label>
+        <dx-text-box [(value)]="formData.ustDisArkaCaprasiklik" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ust Arka Caprasiklik Katsayisi *</label>
+        <dx-text-box [(value)]="formData.ustArkaCaprasiklikKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ust Arka Caprasiklik Puani *</label>
+        <dx-text-box [(value)]="formData.ustArkaCaprasiklikPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ust Dis Arka Bosluk *</label>
+        <dx-text-box [(value)]="formData.ustDisArkaBosluk" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ust Arka Bosluk Katsayisi *</label>
+        <dx-text-box [(value)]="formData.ustArkaBoslukKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ust Arka Bosluk Puani *</label>
+        <dx-text-box [(value)]="formData.ustArkaBoslukPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Dis Caprazlik Durumu *</label>
+        <dx-text-box [(value)]="formData.disCaprazlikDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Dis Caprazlik Katsayisi *</label>
+        <dx-text-box [(value)]="formData.disCaprazlikKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Dis Caprazlik Puani *</label>
+        <dx-text-box [(value)]="formData.disCaprazlikPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>On Acik Kapanis *</label>
+        <dx-text-box [(value)]="formData.onAcikKapanis" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>On Acik Kapanis Katsayisi *</label>
+        <dx-text-box [(value)]="formData.onAcikKapanisKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>On Acik Kapanis Puani *</label>
+        <dx-text-box [(value)]="formData.onAcikKapanisPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>On Derin Kapanis *</label>
+        <dx-text-box [(value)]="formData.onDerinKapanis" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>On Derin Kapanis Katsayisi *</label>
+        <dx-text-box [(value)]="formData.onDerinKapanisKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>On Derin Kapanis Puani *</label>
+        <dx-text-box [(value)]="formData.onDerinKapanisPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Bolge Sag *</label>
+        <dx-text-box [(value)]="formData.bukkalBolgeSag" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Bolge Sag Katsayisi *</label>
+        <dx-text-box [(value)]="formData.bukkalBolgeSagKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Bolge Sag Puani *</label>
+        <dx-text-box [(value)]="formData.bukkalBolgeSagPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Bolge Sol *</label>
+        <dx-text-box [(value)]="formData.bukkalBolgeSol" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Bolge Sol Katsayisi *</label>
+        <dx-text-box [(value)]="formData.bukkalBolgeSolKatsayisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Bolge Sol Puani *</label>
+        <dx-text-box [(value)]="formData.bukkalBolgeSolPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bukkal Toplam Puani *</label>
+        <dx-text-box [(value)]="formData.bukkalToplamPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Toplam Icon Skor Puani *</label>
+        <dx-text-box [(value)]="formData.toplamIconSkorPuani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Degerlendiren 1 Hekim Kodu *</label>
+        <dx-text-box [(value)]="formData.oisDegerlendiren1HekimKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Degerlendiren 2 Hekim Kodu *</label>
+        <dx-text-box [(value)]="formData.oisDegerlendiren2HekimKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ois Degerlendiren 3 Hekim Kodu *</label>
+        <dx-text-box [(value)]="formData.oisDegerlendiren3HekimKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Aciklama *</label>
+        <dx-text-box [(value)]="formData.aciklama" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

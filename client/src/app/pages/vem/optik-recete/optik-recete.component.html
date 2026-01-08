@@ -1,0 +1,302 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">OptikRecete</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-optik-recete-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="optikReceteKodu" caption="Optik Recete Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaBasvuruKodu" caption="Hasta Basvuru Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaKodu" caption="Hasta Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="gozlukReceteTipi" caption="Gozluk Recete Tipi" [width]="150"></dxi-column>
+    <dxi-column dataField="hekimKodu" caption="Hekim Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="receteZamani" caption="Recete Zamani" dataType="date" format="dd.MM.yyyy" [width]="100"></dxi-column>
+    <dxi-column dataField="gozlukTuru" caption="Gozluk Turu" [width]="150"></dxi-column>
+    <dxi-column dataField="sagCamTipi" caption="Sag Cam Tipi" [width]="150"></dxi-column>
+    <dxi-column dataField="sagCamRengi" caption="Sag Cam Rengi" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Optik Recete Kodu *</label>
+        <dx-text-box [(value)]="formData.optikReceteKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Basvuru Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaBasvuruKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Kodu *</label>
+        <dx-text-box [(value)]="formData.hastaKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Gozluk Recete Tipi *</label>
+        <dx-text-box [(value)]="formData.gozlukReceteTipi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hekim Kodu *</label>
+        <dx-text-box [(value)]="formData.hekimKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Recete Zamani </label>
+        <dx-date-box [(value)]="formData.receteZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Gozluk Turu *</label>
+        <dx-text-box [(value)]="formData.gozlukTuru" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Cam Tipi *</label>
+        <dx-text-box [(value)]="formData.sagCamTipi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Cam Rengi *</label>
+        <dx-text-box [(value)]="formData.sagCamRengi" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Cam Sferik *</label>
+        <dx-text-box [(value)]="formData.sagCamSferik" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Cam Silindirik *</label>
+        <dx-text-box [(value)]="formData.sagCamSilindirik" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Cam Aks *</label>
+        <dx-text-box [(value)]="formData.sagCamAks" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Cam Tipi *</label>
+        <dx-text-box [(value)]="formData.solCamTipi" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Cam Rengi *</label>
+        <dx-text-box [(value)]="formData.solCamRengi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Cam Sferik *</label>
+        <dx-text-box [(value)]="formData.solCamSferik" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Cam Silindirik *</label>
+        <dx-text-box [(value)]="formData.solCamSilindirik" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Cam Aks *</label>
+        <dx-text-box [(value)]="formData.solCamAks" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Lens Cam Sferik *</label>
+        <dx-text-box [(value)]="formData.sagLensCamSferik" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Lens Cam Silindirik *</label>
+        <dx-text-box [(value)]="formData.sagLensCamSilindirik" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Lens Cam Cap *</label>
+        <dx-text-box [(value)]="formData.sagLensCamCap" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Lens Cam Egim *</label>
+        <dx-text-box [(value)]="formData.sagLensCamEgim" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Lens Cam Aks *</label>
+        <dx-text-box [(value)]="formData.sagLensCamAks" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Lens Cam Sferik *</label>
+        <dx-text-box [(value)]="formData.solLensCamSferik" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Lens Cam Silindirik *</label>
+        <dx-text-box [(value)]="formData.solLensCamSilindirik" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Lens Cam Cap *</label>
+        <dx-text-box [(value)]="formData.solLensCamCap" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Lens Cam Egim *</label>
+        <dx-text-box [(value)]="formData.solLensCamEgim" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Lens Cam Aks *</label>
+        <dx-text-box [(value)]="formData.solLensCamAks" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Keratakonus Cam Sferik *</label>
+        <dx-text-box [(value)]="formData.sagKeratakonusCamSferik" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Keratakonus Cam Silindir *</label>
+        <dx-text-box [(value)]="formData.sagKeratakonusCamSilindir" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Keratakonus Cam Cap *</label>
+        <dx-text-box [(value)]="formData.sagKeratakonusCamCap" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Keratakonus Cam Egim *</label>
+        <dx-text-box [(value)]="formData.sagKeratakonusCamEgim" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sag Keratakonus Cam Aks *</label>
+        <dx-text-box [(value)]="formData.sagKeratakonusCamAks" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Keratakonus Cam Sferik *</label>
+        <dx-text-box [(value)]="formData.solKeratakonusCamSferik" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Keratakonus Cam Silindir *</label>
+        <dx-text-box [(value)]="formData.solKeratakonusCamSilindir" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Keratakonus Cam Cap *</label>
+        <dx-text-box [(value)]="formData.solKeratakonusCamCap" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Keratakonus Cam Egim *</label>
+        <dx-text-box [(value)]="formData.solKeratakonusCamEgim" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sol Keratakonus Cam Aks *</label>
+        <dx-text-box [(value)]="formData.solKeratakonusCamAks" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Teleskopik Gozluk Tipi *</label>
+        <dx-text-box [(value)]="formData.teleskopikGozlukTipi" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Teleskopik Gozluk Turu *</label>
+        <dx-text-box [(value)]="formData.teleskopikGozlukTuru" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Teleskopik Sag Cam *</label>
+        <dx-text-box [(value)]="formData.teleskopikSagCam" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Teleskopik Sol Cam *</label>
+        <dx-text-box [(value)]="formData.teleskopikSolCam" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

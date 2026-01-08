@@ -24,10 +24,11 @@ import { AppResetPasswordComponent } from './pages/reset-password-form/reset-pas
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RolesComponent } from './pages/roles/roles.component';
-import { UsersComponent } from './pages/users/users.component'; 
+import { UsersComponent } from './pages/users/users.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { BrandsComponent } from './pages/brands/brands.component';
 import { PayEasyComponent } from './pages/pay-easy/pay-easy.component';
+import { VEM_ROUTES } from './pages/vem/vem.routes';
 
 export const routes: Routes = [
   {
@@ -133,7 +134,12 @@ export const routes: Routes = [
       {
         path: 'user-profile',
         component: UserProfileComponent
-      }, 
+      },
+      // VEM Routes
+      {
+        path: 'vem',
+        children: VEM_ROUTES
+      },
       {
         path: '**',
         redirectTo: 'home',

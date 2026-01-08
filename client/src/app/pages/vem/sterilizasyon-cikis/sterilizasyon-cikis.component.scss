@@ -1,0 +1,31 @@
+.content-block {
+  height: 100%;
+  padding: 20px;
+
+  dx-data-grid {
+    height: 100%;
+  }
+}
+
+.form-container {
+  padding: 16px;
+
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 4px;
+  }
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}

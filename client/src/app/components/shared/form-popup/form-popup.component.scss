@@ -1,0 +1,45 @@
+.popup-content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+}
+
+:host ::ng-deep {
+  .dx-overlay-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dx-popup-content {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dx-validationgroup {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+  }
+
+  .form-container {
+    padding: 12px 16px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .dx-toolbar-center {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.form-popup-loader {
+  z-index: 1000;
+}

@@ -1,0 +1,248 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">StokHareket</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-stok-hareket-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="stokHareketKodu" caption="Stok Hareket Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="referansTabloAdi" caption="Referans Tablo Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="bagliStokHareketKodu" caption="Bagli Stok Hareket Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="ilkGirisStokHareketKodu" caption="Ilk Giris Stok Hareket Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="stokIstekHareketKodu" caption="Stok Istek Hareket Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="stokFisKodu" caption="Stok Fis Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="stokKartKodu" caption="Stok Kart Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="barkod" caption="Barkod" [width]="150"></dxi-column>
+    <dxi-column dataField="lotNumarasi" caption="Lot Numarasi" [width]="150"></dxi-column>
+    <dxi-column dataField="seriSiraNumarasi" caption="Seri Sira Numarasi" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Stok Hareket Kodu *</label>
+        <dx-text-box [(value)]="formData.stokHareketKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Referans Tablo Adi *</label>
+        <dx-text-box [(value)]="formData.referansTabloAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Bagli Stok Hareket Kodu *</label>
+        <dx-text-box [(value)]="formData.bagliStokHareketKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ilk Giris Stok Hareket Kodu *</label>
+        <dx-text-box [(value)]="formData.ilkGirisStokHareketKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Stok Istek Hareket Kodu *</label>
+        <dx-text-box [(value)]="formData.stokIstekHareketKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Stok Fis Kodu *</label>
+        <dx-text-box [(value)]="formData.stokFisKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Stok Kart Kodu *</label>
+        <dx-text-box [(value)]="formData.stokKartKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Barkod *</label>
+        <dx-text-box [(value)]="formData.barkod" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Lot Numarasi *</label>
+        <dx-text-box [(value)]="formData.lotNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Seri Sira Numarasi *</label>
+        <dx-text-box [(value)]="formData.seriSiraNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Firma Tanimlayici Numarasi *</label>
+        <dx-text-box [(value)]="formData.firmaTanimlayiciNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Malzeme Sut Kodu *</label>
+        <dx-text-box [(value)]="formData.malzemeSutKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Stok Hareket Miktari *</label>
+        <dx-text-box [(value)]="formData.stokHareketMiktari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tasinir Numarasi *</label>
+        <dx-text-box [(value)]="formData.tasinirNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Alis Birim Fiyati *</label>
+        <dx-text-box [(value)]="formData.alisBirimFiyati" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Satis Birim Fiyati *</label>
+        <dx-text-box [(value)]="formData.satisBirimFiyati" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Olcu Kodu *</label>
+        <dx-text-box [(value)]="formData.olcuKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Islemi Yapan Personel Kodu *</label>
+        <dx-text-box [(value)]="formData.islemiYapanPersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kdv Orani *</label>
+        <dx-text-box [(value)]="formData.kdvOrani" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Iskonto Orani *</label>
+        <dx-text-box [(value)]="formData.iskontoOrani" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Iskonto Tutari *</label>
+        <dx-text-box [(value)]="formData.iskontoTutari" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Son Kullanma Tarihi *</label>
+        <dx-date-box [(value)]="formData.sonKullanmaTarihi" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Mkys Stok Hareket Kodu *</label>
+        <dx-text-box [(value)]="formData.mkysStokHareketKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Iptal Durumu *</label>
+        <dx-text-box [(value)]="formData.iptalDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Mkys Karsi Stok Hareket Kodu *</label>
+        <dx-text-box [(value)]="formData.mkysKarsiStokHareketKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Mkys Kunye Numarasi *</label>
+        <dx-text-box [(value)]="formData.mkysKunyeNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Uts Kayit Udi *</label>
+        <dx-text-box [(value)]="formData.utsKayitUdi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Bayilik Numarasi *</label>
+        <dx-text-box [(value)]="formData.bayilikNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Cihaz Kodu *</label>
+        <dx-text-box [(value)]="formData.cihazKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ats Sorgu Numarasi *</label>
+        <dx-text-box [(value)]="formData.atsSorguNumarasi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Allogreft Donor Kodu *</label>
+        <dx-text-box [(value)]="formData.allogreftDonorKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>

@@ -1,0 +1,252 @@
+<div class="content-block">
+  <dx-data-grid
+    #dataGrid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"
+    [focusedRowEnabled]="true"
+    keyExpr="id"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [allowColumnResizing]="true"
+    [rowAlternationEnabled]="true"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onRowDblClick)="onRowDblClick($event)"
+    [height]="'100%'">
+
+    <!-- Toolbar -->
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="grid-header">TetkikSonuc</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="plus" text="Yeni" type="default" stylingMode="contained" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="edit" text="Duzenle" (onClick)="onEditClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="trash" text="Sil" type="danger" (onClick)="onDeleteClick()"></dx-button>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button icon="refresh" hint="Yenile" (onClick)="refresh()"></dx-button>
+      </dxi-item>
+      <dxi-item name="searchPanel" location="after"></dxi-item>
+    </dxo-toolbar>
+
+    <!-- Grid Options -->
+    <dxo-paging [enabled]="true" [pageSize]="50"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[20, 50, 100]" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-search-panel [visible]="true" [width]="200" placeholder="Ara..."></dxo-search-panel>
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="vem-tetkik-sonuc-grid"></dxo-state-storing>
+
+    <!-- Columns -->
+    <dxi-column dataField="tetkikSonucKodu" caption="Tetkik Sonuc Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="tetkikNumuneKodu" caption="Tetkik Numune Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="tetkikParametreKodu" caption="Tetkik Parametre Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="tetkikKodu" caption="Tetkik Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="tetkikAdi" caption="Tetkik Adi" [width]="150"></dxi-column>
+    <dxi-column dataField="hastaHizmetKodu" caption="Hasta Hizmet Kodu" [width]="150"></dxi-column>
+    <dxi-column dataField="tetkikSonucu" caption="Tetkik Sonucu" [width]="150"></dxi-column>
+    <dxi-column dataField="sonucZamani" caption="Sonuc Zamani" dataType="date" format="dd.MM.yyyy" [width]="100"></dxi-column>
+    <dxi-column dataField="tetkikSonucGizlenmeDurumu" caption="Tetkik Sonuc Gizlenme Durumu" [width]="150"></dxi-column>
+    <dxi-column dataField="webSonucGizlenmeDurumu" caption="Web Sonuc Gizlenme Durumu" [width]="150"></dxi-column>
+  </dx-data-grid>
+</div>
+
+<!-- Edit Popup -->
+<app-form-popup
+  [(visible)]="isEditPopupVisible"
+  [titleText]="popupTitle"
+  [width]="700"
+  [height]="500"
+  [isLoading]="isLoading"
+  (save)="onSaveClick()"
+  (cancel)="onCancelClick()">
+
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonuc Kodu *</label>
+        <dx-text-box [(value)]="formData.tetkikSonucKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Numune Kodu </label>
+        <dx-text-box [(value)]="formData.tetkikNumuneKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Parametre Kodu </label>
+        <dx-text-box [(value)]="formData.tetkikParametreKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Kodu </label>
+        <dx-text-box [(value)]="formData.tetkikKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Adi </label>
+        <dx-text-box [(value)]="formData.tetkikAdi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Hasta Hizmet Kodu </label>
+        <dx-text-box [(value)]="formData.hastaHizmetKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonucu </label>
+        <dx-text-box [(value)]="formData.tetkikSonucu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sonuc Zamani </label>
+        <dx-date-box [(value)]="formData.sonucZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonuc Gizlenme Durumu </label>
+        <dx-text-box [(value)]="formData.tetkikSonucGizlenmeDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Web Sonuc Gizlenme Durumu </label>
+        <dx-text-box [(value)]="formData.webSonucGizlenmeDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Numune Ret Nedeni </label>
+        <dx-text-box [(value)]="formData.numuneRetNedeni" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ret Eden Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.retEdenKullaniciKodu" [maxLength]="450"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ret Zamani </label>
+        <dx-date-box [(value)]="formData.retZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kritik Deger Araligi </label>
+        <dx-text-box [(value)]="formData.kritikDegerAraligi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Calisma Baslama Zamani </label>
+        <dx-date-box [(value)]="formData.calismaBaslamaZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Calisma Bitis Zamani </label>
+        <dx-date-box [(value)]="formData.calismaBitisZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Onaylayan Teknisyen Kodu </label>
+        <dx-text-box [(value)]="formData.onaylayanTeknisyenKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Teknisyen Onay Zamani </label>
+        <dx-date-box [(value)]="formData.teknisyenOnayZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Onaylayan Hekim Kodu </label>
+        <dx-text-box [(value)]="formData.onaylayanHekimKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Uzman Onay Zamani </label>
+        <dx-date-box [(value)]="formData.tetkikUzmanOnayZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Loinc Kodu </label>
+        <dx-text-box [(value)]="formData.loincKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tekrar Calisma Durumu </label>
+        <dx-text-box [(value)]="formData.tekrarCalismaDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Manuel Tetkik Sonuc Durumu </label>
+        <dx-text-box [(value)]="formData.manuelTetkikSonucDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Ureme Durumu </label>
+        <dx-text-box [(value)]="formData.uremeDurumu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Cihaz Kodu </label>
+        <dx-text-box [(value)]="formData.cihazKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Cihaz Tetkik Sonucu </label>
+        <dx-text-box [(value)]="formData.cihazTetkikSonucu" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonucu Birimi </label>
+        <dx-text-box [(value)]="formData.tetkikSonucuBirimi" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonucu Referans Degeri </label>
+        <dx-text-box [(value)]="formData.tetkikSonucuReferansDegeri" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonucu Durumu </label>
+        <dx-text-box [(value)]="formData.tetkikSonucuDurumu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Tetkik Sonuc Aciklama </label>
+        <dx-text-box [(value)]="formData.tetkikSonucAciklama" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Rapor Yazan Personel Kodu </label>
+        <dx-text-box [(value)]="formData.raporYazanPersonelKodu" [maxLength]="450"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Sonuc Dis Erisim Bilgisi </label>
+        <dx-text-box [(value)]="formData.sonucDisErisimBilgisi" [maxLength]="-1"></dx-text-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Ekleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.ekleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Kayit Zamani </label>
+        <dx-date-box [(value)]="formData.kayitZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleyen Kullanici Kodu </label>
+        <dx-text-box [(value)]="formData.guncelleyenKullaniciKodu" [maxLength]="-1"></dx-text-box>
+      </div>
+      <div class="form-field" style="flex: 1;">
+        <label>Guncelleme Zamani </label>
+        <dx-date-box [(value)]="formData.guncellemeZamani" displayFormat="dd.MM.yyyy" type="date"></dx-date-box>
+      </div>
+    </div>
+  </div>
+</app-form-popup>
