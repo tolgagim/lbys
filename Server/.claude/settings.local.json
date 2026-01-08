@@ -26,7 +26,8 @@
       "Bash(Select-Object -First 40)",
       "Bash(findstr:*)",
       "Bash(Select-Object -Last 5)",
-      "Bash(Select-String -Pattern \"error|Build succeeded|Build FAILED\")"
+      "Bash(Select-String -Pattern \"error|Build succeeded|Build FAILED\")",
+      "Bash(Select-String -Pattern \"Seed|VEM|error|fail|Connection|Database\")"
     ],
     "deny": [],
     "ask": []

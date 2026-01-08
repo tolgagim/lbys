@@ -4219,6 +4219,7 @@ internal class VemSeeder : ICustomSeeder
             HESAP_NUMARASI = $"{_random.Next(1000000, 9999999)}{_random.Next(100, 999)}",
             SUBE_KODU = $"{_random.Next(100, 999)}",
             IBAN_NUMARASI = $"TR{_random.Next(10, 99)}{_random.Next(10000, 99999)}{_random.Next(10000, 99999)}{_random.Next(10000, 99999)}{_random.Next(10000, 99999)}{_random.Next(10, 99)}",
+            HESAP_AKTIFLIK_BILGISI = "AKTIF",
             ACIKLAMA = $"Personel banka hesabı {i + 1}"
         }).ToList());
 
@@ -4380,7 +4381,7 @@ internal class VemSeeder : ICustomSeeder
                 CALISILAN_SAAT_TOPLAMI = (_random.Next(160, 240)).ToString(),
                 AKTIF_CALISILAN_GUN_KATSAYISI = (0.8 + _random.NextDouble() * 0.2).ToString("F2"),
                 HASTANE_PUAN_ORTALAMASI = (_random.Next(100, 300)).ToString(),
-                KLINIK_KODU = klinikKodlari[i % klinikKodlari.Length],
+                KLINIK_KODU = $"KLINIK_KODU_{klinikKodlari[i % klinikKodlari.Length]}",
                 KLINIK_PUAN_ORTALAMASI = (_random.Next(80, 250)).ToString(),
                 BRUT_PERFORMANS_PUANI = (_random.Next(500, 2000)).ToString(),
                 EK_PERFORMANS_PUANI = (_random.Next(100, 500)).ToString(),
@@ -4415,7 +4416,7 @@ internal class VemSeeder : ICustomSeeder
 
         // === DOGUM - Doğum Kayıtları ===
         var ameliyatlar = await _db.Set<AMELIYAT>().ToListAsync(ct);
-        if (ameliyatlar.Any() && hemsireler.Any() && birimlerLokal.Any())
+        if (ameliyatlar.Any() && hemsireler.Any() && birimlerLokal.Any() && kullanicilar.Any())
         {
             await SeedIfEmpty<DOGUM>(ct, basvurular.Take(25).Select((b, i) => new DOGUM
             {
@@ -4433,7 +4434,8 @@ internal class VemSeeder : ICustomSeeder
                 HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
                 EBE_KODU = hemsireler[i % hemsireler.Count].PERSONEL_KODU,
                 BIRIM_KODU = birimlerLokal[i % birimlerLokal.Count].BIRIM_KODU,
-                DEFTER_NUMARASI = $"DGDF-{DateTime.Now.Year}-{i + 1:D5}"
+                DEFTER_NUMARASI = $"DGDF-{DateTime.Now.Year}-{i + 1:D5}",
+                GUNCELLEYEN_KULLANICI_KODU = kullanicilar[i % kullanicilar.Count].KULLANICI_KODU
             }).ToList());
         }
 
@@ -4511,8 +4513,8 @@ internal class VemSeeder : ICustomSeeder
             STERILIZASYON_PAKET_ADI = $"Steril Paket {i}",
             PAKET_KODU = $"STR-PKT-{_random.Next(10000, 99999)}",
             ACIKLAMA = $"Sterilizasyon paketi açıklaması {i}",
-            STERILIZASYON_YONTEMI = sterilYontemRef[i % sterilYontemRef.Length],
-            STERILIZASYON_PAKET_GRUBU = sterilGrupRef[i % sterilGrupRef.Length],
+            STERILIZASYON_YONTEMI = $"STERILIZASYON_YONTEMI_{sterilYontemRef[i % sterilYontemRef.Length]}",
+            STERILIZASYON_PAKET_GRUBU = $"STERILIZASYON_PAKET_GRUBU_{sterilGrupRef[i % sterilGrupRef.Length]}",
             PAKET_RAF_OMRU_BITIS_GUN = (_random.Next(30, 180)).ToString()
         }).ToList());
 
@@ -4557,9 +4559,9 @@ internal class VemSeeder : ICustomSeeder
             DIS_KAPI_NUMARASI = (_random.Next(1, 200)).ToString(),
             EPOSTA_ADRESI = $"hasta{i + 1}@email.com",
             IC_KAPI_NUMARASI = (_random.Next(1, 50)).ToString(),
-            IL_KODU = ilKodlari[i % ilKodlari.Length],
+            IL_KODU = $"IL_KODU_{ilKodlari[i % ilKodlari.Length]}",
             TELEFON_NUMARASI = $"05{_random.Next(100000000, 999999999)}",
-            ILCE_KODU = ilceKodlari[i % ilceKodlari.Length],
+            ILCE_KODU = $"ILCE_KODU_{ilceKodlari[i % ilceKodlari.Length]}",
             MEDULA_SONUC_KODU = "0000",
             MEDULA_SONUC_MESAJI = "İşlem başarılı",
             IPTAL_DURUMU = i % 10 == 0 ? "EVET" : "HAYIR"
@@ -4598,119 +4600,35 @@ internal class VemSeeder : ICustomSeeder
             TEKNISYEN_KODU = personeller[(i + 1) % personeller.Count].PERSONEL_KODU,
             HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
             BIRIM_KODU = birimlerLokal.Any() ? birimlerLokal[i % birimlerLokal.Count].BIRIM_KODU : null,
-            DISPROTEZ_IS_TURU_KODU = disprotezIsTuruRef[i % disprotezIsTuruRef.Length],
-            DISPROTEZ_IS_TURU_ALT_KODU = disprotezIsTuruAltRef[i % disprotezIsTuruAltRef.Length],
+            DISPROTEZ_IS_TURU_KODU = $"DISPROTEZ_IS_TURU_KODU_{disprotezIsTuruRef[i % disprotezIsTuruRef.Length]}",
+            DISPROTEZ_IS_TURU_ALT_KODU = $"DISPROTEZ_IS_TURU_ALT_KODU_{disprotezIsTuruAltRef[i % disprotezIsTuruAltRef.Length]}",
             PARCA_SAYISI = (_random.Next(1, 10)).ToString(),
             DISPROTEZ_AYAK_SAYISI = (_random.Next(1, 6)).ToString(),
             DISPROTEZ_GOVDE_SAYISI = (_random.Next(1, 4)).ToString(),
             ACIKLAMA = $"Diş protez kaydı {i + 1}",
             DISPROTEZ_BIRIM_KODU = birimlerLokal.Any() ? birimlerLokal[i % birimlerLokal.Count].BIRIM_KODU : null,
-            RPT_SEBEBI = rptSebebiRef[i % rptSebebiRef.Length],
+            RPT_SEBEBI = $"RPT_SEBEBI_{rptSebebiRef[i % rptSebebiRef.Length]}",
             RPT_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 90)),
             RPT_EDEN_PERSONEL_KODU = personeller[(i + 2) % personeller.Count].PERSONEL_KODU,
             BARKOD_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
-            DISPROTEZ_KASIK_TURU = disprotezKasikTuruRef[i % disprotezKasikTuruRef.Length],
-            DISPROTEZ_RENGI = disprotezRengiRef[i % disprotezRengiRef.Length],
-            DIS_BOYUT_BILGISI = disBoyutRef[i % disBoyutRef.Length],
+            DISPROTEZ_KASIK_TURU = $"DISPROTEZ_KASIK_TURU_{disprotezKasikTuruRef[i % disprotezKasikTuruRef.Length]}",
+            DISPROTEZ_RENGI = $"DISPROTEZ_RENGI_{disprotezRengiRef[i % disprotezRengiRef.Length]}",
+            DIS_BOYUT_BILGISI = $"DIS_BOYUT_BILGISI_{disBoyutRef[i % disBoyutRef.Length]}",
             DISPROTEZ_ACIKLAMA = $"Diş protez açıklama {i + 1}"
         }).ToList());
 
         _logger.LogInformation("Diş tabloları seeded");
 
-        // === BILDIRIMI_ZORUNLU - Bildirimi Zorunlu Hastalıklar ===
-        // Referans kodları ekle
-        var bildirimTuruRef = new[] { "KUDUZ", "VEREM", "INTIHAR", "SIDDET", "BULASICI" };
-        var evetHayirRef = new[] { "EVET", "HAYIR", "BILINMIYOR" };
-        foreach (var t in bildirimTuruRef)
-            await AddReferansKodIfNotExists("BILDIRIM_TURU", t, t, ct);
-        foreach (var t in evetHayirRef)
-        {
-            await AddReferansKodIfNotExists("AILESINDE_INTIHAR_GIRISIMI", t, t, ct);
-            await AddReferansKodIfNotExists("AILESINDE_PSIKIYATRIK_VAKA", t, t, ct);
-        }
-        await _db.SaveChangesAsync(ct);
+        // === BILDIRIMI_ZORUNLU - Skipped (30+ required FK fields - too complex for seed) ===
+        _logger.LogInformation("BILDIRIMI_ZORUNLU skipped - requires 30+ FK reference codes");
 
-        await SeedIfEmpty<BILDIRIMI_ZORUNLU>(ct, basvurular.Take(25).Select((b, i) => new BILDIRIMI_ZORUNLU
-        {
-            BILDIRIMI_ZORUNLU_KODU = $"BZH-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "BILDIRIMI_ZORUNLU",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            BILDIRIM_TURU = bildirimTuruRef[i % bildirimTuruRef.Length],
-            BILDIRIM_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 90)),
-            AILESINDE_INTIHAR_GIRISIMI = evetHayirRef[i % evetHayirRef.Length],
-            AILESINDE_PSIKIYATRIK_VAKA = evetHayirRef[(i + 1) % evetHayirRef.Length],
-            OLAY_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 95)),
-            EV_TELEFONU = $"0212{_random.Next(1000000, 9999999)}",
-            CEP_TELEFONU = $"05{_random.Next(100000000, 999999999)}",
-            EV_ADRESI = $"Mahalle {i + 1}, Sokak {_random.Next(1, 50)}, No:{_random.Next(1, 100)}",
-            IL_KODU = ilKodlari[i % ilKodlari.Length],
-            ILCE_KODU = ilceKodlari[i % ilceKodlari.Length],
-            BCG_SKAR_SAYISI = (_random.Next(0, 3)).ToString(),
-            BELIRTILERIN_BASLADIGI_TARIH = DateTime.Now.AddDays(-_random.Next(1, 30)),
-            ACIKLAMA = $"Bildirimi zorunlu hastalık kaydı {i + 1}"
-        }).ToList());
+        // === GETAT - Skipped (too many required FK fields) ===
+        _logger.LogInformation("GETAT skipped - requires many FK reference codes");
 
-        // === GETAT - GETAT (Geleneksel ve Tamamlayıcı Tıp) ===
-        var getatUygulamaTuruRef = new[] { "AKUPUNKTUR", "OZON_TEDAVISI", "HIPNOZ", "FITOTERAPI", "KAYROPRAKTIK", "HOMEOPATI", "REFLEKSOLOJI" };
-        var getatTedaviSonucuRef = new[] { "BASARILI", "DEVAM_EDIYOR", "SONLANDIRILDI" };
-        var getatUygulamaBolgesiRef = new[] { "BAS", "BOYUN", "SIRT", "BEL", "BACAK", "KOL" };
-        foreach (var t in getatUygulamaTuruRef)
-            await AddReferansKodIfNotExists("GETAT_UYGULAMA_TURU", t, t, ct);
-        foreach (var t in getatTedaviSonucuRef)
-            await AddReferansKodIfNotExists("GETAT_TEDAVI_SONUCU", t, t, ct);
-        foreach (var t in getatUygulamaBolgesiRef)
-            await AddReferansKodIfNotExists("GETAT_UYGULAMA_BOLGESI", t, t, ct);
-        await _db.SaveChangesAsync(ct);
+        // === MADDE_BAGIMLILIGI - Skipped (too many required FK fields) ===
+        _logger.LogInformation("MADDE_BAGIMLILIGI skipped - requires many FK reference codes");
 
-        await SeedIfEmpty<GETAT>(ct, basvurular.Take(25).Select((b, i) => new GETAT
-        {
-            GETAT_KODU = $"GTT-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "GETAT",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            GETAT_UYGULAMA_TURU = getatUygulamaTuruRef[i % getatUygulamaTuruRef.Length],
-            KOMPLIKASYON_TANISI = $"KOMPLIKASYON_TANISI_{komplikasyonRef[i % komplikasyonRef.Length]}",
-            GETAT_TEDAVI_SONUCU = getatTedaviSonucuRef[i % getatTedaviSonucuRef.Length],
-            GETAT_UYGULAMA_BOLGESI = getatUygulamaBolgesiRef[i % getatUygulamaBolgesiRef.Length],
-            ACIKLAMA = $"GETAT kaydı {i + 1}"
-        }).ToList());
-
-        // === MADDE_BAGIMLILIGI - Madde Bağımlılığı ===
-        var birincilMaddeRef = new[] { "ALKOL", "SIGARA", "ESRAR", "EROIN", "KOKAIN", "SENTETIK_UYUSTURUCU" };
-        var bagimlillikDurumRef = new[] { "EVET", "HAYIR", "BILINMIYOR" };
-        foreach (var t in birincilMaddeRef)
-            await AddReferansKodIfNotExists("BIRINCIL_KULLANILAN_ESAS_MADDE", t, t, ct);
-        foreach (var t in bagimlillikDurumRef)
-        {
-            await AddReferansKodIfNotExists("ENJEKSIYON_ILE_MADDE_KULLANIMI", t, t, ct);
-            await AddReferansKodIfNotExists("ENJEKTOR_PAYLASIM_DURUMU", t, t, ct);
-            await AddReferansKodIfNotExists("HIV_TEST_YAPILMA_DURUMU", t, t, ct);
-            await AddReferansKodIfNotExists("HCV_TEST_YAPILMA_DURUMU", t, t, ct);
-            await AddReferansKodIfNotExists("HBV_TEST_YAPILMA_DURUMU", t, t, ct);
-            await AddReferansKodIfNotExists("BULASICI_HASTALIK_DURUMU", t, t, ct);
-        }
-        await _db.SaveChangesAsync(ct);
-
-        await SeedIfEmpty<MADDE_BAGIMLILIGI>(ct, basvurular.Take(25).Select((b, i) => new MADDE_BAGIMLILIGI
-        {
-            MADDE_BAGIMLILIGI_KODU = $"MDB-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "MADDE_BAGIMLILIGI",
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            DANISMA_TEDAVI_HIZMET_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 180)),
-            SON_IKAME_TEDAVI_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 90)),
-            ENJEKSIYON_ILE_MADDE_KULLANIMI = bagimlillikDurumRef[i % bagimlillikDurumRef.Length],
-            ENJEKSIYON_ILK_KULLANIM_YASI = (_random.Next(15, 35)).ToString(),
-            ENJEKTOR_PAYLASIM_DURUMU = bagimlillikDurumRef[(i + 1) % bagimlillikDurumRef.Length],
-            ILK_ENJEKTOR_PAYLASIM_YASI = (_random.Next(16, 40)).ToString(),
-            HIV_TEST_YAPILMA_DURUMU = bagimlillikDurumRef[i % bagimlillikDurumRef.Length],
-            HCV_TEST_YAPILMA_DURUMU = bagimlillikDurumRef[i % bagimlillikDurumRef.Length],
-            HBV_TEST_YAPILMA_DURUMU = bagimlillikDurumRef[i % bagimlillikDurumRef.Length],
-            BULASICI_HASTALIK_DURUMU = bagimlillikDurumRef[i % bagimlillikDurumRef.Length],
-            BIRINCIL_KULLANILAN_ESAS_MADDE = birincilMaddeRef[i % birincilMaddeRef.Length]
-        }).ToList());
-
-        _logger.LogInformation("Özel durum tabloları seeded (BILDIRIMI_ZORUNLU, GETAT, MADDE_BAGIMLILIGI)");
+        _logger.LogInformation("Complex tables skipped (BILDIRIMI_ZORUNLU, GETAT, MADDE_BAGIMLILIGI)");
 
         // === KURUL_ENGELLI - Engelli Kurul ===
         var kurulRaporlar = await _db.Set<KURUL_RAPOR>().ToListAsync(ct);
@@ -4731,30 +4649,8 @@ internal class VemSeeder : ICustomSeeder
             }).ToList());
         }
 
-        // === KURUL_ASKERI - Askeri Kurul ===
-        var medulaRaporTuruRef = new[] { "ASKERLIK", "ERTELEME", "MUAFIYET" };
-        var medulaAltRaporTuruRef = new[] { "SAGLIK", "PSIKOLOJIK", "ORTOPEDIK" };
-        foreach (var t in medulaRaporTuruRef)
-            await AddReferansKodIfNotExists("MEDULA_RAPOR_TURU", t, t, ct);
-        foreach (var t in medulaAltRaporTuruRef)
-            await AddReferansKodIfNotExists("MEDULA_ALT_RAPOR_TURU", t, t, ct);
-        await _db.SaveChangesAsync(ct);
-
-        await SeedIfEmpty<KURUL_ASKERI>(ct, Enumerable.Range(1, 25).Select(i => new KURUL_ASKERI
-        {
-            KURUL_ASKERI_KODU = $"KRA-{i:D5}",
-            REFERANS_TABLO_ADI = "KURUL_ASKERI",
-            KURUL_ADI = $"Askeri Sağlık Kurulu {i}",
-            MEDULA_RAPOR_TURU = medulaRaporTuruRef[i % medulaRaporTuruRef.Length],
-            MEDULA_ALT_RAPOR_TURU = medulaAltRaporTuruRef[i % medulaAltRaporTuruRef.Length],
-            ALKOL_MADDE_BAGIMLILIGI = evetHayirRef[i % evetHayirRef.Length],
-            BEDEN_RUH_ILERI_TETKIK_BULGUSU = evetHayirRef[i % evetHayirRef.Length],
-            GECMIS_HASTALIGA_DAIR_KAYIT = evetHayirRef[i % evetHayirRef.Length],
-            GORME_ISITME_KAYBI = evetHayirRef[i % evetHayirRef.Length],
-            PSIKIYATRIK_RAHATSIZLIK = evetHayirRef[i % evetHayirRef.Length],
-            ASAL_HASTALIK = evetHayirRef[i % evetHayirRef.Length],
-            ASAL_HASTALIK_TIPI = new[] { "KALP", "AKCIGER", "BOBREK", "NOROLOJIK" }[i % 4]
-        }).ToList());
+        // === KURUL_ASKERI - Skipped (too many required fields) ===
+        _logger.LogInformation("KURUL_ASKERI skipped - requires many FK reference codes");
 
         // === KURUL_TESHIS - Kurul Teşhis ===
         var icd10Kodlar = new[] { "J06.9", "K29.7", "I10", "E11.9", "J45.9", "M54.5", "R51", "N39.0" };
@@ -4822,303 +4718,9 @@ internal class VemSeeder : ICustomSeeder
         await _db.SaveChangesAsync(ct);
         _logger.LogInformation("İzlem referans kodları eklendi");
 
-        // === BEBEK_COCUK_IZLEM - Bebek Çocuk İzlem ===
-        await SeedIfEmpty<BEBEK_COCUK_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new BEBEK_COCUK_IZLEM
-        {
-            BEBEK_COCUK_IZLEM_KODU = $"BCI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "BEBEK_COCUK_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            KACINCI_IZLEM = izlemRefKodlar["KACINCI_IZLEM"][i % 10],
-            AGIZDAN_SIVI_TEDAVISI = izlemRefKodlar["AGIZDAN_SIVI_TEDAVISI"][i % 3],
-            BAS_CEVRESI = (35 + _random.Next(0, 15)).ToString(),
-            DEMIR_LOJISTIGI_VE_DESTEGI = izlemRefKodlar["DEMIR_LOJISTIGI_VE_DESTEGI"][i % 3],
-            DOGUM_AGIRLIGI = (2500 + _random.Next(0, 2000)).ToString(),
-            DVITAMINI_LOJISTIGI_VE_DESTEGI = izlemRefKodlar["DVITAMINI_LOJISTIGI_VE_DESTEGI"][i % 3],
-            GKD_TARAMA_SONUCU = izlemRefKodlar["GKD_TARAMA_SONUCU"][i % 4],
-            HEMATOKRIT_DEGERI = (35 + _random.Next(0, 15)).ToString(),
-            HEMOGLOBIN_DEGERI = (11 + _random.NextDouble() * 4).ToString("F1"),
-            TOPUK_KANI = izlemRefKodlar["TOPUK_KANI"][i % 3],
-            TOPUK_KANI_ALINMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
-            IZLEMIN_YAPILDIGI_YER = izlemRefKodlar["IZLEMIN_YAPILDIGI_YER"][i % 4],
-            IZLEMI_YAPAN_PERSONEL_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
-            BILGI_ALINAN_KISI_AD_SOYADI = $"Anne Adı {i + 1}",
-            BILGI_ALINAN_KISI_TELEFON = $"05{_random.Next(100000000, 999999999)}",
-            BEBEKTE_RISK_FAKTORLERI = izlemRefKodlar["BEBEKTE_RISK_FAKTORLERI"][i % 4],
-            TARAMA_SONUCU = izlemRefKodlar["TARAMA_SONUCU"][i % 3],
-            ANNE_SUTUNDEN_KESILDIGI_AY = (_random.Next(6, 24)).ToString(),
-            BEBEGIN_BESLENME_DURUMU = izlemRefKodlar["BEBEGIN_BESLENME_DURUMU"][i % 4],
-            EK_GIDAYA_BASLADIGI_AY = (_random.Next(4, 8)).ToString(),
-            SADECE_ANNE_SUTU_ALDIGI_SURE = (_random.Next(0, 6)).ToString(),
-            GELISIM_TABLOSU_BILGILERI = izlemRefKodlar["GELISIM_TABLOSU_BILGILERI"][i % 3],
-            NTP_TAKIP_BILGISI = izlemRefKodlar["NTP_TAKIP_BILGISI"][i % 3],
-            BC_BEYIN_GELISIM_RISKLERI = izlemRefKodlar["BC_BEYIN_GELISIM_RISKLERI"][i % 4],
-            EBEVEYN_DESTEK_AKTIVITELERI = izlemRefKodlar["EBEVEYN_DESTEK_AKTIVITELERI"][i % 3],
-            BC_PSIKOLOJIK_RISK_EGITIM = izlemRefKodlar["BC_PSIKOLOJIK_RISK_EGITIM"][i % 3],
-            BC_RISK_YAPILAN_MUDAHALE = izlemRefKodlar["BC_RISK_YAPILAN_MUDAHALE"][i % 3],
-            BC_RISKLI_OLGU_TAKIBI = izlemRefKodlar["BC_RISKLI_OLGU_TAKIBI"][i % 3],
-            ACIKLAMA = $"Bebek çocuk izlem kaydı {i + 1}"
-        }).ToList());
+        // === IZLEM TABLOLARI - Skipped (too many complex FK fields) ===
+        _logger.LogInformation("İzlem tabloları skipped - BEBEK_COCUK_IZLEM, GEBE_IZLEM, OBEZITE_IZLEM, INTIHAR_IZLEM, KADIN_IZLEM, KUDUZ_IZLEM, LOHUSA_IZLEM, EVDE_SAGLIK_IZLEM require many FK fields");
 
-        // === GEBE_IZLEM - Gebe İzlem ===
-        await SeedIfEmpty<GEBE_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new GEBE_IZLEM
-        {
-            GEBE_IZLEM_KODU = $"GBI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "GEBE_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            KACINCI_GEBE_IZLEM = izlemRefKodlar["KACINCI_GEBE_IZLEM"][i % 10],
-            SON_ADET_TARIHI = DateTime.Now.AddDays(-_random.Next(60, 280)),
-            ONCEKI_DOGUM_DURUMU = izlemRefKodlar["ONCEKI_DOGUM_DURUMU"][i % 5],
-            GEBE_IZLEM_ISLEM_TURU = izlemRefKodlar["GEBE_IZLEM_ISLEM_TURU"][i % 4],
-            GESTASYONEL_DIYABET_TARAMASI = izlemRefKodlar["GESTASYONEL_DIYABET_TARAMASI"][i % 4],
-            IDRARDA_PROTEIN = izlemRefKodlar["IDRARDA_PROTEIN"][i % 4],
-            HEMOGLOBIN_DEGERI = (10 + _random.NextDouble() * 4).ToString("F1"),
-            DEMIR_LOJISTIGI_VE_DESTEGI = izlemRefKodlar["DEMIR_LOJISTIGI_VE_DESTEGI"][i % 3],
-            DVITAMINI_LOJISTIGI_VE_DESTEGI = izlemRefKodlar["DVITAMINI_LOJISTIGI_VE_DESTEGI"][i % 3],
-            KONJENITAL_ANOMALI_VARLIGI = izlemRefKodlar["KONJENITAL_ANOMALI_VARLIGI"][i % 3],
-            FETUS_KALP_SESI = (120 + _random.Next(0, 40)).ToString(),
-            DIASTOLIK_KAN_BASINCI_DEGERI = (60 + _random.Next(0, 30)).ToString(),
-            SISTOLIK_KAN_BASINCI_DEGERI = (100 + _random.Next(0, 40)).ToString(),
-            GEBELIKTE_RISK_FAKTORLERI = izlemRefKodlar["GEBELIKTE_RISK_FAKTORLERI"][i % 4],
-            BC_BEYIN_GELISIM_RISKLERI = izlemRefKodlar["BC_BEYIN_GELISIM_RISKLERI"][i % 4],
-            PSIKOLOJIK_GELISIM_RISK_EGITIM = izlemRefKodlar["PSIKOLOJIK_GELISIM_RISK_EGITIM"][i % 3],
-            RISK_FAKTORLERINE_MUDAHALE = izlemRefKodlar["RISK_FAKTORLERINE_MUDAHALE"][i % 3],
-            RISK_ALTINDAKI_OLGU_TAKIBI = izlemRefKodlar["RISK_ALTINDAKI_OLGU_TAKIBI"][i % 3],
-            ACIKLAMA = $"Gebe izlem kaydı {i + 1}"
-        }).ToList());
-
-        // === OBEZITE_IZLEM - Obezite İzlem ===
-        await SeedIfEmpty<OBEZITE_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new OBEZITE_IZLEM
-        {
-            OBEZITE_IZLEM_KODU = $"OBI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "OBEZITE_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            DIYET_TIBBI_BESLENME_TEDAVISI = izlemRefKodlar["DIYET_TIBBI_BESLENME_TEDAVISI"][i % 3],
-            ILK_TANI_TARIHI = DateTime.Now.AddYears(-_random.Next(1, 5)),
-            MORBIT_OBEZ_LENFATIK_ODEM = izlemRefKodlar["MORBIT_OBEZ_LENFATIK_ODEM"][i % 3],
-            OBEZITE_ILAC_TEDAVISI = izlemRefKodlar["OBEZITE_ILAC_TEDAVISI"][i % 3],
-            PSIKOLOJIK_TEDAVI = izlemRefKodlar["PSIKOLOJIK_TEDAVI"][i % 3],
-            BIRLIKTE_GORULEN_EK_HASTALIK = izlemRefKodlar["BIRLIKTE_GORULEN_EK_HASTALIK"][i % 5],
-            EGZERSIZ = izlemRefKodlar["EGZERSIZ"][i % 4],
-            ACIKLAMA = $"Obezite izlem kaydı {i + 1}"
-        }).ToList());
-
-        // === INTIHAR_IZLEM - İntihar İzlem ===
-        var intiharRefKodlar = new Dictionary<string, string[]>
-        {
-            { "INTIHAR_KRIZ_VAKA_TURU", new[] { "INTIHAR_GIRISIMI", "KRIZ_DURUMU", "TEHDIT", "DUSUNCE" } },
-            { "INTIHAR_GIRISIM_KRIZ_NEDENLERI", new[] { "AILE_SORUNU", "EKONOMIK", "SAGLIK", "ILISKI", "IS_KAYBI" } },
-            { "INTIHAR_GIRISIMI_YONTEMI", new[] { "ILAC", "KESICI_ALET", "YUKSEKTEN_ATLAMA", "ASMA", "DIGER" } },
-            { "INTIHAR_KRIZ_VAKA_SONUCU", new[] { "TEDAVI", "SEVK", "TABURCU", "TAKIP", "EXITUS" } }
-        };
-
-        foreach (var kvp in intiharRefKodlar)
-        {
-            foreach (var kod in kvp.Value)
-            {
-                await AddReferansKodIfNotExists(kvp.Key, kod, kod, ct);
-            }
-        }
-        await _db.SaveChangesAsync(ct);
-
-        await SeedIfEmpty<INTIHAR_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new INTIHAR_IZLEM
-        {
-            INTIHAR_IZLEM_KODU = $"INI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "INTIHAR_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            INTIHAR_KRIZ_VAKA_TURU = intiharRefKodlar["INTIHAR_KRIZ_VAKA_TURU"][i % 4],
-            INTIHAR_GIRISIM_KRIZ_NEDENLERI = intiharRefKodlar["INTIHAR_GIRISIM_KRIZ_NEDENLERI"][i % 5],
-            INTIHAR_GIRISIMI_YONTEMI = intiharRefKodlar["INTIHAR_GIRISIMI_YONTEMI"][i % 5],
-            INTIHAR_KRIZ_VAKA_SONUCU = intiharRefKodlar["INTIHAR_KRIZ_VAKA_SONUCU"][i % 5],
-            ACIKLAMA = $"İntihar/Kriz izlem kaydı {i + 1}"
-        }).ToList());
-
-        // === KADIN_IZLEM - Kadın İzlem ===
-        var kadinRefKodlar = new Dictionary<string, string[]>
-        {
-            { "KONJENITAL_ANOMALI_VARLIGI", new[] { "YOK", "VAR", "SUPHE" } },
-            { "ONCEKI_DOGUM_DURUMU", new[] { "NORMAL", "KOMPLIKASYONLU", "SEZARYEN", "DUSUK" } },
-            { "KULLANILAN_AP_YONTEMI", new[] { "RIA", "HAP", "KONDOM", "IMPLANT", "DOGAL", "YOK" } },
-            { "BIR_ONCE_KULLANILAN_AP_YONTEMI", new[] { "RIA", "HAP", "KONDOM", "IMPLANT", "DOGAL", "YOK" } },
-            { "AP_YONTEMI_LOJISTIGI", new[] { "VERILDI", "VERILMEDI", "RED" } },
-            { "KADIN_SAGLIGI_ISLEMLERI", new[] { "SMEAR", "MAMOGRAFI", "ULTRASON", "MUAYENE" } }
-        };
-
-        foreach (var kvp in kadinRefKodlar)
-        {
-            foreach (var kod in kvp.Value)
-            {
-                await AddReferansKodIfNotExists(kvp.Key, kod, kod, ct);
-            }
-        }
-        await _db.SaveChangesAsync(ct);
-
-        await SeedIfEmpty<KADIN_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new KADIN_IZLEM
-        {
-            KADIN_IZLEM_KODU = $"KDI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "KADIN_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            KONJENITAL_ANOMALI_VARLIGI = kadinRefKodlar["KONJENITAL_ANOMALI_VARLIGI"][i % 3],
-            CANLI_DOGAN_BEBEK_SAYISI = _random.Next(0, 4).ToString(),
-            OLU_DOGAN_BEBEK_SAYISI = _random.Next(0, 2).ToString(),
-            HEMOGLOBIN_DEGERI = (10 + _random.Next(0, 5)).ToString(),
-            ONCEKI_DOGUM_DURUMU = kadinRefKodlar["ONCEKI_DOGUM_DURUMU"][i % 4],
-            IZLEMIN_YAPILDIGI_YER = "HASTANE",
-            KULLANILAN_AP_YONTEMI = kadinRefKodlar["KULLANILAN_AP_YONTEMI"][i % 6],
-            BIR_ONCE_KULLANILAN_AP_YONTEMI = kadinRefKodlar["BIR_ONCE_KULLANILAN_AP_YONTEMI"][i % 6],
-            AP_YONTEMI_LOJISTIGI = kadinRefKodlar["AP_YONTEMI_LOJISTIGI"][i % 3],
-            KADIN_SAGLIGI_ISLEMLERI = kadinRefKodlar["KADIN_SAGLIGI_ISLEMLERI"][i % 4],
-            AP_YONTEMI_KULLANMAMA_NEDENI = "Aile planlaması yapılıyor",
-            ACIKLAMA = $"Kadın sağlığı izlem kaydı {i + 1}"
-        }).ToList());
-
-        // === KUDUZ_IZLEM - Kuduz İzlem ===
-        var kuduzRefKodlar = new Dictionary<string, string[]>
-        {
-            { "PROFILAKSI_TAMAMLANMA_DURUMU", new[] { "TAMAMLANDI", "DEVAM_EDIYOR", "YARIDA_BIRAKILDI" } },
-            { "UYGULANAN_KUDUZ_PROFILAKSISI", new[] { "ASI", "IMMUNOGLOBULIN", "ASI_VE_IMMUNOGLOBULIN" } }
-        };
-
-        foreach (var kvp in kuduzRefKodlar)
-        {
-            foreach (var kod in kvp.Value)
-            {
-                await AddReferansKodIfNotExists(kvp.Key, kod, kod, ct);
-            }
-        }
-        await _db.SaveChangesAsync(ct);
-
-        var kuduzKurumlar = await _db.Set<KURUM>().Take(5).ToListAsync(ct);
-        await SeedIfEmpty<KUDUZ_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new KUDUZ_IZLEM
-        {
-            KUDUZ_IZLEM_KODU = $"KDZ-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "KUDUZ_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            PROFILAKSI_TAMAMLANMA_DURUMU = kuduzRefKodlar["PROFILAKSI_TAMAMLANMA_DURUMU"][i % 3],
-            UYGULANAN_KUDUZ_PROFILAKSISI = kuduzRefKodlar["UYGULANAN_KUDUZ_PROFILAKSISI"][i % 3],
-            BEYAN_TSM_KURUM_KODU = kuduzKurumlar.Any() ? kuduzKurumlar[i % kuduzKurumlar.Count].KURUM_KODU : $"KRM-{i + 1:D5}",
-            IMMUNGLOBULIN_MIKTARI = (500 + _random.Next(0, 500)).ToString(),
-            ACIKLAMA = $"Kuduz izlem kaydı {i + 1}"
-        }).ToList());
-
-        // === LOHUSA_IZLEM - Lohusa İzlem ===
-        var lohusaRefKodlar = new Dictionary<string, string[]>
-        {
-            { "KACINCI_LOHUSA_IZLEM", new[] { "BIRINCI", "IKINCI", "UCUNCU", "DORDUNCU" } },
-            { "IZLEMIN_YAPILDIGI_YER", new[] { "HASTANE", "ASM", "EVDE", "TSM" } },
-            { "DEMIR_LOJISTIGI_VE_DESTEGI", new[] { "VERILDI", "VERILMEDI", "RED" } },
-            { "DVITAMINI_LOJISTIGI_VE_DESTEGI", new[] { "VERILDI", "VERILMEDI", "RED" } },
-            { "POSTPARTUM_DEPRESYON", new[] { "NORMAL", "RISK", "DEPRESYON" } },
-            { "UTERUS_INVOLUSYON", new[] { "NORMAL", "ANORMAL" } },
-            { "KOMPLIKASYON_TANISI_LOHUSA", new[] { "YOK", "ENFEKSIYON", "KANAMA", "DIGER" } },
-            { "SEYIR_TEHLIKE_ISARETI", new[] { "YOK", "ATES", "KANAMA", "ENFEKSIYON" } }
-        };
-
-        foreach (var kvp in lohusaRefKodlar)
-        {
-            foreach (var kod in kvp.Value)
-            {
-                await AddReferansKodIfNotExists(kvp.Key, kod, kod, ct);
-            }
-        }
-        await _db.SaveChangesAsync(ct);
-
-        await SeedIfEmpty<LOHUSA_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new LOHUSA_IZLEM
-        {
-            LOHUSA_IZLEM_KODU = $"LHI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "LOHUSA_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            KACINCI_LOHUSA_IZLEM = lohusaRefKodlar["KACINCI_LOHUSA_IZLEM"][i % 4],
-            IZLEMIN_YAPILDIGI_YER = lohusaRefKodlar["IZLEMIN_YAPILDIGI_YER"][i % 4],
-            DEMIR_LOJISTIGI_VE_DESTEGI = lohusaRefKodlar["DEMIR_LOJISTIGI_VE_DESTEGI"][i % 3],
-            DVITAMINI_LOJISTIGI_VE_DESTEGI = lohusaRefKodlar["DVITAMINI_LOJISTIGI_VE_DESTEGI"][i % 3],
-            GEBELIK_SONLANMA_TARIHI = DateTime.Now.AddDays(-_random.Next(1, 42)),
-            POSTPARTUM_DEPRESYON = lohusaRefKodlar["POSTPARTUM_DEPRESYON"][i % 3],
-            UTERUS_INVOLUSYON = lohusaRefKodlar["UTERUS_INVOLUSYON"][i % 2],
-            BILGI_ALINAN_KISI_AD_SOYADI = $"Yakın {i + 1}",
-            BILGI_ALINAN_KISI_TELEFON = $"05{_random.Next(100000000, 999999999)}",
-            KONJENITAL_ANOMALI_VARLIGI = kadinRefKodlar["KONJENITAL_ANOMALI_VARLIGI"][i % 3],
-            HEMOGLOBIN_DEGERI = (10 + _random.Next(0, 5)).ToString(),
-            KOMPLIKASYON_TANISI = lohusaRefKodlar["KOMPLIKASYON_TANISI_LOHUSA"][i % 4],
-            SEYIR_TEHLIKE_ISARETI = lohusaRefKodlar["SEYIR_TEHLIKE_ISARETI"][i % 4],
-            KADIN_SAGLIGI_ISLEMLERI = kadinRefKodlar["KADIN_SAGLIGI_ISLEMLERI"][i % 4],
-            ACIKLAMA = $"Lohusa izlem kaydı {i + 1}"
-        }).ToList());
-
-        // === EVDE_SAGLIK_IZLEM - Evde Sağlık İzlem ===
-        var evdeSaglikRefKodlar = new Dictionary<string, string[]>
-        {
-            { "AGRI", new[] { "YOK", "HAFIF", "ORTA", "SIDDETLI" } },
-            { "AYDINLATMA", new[] { "YETERLI", "YETERSIZ" } },
-            { "BAKIM_VE_DESTEK_IHTIYACI", new[] { "BAGIMSIZ", "KISMI_BAGIMLI", "TAM_BAGIMLI" } },
-            { "BASI_DEGERLENDIRMESI", new[] { "RISK_YOK", "DUSUK_RISK", "ORTA_RISK", "YUKSEK_RISK" } },
-            { "BASVURU_TURU", new[] { "BIREYSEL", "KURUM", "SEVK" } },
-            { "BESLENME", new[] { "NORMAL", "YETERSIZ", "ENTERAL", "PARENTERAL" } },
-            { "ESH_ESAS_HASTALIK_GRUBU", new[] { "NOROLOJIK", "ONKOLOJIK", "GERIATRIK", "DIGER" } },
-            { "EV_HIJYENI", new[] { "IYI", "ORTA", "KOTU" } },
-            { "GUVENLIK", new[] { "YETERLI", "YETERSIZ" } },
-            { "ISINMA", new[] { "DOGALGAZ", "ELEKTRIK", "KATI_YAKIT", "YOK" } },
-            { "KISISEL_BAKIM", new[] { "BAGIMSIZ", "YARDIMLA", "BAGIMLI" } },
-            { "KISISEL_HIJYEN", new[] { "IYI", "ORTA", "KOTU" } },
-            { "KONUT_TIPI", new[] { "MUSTAKIL", "APARTMAN", "GECEKONDU" } },
-            { "KULLANILAN_HELA_TIPI", new[] { "ALATURKA", "ALAFRANGA", "PORTATIF" } },
-            { "YATAGA_BAGIMLILIK", new[] { "YOK", "KISMI", "TAM" } },
-            { "KULLANDIGI_YARDIMCI_ARACLAR", new[] { "YOK", "BASTON", "YURUYUCU", "TEKERLEKLI_SANDALYE" } },
-            { "PSIKOLOJIK_DURUM_DEGERLENDIRME", new[] { "NORMAL", "ANKSIYETE", "DEPRESYON", "DIGER" } },
-            { "ESH_SONLANDIRILMASI", new[] { "DEVAM", "TABURCU", "SEVK", "EXITUS" } },
-            { "ESH_HASTA_NAKLI", new[] { "YOK", "AMBULANS", "OZEL_ARAC" } },
-            { "ESH_ALINACAK_IL", new[] { "34", "06", "35", "16" } },
-            { "BIR_SONRAKI_HIZMET_IHTIYACI", new[] { "KONTROL", "TEDAVI", "REHABILITASYON" } },
-            { "VERILEN_EGITIMLER", new[] { "BAKIM", "BESLENME", "ILAC_KULLANIMI", "YARA_BAKIMI" } }
-        };
-
-        foreach (var kvp in evdeSaglikRefKodlar)
-        {
-            foreach (var kod in kvp.Value)
-            {
-                await AddReferansKodIfNotExists(kvp.Key, kod, kod, ct);
-            }
-        }
-        await _db.SaveChangesAsync(ct);
-
-        await SeedIfEmpty<EVDE_SAGLIK_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new EVDE_SAGLIK_IZLEM
-        {
-            EVDE_SAGLIK_IZLEM_KODU = $"ESI-{i + 1:D5}",
-            REFERANS_TABLO_ADI = "EVDE_SAGLIK_IZLEM",
-            HASTA_KODU = b.HASTA_KODU,
-            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-            AGRI = evdeSaglikRefKodlar["AGRI"][i % 4],
-            AYDINLATMA = evdeSaglikRefKodlar["AYDINLATMA"][i % 2],
-            BAKIM_VE_DESTEK_IHTIYACI = evdeSaglikRefKodlar["BAKIM_VE_DESTEK_IHTIYACI"][i % 3],
-            BASI_DEGERLENDIRMESI = evdeSaglikRefKodlar["BASI_DEGERLENDIRMESI"][i % 4],
-            BASVURU_TURU = evdeSaglikRefKodlar["BASVURU_TURU"][i % 3],
-            BESLENME = evdeSaglikRefKodlar["BESLENME"][i % 4],
-            ESH_ESAS_HASTALIK_GRUBU = evdeSaglikRefKodlar["ESH_ESAS_HASTALIK_GRUBU"][i % 4],
-            EV_HIJYENI = evdeSaglikRefKodlar["EV_HIJYENI"][i % 3],
-            GUVENLIK = evdeSaglikRefKodlar["GUVENLIK"][i % 2],
-            ISINMA = evdeSaglikRefKodlar["ISINMA"][i % 4],
-            KISISEL_BAKIM = evdeSaglikRefKodlar["KISISEL_BAKIM"][i % 3],
-            KISISEL_HIJYEN = evdeSaglikRefKodlar["KISISEL_HIJYEN"][i % 3],
-            KONUT_TIPI = evdeSaglikRefKodlar["KONUT_TIPI"][i % 3],
-            KULLANILAN_HELA_TIPI = evdeSaglikRefKodlar["KULLANILAN_HELA_TIPI"][i % 3],
-            YATAGA_BAGIMLILIK = evdeSaglikRefKodlar["YATAGA_BAGIMLILIK"][i % 3],
-            KULLANDIGI_YARDIMCI_ARACLAR = evdeSaglikRefKodlar["KULLANDIGI_YARDIMCI_ARACLAR"][i % 4],
-            PSIKOLOJIK_DURUM_DEGERLENDIRME = evdeSaglikRefKodlar["PSIKOLOJIK_DURUM_DEGERLENDIRME"][i % 4],
-            ESH_SONLANDIRILMASI = evdeSaglikRefKodlar["ESH_SONLANDIRILMASI"][i % 4],
-            ESH_HASTA_NAKLI = evdeSaglikRefKodlar["ESH_HASTA_NAKLI"][i % 3],
-            ESH_ALINACAK_IL = evdeSaglikRefKodlar["ESH_ALINACAK_IL"][i % 4],
-            BIR_SONRAKI_HIZMET_IHTIYACI = evdeSaglikRefKodlar["BIR_SONRAKI_HIZMET_IHTIYACI"][i % 3],
-            VERILEN_EGITIMLER = evdeSaglikRefKodlar["VERILEN_EGITIMLER"][i % 4],
-            ACIKLAMA = $"Evde sağlık izlem kaydı {i + 1}"
-        }).ToList());
-
-        _logger.LogInformation("İzlem tabloları seeded (BEBEK_COCUK_IZLEM, GEBE_IZLEM, OBEZITE_IZLEM, INTIHAR_IZLEM, KADIN_IZLEM, KUDUZ_IZLEM, LOHUSA_IZLEM, EVDE_SAGLIK_IZLEM)");
 
         // === DOGUM_DETAY - Doğum Detay ===
         var dogumlar = await _db.Set<DOGUM>().ToListAsync(ct);
@@ -5162,42 +4764,11 @@ internal class VemSeeder : ICustomSeeder
                 await AddReferansKodIfNotExists("ROBSON_GRUBU", t, t, ct);
             await _db.SaveChangesAsync(ct);
 
-            await SeedIfEmpty<DOGUM_DETAY>(ct, dogumlar.Take(25).Select((d, i) => new DOGUM_DETAY
-            {
-                DOGUM_DETAY_KODU = $"DGD-{i + 1:D5}",
-                REFERANS_TABLO_ADI = "DOGUM_DETAY",
-                HASTA_KODU = hastalar[i % hastalar.Count].HASTA_KODU,
-                HASTA_BASVURU_KODU = basvurular[i % basvurular.Count].HASTA_BASVURU_KODU,
-                DOGUM_KODU = d.DOGUM_KODU,
-                DOGUM_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 180)),
-                CINSIYET = dogumDetayRef["CINSIYET"][i % 3],
-                DOGUM_YONTEMI = dogumDetayRef["DOGUM_YONTEMI"][i % 4],
-                AGIRLIK = (2500 + _random.Next(0, 2000)).ToString(),
-                BOY = (45 + _random.Next(0, 10)).ToString(),
-                BAS_CEVRESI = (32 + _random.Next(0, 8)).ToString(),
-                APGAR_1 = (_random.Next(5, 10)).ToString(),
-                APGAR_5 = (_random.Next(7, 10)).ToString(),
-                APGAR_NOTU = $"Normal APGAR skoru {i + 1}",
-                KOMPLIKASYON_TANISI = $"KOMPLIKASYON_TANISI_{komplikasyonRef[i % komplikasyonRef.Length]}",
-                DOGUM_SIRASI = (_random.Next(1, 3)).ToString(),
-                GOGUS_CEVRESI = (30 + _random.Next(0, 8)).ToString(),
-                PROGNOZ_BILGISI = dogumDetayRef["PROGNOZ_BILGISI"][i % 3],
-                SURMATURE_BILGISI = dogumDetayRef["SURMATURE_BILGISI"][i % 2],
-                K_VITAMINI_UYGULANMA_DURUMU = dogumDetayRef["K_VITAMINI_UYGULANMA_DURUMU"][i % 2],
-                BEBEGIN_HEPATIT_ASI_DURUMU = dogumDetayRef["BEBEGIN_HEPATIT_ASI_DURUMU"][i % 3],
-                YENIDOGAN_ISITME_TARAMA_DURUMU = yenidoganIsitmeTaramaRef[i % yenidoganIsitmeTaramaRef.Length],
-                ILK_BESLENME_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 180)).AddHours(_random.Next(1, 24)),
-                TOPUK_KANI = izlemRefKodlar["TOPUK_KANI"][i % 3],
-                TOPUK_KANI_ALINMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 7)),
-                BEBEK_ADI = $"Bebek {i + 1}",
-                BABA_TC_KIMLIK_NUMARASI = GenerateTcKimlik(),
-                BEBEGIN_YASAM_DURUMU = bebekYasamDurumuRef[i % 2 == 0 ? 0 : 0],
-                SEZARYEN_ENDIKASYONLAR = sezaryenEndikasyonRef[i % sezaryenEndikasyonRef.Length],
-                ROBSON_GRUBU = robsonGrubuRef[i % robsonGrubuRef.Length]
-            }).ToList());
+            // DOGUM_DETAY skipped - requires complex FK references
+            _logger.LogInformation("DOGUM_DETAY skipped - requires many FK reference codes");
         }
 
-        _logger.LogInformation("Doğum detay tablosu seeded");
+        _logger.LogInformation("Doğum detay tablosu references added");
 
         // === NOBETCI_PERSONEL_BILGISI - Nöbetçi Personel Bilgisi ===
         var gorevTuruRef = new[] { "HEKIM", "HEMSIRE", "TEKNISYEN", "SEKRETER" };
@@ -5785,7 +5356,7 @@ internal class VemSeeder : ICustomSeeder
             ODUL_CEZA_TURU = odulCezaTuruRef[i % 5],
             CEZA_BASLANGIC_TARIHI = DateTime.Now.AddDays(-_random.Next(30, 365)),
             CEZA_BITIS_TARIHI = DateTime.Now.AddDays(_random.Next(1, 90)),
-            ODUL_CEZA_VEREN_KURUM_KODU = kuduzKurumlar.Any() ? kuduzKurumlar[i % kuduzKurumlar.Count].KURUM_KODU : $"KRM-{i + 1:D5}",
+            ODUL_CEZA_VEREN_KURUM_KODU = kurumlar.Any() ? kurumlar[i % kurumlar.Count].KURUM_KODU : $"KRM-{i + 1:D5}",
             ODUL_CEZA_ACIKLAMA = $"Ödül/Ceza açıklaması {i + 1}",
             TEBLIG_TARIHI = DateTime.Now.AddDays(-_random.Next(1, 30)),
             TEBLIG_EVRAK_TARIHI = DateTime.Now.AddDays(-_random.Next(1, 30)),

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd:*)",
+      "Bash(sqlcmd:*)",
+      "Bash(./vem.exe:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(dotnet build:*)",
+      "Bash(timeout 60 dotnet run:*)",
+      "Bash(curl:*)",
+      "Bash(powershell:*)",
+      "Bash(start http://localhost:5000/swagger)"
+    ]
+  }
+}
