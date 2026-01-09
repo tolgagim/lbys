@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KlinikSeyir;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KlinikSeyirController : BaseApiController
             .Select(e => new KlinikSeyirDto
             {
                 KLINIK_SEYIR_KODU = e.KLINIK_SEYIR_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 SEYIR_TIPI = e.SEYIR_TIPI,
                 SEYIR_ZAMANI = e.SEYIR_ZAMANI,
@@ -52,8 +51,7 @@ public class KlinikSeyirController : BaseApiController
         return new KlinikSeyirDto
         {
             KLINIK_SEYIR_KODU = entity.KLINIK_SEYIR_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             SEYIR_TIPI = entity.SEYIR_TIPI,
             SEYIR_ZAMANI = entity.SEYIR_ZAMANI,
@@ -71,8 +69,7 @@ public class KlinikSeyirController : BaseApiController
         var entity = new KLINIK_SEYIR
         {
             KLINIK_SEYIR_KODU = dto.KLINIK_SEYIR_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             SEYIR_TIPI = dto.SEYIR_TIPI,
             SEYIR_ZAMANI = dto.SEYIR_ZAMANI,
@@ -97,7 +94,6 @@ public class KlinikSeyirController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.SEYIR_TIPI = dto.SEYIR_TIPI;

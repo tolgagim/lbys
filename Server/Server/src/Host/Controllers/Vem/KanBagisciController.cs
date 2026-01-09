@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanBagisci;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanBagisciController : BaseApiController
             .Select(e => new KanBagisciDto
             {
                 KAN_BAGISCI_KODU = e.KAN_BAGISCI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                BAGISCI_HASTA_BASVURU_KODU = e.BAGISCI_HASTA_BASVURU_KODU,
+BAGISCI_HASTA_BASVURU_KODU = e.BAGISCI_HASTA_BASVURU_KODU,
                 BAGISCI_HASTA_KODU = e.BAGISCI_HASTA_KODU,
                 KAN_BAGIS_ZAMANI = e.KAN_BAGIS_ZAMANI,
                 KAN_GRUBU = e.KAN_GRUBU,
@@ -70,8 +69,7 @@ public class KanBagisciController : BaseApiController
         return new KanBagisciDto
         {
             KAN_BAGISCI_KODU = entity.KAN_BAGISCI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            BAGISCI_HASTA_BASVURU_KODU = entity.BAGISCI_HASTA_BASVURU_KODU,
+BAGISCI_HASTA_BASVURU_KODU = entity.BAGISCI_HASTA_BASVURU_KODU,
             BAGISCI_HASTA_KODU = entity.BAGISCI_HASTA_KODU,
             KAN_BAGIS_ZAMANI = entity.KAN_BAGIS_ZAMANI,
             KAN_GRUBU = entity.KAN_GRUBU,
@@ -107,8 +105,7 @@ public class KanBagisciController : BaseApiController
         var entity = new KAN_BAGISCI
         {
             KAN_BAGISCI_KODU = dto.KAN_BAGISCI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            BAGISCI_HASTA_BASVURU_KODU = dto.BAGISCI_HASTA_BASVURU_KODU,
+BAGISCI_HASTA_BASVURU_KODU = dto.BAGISCI_HASTA_BASVURU_KODU,
             BAGISCI_HASTA_KODU = dto.BAGISCI_HASTA_KODU,
             KAN_BAGIS_ZAMANI = dto.KAN_BAGIS_ZAMANI,
             KAN_GRUBU = dto.KAN_GRUBU,
@@ -151,7 +148,6 @@ public class KanBagisciController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.BAGISCI_HASTA_BASVURU_KODU = dto.BAGISCI_HASTA_BASVURU_KODU;
         entity.BAGISCI_HASTA_KODU = dto.BAGISCI_HASTA_KODU;
         entity.KAN_BAGIS_ZAMANI = dto.KAN_BAGIS_ZAMANI;

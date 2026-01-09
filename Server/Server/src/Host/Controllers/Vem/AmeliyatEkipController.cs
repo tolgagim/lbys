@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.AmeliyatEkip;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class AmeliyatEkipController : BaseApiController
             .Select(e => new AmeliyatEkipDto
             {
                 AMELIYAT_EKIP_KODU = e.AMELIYAT_EKIP_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                AMELIYAT_KODU = e.AMELIYAT_KODU,
+AMELIYAT_KODU = e.AMELIYAT_KODU,
                 AMELIYAT_ISLEM_KODU = e.AMELIYAT_ISLEM_KODU,
                 EKIP_NUMARASI = e.EKIP_NUMARASI,
                 PERSONEL_KODU = e.PERSONEL_KODU,
@@ -49,8 +48,7 @@ public class AmeliyatEkipController : BaseApiController
         return new AmeliyatEkipDto
         {
             AMELIYAT_EKIP_KODU = entity.AMELIYAT_EKIP_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            AMELIYAT_KODU = entity.AMELIYAT_KODU,
+AMELIYAT_KODU = entity.AMELIYAT_KODU,
             AMELIYAT_ISLEM_KODU = entity.AMELIYAT_ISLEM_KODU,
             EKIP_NUMARASI = entity.EKIP_NUMARASI,
             PERSONEL_KODU = entity.PERSONEL_KODU,
@@ -65,8 +63,7 @@ public class AmeliyatEkipController : BaseApiController
         var entity = new AMELIYAT_EKIP
         {
             AMELIYAT_EKIP_KODU = dto.AMELIYAT_EKIP_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            AMELIYAT_KODU = dto.AMELIYAT_KODU,
+AMELIYAT_KODU = dto.AMELIYAT_KODU,
             AMELIYAT_ISLEM_KODU = dto.AMELIYAT_ISLEM_KODU,
             EKIP_NUMARASI = dto.EKIP_NUMARASI,
             PERSONEL_KODU = dto.PERSONEL_KODU,
@@ -88,7 +85,6 @@ public class AmeliyatEkipController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.AMELIYAT_KODU = dto.AMELIYAT_KODU;
         entity.AMELIYAT_ISLEM_KODU = dto.AMELIYAT_ISLEM_KODU;
         entity.EKIP_NUMARASI = dto.EKIP_NUMARASI;

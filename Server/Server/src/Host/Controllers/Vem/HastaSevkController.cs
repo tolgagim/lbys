@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaSevk;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaSevkController : BaseApiController
             .Select(e => new HastaSevkDto
             {
                 HASTA_SEVK_KODU = e.HASTA_SEVK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 SEVK_TAKIP_NUMARASI = e.SEVK_TAKIP_NUMARASI,
                 SEVK_NEDENI = e.SEVK_NEDENI,
@@ -62,8 +61,7 @@ public class HastaSevkController : BaseApiController
         return new HastaSevkDto
         {
             HASTA_SEVK_KODU = entity.HASTA_SEVK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             SEVK_TAKIP_NUMARASI = entity.SEVK_TAKIP_NUMARASI,
             SEVK_NEDENI = entity.SEVK_NEDENI,
@@ -91,8 +89,7 @@ public class HastaSevkController : BaseApiController
         var entity = new HASTA_SEVK
         {
             HASTA_SEVK_KODU = dto.HASTA_SEVK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             SEVK_TAKIP_NUMARASI = dto.SEVK_TAKIP_NUMARASI,
             SEVK_NEDENI = dto.SEVK_NEDENI,
@@ -127,7 +124,6 @@ public class HastaSevkController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.SEVK_TAKIP_NUMARASI = dto.SEVK_TAKIP_NUMARASI;

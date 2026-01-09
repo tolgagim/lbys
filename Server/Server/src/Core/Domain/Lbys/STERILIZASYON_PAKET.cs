@@ -15,9 +15,7 @@ public class STERILIZASYON_PAKET : VemEntity
     [Key]
     public string STERILIZASYON_PAKET_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>Sterilizasyon Ã¼nitesinde kullanÄ±lan paketler iÃ§in tanÄ±mlanan ad bilgisidir.</summary>
+/// <summary>Sterilizasyon Ã¼nitesinde kullanÄ±lan paketler iÃ§in tanÄ±mlanan ad bilgisidir.</summary>
     public string STERILIZASYON_PAKET_ADI { get; set; }
 
     /// <summary>Sterilizasyon Ã¼nitesinde kullanÄ±lan paketin barkod bilgisidir. Barkod bilgisi yo...</summary>

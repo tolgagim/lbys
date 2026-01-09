@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelBordro;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelBordroController : BaseApiController
             .Select(e => new PersonelBordroDto
             {
                 PERSONEL_BORDRO_KODU = e.PERSONEL_BORDRO_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                YIL = e.YIL,
+YIL = e.YIL,
                 AY = e.AY,
                 PERSONEL_KODU = e.PERSONEL_KODU,
                 BORDRO_TURU = e.BORDRO_TURU,
@@ -123,8 +122,7 @@ public class PersonelBordroController : BaseApiController
         return new PersonelBordroDto
         {
             PERSONEL_BORDRO_KODU = entity.PERSONEL_BORDRO_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            YIL = entity.YIL,
+YIL = entity.YIL,
             AY = entity.AY,
             PERSONEL_KODU = entity.PERSONEL_KODU,
             BORDRO_TURU = entity.BORDRO_TURU,
@@ -213,8 +211,7 @@ public class PersonelBordroController : BaseApiController
         var entity = new PERSONEL_BORDRO
         {
             PERSONEL_BORDRO_KODU = dto.PERSONEL_BORDRO_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            YIL = dto.YIL,
+YIL = dto.YIL,
             AY = dto.AY,
             PERSONEL_KODU = dto.PERSONEL_KODU,
             BORDRO_TURU = dto.BORDRO_TURU,
@@ -310,7 +307,6 @@ public class PersonelBordroController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.YIL = dto.YIL;
         entity.AY = dto.AY;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;

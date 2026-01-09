@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.EvdeSaglikIzlem;
+namespace Server.Application.Vem.EvdeSaglikIzlem;
 
 public class EvdeSaglikIzlemDto
 {
     public string? EVDE_SAGLIK_IZLEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? AGRI { get; set; }
     public string? AYDINLATMA { get; set; }

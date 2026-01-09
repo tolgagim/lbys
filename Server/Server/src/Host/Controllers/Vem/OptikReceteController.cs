@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.OptikRecete;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class OptikReceteController : BaseApiController
             .Select(e => new OptikReceteDto
             {
                 OPTIK_RECETE_KODU = e.OPTIK_RECETE_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 GOZLUK_RECETE_TIPI = e.GOZLUK_RECETE_TIPI,
                 HEKIM_KODU = e.HEKIM_KODU,
@@ -84,8 +83,7 @@ public class OptikReceteController : BaseApiController
         return new OptikReceteDto
         {
             OPTIK_RECETE_KODU = entity.OPTIK_RECETE_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             GOZLUK_RECETE_TIPI = entity.GOZLUK_RECETE_TIPI,
             HEKIM_KODU = entity.HEKIM_KODU,
@@ -135,8 +133,7 @@ public class OptikReceteController : BaseApiController
         var entity = new OPTIK_RECETE
         {
             OPTIK_RECETE_KODU = dto.OPTIK_RECETE_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             GOZLUK_RECETE_TIPI = dto.GOZLUK_RECETE_TIPI,
             HEKIM_KODU = dto.HEKIM_KODU,
@@ -193,7 +190,6 @@ public class OptikReceteController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.GOZLUK_RECETE_TIPI = dto.GOZLUK_RECETE_TIPI;

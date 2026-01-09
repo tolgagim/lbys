@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KurulHekim;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KurulHekimController : BaseApiController
             .Select(e => new KurulHekimDto
             {
                 KURUL_HEKIM_KODU = e.KURUL_HEKIM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 KURUL_RAPOR_KODU = e.KURUL_RAPOR_KODU,
                 HEKIM_KODU = e.HEKIM_KODU,
@@ -54,8 +53,7 @@ public class KurulHekimController : BaseApiController
         return new KurulHekimDto
         {
             KURUL_HEKIM_KODU = entity.KURUL_HEKIM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             KURUL_RAPOR_KODU = entity.KURUL_RAPOR_KODU,
             HEKIM_KODU = entity.HEKIM_KODU,
@@ -75,8 +73,7 @@ public class KurulHekimController : BaseApiController
         var entity = new KURUL_HEKIM
         {
             KURUL_HEKIM_KODU = dto.KURUL_HEKIM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU,
             HEKIM_KODU = dto.HEKIM_KODU,
@@ -103,7 +100,6 @@ public class KurulHekimController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU;

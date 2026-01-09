@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Vezne;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class VezneController : BaseApiController
             .Select(e => new VezneDto
             {
                 VEZNE_KODU = e.VEZNE_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 MAKBUZ_NUMARASI = e.MAKBUZ_NUMARASI,
                 VEZNE_OZEL_NUMARASI = e.VEZNE_OZEL_NUMARASI,
@@ -61,8 +60,7 @@ public class VezneController : BaseApiController
         return new VezneDto
         {
             VEZNE_KODU = entity.VEZNE_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             MAKBUZ_NUMARASI = entity.MAKBUZ_NUMARASI,
             VEZNE_OZEL_NUMARASI = entity.VEZNE_OZEL_NUMARASI,
@@ -89,8 +87,7 @@ public class VezneController : BaseApiController
         var entity = new VEZNE
         {
             VEZNE_KODU = dto.VEZNE_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             MAKBUZ_NUMARASI = dto.MAKBUZ_NUMARASI,
             VEZNE_OZEL_NUMARASI = dto.VEZNE_OZEL_NUMARASI,
@@ -124,7 +121,6 @@ public class VezneController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.MAKBUZ_NUMARASI = dto.MAKBUZ_NUMARASI;

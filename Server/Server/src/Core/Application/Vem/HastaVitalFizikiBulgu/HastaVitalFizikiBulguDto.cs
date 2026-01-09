@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaVitalFizikiBulgu;
+namespace Server.Application.Vem.HastaVitalFizikiBulgu;
 
 public class HastaVitalFizikiBulguDto
 {
     public string? HASTA_VITAL_FIZIKI_BULGU_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public DateTime? ISLEM_ZAMANI { get; set; }
     public string? SISTOLIK_KAN_BASINCI_DEGERI { get; set; }

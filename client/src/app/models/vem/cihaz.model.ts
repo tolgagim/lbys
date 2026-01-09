@@ -55,6 +55,7 @@ export interface CihazListFilter extends BaseListFilter {
   cihazGrubu?: string;
   birimKodu?: string;
   cihazModeli?: string;
+  AKTIFLIK_BILGISI?: string | null;
 }
 
 export const newCihaz: CreateCihazDto = {

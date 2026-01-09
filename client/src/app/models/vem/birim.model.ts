@@ -49,6 +49,14 @@ export interface BirimListFilter extends BaseListFilter {
   birimTuru?: string;
   ustBirimKodu?: string;
   kurumKodu?: string;
+  AKTIFLIK_BILGISI?: string | null;
+  BINA_KODU?: string | null;
+  KLINIK_KODU?: string | null;
+  MEDULA_BRANS_KODU?: string | null;
+  MHRS_ADI?: string | null;
+  MHRS_KODU?: string | null;
+  MKYS_KODU?: string | null;
+  YATAK_SAYISI?: number | null;
 }
 
 export const newBirim: CreateBirimDto = {

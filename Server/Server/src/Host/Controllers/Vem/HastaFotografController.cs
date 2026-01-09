@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaFotograf;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaFotografController : BaseApiController
             .Select(e => new HastaFotografDto
             {
                 HASTA_FOTOGRAF_KODU = e.HASTA_FOTOGRAF_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 FOTOGRAF_TURU = e.FOTOGRAF_TURU,
                 FOTOGRAF_BILGISI = e.FOTOGRAF_BILGISI,
@@ -50,8 +49,7 @@ public class HastaFotografController : BaseApiController
         return new HastaFotografDto
         {
             HASTA_FOTOGRAF_KODU = entity.HASTA_FOTOGRAF_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             FOTOGRAF_TURU = entity.FOTOGRAF_TURU,
             FOTOGRAF_BILGISI = entity.FOTOGRAF_BILGISI,
@@ -67,8 +65,7 @@ public class HastaFotografController : BaseApiController
         var entity = new HASTA_FOTOGRAF
         {
             HASTA_FOTOGRAF_KODU = dto.HASTA_FOTOGRAF_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             FOTOGRAF_TURU = dto.FOTOGRAF_TURU,
             FOTOGRAF_BILGISI = dto.FOTOGRAF_BILGISI,
@@ -91,7 +88,6 @@ public class HastaFotografController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.FOTOGRAF_TURU = dto.FOTOGRAF_TURU;

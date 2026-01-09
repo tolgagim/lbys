@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokFis;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokFisController : BaseApiController
             .Select(e => new StokFisDto
             {
                 STOK_FIS_KODU = e.STOK_FIS_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 BAGLI_STOK_FIS_KODU = e.BAGLI_STOK_FIS_KODU,
                 DEPO_KODU = e.DEPO_KODU,
@@ -73,8 +72,7 @@ public class StokFisController : BaseApiController
         return new StokFisDto
         {
             STOK_FIS_KODU = entity.STOK_FIS_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             BAGLI_STOK_FIS_KODU = entity.BAGLI_STOK_FIS_KODU,
             DEPO_KODU = entity.DEPO_KODU,
@@ -113,8 +111,7 @@ public class StokFisController : BaseApiController
         var entity = new STOK_FIS
         {
             STOK_FIS_KODU = dto.STOK_FIS_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             BAGLI_STOK_FIS_KODU = dto.BAGLI_STOK_FIS_KODU,
             DEPO_KODU = dto.DEPO_KODU,
@@ -160,7 +157,6 @@ public class StokFisController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.BAGLI_STOK_FIS_KODU = dto.BAGLI_STOK_FIS_KODU;

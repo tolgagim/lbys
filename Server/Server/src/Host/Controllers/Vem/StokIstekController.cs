@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokIstek;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokIstekController : BaseApiController
             .Select(e => new StokIstekDto
             {
                 STOK_ISTEK_KODU = e.STOK_ISTEK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 ISTEK_ZAMANI = e.ISTEK_ZAMANI,
                 ISTEK_DEPO_KODU = e.ISTEK_DEPO_KODU,
@@ -52,8 +51,7 @@ public class StokIstekController : BaseApiController
         return new StokIstekDto
         {
             STOK_ISTEK_KODU = entity.STOK_ISTEK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             ISTEK_ZAMANI = entity.ISTEK_ZAMANI,
             ISTEK_DEPO_KODU = entity.ISTEK_DEPO_KODU,
@@ -71,8 +69,7 @@ public class StokIstekController : BaseApiController
         var entity = new STOK_ISTEK
         {
             STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             ISTEK_ZAMANI = dto.ISTEK_ZAMANI,
             ISTEK_DEPO_KODU = dto.ISTEK_DEPO_KODU,
@@ -97,7 +94,6 @@ public class StokIstekController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.ISTEK_ZAMANI = dto.ISTEK_ZAMANI;

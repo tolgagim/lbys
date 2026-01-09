@@ -15,9 +15,7 @@ public class OPTIK_RECETE : VemEntity
     [Key]
     public string OPTIK_RECETE_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisine baÅŸvuran hastalar iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi tarafÄ±ndan Ã¼...</summary>
+/// <summary>SaÄŸlÄ±k tesisine baÅŸvuran hastalar iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi tarafÄ±ndan Ã¼...</summary>
     [ForeignKey("HastaBasvuruNavigation")]
     public string HASTA_BASVURU_KODU { get; set; }
 

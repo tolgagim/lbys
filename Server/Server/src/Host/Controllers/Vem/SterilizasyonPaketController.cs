@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonPaket;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonPaketController : BaseApiController
             .Select(e => new SterilizasyonPaketDto
             {
                 STERILIZASYON_PAKET_KODU = e.STERILIZASYON_PAKET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                STERILIZASYON_PAKET_ADI = e.STERILIZASYON_PAKET_ADI,
+STERILIZASYON_PAKET_ADI = e.STERILIZASYON_PAKET_ADI,
                 PAKET_KODU = e.PAKET_KODU,
                 ACIKLAMA = e.ACIKLAMA,
                 STERILIZASYON_YONTEMI = e.STERILIZASYON_YONTEMI,
@@ -50,8 +49,7 @@ public class SterilizasyonPaketController : BaseApiController
         return new SterilizasyonPaketDto
         {
             STERILIZASYON_PAKET_KODU = entity.STERILIZASYON_PAKET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            STERILIZASYON_PAKET_ADI = entity.STERILIZASYON_PAKET_ADI,
+STERILIZASYON_PAKET_ADI = entity.STERILIZASYON_PAKET_ADI,
             PAKET_KODU = entity.PAKET_KODU,
             ACIKLAMA = entity.ACIKLAMA,
             STERILIZASYON_YONTEMI = entity.STERILIZASYON_YONTEMI,
@@ -67,8 +65,7 @@ public class SterilizasyonPaketController : BaseApiController
         var entity = new STERILIZASYON_PAKET
         {
             STERILIZASYON_PAKET_KODU = dto.STERILIZASYON_PAKET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            STERILIZASYON_PAKET_ADI = dto.STERILIZASYON_PAKET_ADI,
+STERILIZASYON_PAKET_ADI = dto.STERILIZASYON_PAKET_ADI,
             PAKET_KODU = dto.PAKET_KODU,
             ACIKLAMA = dto.ACIKLAMA,
             STERILIZASYON_YONTEMI = dto.STERILIZASYON_YONTEMI,
@@ -91,7 +88,6 @@ public class SterilizasyonPaketController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.STERILIZASYON_PAKET_ADI = dto.STERILIZASYON_PAKET_ADI;
         entity.PAKET_KODU = dto.PAKET_KODU;
         entity.ACIKLAMA = dto.ACIKLAMA;

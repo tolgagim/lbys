@@ -15,9 +15,7 @@ public class VEZNE_DETAY : VemEntity
     [Key]
     public string VEZNE_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisi veznesinde yapÄ±lan iÅŸlemlerin bilgisi iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Si...</summary>
+/// <summary>SaÄŸlÄ±k tesisi veznesinde yapÄ±lan iÅŸlemlerin bilgisi iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Si...</summary>
     [ForeignKey("VezneNavigation")]
     public string VEZNE_KODU { get; set; }
 

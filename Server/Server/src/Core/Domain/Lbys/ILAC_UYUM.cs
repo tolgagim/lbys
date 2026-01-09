@@ -15,9 +15,7 @@ public class ILAC_UYUM : VemEntity
     [Key]
     public string ILAC_UYUM_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>Hastaya verilen ilaÃ§lar arasÄ±nda tespit edilen uyumsuzluk iÃ§in yapÄ±lan sÄ±nÄ±fland...</summary>
+/// <summary>Hastaya verilen ilaÃ§lar arasÄ±nda tespit edilen uyumsuzluk iÃ§in yapÄ±lan sÄ±nÄ±fland...</summary>
     [ForeignKey("IlacUyumsuzlukTuruNavigation")]
     public string ILAC_UYUMSUZLUK_TURU { get; set; }
 

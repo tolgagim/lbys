@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelOdulCeza;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelOdulCezaController : BaseApiController
             .Select(e => new PersonelOdulCezaDto
             {
                 PERSONEL_ODUL_CEZA_KODU = e.PERSONEL_ODUL_CEZA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 ODUL_CEZA_DURUMU = e.ODUL_CEZA_DURUMU,
                 ODUL_CEZA_TURU = e.ODUL_CEZA_TURU,
                 CEZA_BASLANGIC_TARIHI = e.CEZA_BASLANGIC_TARIHI,
@@ -54,8 +53,7 @@ public class PersonelOdulCezaController : BaseApiController
         return new PersonelOdulCezaDto
         {
             PERSONEL_ODUL_CEZA_KODU = entity.PERSONEL_ODUL_CEZA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             ODUL_CEZA_DURUMU = entity.ODUL_CEZA_DURUMU,
             ODUL_CEZA_TURU = entity.ODUL_CEZA_TURU,
             CEZA_BASLANGIC_TARIHI = entity.CEZA_BASLANGIC_TARIHI,
@@ -75,8 +73,7 @@ public class PersonelOdulCezaController : BaseApiController
         var entity = new PERSONEL_ODUL_CEZA
         {
             PERSONEL_ODUL_CEZA_KODU = dto.PERSONEL_ODUL_CEZA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             ODUL_CEZA_DURUMU = dto.ODUL_CEZA_DURUMU,
             ODUL_CEZA_TURU = dto.ODUL_CEZA_TURU,
             CEZA_BASLANGIC_TARIHI = dto.CEZA_BASLANGIC_TARIHI,
@@ -103,7 +100,6 @@ public class PersonelOdulCezaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.ODUL_CEZA_DURUMU = dto.ODUL_CEZA_DURUMU;
         entity.ODUL_CEZA_TURU = dto.ODUL_CEZA_TURU;

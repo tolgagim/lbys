@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.EkOdeme;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class EkOdemeController : BaseApiController
             .Select(e => new EkOdemeDto
             {
                 EK_ODEME_KODU = e.EK_ODEME_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                EK_ODEME_DONEM_KODU = e.EK_ODEME_DONEM_KODU,
+EK_ODEME_DONEM_KODU = e.EK_ODEME_DONEM_KODU,
                 PERSONEL_KODU = e.PERSONEL_KODU,
                 HESAPLAMA_YONTEMI = e.HESAPLAMA_YONTEMI,
                 MAAS_DERECESI = e.MAAS_DERECESI,
@@ -62,8 +61,7 @@ public class EkOdemeController : BaseApiController
         return new EkOdemeDto
         {
             EK_ODEME_KODU = entity.EK_ODEME_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            EK_ODEME_DONEM_KODU = entity.EK_ODEME_DONEM_KODU,
+EK_ODEME_DONEM_KODU = entity.EK_ODEME_DONEM_KODU,
             PERSONEL_KODU = entity.PERSONEL_KODU,
             HESAPLAMA_YONTEMI = entity.HESAPLAMA_YONTEMI,
             MAAS_DERECESI = entity.MAAS_DERECESI,
@@ -91,8 +89,7 @@ public class EkOdemeController : BaseApiController
         var entity = new EK_ODEME
         {
             EK_ODEME_KODU = dto.EK_ODEME_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            EK_ODEME_DONEM_KODU = dto.EK_ODEME_DONEM_KODU,
+EK_ODEME_DONEM_KODU = dto.EK_ODEME_DONEM_KODU,
             PERSONEL_KODU = dto.PERSONEL_KODU,
             HESAPLAMA_YONTEMI = dto.HESAPLAMA_YONTEMI,
             MAAS_DERECESI = dto.MAAS_DERECESI,
@@ -127,7 +124,6 @@ public class EkOdemeController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.EK_ODEME_DONEM_KODU = dto.EK_ODEME_DONEM_KODU;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.HESAPLAMA_YONTEMI = dto.HESAPLAMA_YONTEMI;

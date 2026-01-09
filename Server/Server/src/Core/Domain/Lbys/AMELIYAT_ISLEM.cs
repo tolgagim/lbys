@@ -15,9 +15,7 @@ public class AMELIYAT_ISLEM : VemEntity
     [Key]
     public string AMELIYAT_ISLEM_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde yapÄ±lan ameliyatÄ±n bilgilerine eriÅŸim saÄŸlamak iÃ§in SaÄŸlÄ±k Bilg...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde yapÄ±lan ameliyatÄ±n bilgilerine eriÅŸim saÄŸlamak iÃ§in SaÄŸlÄ±k Bilg...</summary>
     [ForeignKey("AmeliyatNavigation")]
     public string AMELIYAT_KODU { get; set; }
 

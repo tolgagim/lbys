@@ -15,9 +15,7 @@ public class RECETE_ILAC_ACIKLAMA : VemEntity
     [Key]
     public string RECETE_ILAC_ACIKLAMA_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde tedavi gÃ¶ren hasta iÃ§in dÃ¼zenlenen reÃ§etede bulunan ilaÃ§ bilgil...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde tedavi gÃ¶ren hasta iÃ§in dÃ¼zenlenen reÃ§etede bulunan ilaÃ§ bilgil...</summary>
     [Required]
     [ForeignKey("ReceteIlacNavigation")]
     public string RECETE_ILAC_KODU { get; set; }

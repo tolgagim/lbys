@@ -15,9 +15,7 @@ public class NOBETCI_PERSONEL_BILGISI : VemEntity
     [Key]
     public string NOBETCI_PERSONEL_BILGISI_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k Kodlama Referans Sunucusu (SKRS) kod sistemlerinde tanÄ±mlanan Kurum Kodu ...</summary>
+/// <summary>SaÄŸlÄ±k Kodlama Referans Sunucusu (SKRS) kod sistemlerinde tanÄ±mlanan Kurum Kodu ...</summary>
     [ForeignKey("SkrsKurumNavigation")]
     public string SKRS_KURUM_KODU { get; set; }
 

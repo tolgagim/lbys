@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.CocukDiyabet;
+namespace Server.Application.Vem.CocukDiyabet;
 
 public class CocukDiyabetDto
 {
     public string? COCUK_DIYABET_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public DateTime? ILK_TANI_TARIHI { get; set; }
     public string? AGIRLIK { get; set; }
     public string? BOY { get; set; }

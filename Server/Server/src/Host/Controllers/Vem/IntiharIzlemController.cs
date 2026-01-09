@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.IntiharIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class IntiharIzlemController : BaseApiController
             .Select(e => new IntiharIzlemDto
             {
                 INTIHAR_IZLEM_KODU = e.INTIHAR_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 INTIHAR_KRIZ_VAKA_TURU = e.INTIHAR_KRIZ_VAKA_TURU,
                 INTIHAR_GIRISIM_KRIZ_NEDENLERI = e.INTIHAR_GIRISIM_KRIZ_NEDENLERI,
@@ -51,8 +50,7 @@ public class IntiharIzlemController : BaseApiController
         return new IntiharIzlemDto
         {
             INTIHAR_IZLEM_KODU = entity.INTIHAR_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             INTIHAR_KRIZ_VAKA_TURU = entity.INTIHAR_KRIZ_VAKA_TURU,
             INTIHAR_GIRISIM_KRIZ_NEDENLERI = entity.INTIHAR_GIRISIM_KRIZ_NEDENLERI,
@@ -69,8 +67,7 @@ public class IntiharIzlemController : BaseApiController
         var entity = new INTIHAR_IZLEM
         {
             INTIHAR_IZLEM_KODU = dto.INTIHAR_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             INTIHAR_KRIZ_VAKA_TURU = dto.INTIHAR_KRIZ_VAKA_TURU,
             INTIHAR_GIRISIM_KRIZ_NEDENLERI = dto.INTIHAR_GIRISIM_KRIZ_NEDENLERI,
@@ -94,7 +91,6 @@ public class IntiharIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.INTIHAR_KRIZ_VAKA_TURU = dto.INTIHAR_KRIZ_VAKA_TURU;

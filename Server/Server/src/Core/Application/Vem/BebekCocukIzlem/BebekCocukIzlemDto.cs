@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.BebekCocukIzlem;
+namespace Server.Application.Vem.BebekCocukIzlem;
 
 public class BebekCocukIzlemDto
 {
     public string? BEBEK_COCUK_IZLEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? KACINCI_IZLEM { get; set; }
     public string? AGIZDAN_SIVI_TEDAVISI { get; set; }

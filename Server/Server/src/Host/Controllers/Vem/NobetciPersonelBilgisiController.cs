@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.NobetciPersonelBilgisi;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class NobetciPersonelBilgisiController : BaseApiController
             .Select(e => new NobetciPersonelBilgisiDto
             {
                 NOBETCI_PERSONEL_BILGISI_KODU = e.NOBETCI_PERSONEL_BILGISI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                SKRS_KURUM_KODU = e.SKRS_KURUM_KODU,
+SKRS_KURUM_KODU = e.SKRS_KURUM_KODU,
                 PERSONEL_TC_KIMLIK_NUMARASI = e.PERSONEL_TC_KIMLIK_NUMARASI,
                 KLINIK_KODU = e.KLINIK_KODU,
                 GOREV_TURU = e.GOREV_TURU,
@@ -52,8 +51,7 @@ public class NobetciPersonelBilgisiController : BaseApiController
         return new NobetciPersonelBilgisiDto
         {
             NOBETCI_PERSONEL_BILGISI_KODU = entity.NOBETCI_PERSONEL_BILGISI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            SKRS_KURUM_KODU = entity.SKRS_KURUM_KODU,
+SKRS_KURUM_KODU = entity.SKRS_KURUM_KODU,
             PERSONEL_TC_KIMLIK_NUMARASI = entity.PERSONEL_TC_KIMLIK_NUMARASI,
             KLINIK_KODU = entity.KLINIK_KODU,
             GOREV_TURU = entity.GOREV_TURU,
@@ -71,8 +69,7 @@ public class NobetciPersonelBilgisiController : BaseApiController
         var entity = new NOBETCI_PERSONEL_BILGISI
         {
             NOBETCI_PERSONEL_BILGISI_KODU = dto.NOBETCI_PERSONEL_BILGISI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            SKRS_KURUM_KODU = dto.SKRS_KURUM_KODU,
+SKRS_KURUM_KODU = dto.SKRS_KURUM_KODU,
             PERSONEL_TC_KIMLIK_NUMARASI = dto.PERSONEL_TC_KIMLIK_NUMARASI,
             KLINIK_KODU = dto.KLINIK_KODU,
             GOREV_TURU = dto.GOREV_TURU,
@@ -97,7 +94,6 @@ public class NobetciPersonelBilgisiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.SKRS_KURUM_KODU = dto.SKRS_KURUM_KODU;
         entity.PERSONEL_TC_KIMLIK_NUMARASI = dto.PERSONEL_TC_KIMLIK_NUMARASI;
         entity.KLINIK_KODU = dto.KLINIK_KODU;

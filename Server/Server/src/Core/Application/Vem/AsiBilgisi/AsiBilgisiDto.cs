@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.AsiBilgisi;
+namespace Server.Application.Vem.AsiBilgisi;
 
 public class AsiBilgisiDto
 {
     public string? ASI_BILGISI_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? ASI_KODU { get; set; }
     public string? ASININ_DOZU { get; set; }

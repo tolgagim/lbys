@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.TetkikReferansAralik;
+namespace Server.Application.Vem.TetkikReferansAralik;
 
 public class TetkikReferansAralikDto
 {
     public string? TETKIK_REFERANS_ARALIK_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? TETKIK_PARAMETRE_KODU { get; set; }
+public string? TETKIK_PARAMETRE_KODU { get; set; }
     public string? TETKIK_KODU { get; set; }
     public string? CIHAZ_KODU { get; set; }
     public string? TETKIK_CINSIYET { get; set; }

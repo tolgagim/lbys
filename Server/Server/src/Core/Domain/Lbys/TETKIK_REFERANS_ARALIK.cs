@@ -15,9 +15,7 @@ public class TETKIK_REFERANS_ARALIK : VemEntity
     [Key]
     public string TETKIK_REFERANS_ARALIK_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde yapÄ±lan tetkiklerdeki parametreler iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Si...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde yapÄ±lan tetkiklerdeki parametreler iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Si...</summary>
     [ForeignKey("TetkikParametreNavigation")]
     public string TETKIK_PARAMETRE_KODU { get; set; }
 

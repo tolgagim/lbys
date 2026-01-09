@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.VezneDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class VezneDetayController : BaseApiController
             .Select(e => new VezneDetayDto
             {
                 VEZNE_DETAY_KODU = e.VEZNE_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                VEZNE_KODU = e.VEZNE_KODU,
+VEZNE_KODU = e.VEZNE_KODU,
                 HASTA_HIZMET_KODU = e.HASTA_HIZMET_KODU,
                 HASTA_MALZEME_KODU = e.HASTA_MALZEME_KODU,
                 BUTCE_KODU = e.BUTCE_KODU,
@@ -49,8 +48,7 @@ public class VezneDetayController : BaseApiController
         return new VezneDetayDto
         {
             VEZNE_DETAY_KODU = entity.VEZNE_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            VEZNE_KODU = entity.VEZNE_KODU,
+VEZNE_KODU = entity.VEZNE_KODU,
             HASTA_HIZMET_KODU = entity.HASTA_HIZMET_KODU,
             HASTA_MALZEME_KODU = entity.HASTA_MALZEME_KODU,
             BUTCE_KODU = entity.BUTCE_KODU,
@@ -65,8 +63,7 @@ public class VezneDetayController : BaseApiController
         var entity = new VEZNE_DETAY
         {
             VEZNE_DETAY_KODU = dto.VEZNE_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            VEZNE_KODU = dto.VEZNE_KODU,
+VEZNE_KODU = dto.VEZNE_KODU,
             HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU,
             HASTA_MALZEME_KODU = dto.HASTA_MALZEME_KODU,
             BUTCE_KODU = dto.BUTCE_KODU,
@@ -88,7 +85,6 @@ public class VezneDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.VEZNE_KODU = dto.VEZNE_KODU;
         entity.HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU;
         entity.HASTA_MALZEME_KODU = dto.HASTA_MALZEME_KODU;

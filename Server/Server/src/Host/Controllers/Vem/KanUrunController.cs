@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanUrun;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanUrunController : BaseApiController
             .Select(e => new KanUrunDto
             {
                 KAN_URUN_KODU = e.KAN_URUN_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KAN_URUN_ADI = e.KAN_URUN_ADI,
+KAN_URUN_ADI = e.KAN_URUN_ADI,
                 HIZMET_KODU = e.HIZMET_KODU,
                 KAN_MIAT_SURESI = e.KAN_MIAT_SURESI,
                 KAN_MIAT_PERIYODU = e.KAN_MIAT_PERIYODU,
@@ -56,8 +55,7 @@ public class KanUrunController : BaseApiController
         return new KanUrunDto
         {
             KAN_URUN_KODU = entity.KAN_URUN_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KAN_URUN_ADI = entity.KAN_URUN_ADI,
+KAN_URUN_ADI = entity.KAN_URUN_ADI,
             HIZMET_KODU = entity.HIZMET_KODU,
             KAN_MIAT_SURESI = entity.KAN_MIAT_SURESI,
             KAN_MIAT_PERIYODU = entity.KAN_MIAT_PERIYODU,
@@ -79,8 +77,7 @@ public class KanUrunController : BaseApiController
         var entity = new KAN_URUN
         {
             KAN_URUN_KODU = dto.KAN_URUN_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KAN_URUN_ADI = dto.KAN_URUN_ADI,
+KAN_URUN_ADI = dto.KAN_URUN_ADI,
             HIZMET_KODU = dto.HIZMET_KODU,
             KAN_MIAT_SURESI = dto.KAN_MIAT_SURESI,
             KAN_MIAT_PERIYODU = dto.KAN_MIAT_PERIYODU,
@@ -109,7 +106,6 @@ public class KanUrunController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KAN_URUN_ADI = dto.KAN_URUN_ADI;
         entity.HIZMET_KODU = dto.HIZMET_KODU;
         entity.KAN_MIAT_SURESI = dto.KAN_MIAT_SURESI;

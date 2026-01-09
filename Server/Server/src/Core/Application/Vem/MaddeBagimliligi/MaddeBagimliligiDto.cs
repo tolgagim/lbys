@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.MaddeBagimliligi;
+namespace Server.Application.Vem.MaddeBagimliligi;
 
 public class MaddeBagimliligiDto
 {
     public string? MADDE_BAGIMLILIGI_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? BILGI_ALINAN_KAYNAK { get; set; }
     public string? DANISMA_TEDAVI_HIZMET_DURUMU { get; set; }
     public DateTime DANISMA_TEDAVI_HIZMET_ZAMANI { get; set; }

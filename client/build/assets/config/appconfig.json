@@ -1,0 +1,11 @@
+{
+    "appTitle": "EndPoint",
+    "apiEndpoint": {
+        "endpoint1": "http://localhost:5001",
+        "endpoint2": ""
+    },
+    "appSettings": {
+        "config1": "value1",
+        "config2": "value2"
+    }
+}

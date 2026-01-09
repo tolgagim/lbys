@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.BildirimiZorunlu;
+namespace Server.Application.Vem.BildirimiZorunlu;
 
 public class BildirimiZorunluDto
 {
     public string? BILDIRIMI_ZORUNLU_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? BILDIRIM_TURU { get; set; }
     public DateTime? BILDIRIM_ZAMANI { get; set; }

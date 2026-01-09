@@ -15,9 +15,7 @@ public class HASTA_SEVK : VemEntity
     [Key]
     public string HASTA_SEVK_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>HASTA gÃ¶rÃ¼ntÃ¼sÃ¼ndeki HASTA_KODU bilgisidir.</summary>
+/// <summary>HASTA gÃ¶rÃ¼ntÃ¼sÃ¼ndeki HASTA_KODU bilgisidir.</summary>
     [ForeignKey("HastaNavigation")]
     public string HASTA_KODU { get; set; }
 

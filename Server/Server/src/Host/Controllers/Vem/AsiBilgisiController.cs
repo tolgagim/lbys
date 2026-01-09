@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.AsiBilgisi;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class AsiBilgisiController : BaseApiController
             .Select(e => new AsiBilgisiDto
             {
                 ASI_BILGISI_KODU = e.ASI_BILGISI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 ASI_KODU = e.ASI_KODU,
                 ASININ_DOZU = e.ASININ_DOZU,
@@ -63,8 +62,7 @@ public class AsiBilgisiController : BaseApiController
         return new AsiBilgisiDto
         {
             ASI_BILGISI_KODU = entity.ASI_BILGISI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             ASI_KODU = entity.ASI_KODU,
             ASININ_DOZU = entity.ASININ_DOZU,
@@ -93,8 +91,7 @@ public class AsiBilgisiController : BaseApiController
         var entity = new ASI_BILGISI
         {
             ASI_BILGISI_KODU = dto.ASI_BILGISI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             ASI_KODU = dto.ASI_KODU,
             ASININ_DOZU = dto.ASININ_DOZU,
@@ -130,7 +127,6 @@ public class AsiBilgisiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.ASI_KODU = dto.ASI_KODU;

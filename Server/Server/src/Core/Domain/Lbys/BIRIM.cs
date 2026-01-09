@@ -17,17 +17,19 @@ public class BIRIM : VemEntity
     public string BIRIM_ADI { get; set; } = default!;
 
     public string? BIRIM_TURU { get; set; }
-    public string? UST_BIRIM_KODU { get; set; }
-    public string? KURUM_KODU { get; set; }
-    public bool AKTIF { get; set; } = true;
+    public string? AKTIFLIK_BILGISI { get; set; }
+    public string? BINA_KODU { get; set; }
+    public string? KLINIK_KODU { get; set; }
+    public string? MEDULA_BRANS_KODU { get; set; }
+    public string? MHRS_ADI { get; set; }
+    public string? MHRS_KODU { get; set; }
+    public string? MKYS_KODU { get; set; }
+    public int? YATAK_SAYISI { get; set; }
 
     // Navigation
     [ForeignKey("BIRIM_TURU")]
     public virtual REFERANS_KODLAR? BirimTuruNavigation { get; set; }
 
-    [ForeignKey("KURUM_KODU")]
-    public virtual KURUM? KurumNavigation { get; set; }
-
-    [ForeignKey("UST_BIRIM_KODU")]
-    public virtual BIRIM? UstBirimNavigation { get; set; }
+    [ForeignKey("BINA_KODU")]
+    public virtual BINA? BinaNavigation { get; set; }
 }

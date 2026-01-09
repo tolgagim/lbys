@@ -16,8 +16,8 @@
     "SendNewPassword": "Send New Password",
     "EmailValidation": "Enter a valid email address",
     "Email": "Email Address",
-    "RightTitle": "LogNet Crm: The Future of Home Patient Care",
-    "RightContent": "Rediscover home patient care with LogNet Crm, revolutionizing healthcare services. Our fast, reliable, and easy-to-use platform ensures patients receive the best care when needed. From appointments to doctor referrals, and recording to monitoring medical procedures, we are with you every step of the way. LogNet Crm starts a new era in healthcare services with over 600 arrangement combinations, offering customized solutions for every need. Meet the innovative design and engineering marvel of LogNet Crm's platform, wherever you are!"
+    "RightTitle": "Emoda Saglik Crm: The Future of Home Patient Care",
+    "RightContent": "Rediscover home patient care with Emoda Saglik Crm, revolutionizing healthcare services. Our fast, reliable, and easy-to-use platform ensures patients receive the best care when needed. From appointments to doctor referrals, and recording to monitoring medical procedures, we are with you every step of the way. Emoda Saglik Crm starts a new era in healthcare services with over 600 arrangement combinations, offering customized solutions for every need. Meet the innovative design and engineering marvel of Emoda Saglik Crm's platform, wherever you are!"
   },
   "Branches": {
     "PageTitle": "Branches",
@@ -191,7 +191,7 @@
     "UserFirstName": "UserFirstName",
     "UserLastName": "UserLastName",
     "UserName": "UserName",
-    "Header":"Customer"
+    "Header": "Customer"
   },
   "Brands": {
     "PageTitle": "Brands",
@@ -209,7 +209,7 @@
     "Update": "Brand Update",
     "DeleteBrand": "Delete Brand",
     "ConfirmDeleteBrand": "Are you sure you want to delete this Brand?",
-     "Header":"Header"
+    "Header": "Header"
   },
   "MyProfile": {
     "PageTitle": "My Profile",
@@ -234,7 +234,7 @@
     "DateOfBirth": "Date of Birth",
     "ClickOnItToChangeTheProfileImage": "Click on it to change the profile image",
     "ProfileImageUpdateIsSuccessful": "Profile photo was successfully changed",
-    "Password":"Password"
+    "Password": "Password"
   },
   "Appointments": {
     "PageTitle": "Appointments",
@@ -395,7 +395,7 @@
   "Home": {
     "PageTitle": "Home Page",
     "PapeTitleCrm": "Easy CRM Transactions",
-    "SubTitle": "Log Net Crm",
+    "SubTitle": "Emoda Lbys Crm",
     "PanelTitle": "Registration Numbers - All",
     "CustomerCount": "Custmer Count"
   },
@@ -491,7 +491,7 @@
     "Operations": "operation",
     "PayEasy": "PayEasy",
     "Payments": "Payments",
-    "CreditCardPay":"Credit Card Pays"
+    "CreditCardPay": "Credit Card Pays"
   },
   "Success": {
     "LoginIsSuccessful": "You have successfully logged in",
@@ -595,7 +595,7 @@
     "Edit": "Edit",
     "Save": "Save",
     "Details": "Details",
-    "Quit":"Quit"
+    "Quit": "Quit"
   },
   "RoleCodes": {
     "Branches": "Branches",
@@ -646,17 +646,15 @@
     "Products": "Products",
     "Brands": "Brands",
     "OtherUsers": "Other Users",
-     "Payments":"Payments"
+    "Payments": "Payments"
   },
   "Payment": {
     "Title": "Credit Card Payment Panel",
-    "CustomerName":"Customer Name",
-    "PaymentCode":"Payment Code",
-    "Description":"Description",
-    "CustomerDescription":"Custome Description",
-    "TotalAmount":"Total Amount",
-    "Header":"Header"
+    "CustomerName": "Customer Name",
+    "PaymentCode": "Payment Code",
+    "Description": "Description",
+    "CustomerDescription": "Custome Description",
+    "TotalAmount": "Total Amount",
+    "Header": "Header"
   }
-
 }
- 

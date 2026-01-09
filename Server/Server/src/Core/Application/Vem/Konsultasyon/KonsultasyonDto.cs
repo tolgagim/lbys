@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.Konsultasyon;
+namespace Server.Application.Vem.Konsultasyon;
 
 public class KonsultasyonDto
 {
     public string? KONSULTASYON_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_HIZMET_KODU { get; set; }
     public string? KONSULTASYON_BASVURU_KODU { get; set; }

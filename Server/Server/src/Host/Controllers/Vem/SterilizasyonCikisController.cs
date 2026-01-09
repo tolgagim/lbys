@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonCikis;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonCikisController : BaseApiController
             .Select(e => new SterilizasyonCikisDto
             {
                 STERILIZASYON_CIKIS_KODU = e.STERILIZASYON_CIKIS_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DEPO_KODU = e.DEPO_KODU,
+DEPO_KODU = e.DEPO_KODU,
                 STERILIZASYON_SET_KODU = e.STERILIZASYON_SET_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
@@ -53,8 +52,7 @@ public class SterilizasyonCikisController : BaseApiController
         return new SterilizasyonCikisDto
         {
             STERILIZASYON_CIKIS_KODU = entity.STERILIZASYON_CIKIS_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DEPO_KODU = entity.DEPO_KODU,
+DEPO_KODU = entity.DEPO_KODU,
             STERILIZASYON_SET_KODU = entity.STERILIZASYON_SET_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
@@ -73,8 +71,7 @@ public class SterilizasyonCikisController : BaseApiController
         var entity = new STERILIZASYON_CIKIS
         {
             STERILIZASYON_CIKIS_KODU = dto.STERILIZASYON_CIKIS_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DEPO_KODU = dto.DEPO_KODU,
+DEPO_KODU = dto.DEPO_KODU,
             STERILIZASYON_SET_KODU = dto.STERILIZASYON_SET_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
@@ -100,7 +97,6 @@ public class SterilizasyonCikisController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DEPO_KODU = dto.DEPO_KODU;
         entity.STERILIZASYON_SET_KODU = dto.STERILIZASYON_SET_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;

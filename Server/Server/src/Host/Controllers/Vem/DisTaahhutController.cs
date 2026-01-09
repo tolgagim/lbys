@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.DisTaahhut;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DisTaahhutController : BaseApiController
             .Select(e => new DisTaahhutDto
             {
                 DIS_TAAHHUT_KODU = e.DIS_TAAHHUT_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 HEKIM_KODU = e.HEKIM_KODU,
                 DIS_TAAHHUT_NUMARASI = e.DIS_TAAHHUT_NUMARASI,
@@ -59,8 +58,7 @@ public class DisTaahhutController : BaseApiController
         return new DisTaahhutDto
         {
             DIS_TAAHHUT_KODU = entity.DIS_TAAHHUT_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             HEKIM_KODU = entity.HEKIM_KODU,
             DIS_TAAHHUT_NUMARASI = entity.DIS_TAAHHUT_NUMARASI,
@@ -85,8 +83,7 @@ public class DisTaahhutController : BaseApiController
         var entity = new DIS_TAAHHUT
         {
             DIS_TAAHHUT_KODU = dto.DIS_TAAHHUT_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             HEKIM_KODU = dto.HEKIM_KODU,
             DIS_TAAHHUT_NUMARASI = dto.DIS_TAAHHUT_NUMARASI,
@@ -118,7 +115,6 @@ public class DisTaahhutController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HEKIM_KODU = dto.HEKIM_KODU;

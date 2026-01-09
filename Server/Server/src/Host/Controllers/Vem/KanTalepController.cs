@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanTalep;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanTalepController : BaseApiController
             .Select(e => new KanTalepDto
             {
                 KAN_TALEP_KODU = e.KAN_TALEP_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KAN_TALEP_ZAMANI = e.KAN_TALEP_ZAMANI,
                 KAN_TALEP_ACIKLAMA = e.KAN_TALEP_ACIKLAMA,
@@ -67,8 +66,7 @@ public class KanTalepController : BaseApiController
         return new KanTalepDto
         {
             KAN_TALEP_KODU = entity.KAN_TALEP_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KAN_TALEP_ZAMANI = entity.KAN_TALEP_ZAMANI,
             KAN_TALEP_ACIKLAMA = entity.KAN_TALEP_ACIKLAMA,
@@ -101,8 +99,7 @@ public class KanTalepController : BaseApiController
         var entity = new KAN_TALEP
         {
             KAN_TALEP_KODU = dto.KAN_TALEP_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KAN_TALEP_ZAMANI = dto.KAN_TALEP_ZAMANI,
             KAN_TALEP_ACIKLAMA = dto.KAN_TALEP_ACIKLAMA,
@@ -142,7 +139,6 @@ public class KanTalepController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.KAN_TALEP_ZAMANI = dto.KAN_TALEP_ZAMANI;

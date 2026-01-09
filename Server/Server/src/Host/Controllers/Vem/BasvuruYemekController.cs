@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.BasvuruYemek;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class BasvuruYemekController : BaseApiController
             .Select(e => new BasvuruYemekDto
             {
                 BASVURU_YEMEK_KODU = e.BASVURU_YEMEK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 YEMEK_TURU = e.YEMEK_TURU,
                 YEMEK_ZAMANI_TURU = e.YEMEK_ZAMANI_TURU,
@@ -50,8 +49,7 @@ public class BasvuruYemekController : BaseApiController
         return new BasvuruYemekDto
         {
             BASVURU_YEMEK_KODU = entity.BASVURU_YEMEK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             YEMEK_TURU = entity.YEMEK_TURU,
             YEMEK_ZAMANI_TURU = entity.YEMEK_ZAMANI_TURU,
@@ -67,8 +65,7 @@ public class BasvuruYemekController : BaseApiController
         var entity = new BASVURU_YEMEK
         {
             BASVURU_YEMEK_KODU = dto.BASVURU_YEMEK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             YEMEK_TURU = dto.YEMEK_TURU,
             YEMEK_ZAMANI_TURU = dto.YEMEK_ZAMANI_TURU,
@@ -91,7 +88,6 @@ public class BasvuruYemekController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.YEMEK_TURU = dto.YEMEK_TURU;

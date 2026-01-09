@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaSeans;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaSeansController : BaseApiController
             .Select(e => new HastaSeansDto
             {
                 HASTA_SEANS_KODU = e.HASTA_SEANS_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 SEANS_ISLEM_TURU = e.SEANS_ISLEM_TURU,
                 CIHAZ_KODU = e.CIHAZ_KODU,
@@ -73,8 +72,7 @@ public class HastaSeansController : BaseApiController
         return new HastaSeansDto
         {
             HASTA_SEANS_KODU = entity.HASTA_SEANS_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             SEANS_ISLEM_TURU = entity.SEANS_ISLEM_TURU,
             CIHAZ_KODU = entity.CIHAZ_KODU,
@@ -113,8 +111,7 @@ public class HastaSeansController : BaseApiController
         var entity = new HASTA_SEANS
         {
             HASTA_SEANS_KODU = dto.HASTA_SEANS_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             SEANS_ISLEM_TURU = dto.SEANS_ISLEM_TURU,
             CIHAZ_KODU = dto.CIHAZ_KODU,
@@ -160,7 +157,6 @@ public class HastaSeansController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.SEANS_ISLEM_TURU = dto.SEANS_ISLEM_TURU;

@@ -55,6 +55,7 @@ export interface TetkikParametreListFilter extends BaseListFilter {
   tetkikParametreBirimi?: string;
   tetkikKodu?: string;
   cihazKodu?: string;
+  IPTAL_DURUMU?: string | null;
 }
 
 export const newTetkikParametre: CreateTetkikParametreDto = {

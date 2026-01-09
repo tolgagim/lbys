@@ -20,7 +20,7 @@ public class CIHAZ : VemEntity
     public string? CIHAZ_MARKASI { get; set; }
     public string? SERI_NUMARASI { get; set; }
     public string? MKYS_KUNYE_NUMARASI { get; set; }
-    public bool AKTIF { get; set; } = true;
+    public string? AKTIFLIK_BILGISI { get; set; }
 
     // Navigation
     [ForeignKey("CIHAZ_GRUBU")]

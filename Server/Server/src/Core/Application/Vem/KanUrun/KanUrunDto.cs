@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KanUrun;
+namespace Server.Application.Vem.KanUrun;
 
 public class KanUrunDto
 {
     public string? KAN_URUN_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? KAN_URUN_ADI { get; set; }
+public string? KAN_URUN_ADI { get; set; }
     public string? HIZMET_KODU { get; set; }
     public string? KAN_MIAT_SURESI { get; set; }
     public string? KAN_MIAT_PERIYODU { get; set; }

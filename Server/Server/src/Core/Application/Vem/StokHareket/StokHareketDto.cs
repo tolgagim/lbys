@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.StokHareket;
+namespace Server.Application.Vem.StokHareket;
 
 public class StokHareketDto
 {
     public string? STOK_HAREKET_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? BAGLI_STOK_HAREKET_KODU { get; set; }
+public string? BAGLI_STOK_HAREKET_KODU { get; set; }
     public string? ILK_GIRIS_STOK_HAREKET_KODU { get; set; }
     public string? STOK_ISTEK_HAREKET_KODU { get; set; }
     public string? STOK_FIS_KODU { get; set; }

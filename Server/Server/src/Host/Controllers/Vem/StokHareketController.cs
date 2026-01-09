@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokHareket;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokHareketController : BaseApiController
             .Select(e => new StokHareketDto
             {
                 STOK_HAREKET_KODU = e.STOK_HAREKET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                BAGLI_STOK_HAREKET_KODU = e.BAGLI_STOK_HAREKET_KODU,
+BAGLI_STOK_HAREKET_KODU = e.BAGLI_STOK_HAREKET_KODU,
                 ILK_GIRIS_STOK_HAREKET_KODU = e.ILK_GIRIS_STOK_HAREKET_KODU,
                 STOK_ISTEK_HAREKET_KODU = e.STOK_ISTEK_HAREKET_KODU,
                 STOK_FIS_KODU = e.STOK_FIS_KODU,
@@ -73,8 +72,7 @@ public class StokHareketController : BaseApiController
         return new StokHareketDto
         {
             STOK_HAREKET_KODU = entity.STOK_HAREKET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            BAGLI_STOK_HAREKET_KODU = entity.BAGLI_STOK_HAREKET_KODU,
+BAGLI_STOK_HAREKET_KODU = entity.BAGLI_STOK_HAREKET_KODU,
             ILK_GIRIS_STOK_HAREKET_KODU = entity.ILK_GIRIS_STOK_HAREKET_KODU,
             STOK_ISTEK_HAREKET_KODU = entity.STOK_ISTEK_HAREKET_KODU,
             STOK_FIS_KODU = entity.STOK_FIS_KODU,
@@ -113,8 +111,7 @@ public class StokHareketController : BaseApiController
         var entity = new STOK_HAREKET
         {
             STOK_HAREKET_KODU = dto.STOK_HAREKET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            BAGLI_STOK_HAREKET_KODU = dto.BAGLI_STOK_HAREKET_KODU,
+BAGLI_STOK_HAREKET_KODU = dto.BAGLI_STOK_HAREKET_KODU,
             ILK_GIRIS_STOK_HAREKET_KODU = dto.ILK_GIRIS_STOK_HAREKET_KODU,
             STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU,
             STOK_FIS_KODU = dto.STOK_FIS_KODU,
@@ -160,7 +157,6 @@ public class StokHareketController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.BAGLI_STOK_HAREKET_KODU = dto.BAGLI_STOK_HAREKET_KODU;
         entity.ILK_GIRIS_STOK_HAREKET_KODU = dto.ILK_GIRIS_STOK_HAREKET_KODU;
         entity.STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU;

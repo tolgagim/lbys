@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.AmeliyatIslem;
+namespace Server.Application.Vem.AmeliyatIslem;
 
 public class AmeliyatIslemDto
 {
     public string? AMELIYAT_ISLEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? AMELIYAT_KODU { get; set; }
+public string? AMELIYAT_KODU { get; set; }
     public string? AMELIYAT_GRUBU { get; set; }
     public string? HASTA_HIZMET_KODU { get; set; }
     public string? KESI_SAYISI { get; set; }

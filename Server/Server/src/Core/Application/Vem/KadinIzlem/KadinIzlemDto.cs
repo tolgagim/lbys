@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KadinIzlem;
+namespace Server.Application.Vem.KadinIzlem;
 
 public class KadinIzlemDto
 {
     public string? KADIN_IZLEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? KONJENITAL_ANOMALI_VARLIGI { get; set; }
     public string? CANLI_DOGAN_BEBEK_SAYISI { get; set; }

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaSevk;
+namespace Server.Application.Vem.HastaSevk;
 
 public class HastaSevkDto
 {
     public string? HASTA_SEVK_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? SEVK_TAKIP_NUMARASI { get; set; }
     public string? SEVK_NEDENI { get; set; }

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.RadyolojiSonuc;
+namespace Server.Application.Vem.RadyolojiSonuc;
 
 public class RadyolojiSonucDto
 {
     public string? RADYOLOJI_SONUC_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? RADYOLOJI_KODU { get; set; }
+public string? RADYOLOJI_KODU { get; set; }
     public string? TETKIK_SONUCU_METIN { get; set; }
     public string? RADYOLOJI_TETKIK_SONUCU { get; set; }
     public string? RADYOLOJI_RAPOR_FORMATI { get; set; }

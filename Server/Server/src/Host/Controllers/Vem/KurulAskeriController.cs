@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KurulAskeri;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KurulAskeriController : BaseApiController
             .Select(e => new KurulAskeriDto
             {
                 KURUL_ASKERI_KODU = e.KURUL_ASKERI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KURUL_ADI = e.KURUL_ADI,
+KURUL_ADI = e.KURUL_ADI,
                 MEDULA_RAPOR_TURU = e.MEDULA_RAPOR_TURU,
                 MEDULA_ALT_RAPOR_TURU = e.MEDULA_ALT_RAPOR_TURU,
                 ALKOL_MADDE_BAGIMLILIGI = e.ALKOL_MADDE_BAGIMLILIGI,
@@ -55,8 +54,7 @@ public class KurulAskeriController : BaseApiController
         return new KurulAskeriDto
         {
             KURUL_ASKERI_KODU = entity.KURUL_ASKERI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KURUL_ADI = entity.KURUL_ADI,
+KURUL_ADI = entity.KURUL_ADI,
             MEDULA_RAPOR_TURU = entity.MEDULA_RAPOR_TURU,
             MEDULA_ALT_RAPOR_TURU = entity.MEDULA_ALT_RAPOR_TURU,
             ALKOL_MADDE_BAGIMLILIGI = entity.ALKOL_MADDE_BAGIMLILIGI,
@@ -77,8 +75,7 @@ public class KurulAskeriController : BaseApiController
         var entity = new KURUL_ASKERI
         {
             KURUL_ASKERI_KODU = dto.KURUL_ASKERI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KURUL_ADI = dto.KURUL_ADI,
+KURUL_ADI = dto.KURUL_ADI,
             MEDULA_RAPOR_TURU = dto.MEDULA_RAPOR_TURU,
             MEDULA_ALT_RAPOR_TURU = dto.MEDULA_ALT_RAPOR_TURU,
             ALKOL_MADDE_BAGIMLILIGI = dto.ALKOL_MADDE_BAGIMLILIGI,
@@ -106,7 +103,6 @@ public class KurulAskeriController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KURUL_ADI = dto.KURUL_ADI;
         entity.MEDULA_RAPOR_TURU = dto.MEDULA_RAPOR_TURU;
         entity.MEDULA_ALT_RAPOR_TURU = dto.MEDULA_ALT_RAPOR_TURU;

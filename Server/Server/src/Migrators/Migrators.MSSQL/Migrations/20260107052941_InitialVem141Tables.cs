@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -46,7 +46,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     EK_ODEME_DONEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YIL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AY = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BORDRO_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -72,7 +71,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     FIRMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FIRMA_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TELEFON_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YETKILI_KISI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -98,7 +96,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KULLANICI_GRUP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KULLANICI_GRUP_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AKTIFLIK_BILGISI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EKLEYEN_KULLANICI_KODU = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -348,7 +345,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     ILAC_UYUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ILAC_UYUMSUZLUK_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BIRINCI_ILAC_BARKODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BIRINCI_ETKEN_MADDE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -432,7 +428,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KURUL_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RAPOR_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MEDULA_RAPOR_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -474,7 +469,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_ASKERI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KURUL_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MEDULA_RAPOR_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MEDULA_ALT_RAPOR_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -604,7 +598,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     NOBETCI_PERSONEL_BILGISI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SKRS_KURUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PERSONEL_TC_KIMLIK_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KLINIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -657,7 +650,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_PAKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     STERILIZASYON_PAKET_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PAKET_KODU = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ACIKLAMA = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -891,7 +883,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_ARSIV_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ARSIV_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ESKI_ARSIV_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -929,7 +920,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_URUN_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KAN_URUN_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HIZMET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_MIAT_SURESI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1066,7 +1056,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_PAKET_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     STERILIZASYON_PAKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STERILIZASYON_MALZEME_MIKTARI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1109,7 +1098,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_STOK_DURUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DEPO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_MIKTARI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1145,7 +1133,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_DURUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DEPO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MAKSIMUM_STOK = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1394,7 +1381,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     EK_ODEME_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EK_ODEME_DONEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HESAPLAMA_YONTEMI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1543,7 +1529,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_BAKMAKLA_YUKUMLU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PERSONEL_YAKINLIK_DERECESI = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TC_KIMLIK_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1596,7 +1581,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_BANKA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BANKA = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HESAP_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1642,7 +1626,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_BORDRO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YIL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AY = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -1780,7 +1763,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_SONDURUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PERSONEL_KADEMESI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_DERECESI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1819,7 +1801,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_EGITIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PERSONEL_EGITIM_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SERTIFIKA_TIPI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -1874,7 +1855,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_GOREVLENDIRME_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GOREV_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GOREVLENDIRME_BASLAMA_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -1933,7 +1913,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_IZIN_DURUMU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KALAN_IZIN = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YILLIK_IZIN_HAKKI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -1961,7 +1940,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_ODUL_CEZA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ODUL_CEZA_DURUMU = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ODUL_CEZA_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2009,7 +1987,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_OGRENIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     OGRENIM_DURUMU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     OKUL_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -2054,7 +2031,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_YANDAL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     YANDAL_BASLANGIC_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: true),
                     YANDAL_BITIS_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -2082,7 +2058,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_GIRIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DEPO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STERILIZASYON_GIRIS_MIKTARI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -2141,7 +2116,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_YIKAMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DEPO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     YIKANAN_ALET_MIKTARI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -2193,7 +2167,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     TETKIK_CIHAZ_ESLESME_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CIHAZ_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TETKIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TETKIK_PARAMETRE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2237,7 +2210,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     TETKIK_REFERANS_ARALIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TETKIK_PARAMETRE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TETKIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     CIHAZ_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2293,7 +2265,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     EK_ODEME_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EK_ODEME_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GOREV_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KADRO_KODU = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -2447,7 +2418,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     ANLIK_YATAN_HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HEKIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2514,7 +2484,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     ASI_BILGISI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ASI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2694,7 +2663,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     BASVURU_YEMEK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     YEMEK_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2745,7 +2713,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     BEBEK_COCUK_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KACINCI_IZLEM = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -2933,7 +2900,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     BILDIRIMI_ZORUNLU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BILDIRIM_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -3263,7 +3229,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     COCUK_DIYABET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ILK_TANI_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: true),
                     AGIRLIK = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -3408,7 +3373,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DIS_TAAHHUT_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HEKIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -3475,7 +3439,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DISPROTEZ_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DISPROTEZ_BASLAMA_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -3604,7 +3567,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DIYABET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ILK_TANI_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: true),
                     AGIRLIK = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -3648,7 +3610,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DOKTOR_MESAJI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_MESAJLARI_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MESAJ_DETAYI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -3683,7 +3644,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     EVDE_SAGLIK_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     AGRI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -3956,7 +3916,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     GEBE_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KACINCI_GEBE_IZLEM = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4099,7 +4058,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     GETAT_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GETAT_UYGULAMA_BIRIMI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4181,7 +4139,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_BORC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ODENEN_BORC = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -4217,7 +4174,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_EPIKRIZ_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EPIKRIZ_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -4268,7 +4224,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_FOTOGRAF_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     FOTOGRAF_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4312,7 +4267,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_GIZLILIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GIZLILIK_NEDENI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4366,7 +4320,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_ILETISIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ADRES_TIPI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4465,7 +4418,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_NOTLARI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_NOT_TURU = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -4501,7 +4453,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_OLUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     OLUM_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -4613,7 +4564,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_SEANS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SEANS_ISLEM_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4834,7 +4784,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_SEVK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SEVK_TAKIP_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -4946,7 +4895,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_TIBBI_BILGI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TIBBI_BILGI_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -4996,7 +4944,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_UYARI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     UYARI_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5041,7 +4988,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_VENTILATOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     VENTILATOR_CIHAZ_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5092,7 +5038,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_VITAL_FIZIKI_BULGU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ISLEM_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -5189,7 +5134,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HEMOGLOBINOPATI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HEMOGLOBINOPATI_TARAMA_SONUCU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ES_ADAYI_TC_KIMLIK_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -5249,7 +5193,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HEMSIRE_BAKIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HEMSIRE_DEGERLENDIRME_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -5333,7 +5276,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     INTIHAR_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     INTIHAR_KRIZ_VAKA_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5399,7 +5341,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KADIN_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KONJENITAL_ANOMALI_VARLIGI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5486,7 +5427,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_BAGISCI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BAGISCI_HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BAGISCI_HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_BAGIS_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -5599,7 +5539,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_TALEP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_TALEP_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -5695,7 +5634,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KLINIK_SEYIR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SEYIR_TIPI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5762,7 +5700,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KUDUZ_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PROFILAKSI_TAMAMLANMA_DURUMU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5821,7 +5758,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_RAPOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KURUL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -5886,7 +5822,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     LOHUSA_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KACINCI_LOHUSA_IZLEM = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -6004,7 +5939,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     MADDE_BAGIMLILIGI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BILGI_ALINAN_KAYNAK = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DANISMA_TEDAVI_HIZMET_DURUMU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -6193,7 +6127,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     MEDULA_TAKIP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SGK_TAKIP_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -6281,7 +6214,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     OBEZITE_IZLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DIYET_TIBBI_BESLENME_TEDAVISI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -6364,7 +6296,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     OPTIK_RECETE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GOZLUK_RECETE_TIPI = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -6498,7 +6429,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     ORTODONTI_ICON_SKOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     OIS_DEGERLENDIRME_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -6646,7 +6576,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_FIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BAGLI_STOK_FIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -6755,7 +6684,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     SYS_PAKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     VERI_PAKETI_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -6793,7 +6721,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     TIBBI_ORDER_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TIBBI_ORDER_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -6844,7 +6771,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     VEZNE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MAKBUZ_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -6913,7 +6839,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     GRUP_UYELIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KULLANICI_GRUP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KULLANICI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EKLEYEN_KULLANICI_KODU = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -6946,7 +6871,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_ADLI_RAPOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ADLI_RAPOR_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -7109,7 +7033,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_ARSIV_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_ARSIV_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -7185,7 +7108,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PERSONEL_IZIN_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PERSONEL_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PERSONEL_IZIN_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KULLANILAN_IZIN = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -7353,7 +7275,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_SET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DEPO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STERILIZASYON_PAKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BARKOD = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -7532,7 +7453,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_ISTEK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ISTEK_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -7599,7 +7519,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DIS_TAAHHUT_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DIS_TAAHHUT_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SUT_KODU = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -7759,7 +7678,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_STOK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KAN_STOK_DURUMU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_STOK_GIRIS_TARIHI = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DEFTER_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -7846,7 +7764,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_TALEP_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KAN_TALEP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_URUN_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ISTENEN_KAN_GRUBU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -7911,7 +7828,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_ENGELLI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KURUL_RAPOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -7957,7 +7873,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_ETKEN_MADDE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KURUL_RAPOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ILAC_ETKEN_MADDE_KODU = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DOZ_SAYISI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -8002,7 +7917,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_HEKIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KURUL_RAPOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8064,7 +7978,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KURUL_TESHIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KURUL_RAPOR_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ILAC_TESHIS_KODU = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TANI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8100,7 +8013,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     RECETE_ILAC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RECETE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DOZ_BIRIM = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BARKOD = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -8156,7 +8068,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     TIBBI_ORDER_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TIBBI_ORDER_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PLANLANAN_UYGULANMA_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UYGULAYAN_HEMSIRE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8210,7 +8121,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DISPROTEZ_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DISPROTEZ_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DISPROTEZ_PLANLAMA_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DISPROTEZ_IS_TURU_ASAMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8284,7 +8194,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_CIKIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DEPO_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STERILIZASYON_SET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8359,7 +8268,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STERILIZASYON_SET_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     STERILIZASYON_SET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STERILIZASYON_MALZEME_MIKTARI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -8393,7 +8301,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     PATOLOJI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PATOLOJI_RAPOR_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8546,7 +8453,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_ISTEK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     STOK_ISTEK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ISTENEN_STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ISTENEN_ILAC_JENERIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8617,7 +8523,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     AMELIYAT_ISLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AMELIYAT_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     AMELIYAT_GRUBU = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_HIZMET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8703,7 +8608,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DOGUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_HIZMET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8789,7 +8693,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_DIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DIS_ISLEM_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8881,7 +8784,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KONSULTASYON_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_HIZMET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -8942,7 +8844,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     RADYOLOJI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BIRIM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9154,7 +9055,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_URUN_IMHA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KAN_STOK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_IMHA_NEDENI = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KAN_IMHA_ZAMANI = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -9212,7 +9112,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     KAN_CIKIS_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KAN_TALEP_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9313,7 +9212,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     RECETE_ILAC_ACIKLAMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RECETE_ILAC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     RECETE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ILAC_ACIKLAMA_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9355,7 +9253,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     RISK_SKORLAMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     RISK_SKORLAMA_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9410,7 +9307,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_EHU_TAKIP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     STOK_ISTEK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_ISTEK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9482,7 +9378,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BAGLI_STOK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ILK_GIRIS_STOK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_ISTEK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9584,7 +9479,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     STOK_ISTEK_UYGULAMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     STOK_ISTEK_HAREKET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ORDER_PLANLANAN_ZAMAN = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ORDER_UYGULANAN_ZAMAN = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -9638,7 +9532,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     AMELIYAT_EKIP_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AMELIYAT_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     AMELIYAT_ISLEM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EKIP_NUMARASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -9688,7 +9581,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     DOGUM_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DOGUM_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9838,7 +9730,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     RADYOLOJI_SONUC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RADYOLOJI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TETKIK_SONUCU_METIN = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RADYOLOJI_TETKIK_SONUCU = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -9915,7 +9806,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     BAKTERI_SONUC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TETKIK_SONUC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BAKTERI_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     KOLONI_SAYISI = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -9951,7 +9841,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     RISK_SKORLAMA_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RISK_SKORLAMA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GLASGOW_SKALASI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RISK_SKORLAMA_ALT_TURU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -9987,7 +9876,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     HASTA_MALZEME_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HASTA_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_BASVURU_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     STOK_KART_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -10099,7 +9987,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     ANTIBIYOTIK_SONUC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BAKTERI_SONUC_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ANTIBIYOTIK_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TETKIK_SONUCU = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -10143,7 +10030,6 @@ namespace Migrators.MSSQL.Migrations
                 columns: table => new
                 {
                     VEZNE_DETAY_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    REFERANS_TABLO_ADI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     VEZNE_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_HIZMET_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     HASTA_MALZEME_KODU = table.Column<string>(type: "nvarchar(450)", nullable: false),

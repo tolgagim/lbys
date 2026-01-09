@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KurulEtkenMadde;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KurulEtkenMaddeController : BaseApiController
             .Select(e => new KurulEtkenMaddeDto
             {
                 KURUL_ETKEN_MADDE_KODU = e.KURUL_ETKEN_MADDE_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KURUL_RAPOR_KODU = e.KURUL_RAPOR_KODU,
+KURUL_RAPOR_KODU = e.KURUL_RAPOR_KODU,
                 ILAC_ETKEN_MADDE_KODU = e.ILAC_ETKEN_MADDE_KODU,
                 DOZ_SAYISI = e.DOZ_SAYISI,
                 DOZ_MIKTARI = e.DOZ_MIKTARI,
@@ -51,8 +50,7 @@ public class KurulEtkenMaddeController : BaseApiController
         return new KurulEtkenMaddeDto
         {
             KURUL_ETKEN_MADDE_KODU = entity.KURUL_ETKEN_MADDE_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KURUL_RAPOR_KODU = entity.KURUL_RAPOR_KODU,
+KURUL_RAPOR_KODU = entity.KURUL_RAPOR_KODU,
             ILAC_ETKEN_MADDE_KODU = entity.ILAC_ETKEN_MADDE_KODU,
             DOZ_SAYISI = entity.DOZ_SAYISI,
             DOZ_MIKTARI = entity.DOZ_MIKTARI,
@@ -69,8 +67,7 @@ public class KurulEtkenMaddeController : BaseApiController
         var entity = new KURUL_ETKEN_MADDE
         {
             KURUL_ETKEN_MADDE_KODU = dto.KURUL_ETKEN_MADDE_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU,
+KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU,
             ILAC_ETKEN_MADDE_KODU = dto.ILAC_ETKEN_MADDE_KODU,
             DOZ_SAYISI = dto.DOZ_SAYISI,
             DOZ_MIKTARI = dto.DOZ_MIKTARI,
@@ -94,7 +91,6 @@ public class KurulEtkenMaddeController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU;
         entity.ILAC_ETKEN_MADDE_KODU = dto.ILAC_ETKEN_MADDE_KODU;
         entity.DOZ_SAYISI = dto.DOZ_SAYISI;

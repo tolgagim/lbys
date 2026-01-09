@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.StokIstekUygulama;
+namespace Server.Application.Vem.StokIstekUygulama;
 
 public class StokIstekUygulamaDto
 {
     public string? STOK_ISTEK_UYGULAMA_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? STOK_ISTEK_HAREKET_KODU { get; set; }
+public string? STOK_ISTEK_HAREKET_KODU { get; set; }
     public DateTime? ORDER_PLANLANAN_ZAMAN { get; set; }
     public DateTime ORDER_UYGULANAN_ZAMAN { get; set; }
     public string? UYGULAYAN_HEMSIRE_KODU { get; set; }

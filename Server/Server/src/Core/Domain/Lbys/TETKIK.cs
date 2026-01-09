@@ -19,7 +19,7 @@ public class TETKIK : VemEntity
     public string? RAPOR_SONUC_SIRASI { get; set; }
     public string? HESAPLAMALI_TETKIK_BILGISI { get; set; }
     public string? HESAPLAMALI_TETKIK_FORMULU { get; set; }
-    public bool AKTIF { get; set; } = true;
+    public string? IPTAL_DURUMU { get; set; }
 
     // Navigation
     [ForeignKey("HIZMET_KODU")]

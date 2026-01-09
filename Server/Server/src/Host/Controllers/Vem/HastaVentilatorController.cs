@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaVentilator;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaVentilatorController : BaseApiController
             .Select(e => new HastaVentilatorDto
             {
                 HASTA_VENTILATOR_KODU = e.HASTA_VENTILATOR_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 VENTILATOR_CIHAZ_KODU = e.VENTILATOR_CIHAZ_KODU,
                 YOGUN_BAKIM_SEVIYE_BILGISI = e.YOGUN_BAKIM_SEVIYE_BILGISI,
@@ -50,8 +49,7 @@ public class HastaVentilatorController : BaseApiController
         return new HastaVentilatorDto
         {
             HASTA_VENTILATOR_KODU = entity.HASTA_VENTILATOR_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             VENTILATOR_CIHAZ_KODU = entity.VENTILATOR_CIHAZ_KODU,
             YOGUN_BAKIM_SEVIYE_BILGISI = entity.YOGUN_BAKIM_SEVIYE_BILGISI,
@@ -67,8 +65,7 @@ public class HastaVentilatorController : BaseApiController
         var entity = new HASTA_VENTILATOR
         {
             HASTA_VENTILATOR_KODU = dto.HASTA_VENTILATOR_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             VENTILATOR_CIHAZ_KODU = dto.VENTILATOR_CIHAZ_KODU,
             YOGUN_BAKIM_SEVIYE_BILGISI = dto.YOGUN_BAKIM_SEVIYE_BILGISI,
@@ -91,7 +88,6 @@ public class HastaVentilatorController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.VENTILATOR_CIHAZ_KODU = dto.VENTILATOR_CIHAZ_KODU;

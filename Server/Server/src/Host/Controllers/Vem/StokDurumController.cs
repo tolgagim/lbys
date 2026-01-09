@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokDurum;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokDurumController : BaseApiController
             .Select(e => new StokDurumDto
             {
                 STOK_DURUM_KODU = e.STOK_DURUM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DEPO_KODU = e.DEPO_KODU,
+DEPO_KODU = e.DEPO_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 MAKSIMUM_STOK = e.MAKSIMUM_STOK,
                 MINIMUM_STOK = e.MINIMUM_STOK,
@@ -53,8 +52,7 @@ public class StokDurumController : BaseApiController
         return new StokDurumDto
         {
             STOK_DURUM_KODU = entity.STOK_DURUM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DEPO_KODU = entity.DEPO_KODU,
+DEPO_KODU = entity.DEPO_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             MAKSIMUM_STOK = entity.MAKSIMUM_STOK,
             MINIMUM_STOK = entity.MINIMUM_STOK,
@@ -73,8 +71,7 @@ public class StokDurumController : BaseApiController
         var entity = new STOK_DURUM
         {
             STOK_DURUM_KODU = dto.STOK_DURUM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DEPO_KODU = dto.DEPO_KODU,
+DEPO_KODU = dto.DEPO_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             MAKSIMUM_STOK = dto.MAKSIMUM_STOK,
             MINIMUM_STOK = dto.MINIMUM_STOK,
@@ -100,7 +97,6 @@ public class StokDurumController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DEPO_KODU = dto.DEPO_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;
         entity.MAKSIMUM_STOK = dto.MAKSIMUM_STOK;

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.PersonelBordroSondurum;
+namespace Server.Application.Vem.PersonelBordroSondurum;
 
 public class PersonelBordroSondurumDto
 {
     public string? PERSONEL_SONDURUM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? PERSONEL_KODU { get; set; }
+public string? PERSONEL_KODU { get; set; }
     public string? PERSONEL_KADEMESI { get; set; }
     public string? PERSONEL_DERECESI { get; set; }
     public string? EMEKLI_DERECESI { get; set; }

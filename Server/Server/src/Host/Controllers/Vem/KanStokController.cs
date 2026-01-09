@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanStok;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanStokController : BaseApiController
             .Select(e => new KanStokDto
             {
                 KAN_STOK_KODU = e.KAN_STOK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KAN_STOK_DURUMU = e.KAN_STOK_DURUMU,
+KAN_STOK_DURUMU = e.KAN_STOK_DURUMU,
                 KAN_STOK_GIRIS_TARIHI = e.KAN_STOK_GIRIS_TARIHI,
                 DEFTER_NUMARASI = e.DEFTER_NUMARASI,
                 KAN_GRUBU = e.KAN_GRUBU,
@@ -65,8 +64,7 @@ public class KanStokController : BaseApiController
         return new KanStokDto
         {
             KAN_STOK_KODU = entity.KAN_STOK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KAN_STOK_DURUMU = entity.KAN_STOK_DURUMU,
+KAN_STOK_DURUMU = entity.KAN_STOK_DURUMU,
             KAN_STOK_GIRIS_TARIHI = entity.KAN_STOK_GIRIS_TARIHI,
             DEFTER_NUMARASI = entity.DEFTER_NUMARASI,
             KAN_GRUBU = entity.KAN_GRUBU,
@@ -97,8 +95,7 @@ public class KanStokController : BaseApiController
         var entity = new KAN_STOK
         {
             KAN_STOK_KODU = dto.KAN_STOK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KAN_STOK_DURUMU = dto.KAN_STOK_DURUMU,
+KAN_STOK_DURUMU = dto.KAN_STOK_DURUMU,
             KAN_STOK_GIRIS_TARIHI = dto.KAN_STOK_GIRIS_TARIHI,
             DEFTER_NUMARASI = dto.DEFTER_NUMARASI,
             KAN_GRUBU = dto.KAN_GRUBU,
@@ -136,7 +133,6 @@ public class KanStokController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KAN_STOK_DURUMU = dto.KAN_STOK_DURUMU;
         entity.KAN_STOK_GIRIS_TARIHI = dto.KAN_STOK_GIRIS_TARIHI;
         entity.DEFTER_NUMARASI = dto.DEFTER_NUMARASI;

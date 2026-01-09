@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.EkOdemeDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class EkOdemeDetayController : BaseApiController
             .Select(e => new EkOdemeDetayDto
             {
                 EK_ODEME_DETAY_KODU = e.EK_ODEME_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                EK_ODEME_KODU = e.EK_ODEME_KODU,
+EK_ODEME_KODU = e.EK_ODEME_KODU,
                 GOREV_NUMARASI = e.GOREV_NUMARASI,
                 KADRO_KODU = e.KADRO_KODU,
                 KADRO_KATSAYISI = e.KADRO_KATSAYISI,
@@ -63,8 +62,7 @@ public class EkOdemeDetayController : BaseApiController
         return new EkOdemeDetayDto
         {
             EK_ODEME_DETAY_KODU = entity.EK_ODEME_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            EK_ODEME_KODU = entity.EK_ODEME_KODU,
+EK_ODEME_KODU = entity.EK_ODEME_KODU,
             GOREV_NUMARASI = entity.GOREV_NUMARASI,
             KADRO_KODU = entity.KADRO_KODU,
             KADRO_KATSAYISI = entity.KADRO_KATSAYISI,
@@ -93,8 +91,7 @@ public class EkOdemeDetayController : BaseApiController
         var entity = new EK_ODEME_DETAY
         {
             EK_ODEME_DETAY_KODU = dto.EK_ODEME_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            EK_ODEME_KODU = dto.EK_ODEME_KODU,
+EK_ODEME_KODU = dto.EK_ODEME_KODU,
             GOREV_NUMARASI = dto.GOREV_NUMARASI,
             KADRO_KODU = dto.KADRO_KODU,
             KADRO_KATSAYISI = dto.KADRO_KATSAYISI,
@@ -130,7 +127,6 @@ public class EkOdemeDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.EK_ODEME_KODU = dto.EK_ODEME_KODU;
         entity.GOREV_NUMARASI = dto.GOREV_NUMARASI;
         entity.KADRO_KODU = dto.KADRO_KODU;

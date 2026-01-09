@@ -15,9 +15,7 @@ public class KAN_BAGISCI : VemEntity
     [Key]
     public string KAN_BAGISCI_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>KanÄ± baÄŸÄ±ÅŸlayan kiÅŸinin saÄŸlÄ±k tesisine baÅŸvurusu iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sist...</summary>
+/// <summary>KanÄ± baÄŸÄ±ÅŸlayan kiÅŸinin saÄŸlÄ±k tesisine baÅŸvurusu iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sist...</summary>
     [ForeignKey("BagisciHastaBasvuruNavigation")]
     public string BAGISCI_HASTA_BASVURU_KODU { get; set; }
 

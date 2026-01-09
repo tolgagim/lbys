@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaMalzeme;
+namespace Server.Application.Vem.HastaMalzeme;
 
 public class HastaMalzemeDto
 {
     public string? HASTA_MALZEME_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? STOK_KART_KODU { get; set; }
     public string? STOK_HAREKET_KODU { get; set; }

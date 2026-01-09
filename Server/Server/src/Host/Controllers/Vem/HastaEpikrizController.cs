@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaEpikriz;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaEpikrizController : BaseApiController
             .Select(e => new HastaEpikrizDto
             {
                 HASTA_EPIKRIZ_KODU = e.HASTA_EPIKRIZ_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 EPIKRIZ_ZAMANI = e.EPIKRIZ_ZAMANI,
                 EPIKRIZ_BASLIK_BILGISI = e.EPIKRIZ_BASLIK_BILGISI,
@@ -50,8 +49,7 @@ public class HastaEpikrizController : BaseApiController
         return new HastaEpikrizDto
         {
             HASTA_EPIKRIZ_KODU = entity.HASTA_EPIKRIZ_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             EPIKRIZ_ZAMANI = entity.EPIKRIZ_ZAMANI,
             EPIKRIZ_BASLIK_BILGISI = entity.EPIKRIZ_BASLIK_BILGISI,
@@ -67,8 +65,7 @@ public class HastaEpikrizController : BaseApiController
         var entity = new HASTA_EPIKRIZ
         {
             HASTA_EPIKRIZ_KODU = dto.HASTA_EPIKRIZ_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             EPIKRIZ_ZAMANI = dto.EPIKRIZ_ZAMANI,
             EPIKRIZ_BASLIK_BILGISI = dto.EPIKRIZ_BASLIK_BILGISI,
@@ -91,7 +88,6 @@ public class HastaEpikrizController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.EPIKRIZ_ZAMANI = dto.EPIKRIZ_ZAMANI;

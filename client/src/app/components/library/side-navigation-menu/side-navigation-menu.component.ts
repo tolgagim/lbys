@@ -89,8 +89,8 @@ export class SideNavigationMenuComponent implements OnInit, AfterViewInit, OnDes
         if (item.items && item.items.length > 0) {
           for (let i = 0; i < item.items.length; i++) {
             let subItem = item.items[i];
-            // Alt öğe için permission kontrolü
-            if (subItem.permission && this.permissionsService.hasPermission(subItem.permission)) {
+            // Alt öğe için permission kontrolü - permission yoksa veya izin varsa ekle
+            if (!subItem.permission || this.permissionsService.hasPermission(subItem.permission)) {
               filteredSubItems.push(subItem);
             }
           }

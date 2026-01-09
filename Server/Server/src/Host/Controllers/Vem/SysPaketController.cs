@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SysPaket;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SysPaketController : BaseApiController
             .Select(e => new SysPaketDto
             {
                 SYS_PAKET_KODU = e.SYS_PAKET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 VERI_PAKETI_NUMARASI = e.VERI_PAKETI_NUMARASI,
                 VERI_PAKETI_GONDERILME_ZAMANI = e.VERI_PAKETI_GONDERILME_ZAMANI,
@@ -51,8 +50,7 @@ public class SysPaketController : BaseApiController
         return new SysPaketDto
         {
             SYS_PAKET_KODU = entity.SYS_PAKET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             VERI_PAKETI_NUMARASI = entity.VERI_PAKETI_NUMARASI,
             VERI_PAKETI_GONDERILME_ZAMANI = entity.VERI_PAKETI_GONDERILME_ZAMANI,
@@ -69,8 +67,7 @@ public class SysPaketController : BaseApiController
         var entity = new SYS_PAKET
         {
             SYS_PAKET_KODU = dto.SYS_PAKET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             VERI_PAKETI_NUMARASI = dto.VERI_PAKETI_NUMARASI,
             VERI_PAKETI_GONDERILME_ZAMANI = dto.VERI_PAKETI_GONDERILME_ZAMANI,
@@ -94,7 +91,6 @@ public class SysPaketController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.VERI_PAKETI_NUMARASI = dto.VERI_PAKETI_NUMARASI;

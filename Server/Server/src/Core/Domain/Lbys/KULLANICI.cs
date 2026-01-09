@@ -16,7 +16,12 @@ public class KULLANICI : VemEntity
 
     public string? PERSONEL_KODU { get; set; }
     public string? KULLANICI_ADI { get; set; }
-    public bool AKTIF { get; set; } = true;
+    public string? AD { get; set; }
+    public string? SOYADI { get; set; }
+    public string? TC_KIMLIK_NUMARASI { get; set; }
+    public string? PAROLA { get; set; }
+    public string? PAROLA_SIFRELEME_TURU { get; set; }
+    public string? AKTIFLIK_BILGISI { get; set; }
 
     // Navigation
     [ForeignKey("PERSONEL_KODU")]

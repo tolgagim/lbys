@@ -15,9 +15,7 @@ public class GRUP_UYELIK : VemEntity
     [Key]
     public string GRUP_UYELIK_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi kullanÄ±cÄ±larÄ± iÃ§in tanÄ±mlanmÄ±ÅŸ SaÄŸlÄ±k Bilgi YÃ¶netim...</summary>
+/// <summary>SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi kullanÄ±cÄ±larÄ± iÃ§in tanÄ±mlanmÄ±ÅŸ SaÄŸlÄ±k Bilgi YÃ¶netim...</summary>
     [ForeignKey("KullaniciGrupNavigation")]
     public string KULLANICI_GRUP_KODU { get; set; }
 

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Kurum;
 using Server.Domain.Lbys;
@@ -25,14 +25,14 @@ public class KurumController : BaseApiController
             {
                 KURUM_KODU = e.KURUM_KODU,
                 KURUM_ADI = e.KURUM_ADI,
-                KURUM_TURU = e.KURUM_TURU,
-                IL_KODU = e.IL_KODU,
-                ILCE_KODU = e.ILCE_KODU,
-                ADRES = e.ADRES,
-                TELEFON = e.TELEFON,
-                EMAIL = e.EMAIL,
-                VERGI_NO = e.VERGI_NO,
-                VERGI_DAIRESI = e.VERGI_DAIRESI,
+                AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
+                AYAKTAN_BUTCE_KODU = e.AYAKTAN_BUTCE_KODU,
+                DEVREDILEN_KURUM = e.DEVREDILEN_KURUM,
+                GUNUBIRLIK_BUTCE_KODU = e.GUNUBIRLIK_BUTCE_KODU,
+                HASTA_KURUM_TURU = e.HASTA_KURUM_TURU,
+                KURUM_ADRESI = e.KURUM_ADRESI,
+                SKRS_KURUM_KODU = e.SKRS_KURUM_KODU,
+                YATAN_BUTCE_KODU = e.YATAN_BUTCE_KODU,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -53,14 +53,14 @@ public class KurumController : BaseApiController
         {
             KURUM_KODU = entity.KURUM_KODU,
             KURUM_ADI = entity.KURUM_ADI,
-            KURUM_TURU = entity.KURUM_TURU,
-            IL_KODU = entity.IL_KODU,
-            ILCE_KODU = entity.ILCE_KODU,
-            ADRES = entity.ADRES,
-            TELEFON = entity.TELEFON,
-            EMAIL = entity.EMAIL,
-            VERGI_NO = entity.VERGI_NO,
-            VERGI_DAIRESI = entity.VERGI_DAIRESI,
+            AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
+            AYAKTAN_BUTCE_KODU = entity.AYAKTAN_BUTCE_KODU,
+            DEVREDILEN_KURUM = entity.DEVREDILEN_KURUM,
+            GUNUBIRLIK_BUTCE_KODU = entity.GUNUBIRLIK_BUTCE_KODU,
+            HASTA_KURUM_TURU = entity.HASTA_KURUM_TURU,
+            KURUM_ADRESI = entity.KURUM_ADRESI,
+            SKRS_KURUM_KODU = entity.SKRS_KURUM_KODU,
+            YATAN_BUTCE_KODU = entity.YATAN_BUTCE_KODU,
         };
     }
 
@@ -72,14 +72,14 @@ public class KurumController : BaseApiController
         {
             KURUM_KODU = dto.KURUM_KODU,
             KURUM_ADI = dto.KURUM_ADI,
-            KURUM_TURU = dto.KURUM_TURU,
-            IL_KODU = dto.IL_KODU,
-            ILCE_KODU = dto.ILCE_KODU,
-            ADRES = dto.ADRES,
-            TELEFON = dto.TELEFON,
-            EMAIL = dto.EMAIL,
-            VERGI_NO = dto.VERGI_NO,
-            VERGI_DAIRESI = dto.VERGI_DAIRESI,
+            AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
+            AYAKTAN_BUTCE_KODU = dto.AYAKTAN_BUTCE_KODU,
+            DEVREDILEN_KURUM = dto.DEVREDILEN_KURUM,
+            GUNUBIRLIK_BUTCE_KODU = dto.GUNUBIRLIK_BUTCE_KODU,
+            HASTA_KURUM_TURU = dto.HASTA_KURUM_TURU,
+            KURUM_ADRESI = dto.KURUM_ADRESI,
+            SKRS_KURUM_KODU = dto.SKRS_KURUM_KODU,
+            YATAN_BUTCE_KODU = dto.YATAN_BUTCE_KODU,
         };
 
         _db.Set<KURUM>().Add(entity);
@@ -97,15 +97,16 @@ public class KurumController : BaseApiController
 
         if (entity == null)
             return NotFound();
+
         entity.KURUM_ADI = dto.KURUM_ADI;
-        entity.KURUM_TURU = dto.KURUM_TURU;
-        entity.IL_KODU = dto.IL_KODU;
-        entity.ILCE_KODU = dto.ILCE_KODU;
-        entity.ADRES = dto.ADRES;
-        entity.TELEFON = dto.TELEFON;
-        entity.EMAIL = dto.EMAIL;
-        entity.VERGI_NO = dto.VERGI_NO;
-        entity.VERGI_DAIRESI = dto.VERGI_DAIRESI;
+        entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
+        entity.AYAKTAN_BUTCE_KODU = dto.AYAKTAN_BUTCE_KODU;
+        entity.DEVREDILEN_KURUM = dto.DEVREDILEN_KURUM;
+        entity.GUNUBIRLIK_BUTCE_KODU = dto.GUNUBIRLIK_BUTCE_KODU;
+        entity.HASTA_KURUM_TURU = dto.HASTA_KURUM_TURU;
+        entity.KURUM_ADRESI = dto.KURUM_ADRESI;
+        entity.SKRS_KURUM_KODU = dto.SKRS_KURUM_KODU;
+        entity.YATAN_BUTCE_KODU = dto.YATAN_BUTCE_KODU;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

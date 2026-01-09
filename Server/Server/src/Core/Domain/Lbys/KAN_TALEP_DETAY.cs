@@ -15,9 +15,7 @@ public class KAN_TALEP_DETAY : VemEntity
     [Key]
     public string KAN_TALEP_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>Talep edilen kan Ã¼rÃ¼nÃ¼ bilgileri iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi tarafÄ±ndan Ã¼r...</summary>
+/// <summary>Talep edilen kan Ã¼rÃ¼nÃ¼ bilgileri iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi tarafÄ±ndan Ã¼r...</summary>
     [ForeignKey("KanTalepNavigation")]
     public string KAN_TALEP_KODU { get; set; }
 

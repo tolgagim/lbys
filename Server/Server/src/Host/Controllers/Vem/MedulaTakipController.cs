@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.MedulaTakip;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class MedulaTakipController : BaseApiController
             .Select(e => new MedulaTakipDto
             {
                 MEDULA_TAKIP_KODU = e.MEDULA_TAKIP_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 SGK_TAKIP_NUMARASI = e.SGK_TAKIP_NUMARASI,
                 SGK_ILKTAKIP_NUMARASI = e.SGK_ILKTAKIP_NUMARASI,
@@ -66,8 +65,7 @@ public class MedulaTakipController : BaseApiController
         return new MedulaTakipDto
         {
             MEDULA_TAKIP_KODU = entity.MEDULA_TAKIP_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             SGK_TAKIP_NUMARASI = entity.SGK_TAKIP_NUMARASI,
             SGK_ILKTAKIP_NUMARASI = entity.SGK_ILKTAKIP_NUMARASI,
@@ -99,8 +97,7 @@ public class MedulaTakipController : BaseApiController
         var entity = new MEDULA_TAKIP
         {
             MEDULA_TAKIP_KODU = dto.MEDULA_TAKIP_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             SGK_TAKIP_NUMARASI = dto.SGK_TAKIP_NUMARASI,
             SGK_ILKTAKIP_NUMARASI = dto.SGK_ILKTAKIP_NUMARASI,
@@ -139,7 +136,6 @@ public class MedulaTakipController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.SGK_TAKIP_NUMARASI = dto.SGK_TAKIP_NUMARASI;

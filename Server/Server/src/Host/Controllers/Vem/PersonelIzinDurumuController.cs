@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelIzinDurumu;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelIzinDurumuController : BaseApiController
             .Select(e => new PersonelIzinDurumuDto
             {
                 PERSONEL_IZIN_DURUMU_KODU = e.PERSONEL_IZIN_DURUMU_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 KALAN_IZIN = e.KALAN_IZIN,
                 YILLIK_IZIN_HAKKI = e.YILLIK_IZIN_HAKKI,
                 PERSONEL_IZIN_YILI = e.PERSONEL_IZIN_YILI,
@@ -48,8 +47,7 @@ public class PersonelIzinDurumuController : BaseApiController
         return new PersonelIzinDurumuDto
         {
             PERSONEL_IZIN_DURUMU_KODU = entity.PERSONEL_IZIN_DURUMU_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             KALAN_IZIN = entity.KALAN_IZIN,
             YILLIK_IZIN_HAKKI = entity.YILLIK_IZIN_HAKKI,
             PERSONEL_IZIN_YILI = entity.PERSONEL_IZIN_YILI,
@@ -63,8 +61,7 @@ public class PersonelIzinDurumuController : BaseApiController
         var entity = new PERSONEL_IZIN_DURUMU
         {
             PERSONEL_IZIN_DURUMU_KODU = dto.PERSONEL_IZIN_DURUMU_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             KALAN_IZIN = dto.KALAN_IZIN,
             YILLIK_IZIN_HAKKI = dto.YILLIK_IZIN_HAKKI,
             PERSONEL_IZIN_YILI = dto.PERSONEL_IZIN_YILI,
@@ -85,7 +82,6 @@ public class PersonelIzinDurumuController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.KALAN_IZIN = dto.KALAN_IZIN;
         entity.YILLIK_IZIN_HAKKI = dto.YILLIK_IZIN_HAKKI;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.AmeliyatIslem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class AmeliyatIslemController : BaseApiController
             .Select(e => new AmeliyatIslemDto
             {
                 AMELIYAT_ISLEM_KODU = e.AMELIYAT_ISLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                AMELIYAT_KODU = e.AMELIYAT_KODU,
+AMELIYAT_KODU = e.AMELIYAT_KODU,
                 AMELIYAT_GRUBU = e.AMELIYAT_GRUBU,
                 HASTA_HIZMET_KODU = e.HASTA_HIZMET_KODU,
                 KESI_SAYISI = e.KESI_SAYISI,
@@ -57,8 +56,7 @@ public class AmeliyatIslemController : BaseApiController
         return new AmeliyatIslemDto
         {
             AMELIYAT_ISLEM_KODU = entity.AMELIYAT_ISLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            AMELIYAT_KODU = entity.AMELIYAT_KODU,
+AMELIYAT_KODU = entity.AMELIYAT_KODU,
             AMELIYAT_GRUBU = entity.AMELIYAT_GRUBU,
             HASTA_HIZMET_KODU = entity.HASTA_HIZMET_KODU,
             KESI_SAYISI = entity.KESI_SAYISI,
@@ -81,8 +79,7 @@ public class AmeliyatIslemController : BaseApiController
         var entity = new AMELIYAT_ISLEM
         {
             AMELIYAT_ISLEM_KODU = dto.AMELIYAT_ISLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            AMELIYAT_KODU = dto.AMELIYAT_KODU,
+AMELIYAT_KODU = dto.AMELIYAT_KODU,
             AMELIYAT_GRUBU = dto.AMELIYAT_GRUBU,
             HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU,
             KESI_SAYISI = dto.KESI_SAYISI,
@@ -112,7 +109,6 @@ public class AmeliyatIslemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.AMELIYAT_KODU = dto.AMELIYAT_KODU;
         entity.AMELIYAT_GRUBU = dto.AMELIYAT_GRUBU;
         entity.HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU;

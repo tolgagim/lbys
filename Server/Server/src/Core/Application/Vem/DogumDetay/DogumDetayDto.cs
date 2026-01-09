@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.DogumDetay;
+namespace Server.Application.Vem.DogumDetay;
 
 public class DogumDetayDto
 {
     public string? DOGUM_DETAY_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? DOGUM_KODU { get; set; }
     public DateTime? DOGUM_ZAMANI { get; set; }

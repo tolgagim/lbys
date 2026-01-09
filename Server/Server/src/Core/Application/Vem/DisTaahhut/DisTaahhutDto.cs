@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.DisTaahhut;
+namespace Server.Application.Vem.DisTaahhut;
 
 public class DisTaahhutDto
 {
     public string? DIS_TAAHHUT_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? HEKIM_KODU { get; set; }
     public string? DIS_TAAHHUT_NUMARASI { get; set; }

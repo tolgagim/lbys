@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.StokFis;
+namespace Server.Application.Vem.StokFis;
 
 public class StokFisDto
 {
     public string? STOK_FIS_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? BAGLI_STOK_FIS_KODU { get; set; }
     public string? DEPO_KODU { get; set; }

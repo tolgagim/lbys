@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelYandal;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelYandalController : BaseApiController
             .Select(e => new PersonelYandalDto
             {
                 PERSONEL_YANDAL_KODU = e.PERSONEL_YANDAL_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 YANDAL_BASLANGIC_TARIHI = e.YANDAL_BASLANGIC_TARIHI,
                 YANDAL_BITIS_TARIHI = e.YANDAL_BITIS_TARIHI,
                 MEDULA_BRANS_KODU = e.MEDULA_BRANS_KODU,
@@ -48,8 +47,7 @@ public class PersonelYandalController : BaseApiController
         return new PersonelYandalDto
         {
             PERSONEL_YANDAL_KODU = entity.PERSONEL_YANDAL_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             YANDAL_BASLANGIC_TARIHI = entity.YANDAL_BASLANGIC_TARIHI,
             YANDAL_BITIS_TARIHI = entity.YANDAL_BITIS_TARIHI,
             MEDULA_BRANS_KODU = entity.MEDULA_BRANS_KODU,
@@ -63,8 +61,7 @@ public class PersonelYandalController : BaseApiController
         var entity = new PERSONEL_YANDAL
         {
             PERSONEL_YANDAL_KODU = dto.PERSONEL_YANDAL_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             YANDAL_BASLANGIC_TARIHI = dto.YANDAL_BASLANGIC_TARIHI,
             YANDAL_BITIS_TARIHI = dto.YANDAL_BITIS_TARIHI,
             MEDULA_BRANS_KODU = dto.MEDULA_BRANS_KODU,
@@ -85,7 +82,6 @@ public class PersonelYandalController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.YANDAL_BASLANGIC_TARIHI = dto.YANDAL_BASLANGIC_TARIHI;
         entity.YANDAL_BITIS_TARIHI = dto.YANDAL_BITIS_TARIHI;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelEgitim;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelEgitimController : BaseApiController
             .Select(e => new PersonelEgitimDto
             {
                 PERSONEL_EGITIM_KODU = e.PERSONEL_EGITIM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 PERSONEL_EGITIM_TURU = e.PERSONEL_EGITIM_TURU,
                 SERTIFIKA_TIPI = e.SERTIFIKA_TIPI,
                 SERTIFIKA_PUANI = e.SERTIFIKA_PUANI,
@@ -54,8 +53,7 @@ public class PersonelEgitimController : BaseApiController
         return new PersonelEgitimDto
         {
             PERSONEL_EGITIM_KODU = entity.PERSONEL_EGITIM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             PERSONEL_EGITIM_TURU = entity.PERSONEL_EGITIM_TURU,
             SERTIFIKA_TIPI = entity.SERTIFIKA_TIPI,
             SERTIFIKA_PUANI = entity.SERTIFIKA_PUANI,
@@ -75,8 +73,7 @@ public class PersonelEgitimController : BaseApiController
         var entity = new PERSONEL_EGITIM
         {
             PERSONEL_EGITIM_KODU = dto.PERSONEL_EGITIM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             PERSONEL_EGITIM_TURU = dto.PERSONEL_EGITIM_TURU,
             SERTIFIKA_TIPI = dto.SERTIFIKA_TIPI,
             SERTIFIKA_PUANI = dto.SERTIFIKA_PUANI,
@@ -103,7 +100,6 @@ public class PersonelEgitimController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.PERSONEL_EGITIM_TURU = dto.PERSONEL_EGITIM_TURU;
         entity.SERTIFIKA_TIPI = dto.SERTIFIKA_TIPI;

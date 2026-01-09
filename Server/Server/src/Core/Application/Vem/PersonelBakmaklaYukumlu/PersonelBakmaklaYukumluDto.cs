@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.PersonelBakmaklaYukumlu;
+namespace Server.Application.Vem.PersonelBakmaklaYukumlu;
 
 public class PersonelBakmaklaYukumluDto
 {
     public string? PERSONEL_BAKMAKLA_YUKUMLU_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? PERSONEL_KODU { get; set; }
+public string? PERSONEL_KODU { get; set; }
     public string? PERSONEL_YAKINLIK_DERECESI { get; set; }
     public string? TC_KIMLIK_NUMARASI { get; set; }
     public string? AD { get; set; }

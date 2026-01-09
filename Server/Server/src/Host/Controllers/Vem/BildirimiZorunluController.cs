@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.BildirimiZorunlu;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class BildirimiZorunluController : BaseApiController
             .Select(e => new BildirimiZorunluDto
             {
                 BILDIRIMI_ZORUNLU_KODU = e.BILDIRIMI_ZORUNLU_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 BILDIRIM_TURU = e.BILDIRIM_TURU,
                 BILDIRIM_ZAMANI = e.BILDIRIM_ZAMANI,
@@ -91,8 +90,7 @@ public class BildirimiZorunluController : BaseApiController
         return new BildirimiZorunluDto
         {
             BILDIRIMI_ZORUNLU_KODU = entity.BILDIRIMI_ZORUNLU_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             BILDIRIM_TURU = entity.BILDIRIM_TURU,
             BILDIRIM_ZAMANI = entity.BILDIRIM_ZAMANI,
@@ -149,8 +147,7 @@ public class BildirimiZorunluController : BaseApiController
         var entity = new BILDIRIMI_ZORUNLU
         {
             BILDIRIMI_ZORUNLU_KODU = dto.BILDIRIMI_ZORUNLU_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             BILDIRIM_TURU = dto.BILDIRIM_TURU,
             BILDIRIM_ZAMANI = dto.BILDIRIM_ZAMANI,
@@ -214,7 +211,6 @@ public class BildirimiZorunluController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.BILDIRIM_TURU = dto.BILDIRIM_TURU;

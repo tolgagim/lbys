@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaDis;
+namespace Server.Application.Vem.HastaDis;
 
 public class HastaDisDto
 {
     public string? HASTA_DIS_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? DIS_ISLEM_TURU { get; set; }
     public string? HASTA_HIZMET_KODU { get; set; }

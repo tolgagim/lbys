@@ -31,7 +31,7 @@ public class TetkikParametreController : BaseApiController
                 MEDULA_PARAMETRE_KODU = e.MEDULA_PARAMETRE_KODU,
                 LOINC_KODU = e.LOINC_KODU,
                 RAPOR_SONUC_SIRASI = e.RAPOR_SONUC_SIRASI,
-                AKTIF = e.AKTIF,
+                IPTAL_DURUMU = e.IPTAL_DURUMU,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -58,7 +58,7 @@ public class TetkikParametreController : BaseApiController
             MEDULA_PARAMETRE_KODU = entity.MEDULA_PARAMETRE_KODU,
             LOINC_KODU = entity.LOINC_KODU,
             RAPOR_SONUC_SIRASI = entity.RAPOR_SONUC_SIRASI,
-            AKTIF = entity.AKTIF,
+            IPTAL_DURUMU = entity.IPTAL_DURUMU,
         };
     }
 
@@ -76,7 +76,7 @@ public class TetkikParametreController : BaseApiController
             MEDULA_PARAMETRE_KODU = dto.MEDULA_PARAMETRE_KODU,
             LOINC_KODU = dto.LOINC_KODU,
             RAPOR_SONUC_SIRASI = dto.RAPOR_SONUC_SIRASI,
-            AKTIF = dto.AKTIF,
+            IPTAL_DURUMU = dto.IPTAL_DURUMU,
         };
 
         _db.Set<TETKIK_PARAMETRE>().Add(entity);
@@ -101,7 +101,7 @@ public class TetkikParametreController : BaseApiController
         entity.MEDULA_PARAMETRE_KODU = dto.MEDULA_PARAMETRE_KODU;
         entity.LOINC_KODU = dto.LOINC_KODU;
         entity.RAPOR_SONUC_SIRASI = dto.RAPOR_SONUC_SIRASI;
-        entity.AKTIF = dto.AKTIF;
+        entity.IPTAL_DURUMU = dto.IPTAL_DURUMU;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

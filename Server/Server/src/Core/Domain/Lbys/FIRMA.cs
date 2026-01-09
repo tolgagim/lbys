@@ -15,9 +15,7 @@ public class FIRMA : VemEntity
     [Key]
     public string FIRMA_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinin mal veya hizmet alÄ±mÄ± yaptÄ±ÄŸÄ± firma iÃ§in ad bilgisidir.</summary>
+/// <summary>SaÄŸlÄ±k tesisinin mal veya hizmet alÄ±mÄ± yaptÄ±ÄŸÄ± firma iÃ§in ad bilgisidir.</summary>
     public string FIRMA_ADI { get; set; }
 
     /// <summary>Telefon numarasÄ± bilgisini ifade eder.</summary>

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KanTalepDetay;
+namespace Server.Application.Vem.KanTalepDetay;
 
 public class KanTalepDetayDto
 {
     public string? KAN_TALEP_DETAY_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? KAN_TALEP_KODU { get; set; }
+public string? KAN_TALEP_KODU { get; set; }
     public string? KAN_URUN_KODU { get; set; }
     public string? ISTENEN_KAN_GRUBU { get; set; }
     public DateTime RET_TARIHI { get; set; }

@@ -51,6 +51,8 @@ export interface DepoListFilter extends BaseListFilter {
   depoTuru?: string;
   binaKodu?: string;
   mkysKodu?: string;
+  AKTIFLIK_BILGISI?: string | null;
+  MKYS_KULLANICI_SIFRESI?: string | null;
 }
 
 export const newDepo: CreateDepoDto = {

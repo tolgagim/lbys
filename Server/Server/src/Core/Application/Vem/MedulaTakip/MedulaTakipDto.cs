@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.MedulaTakip;
+namespace Server.Application.Vem.MedulaTakip;
 
 public class MedulaTakipDto
 {
     public string? MEDULA_TAKIP_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? SGK_TAKIP_NUMARASI { get; set; }
     public string? SGK_ILKTAKIP_NUMARASI { get; set; }

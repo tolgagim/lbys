@@ -30,7 +30,7 @@ public class TetkikController : BaseApiController
                 RAPOR_SONUC_SIRASI = e.RAPOR_SONUC_SIRASI,
                 HESAPLAMALI_TETKIK_BILGISI = e.HESAPLAMALI_TETKIK_BILGISI,
                 HESAPLAMALI_TETKIK_FORMULU = e.HESAPLAMALI_TETKIK_FORMULU,
-                AKTIF = e.AKTIF,
+                IPTAL_DURUMU = e.IPTAL_DURUMU,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -56,7 +56,7 @@ public class TetkikController : BaseApiController
             RAPOR_SONUC_SIRASI = entity.RAPOR_SONUC_SIRASI,
             HESAPLAMALI_TETKIK_BILGISI = entity.HESAPLAMALI_TETKIK_BILGISI,
             HESAPLAMALI_TETKIK_FORMULU = entity.HESAPLAMALI_TETKIK_FORMULU,
-            AKTIF = entity.AKTIF,
+            IPTAL_DURUMU = entity.IPTAL_DURUMU,
         };
     }
 
@@ -73,7 +73,7 @@ public class TetkikController : BaseApiController
             RAPOR_SONUC_SIRASI = dto.RAPOR_SONUC_SIRASI,
             HESAPLAMALI_TETKIK_BILGISI = dto.HESAPLAMALI_TETKIK_BILGISI,
             HESAPLAMALI_TETKIK_FORMULU = dto.HESAPLAMALI_TETKIK_FORMULU,
-            AKTIF = dto.AKTIF,
+            IPTAL_DURUMU = dto.IPTAL_DURUMU,
         };
 
         _db.Set<TETKIK>().Add(entity);
@@ -97,7 +97,7 @@ public class TetkikController : BaseApiController
         entity.RAPOR_SONUC_SIRASI = dto.RAPOR_SONUC_SIRASI;
         entity.HESAPLAMALI_TETKIK_BILGISI = dto.HESAPLAMALI_TETKIK_BILGISI;
         entity.HESAPLAMALI_TETKIK_FORMULU = dto.HESAPLAMALI_TETKIK_FORMULU;
-        entity.AKTIF = dto.AKTIF;
+        entity.IPTAL_DURUMU = dto.IPTAL_DURUMU;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

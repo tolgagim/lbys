@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KurulEtkenMadde;
+namespace Server.Application.Vem.KurulEtkenMadde;
 
 public class KurulEtkenMaddeDto
 {
     public string? KURUL_ETKEN_MADDE_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? KURUL_RAPOR_KODU { get; set; }
+public string? KURUL_RAPOR_KODU { get; set; }
     public string? ILAC_ETKEN_MADDE_KODU { get; set; }
     public string? DOZ_SAYISI { get; set; }
     public string? DOZ_MIKTARI { get; set; }

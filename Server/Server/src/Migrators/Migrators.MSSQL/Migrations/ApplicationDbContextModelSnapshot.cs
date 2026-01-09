@@ -239,10 +239,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("AMELIYAT_EKIP_KODU");
 
                     b.HasIndex("AMELIYAT_ISLEM_KODU");
@@ -317,10 +313,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TARAF_BILGISI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -387,10 +379,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("YATAK_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -449,10 +437,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RAPORDA_GORULME_DURUMU")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -566,10 +550,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ASI_BILGISI_KODU");
 
                     b.HasIndex("ALTTA_YATAN_HASTALIK");
@@ -629,10 +609,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RAPOR_SONUC_SIRASI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -736,10 +712,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("YEMEK_TURU")
                         .IsRequired()
@@ -889,10 +861,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("NTP_TAKIP_BILGISI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SADECE_ANNE_SUTU_ALDIGI_SURE")
                         .IsRequired()
@@ -1100,10 +1068,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RISKLI_TEMAS_TIPI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -1279,8 +1243,11 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("BIRIM_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BINA_KODU")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BIRIM_ADI")
                         .IsRequired()
@@ -1301,19 +1268,29 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("KURUM_KODU")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("KLINIK_KODU")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UST_BIRIM_KODU")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("MEDULA_BRANS_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MHRS_ADI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MHRS_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MKYS_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("YATAK_SAYISI")
+                        .HasColumnType("int");
 
                     b.HasKey("BIRIM_KODU");
 
+                    b.HasIndex("BINA_KODU");
+
                     b.HasIndex("BIRIM_TURU");
-
-                    b.HasIndex("KURUM_KODU");
-
-                    b.HasIndex("UST_BIRIM_KODU");
 
                     b.ToTable("BIRIM", "Lbys");
                 });
@@ -1323,8 +1300,8 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("CIHAZ_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BIRIM_KODU")
                         .HasColumnType("nvarchar(450)");
@@ -1459,10 +1436,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SIKAYETIN_SURESI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1519,8 +1492,8 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("DEPO_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BINA_KODU")
                         .HasColumnType("nvarchar(450)");
@@ -1547,6 +1520,9 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MKYS_KULLANICI_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MKYS_KULLANICI_SIFRESI")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DEPO_KODU");
@@ -1638,10 +1614,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PARCA_SAYISI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -1756,10 +1728,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RPT_ONAY_DURUMU")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1850,10 +1818,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SGK_TAKIP_NUMARASI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1905,10 +1869,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SUT_KODU")
                         .IsRequired()
@@ -1964,10 +1924,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DIYABET_KODU");
 
@@ -2047,10 +2003,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("KOMPLIKASYON_TANISI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DOGUM_KODU");
 
@@ -2176,10 +2128,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ROBSON_GRUBU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -2269,10 +2217,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime>("MESAJ_TARIHI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DOKTOR_MESAJI_KODU");
 
@@ -2367,10 +2311,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("YAN_ODEME_TUTARI")
                         .IsRequired()
@@ -2470,10 +2410,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SERBEST_MESLEK_KATSAYISI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -2537,10 +2473,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("OZELLIKLI_ISLEM_PUAN_TOPLAMI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -2661,10 +2593,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PSIKOLOJIK_DURUM_DEGERLENDIRME")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("VERILEN_EGITIMLER")
                         .IsRequired()
@@ -2833,10 +2761,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TELEFON_NUMARASI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -2943,10 +2867,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RISK_ALTINDAKI_OLGU_TAKIBI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -3050,10 +2970,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("GETAT_KODU");
 
                     b.HasIndex("GETAT_TEDAVI_SONUCU");
@@ -3100,10 +3016,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("GRUP_UYELIK_KODU");
 
                     b.HasIndex("KULLANICI_GRUP_KODU");
@@ -3122,23 +3034,32 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ADRES")
+                    b.Property<string>("ANNE_ADI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("ANNE_HASTA_KODU")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ANA_ADI")
+                    b.Property<string>("ANNE_TC_KIMLIK_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BABA_ADI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CEP_TELEFON")
+                    b.Property<string>("BABA_HASTA_KODU")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BABA_TC_KIMLIK_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("BEYAN_DOGUM_TARIHI")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CINSIYET")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("DOGUM_SIRASI")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DOGUM_TARIHI")
                         .HasColumnType("datetime2");
@@ -3146,13 +3067,10 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("DOGUM_YERI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EGITIM_DURUMU")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EMAIL")
+                    b.Property<string>("ENGELLILIK_DURUMU")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("GUNCELLEME_ZAMANI")
@@ -3161,10 +3079,7 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("GUNCELLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ILCE_KODU")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IL_KODU")
+                    b.Property<string>("HASTA_TIPI")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KAN_GRUBU")
@@ -3173,36 +3088,43 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MEDENI_HAL")
+                    b.Property<string>("KIMLIKSIZ_HASTA_BILGISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MEDENI_HALI")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("MESLEK")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("MUAYENE_ONCELIK_SIRASI")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OGRENIM_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("OLUM_TARIHI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PROTOKOL_NO")
+                    b.Property<string>("OLUM_YERI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SIGORTA_NO")
+                    b.Property<string>("PASAPORT_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SOSYAL_GUVENCE")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("SOYAD")
-                        .IsRequired()
+                    b.Property<string>("SON_KURUM_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TC_KIMLIK_NO")
-                        .IsRequired()
+                    b.Property<string>("SOYADI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TELEFON")
+                    b.Property<string>("TC_KIMLIK_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UYRUK")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YUPASS_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HASTA_KODU");
@@ -3211,9 +3133,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("KAN_GRUBU");
 
-                    b.HasIndex("MEDENI_HAL");
-
-                    b.HasIndex("SOSYAL_GUVENCE");
+                    b.HasIndex("MEDENI_HALI");
 
                     b.ToTable("HASTA", "Lbys");
                 });
@@ -3390,10 +3310,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("RAPOR_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RESMI_YAZI_NUMARASI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -3553,10 +3469,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("HASTA_ARSIV_KODU");
 
                     b.HasIndex("ARSIV_DEFTER_TURU");
@@ -3621,10 +3533,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("HASTA_ARSIV_DETAY_KODU");
 
                     b.HasIndex("DOSYA_ALAN_BIRIM_KODU");
@@ -3649,17 +3557,29 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("HASTA_BASVURU_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("ADLI_VAKA_GELIS_SEKLI")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BASVURU_SEKLI")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("AMBULANS_PLAKA_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("BASVURU_TARIHI")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("AMBULANS_TAKIP_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BASVURU_TURU")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("ARAC_TURU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ASISTAN_HEKIM_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BAGLI_OLDUGU_BASVURU_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BASVURU_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BASVURU_PROTOKOL_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BIRIM_KODU")
                         .HasColumnType("nvarchar(450)");
@@ -3667,13 +3587,31 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("CIKIS_SEKLI")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime?>("CIKIS_TARIHI")
+                    b.Property<string>("CIKIS_VEREN_HEKIM_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CIKIS_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DOKTOR_KODU")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("DEFTER_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DIYABET_EGITIMI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DIYABET_KOMPLIKASYONLARI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GEBLIZ_BILDIRIM_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GELDIGI_ULKE_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GENCLIK_SAGLIGI_ISLEMLERI")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("GUNCELLEME_ZAMANI")
@@ -3682,47 +3620,106 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("GUNCELLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("GUNLUK_SIRA_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("HASTA_KABUL_ZAMANI")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("HASTA_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("HAYATI_TEHLIKE_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HEKIM_BASVURU_NOTU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HEKIM_KODU")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("HIZMET_SUNUCU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KABUL_SEKLI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KAYIT_YERI")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PROVIZYON_TIPI")
+                    b.Property<string>("KURUM_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SEVK_EDEN_KURUM")
+                    b.Property<DateTime?>("MUAYENE_BASLAMA_ZAMANI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("MUAYENE_BITIS_ZAMANI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("MUAYENE_ONCELIK_SIRASI")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MUAYENE_TURU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SIKAYET")
+                    b.Property<string>("OLAY_AFET_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SONUC_KODU")
+                    b.Property<string>("ONLINE_PROTOKOL_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TAKIP_NO")
+                    b.Property<string>("SAGLIK_TURIZMI_ULKE_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TANI_KODU")
+                    b.Property<string>("SEVK_TANISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("SEVK_ZAMANI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SOSYAL_GUVENCE_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SYS_REFERANS_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SYS_TAKIP_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TAMAMLAYICI_KURUM_KODU")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TEDAVI_TURU")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TRIAJ_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VAKA_TURU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YABANCI_HASTA_TURU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YATIS_BILGISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YATIS_PROTOKOL_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("HASTA_BASVURU_KODU");
-
-                    b.HasIndex("BASVURU_SEKLI");
-
-                    b.HasIndex("BASVURU_TURU");
 
                     b.HasIndex("BIRIM_KODU");
 
                     b.HasIndex("CIKIS_SEKLI");
 
-                    b.HasIndex("DOKTOR_KODU");
-
                     b.HasIndex("HASTA_KODU");
+
+                    b.HasIndex("HEKIM_KODU");
 
                     b.ToTable("HASTA_BASVURU", "Lbys");
                 });
@@ -3757,10 +3754,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ODENEN_BORC")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -3834,10 +3827,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SONUC_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -3909,10 +3898,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("HASTA_EPIKRIZ_KODU");
 
                     b.HasIndex("EPIKRIZ_BASLIK_BILGISI");
@@ -3966,10 +3951,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HASTA_FOTOGRAF_KODU");
 
@@ -4032,10 +4013,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HASTA_GIZLILIK_KODU");
 
@@ -4281,10 +4258,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("HASTA_ILETISIM_KODU");
 
                     b.HasIndex("ADRES_KODU_SEVIYESI");
@@ -4411,10 +4384,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("STOK_HAREKET_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -4486,10 +4455,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PERSONEL_KODU")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -4565,10 +4530,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("OTOPSI_DURUMU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TESLIM_ALAN_ADI_SOYADI")
                         .IsRequired()
@@ -4732,10 +4693,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("PLANLANAN_SEANS_TARIHI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("SEANS_BASLAMA_ZAMANI")
                         .HasColumnType("datetime2");
 
@@ -4846,10 +4803,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SEVK_ACIKLAMA")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -4957,10 +4910,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TIBBI_BILGI_ALT_TURU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -5021,10 +4970,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UYARI_TURU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -5064,10 +5009,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("VENTILATOR_AYRILMA_ZAMANI")
                         .HasColumnType("datetime2");
@@ -5165,10 +5106,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NABIZ")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -5287,10 +5224,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("HEMOGLOBINOPATI_KODU");
 
                     b.HasIndex("HASTA_BASVURU_KODU");
@@ -5366,10 +5299,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("HEMSIRE_BAKIM_KODU");
 
                     b.HasIndex("BAKIM_NEDENI");
@@ -5396,8 +5325,8 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("HIZMET_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
@@ -5528,10 +5457,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RENK_SEVIYE_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -5609,10 +5534,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("INTIHAR_IZLEM_KODU");
 
@@ -5703,10 +5624,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("ONCEKI_DOGUM_DURUMU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KADIN_IZLEM_KODU");
 
@@ -5828,10 +5745,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RET_SURESI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -5939,10 +5852,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("KURUM_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("REZERVE_EDEN_KULLANICI_KODU")
                         .IsRequired()
@@ -6064,10 +5973,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("SON_KULLANMA_TARIHI")
                         .HasColumnType("datetime2");
 
@@ -6181,10 +6086,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime>("PLANLANAN_TRANSFUZYON_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TRANSFUZYON_GECIRME_DURUMU")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -6283,10 +6184,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RET_EDEN_KULLANICI_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -6374,10 +6271,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("KAN_URUN_KODU");
 
                     b.HasIndex("HIZMET_KODU");
@@ -6425,10 +6318,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("KAN_URUN_IMHA_KODU");
 
                     b.HasIndex("KAN_IMHA_EDEN_PERSONEL_KODU");
@@ -6472,10 +6361,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SEPSIS_DURUMU")
                         .IsRequired()
@@ -6564,10 +6449,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("KONSULTASYON_KODU");
 
                     b.HasIndex("HASTA_BASVURU_KODU");
@@ -6624,10 +6505,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UYGULANAN_KUDUZ_PROFILAKSISI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -6652,8 +6529,11 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("KULLANICI_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("AD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
@@ -6670,8 +6550,20 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("KULLANICI_ADI")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PAROLA")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PAROLA_SIFRELEME_TURU")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PERSONEL_KODU")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SOYADI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TC_KIMLIK_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KULLANICI_KODU");
 
@@ -6702,10 +6594,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("KULLANICI_GRUP_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -6746,10 +6634,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("RAPOR_TURU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KURUL_KODU");
 
@@ -6818,10 +6702,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PSIKIYATRIK_RAHATSIZLIK")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UZUVKAYBI_ORTOPEDI_RAHATSIZLIK")
                         .IsRequired()
@@ -6901,10 +6781,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("KURUL_ENGELLI_KODU");
 
                     b.HasIndex("HASTA_BASVURU_KODU");
@@ -6960,10 +6836,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("KURUL_RAPOR_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KURUL_ETKEN_MADDE_KODU");
 
@@ -7026,10 +6898,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MEDULA_BRANS_KODU")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -7146,10 +7014,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("RAPOR_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("KURUL_RAPOR_KODU");
 
                     b.HasIndex("HASTA_BASVURU_KODU");
@@ -7194,10 +7058,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime>("RAPOR_BITIS_TARIHI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TANI_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -7216,13 +7076,16 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("KURUM_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("ADRES")
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AYAKTAN_BUTCE_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DEVREDILEN_KURUM")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EMAIL")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("GUNCELLEME_ZAMANI")
@@ -7231,10 +7094,10 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("GUNCELLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ILCE_KODU")
+                    b.Property<string>("GUNUBIRLIK_BUTCE_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IL_KODU")
+                    b.Property<string>("HASTA_KURUM_TURU")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
@@ -7244,21 +7107,16 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("KURUM_TURU")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TELEFON")
+                    b.Property<string>("KURUM_ADRESI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("VERGI_DAIRESI")
+                    b.Property<string>("SKRS_KURUM_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("VERGI_NO")
+                    b.Property<string>("YATAN_BUTCE_KODU")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KURUM_KODU");
-
-                    b.HasIndex("KURUM_TURU");
 
                     b.ToTable("KURUM", "Lbys");
                 });
@@ -7338,10 +7196,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("POSTPARTUM_DEPRESYON")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SEYIR_TEHLIKE_ISARETI")
                         .IsRequired()
@@ -7476,10 +7330,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("SON_IKAME_TEDAVI_ZAMANI")
                         .HasColumnType("datetime2");
 
@@ -7609,10 +7459,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SGK_ILKTAKIP_NUMARASI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -7711,10 +7557,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SKRS_KURUM_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -7791,10 +7633,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PSIKOLOJIK_TEDAVI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("OBEZITE_IZLEM_KODU");
 
@@ -7886,10 +7724,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("RECETE_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SAG_CAM_AKS")
                         .IsRequired()
@@ -8174,10 +8008,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TOPLAM_ICON_SKOR_PUANI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -8344,10 +8174,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime>("RAPOR_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SITOPATOLOJIK_TANI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -8404,32 +8230,83 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("ACIK_ADRES")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("AD")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
+                    b.Property<string>("ADRES_KODU_SEVIYESI")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BIRIM_KODU")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("ADRES_TIPI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AKADEMIK_UNVAN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AKTIFLIK_BILGISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ANNE_ADI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ASALET_ALMA_TARIHI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ASKERLIK_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BABA_ADI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CALISMA_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CALISTIGI_BIRIM_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CEP_TELEFONU")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CINSIYET")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("DIPLOMA_NO")
+                    b.Property<string>("DEVLET_HIZMET_YUKUMLULUK_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DIPLOMA_TESCIL_NO")
+                    b.Property<string>("DIPLOMA_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DOGUM_TARIHI")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DOGUM_YERI")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EMAIL")
+                    b.Property<string>("EMEKLI_SICIL_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EMEKLI_TERFI_TARIHI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ENGELLILIK_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EPOSTA_ADRESI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EV_TELEFONU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FOTOGRAF_BILGISI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FOTOGRAF_DOSYA_YOLU")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("GUNCELLEME_ZAMANI")
@@ -8438,36 +8315,94 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("GUNCELLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ISE_BASLAMA_TARIHI")
+                    b.Property<string>("HEKIM_MEDULA_SIFRESI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ILCE_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ILK_ISE_BASLAMA_TARIHI")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("IL_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IMZA_UNVAN_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ISTEN_AYRILMA_ACIKLAMASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ISTEN_AYRILMA_NEDENI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ISTEN_AYRILMA_TARIHI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IS_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KADROLU_GOREV_YERI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KADRO_UNVAN_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KAN_GRUBU")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("SOYAD")
+                    b.Property<string>("KLINIK_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MEDULA_BRANS_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("MEMURIYETE_BASLAMA_TARIHI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MEMURIYET_TIPI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OGRENIM_DURUMU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ONCEKI_SOYADI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PERSONEL_GOREV_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PERSONEL_SICIL_NUMARASI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("SAGLIK_TESISINE_BASLAMA_TARIHI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SOYADI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TC_KIMLIK_NUMARASI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TC_KIMLIK_NO")
-                        .IsRequired()
+                    b.Property<DateTime?>("TERFI_TARIHI")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TESCIL_NUMARASI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TELEFON")
+                    b.Property<string>("ULKE_KODU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UNVAN")
+                    b.Property<string>("UNVAN_KODU")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UZMANLIK_KODU")
-                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("PERSONEL_KODU");
 
-                    b.HasIndex("BIRIM_KODU");
-
                     b.HasIndex("CINSIYET");
-
-                    b.HasIndex("UZMANLIK_KODU");
 
                     b.ToTable("PERSONEL", "Lbys");
                 });
@@ -8511,10 +8446,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_YAKINLIK_DERECESI")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SOYADI")
                         .IsRequired()
@@ -8581,10 +8512,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SUBE_KODU")
                         .IsRequired()
@@ -8846,10 +8773,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SAHIS_EMEKLI_KESENEGI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -9024,10 +8947,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SENDIKA_BILGISI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -9089,10 +9008,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SERTIFIKA_PUANI")
                         .IsRequired()
@@ -9157,10 +9072,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PERSONEL_GOREVLENDIRME_KODU");
 
@@ -9239,10 +9150,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SBYS_ENGELLENME_DURUMU")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -9295,10 +9202,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("YILLIK_IZIN_HAKKI")
                         .IsRequired()
@@ -9353,10 +9256,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TEBLIG_EVRAK_NUMARASI")
                         .IsRequired()
@@ -9422,10 +9321,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("PERSONEL_OGRENIM_KODU");
 
                     b.HasIndex("OGRENIM_DURUMU");
@@ -9461,10 +9356,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("YANDAL_BASLANGIC_TARIHI")
                         .HasColumnType("datetime2");
@@ -9538,10 +9429,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LOINC_KODU")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -9631,10 +9518,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("RAPOR_YAZAN_PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TETKIK_SONUCU_METIN")
                         .IsRequired()
@@ -9896,10 +9779,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("RECETE_ILAC_KODU");
 
                     b.HasIndex("DOZ_BIRIM");
@@ -9945,10 +9824,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("RECETE_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RECETE_ILAC_ACIKLAMA_KODU");
 
@@ -10049,10 +9924,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RISK_SKORLAMA_TOPLAM_PUANI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -10102,10 +9973,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RISK_SKORLAMA_ALT_TURU")
                         .IsRequired()
@@ -10194,10 +10061,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("STERILIZASYON_CIKIS_MIKTARI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -10256,10 +10119,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STERILIZASYON_GIRIS_MIKTARI")
                         .IsRequired()
@@ -10328,10 +10187,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("STERILIZASYON_PAKET_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -10377,10 +10232,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("OLCU_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STERILIZASYON_MALZEME_MIKTARI")
                         .IsRequired()
@@ -10455,10 +10306,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime>("PAKET_RAF_OMRU_BITIS_TARIHI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SET_IADE_ALAN_PERSONEL_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -10530,10 +10377,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("STERILIZASYON_MALZEME_MIKTARI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -10575,10 +10418,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STERIL_OLMAYAN_STOK_MIKTARI")
                         .IsRequired()
@@ -10625,10 +10464,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STERILIZASYON_YIKAMA_TURU")
                         .IsRequired()
@@ -10701,10 +10536,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("OLCU_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STOK_KART_KODU")
                         .IsRequired()
@@ -10785,10 +10616,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("ONAYLAYAN_HEKIM_KODU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STOK_ISTEK_HAREKET_KODU")
                         .IsRequired()
@@ -10930,10 +10757,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime>("MUAYENE_TARIHI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SAGLIK_BAKANLIGI_PAYI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -11070,10 +10893,6 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SATIS_BIRIM_FIYATI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -11170,10 +10989,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("STOK_ISTEK_DURUMU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -11239,10 +11054,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STOK_ISTEK_KODU")
                         .IsRequired()
@@ -11321,10 +11132,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime>("ORDER_UYGULANAN_ZAMAN")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("STOK_ISTEK_HAREKET_KODU")
                         .IsRequired()
@@ -11446,10 +11253,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("VERI_PAKETI_GONDERILME_ZAMANI")
                         .HasColumnType("datetime2");
 
@@ -11475,9 +11278,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("TETKIK_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
-
                     b.Property<string>("EKLEYEN_KULLANICI_KODU")
                         .HasColumnType("nvarchar(max)");
 
@@ -11495,6 +11295,9 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<string>("HIZMET_KODU")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IPTAL_DURUMU")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
@@ -11547,10 +11350,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TETKIK_KODU")
                         .IsRequired()
@@ -11662,9 +11461,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<string>("TETKIK_PARAMETRE_KODU")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("AKTIF")
-                        .HasColumnType("bit");
-
                     b.Property<string>("CIHAZ_KODU")
                         .HasColumnType("nvarchar(450)");
 
@@ -11675,6 +11471,9 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("GUNCELLEYEN_KULLANICI_KODU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IPTAL_DURUMU")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("KAYIT_ZAMANI")
@@ -11741,10 +11540,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("REFERANS_BITIS_DEGERI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -11958,10 +11753,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("ORDER_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TIBBI_ORDER_TURU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -12009,10 +11800,6 @@ namespace Migrators.MSSQL.Migrations
 
                     b.Property<DateTime?>("PLANLANAN_UYGULANMA_ZAMANI")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TIBBI_ORDER_IPTAL_NEDENI")
                         .IsRequired()
@@ -12113,10 +11900,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Property<DateTime?>("MAKBUZ_ZAMANI")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("REFERANS_TABLO_ADI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TAHSIL_TURU")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -12178,10 +11961,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("MAKBUZ_KALEM_TUTARI")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("REFERANS_TABLO_ADI")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -13412,26 +13191,19 @@ namespace Migrators.MSSQL.Migrations
 
             modelBuilder.Entity("Server.Domain.Lbys.BIRIM", b =>
                 {
+                    b.HasOne("Server.Domain.Lbys.BINA", "BinaNavigation")
+                        .WithMany()
+                        .HasForeignKey("BINA_KODU")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "BirimTuruNavigation")
                         .WithMany()
                         .HasForeignKey("BIRIM_TURU")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Server.Domain.Lbys.KURUM", "KurumNavigation")
-                        .WithMany()
-                        .HasForeignKey("KURUM_KODU")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("Server.Domain.Lbys.BIRIM", "UstBirimNavigation")
-                        .WithMany()
-                        .HasForeignKey("UST_BIRIM_KODU")
-                        .OnDelete(DeleteBehavior.Restrict);
+                    b.Navigation("BinaNavigation");
 
                     b.Navigation("BirimTuruNavigation");
-
-                    b.Navigation("KurumNavigation");
-
-                    b.Navigation("UstBirimNavigation");
                 });
 
             modelBuilder.Entity("Server.Domain.Lbys.CIHAZ", b =>
@@ -14548,23 +14320,16 @@ namespace Migrators.MSSQL.Migrations
                         .HasForeignKey("KAN_GRUBU")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "MedeniHalNavigation")
+                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "MedeniHaliNavigation")
                         .WithMany()
-                        .HasForeignKey("MEDENI_HAL")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "SosyalGuvenceNavigation")
-                        .WithMany()
-                        .HasForeignKey("SOSYAL_GUVENCE")
+                        .HasForeignKey("MEDENI_HALI")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("CinsiyetNavigation");
 
                     b.Navigation("KanGrubuNavigation");
 
-                    b.Navigation("MedeniHalNavigation");
-
-                    b.Navigation("SosyalGuvenceNavigation");
+                    b.Navigation("MedeniHaliNavigation");
                 });
 
             modelBuilder.Entity("Server.Domain.Lbys.HASTA_ADLI_RAPOR", b =>
@@ -14746,16 +14511,6 @@ namespace Migrators.MSSQL.Migrations
 
             modelBuilder.Entity("Server.Domain.Lbys.HASTA_BASVURU", b =>
                 {
-                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "BasvuruSekliNavigation")
-                        .WithMany()
-                        .HasForeignKey("BASVURU_SEKLI")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "BasvuruTuruNavigation")
-                        .WithMany()
-                        .HasForeignKey("BASVURU_TURU")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("Server.Domain.Lbys.BIRIM", "BirimNavigation")
                         .WithMany()
                         .HasForeignKey("BIRIM_KODU")
@@ -14766,28 +14521,24 @@ namespace Migrators.MSSQL.Migrations
                         .HasForeignKey("CIKIS_SEKLI")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Server.Domain.Lbys.PERSONEL", "DoktorNavigation")
-                        .WithMany()
-                        .HasForeignKey("DOKTOR_KODU")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("Server.Domain.Lbys.HASTA", "HastaNavigation")
                         .WithMany()
                         .HasForeignKey("HASTA_KODU")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("BasvuruSekliNavigation");
-
-                    b.Navigation("BasvuruTuruNavigation");
+                    b.HasOne("Server.Domain.Lbys.PERSONEL", "HekimNavigation")
+                        .WithMany()
+                        .HasForeignKey("HEKIM_KODU")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("BirimNavigation");
 
                     b.Navigation("CikisSekliNavigation");
 
-                    b.Navigation("DoktorNavigation");
-
                     b.Navigation("HastaNavigation");
+
+                    b.Navigation("HekimNavigation");
                 });
 
             modelBuilder.Entity("Server.Domain.Lbys.HASTA_BORC", b =>
@@ -16890,16 +16641,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Navigation("TaniNavigation");
                 });
 
-            modelBuilder.Entity("Server.Domain.Lbys.KURUM", b =>
-                {
-                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "KurumTuruNavigation")
-                        .WithMany()
-                        .HasForeignKey("KURUM_TURU")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("KurumTuruNavigation");
-                });
-
             modelBuilder.Entity("Server.Domain.Lbys.LOHUSA_IZLEM", b =>
                 {
                     b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "DemirLojistigiVeDestegiNavigation")
@@ -17600,26 +17341,12 @@ namespace Migrators.MSSQL.Migrations
 
             modelBuilder.Entity("Server.Domain.Lbys.PERSONEL", b =>
                 {
-                    b.HasOne("Server.Domain.Lbys.BIRIM", "BirimNavigation")
-                        .WithMany()
-                        .HasForeignKey("BIRIM_KODU")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "CinsiyetNavigation")
                         .WithMany()
                         .HasForeignKey("CINSIYET")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Server.Domain.Lbys.REFERANS_KODLAR", "UzmanlikNavigation")
-                        .WithMany()
-                        .HasForeignKey("UZMANLIK_KODU")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("BirimNavigation");
-
                     b.Navigation("CinsiyetNavigation");
-
-                    b.Navigation("UzmanlikNavigation");
                 });
 
             modelBuilder.Entity("Server.Domain.Lbys.PERSONEL_BAKMAKLA_YUKUMLU", b =>

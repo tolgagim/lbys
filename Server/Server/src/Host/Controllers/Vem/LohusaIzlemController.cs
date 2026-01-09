@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.LohusaIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class LohusaIzlemController : BaseApiController
             .Select(e => new LohusaIzlemDto
             {
                 LOHUSA_IZLEM_KODU = e.LOHUSA_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KACINCI_LOHUSA_IZLEM = e.KACINCI_LOHUSA_IZLEM,
                 IZLEMIN_YAPILDIGI_YER = e.IZLEMIN_YAPILDIGI_YER,
@@ -61,8 +60,7 @@ public class LohusaIzlemController : BaseApiController
         return new LohusaIzlemDto
         {
             LOHUSA_IZLEM_KODU = entity.LOHUSA_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KACINCI_LOHUSA_IZLEM = entity.KACINCI_LOHUSA_IZLEM,
             IZLEMIN_YAPILDIGI_YER = entity.IZLEMIN_YAPILDIGI_YER,
@@ -89,8 +87,7 @@ public class LohusaIzlemController : BaseApiController
         var entity = new LOHUSA_IZLEM
         {
             LOHUSA_IZLEM_KODU = dto.LOHUSA_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KACINCI_LOHUSA_IZLEM = dto.KACINCI_LOHUSA_IZLEM,
             IZLEMIN_YAPILDIGI_YER = dto.IZLEMIN_YAPILDIGI_YER,
@@ -124,7 +121,6 @@ public class LohusaIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.KACINCI_LOHUSA_IZLEM = dto.KACINCI_LOHUSA_IZLEM;

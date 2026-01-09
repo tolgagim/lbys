@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.ReceteIlac;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class ReceteIlacController : BaseApiController
             .Select(e => new ReceteIlacDto
             {
                 RECETE_ILAC_KODU = e.RECETE_ILAC_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                RECETE_KODU = e.RECETE_KODU,
+RECETE_KODU = e.RECETE_KODU,
                 DOZ_BIRIM = e.DOZ_BIRIM,
                 BARKOD = e.BARKOD,
                 ILAC_ADI = e.ILAC_ADI,
@@ -55,8 +54,7 @@ public class ReceteIlacController : BaseApiController
         return new ReceteIlacDto
         {
             RECETE_ILAC_KODU = entity.RECETE_ILAC_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            RECETE_KODU = entity.RECETE_KODU,
+RECETE_KODU = entity.RECETE_KODU,
             DOZ_BIRIM = entity.DOZ_BIRIM,
             BARKOD = entity.BARKOD,
             ILAC_ADI = entity.ILAC_ADI,
@@ -77,8 +75,7 @@ public class ReceteIlacController : BaseApiController
         var entity = new RECETE_ILAC
         {
             RECETE_ILAC_KODU = dto.RECETE_ILAC_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            RECETE_KODU = dto.RECETE_KODU,
+RECETE_KODU = dto.RECETE_KODU,
             DOZ_BIRIM = dto.DOZ_BIRIM,
             BARKOD = dto.BARKOD,
             ILAC_ADI = dto.ILAC_ADI,
@@ -106,7 +103,6 @@ public class ReceteIlacController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.RECETE_KODU = dto.RECETE_KODU;
         entity.DOZ_BIRIM = dto.DOZ_BIRIM;
         entity.BARKOD = dto.BARKOD;

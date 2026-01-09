@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KanStok;
+namespace Server.Application.Vem.KanStok;
 
 public class KanStokDto
 {
     public string? KAN_STOK_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? KAN_STOK_DURUMU { get; set; }
+public string? KAN_STOK_DURUMU { get; set; }
     public DateTime? KAN_STOK_GIRIS_TARIHI { get; set; }
     public string? DEFTER_NUMARASI { get; set; }
     public string? KAN_GRUBU { get; set; }

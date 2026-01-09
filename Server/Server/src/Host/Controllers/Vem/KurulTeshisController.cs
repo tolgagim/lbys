@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KurulTeshis;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KurulTeshisController : BaseApiController
             .Select(e => new KurulTeshisDto
             {
                 KURUL_TESHIS_KODU = e.KURUL_TESHIS_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KURUL_RAPOR_KODU = e.KURUL_RAPOR_KODU,
+KURUL_RAPOR_KODU = e.KURUL_RAPOR_KODU,
                 ILAC_TESHIS_KODU = e.ILAC_TESHIS_KODU,
                 TANI_KODU = e.TANI_KODU,
                 RAPOR_BASLAMA_TARIHI = e.RAPOR_BASLAMA_TARIHI,
@@ -49,8 +48,7 @@ public class KurulTeshisController : BaseApiController
         return new KurulTeshisDto
         {
             KURUL_TESHIS_KODU = entity.KURUL_TESHIS_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KURUL_RAPOR_KODU = entity.KURUL_RAPOR_KODU,
+KURUL_RAPOR_KODU = entity.KURUL_RAPOR_KODU,
             ILAC_TESHIS_KODU = entity.ILAC_TESHIS_KODU,
             TANI_KODU = entity.TANI_KODU,
             RAPOR_BASLAMA_TARIHI = entity.RAPOR_BASLAMA_TARIHI,
@@ -65,8 +63,7 @@ public class KurulTeshisController : BaseApiController
         var entity = new KURUL_TESHIS
         {
             KURUL_TESHIS_KODU = dto.KURUL_TESHIS_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU,
+KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU,
             ILAC_TESHIS_KODU = dto.ILAC_TESHIS_KODU,
             TANI_KODU = dto.TANI_KODU,
             RAPOR_BASLAMA_TARIHI = dto.RAPOR_BASLAMA_TARIHI,
@@ -88,7 +85,6 @@ public class KurulTeshisController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU;
         entity.ILAC_TESHIS_KODU = dto.ILAC_TESHIS_KODU;
         entity.TANI_KODU = dto.TANI_KODU;

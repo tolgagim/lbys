@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonYikama;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonYikamaController : BaseApiController
             .Select(e => new SterilizasyonYikamaDto
             {
                 STERILIZASYON_YIKAMA_KODU = e.STERILIZASYON_YIKAMA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DEPO_KODU = e.DEPO_KODU,
+DEPO_KODU = e.DEPO_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 YIKANAN_ALET_MIKTARI = e.YIKANAN_ALET_MIKTARI,
                 STERILIZASYON_YIKAMA_TURU = e.STERILIZASYON_YIKAMA_TURU,
@@ -51,8 +50,7 @@ public class SterilizasyonYikamaController : BaseApiController
         return new SterilizasyonYikamaDto
         {
             STERILIZASYON_YIKAMA_KODU = entity.STERILIZASYON_YIKAMA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DEPO_KODU = entity.DEPO_KODU,
+DEPO_KODU = entity.DEPO_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             YIKANAN_ALET_MIKTARI = entity.YIKANAN_ALET_MIKTARI,
             STERILIZASYON_YIKAMA_TURU = entity.STERILIZASYON_YIKAMA_TURU,
@@ -69,8 +67,7 @@ public class SterilizasyonYikamaController : BaseApiController
         var entity = new STERILIZASYON_YIKAMA
         {
             STERILIZASYON_YIKAMA_KODU = dto.STERILIZASYON_YIKAMA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DEPO_KODU = dto.DEPO_KODU,
+DEPO_KODU = dto.DEPO_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             YIKANAN_ALET_MIKTARI = dto.YIKANAN_ALET_MIKTARI,
             STERILIZASYON_YIKAMA_TURU = dto.STERILIZASYON_YIKAMA_TURU,
@@ -94,7 +91,6 @@ public class SterilizasyonYikamaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DEPO_KODU = dto.DEPO_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;
         entity.YIKANAN_ALET_MIKTARI = dto.YIKANAN_ALET_MIKTARI;

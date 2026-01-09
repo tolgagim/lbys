@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Diyabet;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DiyabetController : BaseApiController
             .Select(e => new DiyabetDto
             {
                 DIYABET_KODU = e.DIYABET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 ILK_TANI_TARIHI = e.ILK_TANI_TARIHI,
                 AGIRLIK = e.AGIRLIK,
                 BOY = e.BOY,
@@ -50,8 +49,7 @@ public class DiyabetController : BaseApiController
         return new DiyabetDto
         {
             DIYABET_KODU = entity.DIYABET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             ILK_TANI_TARIHI = entity.ILK_TANI_TARIHI,
             AGIRLIK = entity.AGIRLIK,
             BOY = entity.BOY,
@@ -67,8 +65,7 @@ public class DiyabetController : BaseApiController
         var entity = new DIYABET
         {
             DIYABET_KODU = dto.DIYABET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             ILK_TANI_TARIHI = dto.ILK_TANI_TARIHI,
             AGIRLIK = dto.AGIRLIK,
             BOY = dto.BOY,
@@ -91,7 +88,6 @@ public class DiyabetController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.ILK_TANI_TARIHI = dto.ILK_TANI_TARIHI;
         entity.AGIRLIK = dto.AGIRLIK;

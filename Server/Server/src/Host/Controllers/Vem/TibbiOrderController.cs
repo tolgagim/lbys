@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.TibbiOrder;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class TibbiOrderController : BaseApiController
             .Select(e => new TibbiOrderDto
             {
                 TIBBI_ORDER_KODU = e.TIBBI_ORDER_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 TIBBI_ORDER_TURU = e.TIBBI_ORDER_TURU,
                 ORDER_ZAMANI = e.ORDER_ZAMANI,
@@ -50,8 +49,7 @@ public class TibbiOrderController : BaseApiController
         return new TibbiOrderDto
         {
             TIBBI_ORDER_KODU = entity.TIBBI_ORDER_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             TIBBI_ORDER_TURU = entity.TIBBI_ORDER_TURU,
             ORDER_ZAMANI = entity.ORDER_ZAMANI,
@@ -67,8 +65,7 @@ public class TibbiOrderController : BaseApiController
         var entity = new TIBBI_ORDER
         {
             TIBBI_ORDER_KODU = dto.TIBBI_ORDER_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             TIBBI_ORDER_TURU = dto.TIBBI_ORDER_TURU,
             ORDER_ZAMANI = dto.ORDER_ZAMANI,
@@ -91,7 +88,6 @@ public class TibbiOrderController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.TIBBI_ORDER_TURU = dto.TIBBI_ORDER_TURU;

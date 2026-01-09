@@ -51,6 +51,7 @@ export interface HizmetListFilter extends BaseListFilter {
   hizmetIslemTuru?: string;
   sutKodu?: string;
   hizmetAdi?: string;
+  AKTIFLIK_BILGISI?: string | null;
 }
 
 export const newHizmet: CreateHizmetDto = {

@@ -15,9 +15,7 @@ public class KURUL_ASKERI : VemEntity
     [Key]
     public string KURUL_ASKERI_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>Kurul adÄ± bilgisidir.</summary>
+/// <summary>Kurul adÄ± bilgisidir.</summary>
     public string KURUL_ADI { get; set; }
 
     /// <summary>SaÄŸlÄ±k tesisinde dÃ¼zenlenen heyet veya tek hekim raporlarÄ± iÃ§in MEDULA tarafÄ±nda...</summary>

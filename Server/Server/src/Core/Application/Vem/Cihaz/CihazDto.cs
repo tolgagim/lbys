@@ -10,6 +10,6 @@ public class CihazDto
     public string? CIHAZ_MARKASI { get; set; }
     public string? SERI_NUMARASI { get; set; }
     public string? MKYS_KUNYE_NUMARASI { get; set; }
-    public bool AKTIF { get; set; }
+    public string? AKTIFLIK_BILGISI { get; set; }
 }
 

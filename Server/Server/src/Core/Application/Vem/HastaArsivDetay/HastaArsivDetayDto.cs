@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaArsivDetay;
+namespace Server.Application.Vem.HastaArsivDetay;
 
 public class HastaArsivDetayDto
 {
     public string? HASTA_ARSIV_DETAY_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_ARSIV_KODU { get; set; }
     public string? DOSYA_ALAN_BIRIM_KODU { get; set; }

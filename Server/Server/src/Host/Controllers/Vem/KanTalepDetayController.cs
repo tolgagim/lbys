@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanTalepDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanTalepDetayController : BaseApiController
             .Select(e => new KanTalepDetayDto
             {
                 KAN_TALEP_DETAY_KODU = e.KAN_TALEP_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KAN_TALEP_KODU = e.KAN_TALEP_KODU,
+KAN_TALEP_KODU = e.KAN_TALEP_KODU,
                 KAN_URUN_KODU = e.KAN_URUN_KODU,
                 ISTENEN_KAN_GRUBU = e.ISTENEN_KAN_GRUBU,
                 RET_TARIHI = e.RET_TARIHI,
@@ -57,8 +56,7 @@ public class KanTalepDetayController : BaseApiController
         return new KanTalepDetayDto
         {
             KAN_TALEP_DETAY_KODU = entity.KAN_TALEP_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KAN_TALEP_KODU = entity.KAN_TALEP_KODU,
+KAN_TALEP_KODU = entity.KAN_TALEP_KODU,
             KAN_URUN_KODU = entity.KAN_URUN_KODU,
             ISTENEN_KAN_GRUBU = entity.ISTENEN_KAN_GRUBU,
             RET_TARIHI = entity.RET_TARIHI,
@@ -81,8 +79,7 @@ public class KanTalepDetayController : BaseApiController
         var entity = new KAN_TALEP_DETAY
         {
             KAN_TALEP_DETAY_KODU = dto.KAN_TALEP_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KAN_TALEP_KODU = dto.KAN_TALEP_KODU,
+KAN_TALEP_KODU = dto.KAN_TALEP_KODU,
             KAN_URUN_KODU = dto.KAN_URUN_KODU,
             ISTENEN_KAN_GRUBU = dto.ISTENEN_KAN_GRUBU,
             RET_TARIHI = dto.RET_TARIHI,
@@ -112,7 +109,6 @@ public class KanTalepDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KAN_TALEP_KODU = dto.KAN_TALEP_KODU;
         entity.KAN_URUN_KODU = dto.KAN_URUN_KODU;
         entity.ISTENEN_KAN_GRUBU = dto.ISTENEN_KAN_GRUBU;

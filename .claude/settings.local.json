@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet run)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(taskkill:*)",
+      "Bash(curl:*)",
+      "Bash(start https://localhost:5001/swagger)",
+      "Bash(ng serve:*)"
+    ]
+  }
+}

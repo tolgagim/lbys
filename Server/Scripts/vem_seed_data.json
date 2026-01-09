@@ -1,0 +1,5889 @@
+{
+  "REFERANS_KODLAR": [
+    {
+      "REFERANS_KODU": "CNS-E",
+      "KOD_TURU": "CINSIYET",
+      "REFERANS_ADI": "Erkek",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "E",
+      "MKYS_KODU": "E",
+      "TIG_KODU": "E",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "CNS-K",
+      "KOD_TURU": "CINSIYET",
+      "REFERANS_ADI": "Kadin",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "K",
+      "MKYS_KODU": "K",
+      "TIG_KODU": "K",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-A+",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "A Rh+",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "A+",
+      "MKYS_KODU": "A+",
+      "TIG_KODU": "A+",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-A-",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "A Rh-",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "A-",
+      "MKYS_KODU": "A-",
+      "TIG_KODU": "A-",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-B+",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "B Rh+",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "B+",
+      "MKYS_KODU": "B+",
+      "TIG_KODU": "B+",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-B-",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "B Rh-",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "B-",
+      "MKYS_KODU": "B-",
+      "TIG_KODU": "B-",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-AB+",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "AB Rh+",
+      "SKRS_KODU": "5",
+      "MEDULA_KODU": "AB+",
+      "MKYS_KODU": "AB+",
+      "TIG_KODU": "AB+",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-AB-",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "AB Rh-",
+      "SKRS_KODU": "6",
+      "MEDULA_KODU": "AB-",
+      "MKYS_KODU": "AB-",
+      "TIG_KODU": "AB-",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-0+",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "0 Rh+",
+      "SKRS_KODU": "7",
+      "MEDULA_KODU": "0+",
+      "MKYS_KODU": "0+",
+      "TIG_KODU": "0+",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN-0-",
+      "KOD_TURU": "KAN_GRUBU",
+      "REFERANS_ADI": "0 Rh-",
+      "SKRS_KODU": "8",
+      "MEDULA_KODU": "0-",
+      "MKYS_KODU": "0-",
+      "TIG_KODU": "0-",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "MDN-BKR",
+      "KOD_TURU": "MEDENI_HALI",
+      "REFERANS_ADI": "Bekar",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "BKR",
+      "MKYS_KODU": "BKR",
+      "TIG_KODU": "BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "MDN-EVL",
+      "KOD_TURU": "MEDENI_HALI",
+      "REFERANS_ADI": "Evli",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "EVL",
+      "MKYS_KODU": "EVL",
+      "TIG_KODU": "EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "MDN-BOS",
+      "KOD_TURU": "MEDENI_HALI",
+      "REFERANS_ADI": "Bosanmis",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "BOS",
+      "MKYS_KODU": "BOS",
+      "TIG_KODU": "BOS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "MDN-DUL",
+      "KOD_TURU": "MEDENI_HALI",
+      "REFERANS_ADI": "Dul",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "DUL",
+      "MKYS_KODU": "DUL",
+      "TIG_KODU": "DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "TDV-AYAKTAN",
+      "KOD_TURU": "TEDAVI_TURU",
+      "REFERANS_ADI": "Ayaktan",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "AYAKTAN",
+      "MKYS_KODU": "AYAKTAN",
+      "TIG_KODU": "AYAKTAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "TDV-YATAN",
+      "KOD_TURU": "TEDAVI_TURU",
+      "REFERANS_ADI": "Yatan",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "YATAN",
+      "MKYS_KODU": "YATAN",
+      "TIG_KODU": "YATAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "TDV-GUNUBIRLIK",
+      "KOD_TURU": "TEDAVI_TURU",
+      "REFERANS_ADI": "Gunubirlik",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "GUNUBIRLIK",
+      "MKYS_KODU": "GUNUBIRLIK",
+      "TIG_KODU": "GUNUBIRLIK",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "TDV-ACIL",
+      "KOD_TURU": "TEDAVI_TURU",
+      "REFERANS_ADI": "Acil",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "ACIL",
+      "MKYS_KODU": "ACIL",
+      "TIG_KODU": "ACIL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "CKS-TABURCU",
+      "KOD_TURU": "CIKIS_SEKLI",
+      "REFERANS_ADI": "Taburcu",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "TABURCU",
+      "MKYS_KODU": "TABURCU",
+      "TIG_KODU": "TABURCU",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "CKS-SEVK",
+      "KOD_TURU": "CIKIS_SEKLI",
+      "REFERANS_ADI": "Sevk",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "SEVK",
+      "MKYS_KODU": "SEVK",
+      "TIG_KODU": "SEVK",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "CKS-EXITUS",
+      "KOD_TURU": "CIKIS_SEKLI",
+      "REFERANS_ADI": "Olum",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "EXITUS",
+      "MKYS_KODU": "EXITUS",
+      "TIG_KODU": "EXITUS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "CKS-ISTEK",
+      "KOD_TURU": "CIKIS_SEKLI",
+      "REFERANS_ADI": "Kendi Istegi",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "ISTEK",
+      "MKYS_KODU": "ISTEK",
+      "TIG_KODU": "ISTEK",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-POL",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Poliklinik",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "POL",
+      "MKYS_KODU": "POL",
+      "TIG_KODU": "POL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-SRV",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Servis",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "SRV",
+      "MKYS_KODU": "SRV",
+      "TIG_KODU": "SRV",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-ACL",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Acil",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "ACL",
+      "MKYS_KODU": "ACL",
+      "TIG_KODU": "ACL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-AML",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Ameliyathane",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "AML",
+      "MKYS_KODU": "AML",
+      "TIG_KODU": "AML",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-LAB",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Laboratuvar",
+      "SKRS_KODU": "5",
+      "MEDULA_KODU": "LAB",
+      "MKYS_KODU": "LAB",
+      "TIG_KODU": "LAB",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-RAD",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Radyoloji",
+      "SKRS_KODU": "6",
+      "MEDULA_KODU": "RAD",
+      "MKYS_KODU": "RAD",
+      "TIG_KODU": "RAD",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BRM-YBU",
+      "KOD_TURU": "BIRIM_TURU",
+      "REFERANS_ADI": "Yogun Bakim",
+      "SKRS_KODU": "7",
+      "MEDULA_KODU": "YBU",
+      "MKYS_KODU": "YBU",
+      "TIG_KODU": "YBU",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "UNV-UZM",
+      "KOD_TURU": "UNVAN_KODU",
+      "REFERANS_ADI": "Uzman Doktor",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "UZM",
+      "MKYS_KODU": "UZM",
+      "TIG_KODU": "UZM",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "UNV-ASS",
+      "KOD_TURU": "UNVAN_KODU",
+      "REFERANS_ADI": "Asistan",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "ASS",
+      "MKYS_KODU": "ASS",
+      "TIG_KODU": "ASS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "UNV-HEM",
+      "KOD_TURU": "UNVAN_KODU",
+      "REFERANS_ADI": "Hemsire",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "HEM",
+      "MKYS_KODU": "HEM",
+      "TIG_KODU": "HEM",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "UNV-TKN",
+      "KOD_TURU": "UNVAN_KODU",
+      "REFERANS_ADI": "Teknisyen",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "TKN",
+      "MKYS_KODU": "TKN",
+      "TIG_KODU": "TKN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "UNV-IDR",
+      "KOD_TURU": "UNVAN_KODU",
+      "REFERANS_ADI": "Idari",
+      "SKRS_KODU": "5",
+      "MEDULA_KODU": "IDR",
+      "MKYS_KODU": "IDR",
+      "TIG_KODU": "IDR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "DPO-ANA",
+      "KOD_TURU": "DEPO_TURU",
+      "REFERANS_ADI": "Ana Depo",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "ANA",
+      "MKYS_KODU": "ANA",
+      "TIG_KODU": "ANA",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "DPO-BRM",
+      "KOD_TURU": "DEPO_TURU",
+      "REFERANS_ADI": "Birim Deposu",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "BRM",
+      "MKYS_KODU": "BRM",
+      "TIG_KODU": "BRM",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "DPO-ECZ",
+      "KOD_TURU": "DEPO_TURU",
+      "REFERANS_ADI": "Eczane",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "ECZ",
+      "MKYS_KODU": "ECZ",
+      "TIG_KODU": "ECZ",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "TC",
+      "KOD_TURU": "ULKE_KODU",
+      "REFERANS_ADI": "Turkiye",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "TC",
+      "MKYS_KODU": "TC",
+      "TIG_KODU": "TC",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "DE",
+      "KOD_TURU": "ULKE_KODU",
+      "REFERANS_ADI": "Almanya",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "DE",
+      "MKYS_KODU": "DE",
+      "TIG_KODU": "DE",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "FR",
+      "KOD_TURU": "ULKE_KODU",
+      "REFERANS_ADI": "Fransa",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "FR",
+      "MKYS_KODU": "FR",
+      "TIG_KODU": "FR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "GB",
+      "KOD_TURU": "ULKE_KODU",
+      "REFERANS_ADI": "Ingiltere",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "GB",
+      "MKYS_KODU": "GB",
+      "TIG_KODU": "GB",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "US",
+      "KOD_TURU": "ULKE_KODU",
+      "REFERANS_ADI": "ABD",
+      "SKRS_KODU": "5",
+      "MEDULA_KODU": "US",
+      "MKYS_KODU": "US",
+      "TIG_KODU": "US",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "YATAN",
+      "KOD_TURU": "FATURA_TURU",
+      "REFERANS_ADI": "Yatan Fatura",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "YATAN",
+      "MKYS_KODU": "YATAN",
+      "TIG_KODU": "YATAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "AYAKTAN",
+      "KOD_TURU": "FATURA_TURU",
+      "REFERANS_ADI": "Ayaktan Fatura",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "AYAKTAN",
+      "MKYS_KODU": "AYAKTAN",
+      "TIG_KODU": "AYAKTAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "ACIL",
+      "KOD_TURU": "FATURA_TURU",
+      "REFERANS_ADI": "Acil Fatura",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "ACIL",
+      "MKYS_KODU": "ACIL",
+      "TIG_KODU": "ACIL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "SGK",
+      "KOD_TURU": "FATURA_TURU",
+      "REFERANS_ADI": "SGK Fatura",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "SGK",
+      "MKYS_KODU": "SGK",
+      "TIG_KODU": "SGK",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "ANA",
+      "KOD_TURU": "TANI_TURU",
+      "REFERANS_ADI": "Ana Tani",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "ANA",
+      "MKYS_KODU": "ANA",
+      "TIG_KODU": "ANA",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "YAN",
+      "KOD_TURU": "TANI_TURU",
+      "REFERANS_ADI": "Yan Tani",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "YAN",
+      "MKYS_KODU": "YAN",
+      "TIG_KODU": "YAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "ONTAN",
+      "KOD_TURU": "TANI_TURU",
+      "REFERANS_ADI": "On Tani",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "ONTAN",
+      "MKYS_KODU": "ONTAN",
+      "TIG_KODU": "ONTAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "ORAL",
+      "KOD_TURU": "ILAC_KULLANIM_YOLU",
+      "REFERANS_ADI": "Oral",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "ORAL",
+      "MKYS_KODU": "ORAL",
+      "TIG_KODU": "ORAL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "IV",
+      "KOD_TURU": "ILAC_KULLANIM_YOLU",
+      "REFERANS_ADI": "Intravenoz",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "IV",
+      "MKYS_KODU": "IV",
+      "TIG_KODU": "IV",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "IM",
+      "KOD_TURU": "ILAC_KULLANIM_YOLU",
+      "REFERANS_ADI": "Intramuskuler",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "IM",
+      "MKYS_KODU": "IM",
+      "TIG_KODU": "IM",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "SC",
+      "KOD_TURU": "ILAC_KULLANIM_YOLU",
+      "REFERANS_ADI": "Subkutan",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "SC",
+      "MKYS_KODU": "SC",
+      "TIG_KODU": "SC",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "GUN1",
+      "KOD_TURU": "DOZ_PERIYOT",
+      "REFERANS_ADI": "Gunde 1",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "GUN1",
+      "MKYS_KODU": "GUN1",
+      "TIG_KODU": "GUN1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "GUN2",
+      "KOD_TURU": "DOZ_PERIYOT",
+      "REFERANS_ADI": "Gunde 2",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "GUN2",
+      "MKYS_KODU": "GUN2",
+      "TIG_KODU": "GUN2",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "GUN3",
+      "KOD_TURU": "DOZ_PERIYOT",
+      "REFERANS_ADI": "Gunde 3",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "GUN3",
+      "MKYS_KODU": "GUN3",
+      "TIG_KODU": "GUN3",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "MG",
+      "KOD_TURU": "DOZ_BIRIM",
+      "REFERANS_ADI": "Miligram",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "MG",
+      "MKYS_KODU": "MG",
+      "TIG_KODU": "MG",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "ML",
+      "KOD_TURU": "DOZ_BIRIM",
+      "REFERANS_ADI": "Mililitre",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "ML",
+      "MKYS_KODU": "ML",
+      "TIG_KODU": "ML",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "ADET",
+      "KOD_TURU": "DOZ_BIRIM",
+      "REFERANS_ADI": "Adet",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "ADET",
+      "MKYS_KODU": "ADET",
+      "TIG_KODU": "ADET",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "KAN",
+      "KOD_TURU": "NUMUNE_TURU",
+      "REFERANS_ADI": "Kan",
+      "SKRS_KODU": "1",
+      "MEDULA_KODU": "KAN",
+      "MKYS_KODU": "KAN",
+      "TIG_KODU": "KAN",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "IDRAR",
+      "KOD_TURU": "NUMUNE_TURU",
+      "REFERANS_ADI": "Idrar",
+      "SKRS_KODU": "2",
+      "MEDULA_KODU": "IDRAR",
+      "MKYS_KODU": "IDRAR",
+      "TIG_KODU": "IDRAR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "BALGAM",
+      "KOD_TURU": "NUMUNE_TURU",
+      "REFERANS_ADI": "Balgam",
+      "SKRS_KODU": "3",
+      "MEDULA_KODU": "BALGAM",
+      "MKYS_KODU": "BALGAM",
+      "TIG_KODU": "BALGAM",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "REFERANS_KODU": "DOKU",
+      "KOD_TURU": "NUMUNE_TURU",
+      "REFERANS_ADI": "Doku",
+      "SKRS_KODU": "4",
+      "MEDULA_KODU": "DOKU",
+      "MKYS_KODU": "DOKU",
+      "TIG_KODU": "DOKU",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "KURUM": [
+    {
+      "KURUM_KODU": "KRM-001",
+      "KURUM_ADI": "Merkez Hastanesi",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "BINA": [
+    {
+      "BINA_KODU": "BNA-001",
+      "BINA_ADI": "Bina A",
+      "BINA_ADRESI": "Ankara Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-002",
+      "BINA_ADI": "Bina B",
+      "BINA_ADRESI": "Istanbul Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-003",
+      "BINA_ADI": "Bina C",
+      "BINA_ADRESI": "Antalya Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-004",
+      "BINA_ADI": "Bina D",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-005",
+      "BINA_ADI": "Bina E",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-006",
+      "BINA_ADI": "Bina F",
+      "BINA_ADRESI": "Izmir Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-007",
+      "BINA_ADI": "Bina G",
+      "BINA_ADRESI": "Ankara Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-008",
+      "BINA_ADI": "Bina H",
+      "BINA_ADRESI": "Mersin Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-009",
+      "BINA_ADI": "Bina I",
+      "BINA_ADRESI": "Ankara Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-010",
+      "BINA_ADI": "Bina J",
+      "BINA_ADRESI": "Diyarbakir Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-011",
+      "BINA_ADI": "Bina K",
+      "BINA_ADRESI": "Konya Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-012",
+      "BINA_ADI": "Bina L",
+      "BINA_ADRESI": "Istanbul Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-013",
+      "BINA_ADI": "Bina M",
+      "BINA_ADRESI": "Istanbul Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-014",
+      "BINA_ADI": "Bina N",
+      "BINA_ADRESI": "Ankara Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-015",
+      "BINA_ADI": "Bina O",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-016",
+      "BINA_ADI": "Bina P",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-017",
+      "BINA_ADI": "Bina Q",
+      "BINA_ADRESI": "Mersin Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-018",
+      "BINA_ADI": "Bina R",
+      "BINA_ADRESI": "Diyarbakir Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-019",
+      "BINA_ADI": "Bina S",
+      "BINA_ADRESI": "Istanbul Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-020",
+      "BINA_ADI": "Bina T",
+      "BINA_ADRESI": "Mersin Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-021",
+      "BINA_ADI": "Bina U",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-022",
+      "BINA_ADI": "Bina V",
+      "BINA_ADRESI": "Mersin Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-023",
+      "BINA_ADI": "Bina W",
+      "BINA_ADRESI": "Konya Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-024",
+      "BINA_ADI": "Bina X",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-025",
+      "BINA_ADI": "Bina Y",
+      "BINA_ADRESI": "Gaziantep Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-026",
+      "BINA_ADI": "Bina Z",
+      "BINA_ADRESI": "Diyarbakir Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-027",
+      "BINA_ADI": "Bina 27",
+      "BINA_ADRESI": "Antalya Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-028",
+      "BINA_ADI": "Bina 28",
+      "BINA_ADRESI": "Istanbul Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-029",
+      "BINA_ADI": "Bina 29",
+      "BINA_ADRESI": "Izmir Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-030",
+      "BINA_ADI": "Bina 30",
+      "BINA_ADRESI": "Konya Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-031",
+      "BINA_ADI": "Bina 31",
+      "BINA_ADRESI": "Adana Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-032",
+      "BINA_ADI": "Bina 32",
+      "BINA_ADRESI": "Antalya Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-033",
+      "BINA_ADI": "Bina 33",
+      "BINA_ADRESI": "Izmir Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-034",
+      "BINA_ADI": "Bina 34",
+      "BINA_ADRESI": "Bursa Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BINA_KODU": "BNA-035",
+      "BINA_ADI": "Bina 35",
+      "BINA_ADRESI": "Adana Saglik Kampusu",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "BIRIM": [
+    {
+      "BIRIM_KODU": "BRM-001",
+      "BIRIM_ADI": "Dahiliye Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-001",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-002",
+      "BIRIM_ADI": "Cerrahi Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-002",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-003",
+      "BIRIM_ADI": "Kadin Dogum Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-003",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-004",
+      "BIRIM_ADI": "Cocuk Hastaliklari Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-004",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-005",
+      "BIRIM_ADI": "Acil Servis",
+      "BIRIM_TURU": "BRM-ACL",
+      "BINA_KODU": "BNA-005",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-006",
+      "BIRIM_ADI": "Dahiliye Servisi",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-006",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-007",
+      "BIRIM_ADI": "Cerrahi Servisi",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-007",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-008",
+      "BIRIM_ADI": "Laboratuvar",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-008",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-009",
+      "BIRIM_ADI": "Radyoloji",
+      "BIRIM_TURU": "BRM-RAD",
+      "BINA_KODU": "BNA-009",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-010",
+      "BIRIM_ADI": "Ameliyathane",
+      "BIRIM_TURU": "BRM-AML",
+      "BINA_KODU": "BNA-010",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-011",
+      "BIRIM_ADI": "Yogun Bakim",
+      "BIRIM_TURU": "BRM-YBU",
+      "BINA_KODU": "BNA-011",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-012",
+      "BIRIM_ADI": "Kardiyoloji Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-012",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-013",
+      "BIRIM_ADI": "Noroloji Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-013",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-014",
+      "BIRIM_ADI": "Ortopedi Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-014",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-015",
+      "BIRIM_ADI": "Goz Hastaliklari Poliklinigi",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-015",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-016",
+      "BIRIM_ADI": "Birim 16",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-016",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-017",
+      "BIRIM_ADI": "Birim 17",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-017",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-018",
+      "BIRIM_ADI": "Birim 18",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-018",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-019",
+      "BIRIM_ADI": "Birim 19",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-019",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-020",
+      "BIRIM_ADI": "Birim 20",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-020",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-021",
+      "BIRIM_ADI": "Birim 21",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-021",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-022",
+      "BIRIM_ADI": "Birim 22",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-022",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-023",
+      "BIRIM_ADI": "Birim 23",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-023",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-024",
+      "BIRIM_ADI": "Birim 24",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-024",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-025",
+      "BIRIM_ADI": "Birim 25",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-025",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-026",
+      "BIRIM_ADI": "Birim 26",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-026",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-027",
+      "BIRIM_ADI": "Birim 27",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-027",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-028",
+      "BIRIM_ADI": "Birim 28",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-028",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-029",
+      "BIRIM_ADI": "Birim 29",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-029",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-030",
+      "BIRIM_ADI": "Birim 30",
+      "BIRIM_TURU": "BRM-POL",
+      "BINA_KODU": "BNA-030",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-031",
+      "BIRIM_ADI": "Birim 31",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-031",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-032",
+      "BIRIM_ADI": "Birim 32",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-032",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-033",
+      "BIRIM_ADI": "Birim 33",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-033",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-034",
+      "BIRIM_ADI": "Birim 34",
+      "BIRIM_TURU": "BRM-LAB",
+      "BINA_KODU": "BNA-034",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "BIRIM_KODU": "BRM-035",
+      "BIRIM_ADI": "Birim 35",
+      "BIRIM_TURU": "BRM-SRV",
+      "BINA_KODU": "BNA-035",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "ODA": [
+    {
+      "ODA_KODU": "ODA-001",
+      "ODA_ADI": "Oda 001",
+      "BIRIM_KODU": "BRM-001",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-002",
+      "ODA_ADI": "Oda 002",
+      "BIRIM_KODU": "BRM-002",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-003",
+      "ODA_ADI": "Oda 003",
+      "BIRIM_KODU": "BRM-003",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-004",
+      "ODA_ADI": "Oda 004",
+      "BIRIM_KODU": "BRM-004",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-005",
+      "ODA_ADI": "Oda 005",
+      "BIRIM_KODU": "BRM-005",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-006",
+      "ODA_ADI": "Oda 006",
+      "BIRIM_KODU": "BRM-006",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-007",
+      "ODA_ADI": "Oda 007",
+      "BIRIM_KODU": "BRM-007",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-008",
+      "ODA_ADI": "Oda 008",
+      "BIRIM_KODU": "BRM-008",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-009",
+      "ODA_ADI": "Oda 009",
+      "BIRIM_KODU": "BRM-009",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-010",
+      "ODA_ADI": "Oda 010",
+      "BIRIM_KODU": "BRM-010",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-011",
+      "ODA_ADI": "Oda 011",
+      "BIRIM_KODU": "BRM-011",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-012",
+      "ODA_ADI": "Oda 012",
+      "BIRIM_KODU": "BRM-012",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-013",
+      "ODA_ADI": "Oda 013",
+      "BIRIM_KODU": "BRM-013",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-014",
+      "ODA_ADI": "Oda 014",
+      "BIRIM_KODU": "BRM-014",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-015",
+      "ODA_ADI": "Oda 015",
+      "BIRIM_KODU": "BRM-015",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-016",
+      "ODA_ADI": "Oda 016",
+      "BIRIM_KODU": "BRM-016",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-017",
+      "ODA_ADI": "Oda 017",
+      "BIRIM_KODU": "BRM-017",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-018",
+      "ODA_ADI": "Oda 018",
+      "BIRIM_KODU": "BRM-018",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-019",
+      "ODA_ADI": "Oda 019",
+      "BIRIM_KODU": "BRM-019",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-020",
+      "ODA_ADI": "Oda 020",
+      "BIRIM_KODU": "BRM-020",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-021",
+      "ODA_ADI": "Oda 021",
+      "BIRIM_KODU": "BRM-021",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-022",
+      "ODA_ADI": "Oda 022",
+      "BIRIM_KODU": "BRM-022",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-023",
+      "ODA_ADI": "Oda 023",
+      "BIRIM_KODU": "BRM-023",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-024",
+      "ODA_ADI": "Oda 024",
+      "BIRIM_KODU": "BRM-024",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-025",
+      "ODA_ADI": "Oda 025",
+      "BIRIM_KODU": "BRM-025",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-026",
+      "ODA_ADI": "Oda 026",
+      "BIRIM_KODU": "BRM-026",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-027",
+      "ODA_ADI": "Oda 027",
+      "BIRIM_KODU": "BRM-027",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-028",
+      "ODA_ADI": "Oda 028",
+      "BIRIM_KODU": "BRM-028",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-029",
+      "ODA_ADI": "Oda 029",
+      "BIRIM_KODU": "BRM-029",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-030",
+      "ODA_ADI": "Oda 030",
+      "BIRIM_KODU": "BRM-030",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-031",
+      "ODA_ADI": "Oda 031",
+      "BIRIM_KODU": "BRM-031",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-032",
+      "ODA_ADI": "Oda 032",
+      "BIRIM_KODU": "BRM-032",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-033",
+      "ODA_ADI": "Oda 033",
+      "BIRIM_KODU": "BRM-033",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-034",
+      "ODA_ADI": "Oda 034",
+      "BIRIM_KODU": "BRM-034",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "ODA_KODU": "ODA-035",
+      "ODA_ADI": "Oda 035",
+      "BIRIM_KODU": "BRM-035",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "YATAK": [
+    {
+      "YATAK_KODU": "YTK-001",
+      "YATAK_ADI": "Yatak 001",
+      "ODA_KODU": "ODA-001",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-002",
+      "YATAK_ADI": "Yatak 002",
+      "ODA_KODU": "ODA-002",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-003",
+      "YATAK_ADI": "Yatak 003",
+      "ODA_KODU": "ODA-003",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-004",
+      "YATAK_ADI": "Yatak 004",
+      "ODA_KODU": "ODA-004",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-005",
+      "YATAK_ADI": "Yatak 005",
+      "ODA_KODU": "ODA-005",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-006",
+      "YATAK_ADI": "Yatak 006",
+      "ODA_KODU": "ODA-006",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-007",
+      "YATAK_ADI": "Yatak 007",
+      "ODA_KODU": "ODA-007",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-008",
+      "YATAK_ADI": "Yatak 008",
+      "ODA_KODU": "ODA-008",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-009",
+      "YATAK_ADI": "Yatak 009",
+      "ODA_KODU": "ODA-009",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-010",
+      "YATAK_ADI": "Yatak 010",
+      "ODA_KODU": "ODA-010",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-011",
+      "YATAK_ADI": "Yatak 011",
+      "ODA_KODU": "ODA-011",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-012",
+      "YATAK_ADI": "Yatak 012",
+      "ODA_KODU": "ODA-012",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-013",
+      "YATAK_ADI": "Yatak 013",
+      "ODA_KODU": "ODA-013",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-014",
+      "YATAK_ADI": "Yatak 014",
+      "ODA_KODU": "ODA-014",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-015",
+      "YATAK_ADI": "Yatak 015",
+      "ODA_KODU": "ODA-015",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-016",
+      "YATAK_ADI": "Yatak 016",
+      "ODA_KODU": "ODA-016",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-017",
+      "YATAK_ADI": "Yatak 017",
+      "ODA_KODU": "ODA-017",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-018",
+      "YATAK_ADI": "Yatak 018",
+      "ODA_KODU": "ODA-018",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-019",
+      "YATAK_ADI": "Yatak 019",
+      "ODA_KODU": "ODA-019",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-020",
+      "YATAK_ADI": "Yatak 020",
+      "ODA_KODU": "ODA-020",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-021",
+      "YATAK_ADI": "Yatak 021",
+      "ODA_KODU": "ODA-021",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-022",
+      "YATAK_ADI": "Yatak 022",
+      "ODA_KODU": "ODA-022",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-023",
+      "YATAK_ADI": "Yatak 023",
+      "ODA_KODU": "ODA-023",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-024",
+      "YATAK_ADI": "Yatak 024",
+      "ODA_KODU": "ODA-024",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-025",
+      "YATAK_ADI": "Yatak 025",
+      "ODA_KODU": "ODA-025",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-026",
+      "YATAK_ADI": "Yatak 026",
+      "ODA_KODU": "ODA-026",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-027",
+      "YATAK_ADI": "Yatak 027",
+      "ODA_KODU": "ODA-027",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-028",
+      "YATAK_ADI": "Yatak 028",
+      "ODA_KODU": "ODA-028",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-029",
+      "YATAK_ADI": "Yatak 029",
+      "ODA_KODU": "ODA-029",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-030",
+      "YATAK_ADI": "Yatak 030",
+      "ODA_KODU": "ODA-030",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-031",
+      "YATAK_ADI": "Yatak 031",
+      "ODA_KODU": "ODA-031",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-032",
+      "YATAK_ADI": "Yatak 032",
+      "ODA_KODU": "ODA-032",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-033",
+      "YATAK_ADI": "Yatak 033",
+      "ODA_KODU": "ODA-033",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-034",
+      "YATAK_ADI": "Yatak 034",
+      "ODA_KODU": "ODA-034",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "YATAK_KODU": "YTK-035",
+      "YATAK_ADI": "Yatak 035",
+      "ODA_KODU": "ODA-035",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "CIHAZ": [
+    {
+      "CIHAZ_KODU": "CHZ-001",
+      "CIHAZ_ADI": "Biyokimya Analizoru",
+      "CIHAZ_MARKASI": "Siemens",
+      "CIHAZ_MODELI": "BYK-1000",
+      "SERI_NUMARASI": "SN705397",
+      "BIRIM_KODU": "BRM-001",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-002",
+      "CIHAZ_ADI": "Hemogram Cihazi",
+      "CIHAZ_MARKASI": "Sysmex",
+      "CIHAZ_MODELI": "HEM-2000",
+      "SERI_NUMARASI": "SN301629",
+      "BIRIM_KODU": "BRM-002",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-003",
+      "CIHAZ_ADI": "Idrar Analizoru",
+      "CIHAZ_MARKASI": "Roche",
+      "CIHAZ_MODELI": "IDR-500",
+      "SERI_NUMARASI": "SN838797",
+      "BIRIM_KODU": "BRM-003",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-004",
+      "CIHAZ_ADI": "Rontgen Cihazi",
+      "CIHAZ_MARKASI": "GE",
+      "CIHAZ_MODELI": "RTG-3000",
+      "SERI_NUMARASI": "SN172933",
+      "BIRIM_KODU": "BRM-004",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-005",
+      "CIHAZ_ADI": "Ultrason Cihazi",
+      "CIHAZ_MARKASI": "Philips",
+      "CIHAZ_MODELI": "USG-4000",
+      "SERI_NUMARASI": "SN148050",
+      "BIRIM_KODU": "BRM-005",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-006",
+      "CIHAZ_ADI": "BT Cihazi",
+      "CIHAZ_MARKASI": "Toshiba",
+      "CIHAZ_MODELI": "CT-5000",
+      "SERI_NUMARASI": "SN793384",
+      "BIRIM_KODU": "BRM-006",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-007",
+      "CIHAZ_ADI": "MR Cihazi",
+      "CIHAZ_MARKASI": "Siemens",
+      "CIHAZ_MODELI": "MR-6000",
+      "SERI_NUMARASI": "SN338968",
+      "BIRIM_KODU": "BRM-007",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-008",
+      "CIHAZ_ADI": "Ventilator",
+      "CIHAZ_MARKASI": "Drager",
+      "CIHAZ_MODELI": "VNT-100",
+      "SERI_NUMARASI": "SN910620",
+      "BIRIM_KODU": "BRM-008",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-009",
+      "CIHAZ_ADI": "Monitor",
+      "CIHAZ_MARKASI": "Philips",
+      "CIHAZ_MODELI": "MON-200",
+      "SERI_NUMARASI": "SN403445",
+      "BIRIM_KODU": "BRM-009",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-010",
+      "CIHAZ_ADI": "EKG Cihazi",
+      "CIHAZ_MARKASI": "GE",
+      "CIHAZ_MODELI": "EKG-300",
+      "SERI_NUMARASI": "SN183667",
+      "BIRIM_KODU": "BRM-010",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-011",
+      "CIHAZ_ADI": "Defibrilator",
+      "CIHAZ_MARKASI": "Zoll",
+      "CIHAZ_MODELI": "DEF-400",
+      "SERI_NUMARASI": "SN996865",
+      "BIRIM_KODU": "BRM-011",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-012",
+      "CIHAZ_ADI": "Anestezi Cihazi",
+      "CIHAZ_MARKASI": "Drager",
+      "CIHAZ_MODELI": "ANS-500",
+      "SERI_NUMARASI": "SN344098",
+      "BIRIM_KODU": "BRM-012",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-013",
+      "CIHAZ_ADI": "Cihaz 13",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-013",
+      "SERI_NUMARASI": "SN205907",
+      "BIRIM_KODU": "BRM-013",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-014",
+      "CIHAZ_ADI": "Cihaz 14",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-014",
+      "SERI_NUMARASI": "SN498591",
+      "BIRIM_KODU": "BRM-014",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-015",
+      "CIHAZ_ADI": "Cihaz 15",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-015",
+      "SERI_NUMARASI": "SN391476",
+      "BIRIM_KODU": "BRM-015",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-016",
+      "CIHAZ_ADI": "Cihaz 16",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-016",
+      "SERI_NUMARASI": "SN575435",
+      "BIRIM_KODU": "BRM-016",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-017",
+      "CIHAZ_ADI": "Cihaz 17",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-017",
+      "SERI_NUMARASI": "SN766563",
+      "BIRIM_KODU": "BRM-017",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-018",
+      "CIHAZ_ADI": "Cihaz 18",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-018",
+      "SERI_NUMARASI": "SN974628",
+      "BIRIM_KODU": "BRM-018",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-019",
+      "CIHAZ_ADI": "Cihaz 19",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-019",
+      "SERI_NUMARASI": "SN482554",
+      "BIRIM_KODU": "BRM-019",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-020",
+      "CIHAZ_ADI": "Cihaz 20",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-020",
+      "SERI_NUMARASI": "SN270555",
+      "BIRIM_KODU": "BRM-020",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-021",
+      "CIHAZ_ADI": "Cihaz 21",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-021",
+      "SERI_NUMARASI": "SN488162",
+      "BIRIM_KODU": "BRM-021",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-022",
+      "CIHAZ_ADI": "Cihaz 22",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-022",
+      "SERI_NUMARASI": "SN472528",
+      "BIRIM_KODU": "BRM-022",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-023",
+      "CIHAZ_ADI": "Cihaz 23",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-023",
+      "SERI_NUMARASI": "SN319684",
+      "BIRIM_KODU": "BRM-023",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-024",
+      "CIHAZ_ADI": "Cihaz 24",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-024",
+      "SERI_NUMARASI": "SN802729",
+      "BIRIM_KODU": "BRM-024",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-025",
+      "CIHAZ_ADI": "Cihaz 25",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-025",
+      "SERI_NUMARASI": "SN379946",
+      "BIRIM_KODU": "BRM-025",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-026",
+      "CIHAZ_ADI": "Cihaz 26",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-026",
+      "SERI_NUMARASI": "SN835911",
+      "BIRIM_KODU": "BRM-026",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-027",
+      "CIHAZ_ADI": "Cihaz 27",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-027",
+      "SERI_NUMARASI": "SN816751",
+      "BIRIM_KODU": "BRM-027",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-028",
+      "CIHAZ_ADI": "Cihaz 28",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-028",
+      "SERI_NUMARASI": "SN779514",
+      "BIRIM_KODU": "BRM-028",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-029",
+      "CIHAZ_ADI": "Cihaz 29",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-029",
+      "SERI_NUMARASI": "SN174870",
+      "BIRIM_KODU": "BRM-029",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-030",
+      "CIHAZ_ADI": "Cihaz 30",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-030",
+      "SERI_NUMARASI": "SN738720",
+      "BIRIM_KODU": "BRM-030",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-031",
+      "CIHAZ_ADI": "Cihaz 31",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-031",
+      "SERI_NUMARASI": "SN765822",
+      "BIRIM_KODU": "BRM-031",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-032",
+      "CIHAZ_ADI": "Cihaz 32",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-032",
+      "SERI_NUMARASI": "SN279451",
+      "BIRIM_KODU": "BRM-032",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-033",
+      "CIHAZ_ADI": "Cihaz 33",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-033",
+      "SERI_NUMARASI": "SN660086",
+      "BIRIM_KODU": "BRM-033",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-034",
+      "CIHAZ_ADI": "Cihaz 34",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-034",
+      "SERI_NUMARASI": "SN864544",
+      "BIRIM_KODU": "BRM-034",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "CIHAZ_KODU": "CHZ-035",
+      "CIHAZ_ADI": "Cihaz 35",
+      "CIHAZ_MARKASI": "Generic",
+      "CIHAZ_MODELI": "GEN-035",
+      "SERI_NUMARASI": "SN356702",
+      "BIRIM_KODU": "BRM-035",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "DEPO": [
+    {
+      "DEPO_KODU": "DEP-001",
+      "DEPO_ADI": "Ana Ecza Deposu",
+      "DEPO_TURU": "DPO-ANA",
+      "BINA_KODU": "BNA-001",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-002",
+      "DEPO_ADI": "Laboratuvar Deposu",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-002",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-003",
+      "DEPO_ADI": "Radyoloji Deposu",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-003",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-004",
+      "DEPO_ADI": "Ameliyathane Deposu",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-004",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-005",
+      "DEPO_ADI": "Eczane",
+      "DEPO_TURU": "DPO-ECZ",
+      "BINA_KODU": "BNA-005",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-006",
+      "DEPO_ADI": "Depo 6",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-006",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-007",
+      "DEPO_ADI": "Depo 7",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-007",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-008",
+      "DEPO_ADI": "Depo 8",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-008",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-009",
+      "DEPO_ADI": "Depo 9",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-009",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-010",
+      "DEPO_ADI": "Depo 10",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-010",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-011",
+      "DEPO_ADI": "Depo 11",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-011",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-012",
+      "DEPO_ADI": "Depo 12",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-012",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-013",
+      "DEPO_ADI": "Depo 13",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-013",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-014",
+      "DEPO_ADI": "Depo 14",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-014",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-015",
+      "DEPO_ADI": "Depo 15",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-015",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-016",
+      "DEPO_ADI": "Depo 16",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-016",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-017",
+      "DEPO_ADI": "Depo 17",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-017",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-018",
+      "DEPO_ADI": "Depo 18",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-018",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-019",
+      "DEPO_ADI": "Depo 19",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-019",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-020",
+      "DEPO_ADI": "Depo 20",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-020",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-021",
+      "DEPO_ADI": "Depo 21",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-021",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-022",
+      "DEPO_ADI": "Depo 22",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-022",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-023",
+      "DEPO_ADI": "Depo 23",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-023",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-024",
+      "DEPO_ADI": "Depo 24",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-024",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-025",
+      "DEPO_ADI": "Depo 25",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-025",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-026",
+      "DEPO_ADI": "Depo 26",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-026",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-027",
+      "DEPO_ADI": "Depo 27",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-027",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-028",
+      "DEPO_ADI": "Depo 28",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-028",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-029",
+      "DEPO_ADI": "Depo 29",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-029",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-030",
+      "DEPO_ADI": "Depo 30",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-030",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-031",
+      "DEPO_ADI": "Depo 31",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-031",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-032",
+      "DEPO_ADI": "Depo 32",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-032",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-033",
+      "DEPO_ADI": "Depo 33",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-033",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-034",
+      "DEPO_ADI": "Depo 34",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-034",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "DEPO_KODU": "DEP-035",
+      "DEPO_ADI": "Depo 35",
+      "DEPO_TURU": "DPO-BRM",
+      "BINA_KODU": "BNA-035",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "STOK_KART": [
+    {
+      "STOK_KART_KODU": "STK-001",
+      "MALZEME_ADI": "Parasetamol 500mg",
+      "BARKOD": "8695996775663",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-002",
+      "MALZEME_ADI": "Ibuprofen 400mg",
+      "BARKOD": "8696924716023",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-003",
+      "MALZEME_ADI": "Amoksisilin 500mg",
+      "BARKOD": "8693392080953",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-004",
+      "MALZEME_ADI": "Metformin 850mg",
+      "BARKOD": "8698235363119",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-005",
+      "MALZEME_ADI": "Omeprazol 20mg",
+      "BARKOD": "8694332894265",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-006",
+      "MALZEME_ADI": "Aspirin 100mg",
+      "BARKOD": "8696649827836",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-007",
+      "MALZEME_ADI": "Serum Fizyolojik",
+      "BARKOD": "8692149938334",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-008",
+      "MALZEME_ADI": "Enjektor 5ml",
+      "BARKOD": "8692351531223",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-009",
+      "MALZEME_ADI": "Eldiven M",
+      "BARKOD": "8698110054933",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-010",
+      "MALZEME_ADI": "Gazli Bez",
+      "BARKOD": "8692970753705",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-011",
+      "MALZEME_ADI": "Flaster",
+      "BARKOD": "8692137651678",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-012",
+      "MALZEME_ADI": "Igne",
+      "BARKOD": "8697805745017",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-013",
+      "MALZEME_ADI": "Urun 13",
+      "BARKOD": "8697010379415",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-014",
+      "MALZEME_ADI": "Urun 14",
+      "BARKOD": "8695284391408",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-015",
+      "MALZEME_ADI": "Urun 15",
+      "BARKOD": "8697483366056",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-016",
+      "MALZEME_ADI": "Urun 16",
+      "BARKOD": "8691470939445",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-017",
+      "MALZEME_ADI": "Urun 17",
+      "BARKOD": "8693694860228",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-018",
+      "MALZEME_ADI": "Urun 18",
+      "BARKOD": "8695567816720",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-019",
+      "MALZEME_ADI": "Urun 19",
+      "BARKOD": "8699573276057",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-020",
+      "MALZEME_ADI": "Urun 20",
+      "BARKOD": "8697567496105",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-021",
+      "MALZEME_ADI": "Urun 21",
+      "BARKOD": "8699639245200",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-022",
+      "MALZEME_ADI": "Urun 22",
+      "BARKOD": "8694095476665",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-023",
+      "MALZEME_ADI": "Urun 23",
+      "BARKOD": "8698047877267",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-024",
+      "MALZEME_ADI": "Urun 24",
+      "BARKOD": "8695774080233",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-025",
+      "MALZEME_ADI": "Urun 25",
+      "BARKOD": "8692867302554",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-026",
+      "MALZEME_ADI": "Urun 26",
+      "BARKOD": "8692948728483",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-027",
+      "MALZEME_ADI": "Urun 27",
+      "BARKOD": "8694919706735",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-028",
+      "MALZEME_ADI": "Urun 28",
+      "BARKOD": "8693615507143",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-029",
+      "MALZEME_ADI": "Urun 29",
+      "BARKOD": "8695951406973",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-030",
+      "MALZEME_ADI": "Urun 30",
+      "BARKOD": "8694274958945",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-031",
+      "MALZEME_ADI": "Urun 31",
+      "BARKOD": "8699592390865",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-032",
+      "MALZEME_ADI": "Urun 32",
+      "BARKOD": "8696687206971",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-033",
+      "MALZEME_ADI": "Urun 33",
+      "BARKOD": "8691083651970",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-034",
+      "MALZEME_ADI": "Urun 34",
+      "BARKOD": "8699285415473",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "STOK_KART_KODU": "STK-035",
+      "MALZEME_ADI": "Urun 35",
+      "BARKOD": "8692320763135",
+      "AKTIF": 1,
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "FIRMA": [
+    {
+      "FIRMA_KODU": "FRM-001",
+      "FIRMA_ADI": "Medikal Tedarik AS",
+      "TELEFON_NUMARASI": "05315041154",
+      "YETKILI_KISI": "Ozge Demir",
+      "FIRMA_ADRESI": "Ankara",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Gaziantep VD",
+      "VERGI_NUMARASI": "4504793184",
+      "EPOSTA_ADRESI": "info1@firma1.com",
+      "IBAN_NUMARASI": "TR78306033238134459824",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-002",
+      "FIRMA_ADI": "Saglik Malzemeleri Ltd",
+      "TELEFON_NUMARASI": "05389852897",
+      "YETKILI_KISI": "Asli Aslan",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Mersin VD",
+      "VERGI_NUMARASI": "3962958940",
+      "EPOSTA_ADRESI": "info2@firma2.com",
+      "IBAN_NUMARASI": "TR49753762556011038862",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-003",
+      "FIRMA_ADI": "Laboratuvar Sistemleri AS",
+      "TELEFON_NUMARASI": "05449683481",
+      "YETKILI_KISI": "Busra Celik",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Bursa VD",
+      "VERGI_NUMARASI": "5569956444",
+      "EPOSTA_ADRESI": "info3@firma3.com",
+      "IBAN_NUMARASI": "TR12477040995011338994",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-004",
+      "FIRMA_ADI": "Tibbi Cihaz Tic AS",
+      "TELEFON_NUMARASI": "05302191066",
+      "YETKILI_KISI": "Ali Ozturk",
+      "FIRMA_ADRESI": "Ankara",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Istanbul VD",
+      "VERGI_NUMARASI": "8987073217",
+      "EPOSTA_ADRESI": "info4@firma4.com",
+      "IBAN_NUMARASI": "TR19942349192598798125",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-005",
+      "FIRMA_ADI": "Ecza Deposu Ltd",
+      "TELEFON_NUMARASI": "05519143903",
+      "YETKILI_KISI": "Yusuf Ozkan",
+      "FIRMA_ADRESI": "Izmir",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Diyarbakir VD",
+      "VERGI_NUMARASI": "7769777475",
+      "EPOSTA_ADRESI": "info5@firma5.com",
+      "IBAN_NUMARASI": "TR41874967289741967261",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-006",
+      "FIRMA_ADI": "Goruntuleme Teknolojileri",
+      "TELEFON_NUMARASI": "05362582524",
+      "YETKILI_KISI": "Ibrahim Aslan",
+      "FIRMA_ADRESI": "Adana",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Konya VD",
+      "VERGI_NUMARASI": "7060638140",
+      "EPOSTA_ADRESI": "info6@firma6.com",
+      "IBAN_NUMARASI": "TR16261266663763865583",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-007",
+      "FIRMA_ADI": "Cerrahi Aletler Ltd",
+      "TELEFON_NUMARASI": "05536692553",
+      "YETKILI_KISI": "Ibrahim Ozturk",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Bursa VD",
+      "VERGI_NUMARASI": "7598297060",
+      "EPOSTA_ADRESI": "info7@firma7.com",
+      "IBAN_NUMARASI": "TR27791249200954585718",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-008",
+      "FIRMA_ADI": "Protez Malzemeleri AS",
+      "TELEFON_NUMARASI": "05445191056",
+      "YETKILI_KISI": "Huseyin Cetin",
+      "FIRMA_ADRESI": "Mersin",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Ankara VD",
+      "VERGI_NUMARASI": "9807209816",
+      "EPOSTA_ADRESI": "info8@firma8.com",
+      "IBAN_NUMARASI": "TR79124123129581863811",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-009",
+      "FIRMA_ADI": "Biyomedikal Cozumler",
+      "TELEFON_NUMARASI": "05594965789",
+      "YETKILI_KISI": "Fatih Aslan",
+      "FIRMA_ADRESI": "Gaziantep",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Gaziantep VD",
+      "VERGI_NUMARASI": "1251837136",
+      "EPOSTA_ADRESI": "info9@firma9.com",
+      "IBAN_NUMARASI": "TR58103564949748486984",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-010",
+      "FIRMA_ADI": "Firma 10",
+      "TELEFON_NUMARASI": "05388633773",
+      "YETKILI_KISI": "Onur Aslan",
+      "FIRMA_ADRESI": "Mersin",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Gaziantep VD",
+      "VERGI_NUMARASI": "1664847319",
+      "EPOSTA_ADRESI": "info10@firma10.com",
+      "IBAN_NUMARASI": "TR47456618233317914182",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-011",
+      "FIRMA_ADI": "Firma 11",
+      "TELEFON_NUMARASI": "05482022698",
+      "YETKILI_KISI": "Fatma Kaya",
+      "FIRMA_ADRESI": "Istanbul",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Diyarbakir VD",
+      "VERGI_NUMARASI": "3281169403",
+      "EPOSTA_ADRESI": "info11@firma11.com",
+      "IBAN_NUMARASI": "TR17932019642999691670",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-012",
+      "FIRMA_ADI": "Firma 12",
+      "TELEFON_NUMARASI": "05492140194",
+      "YETKILI_KISI": "Cem Kilic",
+      "FIRMA_ADRESI": "Ankara",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Diyarbakir VD",
+      "VERGI_NUMARASI": "3553440342",
+      "EPOSTA_ADRESI": "info12@firma12.com",
+      "IBAN_NUMARASI": "TR89234389549596142604",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-013",
+      "FIRMA_ADI": "Firma 13",
+      "TELEFON_NUMARASI": "05466307805",
+      "YETKILI_KISI": "Tolga Yildirim",
+      "FIRMA_ADRESI": "Adana",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Bursa VD",
+      "VERGI_NUMARASI": "6435772945",
+      "EPOSTA_ADRESI": "info13@firma13.com",
+      "IBAN_NUMARASI": "TR26591554497824951157",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-014",
+      "FIRMA_ADI": "Firma 14",
+      "TELEFON_NUMARASI": "05592217071",
+      "YETKILI_KISI": "Ahmet Cetin",
+      "FIRMA_ADRESI": "Diyarbakir",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Diyarbakir VD",
+      "VERGI_NUMARASI": "5278201677",
+      "EPOSTA_ADRESI": "info14@firma14.com",
+      "IBAN_NUMARASI": "TR19980881194293389291",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-015",
+      "FIRMA_ADI": "Firma 15",
+      "TELEFON_NUMARASI": "05383222252",
+      "YETKILI_KISI": "Emine Demir",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Adana VD",
+      "VERGI_NUMARASI": "2224011538",
+      "EPOSTA_ADRESI": "info15@firma15.com",
+      "IBAN_NUMARASI": "TR66990052574737518915",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-016",
+      "FIRMA_ADI": "Firma 16",
+      "TELEFON_NUMARASI": "05499874152",
+      "YETKILI_KISI": "Ahmet Ozkan",
+      "FIRMA_ADRESI": "Antalya",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Ankara VD",
+      "VERGI_NUMARASI": "5871743247",
+      "EPOSTA_ADRESI": "info16@firma16.com",
+      "IBAN_NUMARASI": "TR24275387862355797275",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-017",
+      "FIRMA_ADI": "Firma 17",
+      "TELEFON_NUMARASI": "05345569244",
+      "YETKILI_KISI": "Onur Polat",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Adana VD",
+      "VERGI_NUMARASI": "7393195616",
+      "EPOSTA_ADRESI": "info17@firma17.com",
+      "IBAN_NUMARASI": "TR16251269612575332131",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-018",
+      "FIRMA_ADI": "Firma 18",
+      "TELEFON_NUMARASI": "05565641923",
+      "YETKILI_KISI": "Mustafa Yilmaz",
+      "FIRMA_ADRESI": "Adana",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Izmir VD",
+      "VERGI_NUMARASI": "2125089309",
+      "EPOSTA_ADRESI": "info18@firma18.com",
+      "IBAN_NUMARASI": "TR66800711359618742192",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-019",
+      "FIRMA_ADI": "Firma 19",
+      "TELEFON_NUMARASI": "05332262382",
+      "YETKILI_KISI": "Omer Ozkan",
+      "FIRMA_ADRESI": "Istanbul",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Adana VD",
+      "VERGI_NUMARASI": "5931025271",
+      "EPOSTA_ADRESI": "info19@firma19.com",
+      "IBAN_NUMARASI": "TR26168561317593212135",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-020",
+      "FIRMA_ADI": "Firma 20",
+      "TELEFON_NUMARASI": "05581669324",
+      "YETKILI_KISI": "Emine Yildirim",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Ankara VD",
+      "VERGI_NUMARASI": "9051829827",
+      "EPOSTA_ADRESI": "info20@firma20.com",
+      "IBAN_NUMARASI": "TR89353213489284235375",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-021",
+      "FIRMA_ADI": "Firma 21",
+      "TELEFON_NUMARASI": "05356573147",
+      "YETKILI_KISI": "Zehra Ozturk",
+      "FIRMA_ADRESI": "Antalya",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Izmir VD",
+      "VERGI_NUMARASI": "5759234471",
+      "EPOSTA_ADRESI": "info21@firma21.com",
+      "IBAN_NUMARASI": "TR14871138085746494081",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-022",
+      "FIRMA_ADI": "Firma 22",
+      "TELEFON_NUMARASI": "05568722606",
+      "YETKILI_KISI": "Emine Ozdemir",
+      "FIRMA_ADRESI": "Bursa",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Bursa VD",
+      "VERGI_NUMARASI": "9691572571",
+      "EPOSTA_ADRESI": "info22@firma22.com",
+      "IBAN_NUMARASI": "TR34752849210166319532",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-023",
+      "FIRMA_ADI": "Firma 23",
+      "TELEFON_NUMARASI": "05572164686",
+      "YETKILI_KISI": "Serkan Dogan",
+      "FIRMA_ADRESI": "Mersin",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Konya VD",
+      "VERGI_NUMARASI": "1118543408",
+      "EPOSTA_ADRESI": "info23@firma23.com",
+      "IBAN_NUMARASI": "TR43392547361849858170",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-024",
+      "FIRMA_ADI": "Firma 24",
+      "TELEFON_NUMARASI": "05312818692",
+      "YETKILI_KISI": "Asli Aslan",
+      "FIRMA_ADRESI": "Adana",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Adana VD",
+      "VERGI_NUMARASI": "5791662169",
+      "EPOSTA_ADRESI": "info24@firma24.com",
+      "IBAN_NUMARASI": "TR83411416245976473228",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-025",
+      "FIRMA_ADI": "Firma 25",
+      "TELEFON_NUMARASI": "05528315831",
+      "YETKILI_KISI": "Ahmet Kurt",
+      "FIRMA_ADRESI": "Mersin",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Bursa VD",
+      "VERGI_NUMARASI": "6859286614",
+      "EPOSTA_ADRESI": "info25@firma25.com",
+      "IBAN_NUMARASI": "TR18640954180710038759",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-026",
+      "FIRMA_ADI": "Firma 26",
+      "TELEFON_NUMARASI": "05513090865",
+      "YETKILI_KISI": "Baris Kurt",
+      "FIRMA_ADRESI": "Antalya",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Konya VD",
+      "VERGI_NUMARASI": "6695912196",
+      "EPOSTA_ADRESI": "info26@firma26.com",
+      "IBAN_NUMARASI": "TR99584427912394807803",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-027",
+      "FIRMA_ADI": "Firma 27",
+      "TELEFON_NUMARASI": "05368053918",
+      "YETKILI_KISI": "Zeynep Yildiz",
+      "FIRMA_ADRESI": "Diyarbakir",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Diyarbakir VD",
+      "VERGI_NUMARASI": "6587537178",
+      "EPOSTA_ADRESI": "info27@firma27.com",
+      "IBAN_NUMARASI": "TR80100650378292682679",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-028",
+      "FIRMA_ADI": "Firma 28",
+      "TELEFON_NUMARASI": "05368212326",
+      "YETKILI_KISI": "Pinar Polat",
+      "FIRMA_ADRESI": "Adana",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Gaziantep VD",
+      "VERGI_NUMARASI": "7192423780",
+      "EPOSTA_ADRESI": "info28@firma28.com",
+      "IBAN_NUMARASI": "TR96450176595663400078",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-029",
+      "FIRMA_ADI": "Firma 29",
+      "TELEFON_NUMARASI": "05553846949",
+      "YETKILI_KISI": "Hasan Ozdemir",
+      "FIRMA_ADRESI": "Mersin",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Diyarbakir VD",
+      "VERGI_NUMARASI": "2439622619",
+      "EPOSTA_ADRESI": "info29@firma29.com",
+      "IBAN_NUMARASI": "TR40608530736957361640",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-030",
+      "FIRMA_ADI": "Firma 30",
+      "TELEFON_NUMARASI": "05301775337",
+      "YETKILI_KISI": "Cem Koc",
+      "FIRMA_ADRESI": "Diyarbakir",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Ankara VD",
+      "VERGI_NUMARASI": "7250964836",
+      "EPOSTA_ADRESI": "info30@firma30.com",
+      "IBAN_NUMARASI": "TR90418579575824402870",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-031",
+      "FIRMA_ADI": "Firma 31",
+      "TELEFON_NUMARASI": "05425093379",
+      "YETKILI_KISI": "Omer Yilmaz",
+      "FIRMA_ADRESI": "Ankara",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Konya VD",
+      "VERGI_NUMARASI": "1939915527",
+      "EPOSTA_ADRESI": "info31@firma31.com",
+      "IBAN_NUMARASI": "TR99948617067216428502",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-032",
+      "FIRMA_ADI": "Firma 32",
+      "TELEFON_NUMARASI": "05475180853",
+      "YETKILI_KISI": "Osman Cetin",
+      "FIRMA_ADRESI": "Izmir",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Gaziantep VD",
+      "VERGI_NUMARASI": "7852415525",
+      "EPOSTA_ADRESI": "info32@firma32.com",
+      "IBAN_NUMARASI": "TR66927087107147809209",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-033",
+      "FIRMA_ADI": "Firma 33",
+      "TELEFON_NUMARASI": "05443670226",
+      "YETKILI_KISI": "Derya Cetin",
+      "FIRMA_ADRESI": "Antalya",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Bursa VD",
+      "VERGI_NUMARASI": "6322520473",
+      "EPOSTA_ADRESI": "info33@firma33.com",
+      "IBAN_NUMARASI": "TR66226950212548477019",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-034",
+      "FIRMA_ADI": "Firma 34",
+      "TELEFON_NUMARASI": "05375558623",
+      "YETKILI_KISI": "Ayse Arslan",
+      "FIRMA_ADRESI": "Mersin",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Ankara VD",
+      "VERGI_NUMARASI": "1594312071",
+      "EPOSTA_ADRESI": "info34@firma34.com",
+      "IBAN_NUMARASI": "TR39727531507881742833",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "FIRMA_KODU": "FRM-035",
+      "FIRMA_ADI": "Firma 35",
+      "TELEFON_NUMARASI": "05524589533",
+      "YETKILI_KISI": "Huseyin Aslan",
+      "FIRMA_ADRESI": "Konya",
+      "AKTIFLIK_BILGISI": "1",
+      "VERGI_DAIRESI": "Adana VD",
+      "VERGI_NUMARASI": "7625464411",
+      "EPOSTA_ADRESI": "info35@firma35.com",
+      "IBAN_NUMARASI": "TR63202064814177134239",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "HIZMET": [
+    {
+      "HIZMET_KODU": "HZM-TTK-001",
+      "HIZMET_ADI": "Hemogram",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-TTK-002",
+      "HIZMET_ADI": "Biyokimya Panel",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-TTK-003",
+      "HIZMET_ADI": "Idrar Tahlili",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-MYN-001",
+      "HIZMET_ADI": "Poliklinik Muayenesi",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-MYN-002",
+      "HIZMET_ADI": "Acil Muayene",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-GRN-001",
+      "HIZMET_ADI": "Direkt Rontgen",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-GRN-002",
+      "HIZMET_ADI": "Ultrasonografi",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-GRN-003",
+      "HIZMET_ADI": "BT",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-GRN-004",
+      "HIZMET_ADI": "MR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-AML-001",
+      "HIZMET_ADI": "Ameliyat Hizmeti",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-011",
+      "HIZMET_ADI": "Hizmet 11",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-012",
+      "HIZMET_ADI": "Hizmet 12",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-013",
+      "HIZMET_ADI": "Hizmet 13",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-014",
+      "HIZMET_ADI": "Hizmet 14",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-015",
+      "HIZMET_ADI": "Hizmet 15",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-016",
+      "HIZMET_ADI": "Hizmet 16",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-017",
+      "HIZMET_ADI": "Hizmet 17",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-018",
+      "HIZMET_ADI": "Hizmet 18",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-019",
+      "HIZMET_ADI": "Hizmet 19",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-020",
+      "HIZMET_ADI": "Hizmet 20",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-021",
+      "HIZMET_ADI": "Hizmet 21",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-022",
+      "HIZMET_ADI": "Hizmet 22",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-023",
+      "HIZMET_ADI": "Hizmet 23",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-024",
+      "HIZMET_ADI": "Hizmet 24",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-025",
+      "HIZMET_ADI": "Hizmet 25",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-026",
+      "HIZMET_ADI": "Hizmet 26",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-027",
+      "HIZMET_ADI": "Hizmet 27",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-028",
+      "HIZMET_ADI": "Hizmet 28",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-029",
+      "HIZMET_ADI": "Hizmet 29",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-030",
+      "HIZMET_ADI": "Hizmet 30",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-031",
+      "HIZMET_ADI": "Hizmet 31",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-032",
+      "HIZMET_ADI": "Hizmet 32",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-033",
+      "HIZMET_ADI": "Hizmet 33",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-034",
+      "HIZMET_ADI": "Hizmet 34",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HIZMET_KODU": "HZM-035",
+      "HIZMET_ADI": "Hizmet 35",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "PERSONEL": [
+    {
+      "PERSONEL_KODU": "PRS-001",
+      "AD": "Onur",
+      "TC_KIMLIK_NUMARASI": "12048612358",
+      "SOYADI": "Kilic",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-002",
+      "AD": "Sibel",
+      "TC_KIMLIK_NUMARASI": "86169673298",
+      "SOYADI": "Aslan",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-003",
+      "AD": "Cem",
+      "TC_KIMLIK_NUMARASI": "67006823094",
+      "SOYADI": "Ozturk",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-TKN",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-004",
+      "AD": "Burak",
+      "TC_KIMLIK_NUMARASI": "64967602742",
+      "SOYADI": "Arslan",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-005",
+      "AD": "Zeynep",
+      "TC_KIMLIK_NUMARASI": "12294043548",
+      "SOYADI": "Polat",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-TKN",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-006",
+      "AD": "Mustafa",
+      "TC_KIMLIK_NUMARASI": "33457816221",
+      "SOYADI": "Aslan",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-UZM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-007",
+      "AD": "Sibel",
+      "TC_KIMLIK_NUMARASI": "71038616156",
+      "SOYADI": "Arslan",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-008",
+      "AD": "Sibel",
+      "TC_KIMLIK_NUMARASI": "69407662450",
+      "SOYADI": "Aydin",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-009",
+      "AD": "Cem",
+      "TC_KIMLIK_NUMARASI": "86231478728",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-UZM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-010",
+      "AD": "Merve",
+      "TC_KIMLIK_NUMARASI": "17094232227",
+      "SOYADI": "Demir",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-UZM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-011",
+      "AD": "Ibrahim",
+      "TC_KIMLIK_NUMARASI": "29848485517",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-012",
+      "AD": "Cem",
+      "TC_KIMLIK_NUMARASI": "71065692731",
+      "SOYADI": "Celik",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-013",
+      "AD": "Elif",
+      "TC_KIMLIK_NUMARASI": "34993708224",
+      "SOYADI": "Polat",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-014",
+      "AD": "Onur",
+      "TC_KIMLIK_NUMARASI": "52644245686",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-015",
+      "AD": "Sibel",
+      "TC_KIMLIK_NUMARASI": "87635813702",
+      "SOYADI": "Yildirim",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-016",
+      "AD": "Omer",
+      "TC_KIMLIK_NUMARASI": "26344618159",
+      "SOYADI": "Polat",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-017",
+      "AD": "Emre",
+      "TC_KIMLIK_NUMARASI": "20181524415",
+      "SOYADI": "Ozkan",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-018",
+      "AD": "Fatma",
+      "TC_KIMLIK_NUMARASI": "77956393836",
+      "SOYADI": "Aslan",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-UZM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-019",
+      "AD": "Esra",
+      "TC_KIMLIK_NUMARASI": "30217736696",
+      "SOYADI": "Cetin",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-TKN",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-020",
+      "AD": "Tolga",
+      "TC_KIMLIK_NUMARASI": "86964171798",
+      "SOYADI": "Aydin",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-TKN",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-021",
+      "AD": "Gul",
+      "TC_KIMLIK_NUMARASI": "54102423031",
+      "SOYADI": "Simsek",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-022",
+      "AD": "Murat",
+      "TC_KIMLIK_NUMARASI": "89305318997",
+      "SOYADI": "Cetin",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-023",
+      "AD": "Derya",
+      "TC_KIMLIK_NUMARASI": "32870761702",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-TKN",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-024",
+      "AD": "Emre",
+      "TC_KIMLIK_NUMARASI": "45821482566",
+      "SOYADI": "Aydin",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-025",
+      "AD": "Pinar",
+      "TC_KIMLIK_NUMARASI": "19410515698",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-026",
+      "AD": "Deniz",
+      "TC_KIMLIK_NUMARASI": "43321063465",
+      "SOYADI": "Ozkan",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-TKN",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-027",
+      "AD": "Nur",
+      "TC_KIMLIK_NUMARASI": "49054366766",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-028",
+      "AD": "Merve",
+      "TC_KIMLIK_NUMARASI": "90161097906",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-029",
+      "AD": "Pinar",
+      "TC_KIMLIK_NUMARASI": "67311001602",
+      "SOYADI": "Kurt",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-030",
+      "AD": "Esra",
+      "TC_KIMLIK_NUMARASI": "49818282850",
+      "SOYADI": "Cetin",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-031",
+      "AD": "Ali",
+      "TC_KIMLIK_NUMARASI": "24240169990",
+      "SOYADI": "Yildirim",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-IDR",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-032",
+      "AD": "Ibrahim",
+      "TC_KIMLIK_NUMARASI": "77596792264",
+      "SOYADI": "Yildirim",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-033",
+      "AD": "Hatice",
+      "TC_KIMLIK_NUMARASI": "41337139942",
+      "SOYADI": "Yildirim",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-HEM",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-034",
+      "AD": "Omer",
+      "TC_KIMLIK_NUMARASI": "86055360270",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-E",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "PERSONEL_KODU": "PRS-035",
+      "AD": "Ayse",
+      "TC_KIMLIK_NUMARASI": "51031364324",
+      "SOYADI": "Kaya",
+      "CINSIYET": "CNS-K",
+      "UNVAN_KODU": "UNV-ASS",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "KULLANICI": [
+    {
+      "KULLANICI_KODU": "KLN-ADMIN",
+      "KULLANICI_ADI": "admin",
+      "AD": "Admin",
+      "SOYADI": "User",
+      "AKTIFLIK_BILGISI": "1",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-001",
+      "PERSONEL_KODU": "PRS-001",
+      "KULLANICI_ADI": "onur.kilic",
+      "AD": "Onur",
+      "SOYADI": "Kilic",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-002",
+      "PERSONEL_KODU": "PRS-002",
+      "KULLANICI_ADI": "sibel.aslan",
+      "AD": "Sibel",
+      "SOYADI": "Aslan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-003",
+      "PERSONEL_KODU": "PRS-003",
+      "KULLANICI_ADI": "cem.ozturk",
+      "AD": "Cem",
+      "SOYADI": "Ozturk",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-004",
+      "PERSONEL_KODU": "PRS-004",
+      "KULLANICI_ADI": "burak.arslan",
+      "AD": "Burak",
+      "SOYADI": "Arslan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-005",
+      "PERSONEL_KODU": "PRS-005",
+      "KULLANICI_ADI": "zeynep.polat",
+      "AD": "Zeynep",
+      "SOYADI": "Polat",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-006",
+      "PERSONEL_KODU": "PRS-006",
+      "KULLANICI_ADI": "mustafa.aslan",
+      "AD": "Mustafa",
+      "SOYADI": "Aslan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-007",
+      "PERSONEL_KODU": "PRS-007",
+      "KULLANICI_ADI": "sibel.arslan",
+      "AD": "Sibel",
+      "SOYADI": "Arslan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-008",
+      "PERSONEL_KODU": "PRS-008",
+      "KULLANICI_ADI": "sibel.aydin",
+      "AD": "Sibel",
+      "SOYADI": "Aydin",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-009",
+      "PERSONEL_KODU": "PRS-009",
+      "KULLANICI_ADI": "cem.yilmaz",
+      "AD": "Cem",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-010",
+      "PERSONEL_KODU": "PRS-010",
+      "KULLANICI_ADI": "merve.demir",
+      "AD": "Merve",
+      "SOYADI": "Demir",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-011",
+      "PERSONEL_KODU": "PRS-011",
+      "KULLANICI_ADI": "ibrahim.yilmaz",
+      "AD": "Ibrahim",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-012",
+      "PERSONEL_KODU": "PRS-012",
+      "KULLANICI_ADI": "cem.celik",
+      "AD": "Cem",
+      "SOYADI": "Celik",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-013",
+      "PERSONEL_KODU": "PRS-013",
+      "KULLANICI_ADI": "elif.polat",
+      "AD": "Elif",
+      "SOYADI": "Polat",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-014",
+      "PERSONEL_KODU": "PRS-014",
+      "KULLANICI_ADI": "onur.yilmaz",
+      "AD": "Onur",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-015",
+      "PERSONEL_KODU": "PRS-015",
+      "KULLANICI_ADI": "sibel.yildirim",
+      "AD": "Sibel",
+      "SOYADI": "Yildirim",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-016",
+      "PERSONEL_KODU": "PRS-016",
+      "KULLANICI_ADI": "omer.polat",
+      "AD": "Omer",
+      "SOYADI": "Polat",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-017",
+      "PERSONEL_KODU": "PRS-017",
+      "KULLANICI_ADI": "emre.ozkan",
+      "AD": "Emre",
+      "SOYADI": "Ozkan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-018",
+      "PERSONEL_KODU": "PRS-018",
+      "KULLANICI_ADI": "fatma.aslan",
+      "AD": "Fatma",
+      "SOYADI": "Aslan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-019",
+      "PERSONEL_KODU": "PRS-019",
+      "KULLANICI_ADI": "esra.cetin",
+      "AD": "Esra",
+      "SOYADI": "Cetin",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-020",
+      "PERSONEL_KODU": "PRS-020",
+      "KULLANICI_ADI": "tolga.aydin",
+      "AD": "Tolga",
+      "SOYADI": "Aydin",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-021",
+      "PERSONEL_KODU": "PRS-021",
+      "KULLANICI_ADI": "gul.simsek",
+      "AD": "Gul",
+      "SOYADI": "Simsek",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-022",
+      "PERSONEL_KODU": "PRS-022",
+      "KULLANICI_ADI": "murat.cetin",
+      "AD": "Murat",
+      "SOYADI": "Cetin",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-023",
+      "PERSONEL_KODU": "PRS-023",
+      "KULLANICI_ADI": "derya.yilmaz",
+      "AD": "Derya",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-024",
+      "PERSONEL_KODU": "PRS-024",
+      "KULLANICI_ADI": "emre.aydin",
+      "AD": "Emre",
+      "SOYADI": "Aydin",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-025",
+      "PERSONEL_KODU": "PRS-025",
+      "KULLANICI_ADI": "pinar.yilmaz",
+      "AD": "Pinar",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-026",
+      "PERSONEL_KODU": "PRS-026",
+      "KULLANICI_ADI": "deniz.ozkan",
+      "AD": "Deniz",
+      "SOYADI": "Ozkan",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-027",
+      "PERSONEL_KODU": "PRS-027",
+      "KULLANICI_ADI": "nur.yilmaz",
+      "AD": "Nur",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-028",
+      "PERSONEL_KODU": "PRS-028",
+      "KULLANICI_ADI": "merve.ozdemir",
+      "AD": "Merve",
+      "SOYADI": "Ozdemir",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-029",
+      "PERSONEL_KODU": "PRS-029",
+      "KULLANICI_ADI": "pinar.kurt",
+      "AD": "Pinar",
+      "SOYADI": "Kurt",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-030",
+      "PERSONEL_KODU": "PRS-030",
+      "KULLANICI_ADI": "esra.cetin",
+      "AD": "Esra",
+      "SOYADI": "Cetin",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-031",
+      "PERSONEL_KODU": "PRS-031",
+      "KULLANICI_ADI": "ali.yildirim",
+      "AD": "Ali",
+      "SOYADI": "Yildirim",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-032",
+      "PERSONEL_KODU": "PRS-032",
+      "KULLANICI_ADI": "ibrahim.yildirim",
+      "AD": "Ibrahim",
+      "SOYADI": "Yildirim",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-033",
+      "PERSONEL_KODU": "PRS-033",
+      "KULLANICI_ADI": "hatice.yildirim",
+      "AD": "Hatice",
+      "SOYADI": "Yildirim",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-034",
+      "PERSONEL_KODU": "PRS-034",
+      "KULLANICI_ADI": "omer.yilmaz",
+      "AD": "Omer",
+      "SOYADI": "Yilmaz",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "KULLANICI_KODU": "KLN-035",
+      "PERSONEL_KODU": "PRS-035",
+      "KULLANICI_ADI": "ayse.kaya",
+      "AD": "Ayse",
+      "SOYADI": "Kaya",
+      "AKTIFLIK_BILGISI": "1",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "TETKIK": [
+    {
+      "TETKIK_KODU": "TTK-HEM-001",
+      "TETKIK_ADI": "Hemoglobin",
+      "LOINC_KODU": "718-7",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-HEM-002",
+      "TETKIK_ADI": "Hematokrit",
+      "LOINC_KODU": "4544-3",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-HEM-003",
+      "TETKIK_ADI": "Lokosit",
+      "LOINC_KODU": "6690-2",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-HEM-004",
+      "TETKIK_ADI": "Trombosit",
+      "LOINC_KODU": "777-3",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-BYO-001",
+      "TETKIK_ADI": "Glukoz",
+      "LOINC_KODU": "2345-7",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-BYO-002",
+      "TETKIK_ADI": "Ure",
+      "LOINC_KODU": "3094-0",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-BYO-003",
+      "TETKIK_ADI": "Kreatinin",
+      "LOINC_KODU": "2160-0",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-BYO-004",
+      "TETKIK_ADI": "AST",
+      "LOINC_KODU": "1920-8",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-BYO-005",
+      "TETKIK_ADI": "ALT",
+      "LOINC_KODU": "1742-6",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-IDR-001",
+      "TETKIK_ADI": "Idrar pH",
+      "LOINC_KODU": "2756-5",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-011",
+      "TETKIK_ADI": "Tetkik 11",
+      "LOINC_KODU": "LOINC-11",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-012",
+      "TETKIK_ADI": "Tetkik 12",
+      "LOINC_KODU": "LOINC-12",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-013",
+      "TETKIK_ADI": "Tetkik 13",
+      "LOINC_KODU": "LOINC-13",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-014",
+      "TETKIK_ADI": "Tetkik 14",
+      "LOINC_KODU": "LOINC-14",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-015",
+      "TETKIK_ADI": "Tetkik 15",
+      "LOINC_KODU": "LOINC-15",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-016",
+      "TETKIK_ADI": "Tetkik 16",
+      "LOINC_KODU": "LOINC-16",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-017",
+      "TETKIK_ADI": "Tetkik 17",
+      "LOINC_KODU": "LOINC-17",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-018",
+      "TETKIK_ADI": "Tetkik 18",
+      "LOINC_KODU": "LOINC-18",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-019",
+      "TETKIK_ADI": "Tetkik 19",
+      "LOINC_KODU": "LOINC-19",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-020",
+      "TETKIK_ADI": "Tetkik 20",
+      "LOINC_KODU": "LOINC-20",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-021",
+      "TETKIK_ADI": "Tetkik 21",
+      "LOINC_KODU": "LOINC-21",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-022",
+      "TETKIK_ADI": "Tetkik 22",
+      "LOINC_KODU": "LOINC-22",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-023",
+      "TETKIK_ADI": "Tetkik 23",
+      "LOINC_KODU": "LOINC-23",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-024",
+      "TETKIK_ADI": "Tetkik 24",
+      "LOINC_KODU": "LOINC-24",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-025",
+      "TETKIK_ADI": "Tetkik 25",
+      "LOINC_KODU": "LOINC-25",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-026",
+      "TETKIK_ADI": "Tetkik 26",
+      "LOINC_KODU": "LOINC-26",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-027",
+      "TETKIK_ADI": "Tetkik 27",
+      "LOINC_KODU": "LOINC-27",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-028",
+      "TETKIK_ADI": "Tetkik 28",
+      "LOINC_KODU": "LOINC-28",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-029",
+      "TETKIK_ADI": "Tetkik 29",
+      "LOINC_KODU": "LOINC-29",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-030",
+      "TETKIK_ADI": "Tetkik 30",
+      "LOINC_KODU": "LOINC-30",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-031",
+      "TETKIK_ADI": "Tetkik 31",
+      "LOINC_KODU": "LOINC-31",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-032",
+      "TETKIK_ADI": "Tetkik 32",
+      "LOINC_KODU": "LOINC-32",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-033",
+      "TETKIK_ADI": "Tetkik 33",
+      "LOINC_KODU": "LOINC-33",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-034",
+      "TETKIK_ADI": "Tetkik 34",
+      "LOINC_KODU": "LOINC-34",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_KODU": "TTK-035",
+      "TETKIK_ADI": "Tetkik 35",
+      "LOINC_KODU": "LOINC-35",
+      "HIZMET_KODU": "HZM-TTK-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "TETKIK_PARAMETRE": [
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-001",
+      "TETKIK_KODU": "TTK-HEM-001",
+      "TETKIK_PARAMETRE_ADI": "Hemoglobin Param",
+      "LOINC_KODU": "718-7",
+      "CIHAZ_KODU": "CHZ-001",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-002",
+      "TETKIK_KODU": "TTK-HEM-002",
+      "TETKIK_PARAMETRE_ADI": "Hematokrit Param",
+      "LOINC_KODU": "4544-3",
+      "CIHAZ_KODU": "CHZ-002",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-003",
+      "TETKIK_KODU": "TTK-HEM-003",
+      "TETKIK_PARAMETRE_ADI": "Lokosit Param",
+      "LOINC_KODU": "6690-2",
+      "CIHAZ_KODU": "CHZ-003",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-004",
+      "TETKIK_KODU": "TTK-HEM-004",
+      "TETKIK_PARAMETRE_ADI": "Trombosit Param",
+      "LOINC_KODU": "777-3",
+      "CIHAZ_KODU": "CHZ-004",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-005",
+      "TETKIK_KODU": "TTK-BYO-001",
+      "TETKIK_PARAMETRE_ADI": "Glukoz Param",
+      "LOINC_KODU": "2345-7",
+      "CIHAZ_KODU": "CHZ-005",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-006",
+      "TETKIK_KODU": "TTK-BYO-002",
+      "TETKIK_PARAMETRE_ADI": "Ure Param",
+      "LOINC_KODU": "3094-0",
+      "CIHAZ_KODU": "CHZ-006",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-007",
+      "TETKIK_KODU": "TTK-BYO-003",
+      "TETKIK_PARAMETRE_ADI": "Kreatinin Param",
+      "LOINC_KODU": "2160-0",
+      "CIHAZ_KODU": "CHZ-007",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-008",
+      "TETKIK_KODU": "TTK-BYO-004",
+      "TETKIK_PARAMETRE_ADI": "AST Param",
+      "LOINC_KODU": "1920-8",
+      "CIHAZ_KODU": "CHZ-008",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-009",
+      "TETKIK_KODU": "TTK-BYO-005",
+      "TETKIK_PARAMETRE_ADI": "ALT Param",
+      "LOINC_KODU": "1742-6",
+      "CIHAZ_KODU": "CHZ-009",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-010",
+      "TETKIK_KODU": "TTK-IDR-001",
+      "TETKIK_PARAMETRE_ADI": "Idrar pH Param",
+      "LOINC_KODU": "2756-5",
+      "CIHAZ_KODU": "CHZ-010",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-011",
+      "TETKIK_KODU": "TTK-011",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 11 Param",
+      "LOINC_KODU": "LOINC-11",
+      "CIHAZ_KODU": "CHZ-011",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-012",
+      "TETKIK_KODU": "TTK-012",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 12 Param",
+      "LOINC_KODU": "LOINC-12",
+      "CIHAZ_KODU": "CHZ-012",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-013",
+      "TETKIK_KODU": "TTK-013",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 13 Param",
+      "LOINC_KODU": "LOINC-13",
+      "CIHAZ_KODU": "CHZ-013",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-014",
+      "TETKIK_KODU": "TTK-014",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 14 Param",
+      "LOINC_KODU": "LOINC-14",
+      "CIHAZ_KODU": "CHZ-014",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-015",
+      "TETKIK_KODU": "TTK-015",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 15 Param",
+      "LOINC_KODU": "LOINC-15",
+      "CIHAZ_KODU": "CHZ-015",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-016",
+      "TETKIK_KODU": "TTK-016",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 16 Param",
+      "LOINC_KODU": "LOINC-16",
+      "CIHAZ_KODU": "CHZ-016",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-017",
+      "TETKIK_KODU": "TTK-017",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 17 Param",
+      "LOINC_KODU": "LOINC-17",
+      "CIHAZ_KODU": "CHZ-017",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-018",
+      "TETKIK_KODU": "TTK-018",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 18 Param",
+      "LOINC_KODU": "LOINC-18",
+      "CIHAZ_KODU": "CHZ-018",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-019",
+      "TETKIK_KODU": "TTK-019",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 19 Param",
+      "LOINC_KODU": "LOINC-19",
+      "CIHAZ_KODU": "CHZ-019",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-020",
+      "TETKIK_KODU": "TTK-020",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 20 Param",
+      "LOINC_KODU": "LOINC-20",
+      "CIHAZ_KODU": "CHZ-020",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-021",
+      "TETKIK_KODU": "TTK-021",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 21 Param",
+      "LOINC_KODU": "LOINC-21",
+      "CIHAZ_KODU": "CHZ-021",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-022",
+      "TETKIK_KODU": "TTK-022",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 22 Param",
+      "LOINC_KODU": "LOINC-22",
+      "CIHAZ_KODU": "CHZ-022",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-023",
+      "TETKIK_KODU": "TTK-023",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 23 Param",
+      "LOINC_KODU": "LOINC-23",
+      "CIHAZ_KODU": "CHZ-023",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-024",
+      "TETKIK_KODU": "TTK-024",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 24 Param",
+      "LOINC_KODU": "LOINC-24",
+      "CIHAZ_KODU": "CHZ-024",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-025",
+      "TETKIK_KODU": "TTK-025",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 25 Param",
+      "LOINC_KODU": "LOINC-25",
+      "CIHAZ_KODU": "CHZ-025",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-026",
+      "TETKIK_KODU": "TTK-026",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 26 Param",
+      "LOINC_KODU": "LOINC-26",
+      "CIHAZ_KODU": "CHZ-026",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-027",
+      "TETKIK_KODU": "TTK-027",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 27 Param",
+      "LOINC_KODU": "LOINC-27",
+      "CIHAZ_KODU": "CHZ-027",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-028",
+      "TETKIK_KODU": "TTK-028",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 28 Param",
+      "LOINC_KODU": "LOINC-28",
+      "CIHAZ_KODU": "CHZ-028",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-029",
+      "TETKIK_KODU": "TTK-029",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 29 Param",
+      "LOINC_KODU": "LOINC-29",
+      "CIHAZ_KODU": "CHZ-029",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-030",
+      "TETKIK_KODU": "TTK-030",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 30 Param",
+      "LOINC_KODU": "LOINC-30",
+      "CIHAZ_KODU": "CHZ-030",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-031",
+      "TETKIK_KODU": "TTK-031",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 31 Param",
+      "LOINC_KODU": "LOINC-31",
+      "CIHAZ_KODU": "CHZ-031",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-032",
+      "TETKIK_KODU": "TTK-032",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 32 Param",
+      "LOINC_KODU": "LOINC-32",
+      "CIHAZ_KODU": "CHZ-032",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-033",
+      "TETKIK_KODU": "TTK-033",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 33 Param",
+      "LOINC_KODU": "LOINC-33",
+      "CIHAZ_KODU": "CHZ-033",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-034",
+      "TETKIK_KODU": "TTK-034",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 34 Param",
+      "LOINC_KODU": "LOINC-34",
+      "CIHAZ_KODU": "CHZ-034",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "TETKIK_PARAMETRE_KODU": "TPR-035",
+      "TETKIK_KODU": "TTK-035",
+      "TETKIK_PARAMETRE_ADI": "Tetkik 35 Param",
+      "LOINC_KODU": "LOINC-35",
+      "CIHAZ_KODU": "CHZ-035",
+      "IPTAL_DURUMU": "0",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "HASTA": [
+    {
+      "HASTA_KODU": "HST-00001",
+      "AD": "Hatice",
+      "TC_KIMLIK_NUMARASI": "75645737553",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1974-07-10",
+      "DOGUM_YERI": "Gaziantep",
+      "BABA_ADI": "Kemal",
+      "ANNE_ADI": "Derya",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00002",
+      "AD": "Deniz",
+      "TC_KIMLIK_NUMARASI": "61820255459",
+      "SOYADI": "Celik",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1952-04-07",
+      "DOGUM_YERI": "Gaziantep",
+      "BABA_ADI": "Mustafa",
+      "ANNE_ADI": "Asli",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00003",
+      "AD": "Onur",
+      "TC_KIMLIK_NUMARASI": "44333616916",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "2018-05-19",
+      "DOGUM_YERI": "Ankara",
+      "BABA_ADI": "Serkan",
+      "ANNE_ADI": "Gul",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B-",
+      "MEDENI_HALI": "MDN-DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00004",
+      "AD": "Nur",
+      "TC_KIMLIK_NUMARASI": "50496515783",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1948-11-08",
+      "DOGUM_YERI": "Diyarbakir",
+      "BABA_ADI": "Baris",
+      "ANNE_ADI": "Ayse",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A-",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00005",
+      "AD": "Murat",
+      "TC_KIMLIK_NUMARASI": "32505049577",
+      "SOYADI": "Demir",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "2011-12-07",
+      "DOGUM_YERI": "Mersin",
+      "BABA_ADI": "Mustafa",
+      "ANNE_ADI": "Elif",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A+",
+      "MEDENI_HALI": "MDN-DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00006",
+      "AD": "Ceren",
+      "TC_KIMLIK_NUMARASI": "40204958203",
+      "SOYADI": "Koc",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1999-11-23",
+      "DOGUM_YERI": "Antalya",
+      "BABA_ADI": "Omer",
+      "ANNE_ADI": "Nur",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A-",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00007",
+      "AD": "Asli",
+      "TC_KIMLIK_NUMARASI": "83507404483",
+      "SOYADI": "Yildirim",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1987-11-19",
+      "DOGUM_YERI": "Bursa",
+      "BABA_ADI": "Huseyin",
+      "ANNE_ADI": "Busra",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00008",
+      "AD": "Hasan",
+      "TC_KIMLIK_NUMARASI": "71369115197",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1972-08-21",
+      "DOGUM_YERI": "Ankara",
+      "BABA_ADI": "Kemal",
+      "ANNE_ADI": "Seda",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0+",
+      "MEDENI_HALI": "MDN-BOS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00009",
+      "AD": "Nur",
+      "TC_KIMLIK_NUMARASI": "92988739271",
+      "SOYADI": "Demir",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1972-05-15",
+      "DOGUM_YERI": "Antalya",
+      "BABA_ADI": "Ahmet",
+      "ANNE_ADI": "Emine",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B-",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00010",
+      "AD": "Asli",
+      "TC_KIMLIK_NUMARASI": "34722986380",
+      "SOYADI": "Kaya",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1957-07-24",
+      "DOGUM_YERI": "Gaziantep",
+      "BABA_ADI": "Tolga",
+      "ANNE_ADI": "Nur",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-AB+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00011",
+      "AD": "Deniz",
+      "TC_KIMLIK_NUMARASI": "67329056211",
+      "SOYADI": "Demir",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1983-11-09",
+      "DOGUM_YERI": "Adana",
+      "BABA_ADI": "Fatih",
+      "ANNE_ADI": "Hatice",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-BOS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00012",
+      "AD": "Deniz",
+      "TC_KIMLIK_NUMARASI": "65599182910",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1966-07-31",
+      "DOGUM_YERI": "Mersin",
+      "BABA_ADI": "Mehmet",
+      "ANNE_ADI": "Nur",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A-",
+      "MEDENI_HALI": "MDN-BOS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00013",
+      "AD": "Derya",
+      "TC_KIMLIK_NUMARASI": "14243939720",
+      "SOYADI": "Celik",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1956-09-18",
+      "DOGUM_YERI": "Mersin",
+      "BABA_ADI": "Kemal",
+      "ANNE_ADI": "Gul",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00014",
+      "AD": "Ceren",
+      "TC_KIMLIK_NUMARASI": "35991474684",
+      "SOYADI": "Koc",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1969-11-30",
+      "DOGUM_YERI": "Antalya",
+      "BABA_ADI": "Serkan",
+      "ANNE_ADI": "Zeynep",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-AB+",
+      "MEDENI_HALI": "MDN-DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00015",
+      "AD": "Hatice",
+      "TC_KIMLIK_NUMARASI": "49334934709",
+      "SOYADI": "Yilmaz",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1969-07-02",
+      "DOGUM_YERI": "Mersin",
+      "BABA_ADI": "Ahmet",
+      "ANNE_ADI": "Pinar",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00016",
+      "AD": "Ali",
+      "TC_KIMLIK_NUMARASI": "75085810382",
+      "SOYADI": "Cetin",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "2015-06-26",
+      "DOGUM_YERI": "Antalya",
+      "BABA_ADI": "Tolga",
+      "ANNE_ADI": "Busra",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0+",
+      "MEDENI_HALI": "MDN-DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00017",
+      "AD": "Merve",
+      "TC_KIMLIK_NUMARASI": "62160840065",
+      "SOYADI": "Cetin",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1976-07-26",
+      "DOGUM_YERI": "Bursa",
+      "BABA_ADI": "Baris",
+      "ANNE_ADI": "Ozge",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00018",
+      "AD": "Gul",
+      "TC_KIMLIK_NUMARASI": "46540455091",
+      "SOYADI": "Arslan",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1955-05-10",
+      "DOGUM_YERI": "Istanbul",
+      "BABA_ADI": "Omer",
+      "ANNE_ADI": "Seda",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0-",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00019",
+      "AD": "Pinar",
+      "TC_KIMLIK_NUMARASI": "84442262762",
+      "SOYADI": "Koc",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1995-01-22",
+      "DOGUM_YERI": "Mersin",
+      "BABA_ADI": "Burak",
+      "ANNE_ADI": "Nur",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-AB-",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00020",
+      "AD": "Onur",
+      "TC_KIMLIK_NUMARASI": "16059232914",
+      "SOYADI": "Kilic",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "2005-01-25",
+      "DOGUM_YERI": "Adana",
+      "BABA_ADI": "Cem",
+      "ANNE_ADI": "Sibel",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00021",
+      "AD": "Ayse",
+      "TC_KIMLIK_NUMARASI": "91455573435",
+      "SOYADI": "Sahin",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1980-12-16",
+      "DOGUM_YERI": "Adana",
+      "BABA_ADI": "Ali",
+      "ANNE_ADI": "Nur",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A-",
+      "MEDENI_HALI": "MDN-DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00022",
+      "AD": "Huseyin",
+      "TC_KIMLIK_NUMARASI": "19252910991",
+      "SOYADI": "Aslan",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1947-11-21",
+      "DOGUM_YERI": "Gaziantep",
+      "BABA_ADI": "Murat",
+      "ANNE_ADI": "Derya",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00023",
+      "AD": "Pinar",
+      "TC_KIMLIK_NUMARASI": "16618613389",
+      "SOYADI": "Kilic",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1997-08-12",
+      "DOGUM_YERI": "Diyarbakir",
+      "BABA_ADI": "Mustafa",
+      "ANNE_ADI": "Merve",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-AB+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00024",
+      "AD": "Yusuf",
+      "TC_KIMLIK_NUMARASI": "26632601180",
+      "SOYADI": "Celik",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1957-10-22",
+      "DOGUM_YERI": "Gaziantep",
+      "BABA_ADI": "Hasan",
+      "ANNE_ADI": "Seda",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00025",
+      "AD": "Ayse",
+      "TC_KIMLIK_NUMARASI": "67444505066",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1993-11-11",
+      "DOGUM_YERI": "Izmir",
+      "BABA_ADI": "Osman",
+      "ANNE_ADI": "Ozge",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00026",
+      "AD": "Hasan",
+      "TC_KIMLIK_NUMARASI": "65279835151",
+      "SOYADI": "Demir",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1971-05-06",
+      "DOGUM_YERI": "Diyarbakir",
+      "BABA_ADI": "Osman",
+      "ANNE_ADI": "Deniz",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00027",
+      "AD": "Busra",
+      "TC_KIMLIK_NUMARASI": "12864059081",
+      "SOYADI": "Cetin",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "2003-02-12",
+      "DOGUM_YERI": "Gaziantep",
+      "BABA_ADI": "Omer",
+      "ANNE_ADI": "Pinar",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00028",
+      "AD": "Esra",
+      "TC_KIMLIK_NUMARASI": "71203705842",
+      "SOYADI": "Simsek",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1999-03-09",
+      "DOGUM_YERI": "Antalya",
+      "BABA_ADI": "Ibrahim",
+      "ANNE_ADI": "Sibel",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0-",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00029",
+      "AD": "Burak",
+      "TC_KIMLIK_NUMARASI": "51123504125",
+      "SOYADI": "Simsek",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1993-10-26",
+      "DOGUM_YERI": "Antalya",
+      "BABA_ADI": "Ahmet",
+      "ANNE_ADI": "Sibel",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-AB+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00030",
+      "AD": "Baris",
+      "TC_KIMLIK_NUMARASI": "43495849178",
+      "SOYADI": "Koc",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1951-04-22",
+      "DOGUM_YERI": "Diyarbakir",
+      "BABA_ADI": "Emre",
+      "ANNE_ADI": "Merve",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B-",
+      "MEDENI_HALI": "MDN-BOS",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00031",
+      "AD": "Ali",
+      "TC_KIMLIK_NUMARASI": "73516598388",
+      "SOYADI": "Kaya",
+      "CINSIYET": "CNS-E",
+      "DOGUM_TARIHI": "1998-04-22",
+      "DOGUM_YERI": "Istanbul",
+      "BABA_ADI": "Onur",
+      "ANNE_ADI": "Esra",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00032",
+      "AD": "Derya",
+      "TC_KIMLIK_NUMARASI": "28042276277",
+      "SOYADI": "Aslan",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "2010-04-07",
+      "DOGUM_YERI": "Mersin",
+      "BABA_ADI": "Emre",
+      "ANNE_ADI": "Ozge",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-AB+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00033",
+      "AD": "Deniz",
+      "TC_KIMLIK_NUMARASI": "56687999440",
+      "SOYADI": "Ozdemir",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1959-01-17",
+      "DOGUM_YERI": "Ankara",
+      "BABA_ADI": "Kemal",
+      "ANNE_ADI": "Emine",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-B+",
+      "MEDENI_HALI": "MDN-EVL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00034",
+      "AD": "Pinar",
+      "TC_KIMLIK_NUMARASI": "64935560740",
+      "SOYADI": "Dogan",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "2017-12-02",
+      "DOGUM_YERI": "Istanbul",
+      "BABA_ADI": "Murat",
+      "ANNE_ADI": "Pinar",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-A-",
+      "MEDENI_HALI": "MDN-DUL",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_KODU": "HST-00035",
+      "AD": "Busra",
+      "TC_KIMLIK_NUMARASI": "99431601323",
+      "SOYADI": "Simsek",
+      "CINSIYET": "CNS-K",
+      "DOGUM_TARIHI": "1991-11-03",
+      "DOGUM_YERI": "Adana",
+      "BABA_ADI": "Ali",
+      "ANNE_ADI": "Merve",
+      "UYRUK": "TC",
+      "KAN_GRUBU": "KAN-0-",
+      "MEDENI_HALI": "MDN-BKR",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ],
+  "HASTA_BASVURU": [
+    {
+      "HASTA_BASVURU_KODU": "BSV-00001",
+      "HASTA_KODU": "HST-00001",
+      "BIRIM_KODU": "BRM-001",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-08-02 17:54:27",
+      "CIKIS_ZAMANI": "2025-08-16 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00002",
+      "HASTA_KODU": "HST-00002",
+      "BIRIM_KODU": "BRM-002",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-11-12 17:54:27",
+      "CIKIS_ZAMANI": "2025-11-22 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00003",
+      "HASTA_KODU": "HST-00003",
+      "BIRIM_KODU": "BRM-003",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-09-11 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-25 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00004",
+      "HASTA_KODU": "HST-00004",
+      "BIRIM_KODU": "BRM-004",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-09-25 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-26 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00005",
+      "HASTA_KODU": "HST-00005",
+      "BIRIM_KODU": "BRM-005",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-12-29 17:54:27",
+      "CIKIS_ZAMANI": "2026-01-02 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00006",
+      "HASTA_KODU": "HST-00006",
+      "BIRIM_KODU": "BRM-006",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-12-14 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-17 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00007",
+      "HASTA_KODU": "HST-00007",
+      "BIRIM_KODU": "BRM-007",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-09-13 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-18 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00008",
+      "HASTA_KODU": "HST-00008",
+      "BIRIM_KODU": "BRM-008",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-11-29 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-13 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00009",
+      "HASTA_KODU": "HST-00009",
+      "BIRIM_KODU": "BRM-009",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-12-13 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-26 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00010",
+      "HASTA_KODU": "HST-00010",
+      "BIRIM_KODU": "BRM-010",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-09-25 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-29 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00011",
+      "HASTA_KODU": "HST-00011",
+      "BIRIM_KODU": "BRM-011",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-10-05 17:54:27",
+      "CIKIS_ZAMANI": "2025-10-08 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00012",
+      "HASTA_KODU": "HST-00012",
+      "BIRIM_KODU": "BRM-012",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-11-08 17:54:27",
+      "CIKIS_ZAMANI": "2025-11-21 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00013",
+      "HASTA_KODU": "HST-00013",
+      "BIRIM_KODU": "BRM-013",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-07-16 17:54:27",
+      "CIKIS_ZAMANI": "2025-07-21 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00014",
+      "HASTA_KODU": "HST-00014",
+      "BIRIM_KODU": "BRM-014",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-09-28 17:54:27",
+      "CIKIS_ZAMANI": "2025-10-02 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00015",
+      "HASTA_KODU": "HST-00015",
+      "BIRIM_KODU": "BRM-015",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-09-13 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-14 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00016",
+      "HASTA_KODU": "HST-00016",
+      "BIRIM_KODU": "BRM-016",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-07-28 17:54:27",
+      "CIKIS_ZAMANI": "2025-08-06 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00017",
+      "HASTA_KODU": "HST-00017",
+      "BIRIM_KODU": "BRM-017",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-10-14 17:54:27",
+      "CIKIS_ZAMANI": "2025-10-17 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00018",
+      "HASTA_KODU": "HST-00018",
+      "BIRIM_KODU": "BRM-018",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-11-16 17:54:27",
+      "CIKIS_ZAMANI": "2025-11-17 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00019",
+      "HASTA_KODU": "HST-00019",
+      "BIRIM_KODU": "BRM-019",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-11-13 17:54:27",
+      "CIKIS_ZAMANI": "2025-11-26 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00020",
+      "HASTA_KODU": "HST-00020",
+      "BIRIM_KODU": "BRM-020",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-12-01 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-13 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00021",
+      "HASTA_KODU": "HST-00021",
+      "BIRIM_KODU": "BRM-021",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-12-01 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-03 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00022",
+      "HASTA_KODU": "HST-00022",
+      "BIRIM_KODU": "BRM-022",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-12-10 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-20 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00023",
+      "HASTA_KODU": "HST-00023",
+      "BIRIM_KODU": "BRM-023",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2026-01-04 17:54:27",
+      "CIKIS_ZAMANI": "2026-01-09 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00024",
+      "HASTA_KODU": "HST-00024",
+      "BIRIM_KODU": "BRM-024",
+      "TEDAVI_TURU": "TDV-YATAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-10-17 17:54:27",
+      "CIKIS_ZAMANI": "2025-10-17 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00025",
+      "HASTA_KODU": "HST-00025",
+      "BIRIM_KODU": "BRM-025",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-12-25 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-27 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00026",
+      "HASTA_KODU": "HST-00026",
+      "BIRIM_KODU": "BRM-026",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-12-09 17:54:27",
+      "CIKIS_ZAMANI": "2025-12-20 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00027",
+      "HASTA_KODU": "HST-00027",
+      "BIRIM_KODU": "BRM-027",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-09-15 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-27 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00028",
+      "HASTA_KODU": "HST-00028",
+      "BIRIM_KODU": "BRM-028",
+      "TEDAVI_TURU": "TDV-ACIL",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-08-09 17:54:27",
+      "CIKIS_ZAMANI": "2025-08-10 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00029",
+      "HASTA_KODU": "HST-00029",
+      "BIRIM_KODU": "BRM-029",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-ISTEK",
+      "HASTA_KABUL_ZAMANI": "2025-11-12 17:54:27",
+      "CIKIS_ZAMANI": "2025-11-21 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00030",
+      "HASTA_KODU": "HST-00030",
+      "BIRIM_KODU": "BRM-030",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-07-23 17:54:27",
+      "CIKIS_ZAMANI": "2025-07-31 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00031",
+      "HASTA_KODU": "HST-00031",
+      "BIRIM_KODU": "BRM-031",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-07-27 17:54:27",
+      "CIKIS_ZAMANI": "2025-07-27 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00032",
+      "HASTA_KODU": "HST-00032",
+      "BIRIM_KODU": "BRM-032",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-09-27 17:54:27",
+      "CIKIS_ZAMANI": "2025-10-03 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00033",
+      "HASTA_KODU": "HST-00033",
+      "BIRIM_KODU": "BRM-033",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-09-16 17:54:27",
+      "CIKIS_ZAMANI": "2025-09-17 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00034",
+      "HASTA_KODU": "HST-00034",
+      "BIRIM_KODU": "BRM-034",
+      "TEDAVI_TURU": "TDV-AYAKTAN",
+      "CIKIS_SEKLI": "CKS-TABURCU",
+      "HASTA_KABUL_ZAMANI": "2025-08-05 17:54:27",
+      "CIKIS_ZAMANI": "2025-08-07 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    },
+    {
+      "HASTA_BASVURU_KODU": "BSV-00035",
+      "HASTA_KODU": "HST-00035",
+      "BIRIM_KODU": "BRM-035",
+      "TEDAVI_TURU": "TDV-GUNUBIRLIK",
+      "CIKIS_SEKLI": "CKS-SEVK",
+      "HASTA_KABUL_ZAMANI": "2025-10-29 17:54:27",
+      "CIKIS_ZAMANI": "2025-11-07 17:54:27",
+      "EKLEYEN_KULLANICI_KODU": "KLN-ADMIN",
+      "KAYIT_ZAMANI": "2026-01-08 17:54:27"
+    }
+  ]
+}

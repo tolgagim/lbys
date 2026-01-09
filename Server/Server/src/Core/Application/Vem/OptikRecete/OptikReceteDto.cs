@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.OptikRecete;
+namespace Server.Application.Vem.OptikRecete;
 
 public class OptikReceteDto
 {
     public string? OPTIK_RECETE_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? GOZLUK_RECETE_TIPI { get; set; }
     public string? HEKIM_KODU { get; set; }

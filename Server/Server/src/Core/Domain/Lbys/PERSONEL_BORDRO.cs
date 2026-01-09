@@ -15,9 +15,7 @@ public class PERSONEL_BORDRO : VemEntity
     [Key]
     public string PERSONEL_BORDRO_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>YÄ±l bilgisini ifade eder.</summary>
+/// <summary>YÄ±l bilgisini ifade eder.</summary>
     public string YIL { get; set; }
 
     /// <summary>YÄ±lÄ±n on iki bÃ¶lÃ¼mÃ¼nden her birini ifade eder.</summary>

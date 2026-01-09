@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Disprotez;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DisprotezController : BaseApiController
             .Select(e => new DisprotezDto
             {
                 DISPROTEZ_KODU = e.DISPROTEZ_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 DISPROTEZ_BASLAMA_TARIHI = e.DISPROTEZ_BASLAMA_TARIHI,
                 TEKNISYEN_KODU = e.TEKNISYEN_KODU,
@@ -65,8 +64,7 @@ public class DisprotezController : BaseApiController
         return new DisprotezDto
         {
             DISPROTEZ_KODU = entity.DISPROTEZ_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             DISPROTEZ_BASLAMA_TARIHI = entity.DISPROTEZ_BASLAMA_TARIHI,
             TEKNISYEN_KODU = entity.TEKNISYEN_KODU,
@@ -97,8 +95,7 @@ public class DisprotezController : BaseApiController
         var entity = new DISPROTEZ
         {
             DISPROTEZ_KODU = dto.DISPROTEZ_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             DISPROTEZ_BASLAMA_TARIHI = dto.DISPROTEZ_BASLAMA_TARIHI,
             TEKNISYEN_KODU = dto.TEKNISYEN_KODU,
@@ -136,7 +133,6 @@ public class DisprotezController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.DISPROTEZ_BASLAMA_TARIHI = dto.DISPROTEZ_BASLAMA_TARIHI;

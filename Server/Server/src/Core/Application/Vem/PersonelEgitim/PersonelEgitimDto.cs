@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.PersonelEgitim;
+namespace Server.Application.Vem.PersonelEgitim;
 
 public class PersonelEgitimDto
 {
     public string? PERSONEL_EGITIM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? PERSONEL_KODU { get; set; }
+public string? PERSONEL_KODU { get; set; }
     public string? PERSONEL_EGITIM_TURU { get; set; }
     public string? SERTIFIKA_TIPI { get; set; }
     public string? SERTIFIKA_PUANI { get; set; }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.DisTaahhutDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DisTaahhutDetayController : BaseApiController
             .Select(e => new DisTaahhutDetayDto
             {
                 DIS_TAAHHUT_DETAY_KODU = e.DIS_TAAHHUT_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DIS_TAAHHUT_KODU = e.DIS_TAAHHUT_KODU,
+DIS_TAAHHUT_KODU = e.DIS_TAAHHUT_KODU,
                 DIS_KODU = e.DIS_KODU,
                 SUT_KODU = e.SUT_KODU,
                 CENE_KODU = e.CENE_KODU,
@@ -48,8 +47,7 @@ public class DisTaahhutDetayController : BaseApiController
         return new DisTaahhutDetayDto
         {
             DIS_TAAHHUT_DETAY_KODU = entity.DIS_TAAHHUT_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DIS_TAAHHUT_KODU = entity.DIS_TAAHHUT_KODU,
+DIS_TAAHHUT_KODU = entity.DIS_TAAHHUT_KODU,
             DIS_KODU = entity.DIS_KODU,
             SUT_KODU = entity.SUT_KODU,
             CENE_KODU = entity.CENE_KODU,
@@ -63,8 +61,7 @@ public class DisTaahhutDetayController : BaseApiController
         var entity = new DIS_TAAHHUT_DETAY
         {
             DIS_TAAHHUT_DETAY_KODU = dto.DIS_TAAHHUT_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DIS_TAAHHUT_KODU = dto.DIS_TAAHHUT_KODU,
+DIS_TAAHHUT_KODU = dto.DIS_TAAHHUT_KODU,
             DIS_KODU = dto.DIS_KODU,
             SUT_KODU = dto.SUT_KODU,
             CENE_KODU = dto.CENE_KODU,
@@ -85,7 +82,6 @@ public class DisTaahhutDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DIS_TAAHHUT_KODU = dto.DIS_TAAHHUT_KODU;
         entity.DIS_KODU = dto.DIS_KODU;
         entity.SUT_KODU = dto.SUT_KODU;

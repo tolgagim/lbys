@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonSet;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonSetController : BaseApiController
             .Select(e => new SterilizasyonSetDto
             {
                 STERILIZASYON_SET_KODU = e.STERILIZASYON_SET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DEPO_KODU = e.DEPO_KODU,
+DEPO_KODU = e.DEPO_KODU,
                 STERILIZASYON_PAKET_KODU = e.STERILIZASYON_PAKET_KODU,
                 BARKOD = e.BARKOD,
                 BARKOD_BASAN_KULLANICI_KODU = e.BARKOD_BASAN_KULLANICI_KODU,
@@ -62,8 +61,7 @@ public class SterilizasyonSetController : BaseApiController
         return new SterilizasyonSetDto
         {
             STERILIZASYON_SET_KODU = entity.STERILIZASYON_SET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DEPO_KODU = entity.DEPO_KODU,
+DEPO_KODU = entity.DEPO_KODU,
             STERILIZASYON_PAKET_KODU = entity.STERILIZASYON_PAKET_KODU,
             BARKOD = entity.BARKOD,
             BARKOD_BASAN_KULLANICI_KODU = entity.BARKOD_BASAN_KULLANICI_KODU,
@@ -91,8 +89,7 @@ public class SterilizasyonSetController : BaseApiController
         var entity = new STERILIZASYON_SET
         {
             STERILIZASYON_SET_KODU = dto.STERILIZASYON_SET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DEPO_KODU = dto.DEPO_KODU,
+DEPO_KODU = dto.DEPO_KODU,
             STERILIZASYON_PAKET_KODU = dto.STERILIZASYON_PAKET_KODU,
             BARKOD = dto.BARKOD,
             BARKOD_BASAN_KULLANICI_KODU = dto.BARKOD_BASAN_KULLANICI_KODU,
@@ -127,7 +124,6 @@ public class SterilizasyonSetController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DEPO_KODU = dto.DEPO_KODU;
         entity.STERILIZASYON_PAKET_KODU = dto.STERILIZASYON_PAKET_KODU;
         entity.BARKOD = dto.BARKOD;

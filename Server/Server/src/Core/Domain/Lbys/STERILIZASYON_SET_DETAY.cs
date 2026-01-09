@@ -15,9 +15,7 @@ public class STERILIZASYON_SET_DETAY : VemEntity
     [Key]
     public string STERILIZASYON_SET_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>TÄ±bbi aletlerin steril edilmeden Ã¶nce ve sterilizasyon aÅŸamasÄ±nda oluÅŸturulan se...</summary>
+/// <summary>TÄ±bbi aletlerin steril edilmeden Ã¶nce ve sterilizasyon aÅŸamasÄ±nda oluÅŸturulan se...</summary>
     [ForeignKey("SterilizasyonSetNavigation")]
     public string STERILIZASYON_SET_KODU { get; set; }
 

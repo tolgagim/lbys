@@ -1,0 +1,284 @@
+[
+  {
+    "view": "VEM_PERSONEL",
+    "table": "PERSONEL",
+    "add_fields": [
+      "ACIK_ADRES",
+      "ADRES_KODU_SEVIYESI",
+      "ADRES_TIPI",
+      "AKADEMIK_UNVAN",
+      "AKTIFLIK_BILGISI",
+      "ANNE_ADI",
+      "ASALET_ALMA_TARIHI",
+      "ASKERLIK_DURUMU",
+      "BABA_ADI",
+      "CALISMA_DURUMU",
+      "CALISTIGI_BIRIM_KODU",
+      "CEP_TELEFONU",
+      "DEVLET_HIZMET_YUKUMLULUK_KODU",
+      "DIPLOMA_NUMARASI",
+      "DOGUM_YERI",
+      "EMEKLI_SICIL_NUMARASI",
+      "EMEKLI_TERFI_TARIHI",
+      "ENGELLILIK_DURUMU",
+      "EPOSTA_ADRESI",
+      "EV_TELEFONU",
+      "FOTOGRAF_BILGISI",
+      "FOTOGRAF_DOSYA_YOLU",
+      "HEKIM_MEDULA_SIFRESI",
+      "IL_KODU",
+      "ILCE_KODU",
+      "ILK_ISE_BASLAMA_TARIHI",
+      "IMZA_UNVAN_KODU",
+      "IS_DURUMU",
+      "ISTEN_AYRILMA_ACIKLAMASI",
+      "ISTEN_AYRILMA_NEDENI",
+      "ISTEN_AYRILMA_TARIHI",
+      "KADRO_UNVAN_KODU",
+      "KADROLU_GOREV_YERI",
+      "KAN_GRUBU",
+      "KLINIK_KODU",
+      "MEDULA_BRANS_KODU",
+      "MEMURIYET_TIPI",
+      "MEMURIYETE_BASLAMA_TARIHI",
+      "OGRENIM_DURUMU",
+      "ONCEKI_SOYADI",
+      "PERSONEL_GOREV_KODU",
+      "PERSONEL_SICIL_NUMARASI",
+      "SAGLIK_TESISINE_BASLAMA_TARIHI",
+      "SOYADI",
+      "TC_KIMLIK_NUMARASI",
+      "TERFI_TARIHI",
+      "TESCIL_NUMARASI",
+      "ULKE_KODU",
+      "UNVAN_KODU"
+    ],
+    "remove_fields": [
+      "AKTIF",
+      "BIRIM_KODU",
+      "DIPLOMA_NO",
+      "DIPLOMA_TESCIL_NO",
+      "EMAIL",
+      "ISE_BASLAMA_TARIHI",
+      "SOYAD",
+      "TC_KIMLIK_NO",
+      "TELEFON",
+      "UNVAN",
+      "UZMANLIK_KODU"
+    ]
+  },
+  {
+    "view": "VEM_KULLANICI",
+    "table": "KULLANICI",
+    "add_fields": [
+      "AD",
+      "AKTIFLIK_BILGISI",
+      "PAROLA",
+      "PAROLA_SIFRELEME_TURU",
+      "SOYADI",
+      "TC_KIMLIK_NUMARASI"
+    ],
+    "remove_fields": [
+      "AKTIF"
+    ]
+  },
+  {
+    "view": "VEM_HASTA_BASVURU",
+    "table": "HASTA_BASVURU",
+    "add_fields": [
+      "ADLI_VAKA_GELIS_SEKLI",
+      "AMBULANS_PLAKA_NUMARASI",
+      "AMBULANS_TAKIP_NUMARASI",
+      "ARAC_TURU",
+      "ASISTAN_HEKIM_KODU",
+      "BAGLI_OLDUGU_BASVURU_KODU",
+      "BASVURU_DURUMU",
+      "BASVURU_PROTOKOL_NUMARASI",
+      "CIKIS_VEREN_HEKIM_KODU",
+      "CIKIS_ZAMANI",
+      "DEFTER_NUMARASI",
+      "DIYABET_EGITIMI",
+      "DIYABET_KOMPLIKASYONLARI",
+      "GEBLIZ_BILDIRIM_NUMARASI",
+      "GELDIGI_ULKE_KODU",
+      "GENCLIK_SAGLIGI_ISLEMLERI",
+      "GUNLUK_SIRA_NUMARASI",
+      "HASTA_KABUL_ZAMANI",
+      "HAYATI_TEHLIKE_DURUMU",
+      "HEKIM_BASVURU_NOTU",
+      "HEKIM_KODU",
+      "HIZMET_SUNUCU",
+      "KABUL_SEKLI",
+      "KAYIT_YERI",
+      "KURUM_KODU",
+      "MUAYENE_BASLAMA_ZAMANI",
+      "MUAYENE_BITIS_ZAMANI",
+      "MUAYENE_ONCELIK_SIRASI",
+      "MUAYENE_TURU",
+      "OLAY_AFET_KODU",
+      "ONLINE_PROTOKOL_NUMARASI",
+      "SAGLIK_TURIZMI_ULKE_KODU",
+      "SEVK_TANISI",
+      "SEVK_ZAMANI",
+      "SOSYAL_GUVENCE_DURUMU",
+      "SYS_REFERANS_NUMARASI",
+      "SYS_TAKIP_NUMARASI",
+      "TAMAMLAYICI_KURUM_KODU",
+      "TRIAJ_KODU",
+      "VAKA_TURU",
+      "YABANCI_HASTA_TURU",
+      "YATIS_BILGISI",
+      "YATIS_PROTOKOL_NUMARASI"
+    ],
+    "remove_fields": [
+      "AKTIF",
+      "BASVURU_SEKLI",
+      "BASVURU_TARIHI",
+      "BASVURU_TURU",
+      "CIKIS_TARIHI",
+      "DOKTOR_KODU",
+      "PROVIZYON_TIPI",
+      "SEVK_EDEN_KURUM",
+      "SIKAYET",
+      "SONUC_KODU",
+      "TAKIP_NO",
+      "TANI_KODU"
+    ]
+  },
+  {
+    "view": "VEM_CIHAZ",
+    "table": "CIHAZ",
+    "add_fields": [
+      "AKTIFLIK_BILGISI"
+    ],
+    "remove_fields": [
+      "AKTIF"
+    ]
+  },
+  {
+    "view": "VEM_HIZMET",
+    "table": "HIZMET",
+    "add_fields": [
+      "AKTIFLIK_BILGISI"
+    ],
+    "remove_fields": [
+      "AKTIF"
+    ]
+  },
+  {
+    "view": "VEM_KURUM",
+    "table": "KURUM",
+    "add_fields": [
+      "AKTIFLIK_BILGISI",
+      "AYAKTAN_BUTCE_KODU",
+      "DEVREDILEN_KURUM",
+      "GUNUBIRLIK_BUTCE_KODU",
+      "HASTA_KURUM_TURU",
+      "KURUM_ADRESI",
+      "SKRS_KURUM_KODU",
+      "YATAN_BUTCE_KODU"
+    ],
+    "remove_fields": [
+      "ADRES",
+      "EMAIL",
+      "IL_KODU",
+      "ILCE_KODU",
+      "KURUM_TURU",
+      "TELEFON",
+      "VERGI_DAIRESI",
+      "VERGI_NO"
+    ]
+  },
+  {
+    "view": "VEM_BIRIM",
+    "table": "BIRIM",
+    "add_fields": [
+      "AKTIFLIK_BILGISI",
+      "BINA_KODU",
+      "KLINIK_KODU",
+      "MEDULA_BRANS_KODU",
+      "MHRS_ADI",
+      "MHRS_KODU",
+      "MKYS_KODU",
+      "YATAK_SAYISI"
+    ],
+    "remove_fields": [
+      "AKTIF",
+      "KURUM_KODU",
+      "UST_BIRIM_KODU"
+    ]
+  },
+  {
+    "view": "VEM_DEPO",
+    "table": "DEPO",
+    "add_fields": [
+      "AKTIFLIK_BILGISI",
+      "MKYS_KULLANICI_SIFRESI"
+    ],
+    "remove_fields": [
+      "AKTIF"
+    ]
+  },
+  {
+    "view": "VEM_HASTA",
+    "table": "HASTA",
+    "add_fields": [
+      "ANNE_ADI",
+      "ANNE_HASTA_KODU",
+      "ANNE_TC_KIMLIK_NUMARASI",
+      "BABA_HASTA_KODU",
+      "BABA_TC_KIMLIK_NUMARASI",
+      "BEYAN_DOGUM_TARIHI",
+      "DOGUM_SIRASI",
+      "ENGELLILIK_DURUMU",
+      "HASTA_TIPI",
+      "KIMLIKSIZ_HASTA_BILGISI",
+      "MEDENI_HALI",
+      "MUAYENE_ONCELIK_SIRASI",
+      "OGRENIM_DURUMU",
+      "OLUM_YERI",
+      "PASAPORT_NUMARASI",
+      "SON_KURUM_KODU",
+      "SOYADI",
+      "TC_KIMLIK_NUMARASI",
+      "YUPASS_NUMARASI"
+    ],
+    "remove_fields": [
+      "ADRES",
+      "AKTIF",
+      "ANA_ADI",
+      "CEP_TELEFON",
+      "EGITIM_DURUMU",
+      "EMAIL",
+      "IL_KODU",
+      "ILCE_KODU",
+      "MEDENI_HAL",
+      "PROTOKOL_NO",
+      "SIGORTA_NO",
+      "SOSYAL_GUVENCE",
+      "SOYAD",
+      "TC_KIMLIK_NO",
+      "TELEFON"
+    ]
+  },
+  {
+    "view": "VEM_TETKIK",
+    "table": "TETKIK",
+    "add_fields": [
+      "IPTAL_DURUMU"
+    ],
+    "remove_fields": [
+      "AKTIF"
+    ]
+  },
+  {
+    "view": "VEM_TETKIK_PARAMETRE",
+    "table": "TETKIK_PARAMETRE",
+    "add_fields": [
+      "IPTAL_DURUMU"
+    ],
+    "remove_fields": [
+      "AKTIF"
+    ]
+  }
+]

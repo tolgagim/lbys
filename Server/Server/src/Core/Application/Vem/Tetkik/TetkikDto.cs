@@ -9,6 +9,6 @@ public class TetkikDto
     public string? RAPOR_SONUC_SIRASI { get; set; }
     public string? HESAPLAMALI_TETKIK_BILGISI { get; set; }
     public string? HESAPLAMALI_TETKIK_FORMULU { get; set; }
-    public bool AKTIF { get; set; }
+    public string? IPTAL_DURUMU { get; set; }
 }
 

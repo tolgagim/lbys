@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonGiris;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonGirisController : BaseApiController
             .Select(e => new SterilizasyonGirisDto
             {
                 STERILIZASYON_GIRIS_KODU = e.STERILIZASYON_GIRIS_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DEPO_KODU = e.DEPO_KODU,
+DEPO_KODU = e.DEPO_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 STERILIZASYON_GIRIS_MIKTARI = e.STERILIZASYON_GIRIS_MIKTARI,
                 TESLIM_EDEN_BIRIM_KODU = e.TESLIM_EDEN_BIRIM_KODU,
@@ -51,8 +50,7 @@ public class SterilizasyonGirisController : BaseApiController
         return new SterilizasyonGirisDto
         {
             STERILIZASYON_GIRIS_KODU = entity.STERILIZASYON_GIRIS_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DEPO_KODU = entity.DEPO_KODU,
+DEPO_KODU = entity.DEPO_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             STERILIZASYON_GIRIS_MIKTARI = entity.STERILIZASYON_GIRIS_MIKTARI,
             TESLIM_EDEN_BIRIM_KODU = entity.TESLIM_EDEN_BIRIM_KODU,
@@ -69,8 +67,7 @@ public class SterilizasyonGirisController : BaseApiController
         var entity = new STERILIZASYON_GIRIS
         {
             STERILIZASYON_GIRIS_KODU = dto.STERILIZASYON_GIRIS_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DEPO_KODU = dto.DEPO_KODU,
+DEPO_KODU = dto.DEPO_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             STERILIZASYON_GIRIS_MIKTARI = dto.STERILIZASYON_GIRIS_MIKTARI,
             TESLIM_EDEN_BIRIM_KODU = dto.TESLIM_EDEN_BIRIM_KODU,
@@ -94,7 +91,6 @@ public class SterilizasyonGirisController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DEPO_KODU = dto.DEPO_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;
         entity.STERILIZASYON_GIRIS_MIKTARI = dto.STERILIZASYON_GIRIS_MIKTARI;

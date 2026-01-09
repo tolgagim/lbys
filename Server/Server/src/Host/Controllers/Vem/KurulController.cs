@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Kurul;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KurulController : BaseApiController
             .Select(e => new KurulDto
             {
                 KURUL_KODU = e.KURUL_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KURUL_ADI = e.KURUL_ADI,
+KURUL_ADI = e.KURUL_ADI,
                 RAPOR_TURU = e.RAPOR_TURU,
                 MEDULA_RAPOR_TURU = e.MEDULA_RAPOR_TURU,
                 MEDULA_ALT_RAPOR_TURU = e.MEDULA_ALT_RAPOR_TURU,
@@ -48,8 +47,7 @@ public class KurulController : BaseApiController
         return new KurulDto
         {
             KURUL_KODU = entity.KURUL_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KURUL_ADI = entity.KURUL_ADI,
+KURUL_ADI = entity.KURUL_ADI,
             RAPOR_TURU = entity.RAPOR_TURU,
             MEDULA_RAPOR_TURU = entity.MEDULA_RAPOR_TURU,
             MEDULA_ALT_RAPOR_TURU = entity.MEDULA_ALT_RAPOR_TURU,
@@ -63,8 +61,7 @@ public class KurulController : BaseApiController
         var entity = new KURUL
         {
             KURUL_KODU = dto.KURUL_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KURUL_ADI = dto.KURUL_ADI,
+KURUL_ADI = dto.KURUL_ADI,
             RAPOR_TURU = dto.RAPOR_TURU,
             MEDULA_RAPOR_TURU = dto.MEDULA_RAPOR_TURU,
             MEDULA_ALT_RAPOR_TURU = dto.MEDULA_ALT_RAPOR_TURU,
@@ -85,7 +82,6 @@ public class KurulController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KURUL_ADI = dto.KURUL_ADI;
         entity.RAPOR_TURU = dto.RAPOR_TURU;
         entity.MEDULA_RAPOR_TURU = dto.MEDULA_RAPOR_TURU;

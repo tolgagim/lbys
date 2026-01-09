@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Radyoloji;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class RadyolojiController : BaseApiController
             .Select(e => new RadyolojiDto
             {
                 RADYOLOJI_KODU = e.RADYOLOJI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 BIRIM_KODU = e.BIRIM_KODU,
                 TETKIK_CEKIM_KABUL_ZAMANI = e.TETKIK_CEKIM_KABUL_ZAMANI,
@@ -59,8 +58,7 @@ public class RadyolojiController : BaseApiController
         return new RadyolojiDto
         {
             RADYOLOJI_KODU = entity.RADYOLOJI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             BIRIM_KODU = entity.BIRIM_KODU,
             TETKIK_CEKIM_KABUL_ZAMANI = entity.TETKIK_CEKIM_KABUL_ZAMANI,
@@ -85,8 +83,7 @@ public class RadyolojiController : BaseApiController
         var entity = new RADYOLOJI
         {
             RADYOLOJI_KODU = dto.RADYOLOJI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             BIRIM_KODU = dto.BIRIM_KODU,
             TETKIK_CEKIM_KABUL_ZAMANI = dto.TETKIK_CEKIM_KABUL_ZAMANI,
@@ -118,7 +115,6 @@ public class RadyolojiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.BIRIM_KODU = dto.BIRIM_KODU;

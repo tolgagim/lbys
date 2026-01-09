@@ -15,9 +15,7 @@ public class STOK_HAREKET : VemEntity
     [Key]
     public string STOK_HAREKET_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinin deposuna giriÅŸi veya Ã§Ä±kÄ±ÅŸÄ± yapÄ±lan ilaÃ§, malzeme, Ã¼rÃ¼n vb. iÃ§i...</summary>
+/// <summary>SaÄŸlÄ±k tesisinin deposuna giriÅŸi veya Ã§Ä±kÄ±ÅŸÄ± yapÄ±lan ilaÃ§, malzeme, Ã¼rÃ¼n vb. iÃ§i...</summary>
     [Required]
     [ForeignKey("BagliStokHareketNavigation")]
     public string BAGLI_STOK_HAREKET_KODU { get; set; }

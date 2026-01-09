@@ -18,7 +18,8 @@ public class DEPO : VemEntity
     public string? BINA_KODU { get; set; }
     public string? MKYS_KODU { get; set; }
     public string? MKYS_KULLANICI_KODU { get; set; }
-    public bool AKTIF { get; set; } = true;
+    public string? MKYS_KULLANICI_SIFRESI { get; set; }
+    public string? AKTIFLIK_BILGISI { get; set; }
 
     // Navigation
     [ForeignKey("DEPO_TURU")]

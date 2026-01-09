@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaAdliRapor;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaAdliRaporController : BaseApiController
             .Select(e => new HastaAdliRaporDto
             {
                 HASTA_ADLI_RAPOR_KODU = e.HASTA_ADLI_RAPOR_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 ADLI_RAPOR_TURU = e.ADLI_RAPOR_TURU,
                 RAPOR_ZAMANI = e.RAPOR_ZAMANI,
@@ -106,8 +105,7 @@ public class HastaAdliRaporController : BaseApiController
         return new HastaAdliRaporDto
         {
             HASTA_ADLI_RAPOR_KODU = entity.HASTA_ADLI_RAPOR_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             ADLI_RAPOR_TURU = entity.ADLI_RAPOR_TURU,
             RAPOR_ZAMANI = entity.RAPOR_ZAMANI,
@@ -179,8 +177,7 @@ public class HastaAdliRaporController : BaseApiController
         var entity = new HASTA_ADLI_RAPOR
         {
             HASTA_ADLI_RAPOR_KODU = dto.HASTA_ADLI_RAPOR_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             ADLI_RAPOR_TURU = dto.ADLI_RAPOR_TURU,
             RAPOR_ZAMANI = dto.RAPOR_ZAMANI,
@@ -259,7 +256,6 @@ public class HastaAdliRaporController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.ADLI_RAPOR_TURU = dto.ADLI_RAPOR_TURU;

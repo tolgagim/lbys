@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.AnlikYatanHasta;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class AnlikYatanHastaController : BaseApiController
             .Select(e => new AnlikYatanHastaDto
             {
                 ANLIK_YATAN_HASTA_KODU = e.ANLIK_YATAN_HASTA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HEKIM_KODU = e.HEKIM_KODU,
                 YATIS_PROTOKOL_NUMARASI = e.YATIS_PROTOKOL_NUMARASI,
@@ -52,8 +51,7 @@ public class AnlikYatanHastaController : BaseApiController
         return new AnlikYatanHastaDto
         {
             ANLIK_YATAN_HASTA_KODU = entity.ANLIK_YATAN_HASTA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HEKIM_KODU = entity.HEKIM_KODU,
             YATIS_PROTOKOL_NUMARASI = entity.YATIS_PROTOKOL_NUMARASI,
@@ -71,8 +69,7 @@ public class AnlikYatanHastaController : BaseApiController
         var entity = new ANLIK_YATAN_HASTA
         {
             ANLIK_YATAN_HASTA_KODU = dto.ANLIK_YATAN_HASTA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HEKIM_KODU = dto.HEKIM_KODU,
             YATIS_PROTOKOL_NUMARASI = dto.YATIS_PROTOKOL_NUMARASI,
@@ -97,7 +94,6 @@ public class AnlikYatanHastaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HEKIM_KODU = dto.HEKIM_KODU;

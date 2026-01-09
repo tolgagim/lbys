@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonPaketDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonPaketDetayController : BaseApiController
             .Select(e => new SterilizasyonPaketDetayDto
             {
                 STERILIZASYON_PAKET_DETAY_KODU = e.STERILIZASYON_PAKET_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                STERILIZASYON_PAKET_KODU = e.STERILIZASYON_PAKET_KODU,
+STERILIZASYON_PAKET_KODU = e.STERILIZASYON_PAKET_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 STERILIZASYON_MALZEME_MIKTARI = e.STERILIZASYON_MALZEME_MIKTARI,
                 OLCU_KODU = e.OLCU_KODU,
@@ -49,8 +48,7 @@ public class SterilizasyonPaketDetayController : BaseApiController
         return new SterilizasyonPaketDetayDto
         {
             STERILIZASYON_PAKET_DETAY_KODU = entity.STERILIZASYON_PAKET_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            STERILIZASYON_PAKET_KODU = entity.STERILIZASYON_PAKET_KODU,
+STERILIZASYON_PAKET_KODU = entity.STERILIZASYON_PAKET_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             STERILIZASYON_MALZEME_MIKTARI = entity.STERILIZASYON_MALZEME_MIKTARI,
             OLCU_KODU = entity.OLCU_KODU,
@@ -65,8 +63,7 @@ public class SterilizasyonPaketDetayController : BaseApiController
         var entity = new STERILIZASYON_PAKET_DETAY
         {
             STERILIZASYON_PAKET_DETAY_KODU = dto.STERILIZASYON_PAKET_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            STERILIZASYON_PAKET_KODU = dto.STERILIZASYON_PAKET_KODU,
+STERILIZASYON_PAKET_KODU = dto.STERILIZASYON_PAKET_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             STERILIZASYON_MALZEME_MIKTARI = dto.STERILIZASYON_MALZEME_MIKTARI,
             OLCU_KODU = dto.OLCU_KODU,
@@ -88,7 +85,6 @@ public class SterilizasyonPaketDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.STERILIZASYON_PAKET_KODU = dto.STERILIZASYON_PAKET_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;
         entity.STERILIZASYON_MALZEME_MIKTARI = dto.STERILIZASYON_MALZEME_MIKTARI;

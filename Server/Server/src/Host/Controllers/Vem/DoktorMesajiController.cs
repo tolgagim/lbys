@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.DoktorMesaji;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DoktorMesajiController : BaseApiController
             .Select(e => new DoktorMesajiDto
             {
                 DOKTOR_MESAJI_KODU = e.DOKTOR_MESAJI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_MESAJLARI_TURU = e.HASTA_MESAJLARI_TURU,
                 MESAJ_DETAYI = e.MESAJ_DETAYI,
                 MESAJ_TARIHI = e.MESAJ_TARIHI,
@@ -48,8 +47,7 @@ public class DoktorMesajiController : BaseApiController
         return new DoktorMesajiDto
         {
             DOKTOR_MESAJI_KODU = entity.DOKTOR_MESAJI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_MESAJLARI_TURU = entity.HASTA_MESAJLARI_TURU,
             MESAJ_DETAYI = entity.MESAJ_DETAYI,
             MESAJ_TARIHI = entity.MESAJ_TARIHI,
@@ -63,8 +61,7 @@ public class DoktorMesajiController : BaseApiController
         var entity = new DOKTOR_MESAJI
         {
             DOKTOR_MESAJI_KODU = dto.DOKTOR_MESAJI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_MESAJLARI_TURU = dto.HASTA_MESAJLARI_TURU,
             MESAJ_DETAYI = dto.MESAJ_DETAYI,
             MESAJ_TARIHI = dto.MESAJ_TARIHI,
@@ -85,7 +82,6 @@ public class DoktorMesajiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_MESAJLARI_TURU = dto.HASTA_MESAJLARI_TURU;
         entity.MESAJ_DETAYI = dto.MESAJ_DETAYI;

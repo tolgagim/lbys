@@ -16,8 +16,8 @@
         "SendNewPassword": "Yeni Şifre Gönder",
         "EmailValidation": "Geçerli bir mail adresi girin",
         "Email": "Mail Adresi",
-        "RightTitle": "LogNet Crm: Evde Hasta Bakımının Geleceği",
-        "RightContent": "Sağlık hizmetlerinde devrim yaratan LogNet Crm ile evde hasta bakımını yeniden keşfedin. Hızlı, güvenilir ve kolay kullanımlı platformumuz, hastaların ihtiyaç duyduğu anlarda en iyi bakımı almasını sağlıyor. Randevudan doktor yönlendirmeye, tıbbi işlemlerin kaydından takibe kadar her adımda yanınızdayız. LogNet Crm, 600'den fazla düzen kombinasyonu sunarak, her ihtiyaca özel çözümlerle sağlık hizmetlerinde yeni bir dönem başlatıyor. Nerede olursanız olun, LogNet Crm'in yenilikçi tasarımı ve mühendislik harikası platformu ile tanışın!"
+        "RightTitle": "Emoda Saglik Crm: Evde Hasta Bakımının Geleceği",
+        "RightContent": "Sağlık hizmetlerinde devrim yaratan Emoda Saglik Crm ile evde hasta bakımını yeniden keşfedin. Hızlı, güvenilir ve kolay kullanımlı platformumuz, hastaların ihtiyaç duyduğu anlarda en iyi bakımı almasını sağlıyor. Randevudan doktor yönlendirmeye, tıbbi işlemlerin kaydından takibe kadar her adımda yanınızdayız. Emoda Saglik Crm, 600'den fazla düzen kombinasyonu sunarak, her ihtiyaca özel çözümlerle sağlık hizmetlerinde yeni bir dönem başlatıyor. Nerede olursanız olun, Emoda Saglik Crm'in yenilikçi tasarımı ve mühendislik harikası platformu ile tanışın!"
     },
     "Branches": {
         "PageTitle": "Şubeler",
@@ -238,7 +238,7 @@
         "DateOfBirth": "Doğum Tarihi",
         "ClickOnItToChangeTheProfileImage": "Profil resmini değiştirmek için üstüne tıklayın",
         "ProfileImageUpdateIsSuccessful": "Profil fotoğrafı başarıyla değiştirildi",
-        "Password": "Parola", 
+        "Password": "Parola",
         "ConfirmPassword": "Parola Tekrarla"
     },
     "Appointments": {
@@ -400,7 +400,7 @@
     "Home": {
         "PageTitle": "Ana Sayfa",
         "PapeTitleCrm": "Kolay Crm İşlemleri",
-        "SubTitle": "Log Net Crm",
+        "SubTitle": "Emoda Lbys Crm",
         "PanelTitle": "Kayıt Sayıları - Tüm",
         "CustomerCount": "Müşteri Sayısı"
     },

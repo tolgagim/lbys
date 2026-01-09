@@ -8,6 +8,7 @@ public class DepoDto
     public string? BINA_KODU { get; set; }
     public string? MKYS_KODU { get; set; }
     public string? MKYS_KULLANICI_KODU { get; set; }
-    public bool AKTIF { get; set; }
+    public string? AKTIFLIK_BILGISI { get; set; }
+    public string? MKYS_KULLANICI_SIFRESI { get; set; }
 }
 

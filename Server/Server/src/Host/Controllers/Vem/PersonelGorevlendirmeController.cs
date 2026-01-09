@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelGorevlendirme;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelGorevlendirmeController : BaseApiController
             .Select(e => new PersonelGorevlendirmeDto
             {
                 PERSONEL_GOREVLENDIRME_KODU = e.PERSONEL_GOREVLENDIRME_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 GOREV_TURU = e.GOREV_TURU,
                 GOREVLENDIRME_BASLAMA_TARIHI = e.GOREVLENDIRME_BASLAMA_TARIHI,
                 GOREVLENDIRME_BITIS_TARIHI = e.GOREVLENDIRME_BITIS_TARIHI,
@@ -51,8 +50,7 @@ public class PersonelGorevlendirmeController : BaseApiController
         return new PersonelGorevlendirmeDto
         {
             PERSONEL_GOREVLENDIRME_KODU = entity.PERSONEL_GOREVLENDIRME_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             GOREV_TURU = entity.GOREV_TURU,
             GOREVLENDIRME_BASLAMA_TARIHI = entity.GOREVLENDIRME_BASLAMA_TARIHI,
             GOREVLENDIRME_BITIS_TARIHI = entity.GOREVLENDIRME_BITIS_TARIHI,
@@ -69,8 +67,7 @@ public class PersonelGorevlendirmeController : BaseApiController
         var entity = new PERSONEL_GOREVLENDIRME
         {
             PERSONEL_GOREVLENDIRME_KODU = dto.PERSONEL_GOREVLENDIRME_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             GOREV_TURU = dto.GOREV_TURU,
             GOREVLENDIRME_BASLAMA_TARIHI = dto.GOREVLENDIRME_BASLAMA_TARIHI,
             GOREVLENDIRME_BITIS_TARIHI = dto.GOREVLENDIRME_BITIS_TARIHI,
@@ -94,7 +91,6 @@ public class PersonelGorevlendirmeController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.GOREV_TURU = dto.GOREV_TURU;
         entity.GOREVLENDIRME_BASLAMA_TARIHI = dto.GOREVLENDIRME_BASLAMA_TARIHI;

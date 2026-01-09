@@ -15,9 +15,7 @@ public class KAN_URUN : VemEntity
     [Key]
     public string KAN_URUN_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>Kan Ã¼rÃ¼nÃ¼n adÄ± bilgisidir.</summary>
+/// <summary>Kan Ã¼rÃ¼nÃ¼n adÄ± bilgisidir.</summary>
     public string KAN_URUN_ADI { get; set; }
 
     /// <summary>SaÄŸlÄ±k tesisinde hastaya uygulanan iÅŸlemler iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi ta...</summary>

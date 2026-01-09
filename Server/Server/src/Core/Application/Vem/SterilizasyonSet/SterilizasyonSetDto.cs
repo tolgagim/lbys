@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.SterilizasyonSet;
+namespace Server.Application.Vem.SterilizasyonSet;
 
 public class SterilizasyonSetDto
 {
     public string? STERILIZASYON_SET_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? DEPO_KODU { get; set; }
+public string? DEPO_KODU { get; set; }
     public string? STERILIZASYON_PAKET_KODU { get; set; }
     public string? BARKOD { get; set; }
     public string? BARKOD_BASAN_KULLANICI_KODU { get; set; }

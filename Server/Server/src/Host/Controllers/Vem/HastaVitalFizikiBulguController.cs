@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaVitalFizikiBulgu;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaVitalFizikiBulguController : BaseApiController
             .Select(e => new HastaVitalFizikiBulguDto
             {
                 HASTA_VITAL_FIZIKI_BULGU_KODU = e.HASTA_VITAL_FIZIKI_BULGU_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 ISLEM_ZAMANI = e.ISLEM_ZAMANI,
                 SISTOLIK_KAN_BASINCI_DEGERI = e.SISTOLIK_KAN_BASINCI_DEGERI,
@@ -61,8 +60,7 @@ public class HastaVitalFizikiBulguController : BaseApiController
         return new HastaVitalFizikiBulguDto
         {
             HASTA_VITAL_FIZIKI_BULGU_KODU = entity.HASTA_VITAL_FIZIKI_BULGU_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             ISLEM_ZAMANI = entity.ISLEM_ZAMANI,
             SISTOLIK_KAN_BASINCI_DEGERI = entity.SISTOLIK_KAN_BASINCI_DEGERI,
@@ -89,8 +87,7 @@ public class HastaVitalFizikiBulguController : BaseApiController
         var entity = new HASTA_VITAL_FIZIKI_BULGU
         {
             HASTA_VITAL_FIZIKI_BULGU_KODU = dto.HASTA_VITAL_FIZIKI_BULGU_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             ISLEM_ZAMANI = dto.ISLEM_ZAMANI,
             SISTOLIK_KAN_BASINCI_DEGERI = dto.SISTOLIK_KAN_BASINCI_DEGERI,
@@ -124,7 +121,6 @@ public class HastaVitalFizikiBulguController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.ISLEM_ZAMANI = dto.ISLEM_ZAMANI;

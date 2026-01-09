@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.Firma;
+namespace Server.Application.Vem.Firma;
 
 public class FirmaDto
 {
     public string? FIRMA_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? FIRMA_ADI { get; set; }
+public string? FIRMA_ADI { get; set; }
     public string? TELEFON_NUMARASI { get; set; }
     public string? YETKILI_KISI { get; set; }
     public string? FIRMA_ADRESI { get; set; }

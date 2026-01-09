@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaMalzeme;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaMalzemeController : BaseApiController
             .Select(e => new HastaMalzemeDto
             {
                 HASTA_MALZEME_KODU = e.HASTA_MALZEME_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 STOK_HAREKET_KODU = e.STOK_HAREKET_KODU,
@@ -69,8 +68,7 @@ public class HastaMalzemeController : BaseApiController
         return new HastaMalzemeDto
         {
             HASTA_MALZEME_KODU = entity.HASTA_MALZEME_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             STOK_HAREKET_KODU = entity.STOK_HAREKET_KODU,
@@ -105,8 +103,7 @@ public class HastaMalzemeController : BaseApiController
         var entity = new HASTA_MALZEME
         {
             HASTA_MALZEME_KODU = dto.HASTA_MALZEME_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             STOK_HAREKET_KODU = dto.STOK_HAREKET_KODU,
@@ -148,7 +145,6 @@ public class HastaMalzemeController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;

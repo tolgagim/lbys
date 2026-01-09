@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.MaddeBagimliligi;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class MaddeBagimliligiController : BaseApiController
             .Select(e => new MaddeBagimliligiDto
             {
                 MADDE_BAGIMLILIGI_KODU = e.MADDE_BAGIMLILIGI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 BILGI_ALINAN_KAYNAK = e.BILGI_ALINAN_KAYNAK,
                 DANISMA_TEDAVI_HIZMET_DURUMU = e.DANISMA_TEDAVI_HIZMET_DURUMU,
                 DANISMA_TEDAVI_HIZMET_ZAMANI = e.DANISMA_TEDAVI_HIZMET_ZAMANI,
@@ -69,8 +68,7 @@ public class MaddeBagimliligiController : BaseApiController
         return new MaddeBagimliligiDto
         {
             MADDE_BAGIMLILIGI_KODU = entity.MADDE_BAGIMLILIGI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             BILGI_ALINAN_KAYNAK = entity.BILGI_ALINAN_KAYNAK,
             DANISMA_TEDAVI_HIZMET_DURUMU = entity.DANISMA_TEDAVI_HIZMET_DURUMU,
             DANISMA_TEDAVI_HIZMET_ZAMANI = entity.DANISMA_TEDAVI_HIZMET_ZAMANI,
@@ -105,8 +103,7 @@ public class MaddeBagimliligiController : BaseApiController
         var entity = new MADDE_BAGIMLILIGI
         {
             MADDE_BAGIMLILIGI_KODU = dto.MADDE_BAGIMLILIGI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             BILGI_ALINAN_KAYNAK = dto.BILGI_ALINAN_KAYNAK,
             DANISMA_TEDAVI_HIZMET_DURUMU = dto.DANISMA_TEDAVI_HIZMET_DURUMU,
             DANISMA_TEDAVI_HIZMET_ZAMANI = dto.DANISMA_TEDAVI_HIZMET_ZAMANI,
@@ -148,7 +145,6 @@ public class MaddeBagimliligiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.BILGI_ALINAN_KAYNAK = dto.BILGI_ALINAN_KAYNAK;
         entity.DANISMA_TEDAVI_HIZMET_DURUMU = dto.DANISMA_TEDAVI_HIZMET_DURUMU;

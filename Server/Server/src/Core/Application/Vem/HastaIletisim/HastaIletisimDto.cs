@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaIletisim;
+namespace Server.Application.Vem.HastaIletisim;
 
 public class HastaIletisimDto
 {
     public string? HASTA_ILETISIM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? ADRES_TIPI { get; set; }
     public string? ADRES_KODU_SEVIYESI { get; set; }

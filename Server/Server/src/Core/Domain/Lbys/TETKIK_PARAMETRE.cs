@@ -20,7 +20,7 @@ public class TETKIK_PARAMETRE : VemEntity
     public string? MEDULA_PARAMETRE_KODU { get; set; }
     public string? LOINC_KODU { get; set; }
     public string? RAPOR_SONUC_SIRASI { get; set; }
-    public bool AKTIF { get; set; } = true;
+    public string? IPTAL_DURUMU { get; set; }
 
     // Navigation
     [ForeignKey("TETKIK_KODU")]

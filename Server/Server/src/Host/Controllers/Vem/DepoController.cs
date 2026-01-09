@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Depo;
 using Server.Domain.Lbys;
@@ -29,7 +29,8 @@ public class DepoController : BaseApiController
                 BINA_KODU = e.BINA_KODU,
                 MKYS_KODU = e.MKYS_KODU,
                 MKYS_KULLANICI_KODU = e.MKYS_KULLANICI_KODU,
-                AKTIF = e.AKTIF,
+                AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
+                MKYS_KULLANICI_SIFRESI = e.MKYS_KULLANICI_SIFRESI,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -54,7 +55,8 @@ public class DepoController : BaseApiController
             BINA_KODU = entity.BINA_KODU,
             MKYS_KODU = entity.MKYS_KODU,
             MKYS_KULLANICI_KODU = entity.MKYS_KULLANICI_KODU,
-            AKTIF = entity.AKTIF,
+            AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
+            MKYS_KULLANICI_SIFRESI = entity.MKYS_KULLANICI_SIFRESI,
         };
     }
 
@@ -70,7 +72,8 @@ public class DepoController : BaseApiController
             BINA_KODU = dto.BINA_KODU,
             MKYS_KODU = dto.MKYS_KODU,
             MKYS_KULLANICI_KODU = dto.MKYS_KULLANICI_KODU,
-            AKTIF = dto.AKTIF,
+            AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
+            MKYS_KULLANICI_SIFRESI = dto.MKYS_KULLANICI_SIFRESI,
         };
 
         _db.Set<DEPO>().Add(entity);
@@ -88,12 +91,14 @@ public class DepoController : BaseApiController
 
         if (entity == null)
             return NotFound();
+
         entity.DEPO_ADI = dto.DEPO_ADI;
         entity.DEPO_TURU = dto.DEPO_TURU;
         entity.BINA_KODU = dto.BINA_KODU;
         entity.MKYS_KODU = dto.MKYS_KODU;
         entity.MKYS_KULLANICI_KODU = dto.MKYS_KULLANICI_KODU;
-        entity.AKTIF = dto.AKTIF;
+        entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
+        entity.MKYS_KULLANICI_SIFRESI = dto.MKYS_KULLANICI_SIFRESI;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

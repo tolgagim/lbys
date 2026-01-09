@@ -15,9 +15,7 @@ public class KURUL_RAPOR : VemEntity
     [Key]
     public string KURUL_RAPOR_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde dÃ¼zenlenen saÄŸlÄ±k kurulu tarafÄ±ndan verilen raporlarÄ±n tanÄ±m bi...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde dÃ¼zenlenen saÄŸlÄ±k kurulu tarafÄ±ndan verilen raporlarÄ±n tanÄ±m bi...</summary>
     [ForeignKey("KurulNavigation")]
     public string KURUL_KODU { get; set; }
 

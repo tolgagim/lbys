@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.SterilizasyonSetDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class SterilizasyonSetDetayController : BaseApiController
             .Select(e => new SterilizasyonSetDetayDto
             {
                 STERILIZASYON_SET_DETAY_KODU = e.STERILIZASYON_SET_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                STERILIZASYON_SET_KODU = e.STERILIZASYON_SET_KODU,
+STERILIZASYON_SET_KODU = e.STERILIZASYON_SET_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 STERILIZASYON_MALZEME_MIKTARI = e.STERILIZASYON_MALZEME_MIKTARI,
             })
@@ -47,8 +46,7 @@ public class SterilizasyonSetDetayController : BaseApiController
         return new SterilizasyonSetDetayDto
         {
             STERILIZASYON_SET_DETAY_KODU = entity.STERILIZASYON_SET_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            STERILIZASYON_SET_KODU = entity.STERILIZASYON_SET_KODU,
+STERILIZASYON_SET_KODU = entity.STERILIZASYON_SET_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             STERILIZASYON_MALZEME_MIKTARI = entity.STERILIZASYON_MALZEME_MIKTARI,
         };
@@ -61,8 +59,7 @@ public class SterilizasyonSetDetayController : BaseApiController
         var entity = new STERILIZASYON_SET_DETAY
         {
             STERILIZASYON_SET_DETAY_KODU = dto.STERILIZASYON_SET_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            STERILIZASYON_SET_KODU = dto.STERILIZASYON_SET_KODU,
+STERILIZASYON_SET_KODU = dto.STERILIZASYON_SET_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             STERILIZASYON_MALZEME_MIKTARI = dto.STERILIZASYON_MALZEME_MIKTARI,
         };
@@ -82,7 +79,6 @@ public class SterilizasyonSetDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.STERILIZASYON_SET_KODU = dto.STERILIZASYON_SET_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;
         entity.STERILIZASYON_MALZEME_MIKTARI = dto.STERILIZASYON_MALZEME_MIKTARI;

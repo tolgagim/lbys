@@ -45,6 +45,12 @@ export interface KullaniciListFilter extends BaseListFilter {
   kullaniciAdi?: string;
   ekleyenKullaniciKodu?: string;
   guncelleyenKullaniciKodu?: string;
+  AD?: string | null;
+  AKTIFLIK_BILGISI?: string | null;
+  PAROLA?: string | null;
+  PAROLA_SIFRELEME_TURU?: string | null;
+  SOYADI?: string | null;
+  TC_KIMLIK_NUMARASI?: string | null;
 }
 
 export const newKullanici: CreateKullaniciDto = {

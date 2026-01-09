@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.EkOdemeDonem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class EkOdemeDonemController : BaseApiController
             .Select(e => new EkOdemeDonemDto
             {
                 EK_ODEME_DONEM_KODU = e.EK_ODEME_DONEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                YIL = e.YIL,
+YIL = e.YIL,
                 AY = e.AY,
                 BORDRO_NUMARASI = e.BORDRO_NUMARASI,
                 GIRISIMSEL_ISLEM_PUAN_TOPLAMI = e.GIRISIMSEL_ISLEM_PUAN_TOPLAMI,
@@ -53,8 +52,7 @@ public class EkOdemeDonemController : BaseApiController
         return new EkOdemeDonemDto
         {
             EK_ODEME_DONEM_KODU = entity.EK_ODEME_DONEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            YIL = entity.YIL,
+YIL = entity.YIL,
             AY = entity.AY,
             BORDRO_NUMARASI = entity.BORDRO_NUMARASI,
             GIRISIMSEL_ISLEM_PUAN_TOPLAMI = entity.GIRISIMSEL_ISLEM_PUAN_TOPLAMI,
@@ -73,8 +71,7 @@ public class EkOdemeDonemController : BaseApiController
         var entity = new EK_ODEME_DONEM
         {
             EK_ODEME_DONEM_KODU = dto.EK_ODEME_DONEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            YIL = dto.YIL,
+YIL = dto.YIL,
             AY = dto.AY,
             BORDRO_NUMARASI = dto.BORDRO_NUMARASI,
             GIRISIMSEL_ISLEM_PUAN_TOPLAMI = dto.GIRISIMSEL_ISLEM_PUAN_TOPLAMI,
@@ -100,7 +97,6 @@ public class EkOdemeDonemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.YIL = dto.YIL;
         entity.AY = dto.AY;
         entity.BORDRO_NUMARASI = dto.BORDRO_NUMARASI;

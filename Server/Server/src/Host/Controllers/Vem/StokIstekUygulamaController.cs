@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokIstekUygulama;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokIstekUygulamaController : BaseApiController
             .Select(e => new StokIstekUygulamaDto
             {
                 STOK_ISTEK_UYGULAMA_KODU = e.STOK_ISTEK_UYGULAMA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                STOK_ISTEK_HAREKET_KODU = e.STOK_ISTEK_HAREKET_KODU,
+STOK_ISTEK_HAREKET_KODU = e.STOK_ISTEK_HAREKET_KODU,
                 ORDER_PLANLANAN_ZAMAN = e.ORDER_PLANLANAN_ZAMAN,
                 ORDER_UYGULANAN_ZAMAN = e.ORDER_UYGULANAN_ZAMAN,
                 UYGULAYAN_HEMSIRE_KODU = e.UYGULAYAN_HEMSIRE_KODU,
@@ -53,8 +52,7 @@ public class StokIstekUygulamaController : BaseApiController
         return new StokIstekUygulamaDto
         {
             STOK_ISTEK_UYGULAMA_KODU = entity.STOK_ISTEK_UYGULAMA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            STOK_ISTEK_HAREKET_KODU = entity.STOK_ISTEK_HAREKET_KODU,
+STOK_ISTEK_HAREKET_KODU = entity.STOK_ISTEK_HAREKET_KODU,
             ORDER_PLANLANAN_ZAMAN = entity.ORDER_PLANLANAN_ZAMAN,
             ORDER_UYGULANAN_ZAMAN = entity.ORDER_UYGULANAN_ZAMAN,
             UYGULAYAN_HEMSIRE_KODU = entity.UYGULAYAN_HEMSIRE_KODU,
@@ -73,8 +71,7 @@ public class StokIstekUygulamaController : BaseApiController
         var entity = new STOK_ISTEK_UYGULAMA
         {
             STOK_ISTEK_UYGULAMA_KODU = dto.STOK_ISTEK_UYGULAMA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU,
+STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU,
             ORDER_PLANLANAN_ZAMAN = dto.ORDER_PLANLANAN_ZAMAN,
             ORDER_UYGULANAN_ZAMAN = dto.ORDER_UYGULANAN_ZAMAN,
             UYGULAYAN_HEMSIRE_KODU = dto.UYGULAYAN_HEMSIRE_KODU,
@@ -100,7 +97,6 @@ public class StokIstekUygulamaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU;
         entity.ORDER_PLANLANAN_ZAMAN = dto.ORDER_PLANLANAN_ZAMAN;
         entity.ORDER_UYGULANAN_ZAMAN = dto.ORDER_UYGULANAN_ZAMAN;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelOgrenim;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelOgrenimController : BaseApiController
             .Select(e => new PersonelOgrenimDto
             {
                 PERSONEL_OGRENIM_KODU = e.PERSONEL_OGRENIM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 OGRENIM_DURUMU = e.OGRENIM_DURUMU,
                 OKUL_ADI = e.OKUL_ADI,
                 OKULA_BASLANGIC_TARIHI = e.OKULA_BASLANGIC_TARIHI,
@@ -51,8 +50,7 @@ public class PersonelOgrenimController : BaseApiController
         return new PersonelOgrenimDto
         {
             PERSONEL_OGRENIM_KODU = entity.PERSONEL_OGRENIM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             OGRENIM_DURUMU = entity.OGRENIM_DURUMU,
             OKUL_ADI = entity.OKUL_ADI,
             OKULA_BASLANGIC_TARIHI = entity.OKULA_BASLANGIC_TARIHI,
@@ -69,8 +67,7 @@ public class PersonelOgrenimController : BaseApiController
         var entity = new PERSONEL_OGRENIM
         {
             PERSONEL_OGRENIM_KODU = dto.PERSONEL_OGRENIM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             OGRENIM_DURUMU = dto.OGRENIM_DURUMU,
             OKUL_ADI = dto.OKUL_ADI,
             OKULA_BASLANGIC_TARIHI = dto.OKULA_BASLANGIC_TARIHI,
@@ -94,7 +91,6 @@ public class PersonelOgrenimController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.OGRENIM_DURUMU = dto.OGRENIM_DURUMU;
         entity.OKUL_ADI = dto.OKUL_ADI;

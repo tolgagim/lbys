@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelBordroSondurum;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelBordroSondurumController : BaseApiController
             .Select(e => new PersonelBordroSondurumDto
             {
                 PERSONEL_SONDURUM_KODU = e.PERSONEL_SONDURUM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 PERSONEL_KADEMESI = e.PERSONEL_KADEMESI,
                 PERSONEL_DERECESI = e.PERSONEL_DERECESI,
                 EMEKLI_DERECESI = e.EMEKLI_DERECESI,
@@ -59,8 +58,7 @@ public class PersonelBordroSondurumController : BaseApiController
         return new PersonelBordroSondurumDto
         {
             PERSONEL_SONDURUM_KODU = entity.PERSONEL_SONDURUM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             PERSONEL_KADEMESI = entity.PERSONEL_KADEMESI,
             PERSONEL_DERECESI = entity.PERSONEL_DERECESI,
             EMEKLI_DERECESI = entity.EMEKLI_DERECESI,
@@ -85,8 +83,7 @@ public class PersonelBordroSondurumController : BaseApiController
         var entity = new PERSONEL_BORDRO_SONDURUM
         {
             PERSONEL_SONDURUM_KODU = dto.PERSONEL_SONDURUM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             PERSONEL_KADEMESI = dto.PERSONEL_KADEMESI,
             PERSONEL_DERECESI = dto.PERSONEL_DERECESI,
             EMEKLI_DERECESI = dto.EMEKLI_DERECESI,
@@ -118,7 +115,6 @@ public class PersonelBordroSondurumController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.PERSONEL_KADEMESI = dto.PERSONEL_KADEMESI;
         entity.PERSONEL_DERECESI = dto.PERSONEL_DERECESI;

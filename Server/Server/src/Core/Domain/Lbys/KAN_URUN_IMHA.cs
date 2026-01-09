@@ -15,9 +15,7 @@ public class KAN_URUN_IMHA : VemEntity
     [Key]
     public string KAN_URUN_IMHA_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisindeki depolarda bulunan kan Ã¼rÃ¼nÃ¼ iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi...</summary>
+/// <summary>SaÄŸlÄ±k tesisindeki depolarda bulunan kan Ã¼rÃ¼nÃ¼ iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi...</summary>
     [ForeignKey("KanStokNavigation")]
     public string KAN_STOK_KODU { get; set; }
 

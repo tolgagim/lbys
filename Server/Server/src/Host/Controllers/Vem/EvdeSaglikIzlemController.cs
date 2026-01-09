@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.EvdeSaglikIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class EvdeSaglikIzlemController : BaseApiController
             .Select(e => new EvdeSaglikIzlemDto
             {
                 EVDE_SAGLIK_IZLEM_KODU = e.EVDE_SAGLIK_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 AGRI = e.AGRI,
                 AYDINLATMA = e.AYDINLATMA,
@@ -69,8 +68,7 @@ public class EvdeSaglikIzlemController : BaseApiController
         return new EvdeSaglikIzlemDto
         {
             EVDE_SAGLIK_IZLEM_KODU = entity.EVDE_SAGLIK_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             AGRI = entity.AGRI,
             AYDINLATMA = entity.AYDINLATMA,
@@ -105,8 +103,7 @@ public class EvdeSaglikIzlemController : BaseApiController
         var entity = new EVDE_SAGLIK_IZLEM
         {
             EVDE_SAGLIK_IZLEM_KODU = dto.EVDE_SAGLIK_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             AGRI = dto.AGRI,
             AYDINLATMA = dto.AYDINLATMA,
@@ -148,7 +145,6 @@ public class EvdeSaglikIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.AGRI = dto.AGRI;

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.Radyoloji;
+namespace Server.Application.Vem.Radyoloji;
 
 public class RadyolojiDto
 {
     public string? RADYOLOJI_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? BIRIM_KODU { get; set; }
     public DateTime TETKIK_CEKIM_KABUL_ZAMANI { get; set; }

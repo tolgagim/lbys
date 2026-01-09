@@ -10,6 +10,6 @@ public class TetkikParametreDto
     public string? MEDULA_PARAMETRE_KODU { get; set; }
     public string? LOINC_KODU { get; set; }
     public string? RAPOR_SONUC_SIRASI { get; set; }
-    public bool AKTIF { get; set; }
+    public string? IPTAL_DURUMU { get; set; }
 }
 

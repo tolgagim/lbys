@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.AntibiyotikSonuc;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class AntibiyotikSonucController : BaseApiController
             .Select(e => new AntibiyotikSonucDto
             {
                 ANTIBIYOTIK_SONUC_KODU = e.ANTIBIYOTIK_SONUC_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                BAKTERI_SONUC_KODU = e.BAKTERI_SONUC_KODU,
+BAKTERI_SONUC_KODU = e.BAKTERI_SONUC_KODU,
                 ANTIBIYOTIK_KODU = e.ANTIBIYOTIK_KODU,
                 TETKIK_SONUCU = e.TETKIK_SONUCU,
                 ZON_CAPI = e.ZON_CAPI,
@@ -50,8 +49,7 @@ public class AntibiyotikSonucController : BaseApiController
         return new AntibiyotikSonucDto
         {
             ANTIBIYOTIK_SONUC_KODU = entity.ANTIBIYOTIK_SONUC_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            BAKTERI_SONUC_KODU = entity.BAKTERI_SONUC_KODU,
+BAKTERI_SONUC_KODU = entity.BAKTERI_SONUC_KODU,
             ANTIBIYOTIK_KODU = entity.ANTIBIYOTIK_KODU,
             TETKIK_SONUCU = entity.TETKIK_SONUCU,
             ZON_CAPI = entity.ZON_CAPI,
@@ -67,8 +65,7 @@ public class AntibiyotikSonucController : BaseApiController
         var entity = new ANTIBIYOTIK_SONUC
         {
             ANTIBIYOTIK_SONUC_KODU = dto.ANTIBIYOTIK_SONUC_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            BAKTERI_SONUC_KODU = dto.BAKTERI_SONUC_KODU,
+BAKTERI_SONUC_KODU = dto.BAKTERI_SONUC_KODU,
             ANTIBIYOTIK_KODU = dto.ANTIBIYOTIK_KODU,
             TETKIK_SONUCU = dto.TETKIK_SONUCU,
             ZON_CAPI = dto.ZON_CAPI,
@@ -91,7 +88,6 @@ public class AntibiyotikSonucController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.BAKTERI_SONUC_KODU = dto.BAKTERI_SONUC_KODU;
         entity.ANTIBIYOTIK_KODU = dto.ANTIBIYOTIK_KODU;
         entity.TETKIK_SONUCU = dto.TETKIK_SONUCU;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Hemoglobinopati;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HemoglobinopatiController : BaseApiController
             .Select(e => new HemoglobinopatiDto
             {
                 HEMOGLOBINOPATI_KODU = e.HEMOGLOBINOPATI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HEMOGLOBINOPATI_TARAMA_SONUCU = e.HEMOGLOBINOPATI_TARAMA_SONUCU,
                 ES_ADAYI_TC_KIMLIK_NUMARASI = e.ES_ADAYI_TC_KIMLIK_NUMARASI,
                 ES_ADAYI_TELEFON_NUMARASI = e.ES_ADAYI_TELEFON_NUMARASI,
@@ -52,8 +51,7 @@ public class HemoglobinopatiController : BaseApiController
         return new HemoglobinopatiDto
         {
             HEMOGLOBINOPATI_KODU = entity.HEMOGLOBINOPATI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HEMOGLOBINOPATI_TARAMA_SONUCU = entity.HEMOGLOBINOPATI_TARAMA_SONUCU,
             ES_ADAYI_TC_KIMLIK_NUMARASI = entity.ES_ADAYI_TC_KIMLIK_NUMARASI,
             ES_ADAYI_TELEFON_NUMARASI = entity.ES_ADAYI_TELEFON_NUMARASI,
@@ -71,8 +69,7 @@ public class HemoglobinopatiController : BaseApiController
         var entity = new HEMOGLOBINOPATI
         {
             HEMOGLOBINOPATI_KODU = dto.HEMOGLOBINOPATI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HEMOGLOBINOPATI_TARAMA_SONUCU = dto.HEMOGLOBINOPATI_TARAMA_SONUCU,
             ES_ADAYI_TC_KIMLIK_NUMARASI = dto.ES_ADAYI_TC_KIMLIK_NUMARASI,
             ES_ADAYI_TELEFON_NUMARASI = dto.ES_ADAYI_TELEFON_NUMARASI,
@@ -97,7 +94,6 @@ public class HemoglobinopatiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HEMOGLOBINOPATI_TARAMA_SONUCU = dto.HEMOGLOBINOPATI_TARAMA_SONUCU;
         entity.ES_ADAYI_TC_KIMLIK_NUMARASI = dto.ES_ADAYI_TC_KIMLIK_NUMARASI;

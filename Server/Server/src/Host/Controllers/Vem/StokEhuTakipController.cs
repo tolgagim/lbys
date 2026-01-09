@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokEhuTakip;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokEhuTakipController : BaseApiController
             .Select(e => new StokEhuTakipDto
             {
                 STOK_EHU_TAKIP_KODU = e.STOK_EHU_TAKIP_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                STOK_ISTEK_KODU = e.STOK_ISTEK_KODU,
+STOK_ISTEK_KODU = e.STOK_ISTEK_KODU,
                 STOK_ISTEK_HAREKET_KODU = e.STOK_ISTEK_HAREKET_KODU,
                 STOK_KART_KODU = e.STOK_KART_KODU,
                 EHU_ONAY_BASLAMA_ZAMANI = e.EHU_ONAY_BASLAMA_ZAMANI,
@@ -57,8 +56,7 @@ public class StokEhuTakipController : BaseApiController
         return new StokEhuTakipDto
         {
             STOK_EHU_TAKIP_KODU = entity.STOK_EHU_TAKIP_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            STOK_ISTEK_KODU = entity.STOK_ISTEK_KODU,
+STOK_ISTEK_KODU = entity.STOK_ISTEK_KODU,
             STOK_ISTEK_HAREKET_KODU = entity.STOK_ISTEK_HAREKET_KODU,
             STOK_KART_KODU = entity.STOK_KART_KODU,
             EHU_ONAY_BASLAMA_ZAMANI = entity.EHU_ONAY_BASLAMA_ZAMANI,
@@ -81,8 +79,7 @@ public class StokEhuTakipController : BaseApiController
         var entity = new STOK_EHU_TAKIP
         {
             STOK_EHU_TAKIP_KODU = dto.STOK_EHU_TAKIP_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU,
+STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU,
             STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU,
             STOK_KART_KODU = dto.STOK_KART_KODU,
             EHU_ONAY_BASLAMA_ZAMANI = dto.EHU_ONAY_BASLAMA_ZAMANI,
@@ -112,7 +109,6 @@ public class StokEhuTakipController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU;
         entity.STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU;
         entity.STOK_KART_KODU = dto.STOK_KART_KODU;

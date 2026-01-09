@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.BebekCocukIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class BebekCocukIzlemController : BaseApiController
             .Select(e => new BebekCocukIzlemDto
             {
                 BEBEK_COCUK_IZLEM_KODU = e.BEBEK_COCUK_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KACINCI_IZLEM = e.KACINCI_IZLEM,
                 AGIZDAN_SIVI_TEDAVISI = e.AGIZDAN_SIVI_TEDAVISI,
@@ -75,8 +74,7 @@ public class BebekCocukIzlemController : BaseApiController
         return new BebekCocukIzlemDto
         {
             BEBEK_COCUK_IZLEM_KODU = entity.BEBEK_COCUK_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KACINCI_IZLEM = entity.KACINCI_IZLEM,
             AGIZDAN_SIVI_TEDAVISI = entity.AGIZDAN_SIVI_TEDAVISI,
@@ -117,8 +115,7 @@ public class BebekCocukIzlemController : BaseApiController
         var entity = new BEBEK_COCUK_IZLEM
         {
             BEBEK_COCUK_IZLEM_KODU = dto.BEBEK_COCUK_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KACINCI_IZLEM = dto.KACINCI_IZLEM,
             AGIZDAN_SIVI_TEDAVISI = dto.AGIZDAN_SIVI_TEDAVISI,
@@ -166,7 +163,6 @@ public class BebekCocukIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.KACINCI_IZLEM = dto.KACINCI_IZLEM;

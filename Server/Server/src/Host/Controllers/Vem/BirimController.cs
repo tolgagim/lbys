@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Birim;
 using Server.Domain.Lbys;
@@ -26,9 +26,14 @@ public class BirimController : BaseApiController
                 BIRIM_KODU = e.BIRIM_KODU,
                 BIRIM_ADI = e.BIRIM_ADI,
                 BIRIM_TURU = e.BIRIM_TURU,
-                UST_BIRIM_KODU = e.UST_BIRIM_KODU,
-                KURUM_KODU = e.KURUM_KODU,
-                AKTIF = e.AKTIF,
+                AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
+                BINA_KODU = e.BINA_KODU,
+                KLINIK_KODU = e.KLINIK_KODU,
+                MEDULA_BRANS_KODU = e.MEDULA_BRANS_KODU,
+                MHRS_ADI = e.MHRS_ADI,
+                MHRS_KODU = e.MHRS_KODU,
+                MKYS_KODU = e.MKYS_KODU,
+                YATAK_SAYISI = e.YATAK_SAYISI,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -50,9 +55,14 @@ public class BirimController : BaseApiController
             BIRIM_KODU = entity.BIRIM_KODU,
             BIRIM_ADI = entity.BIRIM_ADI,
             BIRIM_TURU = entity.BIRIM_TURU,
-            UST_BIRIM_KODU = entity.UST_BIRIM_KODU,
-            KURUM_KODU = entity.KURUM_KODU,
-            AKTIF = entity.AKTIF,
+            AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
+            BINA_KODU = entity.BINA_KODU,
+            KLINIK_KODU = entity.KLINIK_KODU,
+            MEDULA_BRANS_KODU = entity.MEDULA_BRANS_KODU,
+            MHRS_ADI = entity.MHRS_ADI,
+            MHRS_KODU = entity.MHRS_KODU,
+            MKYS_KODU = entity.MKYS_KODU,
+            YATAK_SAYISI = entity.YATAK_SAYISI,
         };
     }
 
@@ -65,9 +75,14 @@ public class BirimController : BaseApiController
             BIRIM_KODU = dto.BIRIM_KODU,
             BIRIM_ADI = dto.BIRIM_ADI,
             BIRIM_TURU = dto.BIRIM_TURU,
-            UST_BIRIM_KODU = dto.UST_BIRIM_KODU,
-            KURUM_KODU = dto.KURUM_KODU,
-            AKTIF = dto.AKTIF,
+            AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
+            BINA_KODU = dto.BINA_KODU,
+            KLINIK_KODU = dto.KLINIK_KODU,
+            MEDULA_BRANS_KODU = dto.MEDULA_BRANS_KODU,
+            MHRS_ADI = dto.MHRS_ADI,
+            MHRS_KODU = dto.MHRS_KODU,
+            MKYS_KODU = dto.MKYS_KODU,
+            YATAK_SAYISI = dto.YATAK_SAYISI,
         };
 
         _db.Set<BIRIM>().Add(entity);
@@ -85,11 +100,17 @@ public class BirimController : BaseApiController
 
         if (entity == null)
             return NotFound();
+
         entity.BIRIM_ADI = dto.BIRIM_ADI;
         entity.BIRIM_TURU = dto.BIRIM_TURU;
-        entity.UST_BIRIM_KODU = dto.UST_BIRIM_KODU;
-        entity.KURUM_KODU = dto.KURUM_KODU;
-        entity.AKTIF = dto.AKTIF;
+        entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
+        entity.BINA_KODU = dto.BINA_KODU;
+        entity.KLINIK_KODU = dto.KLINIK_KODU;
+        entity.MEDULA_BRANS_KODU = dto.MEDULA_BRANS_KODU;
+        entity.MHRS_ADI = dto.MHRS_ADI;
+        entity.MHRS_KODU = dto.MHRS_KODU;
+        entity.MKYS_KODU = dto.MKYS_KODU;
+        entity.YATAK_SAYISI = dto.YATAK_SAYISI;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

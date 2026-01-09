@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Hasta;
 using Server.Domain.Lbys;
@@ -24,30 +24,34 @@ public class HastaController : BaseApiController
             .Select(e => new HastaDto
             {
                 HASTA_KODU = e.HASTA_KODU,
-                TC_KIMLIK_NO = e.TC_KIMLIK_NO,
+                TC_KIMLIK_NUMARASI = e.TC_KIMLIK_NUMARASI,
                 AD = e.AD,
-                SOYAD = e.SOYAD,
+                SOYADI = e.SOYADI,
                 CINSIYET = e.CINSIYET,
                 DOGUM_TARIHI = e.DOGUM_TARIHI,
                 DOGUM_YERI = e.DOGUM_YERI,
-                ANA_ADI = e.ANA_ADI,
+                ANNE_ADI = e.ANNE_ADI,
                 BABA_ADI = e.BABA_ADI,
                 KAN_GRUBU = e.KAN_GRUBU,
-                MEDENI_HAL = e.MEDENI_HAL,
+                MEDENI_HALI = e.MEDENI_HALI,
                 UYRUK = e.UYRUK,
                 MESLEK = e.MESLEK,
-                EGITIM_DURUMU = e.EGITIM_DURUMU,
-                IL_KODU = e.IL_KODU,
-                ILCE_KODU = e.ILCE_KODU,
-                ADRES = e.ADRES,
-                TELEFON = e.TELEFON,
-                CEP_TELEFON = e.CEP_TELEFON,
-                EMAIL = e.EMAIL,
-                SOSYAL_GUVENCE = e.SOSYAL_GUVENCE,
-                SIGORTA_NO = e.SIGORTA_NO,
-                PROTOKOL_NO = e.PROTOKOL_NO,
-                AKTIF = e.AKTIF,
+                OGRENIM_DURUMU = e.OGRENIM_DURUMU,
                 OLUM_TARIHI = e.OLUM_TARIHI,
+                OLUM_YERI = e.OLUM_YERI,
+                ANNE_HASTA_KODU = e.ANNE_HASTA_KODU,
+                ANNE_TC_KIMLIK_NUMARASI = e.ANNE_TC_KIMLIK_NUMARASI,
+                BABA_HASTA_KODU = e.BABA_HASTA_KODU,
+                BABA_TC_KIMLIK_NUMARASI = e.BABA_TC_KIMLIK_NUMARASI,
+                BEYAN_DOGUM_TARIHI = e.BEYAN_DOGUM_TARIHI,
+                DOGUM_SIRASI = e.DOGUM_SIRASI,
+                ENGELLILIK_DURUMU = e.ENGELLILIK_DURUMU,
+                HASTA_TIPI = e.HASTA_TIPI,
+                KIMLIKSIZ_HASTA_BILGISI = e.KIMLIKSIZ_HASTA_BILGISI,
+                MUAYENE_ONCELIK_SIRASI = e.MUAYENE_ONCELIK_SIRASI,
+                PASAPORT_NUMARASI = e.PASAPORT_NUMARASI,
+                SON_KURUM_KODU = e.SON_KURUM_KODU,
+                YUPASS_NUMARASI = e.YUPASS_NUMARASI,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -67,30 +71,34 @@ public class HastaController : BaseApiController
         return new HastaDto
         {
             HASTA_KODU = entity.HASTA_KODU,
-            TC_KIMLIK_NO = entity.TC_KIMLIK_NO,
+            TC_KIMLIK_NUMARASI = entity.TC_KIMLIK_NUMARASI,
             AD = entity.AD,
-            SOYAD = entity.SOYAD,
+            SOYADI = entity.SOYADI,
             CINSIYET = entity.CINSIYET,
             DOGUM_TARIHI = entity.DOGUM_TARIHI,
             DOGUM_YERI = entity.DOGUM_YERI,
-            ANA_ADI = entity.ANA_ADI,
+            ANNE_ADI = entity.ANNE_ADI,
             BABA_ADI = entity.BABA_ADI,
             KAN_GRUBU = entity.KAN_GRUBU,
-            MEDENI_HAL = entity.MEDENI_HAL,
+            MEDENI_HALI = entity.MEDENI_HALI,
             UYRUK = entity.UYRUK,
             MESLEK = entity.MESLEK,
-            EGITIM_DURUMU = entity.EGITIM_DURUMU,
-            IL_KODU = entity.IL_KODU,
-            ILCE_KODU = entity.ILCE_KODU,
-            ADRES = entity.ADRES,
-            TELEFON = entity.TELEFON,
-            CEP_TELEFON = entity.CEP_TELEFON,
-            EMAIL = entity.EMAIL,
-            SOSYAL_GUVENCE = entity.SOSYAL_GUVENCE,
-            SIGORTA_NO = entity.SIGORTA_NO,
-            PROTOKOL_NO = entity.PROTOKOL_NO,
-            AKTIF = entity.AKTIF,
+            OGRENIM_DURUMU = entity.OGRENIM_DURUMU,
             OLUM_TARIHI = entity.OLUM_TARIHI,
+            OLUM_YERI = entity.OLUM_YERI,
+            ANNE_HASTA_KODU = entity.ANNE_HASTA_KODU,
+            ANNE_TC_KIMLIK_NUMARASI = entity.ANNE_TC_KIMLIK_NUMARASI,
+            BABA_HASTA_KODU = entity.BABA_HASTA_KODU,
+            BABA_TC_KIMLIK_NUMARASI = entity.BABA_TC_KIMLIK_NUMARASI,
+            BEYAN_DOGUM_TARIHI = entity.BEYAN_DOGUM_TARIHI,
+            DOGUM_SIRASI = entity.DOGUM_SIRASI,
+            ENGELLILIK_DURUMU = entity.ENGELLILIK_DURUMU,
+            HASTA_TIPI = entity.HASTA_TIPI,
+            KIMLIKSIZ_HASTA_BILGISI = entity.KIMLIKSIZ_HASTA_BILGISI,
+            MUAYENE_ONCELIK_SIRASI = entity.MUAYENE_ONCELIK_SIRASI,
+            PASAPORT_NUMARASI = entity.PASAPORT_NUMARASI,
+            SON_KURUM_KODU = entity.SON_KURUM_KODU,
+            YUPASS_NUMARASI = entity.YUPASS_NUMARASI,
         };
     }
 
@@ -101,30 +109,34 @@ public class HastaController : BaseApiController
         var entity = new HASTA
         {
             HASTA_KODU = dto.HASTA_KODU,
-            TC_KIMLIK_NO = dto.TC_KIMLIK_NO,
+            TC_KIMLIK_NUMARASI = dto.TC_KIMLIK_NUMARASI,
             AD = dto.AD,
-            SOYAD = dto.SOYAD,
+            SOYADI = dto.SOYADI,
             CINSIYET = dto.CINSIYET,
             DOGUM_TARIHI = dto.DOGUM_TARIHI,
             DOGUM_YERI = dto.DOGUM_YERI,
-            ANA_ADI = dto.ANA_ADI,
+            ANNE_ADI = dto.ANNE_ADI,
             BABA_ADI = dto.BABA_ADI,
             KAN_GRUBU = dto.KAN_GRUBU,
-            MEDENI_HAL = dto.MEDENI_HAL,
+            MEDENI_HALI = dto.MEDENI_HALI,
             UYRUK = dto.UYRUK,
             MESLEK = dto.MESLEK,
-            EGITIM_DURUMU = dto.EGITIM_DURUMU,
-            IL_KODU = dto.IL_KODU,
-            ILCE_KODU = dto.ILCE_KODU,
-            ADRES = dto.ADRES,
-            TELEFON = dto.TELEFON,
-            CEP_TELEFON = dto.CEP_TELEFON,
-            EMAIL = dto.EMAIL,
-            SOSYAL_GUVENCE = dto.SOSYAL_GUVENCE,
-            SIGORTA_NO = dto.SIGORTA_NO,
-            PROTOKOL_NO = dto.PROTOKOL_NO,
-            AKTIF = dto.AKTIF,
+            OGRENIM_DURUMU = dto.OGRENIM_DURUMU,
             OLUM_TARIHI = dto.OLUM_TARIHI,
+            OLUM_YERI = dto.OLUM_YERI,
+            ANNE_HASTA_KODU = dto.ANNE_HASTA_KODU,
+            ANNE_TC_KIMLIK_NUMARASI = dto.ANNE_TC_KIMLIK_NUMARASI,
+            BABA_HASTA_KODU = dto.BABA_HASTA_KODU,
+            BABA_TC_KIMLIK_NUMARASI = dto.BABA_TC_KIMLIK_NUMARASI,
+            BEYAN_DOGUM_TARIHI = dto.BEYAN_DOGUM_TARIHI,
+            DOGUM_SIRASI = dto.DOGUM_SIRASI,
+            ENGELLILIK_DURUMU = dto.ENGELLILIK_DURUMU,
+            HASTA_TIPI = dto.HASTA_TIPI,
+            KIMLIKSIZ_HASTA_BILGISI = dto.KIMLIKSIZ_HASTA_BILGISI,
+            MUAYENE_ONCELIK_SIRASI = dto.MUAYENE_ONCELIK_SIRASI,
+            PASAPORT_NUMARASI = dto.PASAPORT_NUMARASI,
+            SON_KURUM_KODU = dto.SON_KURUM_KODU,
+            YUPASS_NUMARASI = dto.YUPASS_NUMARASI,
         };
 
         _db.Set<HASTA>().Add(entity);
@@ -142,30 +154,35 @@ public class HastaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.TC_KIMLIK_NO = dto.TC_KIMLIK_NO;
+
+        entity.TC_KIMLIK_NUMARASI = dto.TC_KIMLIK_NUMARASI;
         entity.AD = dto.AD;
-        entity.SOYAD = dto.SOYAD;
+        entity.SOYADI = dto.SOYADI;
         entity.CINSIYET = dto.CINSIYET;
         entity.DOGUM_TARIHI = dto.DOGUM_TARIHI;
         entity.DOGUM_YERI = dto.DOGUM_YERI;
-        entity.ANA_ADI = dto.ANA_ADI;
+        entity.ANNE_ADI = dto.ANNE_ADI;
         entity.BABA_ADI = dto.BABA_ADI;
         entity.KAN_GRUBU = dto.KAN_GRUBU;
-        entity.MEDENI_HAL = dto.MEDENI_HAL;
+        entity.MEDENI_HALI = dto.MEDENI_HALI;
         entity.UYRUK = dto.UYRUK;
         entity.MESLEK = dto.MESLEK;
-        entity.EGITIM_DURUMU = dto.EGITIM_DURUMU;
-        entity.IL_KODU = dto.IL_KODU;
-        entity.ILCE_KODU = dto.ILCE_KODU;
-        entity.ADRES = dto.ADRES;
-        entity.TELEFON = dto.TELEFON;
-        entity.CEP_TELEFON = dto.CEP_TELEFON;
-        entity.EMAIL = dto.EMAIL;
-        entity.SOSYAL_GUVENCE = dto.SOSYAL_GUVENCE;
-        entity.SIGORTA_NO = dto.SIGORTA_NO;
-        entity.PROTOKOL_NO = dto.PROTOKOL_NO;
-        entity.AKTIF = dto.AKTIF;
+        entity.OGRENIM_DURUMU = dto.OGRENIM_DURUMU;
         entity.OLUM_TARIHI = dto.OLUM_TARIHI;
+        entity.OLUM_YERI = dto.OLUM_YERI;
+        entity.ANNE_HASTA_KODU = dto.ANNE_HASTA_KODU;
+        entity.ANNE_TC_KIMLIK_NUMARASI = dto.ANNE_TC_KIMLIK_NUMARASI;
+        entity.BABA_HASTA_KODU = dto.BABA_HASTA_KODU;
+        entity.BABA_TC_KIMLIK_NUMARASI = dto.BABA_TC_KIMLIK_NUMARASI;
+        entity.BEYAN_DOGUM_TARIHI = dto.BEYAN_DOGUM_TARIHI;
+        entity.DOGUM_SIRASI = dto.DOGUM_SIRASI;
+        entity.ENGELLILIK_DURUMU = dto.ENGELLILIK_DURUMU;
+        entity.HASTA_TIPI = dto.HASTA_TIPI;
+        entity.KIMLIKSIZ_HASTA_BILGISI = dto.KIMLIKSIZ_HASTA_BILGISI;
+        entity.MUAYENE_ONCELIK_SIRASI = dto.MUAYENE_ONCELIK_SIRASI;
+        entity.PASAPORT_NUMARASI = dto.PASAPORT_NUMARASI;
+        entity.SON_KURUM_KODU = dto.SON_KURUM_KODU;
+        entity.YUPASS_NUMARASI = dto.YUPASS_NUMARASI;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

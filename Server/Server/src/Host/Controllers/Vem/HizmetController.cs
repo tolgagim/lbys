@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Hizmet;
 using Server.Domain.Lbys;
@@ -29,7 +29,7 @@ public class HizmetController : BaseApiController
                 SUT_KODU = e.SUT_KODU,
                 HIZMET_ADI = e.HIZMET_ADI,
                 TIBBI_ISLEM_PUAN_BILGISI = e.TIBBI_ISLEM_PUAN_BILGISI,
-                AKTIF = e.AKTIF,
+                AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -54,7 +54,7 @@ public class HizmetController : BaseApiController
             SUT_KODU = entity.SUT_KODU,
             HIZMET_ADI = entity.HIZMET_ADI,
             TIBBI_ISLEM_PUAN_BILGISI = entity.TIBBI_ISLEM_PUAN_BILGISI,
-            AKTIF = entity.AKTIF,
+            AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
         };
     }
 
@@ -70,7 +70,7 @@ public class HizmetController : BaseApiController
             SUT_KODU = dto.SUT_KODU,
             HIZMET_ADI = dto.HIZMET_ADI,
             TIBBI_ISLEM_PUAN_BILGISI = dto.TIBBI_ISLEM_PUAN_BILGISI,
-            AKTIF = dto.AKTIF,
+            AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
         };
 
         _db.Set<HIZMET>().Add(entity);
@@ -88,12 +88,13 @@ public class HizmetController : BaseApiController
 
         if (entity == null)
             return NotFound();
+
         entity.HIZMET_ISLEM_GRUBU = dto.HIZMET_ISLEM_GRUBU;
         entity.HIZMET_ISLEM_TURU = dto.HIZMET_ISLEM_TURU;
         entity.SUT_KODU = dto.SUT_KODU;
         entity.HIZMET_ADI = dto.HIZMET_ADI;
         entity.TIBBI_ISLEM_PUAN_BILGISI = dto.TIBBI_ISLEM_PUAN_BILGISI;
-        entity.AKTIF = dto.AKTIF;
+        entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

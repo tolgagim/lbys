@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KurulRapor;
+namespace Server.Application.Vem.KurulRapor;
 
 public class KurulRaporDto
 {
     public string? KURUL_RAPOR_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? KURUL_KODU { get; set; }
+public string? KURUL_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? RAPOR_ADI { get; set; }

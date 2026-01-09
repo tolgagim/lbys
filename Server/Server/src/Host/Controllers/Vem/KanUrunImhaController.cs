@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanUrunImha;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanUrunImhaController : BaseApiController
             .Select(e => new KanUrunImhaDto
             {
                 KAN_URUN_IMHA_KODU = e.KAN_URUN_IMHA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KAN_STOK_KODU = e.KAN_STOK_KODU,
+KAN_STOK_KODU = e.KAN_STOK_KODU,
                 KAN_IMHA_NEDENI = e.KAN_IMHA_NEDENI,
                 KAN_IMHA_ZAMANI = e.KAN_IMHA_ZAMANI,
                 KAN_IMHA_ONAYLAYAN_HEKIM = e.KAN_IMHA_ONAYLAYAN_HEKIM,
@@ -50,8 +49,7 @@ public class KanUrunImhaController : BaseApiController
         return new KanUrunImhaDto
         {
             KAN_URUN_IMHA_KODU = entity.KAN_URUN_IMHA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KAN_STOK_KODU = entity.KAN_STOK_KODU,
+KAN_STOK_KODU = entity.KAN_STOK_KODU,
             KAN_IMHA_NEDENI = entity.KAN_IMHA_NEDENI,
             KAN_IMHA_ZAMANI = entity.KAN_IMHA_ZAMANI,
             KAN_IMHA_ONAYLAYAN_HEKIM = entity.KAN_IMHA_ONAYLAYAN_HEKIM,
@@ -67,8 +65,7 @@ public class KanUrunImhaController : BaseApiController
         var entity = new KAN_URUN_IMHA
         {
             KAN_URUN_IMHA_KODU = dto.KAN_URUN_IMHA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KAN_STOK_KODU = dto.KAN_STOK_KODU,
+KAN_STOK_KODU = dto.KAN_STOK_KODU,
             KAN_IMHA_NEDENI = dto.KAN_IMHA_NEDENI,
             KAN_IMHA_ZAMANI = dto.KAN_IMHA_ZAMANI,
             KAN_IMHA_ONAYLAYAN_HEKIM = dto.KAN_IMHA_ONAYLAYAN_HEKIM,
@@ -91,7 +88,6 @@ public class KanUrunImhaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KAN_STOK_KODU = dto.KAN_STOK_KODU;
         entity.KAN_IMHA_NEDENI = dto.KAN_IMHA_NEDENI;
         entity.KAN_IMHA_ZAMANI = dto.KAN_IMHA_ZAMANI;

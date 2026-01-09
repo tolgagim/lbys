@@ -15,9 +15,7 @@ public class STOK_ISTEK_UYGULAMA : VemEntity
     [Key]
     public string STOK_ISTEK_UYGULAMA_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde hasta iÃ§in depodan yapÄ±lan isteklerin detay bilgilerine eriÅŸim ...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde hasta iÃ§in depodan yapÄ±lan isteklerin detay bilgilerine eriÅŸim ...</summary>
     [ForeignKey("StokIstekHareketNavigation")]
     public string STOK_ISTEK_HAREKET_KODU { get; set; }
 

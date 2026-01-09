@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Getat;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class GetatController : BaseApiController
             .Select(e => new GetatDto
             {
                 GETAT_KODU = e.GETAT_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 GETAT_UYGULAMA_BIRIMI = e.GETAT_UYGULAMA_BIRIMI,
                 KOMPLIKASYON_TANISI = e.KOMPLIKASYON_TANISI,
@@ -53,8 +52,7 @@ public class GetatController : BaseApiController
         return new GetatDto
         {
             GETAT_KODU = entity.GETAT_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             GETAT_UYGULAMA_BIRIMI = entity.GETAT_UYGULAMA_BIRIMI,
             KOMPLIKASYON_TANISI = entity.KOMPLIKASYON_TANISI,
@@ -73,8 +71,7 @@ public class GetatController : BaseApiController
         var entity = new GETAT
         {
             GETAT_KODU = dto.GETAT_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             GETAT_UYGULAMA_BIRIMI = dto.GETAT_UYGULAMA_BIRIMI,
             KOMPLIKASYON_TANISI = dto.KOMPLIKASYON_TANISI,
@@ -100,7 +97,6 @@ public class GetatController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.GETAT_UYGULAMA_BIRIMI = dto.GETAT_UYGULAMA_BIRIMI;

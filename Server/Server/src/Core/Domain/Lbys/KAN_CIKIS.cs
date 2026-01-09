@@ -15,9 +15,7 @@ public class KAN_CIKIS : VemEntity
     [Key]
     public string KAN_CIKIS_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>Talep edilen kan Ã¼rÃ¼nÃ¼ detay bilgileri iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi tarafÄ±n...</summary>
+/// <summary>Talep edilen kan Ã¼rÃ¼nÃ¼ detay bilgileri iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi tarafÄ±n...</summary>
     [Required]
     [ForeignKey("KanTalepDetayNavigation")]
     public string KAN_TALEP_DETAY_KODU { get; set; }

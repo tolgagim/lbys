@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.IlacUyum;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class IlacUyumController : BaseApiController
             .Select(e => new IlacUyumDto
             {
                 ILAC_UYUM_KODU = e.ILAC_UYUM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                ILAC_UYUMSUZLUK_TURU = e.ILAC_UYUMSUZLUK_TURU,
+ILAC_UYUMSUZLUK_TURU = e.ILAC_UYUMSUZLUK_TURU,
                 BIRINCI_ILAC_BARKODU = e.BIRINCI_ILAC_BARKODU,
                 BIRINCI_ETKEN_MADDE_KODU = e.BIRINCI_ETKEN_MADDE_KODU,
                 IKINCI_ILAC_BARKODU = e.IKINCI_ILAC_BARKODU,
@@ -55,8 +54,7 @@ public class IlacUyumController : BaseApiController
         return new IlacUyumDto
         {
             ILAC_UYUM_KODU = entity.ILAC_UYUM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            ILAC_UYUMSUZLUK_TURU = entity.ILAC_UYUMSUZLUK_TURU,
+ILAC_UYUMSUZLUK_TURU = entity.ILAC_UYUMSUZLUK_TURU,
             BIRINCI_ILAC_BARKODU = entity.BIRINCI_ILAC_BARKODU,
             BIRINCI_ETKEN_MADDE_KODU = entity.BIRINCI_ETKEN_MADDE_KODU,
             IKINCI_ILAC_BARKODU = entity.IKINCI_ILAC_BARKODU,
@@ -77,8 +75,7 @@ public class IlacUyumController : BaseApiController
         var entity = new ILAC_UYUM
         {
             ILAC_UYUM_KODU = dto.ILAC_UYUM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            ILAC_UYUMSUZLUK_TURU = dto.ILAC_UYUMSUZLUK_TURU,
+ILAC_UYUMSUZLUK_TURU = dto.ILAC_UYUMSUZLUK_TURU,
             BIRINCI_ILAC_BARKODU = dto.BIRINCI_ILAC_BARKODU,
             BIRINCI_ETKEN_MADDE_KODU = dto.BIRINCI_ETKEN_MADDE_KODU,
             IKINCI_ILAC_BARKODU = dto.IKINCI_ILAC_BARKODU,
@@ -106,7 +103,6 @@ public class IlacUyumController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.ILAC_UYUMSUZLUK_TURU = dto.ILAC_UYUMSUZLUK_TURU;
         entity.BIRINCI_ILAC_BARKODU = dto.BIRINCI_ILAC_BARKODU;
         entity.BIRINCI_ETKEN_MADDE_KODU = dto.BIRINCI_ETKEN_MADDE_KODU;

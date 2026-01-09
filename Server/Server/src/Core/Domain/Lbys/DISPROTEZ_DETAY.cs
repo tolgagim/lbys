@@ -15,9 +15,7 @@ public class DISPROTEZ_DETAY : VemEntity
     [Key]
     public string DISPROTEZ_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>DiÅŸ protez tedavisi yapÄ±lan hastalar iÃ§in protez bilgilerini kayÄ±t etmek iÃ§in Sa...</summary>
+/// <summary>DiÅŸ protez tedavisi yapÄ±lan hastalar iÃ§in protez bilgilerini kayÄ±t etmek iÃ§in Sa...</summary>
     [ForeignKey("DisprotezNavigation")]
     public string DISPROTEZ_KODU { get; set; }
 

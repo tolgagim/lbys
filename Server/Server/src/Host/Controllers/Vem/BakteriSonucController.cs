@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.BakteriSonuc;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class BakteriSonucController : BaseApiController
             .Select(e => new BakteriSonucDto
             {
                 BAKTERI_SONUC_KODU = e.BAKTERI_SONUC_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                TETKIK_SONUC_KODU = e.TETKIK_SONUC_KODU,
+TETKIK_SONUC_KODU = e.TETKIK_SONUC_KODU,
                 BAKTERI_KODU = e.BAKTERI_KODU,
                 KOLONI_SAYISI = e.KOLONI_SAYISI,
                 RAPOR_SONUC_SIRASI = e.RAPOR_SONUC_SIRASI,
@@ -49,8 +48,7 @@ public class BakteriSonucController : BaseApiController
         return new BakteriSonucDto
         {
             BAKTERI_SONUC_KODU = entity.BAKTERI_SONUC_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            TETKIK_SONUC_KODU = entity.TETKIK_SONUC_KODU,
+TETKIK_SONUC_KODU = entity.TETKIK_SONUC_KODU,
             BAKTERI_KODU = entity.BAKTERI_KODU,
             KOLONI_SAYISI = entity.KOLONI_SAYISI,
             RAPOR_SONUC_SIRASI = entity.RAPOR_SONUC_SIRASI,
@@ -65,8 +63,7 @@ public class BakteriSonucController : BaseApiController
         var entity = new BAKTERI_SONUC
         {
             BAKTERI_SONUC_KODU = dto.BAKTERI_SONUC_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            TETKIK_SONUC_KODU = dto.TETKIK_SONUC_KODU,
+TETKIK_SONUC_KODU = dto.TETKIK_SONUC_KODU,
             BAKTERI_KODU = dto.BAKTERI_KODU,
             KOLONI_SAYISI = dto.KOLONI_SAYISI,
             RAPOR_SONUC_SIRASI = dto.RAPOR_SONUC_SIRASI,
@@ -88,7 +85,6 @@ public class BakteriSonucController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.TETKIK_SONUC_KODU = dto.TETKIK_SONUC_KODU;
         entity.BAKTERI_KODU = dto.BAKTERI_KODU;
         entity.KOLONI_SAYISI = dto.KOLONI_SAYISI;

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaAdliRapor;
+namespace Server.Application.Vem.HastaAdliRapor;
 
 public class HastaAdliRaporDto
 {
     public string? HASTA_ADLI_RAPOR_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? ADLI_RAPOR_TURU { get; set; }
     public DateTime? RAPOR_ZAMANI { get; set; }

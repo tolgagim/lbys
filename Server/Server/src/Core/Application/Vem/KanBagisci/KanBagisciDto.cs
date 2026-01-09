@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KanBagisci;
+namespace Server.Application.Vem.KanBagisci;
 
 public class KanBagisciDto
 {
     public string? KAN_BAGISCI_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? BAGISCI_HASTA_BASVURU_KODU { get; set; }
+public string? BAGISCI_HASTA_BASVURU_KODU { get; set; }
     public string? BAGISCI_HASTA_KODU { get; set; }
     public DateTime? KAN_BAGIS_ZAMANI { get; set; }
     public string? KAN_GRUBU { get; set; }

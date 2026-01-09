@@ -57,6 +57,14 @@ export interface KurumListFilter extends BaseListFilter {
   kurumTuru?: string;
   ilKodu?: string;
   ilceKodu?: string;
+  AKTIFLIK_BILGISI?: string | null;
+  AYAKTAN_BUTCE_KODU?: string | null;
+  DEVREDILEN_KURUM?: string | null;
+  GUNUBIRLIK_BUTCE_KODU?: string | null;
+  HASTA_KURUM_TURU?: string | null;
+  KURUM_ADRESI?: string | null;
+  SKRS_KURUM_KODU?: string | null;
+  YATAN_BUTCE_KODU?: string | null;
 }
 
 export const newKurum: CreateKurumDto = {

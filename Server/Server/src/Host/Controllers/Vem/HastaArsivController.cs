@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaArsiv;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaArsivController : BaseApiController
             .Select(e => new HastaArsivDto
             {
                 HASTA_ARSIV_KODU = e.HASTA_ARSIV_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 ARSIV_NUMARASI = e.ARSIV_NUMARASI,
                 ESKI_ARSIV_NUMARASI = e.ESKI_ARSIV_NUMARASI,
                 ARSIV_DEFTER_TURU = e.ARSIV_DEFTER_TURU,
@@ -51,8 +50,7 @@ public class HastaArsivController : BaseApiController
         return new HastaArsivDto
         {
             HASTA_ARSIV_KODU = entity.HASTA_ARSIV_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             ARSIV_NUMARASI = entity.ARSIV_NUMARASI,
             ESKI_ARSIV_NUMARASI = entity.ESKI_ARSIV_NUMARASI,
             ARSIV_DEFTER_TURU = entity.ARSIV_DEFTER_TURU,
@@ -69,8 +67,7 @@ public class HastaArsivController : BaseApiController
         var entity = new HASTA_ARSIV
         {
             HASTA_ARSIV_KODU = dto.HASTA_ARSIV_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             ARSIV_NUMARASI = dto.ARSIV_NUMARASI,
             ESKI_ARSIV_NUMARASI = dto.ESKI_ARSIV_NUMARASI,
             ARSIV_DEFTER_TURU = dto.ARSIV_DEFTER_TURU,
@@ -94,7 +91,6 @@ public class HastaArsivController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.ARSIV_NUMARASI = dto.ARSIV_NUMARASI;
         entity.ESKI_ARSIV_NUMARASI = dto.ESKI_ARSIV_NUMARASI;

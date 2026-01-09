@@ -15,9 +15,7 @@ public class BAKTERI_SONUC : VemEntity
     [Key]
     public string BAKTERI_SONUC_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde yapÄ±lan tetkiklerin sonuÃ§larÄ± iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde yapÄ±lan tetkiklerin sonuÃ§larÄ± iÃ§in SaÄŸlÄ±k Bilgi YÃ¶netim Sistemi...</summary>
     [ForeignKey("TetkikSonucNavigation")]
     public string TETKIK_SONUC_KODU { get; set; }
 

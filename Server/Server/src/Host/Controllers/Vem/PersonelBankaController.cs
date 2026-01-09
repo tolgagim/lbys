@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelBanka;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelBankaController : BaseApiController
             .Select(e => new PersonelBankaDto
             {
                 PERSONEL_BANKA_KODU = e.PERSONEL_BANKA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 BANKA = e.BANKA,
                 HESAP_NUMARASI = e.HESAP_NUMARASI,
                 SUBE_KODU = e.SUBE_KODU,
@@ -52,8 +51,7 @@ public class PersonelBankaController : BaseApiController
         return new PersonelBankaDto
         {
             PERSONEL_BANKA_KODU = entity.PERSONEL_BANKA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             BANKA = entity.BANKA,
             HESAP_NUMARASI = entity.HESAP_NUMARASI,
             SUBE_KODU = entity.SUBE_KODU,
@@ -71,8 +69,7 @@ public class PersonelBankaController : BaseApiController
         var entity = new PERSONEL_BANKA
         {
             PERSONEL_BANKA_KODU = dto.PERSONEL_BANKA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             BANKA = dto.BANKA,
             HESAP_NUMARASI = dto.HESAP_NUMARASI,
             SUBE_KODU = dto.SUBE_KODU,
@@ -97,7 +94,6 @@ public class PersonelBankaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.BANKA = dto.BANKA;
         entity.HESAP_NUMARASI = dto.HESAP_NUMARASI;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelBakmaklaYukumlu;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelBakmaklaYukumluController : BaseApiController
             .Select(e => new PersonelBakmaklaYukumluDto
             {
                 PERSONEL_BAKMAKLA_YUKUMLU_KODU = e.PERSONEL_BAKMAKLA_YUKUMLU_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 PERSONEL_YAKINLIK_DERECESI = e.PERSONEL_YAKINLIK_DERECESI,
                 TC_KIMLIK_NUMARASI = e.TC_KIMLIK_NUMARASI,
                 AD = e.AD,
@@ -52,8 +51,7 @@ public class PersonelBakmaklaYukumluController : BaseApiController
         return new PersonelBakmaklaYukumluDto
         {
             PERSONEL_BAKMAKLA_YUKUMLU_KODU = entity.PERSONEL_BAKMAKLA_YUKUMLU_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             PERSONEL_YAKINLIK_DERECESI = entity.PERSONEL_YAKINLIK_DERECESI,
             TC_KIMLIK_NUMARASI = entity.TC_KIMLIK_NUMARASI,
             AD = entity.AD,
@@ -71,8 +69,7 @@ public class PersonelBakmaklaYukumluController : BaseApiController
         var entity = new PERSONEL_BAKMAKLA_YUKUMLU
         {
             PERSONEL_BAKMAKLA_YUKUMLU_KODU = dto.PERSONEL_BAKMAKLA_YUKUMLU_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             PERSONEL_YAKINLIK_DERECESI = dto.PERSONEL_YAKINLIK_DERECESI,
             TC_KIMLIK_NUMARASI = dto.TC_KIMLIK_NUMARASI,
             AD = dto.AD,
@@ -97,7 +94,6 @@ public class PersonelBakmaklaYukumluController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.PERSONEL_YAKINLIK_DERECESI = dto.PERSONEL_YAKINLIK_DERECESI;
         entity.TC_KIMLIK_NUMARASI = dto.TC_KIMLIK_NUMARASI;

@@ -15,9 +15,7 @@ public class STERILIZASYON_PAKET_DETAY : VemEntity
     [Key]
     public string STERILIZASYON_PAKET_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinin deposunda bulunan steril aletlerin paket bilgilerine iliÅŸkin ka...</summary>
+/// <summary>SaÄŸlÄ±k tesisinin deposunda bulunan steril aletlerin paket bilgilerine iliÅŸkin ka...</summary>
     [ForeignKey("SterilizasyonPaketNavigation")]
     public string STERILIZASYON_PAKET_KODU { get; set; }
 

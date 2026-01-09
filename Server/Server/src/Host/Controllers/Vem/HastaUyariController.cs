@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaUyari;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaUyariController : BaseApiController
             .Select(e => new HastaUyariDto
             {
                 HASTA_UYARI_KODU = e.HASTA_UYARI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 UYARI_TURU = e.UYARI_TURU,
                 ISLEME_IZIN_VERME_DURUMU = e.ISLEME_IZIN_VERME_DURUMU,
@@ -51,8 +50,7 @@ public class HastaUyariController : BaseApiController
         return new HastaUyariDto
         {
             HASTA_UYARI_KODU = entity.HASTA_UYARI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             UYARI_TURU = entity.UYARI_TURU,
             ISLEME_IZIN_VERME_DURUMU = entity.ISLEME_IZIN_VERME_DURUMU,
@@ -69,8 +67,7 @@ public class HastaUyariController : BaseApiController
         var entity = new HASTA_UYARI
         {
             HASTA_UYARI_KODU = dto.HASTA_UYARI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             UYARI_TURU = dto.UYARI_TURU,
             ISLEME_IZIN_VERME_DURUMU = dto.ISLEME_IZIN_VERME_DURUMU,
@@ -94,7 +91,6 @@ public class HastaUyariController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.UYARI_TURU = dto.UYARI_TURU;

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KullaniciGrup;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KullaniciGrupController : BaseApiController
             .Select(e => new KullaniciGrupDto
             {
                 KULLANICI_GRUP_KODU = e.KULLANICI_GRUP_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KULLANICI_GRUP_ADI = e.KULLANICI_GRUP_ADI,
+KULLANICI_GRUP_ADI = e.KULLANICI_GRUP_ADI,
                 AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
             })
             .Take(1000)
@@ -46,8 +45,7 @@ public class KullaniciGrupController : BaseApiController
         return new KullaniciGrupDto
         {
             KULLANICI_GRUP_KODU = entity.KULLANICI_GRUP_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KULLANICI_GRUP_ADI = entity.KULLANICI_GRUP_ADI,
+KULLANICI_GRUP_ADI = entity.KULLANICI_GRUP_ADI,
             AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
         };
     }
@@ -59,8 +57,7 @@ public class KullaniciGrupController : BaseApiController
         var entity = new KULLANICI_GRUP
         {
             KULLANICI_GRUP_KODU = dto.KULLANICI_GRUP_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KULLANICI_GRUP_ADI = dto.KULLANICI_GRUP_ADI,
+KULLANICI_GRUP_ADI = dto.KULLANICI_GRUP_ADI,
             AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
         };
 
@@ -79,7 +76,6 @@ public class KullaniciGrupController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KULLANICI_GRUP_ADI = dto.KULLANICI_GRUP_ADI;
         entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
 

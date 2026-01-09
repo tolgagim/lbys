@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.SterilizasyonCikis;
+namespace Server.Application.Vem.SterilizasyonCikis;
 
 public class SterilizasyonCikisDto
 {
     public string? STERILIZASYON_CIKIS_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? DEPO_KODU { get; set; }
+public string? DEPO_KODU { get; set; }
     public string? STERILIZASYON_SET_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }

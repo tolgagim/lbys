@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaTibbiBilgi;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaTibbiBilgiController : BaseApiController
             .Select(e => new HastaTibbiBilgiDto
             {
                 HASTA_TIBBI_BILGI_KODU = e.HASTA_TIBBI_BILGI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 TIBBI_BILGI_TURU = e.TIBBI_BILGI_TURU,
                 TIBBI_BILGI_ALT_TURU = e.TIBBI_BILGI_ALT_TURU,
@@ -49,8 +48,7 @@ public class HastaTibbiBilgiController : BaseApiController
         return new HastaTibbiBilgiDto
         {
             HASTA_TIBBI_BILGI_KODU = entity.HASTA_TIBBI_BILGI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             TIBBI_BILGI_TURU = entity.TIBBI_BILGI_TURU,
             TIBBI_BILGI_ALT_TURU = entity.TIBBI_BILGI_ALT_TURU,
@@ -65,8 +63,7 @@ public class HastaTibbiBilgiController : BaseApiController
         var entity = new HASTA_TIBBI_BILGI
         {
             HASTA_TIBBI_BILGI_KODU = dto.HASTA_TIBBI_BILGI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             TIBBI_BILGI_TURU = dto.TIBBI_BILGI_TURU,
             TIBBI_BILGI_ALT_TURU = dto.TIBBI_BILGI_ALT_TURU,
@@ -88,7 +85,6 @@ public class HastaTibbiBilgiController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.TIBBI_BILGI_TURU = dto.TIBBI_BILGI_TURU;

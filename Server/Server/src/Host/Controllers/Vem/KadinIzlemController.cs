@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KadinIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KadinIzlemController : BaseApiController
             .Select(e => new KadinIzlemDto
             {
                 KADIN_IZLEM_KODU = e.KADIN_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KONJENITAL_ANOMALI_VARLIGI = e.KONJENITAL_ANOMALI_VARLIGI,
                 CANLI_DOGAN_BEBEK_SAYISI = e.CANLI_DOGAN_BEBEK_SAYISI,
@@ -58,8 +57,7 @@ public class KadinIzlemController : BaseApiController
         return new KadinIzlemDto
         {
             KADIN_IZLEM_KODU = entity.KADIN_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KONJENITAL_ANOMALI_VARLIGI = entity.KONJENITAL_ANOMALI_VARLIGI,
             CANLI_DOGAN_BEBEK_SAYISI = entity.CANLI_DOGAN_BEBEK_SAYISI,
@@ -83,8 +81,7 @@ public class KadinIzlemController : BaseApiController
         var entity = new KADIN_IZLEM
         {
             KADIN_IZLEM_KODU = dto.KADIN_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KONJENITAL_ANOMALI_VARLIGI = dto.KONJENITAL_ANOMALI_VARLIGI,
             CANLI_DOGAN_BEBEK_SAYISI = dto.CANLI_DOGAN_BEBEK_SAYISI,
@@ -115,7 +112,6 @@ public class KadinIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.KONJENITAL_ANOMALI_VARLIGI = dto.KONJENITAL_ANOMALI_VARLIGI;

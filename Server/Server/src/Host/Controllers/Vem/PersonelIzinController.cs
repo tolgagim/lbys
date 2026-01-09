@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.PersonelIzin;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class PersonelIzinController : BaseApiController
             .Select(e => new PersonelIzinDto
             {
                 PERSONEL_IZIN_KODU = e.PERSONEL_IZIN_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                PERSONEL_KODU = e.PERSONEL_KODU,
+PERSONEL_KODU = e.PERSONEL_KODU,
                 PERSONEL_IZIN_TURU = e.PERSONEL_IZIN_TURU,
                 KULLANILAN_IZIN = e.KULLANILAN_IZIN,
                 GECEN_YILDAN_KULLANILAN_IZIN = e.GECEN_YILDAN_KULLANILAN_IZIN,
@@ -59,8 +58,7 @@ public class PersonelIzinController : BaseApiController
         return new PersonelIzinDto
         {
             PERSONEL_IZIN_KODU = entity.PERSONEL_IZIN_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = entity.PERSONEL_KODU,
+PERSONEL_KODU = entity.PERSONEL_KODU,
             PERSONEL_IZIN_TURU = entity.PERSONEL_IZIN_TURU,
             KULLANILAN_IZIN = entity.KULLANILAN_IZIN,
             GECEN_YILDAN_KULLANILAN_IZIN = entity.GECEN_YILDAN_KULLANILAN_IZIN,
@@ -85,8 +83,7 @@ public class PersonelIzinController : BaseApiController
         var entity = new PERSONEL_IZIN
         {
             PERSONEL_IZIN_KODU = dto.PERSONEL_IZIN_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            PERSONEL_KODU = dto.PERSONEL_KODU,
+PERSONEL_KODU = dto.PERSONEL_KODU,
             PERSONEL_IZIN_TURU = dto.PERSONEL_IZIN_TURU,
             KULLANILAN_IZIN = dto.KULLANILAN_IZIN,
             GECEN_YILDAN_KULLANILAN_IZIN = dto.GECEN_YILDAN_KULLANILAN_IZIN,
@@ -118,7 +115,6 @@ public class PersonelIzinController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.PERSONEL_IZIN_TURU = dto.PERSONEL_IZIN_TURU;
         entity.KULLANILAN_IZIN = dto.KULLANILAN_IZIN;

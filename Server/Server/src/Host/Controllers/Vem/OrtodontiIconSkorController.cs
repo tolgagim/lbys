@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.OrtodontiIconSkor;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class OrtodontiIconSkorController : BaseApiController
             .Select(e => new OrtodontiIconSkorDto
             {
                 ORTODONTI_ICON_SKOR_KODU = e.ORTODONTI_ICON_SKOR_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 OIS_DEGERLENDIRME_ZAMANI = e.OIS_DEGERLENDIRME_ZAMANI,
                 OIS_ESTETIK_BOZUKLUK_BILGISI = e.OIS_ESTETIK_BOZUKLUK_BILGISI,
@@ -77,8 +76,7 @@ public class OrtodontiIconSkorController : BaseApiController
         return new OrtodontiIconSkorDto
         {
             ORTODONTI_ICON_SKOR_KODU = entity.ORTODONTI_ICON_SKOR_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             OIS_DEGERLENDIRME_ZAMANI = entity.OIS_DEGERLENDIRME_ZAMANI,
             OIS_ESTETIK_BOZUKLUK_BILGISI = entity.OIS_ESTETIK_BOZUKLUK_BILGISI,
@@ -121,8 +119,7 @@ public class OrtodontiIconSkorController : BaseApiController
         var entity = new ORTODONTI_ICON_SKOR
         {
             ORTODONTI_ICON_SKOR_KODU = dto.ORTODONTI_ICON_SKOR_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             OIS_DEGERLENDIRME_ZAMANI = dto.OIS_DEGERLENDIRME_ZAMANI,
             OIS_ESTETIK_BOZUKLUK_BILGISI = dto.OIS_ESTETIK_BOZUKLUK_BILGISI,
@@ -172,7 +169,6 @@ public class OrtodontiIconSkorController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.OIS_DEGERLENDIRME_ZAMANI = dto.OIS_DEGERLENDIRME_ZAMANI;

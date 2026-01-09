@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.OrtodontiIconSkor;
+namespace Server.Application.Vem.OrtodontiIconSkor;
 
 public class OrtodontiIconSkorDto
 {
     public string? ORTODONTI_ICON_SKOR_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public DateTime? OIS_DEGERLENDIRME_ZAMANI { get; set; }
     public string? OIS_ESTETIK_BOZUKLUK_BILGISI { get; set; }

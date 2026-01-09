@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.CocukDiyabet;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class CocukDiyabetController : BaseApiController
             .Select(e => new CocukDiyabetDto
             {
                 COCUK_DIYABET_KODU = e.COCUK_DIYABET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 ILK_TANI_TARIHI = e.ILK_TANI_TARIHI,
                 AGIRLIK = e.AGIRLIK,
                 BOY = e.BOY,
@@ -67,8 +66,7 @@ public class CocukDiyabetController : BaseApiController
         return new CocukDiyabetDto
         {
             COCUK_DIYABET_KODU = entity.COCUK_DIYABET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             ILK_TANI_TARIHI = entity.ILK_TANI_TARIHI,
             AGIRLIK = entity.AGIRLIK,
             BOY = entity.BOY,
@@ -101,8 +99,7 @@ public class CocukDiyabetController : BaseApiController
         var entity = new COCUK_DIYABET
         {
             COCUK_DIYABET_KODU = dto.COCUK_DIYABET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             ILK_TANI_TARIHI = dto.ILK_TANI_TARIHI,
             AGIRLIK = dto.AGIRLIK,
             BOY = dto.BOY,
@@ -142,7 +139,6 @@ public class CocukDiyabetController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.ILK_TANI_TARIHI = dto.ILK_TANI_TARIHI;
         entity.AGIRLIK = dto.AGIRLIK;

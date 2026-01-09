@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Cihaz;
 using Server.Domain.Lbys;
@@ -31,7 +31,7 @@ public class CihazController : BaseApiController
                 CIHAZ_MARKASI = e.CIHAZ_MARKASI,
                 SERI_NUMARASI = e.SERI_NUMARASI,
                 MKYS_KUNYE_NUMARASI = e.MKYS_KUNYE_NUMARASI,
-                AKTIF = e.AKTIF,
+                AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -58,7 +58,7 @@ public class CihazController : BaseApiController
             CIHAZ_MARKASI = entity.CIHAZ_MARKASI,
             SERI_NUMARASI = entity.SERI_NUMARASI,
             MKYS_KUNYE_NUMARASI = entity.MKYS_KUNYE_NUMARASI,
-            AKTIF = entity.AKTIF,
+            AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
         };
     }
 
@@ -76,7 +76,7 @@ public class CihazController : BaseApiController
             CIHAZ_MARKASI = dto.CIHAZ_MARKASI,
             SERI_NUMARASI = dto.SERI_NUMARASI,
             MKYS_KUNYE_NUMARASI = dto.MKYS_KUNYE_NUMARASI,
-            AKTIF = dto.AKTIF,
+            AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
         };
 
         _db.Set<CIHAZ>().Add(entity);
@@ -94,6 +94,7 @@ public class CihazController : BaseApiController
 
         if (entity == null)
             return NotFound();
+
         entity.CIHAZ_ADI = dto.CIHAZ_ADI;
         entity.CIHAZ_GRUBU = dto.CIHAZ_GRUBU;
         entity.BIRIM_KODU = dto.BIRIM_KODU;
@@ -101,7 +102,7 @@ public class CihazController : BaseApiController
         entity.CIHAZ_MARKASI = dto.CIHAZ_MARKASI;
         entity.SERI_NUMARASI = dto.SERI_NUMARASI;
         entity.MKYS_KUNYE_NUMARASI = dto.MKYS_KUNYE_NUMARASI;
-        entity.AKTIF = dto.AKTIF;
+        entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

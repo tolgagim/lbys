@@ -15,9 +15,7 @@ public class TIBBI_ORDER_DETAY : VemEntity
     [Key]
     public string TIBBI_ORDER_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde saÄŸlÄ±k hizmetini alan kiÅŸi iÃ§in hekim istemi (order) iÃ§in SaÄŸlÄ±...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde saÄŸlÄ±k hizmetini alan kiÅŸi iÃ§in hekim istemi (order) iÃ§in SaÄŸlÄ±...</summary>
     [ForeignKey("TibbiOrderNavigation")]
     public string TIBBI_ORDER_KODU { get; set; }
 

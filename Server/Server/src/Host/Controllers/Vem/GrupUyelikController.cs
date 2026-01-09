@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.GrupUyelik;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class GrupUyelikController : BaseApiController
             .Select(e => new GrupUyelikDto
             {
                 GRUP_UYELIK_KODU = e.GRUP_UYELIK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KULLANICI_GRUP_KODU = e.KULLANICI_GRUP_KODU,
+KULLANICI_GRUP_KODU = e.KULLANICI_GRUP_KODU,
                 KULLANICI_KODU = e.KULLANICI_KODU,
             })
             .Take(1000)
@@ -46,8 +45,7 @@ public class GrupUyelikController : BaseApiController
         return new GrupUyelikDto
         {
             GRUP_UYELIK_KODU = entity.GRUP_UYELIK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KULLANICI_GRUP_KODU = entity.KULLANICI_GRUP_KODU,
+KULLANICI_GRUP_KODU = entity.KULLANICI_GRUP_KODU,
             KULLANICI_KODU = entity.KULLANICI_KODU,
         };
     }
@@ -59,8 +57,7 @@ public class GrupUyelikController : BaseApiController
         var entity = new GRUP_UYELIK
         {
             GRUP_UYELIK_KODU = dto.GRUP_UYELIK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KULLANICI_GRUP_KODU = dto.KULLANICI_GRUP_KODU,
+KULLANICI_GRUP_KODU = dto.KULLANICI_GRUP_KODU,
             KULLANICI_KODU = dto.KULLANICI_KODU,
         };
 
@@ -79,7 +76,6 @@ public class GrupUyelikController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KULLANICI_GRUP_KODU = dto.KULLANICI_GRUP_KODU;
         entity.KULLANICI_KODU = dto.KULLANICI_KODU;
 

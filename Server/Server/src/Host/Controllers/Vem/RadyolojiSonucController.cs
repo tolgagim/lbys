@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.RadyolojiSonuc;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class RadyolojiSonucController : BaseApiController
             .Select(e => new RadyolojiSonucDto
             {
                 RADYOLOJI_SONUC_KODU = e.RADYOLOJI_SONUC_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                RADYOLOJI_KODU = e.RADYOLOJI_KODU,
+RADYOLOJI_KODU = e.RADYOLOJI_KODU,
                 TETKIK_SONUCU_METIN = e.TETKIK_SONUCU_METIN,
                 RADYOLOJI_TETKIK_SONUCU = e.RADYOLOJI_TETKIK_SONUCU,
                 RADYOLOJI_RAPOR_FORMATI = e.RADYOLOJI_RAPOR_FORMATI,
@@ -55,8 +54,7 @@ public class RadyolojiSonucController : BaseApiController
         return new RadyolojiSonucDto
         {
             RADYOLOJI_SONUC_KODU = entity.RADYOLOJI_SONUC_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            RADYOLOJI_KODU = entity.RADYOLOJI_KODU,
+RADYOLOJI_KODU = entity.RADYOLOJI_KODU,
             TETKIK_SONUCU_METIN = entity.TETKIK_SONUCU_METIN,
             RADYOLOJI_TETKIK_SONUCU = entity.RADYOLOJI_TETKIK_SONUCU,
             RADYOLOJI_RAPOR_FORMATI = entity.RADYOLOJI_RAPOR_FORMATI,
@@ -77,8 +75,7 @@ public class RadyolojiSonucController : BaseApiController
         var entity = new RADYOLOJI_SONUC
         {
             RADYOLOJI_SONUC_KODU = dto.RADYOLOJI_SONUC_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            RADYOLOJI_KODU = dto.RADYOLOJI_KODU,
+RADYOLOJI_KODU = dto.RADYOLOJI_KODU,
             TETKIK_SONUCU_METIN = dto.TETKIK_SONUCU_METIN,
             RADYOLOJI_TETKIK_SONUCU = dto.RADYOLOJI_TETKIK_SONUCU,
             RADYOLOJI_RAPOR_FORMATI = dto.RADYOLOJI_RAPOR_FORMATI,
@@ -106,7 +103,6 @@ public class RadyolojiSonucController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.RADYOLOJI_KODU = dto.RADYOLOJI_KODU;
         entity.TETKIK_SONUCU_METIN = dto.TETKIK_SONUCU_METIN;
         entity.RADYOLOJI_TETKIK_SONUCU = dto.RADYOLOJI_TETKIK_SONUCU;

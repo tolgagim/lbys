@@ -15,9 +15,7 @@ public class EK_ODEME_DETAY : VemEntity
     [Key]
     public string EK_ODEME_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>SaÄŸlÄ±k tesisinde gÃ¶revli personele Ã¶denecek ek Ã¶demeye ait kayÄ±tlara ulaÅŸÄ±labilm...</summary>
+/// <summary>SaÄŸlÄ±k tesisinde gÃ¶revli personele Ã¶denecek ek Ã¶demeye ait kayÄ±tlara ulaÅŸÄ±labilm...</summary>
     [ForeignKey("EkOdemeNavigation")]
     public string EK_ODEME_KODU { get; set; }
 

@@ -8,6 +8,6 @@ public class HizmetDto
     public string? SUT_KODU { get; set; }
     public string? HIZMET_ADI { get; set; }
     public string? TIBBI_ISLEM_PUAN_BILGISI { get; set; }
-    public bool AKTIF { get; set; }
+    public string? AKTIFLIK_BILGISI { get; set; }
 }
 

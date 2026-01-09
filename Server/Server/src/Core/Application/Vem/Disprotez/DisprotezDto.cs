@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.Disprotez;
+namespace Server.Application.Vem.Disprotez;
 
 public class DisprotezDto
 {
     public string? DISPROTEZ_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public DateTime? DISPROTEZ_BASLAMA_TARIHI { get; set; }
     public string? TEKNISYEN_KODU { get; set; }

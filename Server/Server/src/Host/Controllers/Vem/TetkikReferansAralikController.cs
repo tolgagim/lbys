@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.TetkikReferansAralik;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class TetkikReferansAralikController : BaseApiController
             .Select(e => new TetkikReferansAralikDto
             {
                 TETKIK_REFERANS_ARALIK_KODU = e.TETKIK_REFERANS_ARALIK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                TETKIK_PARAMETRE_KODU = e.TETKIK_PARAMETRE_KODU,
+TETKIK_PARAMETRE_KODU = e.TETKIK_PARAMETRE_KODU,
                 TETKIK_KODU = e.TETKIK_KODU,
                 CIHAZ_KODU = e.CIHAZ_KODU,
                 TETKIK_CINSIYET = e.TETKIK_CINSIYET,
@@ -55,8 +54,7 @@ public class TetkikReferansAralikController : BaseApiController
         return new TetkikReferansAralikDto
         {
             TETKIK_REFERANS_ARALIK_KODU = entity.TETKIK_REFERANS_ARALIK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            TETKIK_PARAMETRE_KODU = entity.TETKIK_PARAMETRE_KODU,
+TETKIK_PARAMETRE_KODU = entity.TETKIK_PARAMETRE_KODU,
             TETKIK_KODU = entity.TETKIK_KODU,
             CIHAZ_KODU = entity.CIHAZ_KODU,
             TETKIK_CINSIYET = entity.TETKIK_CINSIYET,
@@ -77,8 +75,7 @@ public class TetkikReferansAralikController : BaseApiController
         var entity = new TETKIK_REFERANS_ARALIK
         {
             TETKIK_REFERANS_ARALIK_KODU = dto.TETKIK_REFERANS_ARALIK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            TETKIK_PARAMETRE_KODU = dto.TETKIK_PARAMETRE_KODU,
+TETKIK_PARAMETRE_KODU = dto.TETKIK_PARAMETRE_KODU,
             TETKIK_KODU = dto.TETKIK_KODU,
             CIHAZ_KODU = dto.CIHAZ_KODU,
             TETKIK_CINSIYET = dto.TETKIK_CINSIYET,
@@ -106,7 +103,6 @@ public class TetkikReferansAralikController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.TETKIK_PARAMETRE_KODU = dto.TETKIK_PARAMETRE_KODU;
         entity.TETKIK_KODU = dto.TETKIK_KODU;
         entity.CIHAZ_KODU = dto.CIHAZ_KODU;

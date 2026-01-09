@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.GebeIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class GebeIzlemController : BaseApiController
             .Select(e => new GebeIzlemDto
             {
                 GEBE_IZLEM_KODU = e.GEBE_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KACINCI_GEBE_IZLEM = e.KACINCI_GEBE_IZLEM,
                 SON_ADET_TARIHI = e.SON_ADET_TARIHI,
@@ -65,8 +64,7 @@ public class GebeIzlemController : BaseApiController
         return new GebeIzlemDto
         {
             GEBE_IZLEM_KODU = entity.GEBE_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KACINCI_GEBE_IZLEM = entity.KACINCI_GEBE_IZLEM,
             SON_ADET_TARIHI = entity.SON_ADET_TARIHI,
@@ -97,8 +95,7 @@ public class GebeIzlemController : BaseApiController
         var entity = new GEBE_IZLEM
         {
             GEBE_IZLEM_KODU = dto.GEBE_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KACINCI_GEBE_IZLEM = dto.KACINCI_GEBE_IZLEM,
             SON_ADET_TARIHI = dto.SON_ADET_TARIHI,
@@ -136,7 +133,6 @@ public class GebeIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.KACINCI_GEBE_IZLEM = dto.KACINCI_GEBE_IZLEM;

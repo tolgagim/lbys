@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.ObeziteIzlem;
+namespace Server.Application.Vem.ObeziteIzlem;
 
 public class ObeziteIzlemDto
 {
     public string? OBEZITE_IZLEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? DIYET_TIBBI_BESLENME_TEDAVISI { get; set; }
     public DateTime ILK_TANI_TARIHI { get; set; }

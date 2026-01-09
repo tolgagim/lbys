@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.RiskSkorlama;
+namespace Server.Application.Vem.RiskSkorlama;
 
 public class RiskSkorlamaDto
 {
     public string? RISK_SKORLAMA_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HASTA_KODU { get; set; }
     public string? RISK_SKORLAMA_TURU { get; set; }
     public DateTime? ISLEM_ZAMANI { get; set; }

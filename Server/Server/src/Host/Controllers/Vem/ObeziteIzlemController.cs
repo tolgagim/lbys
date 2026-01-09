@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.ObeziteIzlem;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class ObeziteIzlemController : BaseApiController
             .Select(e => new ObeziteIzlemDto
             {
                 OBEZITE_IZLEM_KODU = e.OBEZITE_IZLEM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 DIYET_TIBBI_BESLENME_TEDAVISI = e.DIYET_TIBBI_BESLENME_TEDAVISI,
                 ILK_TANI_TARIHI = e.ILK_TANI_TARIHI,
@@ -54,8 +53,7 @@ public class ObeziteIzlemController : BaseApiController
         return new ObeziteIzlemDto
         {
             OBEZITE_IZLEM_KODU = entity.OBEZITE_IZLEM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             DIYET_TIBBI_BESLENME_TEDAVISI = entity.DIYET_TIBBI_BESLENME_TEDAVISI,
             ILK_TANI_TARIHI = entity.ILK_TANI_TARIHI,
@@ -75,8 +73,7 @@ public class ObeziteIzlemController : BaseApiController
         var entity = new OBEZITE_IZLEM
         {
             OBEZITE_IZLEM_KODU = dto.OBEZITE_IZLEM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             DIYET_TIBBI_BESLENME_TEDAVISI = dto.DIYET_TIBBI_BESLENME_TEDAVISI,
             ILK_TANI_TARIHI = dto.ILK_TANI_TARIHI,
@@ -103,7 +100,6 @@ public class ObeziteIzlemController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.DIYET_TIBBI_BESLENME_TEDAVISI = dto.DIYET_TIBBI_BESLENME_TEDAVISI;

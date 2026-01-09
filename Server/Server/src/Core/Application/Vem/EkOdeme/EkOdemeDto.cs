@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.EkOdeme;
+namespace Server.Application.Vem.EkOdeme;
 
 public class EkOdemeDto
 {
     public string? EK_ODEME_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? EK_ODEME_DONEM_KODU { get; set; }
+public string? EK_ODEME_DONEM_KODU { get; set; }
     public string? PERSONEL_KODU { get; set; }
     public string? HESAPLAMA_YONTEMI { get; set; }
     public string? MAAS_DERECESI { get; set; }

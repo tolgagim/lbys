@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.GebeIzlem;
+namespace Server.Application.Vem.GebeIzlem;
 
 public class GebeIzlemDto
 {
     public string? GEBE_IZLEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? KACINCI_GEBE_IZLEM { get; set; }
     public DateTime? SON_ADET_TARIHI { get; set; }

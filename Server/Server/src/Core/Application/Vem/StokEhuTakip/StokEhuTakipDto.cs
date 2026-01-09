@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.StokEhuTakip;
+namespace Server.Application.Vem.StokEhuTakip;
 
 public class StokEhuTakipDto
 {
     public string? STOK_EHU_TAKIP_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? STOK_ISTEK_KODU { get; set; }
+public string? STOK_ISTEK_KODU { get; set; }
     public string? STOK_ISTEK_HAREKET_KODU { get; set; }
     public string? STOK_KART_KODU { get; set; }
     public DateTime? EHU_ONAY_BASLAMA_ZAMANI { get; set; }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.RiskSkorlamaDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class RiskSkorlamaDetayController : BaseApiController
             .Select(e => new RiskSkorlamaDetayDto
             {
                 RISK_SKORLAMA_DETAY_KODU = e.RISK_SKORLAMA_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                RISK_SKORLAMA_KODU = e.RISK_SKORLAMA_KODU,
+RISK_SKORLAMA_KODU = e.RISK_SKORLAMA_KODU,
                 GLASGOW_SKALASI = e.GLASGOW_SKALASI,
                 RISK_SKORLAMA_ALT_TURU = e.RISK_SKORLAMA_ALT_TURU,
                 RISK_SKOR_DEGERI = e.RISK_SKOR_DEGERI,
@@ -49,8 +48,7 @@ public class RiskSkorlamaDetayController : BaseApiController
         return new RiskSkorlamaDetayDto
         {
             RISK_SKORLAMA_DETAY_KODU = entity.RISK_SKORLAMA_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            RISK_SKORLAMA_KODU = entity.RISK_SKORLAMA_KODU,
+RISK_SKORLAMA_KODU = entity.RISK_SKORLAMA_KODU,
             GLASGOW_SKALASI = entity.GLASGOW_SKALASI,
             RISK_SKORLAMA_ALT_TURU = entity.RISK_SKORLAMA_ALT_TURU,
             RISK_SKOR_DEGERI = entity.RISK_SKOR_DEGERI,
@@ -65,8 +63,7 @@ public class RiskSkorlamaDetayController : BaseApiController
         var entity = new RISK_SKORLAMA_DETAY
         {
             RISK_SKORLAMA_DETAY_KODU = dto.RISK_SKORLAMA_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            RISK_SKORLAMA_KODU = dto.RISK_SKORLAMA_KODU,
+RISK_SKORLAMA_KODU = dto.RISK_SKORLAMA_KODU,
             GLASGOW_SKALASI = dto.GLASGOW_SKALASI,
             RISK_SKORLAMA_ALT_TURU = dto.RISK_SKORLAMA_ALT_TURU,
             RISK_SKOR_DEGERI = dto.RISK_SKOR_DEGERI,
@@ -88,7 +85,6 @@ public class RiskSkorlamaDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.RISK_SKORLAMA_KODU = dto.RISK_SKORLAMA_KODU;
         entity.GLASGOW_SKALASI = dto.GLASGOW_SKALASI;
         entity.RISK_SKORLAMA_ALT_TURU = dto.RISK_SKORLAMA_ALT_TURU;

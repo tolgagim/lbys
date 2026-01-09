@@ -53,6 +53,7 @@ export interface TetkikListFilter extends BaseListFilter {
   loincKodu?: string;
   hizmetKodu?: string;
   raporSonucSirasi?: string;
+  IPTAL_DURUMU?: string | null;
 }
 
 export const newTetkik: CreateTetkikDto = {

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.StokIstekHareket;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class StokIstekHareketController : BaseApiController
             .Select(e => new StokIstekHareketDto
             {
                 STOK_ISTEK_HAREKET_KODU = e.STOK_ISTEK_HAREKET_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                STOK_ISTEK_KODU = e.STOK_ISTEK_KODU,
+STOK_ISTEK_KODU = e.STOK_ISTEK_KODU,
                 ISTENEN_STOK_KART_KODU = e.ISTENEN_STOK_KART_KODU,
                 ISTENEN_ILAC_JENERIK_KODU = e.ISTENEN_ILAC_JENERIK_KODU,
                 VERILEN_STOK_KART_KODU = e.VERILEN_STOK_KART_KODU,
@@ -56,8 +55,7 @@ public class StokIstekHareketController : BaseApiController
         return new StokIstekHareketDto
         {
             STOK_ISTEK_HAREKET_KODU = entity.STOK_ISTEK_HAREKET_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            STOK_ISTEK_KODU = entity.STOK_ISTEK_KODU,
+STOK_ISTEK_KODU = entity.STOK_ISTEK_KODU,
             ISTENEN_STOK_KART_KODU = entity.ISTENEN_STOK_KART_KODU,
             ISTENEN_ILAC_JENERIK_KODU = entity.ISTENEN_ILAC_JENERIK_KODU,
             VERILEN_STOK_KART_KODU = entity.VERILEN_STOK_KART_KODU,
@@ -79,8 +77,7 @@ public class StokIstekHareketController : BaseApiController
         var entity = new STOK_ISTEK_HAREKET
         {
             STOK_ISTEK_HAREKET_KODU = dto.STOK_ISTEK_HAREKET_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU,
+STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU,
             ISTENEN_STOK_KART_KODU = dto.ISTENEN_STOK_KART_KODU,
             ISTENEN_ILAC_JENERIK_KODU = dto.ISTENEN_ILAC_JENERIK_KODU,
             VERILEN_STOK_KART_KODU = dto.VERILEN_STOK_KART_KODU,
@@ -109,7 +106,6 @@ public class StokIstekHareketController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.STOK_ISTEK_KODU = dto.STOK_ISTEK_KODU;
         entity.ISTENEN_STOK_KART_KODU = dto.ISTENEN_STOK_KART_KODU;
         entity.ISTENEN_ILAC_JENERIK_KODU = dto.ISTENEN_ILAC_JENERIK_KODU;

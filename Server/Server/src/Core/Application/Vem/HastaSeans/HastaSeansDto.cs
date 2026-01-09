@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.HastaSeans;
+namespace Server.Application.Vem.HastaSeans;
 
 public class HastaSeansDto
 {
     public string? HASTA_SEANS_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_KODU { get; set; }
+public string? HASTA_KODU { get; set; }
     public string? HASTA_BASVURU_KODU { get; set; }
     public string? SEANS_ISLEM_TURU { get; set; }
     public string? CIHAZ_KODU { get; set; }

@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.Hemoglobinopati;
+namespace Server.Application.Vem.Hemoglobinopati;
 
 public class HemoglobinopatiDto
 {
     public string? HEMOGLOBINOPATI_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? HASTA_BASVURU_KODU { get; set; }
+public string? HASTA_BASVURU_KODU { get; set; }
     public string? HEMOGLOBINOPATI_TARAMA_SONUCU { get; set; }
     public string? ES_ADAYI_TC_KIMLIK_NUMARASI { get; set; }
     public string? ES_ADAYI_TELEFON_NUMARASI { get; set; }

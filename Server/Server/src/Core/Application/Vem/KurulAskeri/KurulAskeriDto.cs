@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.KurulAskeri;
+namespace Server.Application.Vem.KurulAskeri;
 
 public class KurulAskeriDto
 {
     public string? KURUL_ASKERI_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? KURUL_ADI { get; set; }
+public string? KURUL_ADI { get; set; }
     public string? MEDULA_RAPOR_TURU { get; set; }
     public string? MEDULA_ALT_RAPOR_TURU { get; set; }
     public string? ALKOL_MADDE_BAGIMLILIGI { get; set; }

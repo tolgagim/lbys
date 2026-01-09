@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Firma;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class FirmaController : BaseApiController
             .Select(e => new FirmaDto
             {
                 FIRMA_KODU = e.FIRMA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                FIRMA_ADI = e.FIRMA_ADI,
+FIRMA_ADI = e.FIRMA_ADI,
                 TELEFON_NUMARASI = e.TELEFON_NUMARASI,
                 YETKILI_KISI = e.YETKILI_KISI,
                 FIRMA_ADRESI = e.FIRMA_ADRESI,
@@ -53,8 +52,7 @@ public class FirmaController : BaseApiController
         return new FirmaDto
         {
             FIRMA_KODU = entity.FIRMA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            FIRMA_ADI = entity.FIRMA_ADI,
+FIRMA_ADI = entity.FIRMA_ADI,
             TELEFON_NUMARASI = entity.TELEFON_NUMARASI,
             YETKILI_KISI = entity.YETKILI_KISI,
             FIRMA_ADRESI = entity.FIRMA_ADRESI,
@@ -73,8 +71,7 @@ public class FirmaController : BaseApiController
         var entity = new FIRMA
         {
             FIRMA_KODU = dto.FIRMA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            FIRMA_ADI = dto.FIRMA_ADI,
+FIRMA_ADI = dto.FIRMA_ADI,
             TELEFON_NUMARASI = dto.TELEFON_NUMARASI,
             YETKILI_KISI = dto.YETKILI_KISI,
             FIRMA_ADRESI = dto.FIRMA_ADRESI,
@@ -100,7 +97,6 @@ public class FirmaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.FIRMA_ADI = dto.FIRMA_ADI;
         entity.TELEFON_NUMARASI = dto.TELEFON_NUMARASI;
         entity.YETKILI_KISI = dto.YETKILI_KISI;

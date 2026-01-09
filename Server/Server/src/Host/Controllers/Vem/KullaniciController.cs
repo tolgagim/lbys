@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Kullanici;
 using Server.Domain.Lbys;
@@ -26,7 +26,11 @@ public class KullaniciController : BaseApiController
                 KULLANICI_KODU = e.KULLANICI_KODU,
                 PERSONEL_KODU = e.PERSONEL_KODU,
                 KULLANICI_ADI = e.KULLANICI_ADI,
-                AKTIF = e.AKTIF,
+                AKTIFLIK_BILGISI = e.AKTIFLIK_BILGISI,
+                PAROLA = e.PAROLA,
+                PAROLA_SIFRELEME_TURU = e.PAROLA_SIFRELEME_TURU,
+                SOYADI = e.SOYADI,
+                TC_KIMLIK_NUMARASI = e.TC_KIMLIK_NUMARASI,
             })
             .Take(1000)
             .ToListAsync(ct);
@@ -48,7 +52,11 @@ public class KullaniciController : BaseApiController
             KULLANICI_KODU = entity.KULLANICI_KODU,
             PERSONEL_KODU = entity.PERSONEL_KODU,
             KULLANICI_ADI = entity.KULLANICI_ADI,
-            AKTIF = entity.AKTIF,
+            AKTIFLIK_BILGISI = entity.AKTIFLIK_BILGISI,
+            PAROLA = entity.PAROLA,
+            PAROLA_SIFRELEME_TURU = entity.PAROLA_SIFRELEME_TURU,
+            SOYADI = entity.SOYADI,
+            TC_KIMLIK_NUMARASI = entity.TC_KIMLIK_NUMARASI,
         };
     }
 
@@ -61,7 +69,11 @@ public class KullaniciController : BaseApiController
             KULLANICI_KODU = dto.KULLANICI_KODU,
             PERSONEL_KODU = dto.PERSONEL_KODU,
             KULLANICI_ADI = dto.KULLANICI_ADI,
-            AKTIF = dto.AKTIF,
+            AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI,
+            PAROLA = dto.PAROLA,
+            PAROLA_SIFRELEME_TURU = dto.PAROLA_SIFRELEME_TURU,
+            SOYADI = dto.SOYADI,
+            TC_KIMLIK_NUMARASI = dto.TC_KIMLIK_NUMARASI,
         };
 
         _db.Set<KULLANICI>().Add(entity);
@@ -79,9 +91,14 @@ public class KullaniciController : BaseApiController
 
         if (entity == null)
             return NotFound();
+
         entity.PERSONEL_KODU = dto.PERSONEL_KODU;
         entity.KULLANICI_ADI = dto.KULLANICI_ADI;
-        entity.AKTIF = dto.AKTIF;
+        entity.AKTIFLIK_BILGISI = dto.AKTIFLIK_BILGISI;
+        entity.PAROLA = dto.PAROLA;
+        entity.PAROLA_SIFRELEME_TURU = dto.PAROLA_SIFRELEME_TURU;
+        entity.SOYADI = dto.SOYADI;
+        entity.TC_KIMLIK_NUMARASI = dto.TC_KIMLIK_NUMARASI;
 
         await _db.SaveChangesAsync(ct);
         return NoContent();

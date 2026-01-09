@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.EkOdemeDonem;
+namespace Server.Application.Vem.EkOdemeDonem;
 
 public class EkOdemeDonemDto
 {
     public string? EK_ODEME_DONEM_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? YIL { get; set; }
+public string? YIL { get; set; }
     public string? AY { get; set; }
     public string? BORDRO_NUMARASI { get; set; }
     public string? GIRISIMSEL_ISLEM_PUAN_TOPLAMI { get; set; }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.DisprotezDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DisprotezDetayController : BaseApiController
             .Select(e => new DisprotezDetayDto
             {
                 DISPROTEZ_DETAY_KODU = e.DISPROTEZ_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                DISPROTEZ_KODU = e.DISPROTEZ_KODU,
+DISPROTEZ_KODU = e.DISPROTEZ_KODU,
                 DISPROTEZ_PLANLAMA_ZAMANI = e.DISPROTEZ_PLANLAMA_ZAMANI,
                 DISPROTEZ_IS_TURU_ASAMA_KODU = e.DISPROTEZ_IS_TURU_ASAMA_KODU,
                 DISPROTEZ_ASAMA_BITIS_ZAMANI = e.DISPROTEZ_ASAMA_BITIS_ZAMANI,
@@ -59,8 +58,7 @@ public class DisprotezDetayController : BaseApiController
         return new DisprotezDetayDto
         {
             DISPROTEZ_DETAY_KODU = entity.DISPROTEZ_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            DISPROTEZ_KODU = entity.DISPROTEZ_KODU,
+DISPROTEZ_KODU = entity.DISPROTEZ_KODU,
             DISPROTEZ_PLANLAMA_ZAMANI = entity.DISPROTEZ_PLANLAMA_ZAMANI,
             DISPROTEZ_IS_TURU_ASAMA_KODU = entity.DISPROTEZ_IS_TURU_ASAMA_KODU,
             DISPROTEZ_ASAMA_BITIS_ZAMANI = entity.DISPROTEZ_ASAMA_BITIS_ZAMANI,
@@ -85,8 +83,7 @@ public class DisprotezDetayController : BaseApiController
         var entity = new DISPROTEZ_DETAY
         {
             DISPROTEZ_DETAY_KODU = dto.DISPROTEZ_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            DISPROTEZ_KODU = dto.DISPROTEZ_KODU,
+DISPROTEZ_KODU = dto.DISPROTEZ_KODU,
             DISPROTEZ_PLANLAMA_ZAMANI = dto.DISPROTEZ_PLANLAMA_ZAMANI,
             DISPROTEZ_IS_TURU_ASAMA_KODU = dto.DISPROTEZ_IS_TURU_ASAMA_KODU,
             DISPROTEZ_ASAMA_BITIS_ZAMANI = dto.DISPROTEZ_ASAMA_BITIS_ZAMANI,
@@ -118,7 +115,6 @@ public class DisprotezDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.DISPROTEZ_KODU = dto.DISPROTEZ_KODU;
         entity.DISPROTEZ_PLANLAMA_ZAMANI = dto.DISPROTEZ_PLANLAMA_ZAMANI;
         entity.DISPROTEZ_IS_TURU_ASAMA_KODU = dto.DISPROTEZ_IS_TURU_ASAMA_KODU;

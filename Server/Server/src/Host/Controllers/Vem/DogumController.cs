@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Dogum;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class DogumController : BaseApiController
             .Select(e => new DogumDto
             {
                 DOGUM_KODU = e.DOGUM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_HIZMET_KODU = e.HASTA_HIZMET_KODU,
                 AMELIYAT_KODU = e.AMELIYAT_KODU,
@@ -58,8 +57,7 @@ public class DogumController : BaseApiController
         return new DogumDto
         {
             DOGUM_KODU = entity.DOGUM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_HIZMET_KODU = entity.HASTA_HIZMET_KODU,
             AMELIYAT_KODU = entity.AMELIYAT_KODU,
@@ -83,8 +81,7 @@ public class DogumController : BaseApiController
         var entity = new DOGUM
         {
             DOGUM_KODU = dto.DOGUM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU,
             AMELIYAT_KODU = dto.AMELIYAT_KODU,
@@ -115,7 +112,6 @@ public class DogumController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU;

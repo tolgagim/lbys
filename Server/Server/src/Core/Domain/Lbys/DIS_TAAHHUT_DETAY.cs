@@ -15,9 +15,7 @@ public class DIS_TAAHHUT_DETAY : VemEntity
     [Key]
     public string DIS_TAAHHUT_DETAY_KODU { get; set; } = default!;
     /// <summary>GÃ¶rÃ¼ntÃ¼nÃ¼n tekil kod bilgisinin alÄ±ndÄ±ÄŸÄ± SBYS veri tabanÄ±ndaki tablo adÄ±nÄ±n bilg...</summary>
-    public string REFERANS_TABLO_ADI { get; set; }
-
-    /// <summary>DiÅŸ tedavisi yapÄ±lan hastalar iÃ§in MEDULA sisteminden alÄ±nan taahhÃ¼t bilgilerini...</summary>
+/// <summary>DiÅŸ tedavisi yapÄ±lan hastalar iÃ§in MEDULA sisteminden alÄ±nan taahhÃ¼t bilgilerini...</summary>
     [ForeignKey("DisTaahhutNavigation")]
     public string DIS_TAAHHUT_KODU { get; set; }
 

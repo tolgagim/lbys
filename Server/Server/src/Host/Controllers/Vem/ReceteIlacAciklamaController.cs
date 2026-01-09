@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.ReceteIlacAciklama;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class ReceteIlacAciklamaController : BaseApiController
             .Select(e => new ReceteIlacAciklamaDto
             {
                 RECETE_ILAC_ACIKLAMA_KODU = e.RECETE_ILAC_ACIKLAMA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                RECETE_ILAC_KODU = e.RECETE_ILAC_KODU,
+RECETE_ILAC_KODU = e.RECETE_ILAC_KODU,
                 RECETE_KODU = e.RECETE_KODU,
                 ILAC_ACIKLAMA_TURU = e.ILAC_ACIKLAMA_TURU,
                 ACIKLAMA = e.ACIKLAMA,
@@ -48,8 +47,7 @@ public class ReceteIlacAciklamaController : BaseApiController
         return new ReceteIlacAciklamaDto
         {
             RECETE_ILAC_ACIKLAMA_KODU = entity.RECETE_ILAC_ACIKLAMA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            RECETE_ILAC_KODU = entity.RECETE_ILAC_KODU,
+RECETE_ILAC_KODU = entity.RECETE_ILAC_KODU,
             RECETE_KODU = entity.RECETE_KODU,
             ILAC_ACIKLAMA_TURU = entity.ILAC_ACIKLAMA_TURU,
             ACIKLAMA = entity.ACIKLAMA,
@@ -63,8 +61,7 @@ public class ReceteIlacAciklamaController : BaseApiController
         var entity = new RECETE_ILAC_ACIKLAMA
         {
             RECETE_ILAC_ACIKLAMA_KODU = dto.RECETE_ILAC_ACIKLAMA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            RECETE_ILAC_KODU = dto.RECETE_ILAC_KODU,
+RECETE_ILAC_KODU = dto.RECETE_ILAC_KODU,
             RECETE_KODU = dto.RECETE_KODU,
             ILAC_ACIKLAMA_TURU = dto.ILAC_ACIKLAMA_TURU,
             ACIKLAMA = dto.ACIKLAMA,
@@ -85,7 +82,6 @@ public class ReceteIlacAciklamaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.RECETE_ILAC_KODU = dto.RECETE_ILAC_KODU;
         entity.RECETE_KODU = dto.RECETE_KODU;
         entity.ILAC_ACIKLAMA_TURU = dto.ILAC_ACIKLAMA_TURU;

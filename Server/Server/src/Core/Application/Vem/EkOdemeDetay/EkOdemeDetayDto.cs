@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.EkOdemeDetay;
+namespace Server.Application.Vem.EkOdemeDetay;
 
 public class EkOdemeDetayDto
 {
     public string? EK_ODEME_DETAY_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? EK_ODEME_KODU { get; set; }
+public string? EK_ODEME_KODU { get; set; }
     public string? GOREV_NUMARASI { get; set; }
     public string? KADRO_KODU { get; set; }
     public string? KADRO_KATSAYISI { get; set; }

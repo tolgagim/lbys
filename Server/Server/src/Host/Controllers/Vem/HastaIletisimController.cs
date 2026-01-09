@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaIletisim;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaIletisimController : BaseApiController
             .Select(e => new HastaIletisimDto
             {
                 HASTA_ILETISIM_KODU = e.HASTA_ILETISIM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 ADRES_TIPI = e.ADRES_TIPI,
                 ADRES_KODU_SEVIYESI = e.ADRES_KODU_SEVIYESI,
@@ -63,8 +62,7 @@ public class HastaIletisimController : BaseApiController
         return new HastaIletisimDto
         {
             HASTA_ILETISIM_KODU = entity.HASTA_ILETISIM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             ADRES_TIPI = entity.ADRES_TIPI,
             ADRES_KODU_SEVIYESI = entity.ADRES_KODU_SEVIYESI,
@@ -93,8 +91,7 @@ public class HastaIletisimController : BaseApiController
         var entity = new HASTA_ILETISIM
         {
             HASTA_ILETISIM_KODU = dto.HASTA_ILETISIM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             ADRES_TIPI = dto.ADRES_TIPI,
             ADRES_KODU_SEVIYESI = dto.ADRES_KODU_SEVIYESI,
@@ -130,7 +127,6 @@ public class HastaIletisimController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.ADRES_TIPI = dto.ADRES_TIPI;

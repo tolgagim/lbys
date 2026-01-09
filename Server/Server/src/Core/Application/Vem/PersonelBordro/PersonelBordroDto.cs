@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.PersonelBordro;
+namespace Server.Application.Vem.PersonelBordro;
 
 public class PersonelBordroDto
 {
     public string? PERSONEL_BORDRO_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? YIL { get; set; }
+public string? YIL { get; set; }
     public string? AY { get; set; }
     public string? PERSONEL_KODU { get; set; }
     public string? BORDRO_TURU { get; set; }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.Konsultasyon;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KonsultasyonController : BaseApiController
             .Select(e => new KonsultasyonDto
             {
                 KONSULTASYON_KODU = e.KONSULTASYON_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_HIZMET_KODU = e.HASTA_HIZMET_KODU,
                 KONSULTASYON_BASVURU_KODU = e.KONSULTASYON_BASVURU_KODU,
@@ -53,8 +52,7 @@ public class KonsultasyonController : BaseApiController
         return new KonsultasyonDto
         {
             KONSULTASYON_KODU = entity.KONSULTASYON_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_HIZMET_KODU = entity.HASTA_HIZMET_KODU,
             KONSULTASYON_BASVURU_KODU = entity.KONSULTASYON_BASVURU_KODU,
@@ -73,8 +71,7 @@ public class KonsultasyonController : BaseApiController
         var entity = new KONSULTASYON
         {
             KONSULTASYON_KODU = dto.KONSULTASYON_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU,
             KONSULTASYON_BASVURU_KODU = dto.KONSULTASYON_BASVURU_KODU,
@@ -100,7 +97,6 @@ public class KonsultasyonController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_HIZMET_KODU = dto.HASTA_HIZMET_KODU;

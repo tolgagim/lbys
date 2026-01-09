@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KurulEngelli;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KurulEngelliController : BaseApiController
             .Select(e => new KurulEngelliDto
             {
                 KURUL_ENGELLI_KODU = e.KURUL_ENGELLI_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KURUL_RAPOR_KODU = e.KURUL_RAPOR_KODU,
                 CALISTIRILAMAYACAK_ISNITELIGI = e.CALISTIRILAMAYACAK_ISNITELIGI,
@@ -52,8 +51,7 @@ public class KurulEngelliController : BaseApiController
         return new KurulEngelliDto
         {
             KURUL_ENGELLI_KODU = entity.KURUL_ENGELLI_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KURUL_RAPOR_KODU = entity.KURUL_RAPOR_KODU,
             CALISTIRILAMAYACAK_ISNITELIGI = entity.CALISTIRILAMAYACAK_ISNITELIGI,
@@ -71,8 +69,7 @@ public class KurulEngelliController : BaseApiController
         var entity = new KURUL_ENGELLI
         {
             KURUL_ENGELLI_KODU = dto.KURUL_ENGELLI_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU,
             CALISTIRILAMAYACAK_ISNITELIGI = dto.CALISTIRILAMAYACAK_ISNITELIGI,
@@ -97,7 +94,6 @@ public class KurulEngelliController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.KURUL_RAPOR_KODU = dto.KURUL_RAPOR_KODU;

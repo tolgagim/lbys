@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaGizlilik;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaGizlilikController : BaseApiController
             .Select(e => new HastaGizlilikDto
             {
                 HASTA_GIZLILIK_KODU = e.HASTA_GIZLILIK_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 GIZLILIK_NEDENI = e.GIZLILIK_NEDENI,
                 GORUNECEK_HASTA_ADI = e.GORUNECEK_HASTA_ADI,
@@ -53,8 +52,7 @@ public class HastaGizlilikController : BaseApiController
         return new HastaGizlilikDto
         {
             HASTA_GIZLILIK_KODU = entity.HASTA_GIZLILIK_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             GIZLILIK_NEDENI = entity.GIZLILIK_NEDENI,
             GORUNECEK_HASTA_ADI = entity.GORUNECEK_HASTA_ADI,
@@ -73,8 +71,7 @@ public class HastaGizlilikController : BaseApiController
         var entity = new HASTA_GIZLILIK
         {
             HASTA_GIZLILIK_KODU = dto.HASTA_GIZLILIK_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             GIZLILIK_NEDENI = dto.GIZLILIK_NEDENI,
             GORUNECEK_HASTA_ADI = dto.GORUNECEK_HASTA_ADI,
@@ -100,7 +97,6 @@ public class HastaGizlilikController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.GIZLILIK_NEDENI = dto.GIZLILIK_NEDENI;

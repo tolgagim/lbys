@@ -1,10 +1,9 @@
-﻿namespace Server.Application.Vem.PersonelIzin;
+namespace Server.Application.Vem.PersonelIzin;
 
 public class PersonelIzinDto
 {
     public string? PERSONEL_IZIN_KODU { get; set; }
-    public string? REFERANS_TABLO_ADI { get; set; }
-    public string? PERSONEL_KODU { get; set; }
+public string? PERSONEL_KODU { get; set; }
     public string? PERSONEL_IZIN_TURU { get; set; }
     public string? KULLANILAN_IZIN { get; set; }
     public string? GECEN_YILDAN_KULLANILAN_IZIN { get; set; }

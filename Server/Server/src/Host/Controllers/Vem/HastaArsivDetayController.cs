@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaArsivDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaArsivDetayController : BaseApiController
             .Select(e => new HastaArsivDetayDto
             {
                 HASTA_ARSIV_DETAY_KODU = e.HASTA_ARSIV_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_ARSIV_KODU = e.HASTA_ARSIV_KODU,
                 DOSYA_ALAN_BIRIM_KODU = e.DOSYA_ALAN_BIRIM_KODU,
@@ -54,8 +53,7 @@ public class HastaArsivDetayController : BaseApiController
         return new HastaArsivDetayDto
         {
             HASTA_ARSIV_DETAY_KODU = entity.HASTA_ARSIV_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_ARSIV_KODU = entity.HASTA_ARSIV_KODU,
             DOSYA_ALAN_BIRIM_KODU = entity.DOSYA_ALAN_BIRIM_KODU,
@@ -75,8 +73,7 @@ public class HastaArsivDetayController : BaseApiController
         var entity = new HASTA_ARSIV_DETAY
         {
             HASTA_ARSIV_DETAY_KODU = dto.HASTA_ARSIV_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_ARSIV_KODU = dto.HASTA_ARSIV_KODU,
             DOSYA_ALAN_BIRIM_KODU = dto.DOSYA_ALAN_BIRIM_KODU,
@@ -103,7 +100,6 @@ public class HastaArsivDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_ARSIV_KODU = dto.HASTA_ARSIV_KODU;

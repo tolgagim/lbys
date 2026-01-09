@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.RiskSkorlama;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class RiskSkorlamaController : BaseApiController
             .Select(e => new RiskSkorlamaDto
             {
                 RISK_SKORLAMA_KODU = e.RISK_SKORLAMA_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 RISK_SKORLAMA_TURU = e.RISK_SKORLAMA_TURU,
                 ISLEM_ZAMANI = e.ISLEM_ZAMANI,
@@ -54,8 +53,7 @@ public class RiskSkorlamaController : BaseApiController
         return new RiskSkorlamaDto
         {
             RISK_SKORLAMA_KODU = entity.RISK_SKORLAMA_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             RISK_SKORLAMA_TURU = entity.RISK_SKORLAMA_TURU,
             ISLEM_ZAMANI = entity.ISLEM_ZAMANI,
@@ -75,8 +73,7 @@ public class RiskSkorlamaController : BaseApiController
         var entity = new RISK_SKORLAMA
         {
             RISK_SKORLAMA_KODU = dto.RISK_SKORLAMA_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
+HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             RISK_SKORLAMA_TURU = dto.RISK_SKORLAMA_TURU,
             ISLEM_ZAMANI = dto.ISLEM_ZAMANI,
@@ -103,7 +100,6 @@ public class RiskSkorlamaController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.RISK_SKORLAMA_TURU = dto.RISK_SKORLAMA_TURU;

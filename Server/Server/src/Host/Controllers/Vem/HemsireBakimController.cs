@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HemsireBakim;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HemsireBakimController : BaseApiController
             .Select(e => new HemsireBakimDto
             {
                 HEMSIRE_BAKIM_KODU = e.HEMSIRE_BAKIM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 HEMSIRE_DEGERLENDIRME_ZAMANI = e.HEMSIRE_DEGERLENDIRME_ZAMANI,
                 HEMSIRELIK_TANI_KODU = e.HEMSIRELIK_TANI_KODU,
@@ -55,8 +54,7 @@ public class HemsireBakimController : BaseApiController
         return new HemsireBakimDto
         {
             HEMSIRE_BAKIM_KODU = entity.HEMSIRE_BAKIM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             HEMSIRE_DEGERLENDIRME_ZAMANI = entity.HEMSIRE_DEGERLENDIRME_ZAMANI,
             HEMSIRELIK_TANI_KODU = entity.HEMSIRELIK_TANI_KODU,
@@ -77,8 +75,7 @@ public class HemsireBakimController : BaseApiController
         var entity = new HEMSIRE_BAKIM
         {
             HEMSIRE_BAKIM_KODU = dto.HEMSIRE_BAKIM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             HEMSIRE_DEGERLENDIRME_ZAMANI = dto.HEMSIRE_DEGERLENDIRME_ZAMANI,
             HEMSIRELIK_TANI_KODU = dto.HEMSIRELIK_TANI_KODU,
@@ -106,7 +103,6 @@ public class HemsireBakimController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.HEMSIRE_DEGERLENDIRME_ZAMANI = dto.HEMSIRE_DEGERLENDIRME_ZAMANI;

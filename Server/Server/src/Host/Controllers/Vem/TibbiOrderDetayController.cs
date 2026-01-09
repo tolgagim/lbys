@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.TibbiOrderDetay;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class TibbiOrderDetayController : BaseApiController
             .Select(e => new TibbiOrderDetayDto
             {
                 TIBBI_ORDER_DETAY_KODU = e.TIBBI_ORDER_DETAY_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                TIBBI_ORDER_KODU = e.TIBBI_ORDER_KODU,
+TIBBI_ORDER_KODU = e.TIBBI_ORDER_KODU,
                 PLANLANAN_UYGULANMA_ZAMANI = e.PLANLANAN_UYGULANMA_ZAMANI,
                 UYGULAYAN_HEMSIRE_KODU = e.UYGULAYAN_HEMSIRE_KODU,
                 UYGULAMA_ZAMANI = e.UYGULAMA_ZAMANI,
@@ -53,8 +52,7 @@ public class TibbiOrderDetayController : BaseApiController
         return new TibbiOrderDetayDto
         {
             TIBBI_ORDER_DETAY_KODU = entity.TIBBI_ORDER_DETAY_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            TIBBI_ORDER_KODU = entity.TIBBI_ORDER_KODU,
+TIBBI_ORDER_KODU = entity.TIBBI_ORDER_KODU,
             PLANLANAN_UYGULANMA_ZAMANI = entity.PLANLANAN_UYGULANMA_ZAMANI,
             UYGULAYAN_HEMSIRE_KODU = entity.UYGULAYAN_HEMSIRE_KODU,
             UYGULAMA_ZAMANI = entity.UYGULAMA_ZAMANI,
@@ -73,8 +71,7 @@ public class TibbiOrderDetayController : BaseApiController
         var entity = new TIBBI_ORDER_DETAY
         {
             TIBBI_ORDER_DETAY_KODU = dto.TIBBI_ORDER_DETAY_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            TIBBI_ORDER_KODU = dto.TIBBI_ORDER_KODU,
+TIBBI_ORDER_KODU = dto.TIBBI_ORDER_KODU,
             PLANLANAN_UYGULANMA_ZAMANI = dto.PLANLANAN_UYGULANMA_ZAMANI,
             UYGULAYAN_HEMSIRE_KODU = dto.UYGULAYAN_HEMSIRE_KODU,
             UYGULAMA_ZAMANI = dto.UYGULAMA_ZAMANI,
@@ -100,7 +97,6 @@ public class TibbiOrderDetayController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.TIBBI_ORDER_KODU = dto.TIBBI_ORDER_KODU;
         entity.PLANLANAN_UYGULANMA_ZAMANI = dto.PLANLANAN_UYGULANMA_ZAMANI;
         entity.UYGULAYAN_HEMSIRE_KODU = dto.UYGULAYAN_HEMSIRE_KODU;

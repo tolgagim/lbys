@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.KanCikis;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class KanCikisController : BaseApiController
             .Select(e => new KanCikisDto
             {
                 KAN_CIKIS_KODU = e.KAN_CIKIS_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                KAN_TALEP_DETAY_KODU = e.KAN_TALEP_DETAY_KODU,
+KAN_TALEP_DETAY_KODU = e.KAN_TALEP_DETAY_KODU,
                 HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 KAN_STOK_KODU = e.KAN_STOK_KODU,
@@ -58,8 +57,7 @@ public class KanCikisController : BaseApiController
         return new KanCikisDto
         {
             KAN_CIKIS_KODU = entity.KAN_CIKIS_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            KAN_TALEP_DETAY_KODU = entity.KAN_TALEP_DETAY_KODU,
+KAN_TALEP_DETAY_KODU = entity.KAN_TALEP_DETAY_KODU,
             HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             KAN_STOK_KODU = entity.KAN_STOK_KODU,
@@ -83,8 +81,7 @@ public class KanCikisController : BaseApiController
         var entity = new KAN_CIKIS
         {
             KAN_CIKIS_KODU = dto.KAN_CIKIS_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            KAN_TALEP_DETAY_KODU = dto.KAN_TALEP_DETAY_KODU,
+KAN_TALEP_DETAY_KODU = dto.KAN_TALEP_DETAY_KODU,
             HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             KAN_STOK_KODU = dto.KAN_STOK_KODU,
@@ -115,7 +112,6 @@ public class KanCikisController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.KAN_TALEP_DETAY_KODU = dto.KAN_TALEP_DETAY_KODU;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;

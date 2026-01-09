@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Application.Vem.HastaOlum;
 using Server.Domain.Lbys;
@@ -24,8 +24,7 @@ public class HastaOlumController : BaseApiController
             .Select(e => new HastaOlumDto
             {
                 HASTA_OLUM_KODU = e.HASTA_OLUM_KODU,
-                REFERANS_TABLO_ADI = e.REFERANS_TABLO_ADI,
-                HASTA_KODU = e.HASTA_KODU,
+HASTA_KODU = e.HASTA_KODU,
                 HASTA_BASVURU_KODU = e.HASTA_BASVURU_KODU,
                 OLUM_ZAMANI = e.OLUM_ZAMANI,
                 OLUM_YERI = e.OLUM_YERI,
@@ -62,8 +61,7 @@ public class HastaOlumController : BaseApiController
         return new HastaOlumDto
         {
             HASTA_OLUM_KODU = entity.HASTA_OLUM_KODU,
-            REFERANS_TABLO_ADI = entity.REFERANS_TABLO_ADI,
-            HASTA_KODU = entity.HASTA_KODU,
+HASTA_KODU = entity.HASTA_KODU,
             HASTA_BASVURU_KODU = entity.HASTA_BASVURU_KODU,
             OLUM_ZAMANI = entity.OLUM_ZAMANI,
             OLUM_YERI = entity.OLUM_YERI,
@@ -91,8 +89,7 @@ public class HastaOlumController : BaseApiController
         var entity = new HASTA_OLUM
         {
             HASTA_OLUM_KODU = dto.HASTA_OLUM_KODU,
-            REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI,
-            HASTA_KODU = dto.HASTA_KODU,
+HASTA_KODU = dto.HASTA_KODU,
             HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU,
             OLUM_ZAMANI = dto.OLUM_ZAMANI,
             OLUM_YERI = dto.OLUM_YERI,
@@ -127,7 +124,6 @@ public class HastaOlumController : BaseApiController
 
         if (entity == null)
             return NotFound();
-        entity.REFERANS_TABLO_ADI = dto.REFERANS_TABLO_ADI;
         entity.HASTA_KODU = dto.HASTA_KODU;
         entity.HASTA_BASVURU_KODU = dto.HASTA_BASVURU_KODU;
         entity.OLUM_ZAMANI = dto.OLUM_ZAMANI;
