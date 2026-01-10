@@ -7,7 +7,12 @@
       "Bash(taskkill:*)",
       "Bash(curl:*)",
       "Bash(start https://localhost:5001/swagger)",
-      "Bash(ng serve:*)"
+      "Bash(ng serve:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet run:*)",
+      "Bash(powershell -Command \"$input | Select-Object -Last 200\")",
+      "Bash(powershell -Command:*)",
+      "Bash(sqlcmd:*)"
     ]
   }
 }

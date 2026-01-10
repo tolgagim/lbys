@@ -57,6 +57,9 @@ internal class VemSeeder : ICustomSeeder
         // Basitleştirilmiş Level 3 seeder
         await SeedLevel3SimplifiedAsync(cancellationToken);
 
+        // Eksik tablolar için ek seed
+        await SeedRemainingTablesAsync(cancellationToken);
+
         _logger.LogInformation("VEM data seeding completed!");
     }
 
@@ -2055,113 +2058,14 @@ internal class VemSeeder : ICustomSeeder
 
     private async Task SeedReceteIlacAsync(CancellationToken ct)
     {
-        if (await _db.Set<RECETE_ILAC>().AnyAsync(ct))
-        {
-            _logger.LogInformation("RECETE_ILAC already has data, skipping...");
-            return;
-        }
-        _logger.LogInformation("Seeding RECETE_ILAC...");
-        var receteler = await _db.Set<RECETE>().ToListAsync(ct);
-
-        var ilaclar = new[] {
-            ("Parol 500mg", "1", "Ağızdan", "3x1"), ("Augmentin 1000mg", "1", "Ağızdan", "2x1"),
-            ("Arveles 25mg", "1", "Ağızdan", "2x1"), ("Majezik 100mg", "1", "Ağızdan", "3x1"),
-            ("Nurofen 400mg", "1", "Ağızdan", "3x1"), ("Cipro 500mg", "1", "Ağızdan", "2x1"),
-            ("Proton 40mg", "1", "Ağızdan", "1x1"), ("Coraspin 100mg", "1", "Ağızdan", "1x1")
-        };
-
-        var receteIlaclar = new List<RECETE_ILAC>();
-        int no = 1;
-        foreach (var r in receteler)
-        {
-            int ilacSayisi = _random.Next(1, 4);
-            for (int i = 0; i < ilacSayisi; i++)
-            {
-                var (ad, kutu, sekil, doz) = ilaclar[_random.Next(ilaclar.Length)];
-                receteIlaclar.Add(new RECETE_ILAC
-                {
-                    RECETE_ILAC_KODU = $"RI-{no++:D5}",
-RECETE_KODU = r.RECETE_KODU,
-                    ILAC_ADI = ad,
-                    KUTU_ADETI = kutu,
-                    BARKOD = $"869{_random.Next(100000000, 999999999)}",
-                    ILAC_KULLANIM_SEKLI = "AG",
-                    ILAC_KULLANIM_DOZU = doz.Split('x')[1],
-                    ILAC_KULLANIM_SAYISI = doz.Split('x')[0],
-                    ILAC_KULLANIM_PERIYODU = "7",
-                    ILAC_KULLANIM_PERIYODU_BIRIMI = "GUN",
-                    DOZ_BIRIM = "ADET",
-                    ILAC_ACIKLAMA = "Yemeklerden sonra alınacak",
-                    EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                    KAYIT_ZAMANI = DateTime.Now
-                });
-            }
-        }
-
-        await _db.Set<RECETE_ILAC>().AddRangeAsync(receteIlaclar, ct);
-        await _db.SaveChangesAsync(ct);
+        // RECETE_ILAC artık SeedRemainingTablesAsync içinde doğru FK kalıplarıyla seed ediliyor
+        _logger.LogInformation("RECETE_ILAC seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
     }
 
     private async Task SeedAmeliyatIslemAsync(CancellationToken ct)
     {
-        if (await _db.Set<AMELIYAT_ISLEM>().AnyAsync(ct))
-        {
-            _logger.LogInformation("AMELIYAT_ISLEM already has data, skipping...");
-            return;
-        }
-
-        // AMELIYAT ve HASTA_HIZMET tabloları gerekli
-        var ameliyatlar = await _db.Set<AMELIYAT>().ToListAsync(ct);
-        var hastaHizmetler = await _db.Set<HASTA_HIZMET>().ToListAsync(ct);
-
-        if (!ameliyatlar.Any())
-        {
-            _logger.LogWarning("Skipping AMELIYAT_ISLEM seeding - AMELIYAT tablosu boş");
-            return;
-        }
-
-        _logger.LogInformation("Seeding AMELIYAT_ISLEM...");
-
-        var kesiOranlari = new[] { "KESI_ORANI_100", "KESI_ORANI_50", "KESI_ORANI_25" };
-        var kesiSeanslari = new[] { "BIRINCI_SEANS", "IKINCI_SEANS", "UCUNCU_SEANS" };
-        var taraflar = new[] { "SAG", "SOL", "BILATERAL", "YOK" };
-        var asaSkorlari = new[] { "ASA_1", "ASA_2", "ASA_3" };
-        var euroScores = new[] { "EURO_LOW", "EURO_MED", "EURO_HIGH" };
-        var yaraSiniflari = new[] { "YARA_1", "YARA_2", "YARA_3" };
-        var ameliyatSonuclari = new[] { "BASARILI", "KOMPLIKASYONLU", "DEVAM_EDIYOR" };
-        var ameliyatGruplari = new[] { "A1", "A2", "A3", "B", "C", "D", "E" };
-
-        var islemler = new List<AMELIYAT_ISLEM>();
-        int no = 1;
-
-        foreach (var aml in ameliyatlar)
-        {
-            var hizmet = hastaHizmetler.FirstOrDefault(h => h.HASTA_BASVURU_KODU == aml.HASTA_BASVURU_KODU);
-
-            islemler.Add(new AMELIYAT_ISLEM
-            {
-                AMELIYAT_ISLEM_KODU = $"AI-{no++:D5}",
-AMELIYAT_KODU = aml.AMELIYAT_KODU,
-                AMELIYAT_GRUBU = ameliyatGruplari[_random.Next(ameliyatGruplari.Length)],
-                HASTA_HIZMET_KODU = hizmet?.HASTA_HIZMET_KODU,
-                KESI_SAYISI = _random.Next(1, 4).ToString(),
-                KESI_ORANI = kesiOranlari[_random.Next(kesiOranlari.Length)],
-                KESI_SEANS_BILGISI = kesiSeanslari[_random.Next(kesiSeanslari.Length)],
-                TARAF_BILGISI = taraflar[_random.Next(taraflar.Length)],
-                KOMPLIKASYON = _random.Next(10) < 2 ? "VAR" : "YOK",
-                AMELIYAT_SONUCU = ameliyatSonuclari[_random.Next(ameliyatSonuclari.Length)],
-                AMELIYAT_NOTU = $"Ameliyat başarılı şekilde tamamlanmıştır. Hasta vital bulguları stabil.",
-                ASA_SKORU = asaSkorlari[_random.Next(asaSkorlari.Length)],
-                EUROSCORE = euroScores[_random.Next(euroScores.Length)],
-                YARA_SINIFI = yaraSiniflari[_random.Next(yaraSiniflari.Length)],
-                EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                KAYIT_ZAMANI = DateTime.Now
-            });
-        }
-
-        await _db.Set<AMELIYAT_ISLEM>().AddRangeAsync(islemler, ct);
-        await _db.SaveChangesAsync(ct);
-        _logger.LogInformation($"Seeded: {islemler.Count} AMELIYAT_ISLEM records");
+        // AMELIYAT_ISLEM artık SeedRemainingTablesAsync içinde doğru FK kalıplarıyla seed ediliyor
+        _logger.LogInformation("AMELIYAT_ISLEM seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
     }
 
     private async Task SeedAmeliyatEkipAsync(CancellationToken ct)
@@ -2785,24 +2689,8 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
             _logger.LogInformation($"Seeded: {items.Count} HASTA_VITAL_FIZIKI_BULGU records");
         }
 
-        // HASTA_SEVK
-        if (!await _db.Set<HASTA_SEVK>().AnyAsync(ct))
-        {
-            var items = basvurular.Take(25).Select((b, i) => new HASTA_SEVK
-            {
-                HASTA_SEVK_KODU = $"HS-{i + 1:D5}",
-HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-                HASTA_KODU = b.HASTA_KODU,
-                SEVK_TARIHI = b.HASTA_KABUL_ZAMANI.Value.AddDays(_random.Next(1, 5)),
-                SEVK_NEDENI = "İleri tetkik ve tedavi için sevk edilmiştir.",
-                SEVK_EDEN_HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
-                EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                KAYIT_ZAMANI = DateTime.Now
-            }).ToList();
-            await _db.Set<HASTA_SEVK>().AddRangeAsync(items, ct);
-            await _db.SaveChangesAsync(ct);
-            _logger.LogInformation($"Seeded: {items.Count} HASTA_SEVK records");
-        }
+        // HASTA_SEVK - SeedRemainingTablesAsync içinde tam versiyonu var
+        _logger.LogInformation("HASTA_SEVK seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
 
         // HASTA_GIZLILIK
         if (!await _db.Set<HASTA_GIZLILIK>().AnyAsync(ct))
@@ -2840,7 +2728,20 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
             _logger.LogInformation($"Seeded: {items.Count} KONSULTASYON records");
         }
 
-        // HEMSIRE_BAKIM
+        // HEMSIRE_BAKIM - referans kodları oluştur
+        var hbBakimNedeniRef = new[] { "RUTIN", "ACIL", "BASINC_YARASI", "YARA_BAKIM", "KATETER" };
+        var hbHedefSonucRef = new[] { "BASARILI", "KISMI_BASARILI", "BASARISIZ", "DEVAM_EDIYOR" };
+        var hbGirisimiRef = new[] { "VITAL_TAKIP", "ILAC_UYGULAMA", "PANSUMAN", "INFUZYON", "KATETER_BAKIMI" };
+        var hbDegerDurumRef = new[] { "STABIL", "IYILESME", "KOTULEME", "DEGISIM_YOK", "KRITIK" };
+        var hbHemsirelikTaniRef = new[] { "HT001", "HT002", "HT003", "HT004", "HT005" };
+
+        foreach (var r in hbBakimNedeniRef) await AddReferansKodIfNotExists("BAKIM_NEDENI", r, $"Bakım Nedeni - {r}", ct);
+        foreach (var r in hbHedefSonucRef) await AddReferansKodIfNotExists("HEMSIRE_BAKIM_HEDEF_SONUC", r, $"Hedef Sonuç - {r}", ct);
+        foreach (var r in hbGirisimiRef) await AddReferansKodIfNotExists("HEMSIRELIK_GIRISIMI", r, $"Girişim - {r}", ct);
+        foreach (var r in hbDegerDurumRef) await AddReferansKodIfNotExists("HEMSIRE_DEGERLENDIRME_DURUMU", r, $"Değerlendirme - {r}", ct);
+        foreach (var r in hbHemsirelikTaniRef) await AddReferansKodIfNotExists("HEMSIRELIK_TANI_KODU", r, $"Hemşirelik Tanısı - {r}", ct);
+        await _db.SaveChangesAsync(ct);
+
         if (!await _db.Set<HEMSIRE_BAKIM>().AnyAsync(ct))
         {
             var hemsireler = personeller.Where(p => p.UNVAN_KODU == "Hemşire").ToList();
@@ -2849,11 +2750,17 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
                 var items = basvurular.Take(25).Select((b, i) => new HEMSIRE_BAKIM
                 {
                     HEMSIRE_BAKIM_KODU = $"HB-{i + 1:D5}",
-HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+                    HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
                     HASTA_KODU = b.HASTA_KODU,
-                    BAKIM_TARIHI = b.HASTA_KABUL_ZAMANI.AddHours(_random.Next(1, 48)),
+                    HEMSIRE_DEGERLENDIRME_ZAMANI = b.HASTA_KABUL_ZAMANI.AddHours(_random.Next(1, 48)),
+                    HEMSIRELIK_TANI_KODU = $"HEMSIRELIK_TANI_KODU_{hbHemsirelikTaniRef[i % hbHemsirelikTaniRef.Length]}",
+                    BAKIM_NEDENI = $"BAKIM_NEDENI_{hbBakimNedeniRef[i % hbBakimNedeniRef.Length]}",
+                    HEMSIRE_BAKIM_HEDEF_SONUC = $"HEMSIRE_BAKIM_HEDEF_SONUC_{hbHedefSonucRef[i % hbHedefSonucRef.Length]}",
+                    HEMSIRELIK_GIRISIMI = $"HEMSIRELIK_GIRISIMI_{hbGirisimiRef[i % hbGirisimiRef.Length]}",
+                    HEMSIRE_DEGERLENDIRME_DURUMU = $"HEMSIRE_DEGERLENDIRME_DURUMU_{hbDegerDurumRef[i % hbDegerDurumRef.Length]}",
+                    HEMSIRE_DEGERLENDIRME_NOTU = $"Bakım notu {i + 1}: Hasta takibi yapıldı, vital bulgular normal.",
                     HEMSIRE_KODU = hemsireler[i % hemsireler.Count].PERSONEL_KODU,
-                    BAKIM_NOTU = $"Bakım notu {i + 1}: Hasta takibi yapıldı, vital bulgular normal.",
+                    ACIKLAMA = $"Hemşire bakım kaydı {i + 1}",
                     EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
                     KAYIT_ZAMANI = DateTime.Now
                 }).ToList();
@@ -2943,47 +2850,11 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
             _logger.LogInformation($"Seeded: {items.Count} DOKTOR_MESAJI records");
         }
 
-        // HASTA_MALZEME
-        if (!await _db.Set<HASTA_MALZEME>().AnyAsync(ct))
-        {
-            var stokKartlar = await _db.Set<STOK_KART>().ToListAsync(ct);
-            if (stokKartlar.Any())
-            {
-                var items = basvurular.Take(25).Select((b, i) => new HASTA_MALZEME
-                {
-                    HASTA_MALZEME_KODU = $"HM-{i + 1:D5}",
-HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-                    HASTA_KODU = b.HASTA_KODU,
-                    STOK_KART_KODU = stokKartlar[i % stokKartlar.Count].STOK_KART_KODU,
-                    MIKTAR = _random.Next(1, 5),
-                    KULLANIM_TARIHI = b.HASTA_KABUL_ZAMANI.AddHours(_random.Next(1, 48)),
-                    EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                    KAYIT_ZAMANI = DateTime.Now
-                }).ToList();
-                await _db.Set<HASTA_MALZEME>().AddRangeAsync(items, ct);
-                await _db.SaveChangesAsync(ct);
-                _logger.LogInformation($"Seeded: {items.Count} HASTA_MALZEME records");
-            }
-        }
+        // HASTA_MALZEME - SeedRemainingTablesAsync içinde tam versiyonu var
+        _logger.LogInformation("HASTA_MALZEME seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
 
-        // HASTA_SEANS
-        if (!await _db.Set<HASTA_SEANS>().AnyAsync(ct))
-        {
-            var items = basvurular.Take(25).Select((b, i) => new HASTA_SEANS
-            {
-                HASTA_SEANS_KODU = $"HSS-{i + 1:D5}",
-HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-                HASTA_KODU = b.HASTA_KODU,
-                SEANS_NO = i + 1,
-                SEANS_TARIHI = b.HASTA_KABUL_ZAMANI.Value.AddDays(i),
-                SEANS_DURUMU = i % 2 == 0 ? "TAMAMLANDI" : "PLANLANDI",
-                EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                KAYIT_ZAMANI = DateTime.Now
-            }).ToList();
-            await _db.Set<HASTA_SEANS>().AddRangeAsync(items, ct);
-            await _db.SaveChangesAsync(ct);
-            _logger.LogInformation($"Seeded: {items.Count} HASTA_SEANS records");
-        }
+        // HASTA_SEANS - SeedRemainingTablesAsync içinde tam versiyonu var, burayı atlıyoruz
+        _logger.LogInformation("HASTA_SEANS seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
     }
 
     private async Task SeedPersonelIliskiliAsync(List<PERSONEL> personeller, List<BIRIM> birimler, CancellationToken ct)
@@ -3121,24 +2992,8 @@ HASTA_KODU = h.HASTA_KODU,
             _logger.LogInformation($"Seeded: {items.Count} ASI_BILGISI records");
         }
 
-        // RADYOLOJI
-        if (!await _db.Set<RADYOLOJI>().AnyAsync(ct))
-        {
-            var items = basvurular.Take(25).Select((b, i) => new RADYOLOJI
-            {
-                RADYOLOJI_KODU = $"RAD-{i + 1:D5}",
-HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-                HASTA_KODU = b.HASTA_KODU,
-                ISTEK_TARIHI = b.HASTA_KABUL_ZAMANI.AddHours(_random.Next(1, 24)),
-                ISTEYEN_HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
-                TETKIK_TURU = i % 4 == 0 ? "RONTGEN" : i % 4 == 1 ? "USG" : i % 4 == 2 ? "BT" : "MR",
-                EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                KAYIT_ZAMANI = DateTime.Now
-            }).ToList();
-            await _db.Set<RADYOLOJI>().AddRangeAsync(items, ct);
-            await _db.SaveChangesAsync(ct);
-            _logger.LogInformation($"Seeded: {items.Count} RADYOLOJI records");
-        }
+        // RADYOLOJI - SeedRemainingTablesAsync içinde tam versiyonu var
+        _logger.LogInformation("RADYOLOJI seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
 
         // RADYOLOJI_SONUC
         if (!await _db.Set<RADYOLOJI_SONUC>().AnyAsync(ct))
@@ -3162,25 +3017,8 @@ RADYOLOJI_KODU = r.RADYOLOJI_KODU,
             }
         }
 
-        // PATOLOJI
-        if (!await _db.Set<PATOLOJI>().AnyAsync(ct))
-        {
-            var items = basvurular.Take(25).Select((b, i) => new PATOLOJI
-            {
-                PATOLOJI_KODU = $"PAT-{i + 1:D5}",
-HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-                HASTA_KODU = b.HASTA_KODU,
-                NUMUNE_ALMA_TARIHI = b.HASTA_KABUL_ZAMANI.AddHours(_random.Next(1, 48)),
-                NUMUNE_TURU = i % 3 == 0 ? "BIYOPSI" : i % 3 == 1 ? "SITOLOJI" : "FROZEN",
-                RAPOR_TARIHI = b.HASTA_KABUL_ZAMANI.Value.AddDays(_random.Next(3, 14)),
-                RAPOR_SONUCU = "Patolojik inceleme sonucu normal.",
-                EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                KAYIT_ZAMANI = DateTime.Now
-            }).ToList();
-            await _db.Set<PATOLOJI>().AddRangeAsync(items, ct);
-            await _db.SaveChangesAsync(ct);
-            _logger.LogInformation($"Seeded: {items.Count} PATOLOJI records");
-        }
+        // PATOLOJI - SeedRemainingTablesAsync içinde tam versiyonu var
+        _logger.LogInformation("PATOLOJI seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
     }
 
     private async Task SeedKanBankasiAsync(List<HASTA> hastalar, List<PERSONEL> personeller, List<DEPO> depolar, CancellationToken ct)
@@ -3395,44 +3233,11 @@ STERILIZASYON_SET_KODU = setler[i % setler.Count].STERILIZASYON_SET_KODU,
 
     private async Task SeedDigerTablolarAsync(List<HASTA> hastalar, List<HASTA_BASVURU> basvurular, List<PERSONEL> personeller, List<BIRIM> birimler, List<HIZMET> hizmetler, List<TETKIK> tetkikler, CancellationToken ct)
     {
-        // VEZNE
-        if (!await _db.Set<VEZNE>().AnyAsync(ct))
-        {
-            var items = Enumerable.Range(1, 25).Select(i => new VEZNE
-            {
-                VEZNE_KODU = $"VZN-{i:D5}",
-VEZNE_ADI = $"Vezne {i}",
-                VEZNE_TURU = i % 2 == 0 ? "ANA_VEZNE" : "BIRIM_VEZNE",
-                EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                KAYIT_ZAMANI = DateTime.Now
-            }).ToList();
-            await _db.Set<VEZNE>().AddRangeAsync(items, ct);
-            await _db.SaveChangesAsync(ct);
-            _logger.LogInformation($"Seeded: {items.Count} VEZNE records");
-        }
+        // VEZNE - SeedRemainingTablesAsync içinde tam versiyonu var
+        _logger.LogInformation("VEZNE seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
 
-        // VEZNE_DETAY
-        if (!await _db.Set<VEZNE_DETAY>().AnyAsync(ct))
-        {
-            var vezneler = await _db.Set<VEZNE>().ToListAsync(ct);
-            if (vezneler.Any())
-            {
-                var items = basvurular.Take(25).Select((b, i) => new VEZNE_DETAY
-                {
-                    VEZNE_DETAY_KODU = $"VD-{i + 1:D5}",
-VEZNE_KODU = vezneler[i % vezneler.Count].VEZNE_KODU,
-                    HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
-                    ISLEM_TARIHI = b.HASTA_KABUL_ZAMANI,
-                    TUTAR = _random.Next(50, 1000),
-                    ODEME_TURU = i % 3 == 0 ? "NAKIT" : i % 3 == 1 ? "KART" : "SGK",
-                    EKLEYEN_KULLANICI_KODU = AdminKullaniciKodu,
-                    KAYIT_ZAMANI = DateTime.Now
-                }).ToList();
-                await _db.Set<VEZNE_DETAY>().AddRangeAsync(items, ct);
-                await _db.SaveChangesAsync(ct);
-                _logger.LogInformation($"Seeded: {items.Count} VEZNE_DETAY records");
-            }
-        }
+        // VEZNE_DETAY - SeedRemainingTablesAsync içinde tam versiyonu var
+        _logger.LogInformation("VEZNE_DETAY seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
 
         // EK_ODEME
         if (!await _db.Set<EK_ODEME>().AnyAsync(ct))
@@ -4442,29 +4247,8 @@ HASTA_KODU = b.HASTA_KODU,
             }).ToList());
         }
 
-        // === KAN_TALEP_DETAY - Kan Talep Detay ===
-        var kanTalepler = await _db.Set<KAN_TALEP>().ToListAsync(ct);
-        var kanUrunler = await _db.Set<KAN_URUN>().ToListAsync(ct);
-        if (kanTalepler.Any() && kanUrunler.Any() && kullanicilar.Any())
-        {
-            await SeedIfEmpty<KAN_TALEP_DETAY>(ct, kanTalepler.Take(25).Select((kt, i) => new KAN_TALEP_DETAY
-            {
-                KAN_TALEP_DETAY_KODU = $"KTD-{i + 1:D5}",
-KAN_TALEP_KODU = kt.KAN_TALEP_KODU,
-                KAN_URUN_KODU = kanUrunler[i % kanUrunler.Count].KAN_URUN_KODU,
-                ISTENEN_KAN_GRUBU = $"KAN_GRUBU_{kanGrubuRef[i % kanGrubuRef.Length]}",
-                RET_TARIHI = DateTime.Now.AddDays(-_random.Next(1, 30)),
-                RET_EDEN_KULLANICI_KODU = kullanicilar[i % kullanicilar.Count].KULLANICI_KODU,
-                KAN_TALEP_RET_NEDENI = $"KAN_TALEP_RET_NEDENI_{kanRetNedeniRef[i % kanRetNedeniRef.Length]}",
-                KAN_TALEP_MIKTARI = (_random.Next(1, 5)).ToString(),
-                KAN_HACIM = (_random.Next(250, 500)).ToString(),
-                ACIKLAMA = $"Kan talep detayı {i + 1}",
-                BUFFYCOAT_UZAKLASTIRMA_DURUMU = i % 2 == 0 ? "EVET" : "HAYIR",
-                KAN_FILTRELEME_DURUMU = i % 3 == 0 ? "EVET" : "HAYIR",
-                KAN_ISINLAMA_DURUMU = i % 4 == 0 ? "EVET" : "HAYIR",
-                KAN_YIKAMA_DURUMU = i % 5 == 0 ? "EVET" : "HAYIR"
-            }).ToList());
-        }
+        // KAN_TALEP_DETAY - SeedRemainingTablesAsync içinde doğru FK kalıplarıyla seed ediliyor
+        _logger.LogInformation("KAN_TALEP_DETAY seeding deferred to SeedRemainingTablesAsync (has complex FK requirements)");
 
         // === KAN_CIKIS - Kan Çıkış Kayıtları ===
         var kanTalepDetaylar = await _db.Set<KAN_TALEP_DETAY>().ToListAsync(ct);
@@ -7066,9 +6850,17 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
         // HASTA_ILETISIM referans kodları
         var adresTipiRef = new[] { "EV", "IS", "DIGER" };
         var adresSeviyesiRef = new[] { "IL", "ILCE", "MAHALLE" };
+        var ilceKoduRef = new[] { "001", "002", "003", "004", "005" };
+        var bucakKoduRef = new[] { "001", "002", "003" };
+        var koyKoduRef = new[] { "001", "002", "003" };
+        var mahalleKoduRef = new[] { "001", "002", "003", "004", "005" };
         foreach (var r in adresTipiRef) await AddReferansKodIfNotExists("ADRES_TIPI", r, r, ct);
         foreach (var r in adresSeviyesiRef) await AddReferansKodIfNotExists("ADRES_KODU_SEVIYESI", r, r, ct);
-        foreach (var r in eshIlKoduRef) await AddReferansKodIfNotExists("IL_KODU", r, r, ct);
+        foreach (var r in eshIlKoduRef) await AddReferansKodIfNotExists("IL_KODU", r, $"İl {r}", ct);
+        foreach (var r in ilceKoduRef) await AddReferansKodIfNotExists("ILCE_KODU", r, $"İlçe {r}", ct);
+        foreach (var r in bucakKoduRef) await AddReferansKodIfNotExists("BUCAK_KODU", r, $"Bucak {r}", ct);
+        foreach (var r in koyKoduRef) await AddReferansKodIfNotExists("KOY_KODU", r, $"Köy {r}", ct);
+        foreach (var r in mahalleKoduRef) await AddReferansKodIfNotExists("MAHALLE_KODU", r, $"Mahalle {r}", ct);
         await _db.SaveChangesAsync(ct);
 
         // 23. HASTA_ILETISIM - Hasta İletişim Bilgileri
@@ -7081,18 +6873,18 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
             ADRES_KODU_SEVIYESI = $"ADRES_KODU_SEVIYESI_{adresSeviyesiRef[i % adresSeviyesiRef.Length]}",
             BEYAN_ADRESI = $"Test Mahallesi, Test Sokak No:{i + 1}",
             NVI_ADRES = $"Test Mahallesi, Test Caddesi No:{i + 1}",
-            ADRES_NUMARASI = $"{_random.Next(1000000, 9999999)}",
+            ADRES_NUMARASI = $"{1000000 + i}",
             IL_KODU = $"IL_KODU_{eshIlKoduRef[i % eshIlKoduRef.Length]}",
-            ILCE_KODU = $"ILCE_{_random.Next(100, 999)}",
-            BUCAK_KODU = $"BCK_{_random.Next(100, 999)}",
-            KOY_KODU = $"KOY_{_random.Next(100, 999)}",
-            MAHALLE_KODU = $"MHL_{_random.Next(1000, 9999)}",
-            CSBM_KODU = $"CSBM{_random.Next(100000, 999999)}",
-            DIS_KAPI_NUMARASI = $"{_random.Next(1, 200)}",
-            IC_KAPI_NUMARASI = $"{_random.Next(1, 50)}",
-            EV_TELEFONU = $"0{_random.Next(212, 216)}{_random.Next(1000000, 9999999)}",
-            CEP_TELEFONU = $"05{_random.Next(30, 59)}{_random.Next(1000000, 9999999)}",
-            IS_TELEFONU = $"0{_random.Next(212, 216)}{_random.Next(1000000, 9999999)}",
+            ILCE_KODU = $"ILCE_KODU_{ilceKoduRef[i % ilceKoduRef.Length]}",
+            BUCAK_KODU = $"BUCAK_KODU_{bucakKoduRef[i % bucakKoduRef.Length]}",
+            KOY_KODU = $"KOY_KODU_{koyKoduRef[i % koyKoduRef.Length]}",
+            MAHALLE_KODU = $"MAHALLE_KODU_{mahalleKoduRef[i % mahalleKoduRef.Length]}",
+            CSBM_KODU = $"CSBM{100000 + i}",
+            DIS_KAPI_NUMARASI = $"{(i % 200) + 1}",
+            IC_KAPI_NUMARASI = $"{(i % 50) + 1}",
+            EV_TELEFONU = $"02121234{i:D3}",
+            CEP_TELEFONU = $"05321234{i:D3}",
+            IS_TELEFONU = $"02161234{i:D3}",
             EPOSTA_ADRESI = $"hasta{i + 1}@test.com"
         }).ToList());
         _logger.LogInformation("HASTA_ILETISIM seeded");
@@ -7662,6 +7454,1174 @@ HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
         _logger.LogInformation("36 table seeding completed!");
 
         _logger.LogInformation("Level 3 simplified seeding completed!");
+    }
+
+    /// <summary>
+    /// Eksik tablolar için ek seed işlemleri
+    /// </summary>
+    private async Task SeedRemainingTablesAsync(CancellationToken ct)
+    {
+        _logger.LogInformation("Seeding remaining tables...");
+
+        // Gerekli referans verileri yükle
+        var basvurular = await _db.Set<HASTA_BASVURU>().Take(25).ToListAsync(ct);
+        var hastalar = await _db.Set<HASTA>().Take(25).ToListAsync(ct);
+        var personeller = await _db.Set<PERSONEL>().Take(10).ToListAsync(ct);
+        var kullanicilar = await _db.Set<KULLANICI>().Take(5).ToListAsync(ct);
+        var kurumlar = await _db.Set<KURUM>().Take(5).ToListAsync(ct);
+        var dogumlar = await _db.Set<DOGUM>().Take(25).ToListAsync(ct);
+        var kanStoklar = await _db.Set<KAN_STOK>().Take(25).ToListAsync(ct);
+        var kanTalepDetaylar = await _db.Set<KAN_TALEP_DETAY>().Take(25).ToListAsync(ct);
+        var riskSkorlama = await _db.Set<RISK_SKORLAMA>().Take(25).ToListAsync(ct);
+        var hastaHizmetler = await _db.Set<HASTA_HIZMET>().Take(25).ToListAsync(ct);
+        var disTaahhutlar = await _db.Set<DIS_TAAHHUT>().Take(10).ToListAsync(ct);
+        var disprotezler = await _db.Set<DISPROTEZ>().Take(10).ToListAsync(ct);
+        var randevular = await _db.Set<RANDEVU>().Take(10).ToListAsync(ct);
+        var kurulRaporlar = await _db.Set<KURUL_RAPOR>().Take(10).ToListAsync(ct);
+        var sterilizasyonSetler = await _db.Set<STERILIZASYON_SET>().Take(10).ToListAsync(ct);
+        var sterilizasyonPaketler = await _db.Set<STERILIZASYON_PAKET>().Take(10).ToListAsync(ct);
+        var stokIstekler = await _db.Set<STOK_ISTEK>().Take(10).ToListAsync(ct);
+
+        if (!basvurular.Any() || !hastalar.Any() || !personeller.Any())
+        {
+            _logger.LogWarning("Skipping remaining tables seeding - required base data missing");
+            return;
+        }
+
+        // === 1. BEBEK_COCUK_IZLEM ===
+        var kacinciIzlemRef = new[] { "1", "2", "3", "4", "5" };
+        var agizdanSiviRef = new[] { "EVET", "HAYIR" };
+        var demirDestegiRef = new[] { "EVET", "HAYIR", "UYGULANMIYOR" };
+        var dvitaminiRef = new[] { "EVET", "HAYIR", "UYGULANMIYOR" };
+        var gkdTaramaRef = new[] { "NORMAL", "ANORMAL", "YAPILMADI" };
+        var topukKaniRef = new[] { "ALINDI", "ALINMADI" };
+        var izlemYeriRef = new[] { "ASM", "HASTANE", "MUAYENEHANE" };
+        var bebekteRiskRef = new[] { "YOK", "DUSUK", "ORTA", "YUKSEK" };
+        var taramaSonucuRef = new[] { "NORMAL", "ANORMAL" };
+        var beslenmeDurumuRef = new[] { "ANNE_SUTU", "MAMA", "KARMA" };
+        var gelisimBilgisiRef = new[] { "NORMAL", "GECIKME", "ILERI" };
+        var ntpTakipRef = new[] { "EVET", "HAYIR" };
+        var beyinRiskRef = new[] { "YOK", "VAR" };
+        var ebeveynDestekRef = new[] { "UYGULANMADI", "UYGULANACAK", "UYGULANDI" };
+        var psikolojikRiskRef = new[] { "YOK", "VAR" };
+        var mudahaleRef = new[] { "YOK", "YAPILDI" };
+        var riskliOlguRef = new[] { "HAYIR", "EVET" };
+
+        foreach (var r in kacinciIzlemRef) await AddReferansKodIfNotExists("KACINCI_IZLEM", r, $"{r}. İzlem", ct);
+        foreach (var r in agizdanSiviRef) await AddReferansKodIfNotExists("AGIZDAN_SIVI_TEDAVISI", r, r, ct);
+        foreach (var r in demirDestegiRef) await AddReferansKodIfNotExists("DEMIR_LOJISTIGI_VE_DESTEGI", r, r, ct);
+        foreach (var r in dvitaminiRef) await AddReferansKodIfNotExists("DVITAMINI_LOJISTIGI_VE_DESTEGI", r, r, ct);
+        foreach (var r in gkdTaramaRef) await AddReferansKodIfNotExists("GKD_TARAMA_SONUCU", r, r, ct);
+        foreach (var r in topukKaniRef) await AddReferansKodIfNotExists("TOPUK_KANI", r, r, ct);
+        foreach (var r in izlemYeriRef) await AddReferansKodIfNotExists("IZLEMIN_YAPILDIGI_YER", r, r, ct);
+        foreach (var r in bebekteRiskRef) await AddReferansKodIfNotExists("BEBEKTE_RISK_FAKTORLERI", r, r, ct);
+        foreach (var r in taramaSonucuRef) await AddReferansKodIfNotExists("TARAMA_SONUCU", r, r, ct);
+        foreach (var r in beslenmeDurumuRef) await AddReferansKodIfNotExists("BEBEGIN_BESLENME_DURUMU", r, r, ct);
+        foreach (var r in gelisimBilgisiRef) await AddReferansKodIfNotExists("GELISIM_TABLOSU_BILGILERI", r, r, ct);
+        foreach (var r in ntpTakipRef) await AddReferansKodIfNotExists("NTP_TAKIP_BILGISI", r, r, ct);
+        foreach (var r in beyinRiskRef) await AddReferansKodIfNotExists("BC_BEYIN_GELISIM_RISKLERI", r, r, ct);
+        foreach (var r in ebeveynDestekRef) await AddReferansKodIfNotExists("EBEVEYN_DESTEK_AKTIVITELERI", r, r, ct);
+        foreach (var r in psikolojikRiskRef) await AddReferansKodIfNotExists("BC_PSIKOLOJIK_RISK_EGITIM", r, r, ct);
+        foreach (var r in mudahaleRef) await AddReferansKodIfNotExists("BC_RISK_YAPILAN_MUDAHALE", r, r, ct);
+        foreach (var r in riskliOlguRef) await AddReferansKodIfNotExists("BC_RISKLI_OLGU_TAKIBI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<BEBEK_COCUK_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new BEBEK_COCUK_IZLEM
+        {
+            BEBEK_COCUK_IZLEM_KODU = $"BCI-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            KACINCI_IZLEM = $"KACINCI_IZLEM_{kacinciIzlemRef[i % kacinciIzlemRef.Length]}",
+            AGIZDAN_SIVI_TEDAVISI = $"AGIZDAN_SIVI_TEDAVISI_{agizdanSiviRef[0]}",
+            BAS_CEVRESI = $"{35 + _random.Next(0, 10)}",
+            DEMIR_LOJISTIGI_VE_DESTEGI = $"DEMIR_LOJISTIGI_VE_DESTEGI_{demirDestegiRef[0]}",
+            DOGUM_AGIRLIGI = $"{2500 + _random.Next(0, 2000)}",
+            DVITAMINI_LOJISTIGI_VE_DESTEGI = $"DVITAMINI_LOJISTIGI_VE_DESTEGI_{dvitaminiRef[0]}",
+            GKD_TARAMA_SONUCU = $"GKD_TARAMA_SONUCU_{gkdTaramaRef[0]}",
+            HEMATOKRIT_DEGERI = $"{35 + _random.Next(0, 15)}",
+            HEMOGLOBIN_DEGERI = $"{10 + _random.Next(0, 8)}",
+            TOPUK_KANI = $"TOPUK_KANI_{topukKaniRef[0]}",
+            TOPUK_KANI_ALINMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            IZLEMIN_YAPILDIGI_YER = $"IZLEMIN_YAPILDIGI_YER_{izlemYeriRef[i % izlemYeriRef.Length]}",
+            IZLEMI_YAPAN_PERSONEL_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+            BILGI_ALINAN_KISI_AD_SOYADI = $"Anne {i + 1}",
+            BILGI_ALINAN_KISI_TELEFON = $"555{_random.Next(1000000, 9999999)}",
+            BEBEKTE_RISK_FAKTORLERI = $"BEBEKTE_RISK_FAKTORLERI_{bebekteRiskRef[0]}",
+            TARAMA_SONUCU = $"TARAMA_SONUCU_{taramaSonucuRef[0]}",
+            ANNE_SUTUNDEN_KESILDIGI_AY = $"{_random.Next(6, 24)}",
+            BEBEGIN_BESLENME_DURUMU = $"BEBEGIN_BESLENME_DURUMU_{beslenmeDurumuRef[i % beslenmeDurumuRef.Length]}",
+            EK_GIDAYA_BASLADIGI_AY = $"{_random.Next(4, 8)}",
+            SADECE_ANNE_SUTU_ALDIGI_SURE = $"{_random.Next(1, 6)}",
+            GELISIM_TABLOSU_BILGILERI = $"GELISIM_TABLOSU_BILGILERI_{gelisimBilgisiRef[0]}",
+            NTP_TAKIP_BILGISI = $"NTP_TAKIP_BILGISI_{ntpTakipRef[0]}",
+            BC_BEYIN_GELISIM_RISKLERI = $"BC_BEYIN_GELISIM_RISKLERI_{beyinRiskRef[0]}",
+            EBEVEYN_DESTEK_AKTIVITELERI = $"EBEVEYN_DESTEK_AKTIVITELERI_{ebeveynDestekRef[0]}",
+            BC_PSIKOLOJIK_RISK_EGITIM = $"BC_PSIKOLOJIK_RISK_EGITIM_{psikolojikRiskRef[0]}",
+            BC_RISK_YAPILAN_MUDAHALE = $"BC_RISK_YAPILAN_MUDAHALE_{mudahaleRef[0]}",
+            BC_RISKLI_OLGU_TAKIBI = $"BC_RISKLI_OLGU_TAKIBI_{riskliOlguRef[0]}",
+            ACIKLAMA = $"Bebek çocuk izlem kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("BEBEK_COCUK_IZLEM seeded");
+
+        // === 2. DOGUM_DETAY ===
+        var cinsiyetRef = new[] { "E", "K" };
+        var dogumYontemiRef = new[] { "NORMAL", "SEZARYEN", "VAKUM", "FORSEPS" };
+        var komplikasyonRef = new[] { "YOK", "KANAMA", "ENFEKSIYON", "DIGER" };
+        var prognozRef = new[] { "IYI", "ORTA", "KOTU" };
+        var surmatureRef = new[] { "YOK", "VAR" };
+        var kVitaminiRef = new[] { "UYGULANDI", "UYGULANMADI" };
+        var hepatitAsiRef = new[] { "YAPILDI", "YAPILMADI" };
+        var isitmeTaramaRef = new[] { "YAPILDI", "YAPILMADI", "GECTI", "KALDI" };
+        var yasamDurumuRef = new[] { "CANLI", "OLU" };
+        var sezaryenEndikasyonRef = new[] { "ELEKTIF", "ACIL", "TEKRAR" };
+        var robsonGrubuRef = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+
+        foreach (var r in cinsiyetRef) await AddReferansKodIfNotExists("CINSIYET", r, r == "E" ? "Erkek" : "Kadın", ct);
+        foreach (var r in dogumYontemiRef) await AddReferansKodIfNotExists("DOGUM_YONTEMI", r, r, ct);
+        foreach (var r in komplikasyonRef) await AddReferansKodIfNotExists("KOMPLIKASYON_TANISI", r, r, ct);
+        foreach (var r in prognozRef) await AddReferansKodIfNotExists("PROGNOZ_BILGISI", r, r, ct);
+        foreach (var r in surmatureRef) await AddReferansKodIfNotExists("SURMATURE_BILGISI", r, r, ct);
+        foreach (var r in kVitaminiRef) await AddReferansKodIfNotExists("K_VITAMINI_UYGULANMA_DURUMU", r, r, ct);
+        foreach (var r in hepatitAsiRef) await AddReferansKodIfNotExists("BEBEGIN_HEPATIT_ASI_DURUMU", r, r, ct);
+        foreach (var r in isitmeTaramaRef) await AddReferansKodIfNotExists("YENIDOGAN_ISITME_TARAMA_DURUMU", r, r, ct);
+        foreach (var r in yasamDurumuRef) await AddReferansKodIfNotExists("BEBEGIN_YASAM_DURUMU", r, r, ct);
+        foreach (var r in sezaryenEndikasyonRef) await AddReferansKodIfNotExists("SEZARYEN_ENDIKASYONLAR", r, r, ct);
+        foreach (var r in robsonGrubuRef) await AddReferansKodIfNotExists("ROBSON_GRUBU", r, $"Grup {r}", ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (dogumlar.Any())
+        {
+            await SeedIfEmpty<DOGUM_DETAY>(ct, dogumlar.Take(25).Select((d, i) => new DOGUM_DETAY
+            {
+                DOGUM_DETAY_KODU = $"DD-{i + 1:D5}",
+                HASTA_KODU = d.HASTA_KODU,
+                HASTA_BASVURU_KODU = d.HASTA_BASVURU_KODU,
+                DOGUM_KODU = d.DOGUM_KODU,
+                DOGUM_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 365)),
+                CINSIYET = $"CINSIYET_{cinsiyetRef[i % cinsiyetRef.Length]}",
+                DOGUM_YONTEMI = $"DOGUM_YONTEMI_{dogumYontemiRef[i % dogumYontemiRef.Length]}",
+                AGIRLIK = $"{2500 + _random.Next(0, 2000)}",
+                BOY = $"{45 + _random.Next(0, 10)}",
+                BAS_CEVRESI = $"{32 + _random.Next(0, 6)}",
+                APGAR_1 = $"{_random.Next(5, 10)}",
+                APGAR_5 = $"{_random.Next(7, 10)}",
+                APGAR_NOTU = "Normal APGAR skoru",
+                KOMPLIKASYON_TANISI = $"KOMPLIKASYON_TANISI_{komplikasyonRef[0]}",
+                DOGUM_SIRASI = $"{_random.Next(1, 4)}",
+                GOGUS_CEVRESI = $"{30 + _random.Next(0, 6)}",
+                PROGNOZ_BILGISI = $"PROGNOZ_BILGISI_{prognozRef[0]}",
+                SURMATURE_BILGISI = $"SURMATURE_BILGISI_{surmatureRef[0]}",
+                K_VITAMINI_UYGULANMA_DURUMU = $"K_VITAMINI_UYGULANMA_DURUMU_{kVitaminiRef[0]}",
+                BEBEGIN_HEPATIT_ASI_DURUMU = $"BEBEGIN_HEPATIT_ASI_DURUMU_{hepatitAsiRef[0]}",
+                YENIDOGAN_ISITME_TARAMA_DURUMU = $"YENIDOGAN_ISITME_TARAMA_DURUMU_{isitmeTaramaRef[0]}",
+                ILK_BESLENME_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 365)).AddHours(1),
+                TOPUK_KANI = $"TOPUK_KANI_{topukKaniRef[0]}",
+                TOPUK_KANI_ALINMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 365)).AddDays(2),
+                BEBEK_ADI = $"Bebek{i + 1}",
+                BABA_TC_KIMLIK_NUMARASI = GenerateTcKimlik(),
+                BEBEGIN_YASAM_DURUMU = $"BEBEGIN_YASAM_DURUMU_{yasamDurumuRef[0]}",
+                SEZARYEN_ENDIKASYONLAR = $"SEZARYEN_ENDIKASYONLAR_{sezaryenEndikasyonRef[0]}",
+                ROBSON_GRUBU = $"ROBSON_GRUBU_{robsonGrubuRef[i % robsonGrubuRef.Length]}"
+            }).ToList());
+            _logger.LogInformation("DOGUM_DETAY seeded");
+        }
+
+        // === 3. EVDE_SAGLIK_IZLEM ===
+        var agriRef = new[] { "YOK", "HAFIF", "ORTA", "SIDDETLI" };
+        var aydinlatmaRef = new[] { "YETERLI", "YETERSIZ" };
+        var bakimDestekRef = new[] { "YOK", "KISMI", "TAM" };
+        var basiDegerlendirmeRef = new[] { "NORMAL", "RISK", "YUKSEK_RISK" };
+        var beslenmeRef = new[] { "NORMAL", "ORAL", "ENTERAL", "PARENTERAL" };
+        var eshHastalikRef = new[] { "NOROLOJIK", "KARDIYAK", "ONKOLOJI", "DIGER" };
+        var evHijyeniRef = new[] { "IYI", "ORTA", "KOTU" };
+        var guvenlikRef = new[] { "YETERLI", "YETERSIZ" };
+        var isinmaRef = new[] { "DOGALGAZ", "SOBA", "KLIMA", "DIGER" };
+        var kisiselBakimRef = new[] { "BAGIMSIZ", "YARDIMLA", "BAGIMLI" };
+        var konutTipiRef = new[] { "MUSTAKIL", "APARTMAN", "GECEKONDU" };
+        var helaTipiRef = new[] { "ALATURKA", "ALAFRANGA" };
+        var yatagaBagimlilikRef = new[] { "YOK", "KISMI", "TAM" };
+        var yardimciAracRef = new[] { "YOK", "BASTON", "YURUYUC", "TEKERLEKLI_SANDALYE" };
+        var psikolojikDurumRef = new[] { "NORMAL", "DEPRESIF", "ANKSIYOZ" };
+        var eshSonlandirmaRef = new[] { "DEVAM", "TABURCU", "OLUM", "SEVK" };
+        var eshNakliRef = new[] { "YOK", "ACIL", "PLANLI" };
+        var hizmetIhtiyaciRef = new[] { "MUAYENE", "TEDAVI", "PANSUMAN", "ENJEKSIYON" };
+        var egitimRef = new[] { "BESLENME", "BAKIM", "ILAC", "EGZERSIZ" };
+
+        foreach (var r in agriRef) await AddReferansKodIfNotExists("AGRI", r, r, ct);
+        foreach (var r in aydinlatmaRef) await AddReferansKodIfNotExists("AYDINLATMA", r, r, ct);
+        foreach (var r in bakimDestekRef) await AddReferansKodIfNotExists("BAKIM_VE_DESTEK_IHTIYACI", r, r, ct);
+        foreach (var r in basiDegerlendirmeRef) await AddReferansKodIfNotExists("BASI_DEGERLENDIRMESI", r, r, ct);
+        foreach (var r in beslenmeRef) await AddReferansKodIfNotExists("BESLENME", r, r, ct);
+        foreach (var r in eshHastalikRef) await AddReferansKodIfNotExists("ESH_ESAS_HASTALIK_GRUBU", r, r, ct);
+        foreach (var r in evHijyeniRef) await AddReferansKodIfNotExists("EV_HIJYENI", r, r, ct);
+        foreach (var r in guvenlikRef) await AddReferansKodIfNotExists("GUVENLIK", r, r, ct);
+        foreach (var r in isinmaRef) await AddReferansKodIfNotExists("ISINMA", r, r, ct);
+        foreach (var r in kisiselBakimRef) await AddReferansKodIfNotExists("KISISEL_BAKIM", r, r, ct);
+        foreach (var r in kisiselBakimRef) await AddReferansKodIfNotExists("KISISEL_HIJYEN", r, r, ct);
+        foreach (var r in konutTipiRef) await AddReferansKodIfNotExists("KONUT_TIPI", r, r, ct);
+        foreach (var r in helaTipiRef) await AddReferansKodIfNotExists("KULLANILAN_HELA_TIPI", r, r, ct);
+        foreach (var r in yatagaBagimlilikRef) await AddReferansKodIfNotExists("YATAGA_BAGIMLILIK", r, r, ct);
+        foreach (var r in yardimciAracRef) await AddReferansKodIfNotExists("KULLANDIGI_YARDIMCI_ARACLAR", r, r, ct);
+        foreach (var r in psikolojikDurumRef) await AddReferansKodIfNotExists("PSIKOLOJIK_DURUM_DEGERLENDIRME", r, r, ct);
+        foreach (var r in eshSonlandirmaRef) await AddReferansKodIfNotExists("ESH_SONLANDIRILMASI", r, r, ct);
+        foreach (var r in eshNakliRef) await AddReferansKodIfNotExists("ESH_HASTA_NAKLI", r, r, ct);
+        foreach (var r in hizmetIhtiyaciRef) await AddReferansKodIfNotExists("BIR_SONRAKI_HIZMET_IHTIYACI", r, r, ct);
+        foreach (var r in egitimRef) await AddReferansKodIfNotExists("VERILEN_EGITIMLER", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<EVDE_SAGLIK_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new EVDE_SAGLIK_IZLEM
+        {
+            EVDE_SAGLIK_IZLEM_KODU = $"ESI-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            AGRI = $"AGRI_{agriRef[i % agriRef.Length]}",
+            AYDINLATMA = $"AYDINLATMA_{aydinlatmaRef[0]}",
+            BAKIM_VE_DESTEK_IHTIYACI = $"BAKIM_VE_DESTEK_IHTIYACI_{bakimDestekRef[i % bakimDestekRef.Length]}",
+            BASI_DEGERLENDIRMESI = $"BASI_DEGERLENDIRMESI_{basiDegerlendirmeRef[0]}",
+            BASVURU_TURU = "HASTANE",
+            BESLENME = $"BESLENME_{beslenmeRef[i % beslenmeRef.Length]}",
+            ESH_ESAS_HASTALIK_GRUBU = $"ESH_ESAS_HASTALIK_GRUBU_{eshHastalikRef[i % eshHastalikRef.Length]}",
+            EV_HIJYENI = $"EV_HIJYENI_{evHijyeniRef[0]}",
+            GUVENLIK = $"GUVENLIK_{guvenlikRef[0]}",
+            ISINMA = $"ISINMA_{isinmaRef[i % isinmaRef.Length]}",
+            KISISEL_BAKIM = $"KISISEL_BAKIM_{kisiselBakimRef[i % kisiselBakimRef.Length]}",
+            KISISEL_HIJYEN = $"KISISEL_HIJYEN_{kisiselBakimRef[i % kisiselBakimRef.Length]}",
+            KONUT_TIPI = $"KONUT_TIPI_{konutTipiRef[i % konutTipiRef.Length]}",
+            KULLANILAN_HELA_TIPI = $"KULLANILAN_HELA_TIPI_{helaTipiRef[i % helaTipiRef.Length]}",
+            YATAGA_BAGIMLILIK = $"YATAGA_BAGIMLILIK_{yatagaBagimlilikRef[i % yatagaBagimlilikRef.Length]}",
+            KULLANDIGI_YARDIMCI_ARACLAR = $"KULLANDIGI_YARDIMCI_ARACLAR_{yardimciAracRef[i % yardimciAracRef.Length]}",
+            PSIKOLOJIK_DURUM_DEGERLENDIRME = $"PSIKOLOJIK_DURUM_DEGERLENDIRME_{psikolojikDurumRef[i % psikolojikDurumRef.Length]}",
+            ESH_SONLANDIRILMASI = $"ESH_SONLANDIRILMASI_{eshSonlandirmaRef[0]}",
+            ESH_HASTA_NAKLI = $"ESH_HASTA_NAKLI_{eshNakliRef[0]}",
+            ESH_ALINACAK_IL = "34",
+            BIR_SONRAKI_HIZMET_IHTIYACI = $"BIR_SONRAKI_HIZMET_IHTIYACI_{hizmetIhtiyaciRef[i % hizmetIhtiyaciRef.Length]}",
+            VERILEN_EGITIMLER = $"VERILEN_EGITIMLER_{egitimRef[i % egitimRef.Length]}",
+            ACIKLAMA = $"Evde sağlık izlem kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("EVDE_SAGLIK_IZLEM seeded");
+
+        // === 4. GETAT ===
+        var getatBirimiRef = new[] { "POLIKLINIK", "SERVIS", "MERKEZ" };
+        var getatSonucuRef = new[] { "BASARILI", "KISMI", "BASARISIZ" };
+        var getatTuruRef = new[] { "AKUPUNKTUR", "HACAMAT", "OZON", "SOLUCAN", "FITIK" };
+        var getatDurumlariRef = new[] { "AGRI", "STRES", "DIGER" };
+        var getatBolgesiRef = new[] { "BAS", "BOYUN", "GOVDE", "EKSTREMITE" };
+
+        foreach (var r in getatBirimiRef) await AddReferansKodIfNotExists("GETAT_UYGULAMA_BIRIMI", r, r, ct);
+        foreach (var r in getatSonucuRef) await AddReferansKodIfNotExists("GETAT_TEDAVI_SONUCU", r, r, ct);
+        foreach (var r in getatTuruRef) await AddReferansKodIfNotExists("GETAT_UYGULAMA_TURU", r, r, ct);
+        foreach (var r in getatDurumlariRef) await AddReferansKodIfNotExists("GETAT_UYGULANDIGI_DURUMLAR", r, r, ct);
+        foreach (var r in getatBolgesiRef) await AddReferansKodIfNotExists("GETAT_UYGULAMA_BOLGESI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<GETAT>(ct, basvurular.Take(25).Select((b, i) => new GETAT
+        {
+            GETAT_KODU = $"GET-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            GETAT_UYGULAMA_BIRIMI = $"GETAT_UYGULAMA_BIRIMI_{getatBirimiRef[i % getatBirimiRef.Length]}",
+            KOMPLIKASYON_TANISI = $"KOMPLIKASYON_TANISI_{komplikasyonRef[0]}",
+            GETAT_TEDAVI_SONUCU = $"GETAT_TEDAVI_SONUCU_{getatSonucuRef[i % getatSonucuRef.Length]}",
+            GETAT_UYGULAMA_TURU = $"GETAT_UYGULAMA_TURU_{getatTuruRef[i % getatTuruRef.Length]}",
+            GETAT_UYGULANDIGI_DURUMLAR = $"GETAT_UYGULANDIGI_DURUMLAR_{getatDurumlariRef[i % getatDurumlariRef.Length]}",
+            GETAT_UYGULAMA_BOLGESI = $"GETAT_UYGULAMA_BOLGESI_{getatBolgesiRef[i % getatBolgesiRef.Length]}",
+            ACIKLAMA = $"GETAT uygulama kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("GETAT seeded");
+
+        // === 5. INTIHAR_IZLEM ===
+        var intiharVakaTuruRef = new[] { "INTIHAR", "KRIZ" };
+        var intiharNedenRef = new[] { "AILE", "IS", "SAGLIK", "EKONOMI", "ILISKI", "DIGER" };
+        var intiharYontemiRef = new[] { "ILAC", "KESICI_ALET", "ATESE_SILAH", "ASMA", "ZEHIR", "DIGER" };
+        var intiharSonucuRef = new[] { "TABURCU", "YATARAK_TEDAVI", "SEVK", "OLUM" };
+
+        foreach (var r in intiharVakaTuruRef) await AddReferansKodIfNotExists("INTIHAR_KRIZ_VAKA_TURU", r, r, ct);
+        foreach (var r in intiharNedenRef) await AddReferansKodIfNotExists("INTIHAR_GIRISIM_KRIZ_NEDENLERI", r, r, ct);
+        foreach (var r in intiharYontemiRef) await AddReferansKodIfNotExists("INTIHAR_GIRISIMI_YONTEMI", r, r, ct);
+        foreach (var r in intiharSonucuRef) await AddReferansKodIfNotExists("INTIHAR_KRIZ_VAKA_SONUCU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<INTIHAR_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new INTIHAR_IZLEM
+        {
+            INTIHAR_IZLEM_KODU = $"II-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            INTIHAR_KRIZ_VAKA_TURU = $"INTIHAR_KRIZ_VAKA_TURU_{intiharVakaTuruRef[i % intiharVakaTuruRef.Length]}",
+            INTIHAR_GIRISIM_KRIZ_NEDENLERI = $"INTIHAR_GIRISIM_KRIZ_NEDENLERI_{intiharNedenRef[i % intiharNedenRef.Length]}",
+            INTIHAR_GIRISIMI_YONTEMI = $"INTIHAR_GIRISIMI_YONTEMI_{intiharYontemiRef[i % intiharYontemiRef.Length]}",
+            INTIHAR_KRIZ_VAKA_SONUCU = $"INTIHAR_KRIZ_VAKA_SONUCU_{intiharSonucuRef[0]}",
+            ACIKLAMA = $"İntihar izlem kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("INTIHAR_IZLEM seeded");
+
+        // === 6. KADIN_IZLEM ===
+        var konjenitalRef = new[] { "YOK", "VAR" };
+        var oncekiDogumRef = new[] { "NORMAL", "SEZARYEN", "DUSUK", "OLUM" };
+        var apYontemiRef = new[] { "KONDOM", "HAP", "SPIRAL", "IMPLANT", "CERRAHI", "DOGAL", "YOK" };
+        var apLojistigiRef = new[] { "VERILDI", "VERILMEDI", "PLANLI" };
+        var kadinSagligiRef = new[] { "MUAYENE", "ULTRASON", "SMEAR", "MAMOGRAFI" };
+
+        foreach (var r in konjenitalRef) await AddReferansKodIfNotExists("KONJENITAL_ANOMALI_VARLIGI", r, r, ct);
+        foreach (var r in oncekiDogumRef) await AddReferansKodIfNotExists("ONCEKI_DOGUM_DURUMU", r, r, ct);
+        foreach (var r in apYontemiRef) await AddReferansKodIfNotExists("KULLANILAN_AP_YONTEMI", r, r, ct);
+        foreach (var r in apYontemiRef) await AddReferansKodIfNotExists("BIR_ONCE_KULLANILAN_AP_YONTEMI", r, r, ct);
+        foreach (var r in apLojistigiRef) await AddReferansKodIfNotExists("AP_YONTEMI_LOJISTIGI", r, r, ct);
+        foreach (var r in kadinSagligiRef) await AddReferansKodIfNotExists("KADIN_SAGLIGI_ISLEMLERI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<KADIN_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new KADIN_IZLEM
+        {
+            KADIN_IZLEM_KODU = $"KI-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            KONJENITAL_ANOMALI_VARLIGI = $"KONJENITAL_ANOMALI_VARLIGI_{konjenitalRef[0]}",
+            CANLI_DOGAN_BEBEK_SAYISI = $"{_random.Next(0, 4)}",
+            OLU_DOGAN_BEBEK_SAYISI = "0",
+            HEMOGLOBIN_DEGERI = $"{10 + _random.Next(0, 6)}",
+            ONCEKI_DOGUM_DURUMU = $"ONCEKI_DOGUM_DURUMU_{oncekiDogumRef[i % oncekiDogumRef.Length]}",
+            IZLEMIN_YAPILDIGI_YER = "HASTANE",
+            KULLANILAN_AP_YONTEMI = $"KULLANILAN_AP_YONTEMI_{apYontemiRef[i % apYontemiRef.Length]}",
+            BIR_ONCE_KULLANILAN_AP_YONTEMI = $"BIR_ONCE_KULLANILAN_AP_YONTEMI_{apYontemiRef[(i + 1) % apYontemiRef.Length]}",
+            AP_YONTEMI_LOJISTIGI = $"AP_YONTEMI_LOJISTIGI_{apLojistigiRef[i % apLojistigiRef.Length]}",
+            KADIN_SAGLIGI_ISLEMLERI = $"KADIN_SAGLIGI_ISLEMLERI_{kadinSagligiRef[i % kadinSagligiRef.Length]}",
+            AP_YONTEMI_KULLANMAMA_NEDENI = "-",
+            ACIKLAMA = $"Kadın izlem kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("KADIN_IZLEM seeded");
+
+        // === 7. KUDUZ_IZLEM ===
+        var profilaksiDurumRef = new[] { "TAMAMLANDI", "DEVAM", "BIRAKILDI" };
+        var kuduzProfilaksiRef = new[] { "ASI", "IMMUNOGLOBULIN", "ASI_VE_IG" };
+
+        foreach (var r in profilaksiDurumRef) await AddReferansKodIfNotExists("PROFILAKSI_TAMAMLANMA_DURUMU", r, r, ct);
+        foreach (var r in kuduzProfilaksiRef) await AddReferansKodIfNotExists("UYGULANAN_KUDUZ_PROFILAKSISI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<KUDUZ_IZLEM>(ct, basvurular.Take(25).Select((b, i) => new KUDUZ_IZLEM
+        {
+            KUDUZ_IZLEM_KODU = $"KUI-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            PROFILAKSI_TAMAMLANMA_DURUMU = $"PROFILAKSI_TAMAMLANMA_DURUMU_{profilaksiDurumRef[i % profilaksiDurumRef.Length]}",
+            UYGULANAN_KUDUZ_PROFILAKSISI = $"UYGULANAN_KUDUZ_PROFILAKSISI_{kuduzProfilaksiRef[i % kuduzProfilaksiRef.Length]}",
+            BEYAN_TSM_KURUM_KODU = kurumlar.Any() ? kurumlar[i % kurumlar.Count].KURUM_KODU : "-",
+            IMMUNGLOBULIN_MIKTARI = $"{_random.Next(100, 500)}",
+            ACIKLAMA = $"Kuduz izlem kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("KUDUZ_IZLEM seeded");
+
+        // === 8. KAN_CIKIS ===
+        var crossMatchYontemiRef = new[] { "TUP", "JEL", "KOLON" };
+        var crossMatchSonucuRef = new[] { "UYUMLU", "UYUMSUZ", "BELIRSIZ" };
+
+        foreach (var r in crossMatchYontemiRef) await AddReferansKodIfNotExists("CROSS_MATCH_CALISMA_YONTEMI", r, r, ct);
+        foreach (var r in crossMatchSonucuRef) await AddReferansKodIfNotExists("CROSS_MATCH_SONUCU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (kanTalepDetaylar.Any() && kanStoklar.Any())
+        {
+            await SeedIfEmpty<KAN_CIKIS>(ct, kanTalepDetaylar.Take(25).Select((k, i) => new KAN_CIKIS
+            {
+                KAN_CIKIS_KODU = $"KC-{i + 1:D5}",
+                KAN_TALEP_DETAY_KODU = k.KAN_TALEP_DETAY_KODU,
+                HASTA_KODU = hastalar[i % hastalar.Count].HASTA_KODU,
+                HASTA_BASVURU_KODU = basvurular[i % basvurular.Count].HASTA_BASVURU_KODU,
+                KAN_STOK_KODU = kanStoklar[i % kanStoklar.Count].KAN_STOK_KODU,
+                KANI_TESLIM_ALAN_KISI = $"Hemşire {i + 1}",
+                KAN_CIKIS_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+                KURUM_KODU = kurumlar.Any() ? kurumlar[i % kurumlar.Count].KURUM_KODU : "-",
+                KAN_CIKIS_PERSONEL_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+                REZERVE_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)).AddHours(-2),
+                REZERVE_EDEN_KULLANICI_KODU = kullanicilar[i % kullanicilar.Count].KULLANICI_KODU,
+                CROSS_MATCH_KULLANICI_KODU = kullanicilar[i % kullanicilar.Count].KULLANICI_KODU,
+                CROSS_MATCH_CALISMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)).AddHours(-1),
+                CROSS_MATCH_CALISMA_YONTEMI = $"CROSS_MATCH_CALISMA_YONTEMI_{crossMatchYontemiRef[i % crossMatchYontemiRef.Length]}",
+                CROSS_MATCH_SONUCU = $"CROSS_MATCH_SONUCU_{crossMatchSonucuRef[0]}"
+            }).ToList());
+            _logger.LogInformation("KAN_CIKIS seeded");
+        }
+
+        // === 9. KAN_URUN_IMHA ===
+        var kanImhaNedenRef = new[] { "SON_KULLANMA", "KONTAMINASYON", "HASARLI", "REAKTIF" };
+
+        foreach (var r in kanImhaNedenRef) await AddReferansKodIfNotExists("KAN_IMHA_NEDENI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (kanStoklar.Any())
+        {
+            await SeedIfEmpty<KAN_URUN_IMHA>(ct, kanStoklar.Take(25).Select((k, i) => new KAN_URUN_IMHA
+            {
+                KAN_URUN_IMHA_KODU = $"KUI-{i + 1:D5}",
+                KAN_STOK_KODU = k.KAN_STOK_KODU,
+                KAN_IMHA_NEDENI = $"KAN_IMHA_NEDENI_{kanImhaNedenRef[i % kanImhaNedenRef.Length]}",
+                KAN_IMHA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+                KAN_IMHA_ONAYLAYAN_HEKIM = personeller[i % personeller.Count].PERSONEL_KODU,
+                KAN_IMHA_ONAYLAYAN_TEKNISYEN = personeller[(i + 1) % personeller.Count].PERSONEL_KODU,
+                KAN_IMHA_EDEN_PERSONEL_KODU = personeller[(i + 2) % personeller.Count].PERSONEL_KODU
+            }).ToList());
+            _logger.LogInformation("KAN_URUN_IMHA seeded");
+        }
+
+        // === 10. PERSONEL_BAKMAKLA_YUKUMLU ===
+        var yakinlikRef = new[] { "ES", "COCUK", "ANNE", "BABA", "DIGER" };
+        var ogrenimRef = new[] { "ILKOKUL", "ORTAOKUL", "LISE", "UNIVERSITE", "LISANSUSTU" };
+        var engellilikRef = new[] { "YOK", "BEDENSEL", "ZIHINSEL", "GORME", "ISITME" };
+
+        foreach (var r in yakinlikRef) await AddReferansKodIfNotExists("PERSONEL_YAKINLIK_DERECESI", r, r, ct);
+        foreach (var r in ogrenimRef) await AddReferansKodIfNotExists("OGRENIM_DURUMU", r, r, ct);
+        foreach (var r in engellilikRef) await AddReferansKodIfNotExists("ENGELLILIK_DURUMU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<PERSONEL_BAKMAKLA_YUKUMLU>(ct, personeller.Take(10).SelectMany((p, pi) =>
+            Enumerable.Range(0, 2).Select(i => new PERSONEL_BAKMAKLA_YUKUMLU
+            {
+                PERSONEL_BAKMAKLA_YUKUMLU_KODU = $"PBY-{pi * 2 + i + 1:D5}",
+                PERSONEL_KODU = p.PERSONEL_KODU,
+                PERSONEL_YAKINLIK_DERECESI = $"PERSONEL_YAKINLIK_DERECESI_{yakinlikRef[i % yakinlikRef.Length]}",
+                TC_KIMLIK_NUMARASI = GenerateTcKimlik(),
+                AD = $"Yakın{pi * 2 + i + 1}",
+                SOYADI = $"Soyad{pi * 2 + i + 1}",
+                DOGUM_TARIHI = DateTime.Now.AddYears(-_random.Next(5, 70)),
+                OGRENIM_DURUMU = $"OGRENIM_DURUMU_{ogrenimRef[i % ogrenimRef.Length]}",
+                ENGELLILIK_DURUMU = $"ENGELLILIK_DURUMU_{engellilikRef[0]}"
+            })).ToList());
+        _logger.LogInformation("PERSONEL_BAKMAKLA_YUKUMLU seeded");
+
+        // === 11. PERSONEL_BORDRO_SONDURUM ===
+        await SeedIfEmpty<PERSONEL_BORDRO_SONDURUM>(ct, personeller.Take(10).Select((p, i) => new PERSONEL_BORDRO_SONDURUM
+        {
+            PERSONEL_SONDURUM_KODU = $"PBS-{i + 1:D5}",
+            PERSONEL_KODU = p.PERSONEL_KODU,
+            PERSONEL_KADEMESI = $"{_random.Next(1, 5)}",
+            PERSONEL_DERECESI = $"{_random.Next(1, 9)}",
+            EMEKLI_DERECESI = $"{_random.Next(1, 9)}",
+            EMEKLI_KADEMESI = $"{_random.Next(1, 5)}",
+            SENDIKA_BILGISI = "-",
+            KIDEM_YILI = $"{_random.Next(1, 30)}",
+            KIDEM_AYI = $"{_random.Next(1, 12)}",
+            KIDEM_GUNU = $"{_random.Next(1, 30)}",
+            EK_GOSTERGE = $"{_random.Next(0, 3000)}",
+            EMEKLI_EK_GOSTERGESI = $"{_random.Next(0, 3000)}",
+            GOSTERGE = $"{_random.Next(500, 2000)}",
+            EMEKLI_GOSTERGESI = $"{_random.Next(500, 2000)}",
+            YAN_ODEME_PUANI = $"{_random.Next(0, 100)}",
+            OZEL_HIZMET_PUANI = $"{_random.Next(0, 50)}"
+        }).ToList());
+        _logger.LogInformation("PERSONEL_BORDRO_SONDURUM seeded");
+
+        // === 12. PERSONEL_IZIN_DURUMU ===
+        await SeedIfEmpty<PERSONEL_IZIN_DURUMU>(ct, personeller.Take(10).Select((p, i) => new PERSONEL_IZIN_DURUMU
+        {
+            PERSONEL_IZIN_DURUMU_KODU = $"PID-{i + 1:D5}",
+            PERSONEL_KODU = p.PERSONEL_KODU,
+            KALAN_IZIN = $"{_random.Next(0, 20)}",
+            YILLIK_IZIN_HAKKI = $"{_random.Next(14, 30)}",
+            PERSONEL_IZIN_YILI = DateTime.Now.Year.ToString()
+        }).ToList());
+        _logger.LogInformation("PERSONEL_IZIN_DURUMU seeded");
+
+        // === 13. RISK_SKORLAMA_DETAY ===
+        var riskAltTuruRef = new[] { "GKS_GOZ", "GKS_SOZEL", "GKS_MOTOR" };
+        foreach (var r in riskAltTuruRef) await AddReferansKodIfNotExists("RISK_SKORLAMA_ALT_TURU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (riskSkorlama.Any())
+        {
+            await SeedIfEmpty<RISK_SKORLAMA_DETAY>(ct, riskSkorlama.Take(25).Select((rs, i) => new RISK_SKORLAMA_DETAY
+            {
+                RISK_SKORLAMA_DETAY_KODU = $"RSD-{i + 1:D5}",
+                RISK_SKORLAMA_KODU = rs.RISK_SKORLAMA_KODU,
+                GLASGOW_SKALASI = $"{_random.Next(3, 15)}",
+                RISK_SKORLAMA_ALT_TURU = $"RISK_SKORLAMA_ALT_TURU_{riskAltTuruRef[i % riskAltTuruRef.Length]}",
+                RISK_SKOR_DEGERI = $"{_random.Next(1, 6)}",
+                ACIKLAMA = $"Risk skorlama detay {i + 1}"
+            }).ToList());
+            _logger.LogInformation("RISK_SKORLAMA_DETAY seeded");
+        }
+
+        // === 14. SILINEN_KAYITLAR ===
+        await SeedIfEmpty<SILINEN_KAYITLAR>(ct, Enumerable.Range(1, 25).Select(i => new SILINEN_KAYITLAR
+        {
+            SILINEN_KAYITLAR_KODU = $"SK-{i:D5}",
+            REFERANS_GORUNTU_ADI = new[] { "HASTA_BASVURU", "RECETE", "TETKIK_SONUC", "RANDEVU" }[i % 4],
+            SILINME_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 365)),
+            SILINEN_KAYDIN_KODU = $"DELETED-{i:D5}"
+        }).ToList());
+        _logger.LogInformation("SILINEN_KAYITLAR seeded");
+
+        // === 15. SYS_PAKET ===
+        await SeedIfEmpty<SYS_PAKET>(ct, basvurular.Take(25).Select((b, i) => new SYS_PAKET
+        {
+            SYS_PAKET_KODU = $"SYS-{i + 1:D5}",
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            HASTA_KODU = b.HASTA_KODU,
+            VERI_PAKETI_NUMARASI = $"VP{DateTime.Now.Year}{_random.Next(100000, 999999)}",
+            VERI_PAKETI_GONDERILME_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            VERI_PAKETI_GONDERIM_DURUMU = "GONDERILDI",
+            GONDERILEN_PAKET_BILGISI = $"Paket bilgisi {i + 1}",
+            GELEN_CEVAP_BILGISI = "BASARILI"
+        }).ToList());
+        _logger.LogInformation("SYS_PAKET seeded");
+
+        // === 16. DIS_TAAHHUT_DETAY ===
+        var disKoduRef = new[] { "11", "12", "13", "14", "15", "21", "22", "23", "31", "41" };
+        var ceneKoduRef = new[] { "UST", "ALT" };
+
+        foreach (var r in disKoduRef) await AddReferansKodIfNotExists("DIS_KODU", r, $"Diş {r}", ct);
+        foreach (var r in ceneKoduRef) await AddReferansKodIfNotExists("CENE_KODU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (disTaahhutlar.Any())
+        {
+            await SeedIfEmpty<DIS_TAAHHUT_DETAY>(ct, disTaahhutlar.Take(10).SelectMany((dt, dti) =>
+                Enumerable.Range(0, 2).Select(i => new DIS_TAAHHUT_DETAY
+                {
+                    DIS_TAAHHUT_DETAY_KODU = $"DTD-{dti * 2 + i + 1:D5}",
+                    DIS_TAAHHUT_KODU = dt.DIS_TAAHHUT_KODU,
+                    DIS_KODU = $"DIS_KODU_{disKoduRef[(dti * 2 + i) % disKoduRef.Length]}",
+                    SUT_KODU = $"SUT{_random.Next(1000, 9999)}",
+                    CENE_KODU = $"CENE_KODU_{ceneKoduRef[i % ceneKoduRef.Length]}"
+                })).ToList());
+            _logger.LogInformation("DIS_TAAHHUT_DETAY seeded");
+        }
+
+        // === 17. DISPROTEZ_DETAY ===
+        var disprotezAsamaRef = new[] { "OLCU", "PROVA", "TESLIM", "KONTROL" };
+        var rptSebebiRef = new[] { "UYUMSUZ", "KIRIP", "RENK_HATASI" };
+
+        foreach (var r in disprotezAsamaRef) await AddReferansKodIfNotExists("DISPROTEZ_IS_TURU_ASAMA_KODU", r, r, ct);
+        foreach (var r in rptSebebiRef) await AddReferansKodIfNotExists("ASAMA_RPT_SEBEBI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (disprotezler.Any() && randevular.Any())
+        {
+            var firmalar = await _db.Set<FIRMA>().Take(5).ToListAsync(ct);
+            await SeedIfEmpty<DISPROTEZ_DETAY>(ct, disprotezler.Take(10).Select((dp, i) => new DISPROTEZ_DETAY
+            {
+                DISPROTEZ_DETAY_KODU = $"DPD-{i + 1:D5}",
+                DISPROTEZ_KODU = dp.DISPROTEZ_KODU,
+                DISPROTEZ_PLANLAMA_ZAMANI = DateTime.Now.AddDays(_random.Next(1, 30)),
+                DISPROTEZ_IS_TURU_ASAMA_KODU = $"DISPROTEZ_IS_TURU_ASAMA_KODU_{disprotezAsamaRef[i % disprotezAsamaRef.Length]}",
+                DISPROTEZ_ASAMA_BITIS_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 10)),
+                FIRMA_KODU = firmalar.Any() ? firmalar[i % firmalar.Count].FIRMA_KODU : "-",
+                FIRMA_DISPROTEZ_ALIM_ZAMANI = DateTime.Now.AddDays(-_random.Next(10, 30)),
+                PLANLANAN_BITIS_TARIHI = DateTime.Now.AddDays(_random.Next(30, 90)),
+                FIRMA_TESLIM_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 10)),
+                DISPROTEZ_ASAMA_ONAY_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 5)),
+                RPT_ONAY_DURUMU = "ONAYLANDI",
+                RANDEVU_KODU = randevular[i % randevular.Count].RANDEVU_KODU,
+                ASAMA_RPT_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+                ASAMA_RPT_SEBEBI = $"ASAMA_RPT_SEBEBI_{rptSebebiRef[0]}",
+                ASAMA_RPT_KULLANICI_KODU = kullanicilar[i % kullanicilar.Count].KULLANICI_KODU,
+                OLCU_DOKUM_ZAMANI = DateTime.Now.AddDays(-_random.Next(10, 20))
+            }).ToList());
+            _logger.LogInformation("DISPROTEZ_DETAY seeded");
+        }
+
+        // === 18. KURUL_ETKEN_MADDE ===
+        var dozBirimRef = new[] { "MG", "ML", "ADET" };
+        var ilacPeriyotRef = new[] { "GUN", "HAFTA", "AY" };
+
+        foreach (var r in dozBirimRef) await AddReferansKodIfNotExists("DOZ_BIRIM", r, r, ct);
+        foreach (var r in ilacPeriyotRef) await AddReferansKodIfNotExists("ILAC_PERIYOT_BIRIMI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (kurulRaporlar.Any())
+        {
+            await SeedIfEmpty<KURUL_ETKEN_MADDE>(ct, kurulRaporlar.Take(10).SelectMany((kr, kri) =>
+                Enumerable.Range(0, 2).Select(i => new KURUL_ETKEN_MADDE
+                {
+                    KURUL_ETKEN_MADDE_KODU = $"KEM-{kri * 2 + i + 1:D5}",
+                    KURUL_RAPOR_KODU = kr.KURUL_RAPOR_KODU,
+                    ILAC_ETKEN_MADDE_KODU = $"EM{_random.Next(1000, 9999)}",
+                    DOZ_SAYISI = $"{_random.Next(1, 4)}",
+                    DOZ_MIKTARI = $"{_random.Next(1, 10)}",
+                    DOZ_BIRIM = $"DOZ_BIRIM_{dozBirimRef[i % dozBirimRef.Length]}",
+                    ILAC_KULLANIM_PERIYODU = $"{_random.Next(1, 30)}",
+                    ILAC_PERIYOT_BIRIMI = $"ILAC_PERIYOT_BIRIMI_{ilacPeriyotRef[i % ilacPeriyotRef.Length]}"
+                })).ToList());
+            _logger.LogInformation("KURUL_ETKEN_MADDE seeded");
+        }
+
+        // === 19. KURUL_ASKERI ===
+        var medulaRaporTuruRef = new[] { "ASKERI", "SIVIL" };
+        var medulaAltRaporRef = new[] { "YOKLAMA", "CELP", "TECIL" };
+        var alkolMaddeRef = new[] { "YOK", "ALKOL", "MADDE", "HER_IKISI" };
+        var bedenRuhRef = new[] { "NORMAL", "ANORMAL" };
+        var gecmisHastalikRef = new[] { "YOK", "VAR" };
+        var gormeIsitmeRef = new[] { "YOK", "GORME", "ISITME", "HER_IKISI" };
+        var psikiyatrikRef = new[] { "YOK", "VAR" };
+        var uzuvKaybiRef = new[] { "YOK", "VAR" };
+        var asalHastalikRef = new[] { "YOK", "VAR" };
+        var asalTipiRef = new[] { "KRONIK", "AKUT" };
+
+        foreach (var r in medulaRaporTuruRef) await AddReferansKodIfNotExists("MEDULA_RAPOR_TURU", r, r, ct);
+        foreach (var r in medulaAltRaporRef) await AddReferansKodIfNotExists("MEDULA_ALT_RAPOR_TURU", r, r, ct);
+        foreach (var r in alkolMaddeRef) await AddReferansKodIfNotExists("ALKOL_MADDE_BAGIMLILIGI", r, r, ct);
+        foreach (var r in bedenRuhRef) await AddReferansKodIfNotExists("BEDEN_RUH_ILERI_TETKIK_BULGUSU", r, r, ct);
+        foreach (var r in gecmisHastalikRef) await AddReferansKodIfNotExists("GECMIS_HASTALIGA_DAIR_KAYIT", r, r, ct);
+        foreach (var r in gormeIsitmeRef) await AddReferansKodIfNotExists("GORME_ISITME_KAYBI", r, r, ct);
+        foreach (var r in psikiyatrikRef) await AddReferansKodIfNotExists("PSIKIYATRIK_RAHATSIZLIK", r, r, ct);
+        foreach (var r in uzuvKaybiRef) await AddReferansKodIfNotExists("UZUVKAYBI_ORTOPEDI_RAHATSIZLIK", r, r, ct);
+        foreach (var r in asalHastalikRef) await AddReferansKodIfNotExists("ASAL_HASTALIK", r, r, ct);
+        foreach (var r in asalTipiRef) await AddReferansKodIfNotExists("ASAL_HASTALIK_TIPI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<KURUL_ASKERI>(ct, Enumerable.Range(1, 25).Select(i => new KURUL_ASKERI
+        {
+            KURUL_ASKERI_KODU = $"KA-{i:D5}",
+            KURUL_ADI = $"Askeri Kurul {i}",
+            MEDULA_RAPOR_TURU = $"MEDULA_RAPOR_TURU_{medulaRaporTuruRef[i % medulaRaporTuruRef.Length]}",
+            MEDULA_ALT_RAPOR_TURU = $"MEDULA_ALT_RAPOR_TURU_{medulaAltRaporRef[i % medulaAltRaporRef.Length]}",
+            ALKOL_MADDE_BAGIMLILIGI = $"ALKOL_MADDE_BAGIMLILIGI_{alkolMaddeRef[0]}",
+            BEDEN_RUH_ILERI_TETKIK_BULGUSU = $"BEDEN_RUH_ILERI_TETKIK_BULGUSU_{bedenRuhRef[0]}",
+            GECMIS_HASTALIGA_DAIR_KAYIT = $"GECMIS_HASTALIGA_DAIR_KAYIT_{gecmisHastalikRef[0]}",
+            GORME_ISITME_KAYBI = $"GORME_ISITME_KAYBI_{gormeIsitmeRef[0]}",
+            PSIKIYATRIK_RAHATSIZLIK = $"PSIKIYATRIK_RAHATSIZLIK_{psikiyatrikRef[0]}",
+            UZUVKAYBI_ORTOPEDI_RAHATSIZLIK = $"UZUVKAYBI_ORTOPEDI_RAHATSIZLIK_{uzuvKaybiRef[0]}",
+            ASAL_HASTALIK = $"ASAL_HASTALIK_{asalHastalikRef[0]}",
+            ASAL_HASTALIK_TIPI = $"ASAL_HASTALIK_TIPI_{asalTipiRef[0]}"
+        }).ToList());
+        _logger.LogInformation("KURUL_ASKERI seeded");
+
+        // === 20. ORTODONTI_ICON_SKOR ===
+        await SeedIfEmpty<ORTODONTI_ICON_SKOR>(ct, basvurular.Take(25).Select((b, i) => new ORTODONTI_ICON_SKOR
+        {
+            ORTODONTI_ICON_SKOR_KODU = $"OIS-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            OIS_DEGERLENDIRME_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 90)),
+            OIS_ESTETIK_BOZUKLUK_BILGISI = $"{_random.Next(1, 10)}",
+            OIS_ESTETIK_PUAN_KATSAYISI = "7",
+            OIS_ESTETIK_PUANI = $"{_random.Next(7, 70)}",
+            UST_DIS_ARKA_CAPRASIKLIK = $"{_random.Next(0, 5)}",
+            UST_ARKA_CAPRASIKLIK_KATSAYISI = "5",
+            UST_ARKA_CAPRASIKLIK_PUANI = $"{_random.Next(0, 25)}",
+            UST_DIS_ARKA_BOSLUK = $"{_random.Next(0, 5)}",
+            UST_ARKA_BOSLUK_KATSAYISI = "5",
+            UST_ARKA_BOSLUK_PUANI = $"{_random.Next(0, 25)}",
+            DIS_CAPRAZLIK_DURUMU = "0",
+            DIS_CAPRAZLIK_KATSAYISI = "5",
+            DIS_CAPRAZLIK_PUANI = "0",
+            ON_ACIK_KAPANIS = $"{_random.Next(0, 4)}",
+            ON_ACIK_KAPANIS_KATSAYISI = "4",
+            ON_ACIK_KAPANIS_PUANI = $"{_random.Next(0, 16)}",
+            ON_DERIN_KAPANIS = $"{_random.Next(0, 4)}",
+            ON_DERIN_KAPANIS_KATSAYISI = "4",
+            ON_DERIN_KAPANIS_PUANI = $"{_random.Next(0, 16)}",
+            BUKKAL_BOLGE_SAG = $"{_random.Next(0, 3)}",
+            BUKKAL_BOLGE_SAG_KATSAYISI = "3",
+            BUKKAL_BOLGE_SAG_PUANI = $"{_random.Next(0, 9)}",
+            BUKKAL_BOLGE_SOL = $"{_random.Next(0, 3)}",
+            BUKKAL_BOLGE_SOL_KATSAYISI = "3",
+            BUKKAL_BOLGE_SOL_PUANI = $"{_random.Next(0, 9)}",
+            BUKKAL_TOPLAM_PUANI = $"{_random.Next(0, 18)}",
+            TOPLAM_ICON_SKOR_PUANI = $"{_random.Next(0, 150)}",
+            OIS_DEGERLENDIREN_1_HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+            OIS_DEGERLENDIREN_2_HEKIM_KODU = personeller[(i + 1) % personeller.Count].PERSONEL_KODU,
+            OIS_DEGERLENDIREN_3_HEKIM_KODU = personeller[(i + 2) % personeller.Count].PERSONEL_KODU,
+            ACIKLAMA = $"Ortodonti Icon Skor kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("ORTODONTI_ICON_SKOR seeded");
+
+        // === 21. STOK_ISTEK_UYGULAMA ===
+        var stokIstekHareketler = await _db.Set<STOK_ISTEK_HAREKET>().Take(10).ToListAsync(ct);
+        var istekIptalNedenRef = new[] { "HASTA_ISTEGI", "HEKIM_KARARI", "MALZEME_YOK", "DIGER" };
+        foreach (var r in istekIptalNedenRef) await AddReferansKodIfNotExists("ISTEK_IPTAL_NEDENI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (stokIstekHareketler.Any())
+        {
+            await SeedIfEmpty<STOK_ISTEK_UYGULAMA>(ct, stokIstekHareketler.Take(10).Select((sih, i) => new STOK_ISTEK_UYGULAMA
+            {
+                STOK_ISTEK_UYGULAMA_KODU = $"SIU-{i + 1:D5}",
+                STOK_ISTEK_HAREKET_KODU = sih.STOK_ISTEK_HAREKET_KODU,
+                ORDER_PLANLANAN_ZAMAN = DateTime.Now.AddDays(-_random.Next(1, 30)),
+                ORDER_UYGULANAN_ZAMAN = DateTime.Now.AddDays(-_random.Next(1, 30)).AddHours(1),
+                UYGULAYAN_HEMSIRE_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+                ISTEK_IPTAL_NEDENI = $"ISTEK_IPTAL_NEDENI_{istekIptalNedenRef[0]}",
+                IPTAL_EDEN_HEMSIRE_KODU = personeller[(i + 1) % personeller.Count].PERSONEL_KODU,
+                IPTAL_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 10)),
+                UYGULANAN_MIKTAR = $"{_random.Next(1, 10)}",
+                ACIKLAMA = $"Stok istek uygulama kaydı {i + 1}"
+            }).ToList());
+            _logger.LogInformation("STOK_ISTEK_UYGULAMA seeded");
+        }
+
+        // === 22. ANTIBIYOTIK_SONUC ===
+        var bakteriSonuclar = await _db.Set<BAKTERI_SONUC>().Take(10).ToListAsync(ct);
+        var antibiyotikRef = new[] { "PENISILIN", "AMIKASN", "GENTAMISIN", "SEFTRIAKSON" };
+        foreach (var r in antibiyotikRef) await AddReferansKodIfNotExists("ANTIBIYOTIK", r, r, ct);
+        var tetkikSonucuRef = new[] { "DUYARLI", "DIRENCLI", "ORTA_DIRENCLI" };
+        foreach (var r in tetkikSonucuRef) await AddReferansKodIfNotExists("TETKIK_SONUCU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (bakteriSonuclar.Any())
+        {
+            await SeedIfEmpty<ANTIBIYOTIK_SONUC>(ct, bakteriSonuclar.Take(10).Select((bs, i) => new ANTIBIYOTIK_SONUC
+            {
+                ANTIBIYOTIK_SONUC_KODU = $"ABS-{i + 1:D5}",
+                BAKTERI_SONUC_KODU = bs.BAKTERI_SONUC_KODU,
+                ANTIBIYOTIK_KODU = $"ANTIBIYOTIK_{antibiyotikRef[i % antibiyotikRef.Length]}",
+                TETKIK_SONUCU = $"TETKIK_SONUCU_{tetkikSonucuRef[i % tetkikSonucuRef.Length]}",
+                ZON_CAPI = $"{_random.Next(6, 30)}",
+                ACIKLAMA = $"Antibiyotik sonuç kaydı {i + 1}",
+                RAPORDA_GORULME_DURUMU = "EVET"
+            }).ToList());
+            _logger.LogInformation("ANTIBIYOTIK_SONUC seeded");
+        }
+
+        // === 23. PERSONEL_ODUL_CEZA ===
+        var odulCezaTuruRef = new[] { "IKRAMIYE", "KIDEM", "TESEKKUR", "UYARI", "IHTAR" };
+        foreach (var r in odulCezaTuruRef) await AddReferansKodIfNotExists("ODUL_CEZA_TURU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<PERSONEL_ODUL_CEZA>(ct, personeller.Take(5).Select((p, i) => new PERSONEL_ODUL_CEZA
+        {
+            PERSONEL_ODUL_CEZA_KODU = $"POC-{i + 1:D5}",
+            PERSONEL_KODU = p.PERSONEL_KODU,
+            ODUL_CEZA_DURUMU = i % 2 == 0 ? "ODUL" : "CEZA",
+            ODUL_CEZA_TURU = $"ODUL_CEZA_TURU_{odulCezaTuruRef[i % odulCezaTuruRef.Length]}",
+            CEZA_BASLANGIC_TARIHI = DateTime.Now.AddMonths(-6),
+            CEZA_BITIS_TARIHI = DateTime.Now.AddMonths(-3),
+            ODUL_CEZA_VEREN_KURUM_KODU = kurumlar.FirstOrDefault()?.KURUM_KODU,
+            ODUL_CEZA_ACIKLAMA = $"Personel ödül/ceza açıklaması {i + 1}",
+            TEBLIG_TARIHI = DateTime.Now.AddMonths(-6),
+            TEBLIG_EVRAK_TARIHI = DateTime.Now.AddMonths(-6),
+            TEBLIG_EVRAK_NUMARASI = $"TEV-2024-{i + 1:D4}"
+        }).ToList());
+        _logger.LogInformation("PERSONEL_ODUL_CEZA seeded");
+
+        // === 24. PERSONEL_YANDAL ===
+        await SeedIfEmpty<PERSONEL_YANDAL>(ct, personeller.Take(5).Select((p, i) => new PERSONEL_YANDAL
+        {
+            PERSONEL_YANDAL_KODU = $"PYD-{i + 1:D5}",
+            PERSONEL_KODU = p.PERSONEL_KODU,
+            YANDAL_BASLANGIC_TARIHI = DateTime.Now.AddYears(-3),
+            YANDAL_BITIS_TARIHI = DateTime.Now.AddYears(-1),
+            MEDULA_BRANS_KODU = $"99{i + 1}"
+        }).ToList());
+        _logger.LogInformation("PERSONEL_YANDAL seeded");
+
+        // === 25. STERILIZASYON_STOK_DURUM ===
+        var depolar = await _db.Set<DEPO>().Take(5).ToListAsync(ct);
+        var stokKartlar = await _db.Set<STOK_KART>().Take(10).ToListAsync(ct);
+
+        if (depolar.Any() && stokKartlar.Any())
+        {
+            await SeedIfEmpty<STERILIZASYON_STOK_DURUM>(ct, Enumerable.Range(0, 5).Select(i => new STERILIZASYON_STOK_DURUM
+            {
+                STERILIZASYON_STOK_DURUM_KODU = $"SSD-{i + 1:D5}",
+                DEPO_KODU = depolar[i % depolar.Count].DEPO_KODU,
+                STOK_KART_KODU = stokKartlar[i % stokKartlar.Count].STOK_KART_KODU,
+                STOK_MIKTARI = $"{_random.Next(10, 100)}",
+                STERIL_OLMAYAN_STOK_MIKTARI = $"{_random.Next(1, 20)}",
+                STERIL_STOK_MIKTARI = $"{_random.Next(5, 50)}"
+            }).ToList());
+            _logger.LogInformation("STERILIZASYON_STOK_DURUM seeded");
+        }
+
+        // === 26. STERILIZASYON_YIKAMA ===
+        var sterilYikamaTuruRef = new[] { "MAKINE", "ELLE", "ULTRASONIK" };
+        foreach (var r in sterilYikamaTuruRef) await AddReferansKodIfNotExists("STERILIZASYON_YIKAMA_TURU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (depolar.Any() && stokKartlar.Any())
+        {
+            await SeedIfEmpty<STERILIZASYON_YIKAMA>(ct, Enumerable.Range(0, 5).Select(i => new STERILIZASYON_YIKAMA
+            {
+                STERILIZASYON_YIKAMA_KODU = $"SYK-{i + 1:D5}",
+                DEPO_KODU = depolar[i % depolar.Count].DEPO_KODU,
+                STOK_KART_KODU = stokKartlar[i % stokKartlar.Count].STOK_KART_KODU,
+                YIKANAN_ALET_MIKTARI = $"{_random.Next(5, 30)}",
+                STERILIZASYON_YIKAMA_TURU = $"STERILIZASYON_YIKAMA_TURU_{sterilYikamaTuruRef[i % sterilYikamaTuruRef.Length]}",
+                YIKAMA_YAPAN_PERSONEL_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+                YIKAMA_BASLAMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+                YIKAMA_BITIS_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)).AddHours(2)
+            }).ToList());
+            _logger.LogInformation("STERILIZASYON_YIKAMA seeded");
+        }
+
+        // === 27. STERILIZASYON_PAKET_DETAY ===
+        var sterilPaketler = await _db.Set<STERILIZASYON_PAKET>().Take(5).ToListAsync(ct);
+        var olcuRef = new[] { "ADET", "KUTU", "SET" };
+        foreach (var r in olcuRef) await AddReferansKodIfNotExists("OLCU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (sterilPaketler.Any() && stokKartlar.Any())
+        {
+            await SeedIfEmpty<STERILIZASYON_PAKET_DETAY>(ct, sterilPaketler.Take(5).Select((sp, i) => new STERILIZASYON_PAKET_DETAY
+            {
+                STERILIZASYON_PAKET_DETAY_KODU = $"SPD-{i + 1:D5}",
+                STERILIZASYON_PAKET_KODU = sp.STERILIZASYON_PAKET_KODU,
+                STOK_KART_KODU = stokKartlar[i % stokKartlar.Count].STOK_KART_KODU,
+                STERILIZASYON_MALZEME_MIKTARI = $"{_random.Next(1, 10)}",
+                OLCU_KODU = $"OLCU_{olcuRef[i % olcuRef.Length]}",
+                ACIKLAMA = $"Sterilizasyon paket detay kaydı {i + 1}"
+            }).ToList());
+            _logger.LogInformation("STERILIZASYON_PAKET_DETAY seeded");
+        }
+
+        // === 28. STERILIZASYON_SET_DETAY ===
+        var sterilSetler = await _db.Set<STERILIZASYON_SET>().Take(5).ToListAsync(ct);
+
+        if (sterilSetler.Any() && stokKartlar.Any())
+        {
+            await SeedIfEmpty<STERILIZASYON_SET_DETAY>(ct, sterilSetler.Take(5).Select((ss, i) => new STERILIZASYON_SET_DETAY
+            {
+                STERILIZASYON_SET_DETAY_KODU = $"SSED-{i + 1:D5}",
+                STERILIZASYON_SET_KODU = ss.STERILIZASYON_SET_KODU,
+                STOK_KART_KODU = stokKartlar[i % stokKartlar.Count].STOK_KART_KODU,
+                STERILIZASYON_MALZEME_MIKTARI = $"{_random.Next(1, 15)}"
+            }).ToList());
+            _logger.LogInformation("STERILIZASYON_SET_DETAY seeded");
+        }
+
+        // === 29. STOK_EHU_TAKIP ===
+        var stokIsteklerEhu = await _db.Set<STOK_ISTEK>().Take(5).ToListAsync(ct);
+        var ehuRetNedeniRef = new[] { "UYGUN_DEGIL", "ALTERNATIF_VAR", "DIGER" };
+        foreach (var r in ehuRetNedeniRef) await AddReferansKodIfNotExists("EHU_RET_NEDENI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (stokIsteklerEhu.Any() && stokKartlar.Any())
+        {
+            await SeedIfEmpty<STOK_EHU_TAKIP>(ct, stokIsteklerEhu.Take(5).Select((si, i) => new STOK_EHU_TAKIP
+            {
+                STOK_EHU_TAKIP_KODU = $"SET-{i + 1:D5}",
+                STOK_ISTEK_KODU = si.STOK_ISTEK_KODU,
+                STOK_ISTEK_HAREKET_KODU = stokIstekHareketler.Any() ? stokIstekHareketler[i % stokIstekHareketler.Count].STOK_ISTEK_HAREKET_KODU : null,
+                STOK_KART_KODU = stokKartlar[i % stokKartlar.Count].STOK_KART_KODU,
+                EHU_ONAY_BASLAMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(10, 30)),
+                EHU_ONAY_BITIS_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 10)),
+                EHU_ILAC_MAKSIMUM_MIKTAR = $"{_random.Next(1, 10)}",
+                ACIKLAMA = $"EHU takip kaydı {i + 1}",
+                EHU_ONAYLAMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 10)),
+                ONAYLAYAN_HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+                EHU_RET_NEDENI = $"EHU_RET_NEDENI_{ehuRetNedeniRef[0]}",
+                EHU_RET_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 5)),
+                EHU_RET_PERSONEL_KODU = personeller[(i + 1) % personeller.Count].PERSONEL_KODU,
+                EHU_RET_ACIKLAMA = $"EHU ret açıklaması {i + 1}"
+            }).ToList());
+            _logger.LogInformation("STOK_EHU_TAKIP seeded");
+        }
+
+        // === 30. HASTA_DIS ===
+        var disTaahhutler = await _db.Set<DIS_TAAHHUT>().Take(5).ToListAsync(ct);
+        var disProtezlerHd = await _db.Set<DISPROTEZ>().Take(5).ToListAsync(ct);
+        var disIslemTuruRef = new[] { "DIAGNOZ", "TEDAVI", "PLANLAMA" };
+        foreach (var r in disIslemTuruRef) await AddReferansKodIfNotExists("DIS_ISLEM_TURU", r, r, ct);
+        var mevcutDisDurumuRef = new[] { "SAGLIKLI", "CURUMUS", "EKSIK", "PROTEZLI" };
+        foreach (var r in mevcutDisDurumuRef) await AddReferansKodIfNotExists("MEVCUT_DIS_DURUMU", r, r, ct);
+        var disKoduHdRef = new[] { "11", "12", "13", "21", "22", "23" };
+        foreach (var r in disKoduHdRef) await AddReferansKodIfNotExists("DIS", r, $"Diş {r}", ct);
+        var ceneBolgesiRef = new[] { "UST_CENE", "ALT_CENE", "TUM_AGIZ" };
+        foreach (var r in ceneBolgesiRef) await AddReferansKodIfNotExists("CENE_BOLGESI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        if (hastaHizmetler.Any())
+        {
+            await SeedIfEmpty<HASTA_DIS>(ct, hastaHizmetler.Take(5).Select((hh, i) => new HASTA_DIS
+            {
+                HASTA_DIS_KODU = $"HD-{i + 1:D5}",
+                HASTA_KODU = hastalar[i % hastalar.Count].HASTA_KODU,
+                HASTA_BASVURU_KODU = basvurular[i % basvurular.Count].HASTA_BASVURU_KODU,
+                DIS_ISLEM_TURU = $"DIS_ISLEM_TURU_{disIslemTuruRef[i % disIslemTuruRef.Length]}",
+                HASTA_HIZMET_KODU = hh.HASTA_HIZMET_KODU,
+                DIS_TAAHHUT_KODU = disTaahhutler.Any() ? disTaahhutler[i % disTaahhutler.Count].DIS_TAAHHUT_KODU : $"DT-TEMP-{i + 1}",
+                MEVCUT_DIS_DURUMU = $"MEVCUT_DIS_DURUMU_{mevcutDisDurumuRef[i % mevcutDisDurumuRef.Length]}",
+                DIS_KODU = $"DIS_{disKoduHdRef[i % disKoduHdRef.Length]}",
+                CENE_BOLGESI = $"CENE_BOLGESI_{ceneBolgesiRef[i % ceneBolgesiRef.Length]}",
+                CENE_BOLGESI_DISLERI = "11,12,13",
+                DISPROTEZ_KODU = disProtezlerHd.Any() ? disProtezlerHd[i % disProtezlerHd.Count].DISPROTEZ_KODU : $"DP-TEMP-{i + 1}",
+                SONUC_KODU = "BASARILI",
+                SONUC_MESAJI = "İşlem başarılı"
+            }).ToList());
+            _logger.LogInformation("HASTA_DIS seeded");
+        }
+
+        // === 31. MADDE_BAGIMLILIGI ===
+        var bilgiAlinanKaynakRef = new[] { "HASTA", "AILE", "DIGER" };
+        foreach (var r in bilgiAlinanKaynakRef) await AddReferansKodIfNotExists("BILGI_ALINAN_KAYNAK", r, r, ct);
+        var danismaTedaviRef = new[] { "ALDI", "ALMADI", "BILINMIYOR" };
+        foreach (var r in danismaTedaviRef) await AddReferansKodIfNotExists("DANISMA_TEDAVI_HIZMET_DURUMU", r, r, ct);
+        var ikameTedaviRef = new[] { "VAR", "YOK", "BILINMIYOR" };
+        foreach (var r in ikameTedaviRef) await AddReferansKodIfNotExists("IKAME_TEDAVI_DURUMU", r, r, ct);
+        var cezaeviOykusuRef = new[] { "VAR", "YOK" };
+        foreach (var r in cezaeviOykusuRef) await AddReferansKodIfNotExists("CEZAEVI_OYKUSU", r, r, ct);
+        var sosyalYardimRef = new[] { "ALIYOR", "ALMIYOR" };
+        foreach (var r in sosyalYardimRef) await AddReferansKodIfNotExists("SOSYAL_YARDIM_ALMA_DURUMU", r, r, ct);
+        var yasadigiBolgeRef = new[] { "KENTSEL", "KIRSAL" };
+        foreach (var r in yasadigiBolgeRef) await AddReferansKodIfNotExists("YASADIGI_BOLGE", r, r, ct);
+        var yasamBicimiRef = new[] { "AILE_ILE", "YALNIZ", "BARINAKTA" };
+        foreach (var r in yasamBicimiRef) await AddReferansKodIfNotExists("YASAM_BICIMI", r, r, ct);
+        var cocuklariylaYasamaRef = new[] { "EVET", "HAYIR" };
+        foreach (var r in cocuklariylaYasamaRef) await AddReferansKodIfNotExists("COCUKLARIYLA_YASAMA_DURUMU", r, r, ct);
+        var enjeksiyonMaddeRef = new[] { "EVET", "HAYIR", "BILINMIYOR" };
+        foreach (var r in enjeksiyonMaddeRef) await AddReferansKodIfNotExists("ENJEKSIYON_ILE_MADDE_KULLANIMI", r, r, ct);
+        var enjektorPaylasimRef = new[] { "EVET", "HAYIR" };
+        foreach (var r in enjektorPaylasimRef) await AddReferansKodIfNotExists("ENJEKTOR_PAYLASIM_DURUMU", r, r, ct);
+        var testDurumRef = new[] { "POZITIF", "NEGATIF", "YAPILMADI" };
+        foreach (var r in testDurumRef) await AddReferansKodIfNotExists("HIV_TEST_YAPILMA_DURUMU", r, r, ct);
+        foreach (var r in testDurumRef) await AddReferansKodIfNotExists("HCV_TEST_YAPILMA_DURUMU", r, r, ct);
+        foreach (var r in testDurumRef) await AddReferansKodIfNotExists("HBV_TEST_YAPILMA_DURUMU", r, r, ct);
+        var gorusmeSonucuRef = new[] { "TEDAVI_BASLANDI", "SEVK_EDILDI", "DIGER" };
+        foreach (var r in gorusmeSonucuRef) await AddReferansKodIfNotExists("GORUSME_SONUCU", r, r, ct);
+        var gonderenBirimRef = new[] { "AILE", "POLIS", "HASTANE", "DIGER" };
+        foreach (var r in gonderenBirimRef) await AddReferansKodIfNotExists("GONDEREN_BIRIM", r, r, ct);
+        var yasamOrtamiRef = new[] { "SABIT", "DEGISKEN" };
+        foreach (var r in yasamOrtamiRef) await AddReferansKodIfNotExists("YASAM_ORTAMI", r, r, ct);
+        var bulasiciHastalikRef = new[] { "VAR", "YOK", "BILINMIYOR" };
+        foreach (var r in bulasiciHastalikRef) await AddReferansKodIfNotExists("BULASICI_HASTALIK_DURUMU", r, r, ct);
+        var tedaviTipiRef = new[] { "YATARAK", "AYAKTA", "REHABILITASYON" };
+        foreach (var r in tedaviTipiRef) await AddReferansKodIfNotExists("BASLANAN_TEDAVI_TIPI_BILGISI", r, r, ct);
+        var esasMaddeRef = new[] { "EROIN", "KOKAIN", "ESRAR", "ALKOL" };
+        foreach (var r in esasMaddeRef) await AddReferansKodIfNotExists("BIRINCIL_KULLANILAN_ESAS_MADDE", r, r, ct);
+        var digerMaddeRef = new[] { "ESRAR", "ALKOL", "YOK" };
+        foreach (var r in digerMaddeRef) await AddReferansKodIfNotExists("KULLANILAN_DIGER_MADDE", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        await SeedIfEmpty<MADDE_BAGIMLILIGI>(ct, basvurular.Take(5).Select((b, i) => new MADDE_BAGIMLILIGI
+        {
+            MADDE_BAGIMLILIGI_KODU = $"MB-{i + 1:D5}",
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            BILGI_ALINAN_KAYNAK = $"BILGI_ALINAN_KAYNAK_{bilgiAlinanKaynakRef[i % bilgiAlinanKaynakRef.Length]}",
+            DANISMA_TEDAVI_HIZMET_DURUMU = $"DANISMA_TEDAVI_HIZMET_DURUMU_{danismaTedaviRef[0]}",
+            DANISMA_TEDAVI_HIZMET_ZAMANI = DateTime.Now.AddMonths(-6),
+            IKAME_TEDAVI_DURUMU = $"IKAME_TEDAVI_DURUMU_{ikameTedaviRef[0]}",
+            SON_IKAME_TEDAVI_ZAMANI = DateTime.Now.AddMonths(-3),
+            CEZAEVI_OYKUSU = $"CEZAEVI_OYKUSU_{cezaeviOykusuRef[1]}",
+            SOSYAL_YARDIM_ALMA_DURUMU = $"SOSYAL_YARDIM_ALMA_DURUMU_{sosyalYardimRef[1]}",
+            YASADIGI_BOLGE = $"YASADIGI_BOLGE_{yasadigiBolgeRef[0]}",
+            YASAM_BICIMI = $"YASAM_BICIMI_{yasamBicimiRef[0]}",
+            COCUKLARIYLA_YASAMA_DURUMU = $"COCUKLARIYLA_YASAMA_DURUMU_{cocuklariylaYasamaRef[0]}",
+            ENJEKSIYON_ILE_MADDE_KULLANIMI = $"ENJEKSIYON_ILE_MADDE_KULLANIMI_{enjeksiyonMaddeRef[1]}",
+            ENJEKSIYON_ILK_KULLANIM_YASI = "0",
+            ENJEKTOR_PAYLASIM_DURUMU = $"ENJEKTOR_PAYLASIM_DURUMU_{enjektorPaylasimRef[1]}",
+            ILK_ENJEKTOR_PAYLASIM_YASI = "0",
+            HIV_TEST_YAPILMA_DURUMU = $"HIV_TEST_YAPILMA_DURUMU_{testDurumRef[1]}",
+            HCV_TEST_YAPILMA_DURUMU = $"HCV_TEST_YAPILMA_DURUMU_{testDurumRef[1]}",
+            HBV_TEST_YAPILMA_DURUMU = $"HBV_TEST_YAPILMA_DURUMU_{testDurumRef[1]}",
+            GORUSME_SONUCU = $"GORUSME_SONUCU_{gorusmeSonucuRef[0]}",
+            GONDEREN_BIRIM = $"GONDEREN_BIRIM_{gonderenBirimRef[0]}",
+            YASAM_ORTAMI = $"YASAM_ORTAMI_{yasamOrtamiRef[0]}",
+            BULASICI_HASTALIK_DURUMU = $"BULASICI_HASTALIK_DURUMU_{bulasiciHastalikRef[1]}",
+            BASLANAN_TEDAVI_TIPI_BILGISI = $"BASLANAN_TEDAVI_TIPI_BILGISI_{tedaviTipiRef[1]}",
+            BIRINCIL_KULLANILAN_ESAS_MADDE = $"BIRINCIL_KULLANILAN_ESAS_MADDE_{esasMaddeRef[3]}",
+            KULLANILAN_DIGER_MADDE = $"KULLANILAN_DIGER_MADDE_{digerMaddeRef[2]}"
+        }).ToList());
+        _logger.LogInformation("MADDE_BAGIMLILIGI seeded");
+
+        // === 32. HASTA_ADLI_RAPOR ===
+        var adliRaporTuruRef = new[] { "GIRIS_RAPORU", "CIKIS_RAPORU", "KONTROL_RAPORU" };
+        foreach (var r in adliRaporTuruRef) await AddReferansKodIfNotExists("ADLI_RAPOR_TURU", r, r, ct);
+        var elbiseDurumuRef = new[] { "TEMIZ", "KIRLI", "YIRTIK", "KANLI" };
+        foreach (var r in elbiseDurumuRef) await AddReferansKodIfNotExists("ELBISE_DURUMU", r, r, ct);
+        var pupillaDegerRef = new[] { "IZOMETRIK", "ANIZOMETRIK", "MIYOZIS", "MIDRIYAZIS" };
+        foreach (var r in pupillaDegerRef) await AddReferansKodIfNotExists("PUPILLA_DEGERLENDIRMESI", r, r, ct);
+        var isikRefleksiRef = new[] { "POZITIF", "NEGATIF", "AZALMIS" };
+        foreach (var r in isikRefleksiRef) await AddReferansKodIfNotExists("ISIK_REFLEKSI", r, r, ct);
+        var tendonRefleksiRef = new[] { "NORMOAKTIF", "HIPOAKTIF", "HIPERAKTIF" };
+        foreach (var r in tendonRefleksiRef) await AddReferansKodIfNotExists("TENDON_REFLEKSI", r, r, ct);
+        var adliMuayeneRizaRef = new[] { "RIZA_VERILDI", "RIZA_VERILMEDI" };
+        foreach (var r in adliMuayeneRizaRef) await AddReferansKodIfNotExists("ADLI_MUAYENE_RIZA_DURUMU", r, r, ct);
+        var yakinlikDerecesiRef = new[] { "ANNE", "BABA", "ES", "KARDES", "DIGER" };
+        foreach (var r in yakinlikDerecesiRef) await AddReferansKodIfNotExists("RIZA_VERENIN_YAKINLIK_DERECESI", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        var kullanicilarAdliRapor = await _db.Set<KULLANICI>().Take(5).ToListAsync(ct);
+
+        await SeedIfEmpty<HASTA_ADLI_RAPOR>(ct, basvurular.Take(3).Select((b, i) => new HASTA_ADLI_RAPOR
+        {
+            HASTA_ADLI_RAPOR_KODU = $"HAR-{i + 1:D5}",
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            HASTA_KODU = b.HASTA_KODU,
+            ADLI_RAPOR_TURU = $"ADLI_RAPOR_TURU_{adliRaporTuruRef[i % adliRaporTuruRef.Length]}",
+            RAPOR_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            ADLI_MUAYENEYE_GONDEREN_KURUM = "Emniyet Müdürlüğü",
+            RESMI_YAZI_NUMARASI = $"RY-2024-{i + 1:D4}",
+            RESMI_YAZI_TARIHI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            ADLI_MUAYENE_EDILME_NEDENI = "Darp iddiası",
+            GUVENLIK_SICIL_NUMARASI = $"GSN-{i + 1:D6}",
+            GUVENLIK_ADI_SOYADI = $"Güvenlik Görevlisi {i + 1}",
+            OLAY_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            ADLI_OLAY_OYKUSU = "Olay öyküsü kaydı",
+            SIKAYET = "Şikayet bilgisi",
+            OZGECMISI = "Özgeçmiş bilgisi yok",
+            SOYGECMISI = "Soy geçmiş bilgisi yok",
+            MUAYENE_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            HEKIM_KODU = personeller[i % personeller.Count].PERSONEL_KODU,
+            TIBBI_MUDAHALE = "Yara pansumanı yapıldı",
+            UYGUN_SART_SAGLANMA_DURUMU = "EVET",
+            UYGUN_SART_ACIKLAMA = "Muayene için uygun şartlar sağlandı",
+            ELBISE_DURUMU = $"ELBISE_DURUMU_{elbiseDurumuRef[0]}",
+            KONSULTASYON_BILGISI = "Konsültasyon istenmedi",
+            LEZYON_BULGULARI = "Sol kol üzerinde ekimoz",
+            SISTEM_BULGULARI = "Normal",
+            BILINC_DURUMU = "Açık",
+            PUPILLA_DEGERLENDIRMESI = $"PUPILLA_DEGERLENDIRMESI_{pupillaDegerRef[0]}",
+            ISIK_REFLEKSI = $"ISIK_REFLEKSI_{isikRefleksiRef[0]}",
+            NABIZ = "72",
+            TENDON_REFLEKSI = $"TENDON_REFLEKSI_{tendonRefleksiRef[0]}",
+            PSIKIYATRIK_MUAYENE = "Normal",
+            PSIKIYATRIK_SONUC = "Patoloji saptanmadı",
+            HIZMET_ACIKLAMA = "Hizmet açıklaması",
+            SEVK_DURUMU = "HAYIR",
+            SEVK_ACIKLAMA = "Sevk gerekli değil",
+            TESLIM_ALAN_ADI_SOYADI = $"Teslim Alan {i + 1}",
+            TESLIM_ALAN_TC_KIMLIK_NUMARASI = GenerateTcKimlik(),
+            VUCUT_DIYAGRAMI = "Sol_Kol",
+            ACIKLAMA = $"Adli rapor açıklaması {i + 1}",
+            ADLI_MUAYENE_RIZA_DURUMU = $"ADLI_MUAYENE_RIZA_DURUMU_{adliMuayeneRizaRef[0]}",
+            RIZA_VEREN_KISI = "Hasta kendisi",
+            RIZA_VERENIN_YAKINLIK_DERECESI = $"RIZA_VERENIN_YAKINLIK_DERECESI_{yakinlikDerecesiRef[4]}",
+            SON_CINSEL_ILISKI_TARIHI = DateTime.MinValue,
+            HAMILELIK_DURUMU = "HAYIR",
+            HAMILELIK_OYKUSU_ACIKLAMA = "Yok",
+            VENERYAL_HASTALIK_OYKUSU = "YOK",
+            EMOSYONEL_HASTALIK_OYKUSU = "YOK",
+            SOLUNUM = "18",
+            ADLI_MUAYENE_NOTU = "Muayene notu",
+            ALINAN_MATERYAL = "Kan örneği",
+            MUAYENEDEKI_KISI_BILGISI = "Hemşire",
+            MUAYENEDEKI_KISI_ACIKLAMA = "Hemşire eşliğinde muayene yapıldı",
+            ALKOL_KULLANIMI = "HAYIR",
+            SIDDET_TEHDIT_BILGISI = "Fiziksel şiddet",
+            SILAH_ALET_BILGISI = "Kesici alet yok",
+            HAYATI_TEHLIKE_DURUMU = "YOK",
+            SISTOLIK_KAN_BASINCI_DEGERI = "120",
+            DIASTOLIK_KAN_BASINCI_DEGERI = "80",
+            IPTAL_ZAMANI = DateTime.MinValue,
+            IPTAL_EDEN_KULLANICI_KODU = kullanicilarAdliRapor.Any() ? kullanicilarAdliRapor[0].KULLANICI_KODU : personeller[0].PERSONEL_KODU,
+            ADLI_RAPOR_IPTAL_GEREKCESI = "",
+            ONAYLAYAN_KULLANICI_KODU = kullanicilarAdliRapor.Any() ? kullanicilarAdliRapor[0].KULLANICI_KODU : personeller[0].PERSONEL_KODU,
+            ADLI_RAPOR_ONAYLANMA_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 10))
+        }).ToList());
+        _logger.LogInformation("HASTA_ADLI_RAPOR seeded");
+
+        // === 33. BILDIRIMI_ZORUNLU ===
+        var bildirimTuruRef = new[] { "BULASICI_HASTALIK", "INTIHAR", "SIDDET", "KUDUZ", "VEREM" };
+        foreach (var r in bildirimTuruRef) await AddReferansKodIfNotExists("BILDIRIM_TURU", r, r, ct);
+        var intiharKrizVakaTuruRef = new[] { "INTIHAR", "KRIZ" };
+        foreach (var r in intiharKrizVakaTuruRef) await AddReferansKodIfNotExists("INTIHAR_KRIZ_VAKA_TURU", r, r, ct);
+        var aileIntiharRef = new[] { "VAR", "YOK", "BILINMIYOR" };
+        foreach (var r in aileIntiharRef) await AddReferansKodIfNotExists("AILESINDE_INTIHAR_GIRISIMI", r, r, ct);
+        foreach (var r in aileIntiharRef) await AddReferansKodIfNotExists("AILESINDE_PSIKIYATRIK_VAKA", r, r, ct);
+        var psikTedaviGecmisiRef = new[] { "VAR", "YOK" };
+        foreach (var r in psikTedaviGecmisiRef) await AddReferansKodIfNotExists("PSIKIYATRIK_TEDAVI_GECMISI", r, r, ct);
+        foreach (var r in psikTedaviGecmisiRef) await AddReferansKodIfNotExists("PSIKIYATRIK_TANI_GECMISI", r, r, ct);
+        foreach (var r in psikTedaviGecmisiRef) await AddReferansKodIfNotExists("INTIHAR_GIRISIMI_GECMISI", r, r, ct);
+        var intiharNedenleriRef = new[] { "DEPRESYON", "AILE_SORUNLARI", "EKONOMIK", "DIGER" };
+        foreach (var r in intiharNedenleriRef) await AddReferansKodIfNotExists("INTIHAR_GIRISIM_KRIZ_NEDENLERI", r, r, ct);
+        var intiharYontemiZorunluRef = new[] { "ILAC", "KESICI_ALET", "YUKSEKTEN_ATLAMA", "DIGER" };
+        foreach (var r in intiharYontemiZorunluRef) await AddReferansKodIfNotExists("INTIHAR_GIRISIMI_YONTEMI", r, r, ct);
+        var intiharSonucuZorunluRef = new[] { "TABURCU", "YATIS", "SEVK", "OLUM" };
+        foreach (var r in intiharSonucuZorunluRef) await AddReferansKodIfNotExists("INTIHAR_KRIZ_VAKA_SONUCU", r, r, ct);
+        var hayvanDurumRef = new[] { "CANLI", "OLU", "BILINMIYOR" };
+        foreach (var r in hayvanDurumRef) await AddReferansKodIfNotExists("HAYVANIN_MEVCUT_DURUMU", r, r, ct);
+        var hayvanSahiplikRef = new[] { "SAHIPLI", "SAHIPSIZ", "BILINMIYOR" };
+        foreach (var r in hayvanSahiplikRef) await AddReferansKodIfNotExists("HAYVANIN_SAHIPLIK_DURUMU", r, r, ct);
+        var immunglobulinTuruRef = new[] { "AT_KAYNAKLI", "INSAN_KAYNAKLI" };
+        foreach (var r in immunglobulinTuruRef) await AddReferansKodIfNotExists("IMMUNGLOBULIN_TURU", r, r, ct);
+        var kategorizasyonRef = new[] { "KATEGORI_1", "KATEGORI_2", "KATEGORI_3" };
+        foreach (var r in kategorizasyonRef) await AddReferansKodIfNotExists("KATEGORIZASYON", r, r, ct);
+        var temasDegerRef = new[] { "RISKLI", "RISKSIZ" };
+        foreach (var r in temasDegerRef) await AddReferansKodIfNotExists("TEMAS_DEGERLENDIRME_DURUMU", r, r, ct);
+        var kuduzHayvanRef = new[] { "KOPEK", "KEDI", "YARASA", "DIGER" };
+        foreach (var r in kuduzHayvanRef) await AddReferansKodIfNotExists("KUDUZ_SEBEP_OLAN_HAYVAN", r, r, ct);
+        var riskliTemasTipiRef = new[] { "ISIRMA", "TIRMALAMA", "YALAMA" };
+        foreach (var r in riskliTemasTipiRef) await AddReferansKodIfNotExists("RISKLI_TEMAS_TIPI", r, r, ct);
+        var ilRef = new[] { "34", "06", "35" };
+        foreach (var r in ilRef) await AddReferansKodIfNotExists("IL", r, $"İl {r}", ct);
+        var ilceRef = new[] { "001", "002", "003" };
+        foreach (var r in ilceRef) await AddReferansKodIfNotExists("ILCE", r, $"İlçe {r}", ct);
+        var dgtYapanRef = new[] { "HEKIM", "HEMSIRE", "AILE" };
+        foreach (var r in dgtYapanRef) await AddReferansKodIfNotExists("DGT_UYGULAMASINI_YAPAN_KISI", r, r, ct);
+        var dgtYerRef = new[] { "HASTANE", "TSM", "EV" };
+        foreach (var r in dgtYerRef) await AddReferansKodIfNotExists("DGT_UYGULAMA_YERI", r, r, ct);
+        var tedaviUyumRef = new[] { "UYUMLU", "UYUMSUZ", "KISMI" };
+        foreach (var r in tedaviUyumRef) await AddReferansKodIfNotExists("HASTANIN_TEDAVIYE_UYUMU", r, r, ct);
+        var kulturSonucRef = new[] { "POZITIF", "NEGATIF", "BEKLEMEDE" };
+        foreach (var r in kulturSonucRef) await AddReferansKodIfNotExists("KULTUR_SONUCU", r, r, ct);
+        var tuberkulinRef = new[] { "POZITIF", "NEGATIF", "SUPHE" };
+        foreach (var r in tuberkulinRef) await AddReferansKodIfNotExists("TUBERKULIN_DERI_TESTI_SONUCU", r, r, ct);
+        var veremTedaviYonRef = new[] { "DGT", "STANDART" };
+        foreach (var r in veremTedaviYonRef) await AddReferansKodIfNotExists("VEREM_HASTASI_TEDAVI_YONTEMI", r, r, ct);
+        var veremOlguRef = new[] { "YENI_OLGU", "NUKS", "TEDAVI_BASARISIZLIGI" };
+        foreach (var r in veremOlguRef) await AddReferansKodIfNotExists("VEREM_OLGU_TANIMI", r, r, ct);
+        var yaymaSonucRef = new[] { "POZITIF", "NEGATIF" };
+        foreach (var r in yaymaSonucRef) await AddReferansKodIfNotExists("YAYMA_SONUCU", r, r, ct);
+        var veremTutulumRef = new[] { "AKCIGER", "AKCIGER_DISI" };
+        foreach (var r in veremTutulumRef) await AddReferansKodIfNotExists("VEREM_HASTALIGI_TUTULUM_YERI", r, r, ct);
+        var veremKlinikRef = new[] { "BALGAM", "BAL", "BIYOPSI" };
+        foreach (var r in veremKlinikRef) await AddReferansKodIfNotExists("VEREM_HASTASI_KLINIK_ORNEGI", r, r, ct);
+        var veremIlacRef = new[] { "IZONIAZID", "RIFAMPISIN", "ETAMBUTOL" };
+        foreach (var r in veremIlacRef) await AddReferansKodIfNotExists("VEREM_ILAC_ADI", r, r, ct);
+        var veremTedaviSonucRef = new[] { "KUR", "TEDAVI_TAMAMLAMA", "OLUM", "TEDAVI_BIRAKMA" };
+        foreach (var r in veremTedaviSonucRef) await AddReferansKodIfNotExists("VEREM_TEDAVI_SONUCU", r, r, ct);
+        var bulasiciVakaTipiRef = new[] { "KESIN", "OLASI", "SUPHE" };
+        foreach (var r in bulasiciVakaTipiRef) await AddReferansKodIfNotExists("BULASICI_HASTALIK_VAKA_TIPI", r, r, ct);
+        var siddetTuruRef = new[] { "FIZIKSEL", "CINSEL", "PSIKOLOJIK", "EKONOMIK" };
+        foreach (var r in siddetTuruRef) await AddReferansKodIfNotExists("SIDDET_TURU", r, r, ct);
+        var siddetSonucRef = new[] { "HAFIF", "ORTA", "AGIR" };
+        foreach (var r in siddetSonucRef) await AddReferansKodIfNotExists("SIDDET_DEGERLENDIRME_SONUCU", r, r, ct);
+        await _db.SaveChangesAsync(ct);
+
+        var taniler = await _db.Set<REFERANS_KODLAR>().Where(r => r.KOD_TURU == "TANI").Take(5).ToListAsync(ct);
+
+        await SeedIfEmpty<BILDIRIMI_ZORUNLU>(ct, basvurular.Take(3).Select((b, i) => new BILDIRIMI_ZORUNLU
+        {
+            BILDIRIMI_ZORUNLU_KODU = $"BZ-{i + 1:D5}",
+            HASTA_KODU = b.HASTA_KODU,
+            HASTA_BASVURU_KODU = b.HASTA_BASVURU_KODU,
+            BILDIRIM_TURU = $"BILDIRIM_TURU_{bildirimTuruRef[i % bildirimTuruRef.Length]}",
+            BILDIRIM_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            TANI_KODU = taniler.Any() ? taniler[0].REFERANS_KODU : null,
+            AILESINDE_INTIHAR_GIRISIMI = $"AILESINDE_INTIHAR_GIRISIMI_{aileIntiharRef[1]}",
+            AILESINDE_PSIKIYATRIK_VAKA = $"AILESINDE_PSIKIYATRIK_VAKA_{aileIntiharRef[1]}",
+            INTIHAR_KRIZ_VAKA_TURU = $"INTIHAR_KRIZ_VAKA_TURU_{intiharKrizVakaTuruRef[0]}",
+            OLAY_ZAMANI = DateTime.Now.AddDays(-_random.Next(1, 30)),
+            PSIKIYATRIK_TEDAVI_GECMISI = $"PSIKIYATRIK_TEDAVI_GECMISI_{psikTedaviGecmisiRef[1]}",
+            INTIHAR_GIRISIM_KRIZ_NEDENLERI = $"INTIHAR_GIRISIM_KRIZ_NEDENLERI_{intiharNedenleriRef[0]}",
+            INTIHAR_GIRISIMI_YONTEMI = $"INTIHAR_GIRISIMI_YONTEMI_{intiharYontemiZorunluRef[0]}",
+            INTIHAR_GIRISIMI_GECMISI = $"INTIHAR_GIRISIMI_GECMISI_{psikTedaviGecmisiRef[1]}",
+            INTIHAR_KRIZ_VAKA_SONUCU = $"INTIHAR_KRIZ_VAKA_SONUCU_{intiharSonucuZorunluRef[0]}",
+            PSIKIYATRIK_TANI_GECMISI = $"PSIKIYATRIK_TANI_GECMISI_{psikTedaviGecmisiRef[1]}",
+            HAYVANIN_MEVCUT_DURUMU = $"HAYVANIN_MEVCUT_DURUMU_{hayvanDurumRef[0]}",
+            HAYVANIN_SAHIPLIK_DURUMU = $"HAYVANIN_SAHIPLIK_DURUMU_{hayvanSahiplikRef[0]}",
+            IMMUNGLOBULIN_TURU = $"IMMUNGLOBULIN_TURU_{immunglobulinTuruRef[0]}",
+            IMMUNGLOBULIN_MIKTARI = "500",
+            KATEGORIZASYON = $"KATEGORIZASYON_{kategorizasyonRef[0]}",
+            TEMAS_DEGERLENDIRME_DURUMU = $"TEMAS_DEGERLENDIRME_DURUMU_{temasDegerRef[0]}",
+            KUDUZ_SEBEP_OLAN_HAYVAN = $"KUDUZ_SEBEP_OLAN_HAYVAN_{kuduzHayvanRef[0]}",
+            YAPTIRACAGINI_BEYAN_ETTIGI_TSM = kurumlar.FirstOrDefault()?.KURUM_KODU,
+            RISKLI_TEMAS_TIPI = $"RISKLI_TEMAS_TIPI_{riskliTemasTipiRef[0]}",
+            EV_TELEFONU = "02121234567",
+            CEP_TELEFONU = "05321234567",
+            EV_ADRESI = $"Test Adres {i + 1}",
+            IL_KODU = $"IL_{ilRef[0]}",
+            ILCE_KODU = $"ILCE_{ilceRef[0]}",
+            BCG_SKAR_SAYISI = "1",
+            DGT_UYGULAMASINI_YAPAN_KISI = $"DGT_UYGULAMASINI_YAPAN_KISI_{dgtYapanRef[0]}",
+            DGT_UYGULAMA_YERI = $"DGT_UYGULAMA_YERI_{dgtYerRef[0]}",
+            HASTANIN_TEDAVIYE_UYUMU = $"HASTANIN_TEDAVIYE_UYUMU_{tedaviUyumRef[0]}",
+            KULTUR_SONUCU = $"KULTUR_SONUCU_{kulturSonucRef[1]}",
+            TUBERKULIN_DERI_TESTI_SONUCU = $"TUBERKULIN_DERI_TESTI_SONUCU_{tuberkulinRef[1]}",
+            VEREM_HASTASI_TEDAVI_YONTEMI = $"VEREM_HASTASI_TEDAVI_YONTEMI_{veremTedaviYonRef[0]}",
+            VEREM_OLGU_TANIMI = $"VEREM_OLGU_TANIMI_{veremOlguRef[0]}",
+            YAYMA_SONUCU = $"YAYMA_SONUCU_{yaymaSonucRef[1]}",
+            VEREM_HASTALIGI_TUTULUM_YERI = $"VEREM_HASTALIGI_TUTULUM_YERI_{veremTutulumRef[0]}",
+            VEREM_HASTASI_KLINIK_ORNEGI = $"VEREM_HASTASI_KLINIK_ORNEGI_{veremKlinikRef[0]}",
+            VEREM_ILAC_ADI = $"VEREM_ILAC_ADI_{veremIlacRef[0]}",
+            VEREM_TEDAVI_SONUCU = $"VEREM_TEDAVI_SONUCU_{veremTedaviSonucRef[0]}",
+            BULASICI_HASTALIK_VAKA_TIPI = $"BULASICI_HASTALIK_VAKA_TIPI_{bulasiciVakaTipiRef[0]}",
+            BELIRTILERIN_BASLADIGI_TARIH = DateTime.Now.AddDays(-_random.Next(5, 30)),
+            SIDDET_TURU = $"SIDDET_TURU_{siddetTuruRef[0]}",
+            SIDDET_DEGERLENDIRME_SONUCU = $"SIDDET_DEGERLENDIRME_SONUCU_{siddetSonucRef[0]}",
+            ACIKLAMA = $"Bildirimi zorunlu hastalık kaydı {i + 1}"
+        }).ToList());
+        _logger.LogInformation("BILDIRIMI_ZORUNLU seeded");
+
+        _logger.LogInformation("All remaining tables seeded successfully!");
     }
 
     private async Task SeedIfEmpty<T>(CancellationToken ct, List<T> items) where T : class
